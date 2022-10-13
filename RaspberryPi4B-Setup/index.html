@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<!-- SEO -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Raspberry Pi 4B Setup｜Gao&#39;s Blog</title>
+    <meta property="og:title" content="Raspberry Pi 4B Setup｜Gao&#39;s Blog" />
+    
+    <meta name="description" content="Raspberry Pi 4B Setup｜Gao&#39;s Blog">
+    <meta property="og:description" content="Raspberry Pi 4B Setup｜Gao&#39;s Blog" />
+    <meta name="author" content="Gao">
+    <meta name="robots" content="index, follow">
+    <meta property="og:image" content="https://vitaminac.github.io/images/favicon.jpg" />
+    <link rel="shortcut icon" href="/images/favicon.jpg">
+    
+    <meta name="keywords" content="Linux,Debian,Raspberry,Raspberry Pi 4,Prestashop">
+    
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="alternate" type="application/atom+xml" title="Gao&#39;s Blog" href="/atom.xml">
+
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" cross-origin="anonymous" referrer-policy="no-referrer">
+    <link rel="canonical" href="https://vitaminac.github.io/RaspberryPi4B-Setup/">
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Google Tag Manager -->
+    
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WDC9JKC');</script>
+    
+    <!-- End Google Tag Manager -->
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151409235-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-151409235-1');
+    </script>
+    
+
+    <!-- Google AdSense -->
+    <script data-ad-client="ca-pub-8356359077918854" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<meta name="generator" content="Hexo 6.1.0"></head>
+<style>
+    header.intro-header {
+        background-image: url('/images/header.gif')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+
+<body ontouchstart="" class="animated fadeIn">
+    <div id="particles-js"></div>
+    <nav
+  class="navbar navbar-expand-lg navbar-light sticky-top navbar-custom"
+  id="nav-top"
+>
+  <div class="container-fluid">
+    <a
+      class="navbar-brand animated pulse"
+      href="../index.html"
+    >
+      <span class="brand-logo">Gao&#39;s Blog</span>
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+        <li class="nav-item">
+          <a
+            class="nav-link "
+            aria-current="page"
+            href="../index.html"
+          >
+            Home
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a
+            class="nav-link "
+            aria-current="page"
+            href="../tags/index.html"
+          >
+            Tags
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/blog">New Blog</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Language
+          </a>
+          <ul
+            class="dropdown-menu dropdown-menu-end"
+            aria-labelledby="navbarDropdown"
+          >
+            
+            <li>
+              <a
+                class="dropdown-item"
+                href="../index.html"
+                >English</a
+              >
+            </li>
+            
+            <li>
+              <a
+                class="dropdown-item"
+                href="../es"
+                >Spanish</a
+              >
+            </li>
+            
+            <li>
+              <a
+                class="dropdown-item"
+                href="../zh"
+                >Chinese</a
+              >
+            </li>
+            
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js"></script>
+<!--fastClick.js -->
+<script>
+$(function() {
+  var $nav = document.querySelector("nav");
+  if ($nav) {
+    FastClick.attach($nav);
+  }
+});
+</script>
+
+    <!-- Main Content -->
+    
+<!--only post-->
+
+
+<img class="wechat-title-img" src="/images/preview.jpeg">
+
+
+<style>
+    header.intro-header {
+            background-image: url('/images/preview.jpeg')
+        }
+
+        
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 text-center">
+                <div class="post-heading">
+                    <h1>
+                        Raspberry Pi 4B Setup
+                    </h1>
+                    
+                    <span class="meta">Author:
+                        Gao
+                        <span />
+                        Date:
+                        2022-07-10
+                    </span>
+                    <div class="tags text-center">
+                        
+                        <a class="tag" href="/tags/#Linux" title="Linux">
+                            Linux</a>
+                        
+                        <a class="tag" href="/tags/#Debian" title="Debian">
+                            Debian</a>
+                        
+                        <a class="tag" href="/tags/#Raspberry" title="Raspberry">
+                            Raspberry</a>
+                        
+                        <a class="tag" href="/tags/#Raspberry Pi 4" title="Raspberry Pi 4">
+                            Raspberry Pi 4</a>
+                        
+                        <a class="tag" href="/tags/#Prestashop" title="Prestashop">
+                            Prestashop</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            Raspberry Pi 4B Setup
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="order-lg-2 col-lg-3 col-12 toc-col" style="z-index: 1;">
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Buy-a-Raspberry-Pi-4B"><span class="toc-text">Buy a Raspberry Pi 4B</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Choose-SD-Card"><span class="toc-text">Choose SD Card</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Overclock-SD-Card"><span class="toc-text">Overclock SD Card</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SD-Card-Speed-Test"><span class="toc-text">SD Card Speed Test</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Download-Raspberry-Pi-OS-image"><span class="toc-text">Download Raspberry Pi OS image</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Burn-the-image-to-SD-card"><span class="toc-text">Burn the image to SD card</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CLI-Enviroment-Configuration"><span class="toc-text">CLI Enviroment Configuration</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Boot-Raspberry-Pi-OS-Lite"><span class="toc-text">Boot Raspberry Pi OS Lite</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Switch-to-TTY"><span class="toc-text">Switch to TTY</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Set-Language"><span class="toc-text">Set Language</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Set-Keyboard-Layout"><span class="toc-text">Set Keyboard Layout</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Rotate-the-TTY-Screen"><span class="toc-text">Rotate the TTY Screen</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Connect-to-Wi-Fi"><span class="toc-text">Connect to Wi-Fi</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Configure-Wi-Fi-country-code"><span class="toc-text">Configure Wi-Fi country code</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Find-SSID"><span class="toc-text">Find SSID</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Enter-Wi-Fi-Credentials-Interactively"><span class="toc-text">Enter Wi-Fi Credentials Interactively</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Enter-Wi-Fi-Credentials-Manually"><span class="toc-text">Enter Wi-Fi Credentials Manually</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Verify-the-network"><span class="toc-text">Verify the network</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Configure-Static-IP-Address"><span class="toc-text">Configure Static IP Address</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Setting-up-SSH-Server"><span class="toc-text">Setting up SSH Server</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Enable-SSH-Server"><span class="toc-text">Enable SSH Server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Configure-Passwordless-SSH-Access"><span class="toc-text">Configure Passwordless SSH Access</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Disable-Password-Authentication"><span class="toc-text">Disable Password Authentication</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Change-SSH-Server-Port"><span class="toc-text">Change SSH Server Port</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Disable-IPv6-SSH-Access"><span class="toc-text">Disable IPv6 SSH Access</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Listen-To-Local-Network-Only"><span class="toc-text">Listen To Local Network Only</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Apply-Latest-SSH-Configuration"><span class="toc-text">Apply Latest SSH Configuration</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Firewall-Configuration"><span class="toc-text">Firewall Configuration</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Disable-Wi-Fi-amp-Bluetooth"><span class="toc-text">Disable Wi-Fi &amp; Bluetooth</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Configure-Fan"><span class="toc-text">Configure Fan</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NAS-with-Samba-and-External-Disk-through-USB-3-0"><span class="toc-text">NAS with Samba and External Disk through USB 3.0</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Mount-External-Disk"><span class="toc-text">Mount External Disk</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Setup-Shared-Folder-on-Raspberry"><span class="toc-text">Setup Shared Folder on Raspberry</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mount-Samba-Shared-Folder"><span class="toc-text">Mount Samba Shared Folder</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Remove-Samba-Shared-Folder"><span class="toc-text">Remove Samba Shared Folder</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NAS-Backup-with-Dropbox-and-Rclone"><span class="toc-text">NAS Backup with Dropbox and Rclone</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Get-your-own-Dropbox-App-ID"><span class="toc-text">Get your own Dropbox App ID</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Install-Rclone"><span class="toc-text">Install Rclone</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Configure-Rclone"><span class="toc-text">Configure Rclone</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Backup-with-Dropbox"><span class="toc-text">Backup with Dropbox</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Keep-Dropbox-Synced"><span class="toc-text">Keep Dropbox Synced</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Upgrade-Raspberry-Pi-OS"><span class="toc-text">Upgrade Raspberry Pi OS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Remove-Unused-Software-After-Upgrade"><span class="toc-text">Remove Unused Software After Upgrade</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Desktop-Environment-Configuration"><span class="toc-text">Desktop Environment Configuration</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Install-Desktop-Environment-from-Lite-Version"><span class="toc-text">Install Desktop Environment from Lite Version</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Boot-Raspberry-Pi-OS-with-desktop"><span class="toc-text">Boot Raspberry Pi OS with desktop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Configure-Display-Setting"><span class="toc-text">Configure Display Setting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Rotate-your-Display-in-GUI"><span class="toc-text">Rotate your Display in GUI</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Configure-Prestashop"><span class="toc-text">Configure Prestashop</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Install-Docker-Engine"><span class="toc-text">Install Docker Engine</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Install-Docker-Compose"><span class="toc-text">Install Docker Compose</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-Prestashop-from-Docker"><span class="toc-text">Run Prestashop from Docker</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Complete-Installation"><span class="toc-text">Complete Installation</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Configure-Odoo"><span class="toc-text">Configure Odoo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-text">Reference</span></a></li></ol>
+            </div>
+
+            <div class="order-lg-1 col-lg-9 col-12 post-container">
+                <h2 id="Buy-a-Raspberry-Pi-4B"><a href="#Buy-a-Raspberry-Pi-4B" class="headerlink" title="Buy a Raspberry Pi 4B"></a>Buy a Raspberry Pi 4B</h2><p>You can buy the Raspberry Pi 4B board on Amazon, the recommended version is 4 GB. You may also need to buy a SD card, and optional case with fan.</p>
+<h3 id="Choose-SD-Card"><a href="#Choose-SD-Card" class="headerlink" title="Choose SD Card"></a>Choose SD Card</h3><p>Raspberry Pi has no internal storage, relying instead on a removable micro SD card as his primary boot drives. <a target="_blank" rel="noopener" href="https://www.reddit.com/r/raspberry_pi/comments/4aoc3r/how_to_overclock_the_microsd_card_reader_on_a/d125ced/">Raspberry Pi 3 doesn’t support UHS mode because it requires 1.8v signaling while Raspberry Pi 3 is fixed at 3.3v</a>. This is technically the upper bound of write speed (25MB&#x2F;sec) for <a target="_blank" rel="noopener" href="https://www.sdcard.org/developers/sd-standard-overview/speed-class/">non-UHS SD cards</a>. Now Raspberry Pi 4B provides a <a target="_blank" rel="noopener" href="https://datasheets.raspberrypi.org/rpi4/raspberry-pi-4-datasheet.pdf">SD card socket runs on DDR50 bus speed mode</a> and a legacy <a target="_blank" rel="noopener" href="https://www.sdcard.org/developers/sd-standard-overview/sdio-isdio/">SDIO</a> interface is available on the GPIO pins.</p>
+<p><a target="_blank" rel="noopener" href="https://www.raspberrypi.org/forums/viewtopic.php?t=271632"><img src="raspberry-pi-4B-block-diagram.png" alt="Raspberry Pi 4B"></a></p>
+<p>There is a micro-SD performance improvements with <a target="_blank" rel="noopener" href="https://www.jeffgeerling.com/blog/2019/raspberry-pi-microsd-card-performance-comparison-2019">Raspberry Pi 4</a>. Raspberry Pi 4 still doesn’t provide good support for <a target="_blank" rel="noopener" href="https://www.sdcard.org/developers/sd-standard-overview/application-performance-class/">A2</a> SD card, because A2 cards rely on specialized hardware in the host device to work well. The <a target="_blank" rel="noopener" href="https://www.pidramble.com/wiki/benchmarks/microsd-cards#4-model-b">benchmark</a> showed that A1 is the best card to use with Rapsberry Pi 4B and got better result than A2.</p>
+<h3 id="Overclock-SD-Card"><a href="#Overclock-SD-Card" class="headerlink" title="Overclock SD Card"></a><a target="_blank" rel="noopener" href="https://www.jeffgeerling.com/blog/2016/how-overclock-microsd-card-reader-on-raspberry-pi-3">Overclock SD Card</a></h3><p>DDR50 requires 1.8V signaling, supports frequency up to 50 MHz, sampled on both clock edges and bus speed up to 50 MB&#x2F;sec per <a target="_blank" rel="noopener" href="https://www.sdcard.org/downloads/pls/">Physical Layer Simplified Specification</a>. However, <a target="_blank" rel="noopener" href="https://www.sdcard.org/developers/sd-standard-overview/bus-speed-default-speed-high-speed-uhs-sd-express/">UHS-I</a> SD card <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/SD_card#UHS-I">supports a clock frequency of 50 MHz (DDR50), 100 MHz (SDR50) and 208MHz (SDR104)</a> per <a target="_blank" rel="noopener" href="https://www.sdcard.org/downloads/pls/">Physical Layer Simplified Specification</a>. So in theory we can overclock SD card frequency to a higher value, e.g. 100 MHz. However, overclocking <a target="_blank" rel="noopener" href="https://www.raspberrypi.org/forums/viewtopic.php?t=266682#p1620747">only works for Raspberry Pi 3</a>.</p>
+<h3 id="SD-Card-Speed-Test"><a href="#SD-Card-Speed-Test" class="headerlink" title="SD Card Speed Test"></a><a target="_blank" rel="noopener" href="https://www.raspberrypi.org/blog/sd-card-speed-test/">SD Card Speed Test</a></h3><p>Install the tool to test your SD card speed</p>
+<pre><code>sudo apt update
+sudo apt install agnostics
+</code></pre>
+<p>my SanDisk Ultra A1 128 GB SD card has the following result</p>
+<pre><code>Sequential write speed 25460 KB/sec
+Random write speed 1077 IOPS
+Random read speed 2642 IOPS
+</code></pre>
+<h2 id="Download-Raspberry-Pi-OS-image"><a href="#Download-Raspberry-Pi-OS-image" class="headerlink" title="Download Raspberry Pi OS image"></a>Download Raspberry Pi OS image</h2><p>Download <strong>Raspberry Pi OS Lite</strong> or <strong>Raspberry Pi OS with desktop</strong> from <a target="_blank" rel="noopener" href="https://www.raspberrypi.com/software/operating-systems/#raspberry-pi-os-64-bit">Raspberry Pi official operating system images</a>.</p>
+<h2 id="Burn-the-image-to-SD-card"><a href="#Burn-the-image-to-SD-card" class="headerlink" title="Burn the image to SD card"></a>Burn the image to SD card</h2><p>Download <a target="_blank" rel="noopener" href="https://rufus.ie/">Rufus</a> and unzip the image file you downloaded previously, you will see a single <strong>.img</strong> file. Select SD card as device and select <strong>.img</strong> file as <strong>Disk or ISO image</strong> and then click <strong>Start</strong>. You may need <strong>SD Card Reader USB adapter</strong> if your computer doesn’t have SD card slot.</p>
+<h2 id="CLI-Enviroment-Configuration"><a href="#CLI-Enviroment-Configuration" class="headerlink" title="CLI Enviroment Configuration"></a>CLI Enviroment Configuration</h2><h3 id="Boot-Raspberry-Pi-OS-Lite"><a href="#Boot-Raspberry-Pi-OS-Lite" class="headerlink" title="Boot Raspberry Pi OS Lite"></a>Boot Raspberry Pi OS Lite</h3><p>Plug the SD card to your Raspberry Pi and power on the device, follow the instructions to complete the basic setting. You will see the TTY when the boot process finish.</p>
+<h3 id="Switch-to-TTY"><a href="#Switch-to-TTY" class="headerlink" title="Switch to TTY"></a>Switch to TTY</h3><p>You can press Ctrl + Alt + F1&#x2F;F2&#x2F;F3&#x2F;F4&#x2F;F5&#x2F;F6&#x2F;F8&#x2F;F10&#x2F;F11&#x2F;F12 to switch to different TTY console and press Ctrl + Alt + F7 you can switch to desktop environment if you have it installed.</p>
+<h3 id="Set-Language"><a href="#Set-Language" class="headerlink" title="Set Language"></a><a target="_blank" rel="noopener" href="https://www.raspberrypi.com/documentation/computers/configuration.html#localising-your-raspberry-pi">Set Language</a></h3><p>Execute <code>sudo raspi-config</code> and then select Localization Options &gt; Locale. This option will execute following <a target="_blank" rel="noopener" href="https://github.com/RPi-Distro/raspi-config/blob/2be7313596b228c349c829ca7258cbdbd4b5deb1/raspi-config#L532">commands</a>.</p>
+<h3 id="Set-Keyboard-Layout"><a href="#Set-Keyboard-Layout" class="headerlink" title="Set Keyboard Layout"></a><a target="_blank" rel="noopener" href="https://wiki.debian.org/Keyboard">Set Keyboard Layout</a></h3><p>Execute <code>sudo raspi-config</code> and then select Localization Options &gt; Keyboard. This option will execute following <a target="_blank" rel="noopener" href="https://github.com/RPi-Distro/raspi-config/blob/2be7313596b228c349c829ca7258cbdbd4b5deb1/raspi-config#L518">commands</a>.</p>
+<p>For standard US layout you can select <code>Generic 105-key PC (intl.)</code> and then select <code>English US</code> and <code>default layout</code>. We need to <code>sudo reboot</code> to take effect.</p>
+<h3 id="Rotate-the-TTY-Screen"><a href="#Rotate-the-TTY-Screen" class="headerlink" title="Rotate the TTY Screen"></a><a target="_blank" rel="noopener" href="https://github.com/pimoroni/hyperpixel4/issues/39#issuecomment-717248457">Rotate the TTY Screen</a></h3><p>In order to rotate the screen in TTY mode you can use following command</p>
+<pre><code>echo &lt;rotation&gt; | sudo tee -a /sys/class/graphics/fbcon/rotate &gt; /dev/null
+</code></pre>
+<p>To always rotate the screen at startup you can add following parameter to <code>/boot/cmdline.txt</code></p>
+<pre><code>fbcon=rotate:&lt;rotation&gt;
+</code></pre>
+<p>The <strong><rotation></strong> can be 0, 1, 2, 3 that correspond to 0-degree, 90-degree, 180-degree, 270-degree clockwise rotation.</p>
+<h3 id="Connect-to-Wi-Fi"><a href="#Connect-to-Wi-Fi" class="headerlink" title="Connect to Wi-Fi"></a><a target="_blank" rel="noopener" href="https://www.raspberrypi.com/documentation/computers/configuration.html#wireless-networking-command-line">Connect to Wi-Fi</a></h3><h4 id="Configure-Wi-Fi-country-code"><a href="#Configure-Wi-Fi-country-code" class="headerlink" title="Configure Wi-Fi country code"></a>Configure Wi-Fi country code</h4><p>In the Raspberry Pi OS, <a target="_blank" rel="noopener" href="https://www.raspberrypi.org/documentation/computers/configuration.html#ensure-wireless-operation">5 GHz wireless networking is disabled until a Wi-Fi country code has been configured by the user</a>.</p>
+<p>Execute <code>sudo raspi-config</code> and then select Localization Options &gt; WLAN Country. This option will execute following <a target="_blank" rel="noopener" href="https://github.com/RPi-Distro/raspi-config/blob/2be7313596b228c349c829ca7258cbdbd4b5deb1/raspi-config#L615-L630">commands</a>.</p>
+<h4 id="Find-SSID"><a href="#Find-SSID" class="headerlink" title="Find SSID"></a><a target="_blank" rel="noopener" href="https://www.raspberrypi.com/documentation/computers/configuration.html#getting-wireless-lan-network-details">Find SSID</a></h4><p>If you don’t know the SSID scan the networks in the area to find the SSID you want to connect to</p>
+<pre><code>sudo iwlist wlan0 scan | greo -i ssid
+</code></pre>
+<h4 id="Enter-Wi-Fi-Credentials-Interactively"><a href="#Enter-Wi-Fi-Credentials-Interactively" class="headerlink" title="Enter Wi-Fi Credentials Interactively"></a>Enter Wi-Fi Credentials Interactively</h4><p>Execute <code>sudo raspi-config</code> and then select System Options &gt; Wireless LAN. This option will execute following <a target="_blank" rel="noopener" href="https://github.com/RPi-Distro/raspi-config/blob/2be7313596b228c349c829ca7258cbdbd4b5deb1/raspi-config#L2308">commands</a>.</p>
+<h4 id="Enter-Wi-Fi-Credentials-Manually"><a href="#Enter-Wi-Fi-Credentials-Manually" class="headerlink" title="Enter Wi-Fi Credentials Manually"></a><a target="_blank" rel="noopener" href="https://www.raspberrypi.com/documentation/computers/configuration.html#adding-the-network-details-to-your-raspberry-pi">Enter Wi-Fi Credentials Manually</a></h4><p>Create configuration for Wi-Fi</p>
+<pre><code>wpa_passphrase &lt;ssid&gt; &lt;password&gt; | sudo tee -a /etc/wpa_supplicant/wpa_supplicant.conf
+</code></pre>
+<p>If you are connecting to a hidden network, an extra option <code>scan_ssid</code> in the <code>wpa_supplicant.conf</code> file <code>network</code> section need to be present. You should use tab instead of space when indenting. By default, <code>wpa_passphrase</code> also include the plain text version of your password, but commented out. You should delete this line for extra security. The final network section should look like</p>
+<pre><code>network=&#123;
+    ssid=&quot;&lt;your hidden SSID&gt;&quot;
+    scan_ssid=1
+    psk=&quot;&lt;your encrypted 32 byte hexadecimal PSK&gt;&quot;
+&#125;
+</code></pre>
+<p>and ensure the following lines are at the top of <code>wpa_supplicant</code> file, you need to double check the country is correct.</p>
+<pre><code>ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+country=&lt;2 letter ISO 3166-1 country code&gt;
+</code></pre>
+<p>then reconfigure the interface with</p>
+<pre><code>wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0 -d
+</code></pre>
+<h4 id="Verify-the-network"><a href="#Verify-the-network" class="headerlink" title="Verify the network"></a>Verify the network</h4><p>You can verify the connection by running following command</p>
+<pre><code>ping 8.8.8.8
+</code></pre>
+<p>If you find the network is unavailable, try to wait 2 minutes or reboot, them verify with <code>ping</code> again.</p>
+<h2 id="Configure-Static-IP-Address"><a href="#Configure-Static-IP-Address" class="headerlink" title="Configure Static IP Address"></a><a target="_blank" rel="noopener" href="https://www.raspberrypi.com/documentation/computers/configuration.html#static-ip-addresses">Configure Static IP Address</a></h2><p>If you want a static IP address, so each time you restart your Raspberry Pi device or disconnect and reconnect to the network you can find your device with same IP address. You need to add the following lines to <code>/etc/dhcpcd.conf</code>.</p>
+<pre><code>interface &lt;your-interface-name&gt;
+static ip_address=192.168.0.10/24
+static routers=192.168.0.1
+static domain_name_servers=192.168.0.1 8.8.8.8
+</code></pre>
+<p>You can find your interface name with <code>ip link</code>, router IP address with <code>ip route show default</code>. You need to ensure the static IP address is outside of DHCP dynamically assigned IP address range, you can verify this information in your router. You can verify your IP address with <code>ip -a address</code>.</p>
+<h2 id="Setting-up-SSH-Server"><a href="#Setting-up-SSH-Server" class="headerlink" title="Setting up SSH Server"></a><a target="_blank" rel="noopener" href="https://www.raspberrypi.com/documentation/computers/remote-access.html#ssh">Setting up SSH Server</a></h2><h3 id="Enable-SSH-Server"><a href="#Enable-SSH-Server" class="headerlink" title="Enable SSH Server"></a><a target="_blank" rel="noopener" href="https://www.raspberrypi.com/documentation/computers/remote-access.html#enabling-the-server">Enable SSH Server</a></h3><p>Enter <code>sudo raspi-config</code> in a terminal window. Select <code>Interfacing Options</code> and then <code>SSH</code>. This option will execute following <a target="_blank" rel="noopener" href="https://github.com/RPi-Distro/raspi-config/blob/2be7313596b228c349c829ca7258cbdbd4b5deb1/raspi-config#L841">commands</a></p>
+<h3 id="Configure-Passwordless-SSH-Access"><a href="#Configure-Passwordless-SSH-Access" class="headerlink" title="Configure Passwordless SSH Access"></a><a target="_blank" rel="noopener" href="https://www.raspberrypi.com/documentation/computers/remote-access.html#passwordless-ssh-access">Configure Passwordless SSH Access</a></h3><p>Generate new SSH keys using the <code>ssh-keygen</code> command on the client. Copy your public key to your Raspberry Pi. <code>cat ~/.ssh/id_rsa.pub | ssh &lt;USERNAME&gt;@&lt;IP-ADDRESS&gt; &#39;mkdir -p ~/.ssh &amp;&amp; cat &gt;&gt; ~/.ssh/authorized_keys&#39;</code>.</p>
+<h3 id="Disable-Password-Authentication"><a href="#Disable-Password-Authentication" class="headerlink" title="Disable Password Authentication"></a><a target="_blank" rel="noopener" href="https://www.raspberrypi.com/documentation/computers/configuration.html#using-key-based-authentication">Disable Password Authentication</a></h3><p>Edit <code>/etc/ssh/sshd_config</code> and change these options to <code>no</code></p>
+<pre><code>ChallengeResponseAuthentication no
+PasswordAuthentication no
+UsePAM no
+</code></pre>
+<h3 id="Change-SSH-Server-Port"><a href="#Change-SSH-Server-Port" class="headerlink" title="Change SSH Server Port"></a>Change SSH Server Port</h3><p>By default, SSH server listen to <code>22</code>. Edit <code>/etc/ssh/sshd_config</code> and change <code>Port</code> to other value e.g. <code>2222</code></p>
+<h3 id="Disable-IPv6-SSH-Access"><a href="#Disable-IPv6-SSH-Access" class="headerlink" title="Disable IPv6 SSH Access"></a>Disable IPv6 SSH Access</h3><p>Edit <code>/etc/ssh/sshd_config</code> and change <code>AddressFamily</code> to <code>inet</code> which means IPv4 only.</p>
+<h3 id="Listen-To-Local-Network-Only"><a href="#Listen-To-Local-Network-Only" class="headerlink" title="Listen To Local Network Only"></a>Listen To Local Network Only</h3><p>Edit <code>/etc/ssh/sshd_config</code> and change <code>ListenAddress</code> to private network static address that you have configured before. When you specify IP address explicitly in sshd config file, <a target="_blank" rel="noopener" href="https://unix.stackexchange.com/a/499712">network interfaces must be prepared prior to sshd start</a>. Execute <code>sudo systemctl edit sshd</code> and add following content.</p>
+<pre><code>[Unit]
+After=network-pre.target network.target network-online.target auditd.service dhcpcd.service
+
+[Service]
+Restart=on-failure
+RestartSec=5
+RestartPreventExitStatus=
+</code></pre>
+<p>Then execute <code>sudo systemctl enable systemd-networkd-wait-online</code>.</p>
+<h3 id="Apply-Latest-SSH-Configuration"><a href="#Apply-Latest-SSH-Configuration" class="headerlink" title="Apply Latest SSH Configuration"></a>Apply Latest SSH Configuration</h3><p>Restart the ssh system with <code>sudo service ssh reload</code>.</p>
+<h2 id="Firewall-Configuration"><a href="#Firewall-Configuration" class="headerlink" title="Firewall Configuration"></a><a target="_blank" rel="noopener" href="https://www.raspberrypi.com/documentation/computers/configuration.html#install-a-firewall">Firewall Configuration</a></h2><pre><code>sudo apt install ufw
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw allow in on eth0 from 192.168.0.0/24 to 192.168.0.10 port 2222 proto tcp
+sudo ufw enable
+sudo ufw status numbered verbose
+</code></pre>
+<h2 id="Disable-Wi-Fi-amp-Bluetooth"><a href="#Disable-Wi-Fi-amp-Bluetooth" class="headerlink" title="Disable Wi-Fi &amp; Bluetooth"></a>Disable Wi-Fi &amp; Bluetooth</h2><p>Add these 2 lines to <code>/boot/config.txt</code></p>
+<pre><code>dtoverlay=disable-wifi
+dtoverlay=disable-bt
+</code></pre>
+<p>Here you can find the documentations of <a target="_blank" rel="noopener" href="https://github.com/raspberrypi/firmware/blob/afc7631bc9a58f94a157503955881ab27a6287d0/boot/overlays/README#L736-L739"><code>disable-wifi</code></a> and <a target="_blank" rel="noopener" href="https://github.com/raspberrypi/firmware/blob/afc7631bc9a58f94a157503955881ab27a6287d0/boot/overlays/README#L727-L733"><code>disable-bt</code></a>.</p>
+<h2 id="Configure-Fan"><a href="#Configure-Fan" class="headerlink" title="Configure Fan"></a>Configure Fan</h2><p>When you buy a Raspberry Pi 4B you can also optionally buy a case with fan e.g. the official <a target="_blank" rel="noopener" href="https://www.raspberrypi.org/products/raspberry-pi-4-case-fan/">Raspberry Pi 4 Case Fan</a>. You can simply connect the fan wires to 5V and ground pin but Raspberry Pi support advance fan control base on temperature. Run <code>sudo raspi-config</code>, select <code>Performance Options</code> then select <code>Fan</code>, introduce the GPIO that will be enabled when temperature exceeds the limit you introduced. You need to reboot after the configuration change. Run the command <a target="_blank" rel="noopener" href="https://www.raspberrypi.org/documentation/computers/os.html#gpio-pinout"><code>pinout</code></a> to find the location of GPIO and connect it to base gate of a transistor, connect negative wire of fan to ground. If you are using NPN transistor then connect emitter gate to positive wire of fan and 5V to collector gate of transistor. If you are using PNP transistor then connect collector gate to positive wire of fan and 5V to emitter gate of transistor. You can use protoboard to arrange the wires. You can verify current temperature using command <code>vcgencmd measure_temp</code>.</p>
+<h2 id="NAS-with-Samba-and-External-Disk-through-USB-3-0"><a href="#NAS-with-Samba-and-External-Disk-through-USB-3-0" class="headerlink" title="NAS with Samba and External Disk through USB 3.0"></a><a target="_blank" rel="noopener" href="https://www.raspberrypi.com/documentation/computers/remote-access.html#samba-smbcifs">NAS with Samba and External Disk through USB 3.0</a></h2><h3 id="Mount-External-Disk"><a href="#Mount-External-Disk" class="headerlink" title="Mount External Disk"></a>Mount External Disk</h3><p>Attach the external disk to the USB 3.0 port and run following to ensure the device is recognized</p>
+<pre><code>sudo blkid
+sudo fdisk -l
+</code></pre>
+<p>If your disk is <code>NTFS</code> file system then we need to install following package</p>
+<pre><code>sudo apt install ntfs-3g
+</code></pre>
+<p>Once you know where the drive is located, run following command, the type argument might be different depending on your drive file system</p>
+<pre><code>sudo mkdir -p /mnt/shared
+sudo mount -t ntfs-3g /dev/&lt;what you have found in previous step e.g. sda1&gt; /mnt/shared
+</code></pre>
+<p>To permanently mount at startup, add the following line to <code>/etc/fstab</code></p>
+<pre><code>/dev/&lt;what you have found in previous step e.g. sda1&gt;    /mnt/shared   ntfs    default  0  0
+</code></pre>
+<h3 id="Setup-Shared-Folder-on-Raspberry"><a href="#Setup-Shared-Folder-on-Raspberry" class="headerlink" title="Setup Shared Folder on Raspberry"></a>Setup Shared Folder on Raspberry</h3><p>Installing Samba Support with following commands</p>
+<pre><code>sudo apt update
+sudo apt install samba samba-common-bin cifs-utils
+</code></pre>
+<p>Sharing a folder is easy</p>
+<pre><code>sudo useradd -M -s /sbin/nologin samba
+sudo passwd samba
+sudo chmod 700 /mnt/shared
+sudo chown samba /mnt/shared
+sudo smbpasswd -a samba
+</code></pre>
+<p>Edit the Samba configuration file <code>/etc/samba/smb.conf</code> and add the following lines</p>
+<pre><code>[shared]
+    path = /mnt/shared
+    read only = no
+    guest ok = no
+    security = user
+    valid users = samba
+    writable = yes
+    vfs objects = recycle
+    recycle:repository = .recycle/%U
+    recycle:touch = yes
+    recycle:keeptree = yes
+    recycle:versions = yes
+</code></pre>
+<p>In the same file change these two properties to</p>
+<pre><code>interfaces = 192.168.0.10/24 eth0
+workgroup = &lt;your workgroup name here - you find it in Windows client machine System Properties - Computer Name&gt;
+</code></pre>
+<p>Apply the change</p>
+<pre><code>sudo service smbd reload
+</code></pre>
+<p>Allow the Samba traffic through firewall</p>
+<pre><code>sudo ufw allow in on eth0 from 192.168.0.0/24 to 192.168.0.10 app Samba
+</code></pre>
+<h3 id="Mount-Samba-Shared-Folder"><a href="#Mount-Samba-Shared-Folder" class="headerlink" title="Mount Samba Shared Folder"></a>Mount Samba Shared Folder</h3><pre><code>net use Z: \\192.168.0.10\shared /SAVECRED /PERSISTENT:YES
+</code></pre>
+<p>It will ask for username and password, you should introduce <code>samba</code> as username.</p>
+<h3 id="Remove-Samba-Shared-Folder"><a href="#Remove-Samba-Shared-Folder" class="headerlink" title="Remove Samba Shared Folder"></a>Remove Samba Shared Folder</h3><pre><code>net use  Z: /delete
+</code></pre>
+<h2 id="NAS-Backup-with-Dropbox-and-Rclone"><a href="#NAS-Backup-with-Dropbox-and-Rclone" class="headerlink" title="NAS Backup with Dropbox and Rclone"></a><a target="_blank" rel="noopener" href="https://rclone.org/dropbox/">NAS Backup with Dropbox and Rclone</a></h2><h3 id="Get-your-own-Dropbox-App-ID"><a href="#Get-your-own-Dropbox-App-ID" class="headerlink" title="Get your own Dropbox App ID"></a><a target="_blank" rel="noopener" href="https://rclone.org/dropbox/#get-your-own-dropbox-app-id">Get your own Dropbox App ID</a></h3><h3 id="Install-Rclone"><a href="#Install-Rclone" class="headerlink" title="Install Rclone"></a>Install Rclone</h3><pre><code>sudo apt update
+sudo apt install rclone
+</code></pre>
+<h3 id="Configure-Rclone"><a href="#Configure-Rclone" class="headerlink" title="Configure Rclone"></a>Configure Rclone</h3><pre><code>rclone config
+</code></pre>
+<p>Follow the instructions until you need to visit an URL, you will need to use SSH local forward</p>
+<pre><code>sudo ufw default allow FORWARD
+sudo service ufw restart
+ssh -p 2222 -N -L 127.0.0.1:53682:127.0.0.1:53682 sgao@192.168.0.10
+</code></pre>
+<p>Open the link that is mentioned in following <a target="_blank" rel="noopener" href="https://github.com/rclone/rclone/issues/4792#issuecomment-731758924">workaround</a> to avoid expiration issue. You can verify that refresh token is present</p>
+<pre><code>cat ~/.config/rclone/rclone.conf
+</code></pre>
+<p>Rollback the <code>ufw</code> configuration</p>
+<pre><code>sudo ufw default deny FORWARD
+sudo service ufw restart
+</code></pre>
+<h3 id="Backup-with-Dropbox"><a href="#Backup-with-Dropbox" class="headerlink" title="Backup with Dropbox"></a><a target="_blank" rel="noopener" href="https://rclone.org/commands/rclone_sync/">Backup with Dropbox</a></h3><p>We first verify the setup is correct</p>
+<pre><code>rclone lsd dropbox:
+</code></pre>
+<p>Then sync from Dropbox to a local folder</p>
+<pre><code>mkdir -p /mnt/shared/Dropbox
+rclone copy dropbox: /mnt/shared/Dropbox
+</code></pre>
+<p>Finally, keep the folder synchronized with Dropbox</p>
+<pre><code>rclone sync /mnt/shared/Dropbox dropbox:
+</code></pre>
+<h3 id="Keep-Dropbox-Synced"><a href="#Keep-Dropbox-Synced" class="headerlink" title="Keep Dropbox Synced"></a>Keep Dropbox Synced</h3><p>Install the <code>inotify-tools</code></p>
+<pre><code>sudo apt update
+sudo apt install inotify-tools
+</code></pre>
+<p>Save following commands to <code>~/dropbox-sync.sh</code></p>
+<pre><code>#!/bin/bash
+# Execute first time after the machine is boot
+rclone sync /mnt/shared/Dropbox dropbox:
+inotifywait -m -q -r -e create -e modify -e move -e delete --format &#39;%w%f:%e&#39; /mnt/shared/Dropbox | \
+while read; do \
+    path=$(echo $REPLY | cut -d &quot;:&quot; -f 1); \
+    event=$(echo $REPLY | cut -d &quot;:&quot; -f 2); \
+    echo &quot;$path was changed because of event $event&quot;; \
+    echo &quot;Skipping $(timeout 3 cat | wc -l) further changes&quot;; \
+    rclone sync --delete-during /mnt/shared/Dropbox dropbox:; \
+done
+</code></pre>
+<p>We need to add execute permission to the script file</p>
+<pre><code>chmod +x ~/dropbox-sync.sh
+</code></pre>
+<p>Create a <code>Cron</code> job at boot time by executing <code>crontab -e</code> and then add following line to the task list</p>
+<pre><code>@reboot sleep 10 &amp;&amp; ~/dropbox-sync.sh &gt;&gt; ~/dropbox-sync.log 2&gt;&amp;1
+</code></pre>
+<h2 id="Upgrade-Raspberry-Pi-OS"><a href="#Upgrade-Raspberry-Pi-OS" class="headerlink" title="Upgrade Raspberry Pi OS"></a><a target="_blank" rel="noopener" href="https://www.raspberrypi.org/documentation/computers/os.html#upgrading-from-operating-system-versions">Upgrade Raspberry Pi OS</a></h2><p>Modify the file <code>/etc/apt/sources.list</code> and <code>/etc/apt/sources.list.d/raspi.list</code> and replace every occurrence of the word <code>buster</code> to <code>bullseye</code>.</p>
+<pre><code>sudo apt update
+sudo apt -y dist-upgrade
+sudo reboot
+</code></pre>
+<h3 id="Remove-Unused-Software-After-Upgrade"><a href="#Remove-Unused-Software-After-Upgrade" class="headerlink" title="Remove Unused Software After Upgrade"></a>Remove Unused Software After Upgrade</h3><pre><code>sudo apt purge geany thonny
+sudo apt autoremove
+</code></pre>
+<h2 id="Desktop-Environment-Configuration"><a href="#Desktop-Environment-Configuration" class="headerlink" title="Desktop Environment Configuration"></a>Desktop Environment Configuration</h2><p>Raspberry Pi OS provides desktop environment, and we can also upgrade from lite version to desktop version, but it is recommended that if you need to use desktop environment, download the desktop version directly.</p>
+<h3 id="Install-Desktop-Environment-from-Lite-Version"><a href="#Install-Desktop-Environment-from-Lite-Version" class="headerlink" title="Install Desktop Environment from Lite Version"></a><a target="_blank" rel="noopener" href="https://gist.github.com/kmpm/8e535a12a45a32f6d36cf26c7c6cef51">Install Desktop Environment from Lite Version</a></h3><pre><code>sudo apt install -y lightdm raspberrypi-ui-mods rpi-chromium-mods
+sudo apt install -y arandr # https://www.raspberrypi.org/forums/viewtopic.php?t=265472#p1613632
+sudo apt install --no-install-recommends xinit
+</code></pre>
+<p>After the installation you can enter the desktop environment using <code>startx</code> from TTY console.</p>
+<h3 id="Boot-Raspberry-Pi-OS-with-desktop"><a href="#Boot-Raspberry-Pi-OS-with-desktop" class="headerlink" title="Boot Raspberry Pi OS with desktop"></a>Boot Raspberry Pi OS with desktop</h3><p>If you boot with a desktop image, you will see a GUI windows that guide you through the initial setup, e.g. configuring the country, language, keyboard, Wi-Fi.</p>
+<h3 id="Configure-Display-Setting"><a href="#Configure-Display-Setting" class="headerlink" title="Configure Display Setting"></a><a target="_blank" rel="noopener" href="https://www.raspberrypi.org/documentation/computers/configuration.html#hdmi-configuration">Configure Display Setting</a></h3><p>Edit <code>/boot/config.txt</code> and ensure following parameters has the following values:</p>
+<pre><code>hdmi_drive=2 # https://www.raspberrypi.org/documentation/computers/configuration.html#troubleshooting-your-hdmi-2
+hdmi_group=2 # https://www.raspberrypi.org/documentation/computers/config_txt.html#hdmi_group
+hdmi_mode=82 # https://www.raspberrypi.org/documentation/computers/config_txt.html#hdmi_mode
+</code></pre>
+<h3 id="Rotate-your-Display-in-GUI"><a href="#Rotate-your-Display-in-GUI" class="headerlink" title="Rotate your Display in GUI"></a><a target="_blank" rel="noopener" href="https://www.raspberrypi.org/documentation/computers/configuration.html#rotating-your-display">Rotate your Display in GUI</a></h3><p>You can check you available display with:</p>
+<pre><code>xrandr -q
+</code></pre>
+<p>Then use the name of display you get previously to rotate the screen</p>
+<pre><code>xrandr --output [name of display e.g. HDMI-1] --rotate left
+</code></pre>
+<h2 id="Configure-Prestashop"><a href="#Configure-Prestashop" class="headerlink" title="Configure Prestashop"></a>Configure Prestashop</h2><h3 id="Install-Docker-Engine"><a href="#Install-Docker-Engine" class="headerlink" title="Install Docker Engine"></a><a target="_blank" rel="noopener" href="https://docs.docker.com/engine/install/debian/">Install Docker Engine</a></h3><h3 id="Install-Docker-Compose"><a href="#Install-Docker-Compose" class="headerlink" title="Install Docker Compose"></a><a target="_blank" rel="noopener" href="https://docs.docker.com/compose/install/">Install Docker Compose</a></h3><p>Since Docker Compose <a target="_blank" rel="noopener" href="https://github.com/docker/compose/releases/tag/1.29.2">stable release</a> doesn’t provide binary for <code>armv7</code>, you need to try installing newer version <a target="_blank" rel="noopener" href="https://docs.docker.com/compose/cli-command/#install-on-linux">Docker Compose V2</a>. To correctly install Docker Compose V2 we need to install it with <code>su</code> user.</p>
+<h3 id="Run-Prestashop-from-Docker"><a href="#Run-Prestashop-from-Docker" class="headerlink" title="Run Prestashop from Docker"></a>Run Prestashop from Docker</h3><p><a target="_blank" rel="noopener" href="https://hub.docker.com/_/mysql">MySQL docker image</a> and <a target="_blank" rel="noopener" href="https://hub.docker.com/r/prestashop/prestashop/">Prestashop docker image</a> don’t provide support for <code>armv7l</code>. <a target="_blank" rel="noopener" href="https://hub.docker.com/_/mariadb">MariaDB</a> provides support for <code>arm64</code>. However, <a target="_blank" rel="noopener" href="https://raspberrypi.stackexchange.com/a/101216">Raspberry Pi OS is 32 bits</a>, you can verify with <code>uname -m</code> that kernel is built for <code>armv7l</code>. Although <a target="_blank" rel="noopener" href="https://forums.raspberrypi.com/viewtopic.php?t=275370">Raspberry Pi is working on 64 bits OS beta version</a>, the better alternative now is to use <a target="_blank" rel="noopener" href="https://hub.docker.com/r/yobasystems/alpine-prestashop/">alpine-prestashop</a> and <a target="_blank" rel="noopener" href="https://hub.docker.com/r/yobasystems/alpine-mariadb/">alpine-mariadb</a>.</p>
+<p>Execute following commands</p>
+<pre><code>cd ~
+[ -d prestashop ] || mkdir prestashop
+cd prestashop
+curl https://gist.githubusercontent.com/vitaminac/851e2caa9337b31568844cfe53ef6806/raw/fffde01a2e826630ed1c8f95b32c4586359a7053/raspberry-pi-prestashop-docker-compose.yml -o docker-compose.yml
+sudo docker compose up
+</code></pre>
+<h3 id="Complete-Installation"><a href="#Complete-Installation" class="headerlink" title="Complete Installation"></a>Complete Installation</h3><p>Open <a target="_blank" rel="noopener" href="http://localhost:8080/">http://localhost:8080</a> you will see the installation page of Prestashop, follow the instruction and complete the installation. In the <strong>System configuration</strong> you need to adjust the setting according to the environment variables of docker compose file.</p>
+<ul>
+<li>Database server address: <strong>mysql</strong></li>
+<li>Database name: <strong>prestadb</strong></li>
+<li>Database login: <strong>prestauser</strong></li>
+<li>Database password: <strong>prestapass</strong></li>
+<li>Tables prefix: leave it as default</li>
+<li>Drop existing tables: leave it as default</li>
+</ul>
+<p>After the installation is completed you need to delete the <code>install</code> folder with following command</p>
+<pre><code>sudo rm -rdf $(sudo docker volume inspect $(sudo docker volume ls | grep prestashop-php | awk &#39;&#123;print $2&#125;&#39;) | grep Mountpoint | awk &#39;&#123;print substr($2, 2, length($2) - 3)&#125;&#39;)/install
+</code></pre>
+<p>Now you can access your front office of your Prestashop with <a target="_blank" rel="noopener" href="http://localhost:8080/">http://localhost:8080</a> and back office with <a target="_blank" rel="noopener" href="http://localhost:8080/admin4365218asd897fasd54f78asdf57/index.php">http://localhost:8080/admin4365218asd897fasd54f78asdf57/index.php</a>.</p>
+<h2 id="Configure-Odoo"><a href="#Configure-Odoo" class="headerlink" title="Configure Odoo"></a>Configure Odoo</h2><pre><code>sudo docker run -p 8069:8069 mahood73/rpi-odoo
+</code></pre>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/RPi-Distro/raspi-config/blob/master/raspi-config">raspi-config</a></li>
+<li><a target="_blank" rel="noopener" href="https://wiki.samba.org/index.php/Setting_up_Samba_as_a_Standalone_Server">Samba Wiki: Setting up Samba as a Standalone Server</a></li>
+<li><a target="_blank" rel="noopener" href="https://unix.stackexchange.com/a/112066">How can I have a Trash&#x2F;Recycle Bin for my Samba shares?</a></li>
+<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/gg651155(v=ws.11)">Command-Line Reference: Net use</a></li>
+<li><a target="_blank" rel="noopener" href="https://lonewolfonline.net/enabling-recycle-bin-functionality-samba/">Enabling Recycle Bin like functionality in Samba</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.samba.org/samba/docs/current/man-html/vfs_recycle.8.html">Samba VFS recycle bin</a></li>
+</ul>
+
+                <hr>
+
+                <ul class="list-group">
+    
+    <li class="list-group-item list-group-item-action flex-column align-items-start"><a href="../Minimalist-Linux-Workspace/">Minimalist Linux Workspace</a></li>
+    
+    <li class="list-group-item list-group-item-action flex-column align-items-start"><a href="../Simple-Bootstrap-Linux-System/">Build Simple Bootstrap Linux System Image</a></li>
+    
+    <li class="list-group-item list-group-item-action flex-column align-items-start"><a href="../minishell/">La implementación de minishell en Linux</a></li>
+    
+</ul>
+
+
+                <ul class="pagination pager">
+                    
+                    <li class="page-item">
+                        <a class="page-link" href="/D-LINK-DIR-882-A1-OpenWrt/" data-toggle="tooltip" data-placement="top" title="OpenWrt Installation and Configuration on D-LINK DIR-882-A1">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="page-item ms-auto">
+                        <a class="page-link" href="/Windows7-Vagrant/" data-toggle="tooltip" data-placement="top" title="How to Create a Windows7 Vagrant Base Box">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        <div class="comment">
+  <!-- disqus 评论框 start -->
+  
+  <!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "blog-vnwybnwkiz";
+    var disqus_identifier = "https://vitaminac.github.io/RaspberryPi4B-Setup/";
+    var disqus_url = "https://vitaminac.github.io/RaspberryPi4B-Setup/";
+    var disqus_config = function () { 
+      this.language = "en";
+    };
+
+    (function () {
+      var dsq = document.createElement("script");
+      dsq.type = "text/javascript";
+      dsq.async = true;
+      dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+      (
+        document.getElementsByTagName("head")[0] ||
+        document.getElementsByTagName("body")[0]
+      ).appendChild(dsq);
+    })();
+  </script>
+  <!-- disqus 公共JS代码 end -->
+  <div id="disqus_thread" class="disqus-thread"></div>
+  <!-- disqus 评论框 end -->
+  
+</div>
+
+
+        <div class="row justify-content-center">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8`
+                col-md-10
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5 class="text-center">
+                        <a href="/tags/">FEATURED TAGS</a>
+                    </h5>
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#Linux" title="Linux">
+                            Linux</a>
+                        
+                        <a class="tag" href="/tags/#Debian" title="Debian">
+                            Debian</a>
+                        
+                        <a class="tag" href="/tags/#Raspberry" title="Raspberry">
+                            Raspberry</a>
+                        
+                        <a class="tag" href="/tags/#Raspberry Pi 4" title="Raspberry Pi 4">
+                            Raspberry Pi 4</a>
+                        
+                        <a class="tag" href="/tags/#Prestashop" title="Prestashop">
+                            Prestashop</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <img src="/images/QR.jpg" style="width: 100%; height: auto" />
+      <div class="pt-4"><!-- SNS Link 社交 -->
+<ul class="list-inline text-center">
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://www.linkedin.com/in/shuxig">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a href="mailto:dalao1002@gmail.com?subject=From my blog&body=Hi,I found this website very useful">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a href="tel:34688218528">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-phone fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    <li class="list-inline-item d-none d-lg-inline-block">
+        <a target="_blank" href="https://web.whatsapp.com/send?phone=34688218528">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-whatsapp fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    <li class="list-inline-item d-lg-none">
+        <a target="_blank" href="https://wa.me/34688218528">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-whatsapp fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://github.com/vitaminac">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    <li class="list-inline-item">
+        <a target="_blank" href="https://gist.github.com/vitaminac">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github-square fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://gitlab.com/vitaminac">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-gitlab fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://www.kaggle.com/dalao1002">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-kaggle fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://leetcode.com/dalao1002">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-code fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://stackoverflow.com/users/9980245">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://www.youtube.com/channel/UCn36tkFugikDQS_0tgH1p6g">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://space.bilibili.com/17108326">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-bilibili fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+</ul></div>
+      <p class="copyright text-muted">
+        Copyright &copy; Gao&#39;s Blog 2022
+      </p>
+    </div>
+  </div>
+</footer>
+
+    <!--wechat title img-->
+    <img class="wechat-title-img" src="/images/avatar.jpg">
+    <!-- Custom Theme JavaScript -->
+<script type="text/javascript" src="/js/blog.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/VincentGarreau/particles.js/particles.js"></script>
+<script>
+    particlesJS("particles-js", {
+        "particles": {
+            "number": {
+                "value": 50,
+                "density": {
+                    "enable": true,
+                    "value_area": 1000
+                }
+            },
+            "color": {
+                "value": "#ff0000"
+            },
+            "shape": {
+                "type": "circle",
+                "stroke": {
+                    "width": 0,
+                    "color": "#000000"
+                },
+                "polygon": {
+                    "nb_sides": 5
+                },
+                "image": {
+                    "src": "img/github.svg",
+                    "width": 100,
+                    "height": 100
+                }
+            },
+            "opacity": {
+                "value": 0.5,
+                "random": false,
+                "anim": {
+                    "enable": false,
+                    "speed": 1,
+                    "opacity_min": 0.1,
+                    "sync": false
+                }
+            },
+            "size": {
+                "value": 3,
+                "random": true,
+                "anim": {
+                    "enable": false,
+                    "speed": 40,
+                    "size_min": 0.1,
+                    "sync": false
+                }
+            },
+            "line_linked": {
+                "enable": true,
+                "distance": 150,
+                "color": "#ff00f0",
+                "opacity": 0.4,
+                "width": 1
+            },
+            "move": {
+                "enable": true,
+                "speed": 6,
+                "direction": "none",
+                "random": false,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+                "attract": {
+                    "enable": false,
+                    "rotateX": 600,
+                    "rotateY": 1200
+                }
+            }
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": {
+                    "enable": true,
+                    "mode": "repulse"
+                },
+                "onclick": {
+                    "enable": true,
+                    "mode": "push"
+                },
+                "resize": true
+            },
+            "modes": {
+                "grab": {
+                    "distance": 400,
+                    "line_linked": {
+                        "opacity": 1
+                    }
+                },
+                "bubble": {
+                    "distance": 400,
+                    "size": 40,
+                    "duration": 2,
+                    "opacity": 8,
+                    "speed": 3
+                },
+                "repulse": {
+                    "distance": 200,
+                    "duration": 0.4
+                },
+                "push": {
+                    "particles_nb": 4
+                },
+                "remove": {
+                    "particles_nb": 2
+                }
+            }
+        },
+        "retina_detect": true
+    });
+
+
+    /* ---- stats.js config ---- */
+
+    var count_particles, stats, update;
+    stats = new Stats;
+    stats.setMode(0);
+    stats.domElement.style.position = 'absolute';
+    stats.domElement.style.left = '0px';
+    stats.domElement.style.top = '0px';
+    document.body.appendChild(stats.domElement);
+    count_particles = document.querySelector('.js-count-particles');
+    update = function () {
+        stats.begin();
+        stats.end();
+        if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+            count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+        }
+        requestAnimationFrame(update);
+    };
+    requestAnimationFrame(update);
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script>
+    $(document).ready(function () {
+        anchors.add("p");
+    })
+</script>
+
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if ($('#tag_cloud').length !== 0) {
+        async ("https://vitaminac.github.io/js/jquery.tagcloud.js", function () {
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {
+                    start: '#bbbbee',
+                    end: '#0085a1'
+                },
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<script type="text/javascript" src="/js/common.js"></script>
+
+
+<script type="text/javascript">
+    $("code").addClass("language-bash");
+</script>
+<script type="text/javascript" src="/js/prism.js"></script>
+<script type="text/javascript">
+    addCSS("/css/prism.css");
+    Prism.highlightAll();
+</script>
+
+
+<!-- render ipynb file -->
+
+
+<!-- render ipynb file -->
+
+</body>
+
+</html>

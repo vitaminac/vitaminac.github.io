@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<!-- SEO -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Matrices in Computer Graphics｜Gao&#39;s Blog</title>
+    <meta property="og:title" content="Matrices in Computer Graphics｜Gao&#39;s Blog" />
+    
+    <meta name="description" content="Matrices in Computer Graphics｜Gao&#39;s Blog">
+    <meta property="og:description" content="Matrices in Computer Graphics｜Gao&#39;s Blog" />
+    <meta name="author" content="Gao">
+    <meta name="robots" content="index, follow">
+    <meta property="og:image" content="https://vitaminac.github.io/images/favicon.jpg" />
+    <link rel="shortcut icon" href="/images/favicon.jpg">
+    
+    <meta name="keywords" content="Matrix,Computer Graphics,4D Matrices,Translation Matrix,Projection Matrix,Rotation Matrix,Scaling Matrix,Model Matrix,View Matrix,Projecion Matrix">
+    
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="alternate" type="application/atom+xml" title="Gao&#39;s Blog" href="/atom.xml">
+
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" cross-origin="anonymous" referrer-policy="no-referrer">
+    <link rel="canonical" href="https://vitaminac.github.io/Matrices-in-Computer-Graphics/">
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Google Tag Manager -->
+    
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WDC9JKC');</script>
+    
+    <!-- End Google Tag Manager -->
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151409235-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-151409235-1');
+    </script>
+    
+
+    <!-- Google AdSense -->
+    <script data-ad-client="ca-pub-8356359077918854" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<meta name="generator" content="Hexo 6.1.0"></head>
+<style>
+    header.intro-header {
+        background-image: url('/images/header.gif')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+
+<body ontouchstart="" class="animated fadeIn">
+    <div id="particles-js"></div>
+    <nav
+  class="navbar navbar-expand-lg navbar-light sticky-top navbar-custom"
+  id="nav-top"
+>
+  <div class="container-fluid">
+    <a
+      class="navbar-brand animated pulse"
+      href="../index.html"
+    >
+      <span class="brand-logo">Gao&#39;s Blog</span>
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+        <li class="nav-item">
+          <a
+            class="nav-link "
+            aria-current="page"
+            href="../index.html"
+          >
+            Home
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a
+            class="nav-link "
+            aria-current="page"
+            href="../tags/index.html"
+          >
+            Tags
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/blog">New Blog</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Language
+          </a>
+          <ul
+            class="dropdown-menu dropdown-menu-end"
+            aria-labelledby="navbarDropdown"
+          >
+            
+            <li>
+              <a
+                class="dropdown-item"
+                href="../index.html"
+                >English</a
+              >
+            </li>
+            
+            <li>
+              <a
+                class="dropdown-item"
+                href="../es"
+                >Spanish</a
+              >
+            </li>
+            
+            <li>
+              <a
+                class="dropdown-item"
+                href="../zh"
+                >Chinese</a
+              >
+            </li>
+            
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js"></script>
+<!--fastClick.js -->
+<script>
+$(function() {
+  var $nav = document.querySelector("nav");
+  if ($nav) {
+    FastClick.attach($nav);
+  }
+});
+</script>
+
+    <!-- Main Content -->
+    
+<!--only post-->
+
+
+<img class="wechat-title-img" src="/images/preview.jpeg">
+
+
+<style>
+    header.intro-header {
+            background-image: url('/images/preview.jpeg')
+        }
+
+        
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 text-center">
+                <div class="post-heading">
+                    <h1>
+                        Matrices in Computer Graphics
+                    </h1>
+                    
+                    <span class="meta">Author:
+                        Gao
+                        <span />
+                        Date:
+                        2020-05-31
+                    </span>
+                    <div class="tags text-center">
+                        
+                        <a class="tag" href="/tags/#Matrix" title="Matrix">
+                            Matrix</a>
+                        
+                        <a class="tag" href="/tags/#Computer Graphics" title="Computer Graphics">
+                            Computer Graphics</a>
+                        
+                        <a class="tag" href="/tags/#4D Matrices" title="4D Matrices">
+                            4D Matrices</a>
+                        
+                        <a class="tag" href="/tags/#Translation Matrix" title="Translation Matrix">
+                            Translation Matrix</a>
+                        
+                        <a class="tag" href="/tags/#Projection Matrix" title="Projection Matrix">
+                            Projection Matrix</a>
+                        
+                        <a class="tag" href="/tags/#Rotation Matrix" title="Rotation Matrix">
+                            Rotation Matrix</a>
+                        
+                        <a class="tag" href="/tags/#Scaling Matrix" title="Scaling Matrix">
+                            Scaling Matrix</a>
+                        
+                        <a class="tag" href="/tags/#Model Matrix" title="Model Matrix">
+                            Model Matrix</a>
+                        
+                        <a class="tag" href="/tags/#View Matrix" title="View Matrix">
+                            View Matrix</a>
+                        
+                        <a class="tag" href="/tags/#Projecion Matrix" title="Projecion Matrix">
+                            Projecion Matrix</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            Matrices in Computer Graphics
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="order-lg-2 col-lg-3 col-12 toc-col" style="z-index: 1;">
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Matrix-Transformations"><span class="toc-text">Matrix Transformations</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Affine-Space"><span class="toc-text">Affine Space</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Affine-transformation"><span class="toc-text">Affine transformation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4D-Homogeneous-Space"><span class="toc-text">4D Homogeneous Space</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Scaling-Matrices"><span class="toc-text">Scaling Matrices</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Rotation-Matrices"><span class="toc-text">Rotation Matrices</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Translation-Matrix"><span class="toc-text">Translation Matrix</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Refletion-Matrix"><span class="toc-text">Refletion Matrix</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Shearing-Matrix"><span class="toc-text">Shearing Matrix</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Compositions-of-Transformations"><span class="toc-text">Compositions of Transformations</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Model-Matrix"><span class="toc-text">Model Matrix</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#View-Matrix"><span class="toc-text">View Matrix</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#View-Frustum"><span class="toc-text">View Frustum</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Projection-Matrix"><span class="toc-text">Projection Matrix</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Orthographic-Projection"><span class="toc-text">Orthographic Projection</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Perspective-Projection"><span class="toc-text">Perspective Projection</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Viewport-Transformation-Matrix"><span class="toc-text">Viewport Transformation Matrix</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-text">Reference</span></a></li></ol></li></ol>
+            </div>
+
+            <div class="order-lg-1 col-lg-9 col-12 post-container">
+                <h1 id="Matrix-Transformations"><a href="#Matrix-Transformations" class="headerlink" title="Matrix Transformations"></a>Matrix Transformations</h1><p>The matrices are used frequently in computer graphics and the matrix transformations are one of the core mechanics of any 3D graphics, the chain of matrix transformations allows to render a 3D object on a 2D monitor.</p>
+<h2 id="Affine-Space"><a href="#Affine-Space" class="headerlink" title="Affine Space"></a>Affine Space</h2><p>An affine space is nothing more than a vector space whose origin we try to forget about, by adding translations to the linear maps. Hence we have scalar, vector and point.</p>
+<h2 id="Affine-transformation"><a href="#Affine-transformation" class="headerlink" title="Affine transformation"></a>Affine transformation</h2><p>In geometry, an affine transformation can be represented as the composition of a linear transformation plus a translation. If we want to do any affine transformation in 3D space, we can extend our vectors to four-dimension and using <strong>4x4 matrix</strong> to transform them.</p>
+<h2 id="4D-Homogeneous-Space"><a href="#4D-Homogeneous-Space" class="headerlink" title="4D Homogeneous Space"></a>4D Homogeneous Space</h2><p>The fourth component in a 4D vector is $w$, sometimes referred to as the <strong>homogeneous coordinate</strong>. Image the standard 2D plane such that any 2D point $(x, y)$ is represented in homogeneous 3D space $(x, y, 1)$. There are an infinite points in homogeneous space $(kx, ky, k)$, $k \ne 0$, these points form a line through the origin.  For all points that are not in the plane $w&#x3D;1$, we can project the point onto the standard plane by dividing by $w$. So the homogeneous coordinate $(x, y, w)$ is mapped to the 2D point $(x&#x2F;w, y&#x2F;w)$.</p>
+<p><img src="Projecting.png" alt="Projecting homogeneous coordinates"></p>
+<p>When $w &#x3D; 0$, we can interpret as a <strong>direction</strong>. The <strong>location</strong> where $w \ne 0$ are <strong>points</strong> and the <strong>directions</strong> with $w &#x3D; 0$ are <strong>vectors</strong>. If assume for the moment that $w$ is always 1, any 3 x 3 transformation matrix can be represented in 4D homogeneous space by using the conversion.</p>
+<p>$$<br>\begin{bmatrix}<br>m_{11} &amp; m_{12} &amp; m_{13} &amp; 0\\\\<br>m_{21} &amp; m_{22} &amp; m_{23} &amp; 0\\\\<br>m_{31} &amp; m_{32} &amp; m_{33} &amp; 0\\\\<br>0 &amp; 0 &amp; 0 &amp; 1\\\\<br>\end{bmatrix}<br>$$</p>
+<h2 id="Scaling-Matrices"><a href="#Scaling-Matrices" class="headerlink" title="Scaling Matrices"></a>Scaling Matrices</h2><p><img src="scaling-2D.png" alt="Scaling a 2D object with various factors for k_x and k_y"></p>
+<p>Given $\vec{k}&#x3D;(k_i, k_j, k_z)$ is a 3D vector that represent the scale along each axis. The 3D homogeneous scale matrix is</p>
+<p>$$<br>S(\vec{k}) &#x3D;<br>\begin{bmatrix}<br>k_x &amp; 0 &amp; 0 &amp; 0\\\\<br>0 &amp; k_y &amp; 0 &amp; 0\\\\<br>0 &amp; 0 &amp; k_z &amp; 0\\\\<br>0 &amp; 0 &amp; 0 &amp; 1\\\\<br>\end{bmatrix}<br>$$</p>
+<p>The scaled vector will be</p>
+<p>$$<br>p^\prime &#x3D; S(\vec{k})p<br>$$</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/vitaminac/minige/blob/96ea43c5caae8099cb8faa6129f9598614318df4/src/geometry/mat4.cpp#L104-L111">Scaling</a></p>
+<h2 id="Rotation-Matrices"><a href="#Rotation-Matrices" class="headerlink" title="Rotation Matrices"></a>Rotation Matrices</h2><p>In 3D, rotation occurs about a <strong>axis</strong> and $\theta$ is the angle using the <strong>right-hand rule</strong>(<strong>counterclockwise direction</strong>). The rotations can also be represented by clockwise direction.</p>
+<p>$$<br>p^\prime &#x3D; \textbf{R}(\hat{\textbf{n}},\theta)p<br>$$</p>
+<p>$$<br>\textbf{R}_x(\theta) &#x3D;<br>\begin{bmatrix}<br>1 &amp; 0 &amp; 0\\\\<br>0 &amp; \cos\theta &amp; -\sin\theta\\\\<br>0 &amp; \sin\theta &amp; \cos\theta\\\\<br>\end{bmatrix}<br>$$</p>
+<p>$$<br>\textbf{R}_y(\theta) &#x3D;<br>\begin{bmatrix}<br>\cos\theta &amp; 0 &amp; \sin\theta\\\\<br>0 &amp; 1 &amp; 0\\\\<br>-\sin\theta &amp; 0 &amp; \cos\theta\\\\<br>\end{bmatrix}<br>$$</p>
+<p>$$<br>\textbf{R}_z(\theta) &#x3D;<br>\begin{bmatrix}<br>\cos\theta &amp; -\sin\theta &amp; 0\\\\<br>\sin\theta &amp; \cos\theta &amp; 0\\\\<br>0 &amp; 0 &amp; 1\\\\<br>\end{bmatrix}<br>$$</p>
+<p><img src="rotation.gif" alt="Rotation"></p>
+<p>For an arbitrary axis in 3D, the rotation matrix $\textbf{R}(\hat{\textbf{n}}, \theta)$ is</p>
+<p>$$<br>\begin{bmatrix}<br>n_x^2 (1 - \cos \theta) + \cos \theta &amp; n_x n_y (1 - \cos \theta) - n_z \sin \theta &amp; n_x n_z (1 - \cos \theta) + n_y \sin \theta\\\\<br>n_x n_y (1 - \cos \theta) + n_z \sin \theta &amp; n_y^2 (1 - \cos \theta) + \cos \theta &amp; n_y n_z (1 - \cos \theta) - n_x \sin \theta\\\\<br>n_x n_z (1 - \cos \theta) - n_y \sin \theta &amp; n_y n_z (1 - \cos \theta) + n_x \sin \theta &amp; n_z^2 (1 - \cos \theta) + \cos \theta\\\\<br>\end{bmatrix}<br>$$</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/vitaminac/minige/blob/96ea43c5caae8099cb8faa6129f9598614318df4/src/geometry/mat4.cpp#L76-L102">Rotation</a></p>
+<h2 id="Translation-Matrix"><a href="#Translation-Matrix" class="headerlink" title="Translation Matrix"></a>Translation Matrix</h2><p>With 4x4 Matrix, we can also express translation as a matrix multiplication that represent the position where we want to move our space to, which we can use to head move the camara or to move objects.</p>
+<p>$$<br>p^\prime &#x3D; T(\vec{d})p<br>$$</p>
+<p>$$<br>T(\vec{v}) &#x3D;<br>\begin{bmatrix}<br>1 &amp; 0 &amp; 0 &amp; d_x\\\\<br>0 &amp; 1 &amp; 0 &amp; d_y\\\\<br>0 &amp; 0 &amp; 1 &amp; d_z\\\\<br>0 &amp; 0 &amp; 0 &amp; 1\\\\<br>\end{bmatrix}<br>$$</p>
+<p><img src="translation.png" alt="Translation"></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/vitaminac/minige/blob/96ea43c5caae8099cb8faa6129f9598614318df4/src/geometry/mat4.cpp#L68-L75">Translation</a></p>
+<h2 id="Refletion-Matrix"><a href="#Refletion-Matrix" class="headerlink" title="Refletion Matrix"></a>Refletion Matrix</h2><p>Reflection (also called mirroring) is a transformation that “flips” the object about a line (in 2D) or a plane (in 3D).</p>
+<p><img src="Reflection.png" alt="Reflection"></p>
+<p>Reflection can be accomplished by applying a scale factor of $-1$. For the transformation to be linear, the plane must contain the origin.</p>
+<p>$$<br>p^\prime &#x3D; \textbf{R}(\hat{\textbf{n}})p<br>$$</p>
+<p>$$<br>\textbf{R}(\hat{\textbf{n}}) &#x3D;<br>\begin{bmatrix}<br>1 - 2 n^2_x &amp; -2 n_x n_y &amp; -2 n_x n_z\\\\<br>-2 n_x n_y &amp; 1 - 2 n^2_y &amp; -2 n_y n_z\\\\<br>-2 n_x n_z &amp; -2 n_y n_z &amp; 1 - 2 n^2_z\\\\<br>\end{bmatrix}<br>$$</p>
+<h2 id="Shearing-Matrix"><a href="#Shearing-Matrix" class="headerlink" title="Shearing Matrix"></a>Shearing Matrix</h2><p>Shearing is a transformation that “skews” the coordinate space, stretching it nonuniformly. Angles are not preserved; however, surprisingly, areas and volumes are.</p>
+<p><img src="Shearing.png" alt="Shearing"></p>
+<p>$$<br>\textbf{H} &#x3D;<br>\begin{bmatrix}<br>1 &amp; s^y_x &amp; s^z_x\\\\<br>s^x_y &amp; 1 &amp; s^z_y\\\\<br>s^x_z &amp; s^y_z &amp; 1\\\\<br>\end{bmatrix}<br>$$</p>
+<p>$$<br>x^\prime &#x3D; x + s^y_x y + s^z_x z\\\\<br>y^\prime &#x3D; s^x_y x + y + s^z_y z\\\\<br>z^\prime &#x3D; s^x_z x + s^y_z y + z\\\\<br>$$</p>
+<h2 id="Compositions-of-Transformations"><a href="#Compositions-of-Transformations" class="headerlink" title="Compositions of Transformations"></a>Compositions of Transformations</h2><p>We can chain several transformations together by multiplying matrices in order, the result will be a single matrix that encodes the full transformation.</p>
+<p>Let $\textbf{T}$ be a translation matrix, $\textbf{R}$ a rotation matrix, $\textbf{S}$ a scale matrix, the corresponding matrix is</p>
+<p>$$<br>\textbf{M} &#x3D; \textbf{TRS} &#x3D;<br>\begin{bmatrix}<br>\textbf{A} &amp; \textbf{t}\\\\<br>0 &amp; 1\\\\<br>\end{bmatrix}<br>$$</p>
+<p>Then we could compute a new point $p^\prime$ by $p^\prime &#x3D; \textbf{M} p$, where A is the transformation about the axes.</p>
+<h2 id="Model-Matrix"><a href="#Model-Matrix" class="headerlink" title="Model Matrix"></a>Model Matrix</h2><p>Every model in the game lives in one speific vector space, called <strong>model space</strong>. All the vertices are relative to the origin of the <strong>model space</strong>, if we want them to be in any spatial relation we need <strong>model matrix</strong> to transform them into a commom space which is called <strong>world space</strong>. Since every object will be in its own position and orientation in the world, we will need a different <strong>model matrix</strong> for each object to scale it, rotate it and move it to the desired position and orientation with appropriate size. When all the objects have been transformed into a common space, their vertices will then be relaive to the <strong>world space</strong>.</p>
+<h2 id="View-Matrix"><a href="#View-Matrix" class="headerlink" title="View Matrix"></a>View Matrix</h2><p>We use <strong>view matrix</strong> to transform into an auxiliary space <strong>view space</strong> is that simplifies a lot the math if we could have the camera centered in the origin and watching down one of the three axis. In OpenGL, by default, the camera is at the coordinate origin, facing towards -z and with the vector up oriented with the y-axis.</p>
+<p><img src="camera.png" alt="Camera"><br><img src="camera-space.png" alt="Camera Space"></p>
+<h2 id="View-Frustum"><a href="#View-Frustum" class="headerlink" title="View Frustum"></a>View Frustum</h2><p>The <strong>view frustum</strong> is the volume of space that is potentially visible to the camera. The view frustum is bounded by six planes, known as the clip planes, top, left, bottom, right, near and far planes. The near and far clip planes, which correspond to certain camera-space values of z. The reason for the far clip plane is prevents rendering of objects beyond a certain distance. A far clip plane can limit the number of objects that need to be rendered in an outdoor environment. The far clip establishes what (floating point) z value in camera space will correspond to the maximum value that can be stored in the depth buffer.</p>
+<p><img src="perspective-view-frustum.png" alt="Perspective View Frustum"><br><img src="orthographic-view-frustum.png" alt="Orthographic View Frustum"></p>
+<h2 id="Projection-Matrix"><a href="#Projection-Matrix" class="headerlink" title="Projection Matrix"></a>Projection Matrix</h2><p>To facilitate the transformation of points to pixels, we use <strong>projection matrix</strong> to map the <strong>view frustum</strong> into the <strong>homogeneous clip space</strong>. That is a normalized 6-tuple cube which defines the clipping planes. The dimensions are between -1 and 1 for every axis, anything outside the [1, -1] range is outside the camera view area. The cube is traslated so that its centered at the origin which is defined by having a minimum corner (-1,-1,-1) at left-bottom-near and a mximum corner (1,1,1) at right-top-far.</p>
+<p><img src="homogeneous-clip-space.png" alt="projection space"></p>
+<h3 id="Orthographic-Projection"><a href="#Orthographic-Projection" class="headerlink" title="Orthographic Projection"></a>Orthographic Projection</h3><p>In the orthographic projection, also known as a parallel projection, the lines from the original point to the resulting projected point on the plane are parallel to the camera’s viewing direciton.</p>
+<p><img src="orthographic-projection.png" alt="Orthographic Projection"></p>
+<p>The orthographic frustum is</p>
+<p>$$<br>\begin{split}<br>P &amp;&#x3D; ST\\\\<br>&amp;&#x3D;<br>\begin{bmatrix}<br>\frac{2}{right - left} &amp; 0 &amp; 0 &amp; 0\\\\<br>0 &amp; \frac{2}{top - bottom} &amp; 0 &amp; 0\\\\<br>0 &amp; 0 &amp; \frac{2}{far - near} &amp; 0\\\\<br>0 &amp; 0 &amp; 0 &amp; 1\\\\<br>\end{bmatrix}<br>\begin{bmatrix}<br>1 &amp; 0 &amp; 0 &amp; -\frac{left + right}{2}\\\\<br>0 &amp; 1 &amp; 0 &amp; -\frac{top + bottom}{2}\\\\<br>0 &amp; 0 &amp; -1 &amp; -\frac{far + near}{2}\\\\<br>0 &amp; 0 &amp; 0 &amp; 1\\\\<br>\end{bmatrix}<br>\\\\<br>&amp;&#x3D;<br>\begin{bmatrix}<br>\frac{2}{right - left} &amp; 0 &amp; 0 &amp; -\frac{right + left}{right - left}\\\\<br>0 &amp; \frac{2}{top - bottom} &amp; 0 &amp; -\frac{top + bottom}{top - bottom}\\\\<br>0 &amp; 0 &amp; -\frac{2}{far - near} &amp; -\frac{far + near}{far - near}\\\\<br>0 &amp; 0 &amp; 0 &amp; 1\\\\<br>\end{bmatrix}<br>\\\\<br>\end{split}<br>$$</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/vitaminac/minige/blob/2011e5b8c7d833e67ddab40aa28a7e511a2aae5b/src/geometry/mat4.cpp#L113-L126">Orthographic Projection</a></p>
+<p>The projection on a 2x2 plane parallel to the XY plane that passes through the point z &#x3D; -D is</p>
+<p>$$<br>\begin{bmatrix}<br>1 &amp; 0 &amp; 0 &amp; 0\\\\<br>0 &amp; 1 &amp; 0 &amp; 0\\\\<br>0 &amp; 0 &amp; 0 &amp; -D\\\\<br>0 &amp; 0 &amp; 0 &amp; 1\\\\<br>\end{bmatrix}<br>$$</p>
+<h3 id="Perspective-Projection"><a href="#Perspective-Projection" class="headerlink" title="Perspective Projection"></a>Perspective Projection</h3><p>With perspective projection, the projectors intersect at the <strong>center of projeciton</strong>.</p>
+<p><img src="center-of-projection.png" alt="Center of projeciton"></p>
+<p>Due to perpective foreshortening, the projecion on the left is larger than the projection on the right. The left-hand is closer to the projection plane. As we move an object farther away from the center of projection, its orthographic projection remains constant, but the perspective projection gets smaller. The projectors cross the center of projection and the image is inverted when striking the plane.</p>
+<p><img src="perspective-foreshortening.png" alt="Perspective foreshortening"></p>
+<p>By similar triangles, we know</p>
+<p><img src="projection-plane-negative.png" alt="Projection plane from the side"></p>
+<p>$$<br>\begin{split}<br>p\prime_x &amp;&#x3D; \frac{-dp_x}{z}\\\\<br>p\prime_y &amp;&#x3D; \frac{-dp_y}{z}\\\\<br>\end{split}<br>$$</p>
+<p>The $z$ value of all the projected points are the same $-d$. Thus the result of projecting a point $\textbf{p}$ through the origin onto a plane at $z&#x3D;-d$ is</p>
+<p>$$<br>p &#x3D; (x, y, z) \Rightarrow p^\prime &#x3D; (-dx&#x2F;z, -dy&#x2F;z, -d)<br>$$</p>
+<p><img src="projection-plane-positive.png" alt="Projection plane from other side"></p>
+<p>if we move the plane of projeciton to $z&#x3D;d$, we will have</p>
+<p>$$<br>p^\prime &#x3D; [dx&#x2F;z \quad, dy&#x2F;z \quad d]<br>$$</p>
+<p>The projection on a plane parallel to the XY plane that passes through the point z &#x3D; -D with the camera (center of projection) at the origin facing towards -z and with the vector up oriented with the y-axis is</p>
+<p><img src="perspective-projection.png" alt="Perspective Projection"></p>
+<p>$$<br>\begin{bmatrix}<br>1 &amp; 0 &amp; 0 &amp; 0\\\\<br>0 &amp; 1 &amp; 0 &amp; 0\\\\<br>0 &amp; 0 &amp; 1 &amp; 0\\\\<br>0 &amp; 0 &amp; -\frac{1}{d} &amp; 0\\\\<br>\end{bmatrix}<br>\begin{bmatrix}<br>x\\\\<br>y\\\\<br>z\\\\<br>1\\\\<br>\end{bmatrix}<br>&#x3D;<br>\begin{bmatrix}<br>x\\\\<br>y\\\\<br>z\\\\<br>-\frac{z}{d}\\\\<br>\end{bmatrix}<br>$$</p>
+<p>And after the division we will have</p>
+<p>$$<br>\begin{bmatrix}<br>-\frac{dx}{z}\\\\<br>-\frac{dy}{z}\\\\<br>-d\\\\<br>\end{bmatrix}<br>$$</p>
+<p>The perspective frustum is</p>
+<p>$$<br>p^{\prime}<br>&#x3D;<br>\begin{bmatrix}<br>p_x^{\prime}\\\\<br>p_y^{\prime}\\\\<br>p_z^{\prime}\\\\<br>w\\\\<br>\end{bmatrix}<br>&#x3D; M_{persp}p &#x3D;<br>\begin{bmatrix}<br>\frac{2n}{r-l} &amp; 0 &amp; \frac{r+l}{r-l} &amp; 0\\\\<br>0 &amp; \frac{2n}{t-b} &amp; \frac{t+b}{t-b} &amp; 0\\\\<br>0 &amp; 0 &amp; -\frac{f+n}{f-n} &amp; -\frac{2nf}{f-n}\\\\<br>0 &amp; 0 &amp; -1 &amp; 0\\\\<br>\end{bmatrix}<br>\begin{bmatrix}<br>p_x\\\\<br>p_y\\\\<br>p_z\\\\<br>1\\\\<br>\end{bmatrix}<br>$$</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/vitaminac/minige/blob/2011e5b8c7d833e67ddab40aa28a7e511a2aae5b/src/geometry/mat4.cpp#L143-L156">Perspective Frustum</a></p>
+<p>Given the <strong>field of view $\alpha$</strong> in y direction and the <strong>aspect ratio $\beta$</strong> of a display screen is equal to the ratio of $x$ (width) to $y$ (height)</p>
+<p>$$<br>e &#x3D; \frac{1}{\tan{\frac{\alpha}{2}}}<br>$$</p>
+<p>The view frustum plane normal directions in OpenGL camera space is</p>
+<p><img src="camera-space-opengl.png" alt="Camera Space"><br><img src="perspective-frustum.png" alt="Perspective Frustum"></p>
+<p>Because of the symmetry along x, y axis, the following relationships hold</p>
+<p>$$<br>t &#x3D; \tan{\frac{\alpha}{2}} n &#x3D; \frac{n}{e}\\\\<br>b &#x3D; -t\\\\<br>r &#x3D; t \cdot \beta &#x3D; \frac{n\beta}{e}\\\\<br>l &#x3D; -r\\\\<br>\frac{r+l}{r-l} &#x3D; \frac{t+b}{t-b} &#x3D; 0\\\\<br>\frac{2n}{r-l} &#x3D; \frac{e}{\beta}\\\\<br>\frac{2n}{t-b} &#x3D; e\\\\<br>$$</p>
+<p>$$<br>\begin{bmatrix}<br>\frac{e}{\beta} &amp; 0 &amp; 0 &amp; 0\\\\<br>0 &amp; e &amp; 0 &amp; 0\\\\<br>0 &amp; 0 &amp; -\frac{f+n}{f-n} &amp; -\frac{2nf}{f-n}\\\\<br>0 &amp; 0 &amp; -1 &amp; 0\\\\<br>\end{bmatrix}<br>$$</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/vitaminac/minige/blob/6e5ea57ff4bb7c012a528311f9b05dd46a1bd0e0/src/geometry/mat4.cpp#L128-L141">Perspective Projection</a></p>
+<h2 id="Viewport-Transformation-Matrix"><a href="#Viewport-Transformation-Matrix" class="headerlink" title="Viewport Transformation Matrix"></a>Viewport Transformation Matrix</h2><p>After we performed a 4x4 affine transformation projection matrix into 4D projection space then subsequent division by the $w$ coordinate produces <strong>normalized device coordinates</strong>, also commonly known as “<strong>screen space</strong>“. The 3D coordinates now represent the 2D positions of points on screen, with X and Y in [−1, 1], together with the depth within the depth buffer range, Z in [−1, 1]. The axis orientation is X &#x3D; right, Y &#x3D; up, and Z can be either forward or backward depending on the depth buffer configuration.</p>
+<p><img src="transformation-pipeline.PNG" alt="Pipeline"></p>
+<p>To render on the portion of the output device expressed in pixels (<strong>viewport</strong>), we applying the viewport transform to the normalized device coordinates.</p>
+<p><img src="viewport.png" alt="Viewport"></p>
+<p>$$<br>V &#x3D; TS &#x3D;<br>\begin{bmatrix}<br>1 &amp; 0 &amp; 0 &amp; \frac{r+l}{2}\\\\<br>0 &amp; 1 &amp; 0 &amp; \frac{t+b}{2}\\\\<br>0 &amp; 0 &amp; 1 &amp; \frac{1}{2}\\\\<br>0 &amp; 0 &amp; 0 &amp; 1\\\\<br>\end{bmatrix}<br>\begin{bmatrix}<br>\frac{r-l}{2} &amp; 0 &amp; 0 &amp; 0\\\\<br>0 &amp; \frac{t-b}{2} &amp; 0 &amp; 0\\\\<br>0 &amp; 0 &amp; \frac{1}{2} &amp; 0\\\\<br>0 &amp; 0 &amp; 0 &amp; 1\\\\<br>\end{bmatrix}<br>&#x3D;<br>\begin{bmatrix}<br>\frac{r-l}{2} &amp; 0 &amp; 0 &amp; \frac{r+l}{2}\\\\<br>0 &amp; \frac{t-b}{2} &amp; 0 &amp; \frac{t+b}{2}\\\\<br>0 &amp; 0 &amp; \frac{1}{2} &amp; \frac{1}{2}\\\\<br>0 &amp; 0 &amp; 0 &amp; 1\\\\<br>\end{bmatrix}<br>$$</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.amazon.com/gp/product/1568817231/ref=dbs_a_def_rwt_bibl_vppi_i0">3D Math Primer For Graphics and Game Development</a> pag. 138-144, 176-189</li>
+<li><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=5-minbbZW14&t=56s&list=PLlrATfBNZ98fqE45g3jZA_hLGUrD4bo6_&index=10">Matrices - Sparky Engine</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.amazon.com/Fundamentals-Computer-Graphics-Peter-Shirley/dp/1568814690">Fundamentals of Computer Graphics</a> pag. 140-144</li>
+<li><a target="_blank" rel="noopener" href="https://www.amazon.com/Mathematics-Programming-Computer-Graphics-Third/dp/1435458869">Mathematics for 3D Game Programming and Computer Graphics, Third Edition</a> pag. 75, 76, 101-115</li>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Orthographic_projection#Geometry">Orthographic projection</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.codinglabs.net/article_world_view_projection_matrix.aspx">World, View and Projection Transformation Matrices</a></li>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Orthographic_projection">Orthographic Projection - Wikipedia</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.tutorialspoint.com/computer_graphics/3d_transformation.htm">3D Transformation</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.scratchapixel.com/lessons/3d-basic-rendering/perspective-and-orthographic-projection-matrix/opengl-perspective-projection-matrix">The Perspective and Orthographic Projection Matrix</a></li>
+<li><a target="_blank" rel="noopener" href="http://glasnost.itcarlow.ie/~powerk/GeneralGraphicsNotes/projection/viewport_transformation.html">The Viewport Transformation</a></li>
+</ul>
+
+                <hr>
+
+                <ul class="list-group">
+    
+    <li class="list-group-item list-group-item-action flex-column align-items-start"><a href="../Diagonalization/">Diagonalization</a></li>
+    
+    <li class="list-group-item list-group-item-action flex-column align-items-start"><a href="../Grafico-Por-Computador/">Grafico Por Computador</a></li>
+    
+</ul>
+
+
+                <ul class="pagination pager">
+                    
+                    <li class="page-item">
+                        <a class="page-link" href="/MongoDB/" data-toggle="tooltip" data-placement="top" title="MongoDB">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="page-item ms-auto">
+                        <a class="page-link" href="/Grafico-Por-Computador/" data-toggle="tooltip" data-placement="top" title="Grafico Por Computador">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        <div class="comment">
+  <!-- disqus 评论框 start -->
+  
+  <!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "blog-vnwybnwkiz";
+    var disqus_identifier = "https://vitaminac.github.io/Matrices-in-Computer-Graphics/";
+    var disqus_url = "https://vitaminac.github.io/Matrices-in-Computer-Graphics/";
+    var disqus_config = function () { 
+      this.language = "en";
+    };
+
+    (function () {
+      var dsq = document.createElement("script");
+      dsq.type = "text/javascript";
+      dsq.async = true;
+      dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+      (
+        document.getElementsByTagName("head")[0] ||
+        document.getElementsByTagName("body")[0]
+      ).appendChild(dsq);
+    })();
+  </script>
+  <!-- disqus 公共JS代码 end -->
+  <div id="disqus_thread" class="disqus-thread"></div>
+  <!-- disqus 评论框 end -->
+  
+</div>
+
+
+        <div class="row justify-content-center">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8`
+                col-md-10
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5 class="text-center">
+                        <a href="/tags/">FEATURED TAGS</a>
+                    </h5>
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#Matrix" title="Matrix">
+                            Matrix</a>
+                        
+                        <a class="tag" href="/tags/#Computer Graphics" title="Computer Graphics">
+                            Computer Graphics</a>
+                        
+                        <a class="tag" href="/tags/#4D Matrices" title="4D Matrices">
+                            4D Matrices</a>
+                        
+                        <a class="tag" href="/tags/#Translation Matrix" title="Translation Matrix">
+                            Translation Matrix</a>
+                        
+                        <a class="tag" href="/tags/#Projection Matrix" title="Projection Matrix">
+                            Projection Matrix</a>
+                        
+                        <a class="tag" href="/tags/#Rotation Matrix" title="Rotation Matrix">
+                            Rotation Matrix</a>
+                        
+                        <a class="tag" href="/tags/#Scaling Matrix" title="Scaling Matrix">
+                            Scaling Matrix</a>
+                        
+                        <a class="tag" href="/tags/#Model Matrix" title="Model Matrix">
+                            Model Matrix</a>
+                        
+                        <a class="tag" href="/tags/#View Matrix" title="View Matrix">
+                            View Matrix</a>
+                        
+                        <a class="tag" href="/tags/#Projecion Matrix" title="Projecion Matrix">
+                            Projecion Matrix</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <img src="/images/QR.jpg" style="width: 100%; height: auto" />
+      <div class="pt-4"><!-- SNS Link 社交 -->
+<ul class="list-inline text-center">
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://www.linkedin.com/in/shuxig">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a href="mailto:dalao1002@gmail.com?subject=From my blog&body=Hi,I found this website very useful">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a href="tel:34688218528">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-phone fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    <li class="list-inline-item d-none d-lg-inline-block">
+        <a target="_blank" href="https://web.whatsapp.com/send?phone=34688218528">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-whatsapp fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    <li class="list-inline-item d-lg-none">
+        <a target="_blank" href="https://wa.me/34688218528">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-whatsapp fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://github.com/vitaminac">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    <li class="list-inline-item">
+        <a target="_blank" href="https://gist.github.com/vitaminac">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github-square fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://gitlab.com/vitaminac">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-gitlab fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://www.kaggle.com/dalao1002">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-kaggle fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://leetcode.com/dalao1002">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-code fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://stackoverflow.com/users/9980245">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://www.youtube.com/channel/UCn36tkFugikDQS_0tgH1p6g">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://space.bilibili.com/17108326">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-bilibili fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+</ul></div>
+      <p class="copyright text-muted">
+        Copyright &copy; Gao&#39;s Blog 2022
+      </p>
+    </div>
+  </div>
+</footer>
+
+    <!--wechat title img-->
+    <img class="wechat-title-img" src="/images/avatar.jpg">
+    <!-- Custom Theme JavaScript -->
+<script type="text/javascript" src="/js/blog.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/VincentGarreau/particles.js/particles.js"></script>
+<script>
+    particlesJS("particles-js", {
+        "particles": {
+            "number": {
+                "value": 50,
+                "density": {
+                    "enable": true,
+                    "value_area": 1000
+                }
+            },
+            "color": {
+                "value": "#ff0000"
+            },
+            "shape": {
+                "type": "circle",
+                "stroke": {
+                    "width": 0,
+                    "color": "#000000"
+                },
+                "polygon": {
+                    "nb_sides": 5
+                },
+                "image": {
+                    "src": "img/github.svg",
+                    "width": 100,
+                    "height": 100
+                }
+            },
+            "opacity": {
+                "value": 0.5,
+                "random": false,
+                "anim": {
+                    "enable": false,
+                    "speed": 1,
+                    "opacity_min": 0.1,
+                    "sync": false
+                }
+            },
+            "size": {
+                "value": 3,
+                "random": true,
+                "anim": {
+                    "enable": false,
+                    "speed": 40,
+                    "size_min": 0.1,
+                    "sync": false
+                }
+            },
+            "line_linked": {
+                "enable": true,
+                "distance": 150,
+                "color": "#ff00f0",
+                "opacity": 0.4,
+                "width": 1
+            },
+            "move": {
+                "enable": true,
+                "speed": 6,
+                "direction": "none",
+                "random": false,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+                "attract": {
+                    "enable": false,
+                    "rotateX": 600,
+                    "rotateY": 1200
+                }
+            }
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": {
+                    "enable": true,
+                    "mode": "repulse"
+                },
+                "onclick": {
+                    "enable": true,
+                    "mode": "push"
+                },
+                "resize": true
+            },
+            "modes": {
+                "grab": {
+                    "distance": 400,
+                    "line_linked": {
+                        "opacity": 1
+                    }
+                },
+                "bubble": {
+                    "distance": 400,
+                    "size": 40,
+                    "duration": 2,
+                    "opacity": 8,
+                    "speed": 3
+                },
+                "repulse": {
+                    "distance": 200,
+                    "duration": 0.4
+                },
+                "push": {
+                    "particles_nb": 4
+                },
+                "remove": {
+                    "particles_nb": 2
+                }
+            }
+        },
+        "retina_detect": true
+    });
+
+
+    /* ---- stats.js config ---- */
+
+    var count_particles, stats, update;
+    stats = new Stats;
+    stats.setMode(0);
+    stats.domElement.style.position = 'absolute';
+    stats.domElement.style.left = '0px';
+    stats.domElement.style.top = '0px';
+    document.body.appendChild(stats.domElement);
+    count_particles = document.querySelector('.js-count-particles');
+    update = function () {
+        stats.begin();
+        stats.end();
+        if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+            count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+        }
+        requestAnimationFrame(update);
+    };
+    requestAnimationFrame(update);
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script>
+    $(document).ready(function () {
+        anchors.add("p");
+    })
+</script>
+
+
+<!-- mathjax -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    jax: ["input/TeX", "output/SVG"],
+    extensions: ["tex2jax.js"],
+    showMathMenu: false,
+    SVG: { useGlobalCache: false },
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+        processEscapes: true
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    }
+});
+</script>
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full">
+</script>
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if ($('#tag_cloud').length !== 0) {
+        async ("https://vitaminac.github.io/js/jquery.tagcloud.js", function () {
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {
+                    start: '#bbbbee',
+                    end: '#0085a1'
+                },
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<script type="text/javascript" src="/js/common.js"></script>
+
+
+<script type="text/javascript">
+    $("code").addClass("language-cpp");
+</script>
+<script type="text/javascript" src="/js/prism.js"></script>
+<script type="text/javascript">
+    addCSS("/css/prism.css");
+    Prism.highlightAll();
+</script>
+
+
+<!-- render ipynb file -->
+
+
+<!-- render ipynb file -->
+
+<script type="text/javascript" src="/js/render.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        
+            render_files("cpp", "cpp");
+        
+    });
+</script>
+
+</body>
+
+</html>

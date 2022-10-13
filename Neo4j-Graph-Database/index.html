@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<!-- SEO -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Neo4j Graph Database｜Gao&#39;s Blog</title>
+    <meta property="og:title" content="Neo4j Graph Database｜Gao&#39;s Blog" />
+    
+    <meta name="description" content="Neo4j Graph Database｜Gao&#39;s Blog">
+    <meta property="og:description" content="Neo4j Graph Database｜Gao&#39;s Blog" />
+    <meta name="author" content="Gao">
+    <meta name="robots" content="index, follow">
+    <meta property="og:image" content="https://vitaminac.github.io/images/favicon.jpg" />
+    <link rel="shortcut icon" href="/images/favicon.jpg">
+    
+    <meta name="keywords" content="Database,NoSQL,Neo4j,Graph Database,CQL">
+    
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="alternate" type="application/atom+xml" title="Gao&#39;s Blog" href="/atom.xml">
+
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" cross-origin="anonymous" referrer-policy="no-referrer">
+    <link rel="canonical" href="https://vitaminac.github.io/Neo4j-Graph-Database/">
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Google Tag Manager -->
+    
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WDC9JKC');</script>
+    
+    <!-- End Google Tag Manager -->
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151409235-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-151409235-1');
+    </script>
+    
+
+    <!-- Google AdSense -->
+    <script data-ad-client="ca-pub-8356359077918854" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<meta name="generator" content="Hexo 6.1.0"></head>
+<style>
+    header.intro-header {
+        background-image: url('/images/header.gif')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+
+<body ontouchstart="" class="animated fadeIn">
+    <div id="particles-js"></div>
+    <nav
+  class="navbar navbar-expand-lg navbar-light sticky-top navbar-custom"
+  id="nav-top"
+>
+  <div class="container-fluid">
+    <a
+      class="navbar-brand animated pulse"
+      href="../index.html"
+    >
+      <span class="brand-logo">Gao&#39;s Blog</span>
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+        <li class="nav-item">
+          <a
+            class="nav-link "
+            aria-current="page"
+            href="../index.html"
+          >
+            Home
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a
+            class="nav-link "
+            aria-current="page"
+            href="../tags/index.html"
+          >
+            Tags
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/blog">New Blog</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Language
+          </a>
+          <ul
+            class="dropdown-menu dropdown-menu-end"
+            aria-labelledby="navbarDropdown"
+          >
+            
+            <li>
+              <a
+                class="dropdown-item"
+                href="../index.html"
+                >English</a
+              >
+            </li>
+            
+            <li>
+              <a
+                class="dropdown-item"
+                href="../es"
+                >Spanish</a
+              >
+            </li>
+            
+            <li>
+              <a
+                class="dropdown-item"
+                href="../zh"
+                >Chinese</a
+              >
+            </li>
+            
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js"></script>
+<!--fastClick.js -->
+<script>
+$(function() {
+  var $nav = document.querySelector("nav");
+  if ($nav) {
+    FastClick.attach($nav);
+  }
+});
+</script>
+
+    <!-- Main Content -->
+    
+<!--only post-->
+
+
+<img class="wechat-title-img" src="/images/preview.jpeg">
+
+
+<style>
+    header.intro-header {
+            background-image: url('/images/preview.jpeg')
+        }
+
+        
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 text-center">
+                <div class="post-heading">
+                    <h1>
+                        Neo4j Graph Database
+                    </h1>
+                    
+                    <span class="meta">Author:
+                        Gao
+                        <span />
+                        Date:
+                        2019-10-11
+                    </span>
+                    <div class="tags text-center">
+                        
+                        <a class="tag" href="/tags/#Database" title="Database">
+                            Database</a>
+                        
+                        <a class="tag" href="/tags/#NoSQL" title="NoSQL">
+                            NoSQL</a>
+                        
+                        <a class="tag" href="/tags/#Neo4j" title="Neo4j">
+                            Neo4j</a>
+                        
+                        <a class="tag" href="/tags/#Graph Database" title="Graph Database">
+                            Graph Database</a>
+                        
+                        <a class="tag" href="/tags/#CQL" title="CQL">
+                            CQL</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            Neo4j Graph Database
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="order-lg-2 col-lg-3 col-12 toc-col" style="z-index: 1;">
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Neo4j"><span class="toc-text">Neo4j</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Graph-Database"><span class="toc-text">Graph Database</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Concepts"><span class="toc-text">Concepts</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Node"><span class="toc-text">Node</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Label"><span class="toc-text">Label</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Relationships"><span class="toc-text">Relationships</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Properties"><span class="toc-text">Properties</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Traversals-and-paths"><span class="toc-text">Traversals and paths</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Schema"><span class="toc-text">Schema</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Indexes"><span class="toc-text">Indexes</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Constraints"><span class="toc-text">Constraints</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Comparison-with-SQL"><span class="toc-text">Comparison with SQL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Features"><span class="toc-text">Features</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Technical-View"><span class="toc-text">Technical View</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Object-Cache"><span class="toc-text">Object Cache</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Protocol"><span class="toc-text">Protocol</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Index-free-adjacency"><span class="toc-text">Index-free adjacency</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CQL"><span class="toc-text">CQL</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#NULL"><span class="toc-text">NULL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Parameters"><span class="toc-text">Parameters</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#String-literal"><span class="toc-text">String literal</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Regular-expression"><span class="toc-text">Regular expression</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Create-node-with-properties"><span class="toc-text">Create node with properties</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Setting-all-properties-on-a-node"><span class="toc-text">Setting all properties on a node</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SKIP-and-LIMIT"><span class="toc-text">SKIP and LIMIT</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Multiple-node-ids"><span class="toc-text">Multiple node ids</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Calling-procedures"><span class="toc-text">Calling procedures</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MATCH"><span class="toc-text">MATCH</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Returns-all-the-nodes-in-database"><span class="toc-text">Returns all the nodes in database</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Get-all-the-nodes-under-a-specific-label"><span class="toc-text">Get all the nodes under a specific label</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Match-by-Relationship"><span class="toc-text">Match by Relationship</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Variable-length-relationships"><span class="toc-text">Variable length relationships</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Match-a-path"><span class="toc-text">Match a path</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#OPTIONAL-MATCH"><span class="toc-text">OPTIONAL MATCH</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#WHERE"><span class="toc-text">WHERE</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Filter-by-property"><span class="toc-text">Filter by property</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#WHERE-Clause-with-Multiple-Conditions"><span class="toc-text">WHERE Clause with Multiple Conditions</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Using-Relationship-with-Where-Clause"><span class="toc-text">Using Relationship with Where Clause</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#String-matching"><span class="toc-text">String matching</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#In"><span class="toc-text">In</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CREATE"><span class="toc-text">CREATE</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Creating-Nodes"><span class="toc-text">Creating Nodes</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Create-a-simple-node"><span class="toc-text">Create a simple node</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Create-multiple-nodes"><span class="toc-text">Create multiple nodes</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Create-node-with-a-label"><span class="toc-text">Create node with a label</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Create-a-node-with-multiple-labels"><span class="toc-text">Create a node with multiple labels</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Create-multiple-nodes-with-multiple-labels"><span class="toc-text">Create multiple nodes with multiple labels</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Create-node-with-Properties"><span class="toc-text">Create node with Properties</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#RETURN-newly-created-node"><span class="toc-text">RETURN newly created node</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Creating-Relationships"><span class="toc-text">Creating Relationships</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Creating-a-new-relationship"><span class="toc-text">Creating a new relationship</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Creating-a-Relationship-Between-the-Existing-Nodes"><span class="toc-text">Creating a Relationship Between the Existing Nodes</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Creating-a-Relationship-with-Label-and-Properties"><span class="toc-text">Creating a Relationship with Label and Properties</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Creating-a-Complete-Path"><span class="toc-text">Creating a Complete Path</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#RETURN"><span class="toc-text">RETURN</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Returning-Created-Node"><span class="toc-text">Returning Created Node</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Unique-results"><span class="toc-text">Unique results</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Returning-Multiple-Nodes"><span class="toc-text">Returning Multiple Nodes</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Returning-Relationships"><span class="toc-text">Returning Relationships</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Returning-Properties"><span class="toc-text">Returning Properties</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Returning-All-Elements"><span class="toc-text">Returning All Elements</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Returning-a-Variable-With-a-Column-Alias"><span class="toc-text">Returning a Variable With a Column Alias</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ORDER-BY"><span class="toc-text">ORDER BY</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Ordering-By-a-Property"><span class="toc-text">Ordering By a Property</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Ordering-Nodes-by-Multiple-Properties"><span class="toc-text">Ordering Nodes by Multiple Properties</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Ordering-Nodes-by-Descending-Order"><span class="toc-text">Ordering Nodes by Descending Order</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LIMIT"><span class="toc-text">LIMIT</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Limit-with-expression"><span class="toc-text">Limit with expression</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SKIP"><span class="toc-text">SKIP</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Skipping-the-first-3-nodes"><span class="toc-text">Skipping the first 3 nodes</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Skip-Using-Expression"><span class="toc-text">Skip Using Expression</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#WITH"><span class="toc-text">WITH</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UNWIND"><span class="toc-text">UNWIND</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MERGE"><span class="toc-text">MERGE</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Merging-a-Node-with-a-Label"><span class="toc-text">Merging a Node with a Label</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Merging-a-Node-with-Properties"><span class="toc-text">Merging a Node with Properties</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#OnCreate-and-OnMatch"><span class="toc-text">OnCreate and OnMatch</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Merge-a-Relationship"><span class="toc-text">Merge a Relationship</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#DELETE"><span class="toc-text">DELETE</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Deleting-All-Nodes-and-Relationships"><span class="toc-text">Deleting All Nodes and Relationships</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Deleting-a-Particular-Node"><span class="toc-text">Deleting a Particular Node</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#REMOVE"><span class="toc-text">REMOVE</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Removing-a-Property"><span class="toc-text">Removing a Property</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Removing-Label-From-a-Node"><span class="toc-text">Removing Label From a Node</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SET"><span class="toc-text">SET</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Setting-a-Property"><span class="toc-text">Setting a Property</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Setting-Multiple-Properties"><span class="toc-text">Setting Multiple Properties</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Setting-a-Label-on-a-Node"><span class="toc-text">Setting a Label on a Node</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Setting-Multiple-Labels-on-a-Node"><span class="toc-text">Setting Multiple Labels on a Node</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#FOREACH"><span class="toc-text">FOREACH</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Index"><span class="toc-text">Index</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Creating-an-Index"><span class="toc-text">Creating an Index</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Deleting-an-Index"><span class="toc-text">Deleting an Index</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Constraint"><span class="toc-text">Constraint</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Unique-node-property-constraints"><span class="toc-text">Unique node property constraints</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Node-property-existence-constraints"><span class="toc-text">Node property existence constraints</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Relationship-property-existence-constraints"><span class="toc-text">Relationship property existence constraints</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#String-Functions"><span class="toc-text">String Functions</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#UPPER"><span class="toc-text">UPPER</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#LOWER"><span class="toc-text">LOWER</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SUBSTRING"><span class="toc-text">SUBSTRING</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Replace"><span class="toc-text">Replace</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Aggregation-Function"><span class="toc-text">Aggregation Function</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#COUNT"><span class="toc-text">COUNT</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Group-Count"><span class="toc-text">Group Count</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#MAX"><span class="toc-text">MAX</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#MIN"><span class="toc-text">MIN</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SUM"><span class="toc-text">SUM</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#AVG"><span class="toc-text">AVG</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#List-Functions"><span class="toc-text">List Functions</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#EXTRACT"><span class="toc-text">EXTRACT</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#FILTER"><span class="toc-text">FILTER</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#KEYS"><span class="toc-text">KEYS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#LABELS"><span class="toc-text">LABELS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#NODES"><span class="toc-text">NODES</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#RANGE"><span class="toc-text">RANGE</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#REDUCE"><span class="toc-text">REDUCE</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#RELATIONSHIPS"><span class="toc-text">RELATIONSHIPS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#REVERSE"><span class="toc-text">REVERSE</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#TAIL"><span class="toc-text">TAIL</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Scalar-functions"><span class="toc-text">Scalar functions</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#COALESCE"><span class="toc-text">COALESCE</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#STARTNODE"><span class="toc-text">STARTNODE</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ENDNODE"><span class="toc-text">ENDNODE</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HEAD"><span class="toc-text">HEAD</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#LAST"><span class="toc-text">LAST</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#SIZE"><span class="toc-text">SIZE</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#LENGTH"><span class="toc-text">LENGTH</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ID"><span class="toc-text">ID</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#TYPE"><span class="toc-text">TYPE</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#PROPERTIES"><span class="toc-text">PROPERTIES</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#RANDOMUUID"><span class="toc-text">RANDOMUUID</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#TIMESTAMP"><span class="toc-text">TIMESTAMP</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#TOBOOLEAN"><span class="toc-text">TOBOOLEAN</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#TOFLOAT"><span class="toc-text">TOFLOAT</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#TOINTEGER"><span class="toc-text">TOINTEGER</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Procedures"><span class="toc-text">Procedures</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Check-which-procedures-are-available"><span class="toc-text">Check which procedures are available</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Data-Import"><span class="toc-text">Data Import</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Query-management"><span class="toc-text">Query management</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Profiling-a-query"><span class="toc-text">Profiling a query</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Explain"><span class="toc-text">Explain</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#PROFILE"><span class="toc-text">PROFILE</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Kill-Queries"><span class="toc-text">Kill Queries</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UIs"><span class="toc-text">UIs</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Neo4j-Desktop"><span class="toc-text">Neo4j Desktop</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Plugin"><span class="toc-text">Plugin</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Neo4j-Browser"><span class="toc-text">Neo4j Browser</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Browser-Sync"><span class="toc-text">Browser Sync</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Neo4j-Bloom"><span class="toc-text">Neo4j Bloom</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Neo4j-Sandbox"><span class="toc-text">Neo4j Sandbox</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Neo4j-Cluster"><span class="toc-text">Neo4j Cluster</span></a></li></ol></li></ol>
+            </div>
+
+            <div class="order-lg-1 col-lg-9 col-12 post-container">
+                <h1 id="Neo4j"><a href="#Neo4j" class="headerlink" title="Neo4j"></a>Neo4j</h1><p>Neo4j is an open source, NoSQL, native <strong>graph databases</strong>. In Neo4j, the data are persisted for long term durability. Neo4j can be used with both the open-source license (Community Edition) or a commercial license (Enterprise Edition) which includes technical support.</p>
+<h2 id="Graph-Database"><a href="#Graph-Database" class="headerlink" title="Graph Database"></a>Graph Database</h2><p>Graph database is a database used to model the data in the form of graph. The model represents data in <strong>Nodes</strong>, <strong>Relationships</strong> and <strong>Properties</strong>. Unlike relational database, graph databases store relationships and connections as first-class entities.</p>
+<h3 id="Concepts"><a href="#Concepts" class="headerlink" title="Concepts"></a>Concepts</h3><p><img src="Simple-Graph-Diagram.png" alt="Simple Graph Diagram"></p>
+<h4 id="Node"><a href="#Node" class="headerlink" title="Node"></a>Node</h4><p><strong>Nodes</strong> are often used to represent entities</p>
+<p><img src="Node.png" alt="Node"></p>
+<h4 id="Label"><a href="#Label" class="headerlink" title="Label"></a>Label</h4><p><strong>Labels</strong> are used to shape the <strong>domain</strong> by grouping nodes into sets. With that in place, you can ask to perform operations only on your given label nodes. Since labels can be added and removed during runtime, they can also be used to mark <strong>temporary states</strong> for nodes. A node can have zero to many labels. Labels are used associate indexes and constraints with groups of nodes.</p>
+<h4 id="Relationships"><a href="#Relationships" class="headerlink" title="Relationships"></a>Relationships</h4><p>A structure with a name and direction that describes the relationship between two nodes and provides structure and context to the graph. A <strong>relationship</strong> connects <strong>two nodes</strong> or <strong>one nodes(self-reference)</strong>, it must have exactly one relationship type. <strong>Relationships</strong> always havs a <strong>directions</strong>, for each <strong>Relationship</strong> contains <strong>From Node</strong> and <strong>To Node</strong>.</p>
+<p><img src="Relationship.png" alt="Relationship"></p>
+<h4 id="Properties"><a href="#Properties" class="headerlink" title="Properties"></a>Properties</h4><p>Nodes and relationships define the graph while properties add context by storing relevant information in <strong>key-value pairs</strong> in the nodes and relationships that are used to add qualities to nodes and relationships.</p>
+<p>Property values can be</p>
+<ul>
+<li>Number, an abstract type, which has the subtypes Integer and Float</li>
+<li>String</li>
+<li>Boolean</li>
+<li>The spatial type Point</li>
+<li>Temporal types: Date, Time, LocalTime, DateTime, LocalDateTime and Duration</li>
+</ul>
+<h4 id="Traversals-and-paths"><a href="#Traversals-and-paths" class="headerlink" title="Traversals and paths"></a>Traversals and paths</h4><p><strong>Traversing</strong> a graph means visiting nodes by <strong>following relationships according to some rules</strong>. The traversal result could be returned as a <strong>path</strong>.</p>
+<p><img src="Traversal.png" alt="Traversal"></p>
+<h4 id="Schema"><a href="#Schema" class="headerlink" title="Schema"></a>Schema</h4><p>A schema in Neo4j refers to <strong>indexes</strong> and <strong>constraints</strong>.</p>
+<h5 id="Indexes"><a href="#Indexes" class="headerlink" title="Indexes"></a>Indexes</h5><p><strong>Indexes</strong> are used to increase performance.</p>
+<h5 id="Constraints"><a href="#Constraints" class="headerlink" title="Constraints"></a>Constraints</h5><p><strong>Constraints</strong> are used to make sure that the data adheres to the rules of the domain. This is optional, you can create data without defining a schema.</p>
+<h3 id="Comparison-with-SQL"><a href="#Comparison-with-SQL" class="headerlink" title="Comparison with SQL"></a>Comparison with SQL</h3><p>| RDBMS          | Graph Database   |<br>| ————- -|:—————-:|<br>| <strong>Tables</strong>     | <strong>Graphs</strong>       |<br>| <strong>Rows</strong>       | <strong>Nodes</strong>        |<br>| <strong>Columns</strong>    | <strong>Properties</strong>   |<br>| <strong>Cells</strong>      | <strong>Values</strong>       |<br>| <strong>Constraints</strong>| <strong>Relationships</strong>|<br>| <strong>Joins</strong>      | <strong>Traversal</strong>    |</p>
+<h3 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h3><ul>
+<li><strong>Constant time traversals</strong></li>
+<li><strong>Scalability</strong>: Users can scale the database by increasing the number of reads&#x2F;writes and volume without effecting the query speed and data integrity.</li>
+<li><strong>Cypher Query Language (CQL)</strong>: a declarative query language similar to SQL, but designed for graph pattern matching and traversals</li>
+<li><strong>Flexible Schema</strong>: easily change according to the requirement, property graph schema that can adapt over time</li>
+<li><strong>ACID Properties</strong>: Atomicity, Consistency, Isolation, and Durability</li>
+<li><strong>Reliability</strong>: It also support for <strong>Replication</strong> for data safety and reliability.</li>
+<li><strong>Built-in Neo4j browser web applications</strong> to create and retrieve graph data</li>
+<li><strong>Driver Support</strong>: Java, Go, Python</li>
+</ul>
+<h3 id="Technical-View"><a href="#Technical-View" class="headerlink" title="Technical View"></a>Technical View</h3><h4 id="Object-Cache"><a href="#Object-Cache" class="headerlink" title="Object Cache"></a>Object Cache</h4><p>The object cache caches individual relationships and nodes and respectively their properties in a form which is optimized for traversal of the graph.</p>
+<h4 id="Protocol"><a href="#Protocol" class="headerlink" title="Protocol"></a>Protocol</h4><p>The Neo4j Browser and the official Neo4j Drivers use the Bolt database protocol to communicate with Neo4j. From an application or from the Neo4j Browser, you can execute query statements.</p>
+<table>
+<thead>
+<tr>
+<th>Connector name</th>
+<th align="center">Protocol</th>
+<th align="right">Default port number</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>dbms.connector.bolt</td>
+<td align="center">Bolt</td>
+<td align="right">7687</td>
+</tr>
+<tr>
+<td>dbms.connector.http</td>
+<td align="center">HTTP</td>
+<td align="right">7474</td>
+</tr>
+<tr>
+<td>dbms.connector.https</td>
+<td align="center">HTTPS</td>
+<td align="right">7473</td>
+</tr>
+</tbody></table>
+<p>Bolt is an efficient binary protocol for access to the database layer that compresses data sent over the wire as well as encrypting the data.</p>
+<h4 id="Index-free-adjacency"><a href="#Index-free-adjacency" class="headerlink" title="Index-free adjacency"></a>Index-free adjacency</h4><p>Index-free adjacency means that the query engine uses pointers to traverse paths (nodes connected by relationships) in the graph which is very fast.</p>
+<h2 id="CQL"><a href="#CQL" class="headerlink" title="CQL"></a>CQL</h2><p>Neo4j has CQL as query language, CQL stands for Cypher Query Language. You can practise your CQL skill in <a target="_blank" rel="noopener" href="https://neo4j.com/sandbox-v2">Neo4j Sandbox</a>.</p>
+<h3 id="NULL"><a href="#NULL" class="headerlink" title="NULL"></a><a target="_blank" rel="noopener" href="https://neo4j.com/docs/cypher-manual/current/syntax/working-with-null/">NULL</a></h3><p>NULL is used to represent missing or undefined values.</p>
+<h3 id="Parameters"><a href="#Parameters" class="headerlink" title="Parameters"></a><a target="_blank" rel="noopener" href="https://neo4j.com/docs/cypher-manual/current/syntax/parameters/">Parameters</a></h3><p>Cypher supports querying with parameters for.</p>
+<ul>
+<li>literals and expressions</li>
+<li>node and relationship ids</li>
+<li>for explicit indexes only: index values and queries</li>
+</ul>
+<h4 id="String-literal"><a href="#String-literal" class="headerlink" title="String literal"></a>String literal</h4><pre><code>MATCH (n:LabelOfNode) WHERE n.property = $value RETURN n
+</code></pre>
+<h4 id="Regular-expression"><a href="#Regular-expression" class="headerlink" title="Regular expression"></a>Regular expression</h4><pre><code>MATCH (n:LabelOfNode) WHERE n.property ~= $regex RETURN n
+</code></pre>
+<h4 id="Create-node-with-properties"><a href="#Create-node-with-properties" class="headerlink" title="Create node with properties"></a>Create node with properties</h4><pre><code>CREATE ($props)
+</code></pre>
+<h4 id="Setting-all-properties-on-a-node"><a href="#Setting-all-properties-on-a-node" class="headerlink" title="Setting all properties on a node"></a>Setting all properties on a node</h4><pre><code>MATCH (n:LabelOfNode) WHERE n.property=value SET n = $props
+</code></pre>
+<h4 id="SKIP-and-LIMIT"><a href="#SKIP-and-LIMIT" class="headerlink" title="SKIP and LIMIT"></a>SKIP and LIMIT</h4><pre><code>MATCH (n:LabelOfNode) RETURN n.property SKIP $s LIMIT $l
+</code></pre>
+<h4 id="Multiple-node-ids"><a href="#Multiple-node-ids" class="headerlink" title="Multiple node ids"></a>Multiple node ids</h4><pre><code>MATCH (n) WHERE id(n) IN $ids RETURN n.property
+</code></pre>
+<h4 id="Calling-procedures"><a href="#Calling-procedures" class="headerlink" title="Calling procedures"></a>Calling procedures</h4><pre><code>CALL db.resampleIndex($indexname)
+</code></pre>
+<h3 id="MATCH"><a href="#MATCH" class="headerlink" title="MATCH"></a>MATCH</h3><h4 id="Returns-all-the-nodes-in-database"><a href="#Returns-all-the-nodes-in-database" class="headerlink" title="Returns all the nodes in database"></a>Returns all the nodes in database</h4><pre><code>MATCH (node) RETURN node
+</code></pre>
+<h4 id="Get-all-the-nodes-under-a-specific-label"><a href="#Get-all-the-nodes-under-a-specific-label" class="headerlink" title="Get all the nodes under a specific label"></a>Get all the nodes under a specific label</h4><pre><code>MATCH (node:LabelOfNode) RETURN node
+</code></pre>
+<h4 id="Match-by-Relationship"><a href="#Match-by-Relationship" class="headerlink" title="Match by Relationship"></a>Match by Relationship</h4><pre><code>MATCH (node1)-[:Relationship_Of]-&gt;(node2) RETURN node1
+MATCH (node1)-[:Relationship_Of]-&gt;(node2) RETURN node2
+MATCH (node1)&lt;-[:Relationship_Of]-(node2) RETURN node1
+MATCH (node1)&lt;-[:Relationship_Of]-(node2) RETURN node2
+MATCH (node1)-[:Relationship_Of]-(node2) RETURN node1
+MATCH (node1)-[:Relationship_Of]-(node2) RETURN node2
+</code></pre>
+<h4 id="Variable-length-relationships"><a href="#Variable-length-relationships" class="headerlink" title="Variable length relationships"></a>Variable length relationships</h4><p>Returns all node2 related to node1 by 1 to 3 hops</p>
+<pre><code>MATCH (node1:LabelOfNode1)-[:Relationship_Of*1..3]-&gt;(node2:LabelOfNode2) RETURN node2
+</code></pre>
+<h4 id="Match-a-path"><a href="#Match-a-path" class="headerlink" title="Match a path"></a>Match a path</h4><pre><code>MATCH p =(a)--&gt;(b)--&gt;(c)
+RETURN p
+</code></pre>
+<h4 id="OPTIONAL-MATCH"><a href="#OPTIONAL-MATCH" class="headerlink" title="OPTIONAL MATCH"></a>OPTIONAL MATCH</h4><p>The OPTIONAL MATCH clause is used to search for the pattern described in it, while using nulls for missing parts of the pattern, it could be considered the equivalent of the outer join in SQL</p>
+<pre><code>MATCH (node1:LabelOfNode &#123;properties...&#125;) 
+OPTIONAL MATCH (node1)-[:Relationship_Of]-&gt;(node2)
+RETURN node2
+
+MATCH (node1:LabelOfNode &#123;properties...&#125;) 
+OPTIONAL MATCH (node1)--&gt;(node2)
+RETURN node2
+</code></pre>
+<h3 id="WHERE"><a href="#WHERE" class="headerlink" title="WHERE"></a>WHERE</h3><h4 id="Filter-by-property"><a href="#Filter-by-property" class="headerlink" title="Filter by property"></a>Filter by property</h4><pre><code>MATCH (node)
+WHERE node.property = value
+RETURN node
+</code></pre>
+<h4 id="WHERE-Clause-with-Multiple-Conditions"><a href="#WHERE-Clause-with-Multiple-Conditions" class="headerlink" title="WHERE Clause with Multiple Conditions"></a>WHERE Clause with Multiple Conditions</h4><pre><code>MATCH (node)  
+WHERE node.property1 = value1 AND node.property2 = value2 
+RETURN node
+</code></pre>
+<h4 id="Using-Relationship-with-Where-Clause"><a href="#Using-Relationship-with-Where-Clause" class="headerlink" title="Using Relationship with Where Clause"></a>Using Relationship with Where Clause</h4><pre><code>MATCH (node)
+WHERE (node)-[:Relationship_Of]-&gt;(&#123;properties&#125;) 
+RETURN node
+</code></pre>
+<h4 id="String-matching"><a href="#String-matching" class="headerlink" title="String matching"></a>String matching</h4><pre><code>MATCH (n) WHERE n.property STARTS WITH value RETURN n
+MATCH (n) WHERE n.property ENDS WITH value RETURN n
+MATCH (n) WHERE n.property CONTAINS value RETURN n
+</code></pre>
+<h4 id="In"><a href="#In" class="headerlink" title="In"></a>In</h4><pre><code>MATCH (n) WHERE n.property IN [value1, value2[,...]] RETURN n
+</code></pre>
+<h3 id="CREATE"><a href="#CREATE" class="headerlink" title="CREATE"></a>CREATE</h3><h4 id="Creating-Nodes"><a href="#Creating-Nodes" class="headerlink" title="Creating Nodes"></a>Creating Nodes</h4><h5 id="Create-a-simple-node"><a href="#Create-a-simple-node" class="headerlink" title="Create a simple node"></a>Create a simple node</h5><p>The <strong>node name</strong> in CQL are actually variables. You can assign a node (or a relationship) to a variable to handle this node in the rest of the Cypher query.</p>
+<pre><code>CREATE (node);
+</code></pre>
+<h5 id="Create-multiple-nodes"><a href="#Create-multiple-nodes" class="headerlink" title="Create multiple nodes"></a>Create multiple nodes</h5><pre><code>CREATE (node1),(node2);
+</code></pre>
+<h5 id="Create-node-with-a-label"><a href="#Create-node-with-a-label" class="headerlink" title="Create node with a label"></a>Create node with a label</h5><pre><code>CREATE (node:LabelOfNode) 
+</code></pre>
+<h5 id="Create-a-node-with-multiple-labels"><a href="#Create-a-node-with-multiple-labels" class="headerlink" title="Create a node with multiple labels"></a>Create a node with multiple labels</h5><pre><code>CREATE (node[:LabelOfNode1[:LabelOfNode2[...]]]) 
+</code></pre>
+<h5 id="Create-multiple-nodes-with-multiple-labels"><a href="#Create-multiple-nodes-with-multiple-labels" class="headerlink" title="Create multiple nodes with multiple labels"></a>Create multiple nodes with multiple labels</h5><pre><code>CREATE (node1[:LabelOfNode1[:LabelOfNode2[...]]]), (node2[:LabelOfNode1[:LabelOfNode2[...]]])[,...];
+</code></pre>
+<h5 id="Create-node-with-Properties"><a href="#Create-node-with-Properties" class="headerlink" title="Create node with Properties"></a>Create node with Properties</h5><pre><code>CREATE (node:LabelOfNode &#123;key1:value[, key2:value,[...]]&#125;)
+</code></pre>
+<h5 id="RETURN-newly-created-node"><a href="#RETURN-newly-created-node" class="headerlink" title="RETURN newly created node"></a>RETURN newly created node</h5><pre><code>CREATE (Node:LabelOfNode&#123;properties&#125;) RETURN Node
+</code></pre>
+<h4 id="Creating-Relationships"><a href="#Creating-Relationships" class="headerlink" title="Creating Relationships"></a>Creating Relationships</h4><h5 id="Creating-a-new-relationship"><a href="#Creating-a-new-relationship" class="headerlink" title="Creating a new relationship"></a>Creating a new relationship</h5><pre><code>CREATE (node1)
+CREATE (node2)
+CREATE (node1)-[:Relationship_Of]-&gt;(node2) 
+</code></pre>
+<h5 id="Creating-a-Relationship-Between-the-Existing-Nodes"><a href="#Creating-a-Relationship-Between-the-Existing-Nodes" class="headerlink" title="Creating a Relationship Between the Existing Nodes"></a>Creating a Relationship Between the Existing Nodes</h5><pre><code>MATCH (node1:LabeofNode1), (node2:LabeofNode2)
+WHERE node1.property1 = value1 AND node2.property2 = value2 
+CREATE (node1)-[:Relationship_Of]-&gt;(node2)
+</code></pre>
+<h5 id="Creating-a-Relationship-with-Label-and-Properties"><a href="#Creating-a-Relationship-with-Label-and-Properties" class="headerlink" title="Creating a Relationship with Label and Properties"></a>Creating a Relationship with Label and Properties</h5><pre><code>CREATE (node1)-[variable:Rel_Type &#123;key1:value1, key2:value2, . . . n&#125;]-&gt;(node2)
+</code></pre>
+<h5 id="Creating-a-Complete-Path"><a href="#Creating-a-Complete-Path" class="headerlink" title="Creating a Complete Path"></a>Creating a Complete Path</h5><pre><code>CREATE p = (node1 &#123;properties&#125;)-[:Relationship_Of1]-&gt;(node2 &#123;properties&#125;)[:Relationship_Of2]-&gt;(node3 &#123;properties&#125;) 
+RETURN p
+</code></pre>
+<h3 id="RETURN"><a href="#RETURN" class="headerlink" title="RETURN"></a>RETURN</h3><h4 id="Returning-Created-Node"><a href="#Returning-Created-Node" class="headerlink" title="Returning Created Node"></a>Returning Created Node</h4><pre><code>Create (node:LabelOfNode &#123;properties&#125;) 
+RETURN node
+</code></pre>
+<h3 id="Unique-results"><a href="#Unique-results" class="headerlink" title="Unique results"></a>Unique results</h3><pre><code>Create (node:LabelOfNode &#123;properties&#125;) 
+RETURN DISTINCT node
+</code></pre>
+<h4 id="Returning-Multiple-Nodes"><a href="#Returning-Multiple-Nodes" class="headerlink" title="Returning Multiple Nodes"></a>Returning Multiple Nodes</h4><pre><code>CREATE (node1:LabelOfNode1 &#123;properties&#125;), (node2:LabelOfNode2 &#123;properties&#125;)
+RETURN node1, node2
+</code></pre>
+<h4 id="Returning-Relationships"><a href="#Returning-Relationships" class="headerlink" title="Returning Relationships"></a>Returning Relationships</h4><pre><code>CREATE (node1)-[r:Relationship_Of]-&gt;(node2) RETURN r
+</code></pre>
+<h4 id="Returning-Properties"><a href="#Returning-Properties" class="headerlink" title="Returning Properties"></a>Returning Properties</h4><pre><code>MATCH (node:LabelOfNode &#123;properties&#125;) RETURN node.property
+</code></pre>
+<h4 id="Returning-All-Elements"><a href="#Returning-All-Elements" class="headerlink" title="Returning All Elements"></a>Returning All Elements</h4><pre><code>MATCH p = (node1)-[:Relationship_Of]-(node2) RETURN COUNT(*)
+
+MATCH p = (node1)-[:Relationship_Of]-&gt;(node2) RETURN COUNT(*)
+</code></pre>
+<h4 id="Returning-a-Variable-With-a-Column-Alias"><a href="#Returning-a-Variable-With-a-Column-Alias" class="headerlink" title="Returning a Variable With a Column Alias"></a>Returning a Variable With a Column Alias</h4><pre><code>MATCH (node:LabelOfNode &#123;properties&#125;) RETURN node.property AS alias
+</code></pre>
+<h3 id="ORDER-BY"><a href="#ORDER-BY" class="headerlink" title="ORDER BY"></a>ORDER BY</h3><h4 id="Ordering-By-a-Property"><a href="#Ordering-By-a-Property" class="headerlink" title="Ordering By a Property"></a>Ordering By a Property</h4><pre><code>MATCH (n)  
+RETURN n.property1, n.property2[,...]
+ORDER BY n.property1
+</code></pre>
+<h4 id="Ordering-Nodes-by-Multiple-Properties"><a href="#Ordering-Nodes-by-Multiple-Properties" class="headerlink" title="Ordering Nodes by Multiple Properties"></a>Ordering Nodes by Multiple Properties</h4><pre><code>MATCH (n)
+RETURN n 
+ORDER BY n.property1, n.property2
+</code></pre>
+<h4 id="Ordering-Nodes-by-Descending-Order"><a href="#Ordering-Nodes-by-Descending-Order" class="headerlink" title="Ordering Nodes by Descending Order"></a>Ordering Nodes by Descending Order</h4><pre><code>MATCH (n)
+RETURN n
+ORDER BY n.property DESC
+</code></pre>
+<h3 id="LIMIT"><a href="#LIMIT" class="headerlink" title="LIMIT"></a>LIMIT</h3><p>The <strong>LIMIT</strong> clause is used to limit the number rows returned from the query or passed to other parts of a query.</p>
+<pre><code>MATCH (n) 
+RETURN n 
+ORDER BY n.property
+LIMIT 1
+</code></pre>
+<h4 id="Limit-with-expression"><a href="#Limit-with-expression" class="headerlink" title="Limit with expression"></a>Limit with expression</h4><pre><code>MATCH (n) 
+RETURN n 
+ORDER BY n.property
+LIMIT toInt(3 * rand()) + 1
+</code></pre>
+<h3 id="SKIP"><a href="#SKIP" class="headerlink" title="SKIP"></a>SKIP</h3><p>The <strong>SKIP</strong> clause is used to define from which row to start including the rows in the output.</p>
+<h4 id="Skipping-the-first-3-nodes"><a href="#Skipping-the-first-3-nodes" class="headerlink" title="Skipping the first 3 nodes"></a>Skipping the first 3 nodes</h4><pre><code>MATCH (n)  
+RETURN n.property1, n.property2 
+ORDER BY n.property1 DESC 
+SKIP 3
+</code></pre>
+<h4 id="Skip-Using-Expression"><a href="#Skip-Using-Expression" class="headerlink" title="Skip Using Expression"></a>Skip Using Expression</h4><pre><code>MATCH (n)  
+RETURN n.property1, n.property2 
+ORDER BY n.property1 DESC 
+SKIP toInt(3 * rand()) + 1
+</code></pre>
+<h3 id="WITH"><a href="#WITH" class="headerlink" title="WITH"></a>WITH</h3><p><strong>WITH</strong> clause is used to perform some intermediate processing during a query where you may want to save some results or test some values during the query to control whether a query will end.</p>
+<pre><code>MATCH (n)
+WITH n
+ORDER BY n.property
+RETURN collect(n.property)
+</code></pre>
+<h3 id="UNWIND"><a href="#UNWIND" class="headerlink" title="UNWIND"></a>UNWIND</h3><p>The <strong>UNWIND</strong> clause is used to unwind a list into a sequence of rows.</p>
+<pre><code>UNWIND [a, b, c, d] AS x 
+RETURN x
+</code></pre>
+<h3 id="MERGE"><a href="#MERGE" class="headerlink" title="MERGE"></a>MERGE</h3><p>MERGE command is a combination of CREATE command and MATCH command. It ensures that a patterns exists in the graph, either the pattern already exists or it is created.</p>
+<h4 id="Merging-a-Node-with-a-Label"><a href="#Merging-a-Node-with-a-Label" class="headerlink" title="Merging a Node with a Label"></a>Merging a Node with a Label</h4><pre><code>MERGE (node:LabelOfNode) RETURN node
+</code></pre>
+<h4 id="Merging-a-Node-with-Properties"><a href="#Merging-a-Node-with-Properties" class="headerlink" title="Merging a Node with Properties"></a>Merging a Node with Properties</h4><pre><code>MERGE (node:LabelOfNode &#123;key1:value[, key2:value, key3:value[...]]&#125;)
+</code></pre>
+<h4 id="OnCreate-and-OnMatch"><a href="#OnCreate-and-OnMatch" class="headerlink" title="OnCreate and OnMatch"></a>OnCreate and OnMatch</h4><p>Whenever, we execute a merge query, a node is either matched or created. Using on create and on match, you can set properties for indicating whether the node is created or matched.</p>
+<pre><code>MERGE (node:LabelOfNode &#123;properties&#125;) 
+ON CREATE SET node.isCreated =&quot;true&quot; 
+ON MATCH SET node.isFound =&quot;true&quot;
+</code></pre>
+<h4 id="Merge-a-Relationship"><a href="#Merge-a-Relationship" class="headerlink" title="Merge a Relationship"></a>Merge a Relationship</h4><pre><code>MATCH (node1:LabelOfNode1), (node2:LabelOfNode2) 
+    WHERE node1.property1 = value1 AND node2.property2 = value2
+    MERGE (node1)-[:Relationship_Of]-&gt;(node2) 
+RETURN node1, node2 
+</code></pre>
+<h3 id="DELETE"><a href="#DELETE" class="headerlink" title="DELETE"></a>DELETE</h3><p>Nodes cannot be deleted if they still have relationships attached to them.</p>
+<h4 id="Deleting-All-Nodes-and-Relationships"><a href="#Deleting-All-Nodes-and-Relationships" class="headerlink" title="Deleting All Nodes and Relationships"></a>Deleting All Nodes and Relationships</h4><pre><code>MATCH (node) DETACH DELETE node
+</code></pre>
+<h4 id="Deleting-a-Particular-Node"><a href="#Deleting-a-Particular-Node" class="headerlink" title="Deleting a Particular Node"></a>Deleting a Particular Node</h4><pre><code>MATCH (node:LabelOfNode)
+WHERE node.property = value 
+DETACH DELETE node
+</code></pre>
+<h3 id="REMOVE"><a href="#REMOVE" class="headerlink" title="REMOVE"></a>REMOVE</h3><h4 id="Removing-a-Property"><a href="#Removing-a-Property" class="headerlink" title="Removing a Property"></a>Removing a Property</h4><pre><code>MATCH (node:LabelOfNode)
+WHERE node.property1 = value1 AND node.property2 = value2 
+REMOVE node.property3
+RETURN node
+</code></pre>
+<h4 id="Removing-Label-From-a-Node"><a href="#Removing-Label-From-a-Node" class="headerlink" title="Removing Label From a Node"></a>Removing Label From a Node</h4><pre><code>MATCH (node:LabelOfNode)
+WHERE node.property1 = value1 AND node.property2 = value2 
+REMOVE node:LabelOfNode1[:LabelOfNode2[:LabelOfNode3...]]
+RETURN node
+</code></pre>
+<h3 id="SET"><a href="#SET" class="headerlink" title="SET"></a>SET</h3><p>Using Set clause, you can add new properties to an existing Node or Relationship, and also add or update existing Properties values</p>
+<h4 id="Setting-a-Property"><a href="#Setting-a-Property" class="headerlink" title="Setting a Property"></a>Setting a Property</h4><pre><code>MATCH (node:LabelOfNode)
+WHERE node.property1 = value1 [AND node.property2 = value2[...]]
+SET node.property = value
+RETURN node
+</code></pre>
+<h4 id="Setting-Multiple-Properties"><a href="#Setting-Multiple-Properties" class="headerlink" title="Setting Multiple Properties"></a>Setting Multiple Properties</h4><pre><code>MATCH (node:LabelOfNode)
+WHERE node.property1 = value1 [AND node.property2 = value2[...]]
+SET node.property3 = value3, node.property4 = value4
+RETURN node
+</code></pre>
+<h4 id="Setting-a-Label-on-a-Node"><a href="#Setting-a-Label-on-a-Node" class="headerlink" title="Setting a Label on a Node"></a>Setting a Label on a Node</h4><pre><code>MATCH (node:LabelOfNode)
+WHERE node.property1 = value1 [AND node.property2 = value2[...]]
+SET node:LabelOfNode
+RETURN node
+</code></pre>
+<h4 id="Setting-Multiple-Labels-on-a-Node"><a href="#Setting-Multiple-Labels-on-a-Node" class="headerlink" title="Setting Multiple Labels on a Node"></a>Setting Multiple Labels on a Node</h4><pre><code>MATCH (node:LabelOfNode)
+WHERE node.property1 = value1 [AND node.property2 = value2[...]]
+SET node:LabelOfNode1, LabelOfNode2
+RETURN node
+</code></pre>
+<h3 id="FOREACH"><a href="#FOREACH" class="headerlink" title="FOREACH"></a>FOREACH</h3><p>The FOREACH clause is used to update data within a list whether components of a path, or result of aggregation.</p>
+<pre><code>MATCH p = (node1)-[*]-&gt;(node2) 
+WHERE node1.property1 = value1 AND node2.property2 = value2 
+FOREACH (n IN nodes(p)| SET n.marked = TRUE)
+</code></pre>
+<h3 id="Index"><a href="#Index" class="headerlink" title="Index"></a>Index</h3><p>A database index is a redundant copy of some of the data in the database for the purpose of making searches of related data more efficient. This comes at the cost of additional storage space and slower writes.</p>
+<h4 id="Creating-an-Index"><a href="#Creating-an-Index" class="headerlink" title="Creating an Index"></a>Creating an Index</h4><pre><code>CREATE INDEX ON:LabelOfNode(property[,properties..])
+</code></pre>
+<h4 id="Deleting-an-Index"><a href="#Deleting-an-Index" class="headerlink" title="Deleting an Index"></a>Deleting an Index</h4><pre><code>DROP INDEX ON:LabelOfNode(property[,properties..])
+</code></pre>
+<h3 id="Constraint"><a href="#Constraint" class="headerlink" title="Constraint"></a>Constraint</h3><p>Constraint enforce data integrity, it can be applied to either nodes or relationships.</p>
+<h4 id="Unique-node-property-constraints"><a href="#Unique-node-property-constraints" class="headerlink" title="Unique node property constraints"></a>Unique node property constraints</h4><p>Unique property constraints is a rule that ensures that property values are unique for all nodes with a specific label</p>
+<pre><code>CREATE CONSTRAINT ON (n:LabelOfNode) ASSERT n.property IS UNIQUE
+DROP CONSTRAINT ON (n:LabelOfNode) ASSERT n.property IS UNIQUE
+</code></pre>
+<h4 id="Node-property-existence-constraints"><a href="#Node-property-existence-constraints" class="headerlink" title="Node property existence constraints"></a>Node property existence constraints</h4><pre><code>CREATE CONSTRAINT ON (n:LabelOfNode) ASSERT exists(n.property)
+DROP CONSTRAINT ON (n:LabelOfNode) ASSERT exists(n.property)
+</code></pre>
+<h4 id="Relationship-property-existence-constraints"><a href="#Relationship-property-existence-constraints" class="headerlink" title="Relationship property existence constraints"></a>Relationship property existence constraints</h4><pre><code>CREATE CONSTRAINT ON ()-[r:Relationship_Of]-() ASSERT exists(r.property)
+DROP CONSTRAINT ON ()-[r:Relationship_Of]-() ASSERT exists(r.property)
+</code></pre>
+<h3 id="String-Functions"><a href="#String-Functions" class="headerlink" title="String Functions"></a>String Functions</h3><h4 id="UPPER"><a href="#UPPER" class="headerlink" title="UPPER"></a>UPPER</h4><h4 id="LOWER"><a href="#LOWER" class="headerlink" title="LOWER"></a>LOWER</h4><h4 id="SUBSTRING"><a href="#SUBSTRING" class="headerlink" title="SUBSTRING"></a>SUBSTRING</h4><h4 id="Replace"><a href="#Replace" class="headerlink" title="Replace"></a>Replace</h4><h3 id="Aggregation-Function"><a href="#Aggregation-Function" class="headerlink" title="Aggregation Function"></a>Aggregation Function</h3><h4 id="COUNT"><a href="#COUNT" class="headerlink" title="COUNT"></a>COUNT</h4><p>The COUNT function is used to count the number of rows.</p>
+<pre><code>MATCH (node) RETURN COUNT(*)
+</code></pre>
+<p>The following state doesn’t counts null values.</p>
+<pre><code>MATCH (node) RETURN COUNT(node)
+</code></pre>
+<h5 id="Group-Count"><a href="#Group-Count" class="headerlink" title="Group Count"></a>Group Count</h5><p>The COUNT clause is also used to count the groups of relationship types. We can count by one direction or by both direction.</p>
+<pre><code>Match(node1)-[r]-(node2)  
+RETURN type(r), count(*)
+
+Match(node1)-[r]-&gt;(node2)  
+RETURN type(r), count(*)
+</code></pre>
+<h4 id="MAX"><a href="#MAX" class="headerlink" title="MAX"></a>MAX</h4><h4 id="MIN"><a href="#MIN" class="headerlink" title="MIN"></a>MIN</h4><h4 id="SUM"><a href="#SUM" class="headerlink" title="SUM"></a>SUM</h4><h4 id="AVG"><a href="#AVG" class="headerlink" title="AVG"></a>AVG</h4><h3 id="List-Functions"><a href="#List-Functions" class="headerlink" title="List Functions"></a>List Functions</h3><h4 id="EXTRACT"><a href="#EXTRACT" class="headerlink" title="EXTRACT"></a>EXTRACT</h4><p>Extract returns a list containing the values resulting from an expression which has been applied to each element in a list list</p>
+<pre><code>EXTRACT(variable IN list | expression)
+</code></pre>
+<h4 id="FILTER"><a href="#FILTER" class="headerlink" title="FILTER"></a>FILTER</h4><p>FILTER returns a list lresult containing all the elements from a list list that comply with the given predicate.</p>
+<pre><code>FILTER(variable IN list WHERE predicate)
+</code></pre>
+<h4 id="KEYS"><a href="#KEYS" class="headerlink" title="KEYS"></a>KEYS</h4><p>KEYS returns a list containing the string representations for all the property names of a node, relationship, or map.</p>
+<pre><code>KEYS(expression)
+</code></pre>
+<h4 id="LABELS"><a href="#LABELS" class="headerlink" title="LABELS"></a>LABELS</h4><p>LABELS returns a list containing the string representations for all the labels of a node.</p>
+<pre><code>LABELS(node)
+</code></pre>
+<h4 id="NODES"><a href="#NODES" class="headerlink" title="NODES"></a>NODES</h4><p>NODES returns a list containing all the nodes in a path.</p>
+<pre><code>NODES(path)
+</code></pre>
+<h4 id="RANGE"><a href="#RANGE" class="headerlink" title="RANGE"></a>RANGE</h4><p>RANGE returns a list comprising all integer values within a range bounded by a start value start and end value end, where the difference step between any two consecutive values is constant</p>
+<pre><code>RANGE(start, end [, step])
+</code></pre>
+<h4 id="REDUCE"><a href="#REDUCE" class="headerlink" title="REDUCE"></a>REDUCE</h4><p>REDUCE returns the value resulting from the application of an expression on each successive element in a list in conjunction with the result of the computation thus far.</p>
+<pre><code>REDUCE(accumulator = initial, variable IN list | expression)
+</code></pre>
+<h4 id="RELATIONSHIPS"><a href="#RELATIONSHIPS" class="headerlink" title="RELATIONSHIPS"></a>RELATIONSHIPS</h4><p>RELATIONSHIPS returns a list containing all the relationships in a path.</p>
+<pre><code>RELATIONSHIPS(path)
+</code></pre>
+<h4 id="REVERSE"><a href="#REVERSE" class="headerlink" title="REVERSE"></a>REVERSE</h4><p>REVERSE returns a list in which the order of all elements in the original list have been reversed.</p>
+<pre><code>REVERSE(original)
+</code></pre>
+<h4 id="TAIL"><a href="#TAIL" class="headerlink" title="TAIL"></a>TAIL</h4><p>TAIL returns a list lresult containing all the elements, excluding the first one, from a list list.</p>
+<pre><code>TAIL(list)
+</code></pre>
+<h3 id="Scalar-functions"><a href="#Scalar-functions" class="headerlink" title="Scalar functions"></a>Scalar functions</h3><h4 id="COALESCE"><a href="#COALESCE" class="headerlink" title="COALESCE"></a>COALESCE</h4><p>COALESCE returns the first non-null value in the given list of expressions.</p>
+<pre><code>COALESCE(expression [, expression]*)
+</code></pre>
+<h4 id="STARTNODE"><a href="#STARTNODE" class="headerlink" title="STARTNODE"></a>STARTNODE</h4><p>STARTNODE returns the start node of a relationship.</p>
+<pre><code>STARTNODE(relationship)
+</code></pre>
+<h4 id="ENDNODE"><a href="#ENDNODE" class="headerlink" title="ENDNODE"></a>ENDNODE</h4><p>ENDNODE returns the end node of a relationship.</p>
+<pre><code>ENDNODE(relationship)
+</code></pre>
+<h4 id="HEAD"><a href="#HEAD" class="headerlink" title="HEAD"></a>HEAD</h4><p>HEAD returns the first element in a list.</p>
+<pre><code>HEAD(list)
+</code></pre>
+<h4 id="LAST"><a href="#LAST" class="headerlink" title="LAST"></a>LAST</h4><p>LAST returns the last element in a list.</p>
+<pre><code>LAST(expression)
+</code></pre>
+<h4 id="SIZE"><a href="#SIZE" class="headerlink" title="SIZE"></a>SIZE</h4><p>SIZE returns the number of elements in a list or set of results or string.</p>
+<pre><code>SIZE(list or pattern expression or string)
+</code></pre>
+<h4 id="LENGTH"><a href="#LENGTH" class="headerlink" title="LENGTH"></a>LENGTH</h4><p>LENGTH returns the length of a path.</p>
+<pre><code>LENGTH(path)
+</code></pre>
+<h4 id="ID"><a href="#ID" class="headerlink" title="ID"></a>ID</h4><p>ID returns the id of a relationship or node.</p>
+<pre><code>MATCH (n) WHERE ID(n)=id RETURN n
+</code></pre>
+<h4 id="TYPE"><a href="#TYPE" class="headerlink" title="TYPE"></a>TYPE</h4><p>TYPE returns the string representation of the relationship type.</p>
+<pre><code>TYPE(relationship)
+</code></pre>
+<h4 id="PROPERTIES"><a href="#PROPERTIES" class="headerlink" title="PROPERTIES"></a>PROPERTIES</h4><p>PROPERTIES returns a map containing all the properties of a node or relationship.</p>
+<pre><code>PROPERTIES(expression)
+</code></pre>
+<h4 id="RANDOMUUID"><a href="#RANDOMUUID" class="headerlink" title="RANDOMUUID"></a>RANDOMUUID</h4><h4 id="TIMESTAMP"><a href="#TIMESTAMP" class="headerlink" title="TIMESTAMP"></a>TIMESTAMP</h4><h4 id="TOBOOLEAN"><a href="#TOBOOLEAN" class="headerlink" title="TOBOOLEAN"></a>TOBOOLEAN</h4><h4 id="TOFLOAT"><a href="#TOFLOAT" class="headerlink" title="TOFLOAT"></a>TOFLOAT</h4><h4 id="TOINTEGER"><a href="#TOINTEGER" class="headerlink" title="TOINTEGER"></a>TOINTEGER</h4><h3 id="Procedures"><a href="#Procedures" class="headerlink" title="Procedures"></a><a target="_blank" rel="noopener" href="https://neo4j.com/docs/operations-manual/current/reference/procedures/#ref-procedure-reference-community-edition">Procedures</a></h3><h4 id="Check-which-procedures-are-available"><a href="#Check-which-procedures-are-available" class="headerlink" title="Check which procedures are available"></a>Check which procedures are available</h4><pre><code>CALL dbms.procedures()
+</code></pre>
+<ul>
+<li>db.indexes() List all indexes in the database.</li>
+<li>db.labels() List all labels in the database</li>
+<li>db.propertyKeys() List all property keys in the database.</li>
+<li>db.relationshipTypes() List all relationship types in the database.</li>
+<li>db.schema() Show the schema of the data.</li>
+<li>db.constraints() List all constraints in the database.</li>
+</ul>
+<h2 id="Data-Import"><a href="#Data-Import" class="headerlink" title="Data Import"></a>Data Import</h2><p>We can use <a target="_blank" rel="noopener" href="https://neo4j.com/docs/cypher-manual/current/clauses/load-csv/">LOAD CSV</a> to batch imports of large amouts of data from CSV files. We can use <a target="_blank" rel="noopener" href="https://neo4j.com/developer/neo4j-etl/">Neo4j ETL Tool</a> or Neo4j Import tool.</p>
+<pre><code>LOAD CSV FROM &quot;url&quot; AS row FIELDTERMINATOR &quot;;&quot;
+</code></pre>
+<h2 id="Query-management"><a href="#Query-management" class="headerlink" title="Query management"></a>Query management</h2><h3 id="Profiling-a-query"><a href="#Profiling-a-query" class="headerlink" title="Profiling a query"></a><a target="_blank" rel="noopener" href="https://neo4j.com/docs/cypher-manual/current/query-tuning/how-do-i-profile-a-query/">Profiling a query</a></h3><h4 id="Explain"><a href="#Explain" class="headerlink" title="Explain"></a>Explain</h4><p>If you want to see the execution plan but not run the statement.</p>
+<h4 id="PROFILE"><a href="#PROFILE" class="headerlink" title="PROFILE"></a>PROFILE</h4><p>If you want to run the statement and see which operators are doing most of the work, use PROFILE. This will run your statement and keep track of how many rows pass through each operator, and how much each operator needs to interact with the storage layer to retrieve the necessary data.</p>
+<h3 id="Kill-Queries"><a href="#Kill-Queries" class="headerlink" title="Kill Queries"></a>Kill Queries</h3><p>When you have a query that is taking too long to execute on your system, You can execute</p>
+<pre><code>CALL dbms.listQueries()
+</code></pre>
+<p>Which return the list of queries currently running. And then</p>
+<pre><code>CALL dbms.killQuery(&#39;query-id&#39;)
+</code></pre>
+<h2 id="UIs"><a href="#UIs" class="headerlink" title="UIs"></a>UIs</h2><h3 id="Neo4j-Desktop"><a href="#Neo4j-Desktop" class="headerlink" title="Neo4j Desktop"></a><a target="_blank" rel="noopener" href="https://neo4j.com/developer/neo4j-desktop/">Neo4j Desktop</a></h3><p>In Neo4j Desktop, you can only start a single database.</p>
+<h4 id="Plugin"><a href="#Plugin" class="headerlink" title="Plugin"></a>Plugin</h4><p>If you need additional functionality from a specialized library, you can add the library as a plugin for your project.</p>
+<h3 id="Neo4j-Browser"><a href="#Neo4j-Browser" class="headerlink" title="Neo4j Browser"></a>Neo4j Browser</h3><p>You can only use Neo4j Browser to connected to a running Neo4j instance and you can only connect to a single database at a time.</p>
+<h4 id="Browser-Sync"><a href="#Browser-Sync" class="headerlink" title="Browser Sync"></a>Browser Sync</h4><p>When you log in to Browser Sync from your Neo4j Browser, you can add folders and Cypher scripts in the cloud for use in a different Neo4j Browser session.</p>
+<h3 id="Neo4j-Bloom"><a href="#Neo4j-Bloom" class="headerlink" title="Neo4j Bloom"></a>Neo4j Bloom</h3><h2 id="Neo4j-Sandbox"><a href="#Neo4j-Sandbox" class="headerlink" title="Neo4j Sandbox"></a><a target="_blank" rel="noopener" href="https://neo4j.com/sandbox-v2/">Neo4j Sandbox</a></h2><p>It is a temporary Neo4j instance in the cloud where you can access a database for 3 to 10 days. By default it will also install APOC, Graph Algorithms and GraphQL.</p>
+<h2 id="Neo4j-Cluster"><a href="#Neo4j-Cluster" class="headerlink" title="Neo4j Cluster"></a>Neo4j <a target="_blank" rel="noopener" href="https://neo4j.com/docs/operations-manual/current/clustering/">Cluster</a></h2><p>Neo4j clusters allow your application to be highly available so that if a server goes down, another server will take over and also highly scalable so that application that read the data can be distributed in many places.</p>
+
+                <hr>
+
+                <ul class="list-group">
+    
+</ul>
+
+
+                <ul class="pagination pager">
+                    
+                    <li class="page-item">
+                        <a class="page-link" href="/Google-Kickstart-2019-Round-G-Book-Reading/" data-toggle="tooltip" data-placement="top" title="Google Kickstart 2019 Round G Book Reading">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="page-item ms-auto">
+                        <a class="page-link" href="/Machine Learning Note/" data-toggle="tooltip" data-placement="top" title="Machine Learning Note">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        <div class="comment">
+  <!-- disqus 评论框 start -->
+  
+  <!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "blog-vnwybnwkiz";
+    var disqus_identifier = "https://vitaminac.github.io/Neo4j-Graph-Database/";
+    var disqus_url = "https://vitaminac.github.io/Neo4j-Graph-Database/";
+    var disqus_config = function () { 
+      this.language = "en";
+    };
+
+    (function () {
+      var dsq = document.createElement("script");
+      dsq.type = "text/javascript";
+      dsq.async = true;
+      dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+      (
+        document.getElementsByTagName("head")[0] ||
+        document.getElementsByTagName("body")[0]
+      ).appendChild(dsq);
+    })();
+  </script>
+  <!-- disqus 公共JS代码 end -->
+  <div id="disqus_thread" class="disqus-thread"></div>
+  <!-- disqus 评论框 end -->
+  
+</div>
+
+
+        <div class="row justify-content-center">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8`
+                col-md-10
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5 class="text-center">
+                        <a href="/tags/">FEATURED TAGS</a>
+                    </h5>
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#Database" title="Database">
+                            Database</a>
+                        
+                        <a class="tag" href="/tags/#NoSQL" title="NoSQL">
+                            NoSQL</a>
+                        
+                        <a class="tag" href="/tags/#Neo4j" title="Neo4j">
+                            Neo4j</a>
+                        
+                        <a class="tag" href="/tags/#Graph Database" title="Graph Database">
+                            Graph Database</a>
+                        
+                        <a class="tag" href="/tags/#CQL" title="CQL">
+                            CQL</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <img src="/images/QR.jpg" style="width: 100%; height: auto" />
+      <div class="pt-4"><!-- SNS Link 社交 -->
+<ul class="list-inline text-center">
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://www.linkedin.com/in/shuxig">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a href="mailto:dalao1002@gmail.com?subject=From my blog&body=Hi,I found this website very useful">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a href="tel:34688218528">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-phone fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    <li class="list-inline-item d-none d-lg-inline-block">
+        <a target="_blank" href="https://web.whatsapp.com/send?phone=34688218528">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-whatsapp fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    <li class="list-inline-item d-lg-none">
+        <a target="_blank" href="https://wa.me/34688218528">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-whatsapp fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://github.com/vitaminac">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    <li class="list-inline-item">
+        <a target="_blank" href="https://gist.github.com/vitaminac">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github-square fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://gitlab.com/vitaminac">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-gitlab fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://www.kaggle.com/dalao1002">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-kaggle fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://leetcode.com/dalao1002">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-code fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://stackoverflow.com/users/9980245">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://www.youtube.com/channel/UCn36tkFugikDQS_0tgH1p6g">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://space.bilibili.com/17108326">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-bilibili fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+</ul></div>
+      <p class="copyright text-muted">
+        Copyright &copy; Gao&#39;s Blog 2022
+      </p>
+    </div>
+  </div>
+</footer>
+
+    <!--wechat title img-->
+    <img class="wechat-title-img" src="/images/avatar.jpg">
+    <!-- Custom Theme JavaScript -->
+<script type="text/javascript" src="/js/blog.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/VincentGarreau/particles.js/particles.js"></script>
+<script>
+    particlesJS("particles-js", {
+        "particles": {
+            "number": {
+                "value": 50,
+                "density": {
+                    "enable": true,
+                    "value_area": 1000
+                }
+            },
+            "color": {
+                "value": "#ff0000"
+            },
+            "shape": {
+                "type": "circle",
+                "stroke": {
+                    "width": 0,
+                    "color": "#000000"
+                },
+                "polygon": {
+                    "nb_sides": 5
+                },
+                "image": {
+                    "src": "img/github.svg",
+                    "width": 100,
+                    "height": 100
+                }
+            },
+            "opacity": {
+                "value": 0.5,
+                "random": false,
+                "anim": {
+                    "enable": false,
+                    "speed": 1,
+                    "opacity_min": 0.1,
+                    "sync": false
+                }
+            },
+            "size": {
+                "value": 3,
+                "random": true,
+                "anim": {
+                    "enable": false,
+                    "speed": 40,
+                    "size_min": 0.1,
+                    "sync": false
+                }
+            },
+            "line_linked": {
+                "enable": true,
+                "distance": 150,
+                "color": "#ff00f0",
+                "opacity": 0.4,
+                "width": 1
+            },
+            "move": {
+                "enable": true,
+                "speed": 6,
+                "direction": "none",
+                "random": false,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+                "attract": {
+                    "enable": false,
+                    "rotateX": 600,
+                    "rotateY": 1200
+                }
+            }
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": {
+                    "enable": true,
+                    "mode": "repulse"
+                },
+                "onclick": {
+                    "enable": true,
+                    "mode": "push"
+                },
+                "resize": true
+            },
+            "modes": {
+                "grab": {
+                    "distance": 400,
+                    "line_linked": {
+                        "opacity": 1
+                    }
+                },
+                "bubble": {
+                    "distance": 400,
+                    "size": 40,
+                    "duration": 2,
+                    "opacity": 8,
+                    "speed": 3
+                },
+                "repulse": {
+                    "distance": 200,
+                    "duration": 0.4
+                },
+                "push": {
+                    "particles_nb": 4
+                },
+                "remove": {
+                    "particles_nb": 2
+                }
+            }
+        },
+        "retina_detect": true
+    });
+
+
+    /* ---- stats.js config ---- */
+
+    var count_particles, stats, update;
+    stats = new Stats;
+    stats.setMode(0);
+    stats.domElement.style.position = 'absolute';
+    stats.domElement.style.left = '0px';
+    stats.domElement.style.top = '0px';
+    document.body.appendChild(stats.domElement);
+    count_particles = document.querySelector('.js-count-particles');
+    update = function () {
+        stats.begin();
+        stats.end();
+        if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+            count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+        }
+        requestAnimationFrame(update);
+    };
+    requestAnimationFrame(update);
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script>
+    $(document).ready(function () {
+        anchors.add("p");
+    })
+</script>
+
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if ($('#tag_cloud').length !== 0) {
+        async ("https://vitaminac.github.io/js/jquery.tagcloud.js", function () {
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {
+                    start: '#bbbbee',
+                    end: '#0085a1'
+                },
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<script type="text/javascript" src="/js/common.js"></script>
+
+
+
+<!-- render ipynb file -->
+
+
+<!-- render ipynb file -->
+
+</body>
+
+</html>

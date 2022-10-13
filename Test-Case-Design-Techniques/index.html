@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<!-- SEO -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Test Case Design Techniques｜Gao&#39;s Blog</title>
+    <meta property="og:title" content="Test Case Design Techniques｜Gao&#39;s Blog" />
+    
+    <meta name="description" content="Test Case Design Techniques｜Gao&#39;s Blog">
+    <meta property="og:description" content="Test Case Design Techniques｜Gao&#39;s Blog" />
+    <meta name="author" content="Gao">
+    <meta name="robots" content="index, follow">
+    <meta property="og:image" content="https://vitaminac.github.io/images/favicon.jpg" />
+    <link rel="shortcut icon" href="/images/favicon.jpg">
+    
+    <meta name="keywords" content="Test Design,Boundary Value Analysis,Equivalence Partitioning">
+    
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="alternate" type="application/atom+xml" title="Gao&#39;s Blog" href="/atom.xml">
+
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" cross-origin="anonymous" referrer-policy="no-referrer">
+    <link rel="canonical" href="https://vitaminac.github.io/Test-Case-Design-Techniques/">
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Google Tag Manager -->
+    
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WDC9JKC');</script>
+    
+    <!-- End Google Tag Manager -->
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151409235-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-151409235-1');
+    </script>
+    
+
+    <!-- Google AdSense -->
+    <script data-ad-client="ca-pub-8356359077918854" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<meta name="generator" content="Hexo 6.1.0"></head>
+<style>
+    header.intro-header {
+        background-image: url('/images/header.gif')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+
+<body ontouchstart="" class="animated fadeIn">
+    <div id="particles-js"></div>
+    <nav
+  class="navbar navbar-expand-lg navbar-light sticky-top navbar-custom"
+  id="nav-top"
+>
+  <div class="container-fluid">
+    <a
+      class="navbar-brand animated pulse"
+      href="../index.html"
+    >
+      <span class="brand-logo">Gao&#39;s Blog</span>
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+        <li class="nav-item">
+          <a
+            class="nav-link "
+            aria-current="page"
+            href="../index.html"
+          >
+            Home
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a
+            class="nav-link "
+            aria-current="page"
+            href="../tags/index.html"
+          >
+            Tags
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/blog">New Blog</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Language
+          </a>
+          <ul
+            class="dropdown-menu dropdown-menu-end"
+            aria-labelledby="navbarDropdown"
+          >
+            
+            <li>
+              <a
+                class="dropdown-item"
+                href="../index.html"
+                >English</a
+              >
+            </li>
+            
+            <li>
+              <a
+                class="dropdown-item"
+                href="../es"
+                >Spanish</a
+              >
+            </li>
+            
+            <li>
+              <a
+                class="dropdown-item"
+                href="../zh"
+                >Chinese</a
+              >
+            </li>
+            
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js"></script>
+<!--fastClick.js -->
+<script>
+$(function() {
+  var $nav = document.querySelector("nav");
+  if ($nav) {
+    FastClick.attach($nav);
+  }
+});
+</script>
+
+    <!-- Main Content -->
+    
+<!--only post-->
+
+
+<img class="wechat-title-img" src="/images/preview.jpeg">
+
+
+<style>
+    header.intro-header {
+            background-image: url('/images/preview.jpeg')
+        }
+
+        
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 text-center">
+                <div class="post-heading">
+                    <h1>
+                        Test Case Design Techniques
+                    </h1>
+                    
+                    <span class="meta">Author:
+                        Gao
+                        <span />
+                        Date:
+                        2020-11-24
+                    </span>
+                    <div class="tags text-center">
+                        
+                        <a class="tag" href="/tags/#Test Design" title="Test Design">
+                            Test Design</a>
+                        
+                        <a class="tag" href="/tags/#Boundary Value Analysis" title="Boundary Value Analysis">
+                            Boundary Value Analysis</a>
+                        
+                        <a class="tag" href="/tags/#Equivalence Partitioning" title="Equivalence Partitioning">
+                            Equivalence Partitioning</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            Test Case Design Techniques
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="order-lg-2 col-lg-3 col-12 toc-col" style="z-index: 1;">
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Control-flow-Techniques"><span class="toc-text">Control-flow Techniques</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Example"><span class="toc-text">Example</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Statement-Coverage"><span class="toc-text">Statement Coverage</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Branch-Coverage"><span class="toc-text">Branch Coverage</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Conditiona-Coverage"><span class="toc-text">Conditiona Coverage</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Decision-x2F-Condition-Coverage"><span class="toc-text">Decision&#x2F;Condition Coverage</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Multiple-Condition-Coverage"><span class="toc-text">Multiple Condition Coverage</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Basic-Path-Testing"><span class="toc-text">Basic Path Testing</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Flowchart"><span class="toc-text">Flowchart</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Cyclomatic-Complexity"><span class="toc-text">Cyclomatic Complexity</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Determine-Basic-Set-of-Independent-Paths-Equivalent-to-Decision-x2F-Consition-Coverage"><span class="toc-text">Determine Basic Set of Independent Paths - Equivalent to Decision&#x2F;Consition Coverage</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Modern-Practice"><span class="toc-text">Modern Practice</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Functional-Techniques"><span class="toc-text">Functional Techniques</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Equivalence-Partitioning"><span class="toc-text">Equivalence Partitioning</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Value-Range"><span class="toc-text">Value Range</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Number-of-Values"><span class="toc-text">Number of Values</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Logical-x2F-Boolean-Situation"><span class="toc-text">Logical&#x2F;Boolean Situation</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Set-of-input-values"><span class="toc-text">Set of input values</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Other"><span class="toc-text">Other</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Equivalence-Partitioning%E2%80%99s-Example"><span class="toc-text">Equivalence Partitioning’s Example</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Bank-Code"><span class="toc-text">Bank Code</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Branch-Code"><span class="toc-text">Branch Code</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Account-Number"><span class="toc-text">Account Number</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Password"><span class="toc-text">Password</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Order"><span class="toc-text">Order</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Generate-Test-Cases"><span class="toc-text">Generate Test Cases</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Boundary-Value-Analysis"><span class="toc-text">Boundary Value Analysis</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Value-Range-1"><span class="toc-text">Value Range</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Number-of-Values-1"><span class="toc-text">Number of Values</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Order-Set"><span class="toc-text">Order Set</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Output"><span class="toc-text">Output</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Blackbox-Testing-Technique"><span class="toc-text">Blackbox Testing Technique</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Decision-Table-Technique"><span class="toc-text">Decision Table Technique</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#State-Transition-Technique"><span class="toc-text">State Transition Technique</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Transition-Model"><span class="toc-text">Transition Model</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#PIN-Example"><span class="toc-text">PIN Example</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Web-Login-Example"><span class="toc-text">Web Login Example</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Test-Case-Specification"><span class="toc-text">Test Case Specification</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Test-goal"><span class="toc-text">Test goal</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Inputs"><span class="toc-text">Inputs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Expected-outputs"><span class="toc-text">Expected outputs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Observed-outputs"><span class="toc-text">Observed outputs</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Failure-Identification"><span class="toc-text">Failure Identification</span></a></li></ol>
+            </div>
+
+            <div class="order-lg-1 col-lg-9 col-12 post-container">
+                <table>
+<thead>
+<tr>
+<th>Approach&#x2F;Implementation</th>
+<th>White Box</th>
+<th>Black Box</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Structural</td>
+<td>Control-flow<br>Data-flow</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Fault-based</td>
+<td>Mutation</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Error-based</td>
+<td></td>
+<td>Functional Random</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="Control-flow-Techniques"><a href="#Control-flow-Techniques" class="headerlink" title="Control-flow Techniques"></a>Control-flow Techniques</h2><ul>
+<li>Generate test cases taking into account the program control structure.</li>
+<li>Based on the concept of <strong>coverage</strong>.<ul>
+<li>Statement coverage</li>
+<li>Branch coverage</li>
+<li>Condition coverage</li>
+<li>Desision&#x2F;condition coverage</li>
+<li>Multiple condition coverage</li>
+</ul>
+</li>
+</ul>
+<h3 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h3><pre><code>IF (A OR B) THEN
+    print C
+</code></pre>
+<h3 id="Statement-Coverage"><a href="#Statement-Coverage" class="headerlink" title="Statement Coverage"></a>Statement Coverage</h3><p>Require each statement in the program been executed.</p>
+<ul>
+<li>(A OR B) &#x3D; TRUE</li>
+</ul>
+<p>e.g.</p>
+<ol>
+<li>T1: A&#x3D;TRUE, B&#x3D;FALSE</li>
+</ol>
+<h3 id="Branch-Coverage"><a href="#Branch-Coverage" class="headerlink" title="Branch Coverage"></a>Branch Coverage</h3><p>Require each breanch of each control structure been executed.</p>
+<ul>
+<li>(A OR B) &#x3D; TRUE</li>
+<li>(A OR B) &#x3D; FALSE</li>
+</ul>
+<p>e.g.</p>
+<ol>
+<li>T1: A&#x3D;TRUE, B&#x3D;FALSE</li>
+<li>T2: A&#x3D;FALSE, B&#x3D;FALSE</li>
+</ol>
+<h3 id="Conditiona-Coverage"><a href="#Conditiona-Coverage" class="headerlink" title="Conditiona Coverage"></a>Conditiona Coverage</h3><p>Require each boolean sub-expression evaluated both to true and false.</p>
+<ul>
+<li>A &#x3D; TRUE</li>
+<li>A &#x3D; FALSE</li>
+<li>B &#x3D; TRUE</li>
+<li>B &#x3D; FALSE</li>
+</ul>
+<p>e.g.</p>
+<ol>
+<li>T1: A&#x3D;TRUE, B&#x3D;FALSE</li>
+<li>T2: A&#x3D;FALSE, B&#x3D;TRUE</li>
+</ol>
+<h3 id="Decision-x2F-Condition-Coverage"><a href="#Decision-x2F-Condition-Coverage" class="headerlink" title="Decision&#x2F;Condition Coverage"></a>Decision&#x2F;Condition Coverage</h3><p>Requires that both decision and condition coverage been satisfied.</p>
+<ul>
+<li>A &#x3D; TRUE</li>
+<li>A &#x3D; FALSE</li>
+<li>B &#x3D; TRUE</li>
+<li>B &#x3D; FALSE</li>
+<li>(A OR B) &#x3D; TRUE</li>
+<li>(A OR B) &#x3D; FAKSE</li>
+</ul>
+<p>e.g.</p>
+<ol>
+<li>T1: A&#x3D;TRUE, B&#x3D;FALSE</li>
+<li>T2: A&#x3D;FALSE, B&#x3D;TRUE</li>
+<li>T3: A&#x3D;FALSE, B&#x3D;FALSE</li>
+</ol>
+<h3 id="Multiple-Condition-Coverage"><a href="#Multiple-Condition-Coverage" class="headerlink" title="Multiple Condition Coverage"></a>Multiple Condition Coverage</h3><p>Require all the combinations of boolean sub-expressions should be evaluated</p>
+<ol>
+<li>A&#x3D;TRUE, B&#x3D;FALSE</li>
+<li>A&#x3D;FALSE, B&#x3D;TRUE</li>
+<li>A&#x3D;FALSE, B&#x3D;FALSE</li>
+<li>A&#x3D;TRUE,B&#x3D;TRUE</li>
+</ol>
+<h3 id="Basic-Path-Testing"><a href="#Basic-Path-Testing" class="headerlink" title="Basic Path Testing"></a>Basic Path Testing</h3><p>Analyze the sequences of statements from the program input to output - <strong>paths</strong> of a program and drwa the control flow graph.</p>
+<h4 id="Flowchart"><a href="#Flowchart" class="headerlink" title="Flowchart"></a>Flowchart</h4><ul>
+<li>Nodes: represent zero, one or more statements.</li>
+<li>Edges: link two nodes</li>
+<li>Regions: areas delimited by edges and nodes</li>
+<li>Predicate nodes: bifurcation node</li>
+</ul>
+<p><img src="flowchart.png" alt="Flowchart"></p>
+<h4 id="Cyclomatic-Complexity"><a href="#Cyclomatic-Complexity" class="headerlink" title="Cyclomatic Complexity"></a>Cyclomatic Complexity</h4><ul>
+<li>C(G) represents complexity<ul>
+<li>C(G) &#x3D; Number of regions</li>
+<li>C(G) &#x3D; Edges - Nodes + 2</li>
+<li>C(G) &#x3D; Number of predicate nodes + 1</li>
+</ul>
+</li>
+</ul>
+<h4 id="Determine-Basic-Set-of-Independent-Paths-Equivalent-to-Decision-x2F-Consition-Coverage"><a href="#Determine-Basic-Set-of-Independent-Paths-Equivalent-to-Decision-x2F-Consition-Coverage" class="headerlink" title="Determine Basic Set of Independent Paths - Equivalent to Decision&#x2F;Consition Coverage"></a>Determine Basic Set of Independent Paths - Equivalent to Decision&#x2F;Consition Coverage</h4><p><img src="example-independent-paths.png" alt="Example"></p>
+<ol>
+<li>1 - 2 - 4 - 5 - 8 - 10</li>
+<li>1 - 2 - 3 - 2 - 4 - 5 - 8 - 10</li>
+<li>1 - 2 - 4 - 6 - 8 - 10</li>
+<li>1 - 2 - 4 - 6 - 7 - 8 - 10</li>
+<li>1 - 2 - 4 - 5 - 8 - 9 - 10</li>
+<li>1 - 2 - 4 - 5 - 8 - 9 - 2 - 4 - 5 - 8 - 10</li>
+</ol>
+<h4 id="Modern-Practice"><a href="#Modern-Practice" class="headerlink" title="Modern Practice"></a>Modern Practice</h4><ul>
+<li>Check coverage using modern IDE</li>
+</ul>
+<h2 id="Functional-Techniques"><a href="#Functional-Techniques" class="headerlink" title="Functional Techniques"></a>Functional Techniques</h2><ul>
+<li>Program is viewed as a black box</li>
+<li>They try to run test cases related to possible program faults</li>
+</ul>
+<h3 id="Equivalence-Partitioning"><a href="#Equivalence-Partitioning" class="headerlink" title="Equivalence Partitioning"></a>Equivalence Partitioning</h3><ul>
+<li>Divides the program input domain into data classes used to derive test cases.</li>
+<li>An equivalence class represents a set of valid or invalid states for program input conditions.</li>
+<li>Each input condition is examined and divided into two or more groups, identifying two types of classes</li>
+<li>An input condition typically refers to the set of values a given input can take</li>
+<li>Two types of equivalence classes are defined:<ul>
+<li>Valid equivalence classes: Represent valid program inputs.</li>
+<li>Invalid equivalence classes: Represent incorrect input values.</li>
+</ul>
+</li>
+</ul>
+<p><img src="equivalence-partitioning.png" alt="Equivalence Partitioning"></p>
+<h4 id="Value-Range"><a href="#Value-Range" class="headerlink" title="Value Range"></a>Value Range</h4><ul>
+<li>One valid and two invalid classes (above, below)</li>
+<li>E.g.: counter range is from 1 to 999<ul>
+<li>Valid class: 1 &lt;&#x3D; counter &lt;&#x3D; 999</li>
+<li>Invalid class: counter &lt; 1</li>
+<li>Invalid class: a counter &gt; 999</li>
+</ul>
+</li>
+</ul>
+<h4 id="Number-of-Values"><a href="#Number-of-Values" class="headerlink" title="Number of Values"></a>Number of Values</h4><ul>
+<li>One valid and two invalid classes</li>
+<li>E.g.: a car can have from one to six owners in its lifetime<ul>
+<li>Valid class: “from one to six owners”</li>
+<li>Invalid class: “there are no owners”</li>
+<li>Invalid class: “over six owners</li>
+</ul>
+</li>
+</ul>
+<h4 id="Logical-x2F-Boolean-Situation"><a href="#Logical-x2F-Boolean-Situation" class="headerlink" title="Logical&#x2F;Boolean Situation"></a>Logical&#x2F;Boolean Situation</h4><ul>
+<li>One of each type</li>
+<li>Sometimes a logical condition cannot be reduced to yes&#x2F;no</li>
+<li>E.g: the first character of the identifier should be a letter<ul>
+<li>Valid class: “identifier starting with letter” </li>
+<li>Invalid class: identifier not starting with letter<ul>
+<li>starting with a number</li>
+<li>starting with a symbol</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="Set-of-input-values"><a href="#Set-of-input-values" class="headerlink" title="Set of input values"></a>Set of input values</h5><ul>
+<li>If there are reasons to believe that the program will treat each group member differently, identify a valid class for each member, and an invalid class<ul>
+<li>E.g. vehicle type is: bus, truck, car or motorbike<ul>
+<li>4 Valid classes: “bus”, “truck”, “car”, “motorbike”</li>
+<li>Invalid class: any other vehicle type, e.g., “cycle”, “mobile house”</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="Other"><a href="#Other" class="headerlink" title="Other"></a>Other</h5><ul>
+<li>Generally, if there is any reason for believing that the program does not treat the items of an equivalence class equally<br>E.g.: some phone prefixes are not admitted</li>
+<li>Divide the equivalence class into smaller equivalence classes for each item type</li>
+</ul>
+<h4 id="Equivalence-Partitioning’s-Example"><a href="#Equivalence-Partitioning’s-Example" class="headerlink" title="Equivalence Partitioning’s Example"></a>Equivalence Partitioning’s Example</h4><p>Banking application, where the user can perform some bank transactions. The information for accessing the transactions requires the following input:</p>
+<h5 id="Bank-Code"><a href="#Bank-Code" class="headerlink" title="Bank Code"></a>Bank Code</h5><p>Blank or three-digit number. The first digit of the three-digit number should be greater than 1.</p>
+<ul>
+<li>Valid Equivalence Class<ul>
+<li>Blank</li>
+<li>3-digit number ranged from 200 &lt;&#x3D; Bank code &lt;&#x3D; 999</li>
+</ul>
+</li>
+</ul>
+<h5 id="Branch-Code"><a href="#Branch-Code" class="headerlink" title="Branch Code"></a>Branch Code</h5><p>A four-digit number, the first of which is greater than 0.</p>
+<ul>
+<li>Valid Equivalence Class<ul>
+<li>4-digit number, 1000 &lt;&#x3D; Branch code &lt;&#x3D;9999</li>
+</ul>
+</li>
+<li>Invalid Equivalence Class<ul>
+<li>Non-numerical value</li>
+<li>Number of more than 4 digits</li>
+<li>Number of less than 4 digits</li>
+<li>4-digit number, Branch code &lt; 1000</li>
+</ul>
+</li>
+</ul>
+<h5 id="Account-Number"><a href="#Account-Number" class="headerlink" title="Account Number"></a>Account Number</h5><p>Five-digit number.</p>
+<ul>
+<li>Valid Equivalence Class<ul>
+<li>Any five-digit number</li>
+</ul>
+</li>
+<li>Invalid Equivalence Class<ul>
+<li>Non-numerical value</li>
+<li>Number of more than five digits</li>
+<li>Number of less than five digits</li>
+</ul>
+</li>
+</ul>
+<h5 id="Password"><a href="#Password" class="headerlink" title="Password"></a>Password</h5><p>Five-position alphanumerical value.</p>
+<ul>
+<li>Valid Equivalence Class<ul>
+<li>Any five-position alphanumerical character string</li>
+</ul>
+</li>
+<li>Invalid Equivalence Class<ul>
+<li>Non-alphanumerical character string</li>
+<li>String of less than five positions</li>
+<li>String of more than five positions</li>
+</ul>
+</li>
+</ul>
+<h5 id="Order"><a href="#Order" class="headerlink" title="Order"></a>Order</h5><p>Either blank or one of the following two strings: “Checkbook” or “Transactions”</p>
+<ul>
+<li>Valid Equivalence Class<ul>
+<li>“Checkbook”</li>
+<li>“Transactions”</li>
+</ul>
+</li>
+<li>Invalid Equivalence Class<ul>
+<li>Any string that is not the empty or the same as the valid strings</li>
+</ul>
+</li>
+</ul>
+<h5 id="Generate-Test-Cases"><a href="#Generate-Test-Cases" class="headerlink" title="Generate Test Cases"></a>Generate Test Cases</h5><ul>
+<li>Write a case to cover as many uncovered valid classes as possible until the test cases cover all the valid equivalence classes</li>
+<li>Write a case to cover just one uncovered invalid classes until the test cases cover all the invalid equivalence classes</li>
+</ul>
+<h3 id="Boundary-Value-Analysis"><a href="#Boundary-Value-Analysis" class="headerlink" title="Boundary Value Analysis"></a>Boundary Value Analysis</h3><ul>
+<li>Instead of selecting just any test case in the valid and invalid classes, you test the edges between equivalence partitions</li>
+<li>Instead of focusing just on the input domain, it designs the test cases also taking into account the output domain</li>
+</ul>
+<p><img src="boundary-value-analysis.png" alt="Boundary Value Analysis"></p>
+<h4 id="Value-Range-1"><a href="#Value-Range-1" class="headerlink" title="Value Range"></a>Value Range</h4><p>Design test cases for the two bounds of the range, and another two cases for situations just above and just below these bounds</p>
+<h4 id="Number-of-Values-1"><a href="#Number-of-Values-1" class="headerlink" title="Number of Values"></a>Number of Values</h4><p>Design two test cases for the minimum and maximum values, as well as another two test cases for values just above the maximum and just below the minimum</p>
+<h4 id="Order-Set"><a href="#Order-Set" class="headerlink" title="Order Set"></a>Order Set</h4><p>Pay attention to the first and last elements of the set.</p>
+<h4 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h4><p>Apply the above rules to output data as well</p>
+<h2 id="Blackbox-Testing-Technique"><a href="#Blackbox-Testing-Technique" class="headerlink" title="Blackbox Testing Technique"></a>Blackbox Testing Technique</h2><h3 id="Decision-Table-Technique"><a href="#Decision-Table-Technique" class="headerlink" title="Decision Table Technique"></a>Decision Table Technique</h3><ul>
+<li>Decision table technique is widely used for black box testing. </li>
+<li>This is a systematic approach where various input combinations and their respective system behavior are captured in a tabular form. </li>
+<li>Decision table technique is appropriate for the functions that have a logical relationship between two and more than two inputs.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><!-- --></th>
+<th><!-- --></th>
+<th><!-- --></th>
+<th><!-- --></th>
+<th><!-- --></th>
+<th><!-- --></th>
+<th><!-- --></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Input 1 (Tow Possible Values)</td>
+<td>Possible Value 1</td>
+<td>Possible Value 2</td>
+<td>Possible Value 1</td>
+<td>Possible Value 2</td>
+<td>Possible Value 1</td>
+<td>Possible Value 2</td>
+</tr>
+<tr>
+<td>Input 2 (Three Possible Values)</td>
+<td>Possible Value 1</td>
+<td>Possible Value 1</td>
+<td>Possible Value 2</td>
+<td>Possible Value 2</td>
+<td>Possible Value 3</td>
+<td>Possible Value 3</td>
+</tr>
+<tr>
+<td>Expected Result</td>
+<td>Expected Result 1</td>
+<td>Expected Result 2</td>
+<td>Expected Result 3</td>
+<td>Expected Result 4</td>
+<td>Expected Result 5</td>
+<td>Expected Result 6</td>
+</tr>
+</tbody></table>
+<h3 id="State-Transition-Technique"><a href="#State-Transition-Technique" class="headerlink" title="State Transition Technique"></a>State Transition Technique</h3><ul>
+<li>State transition testing is used where some aspect of the system can be described in what is called a ‘finite state machine’.</li>
+<li>This method tests whether the function is following state transition specifications on entering different inputs.</li>
+<li>Any system where you get a different output for the same input, depending on what has happened before, is a finite state system.</li>
+<li>We usually use <strong>state diagram</strong> to represent such system.</li>
+<li>The transitions from one state to another are determined by the rules of the ‘machine’.</li>
+</ul>
+<h4 id="Transition-Model"><a href="#Transition-Model" class="headerlink" title="Transition Model"></a>Transition Model</h4><ul>
+<li>the states that the software may occupy</li>
+<li>the transitions from one state to another</li>
+<li>the events that cause a transition</li>
+<li>the actions that result from a transition</li>
+</ul>
+<h4 id="PIN-Example"><a href="#PIN-Example" class="headerlink" title="PIN Example"></a>PIN Example</h4><p><img src="pin-example-transition-diagram.png" alt="PIN Transition Diagram"><br><img src="pin-example-transition-table.png" alt="PIN Transition Table"></p>
+<h4 id="Web-Login-Example"><a href="#Web-Login-Example" class="headerlink" title="Web Login Example"></a>Web Login Example</h4><table>
+<thead>
+<tr>
+<th>State</th>
+<th>Login</th>
+<th>Validation</th>
+<th>Next State</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>S1</td>
+<td>First Attempt</td>
+<td>Invalid</td>
+<td>S2</td>
+</tr>
+<tr>
+<td>S2</td>
+<td>Second Attempt</td>
+<td>Invalid</td>
+<td>S3</td>
+</tr>
+<tr>
+<td>S3</td>
+<td>Third Attempt</td>
+<td>Valid</td>
+<td>S4</td>
+</tr>
+<tr>
+<td>S4</td>
+<td>Redirect to Home page</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>S5</td>
+<td>Redirect to Error Page</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>State</th>
+<th>Login</th>
+<th>Validation</th>
+<th>Next State</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>S1</td>
+<td>First Attempt</td>
+<td>Invalid</td>
+<td>S2</td>
+</tr>
+<tr>
+<td>S2</td>
+<td>Second Attempt</td>
+<td>Invalid</td>
+<td>S3</td>
+</tr>
+<tr>
+<td>S3</td>
+<td>Third Attempt</td>
+<td>Invalid</td>
+<td>S5</td>
+</tr>
+<tr>
+<td>S4</td>
+<td>Redirect to Home page</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>S5</td>
+<td>Redirect to Error Page</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="Test-Case-Specification"><a href="#Test-Case-Specification" class="headerlink" title="Test Case Specification"></a>Test Case Specification</h2><h3 id="Test-goal"><a href="#Test-goal" class="headerlink" title="Test goal"></a>Test goal</h3><p>High level description of the purpose of the test case.</p>
+<h3 id="Inputs"><a href="#Inputs" class="headerlink" title="Inputs"></a>Inputs</h3><p>Actual inputs given to the program.</p>
+<h3 id="Expected-outputs"><a href="#Expected-outputs" class="headerlink" title="Expected outputs"></a>Expected outputs</h3><p>Description of the program output according to the specification.</p>
+<h3 id="Observed-outputs"><a href="#Observed-outputs" class="headerlink" title="Observed outputs"></a>Observed outputs</h3><p>Description of the program output when it is run</p>
+<h2 id="Failure-Identification"><a href="#Failure-Identification" class="headerlink" title="Failure Identification"></a>Failure Identification</h2><p>Failures are identified by comparing expected outputs against observed outputs.</p>
+
+                <hr>
+
+                <ul class="list-group">
+    
+</ul>
+
+
+                <ul class="pagination pager">
+                    
+                    <li class="page-item">
+                        <a class="page-link" href="/SOLID/" data-toggle="tooltip" data-placement="top" title="SOLID Design Principles">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="page-item ms-auto">
+                        <a class="page-link" href="/Simple-Bootstrap-Linux-System/" data-toggle="tooltip" data-placement="top" title="Build Simple Bootstrap Linux System Image">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        <div class="comment">
+  <!-- disqus 评论框 start -->
+  
+  <!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "blog-vnwybnwkiz";
+    var disqus_identifier = "https://vitaminac.github.io/Test-Case-Design-Techniques/";
+    var disqus_url = "https://vitaminac.github.io/Test-Case-Design-Techniques/";
+    var disqus_config = function () { 
+      this.language = "en";
+    };
+
+    (function () {
+      var dsq = document.createElement("script");
+      dsq.type = "text/javascript";
+      dsq.async = true;
+      dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+      (
+        document.getElementsByTagName("head")[0] ||
+        document.getElementsByTagName("body")[0]
+      ).appendChild(dsq);
+    })();
+  </script>
+  <!-- disqus 公共JS代码 end -->
+  <div id="disqus_thread" class="disqus-thread"></div>
+  <!-- disqus 评论框 end -->
+  
+</div>
+
+
+        <div class="row justify-content-center">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8`
+                col-md-10
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5 class="text-center">
+                        <a href="/tags/">FEATURED TAGS</a>
+                    </h5>
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#Test Design" title="Test Design">
+                            Test Design</a>
+                        
+                        <a class="tag" href="/tags/#Boundary Value Analysis" title="Boundary Value Analysis">
+                            Boundary Value Analysis</a>
+                        
+                        <a class="tag" href="/tags/#Equivalence Partitioning" title="Equivalence Partitioning">
+                            Equivalence Partitioning</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <img src="/images/QR.jpg" style="width: 100%; height: auto" />
+      <div class="pt-4"><!-- SNS Link 社交 -->
+<ul class="list-inline text-center">
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://www.linkedin.com/in/shuxig">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a href="mailto:dalao1002@gmail.com?subject=From my blog&body=Hi,I found this website very useful">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a href="tel:34688218528">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-phone fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    <li class="list-inline-item d-none d-lg-inline-block">
+        <a target="_blank" href="https://web.whatsapp.com/send?phone=34688218528">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-whatsapp fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    <li class="list-inline-item d-lg-none">
+        <a target="_blank" href="https://wa.me/34688218528">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-whatsapp fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://github.com/vitaminac">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    <li class="list-inline-item">
+        <a target="_blank" href="https://gist.github.com/vitaminac">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github-square fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://gitlab.com/vitaminac">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-gitlab fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://www.kaggle.com/dalao1002">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-kaggle fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://leetcode.com/dalao1002">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-code fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://stackoverflow.com/users/9980245">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://www.youtube.com/channel/UCn36tkFugikDQS_0tgH1p6g">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://space.bilibili.com/17108326">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-bilibili fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+</ul></div>
+      <p class="copyright text-muted">
+        Copyright &copy; Gao&#39;s Blog 2022
+      </p>
+    </div>
+  </div>
+</footer>
+
+    <!--wechat title img-->
+    <img class="wechat-title-img" src="/images/avatar.jpg">
+    <!-- Custom Theme JavaScript -->
+<script type="text/javascript" src="/js/blog.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/VincentGarreau/particles.js/particles.js"></script>
+<script>
+    particlesJS("particles-js", {
+        "particles": {
+            "number": {
+                "value": 50,
+                "density": {
+                    "enable": true,
+                    "value_area": 1000
+                }
+            },
+            "color": {
+                "value": "#ff0000"
+            },
+            "shape": {
+                "type": "circle",
+                "stroke": {
+                    "width": 0,
+                    "color": "#000000"
+                },
+                "polygon": {
+                    "nb_sides": 5
+                },
+                "image": {
+                    "src": "img/github.svg",
+                    "width": 100,
+                    "height": 100
+                }
+            },
+            "opacity": {
+                "value": 0.5,
+                "random": false,
+                "anim": {
+                    "enable": false,
+                    "speed": 1,
+                    "opacity_min": 0.1,
+                    "sync": false
+                }
+            },
+            "size": {
+                "value": 3,
+                "random": true,
+                "anim": {
+                    "enable": false,
+                    "speed": 40,
+                    "size_min": 0.1,
+                    "sync": false
+                }
+            },
+            "line_linked": {
+                "enable": true,
+                "distance": 150,
+                "color": "#ff00f0",
+                "opacity": 0.4,
+                "width": 1
+            },
+            "move": {
+                "enable": true,
+                "speed": 6,
+                "direction": "none",
+                "random": false,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+                "attract": {
+                    "enable": false,
+                    "rotateX": 600,
+                    "rotateY": 1200
+                }
+            }
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": {
+                    "enable": true,
+                    "mode": "repulse"
+                },
+                "onclick": {
+                    "enable": true,
+                    "mode": "push"
+                },
+                "resize": true
+            },
+            "modes": {
+                "grab": {
+                    "distance": 400,
+                    "line_linked": {
+                        "opacity": 1
+                    }
+                },
+                "bubble": {
+                    "distance": 400,
+                    "size": 40,
+                    "duration": 2,
+                    "opacity": 8,
+                    "speed": 3
+                },
+                "repulse": {
+                    "distance": 200,
+                    "duration": 0.4
+                },
+                "push": {
+                    "particles_nb": 4
+                },
+                "remove": {
+                    "particles_nb": 2
+                }
+            }
+        },
+        "retina_detect": true
+    });
+
+
+    /* ---- stats.js config ---- */
+
+    var count_particles, stats, update;
+    stats = new Stats;
+    stats.setMode(0);
+    stats.domElement.style.position = 'absolute';
+    stats.domElement.style.left = '0px';
+    stats.domElement.style.top = '0px';
+    document.body.appendChild(stats.domElement);
+    count_particles = document.querySelector('.js-count-particles');
+    update = function () {
+        stats.begin();
+        stats.end();
+        if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+            count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+        }
+        requestAnimationFrame(update);
+    };
+    requestAnimationFrame(update);
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script>
+    $(document).ready(function () {
+        anchors.add("p");
+    })
+</script>
+
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if ($('#tag_cloud').length !== 0) {
+        async ("https://vitaminac.github.io/js/jquery.tagcloud.js", function () {
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {
+                    start: '#bbbbee',
+                    end: '#0085a1'
+                },
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<script type="text/javascript" src="/js/common.js"></script>
+
+
+
+<!-- render ipynb file -->
+
+
+<!-- render ipynb file -->
+
+</body>
+
+</html>

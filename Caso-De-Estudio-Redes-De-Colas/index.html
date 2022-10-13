@@ -1,0 +1,2357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<!-- SEO -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Caso de estudio - Simulación de redes de colas｜Gao&#39;s Blog</title>
+    <meta property="og:title" content="Caso de estudio - Simulación de redes de colas｜Gao&#39;s Blog" />
+    
+    <meta name="description" content="Caso de estudio - Simulación de redes de colas｜Gao&#39;s Blog">
+    <meta property="og:description" content="Caso de estudio - Simulación de redes de colas｜Gao&#39;s Blog" />
+    <meta name="author" content="Gao">
+    <meta name="robots" content="index, follow">
+    <meta property="og:image" content="https://vitaminac.github.io/images/favicon.jpg" />
+    <link rel="shortcut icon" href="/images/favicon.jpg">
+    
+    <meta name="keywords" content="Teoría de colas,Simulación de sistemas,Enterprise Dynamics">
+    
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="alternate" type="application/atom+xml" title="Gao&#39;s Blog" href="/atom.xml">
+
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" cross-origin="anonymous" referrer-policy="no-referrer">
+    <link rel="canonical" href="https://vitaminac.github.io/Caso-De-Estudio-Redes-De-Colas/">
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Google Tag Manager -->
+    
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WDC9JKC');</script>
+    
+    <!-- End Google Tag Manager -->
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151409235-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-151409235-1');
+    </script>
+    
+
+    <!-- Google AdSense -->
+    <script data-ad-client="ca-pub-8356359077918854" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<meta name="generator" content="Hexo 6.1.0"></head>
+<style>
+    header.intro-header {
+        background-image: url('/images/header.gif')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+
+<body ontouchstart="" class="animated fadeIn">
+    <div id="particles-js"></div>
+    <nav
+  class="navbar navbar-expand-lg navbar-light sticky-top navbar-custom"
+  id="nav-top"
+>
+  <div class="container-fluid">
+    <a
+      class="navbar-brand animated pulse"
+      href="../es"
+    >
+      <span class="brand-logo">Gao&#39;s Blog</span>
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+        <li class="nav-item">
+          <a
+            class="nav-link "
+            aria-current="page"
+            href="../es"
+          >
+            Página Principal
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a
+            class="nav-link "
+            aria-current="page"
+            href="../tags/index.html"
+          >
+            Etiquetas
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/blog">New Blog</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Idioma
+          </a>
+          <ul
+            class="dropdown-menu dropdown-menu-end"
+            aria-labelledby="navbarDropdown"
+          >
+            
+            <li>
+              <a
+                class="dropdown-item"
+                href="../index.html"
+                >Inglés</a
+              >
+            </li>
+            
+            <li>
+              <a
+                class="dropdown-item"
+                href="../es"
+                >Español</a
+              >
+            </li>
+            
+            <li>
+              <a
+                class="dropdown-item"
+                href="../zh"
+                >Chino</a
+              >
+            </li>
+            
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js"></script>
+<!--fastClick.js -->
+<script>
+$(function() {
+  var $nav = document.querySelector("nav");
+  if ($nav) {
+    FastClick.attach($nav);
+  }
+});
+</script>
+
+    <!-- Main Content -->
+    
+<!--only post-->
+
+
+<img class="wechat-title-img" src="/images/preview.jpeg">
+
+
+<style>
+    header.intro-header {
+            background-image: url('/images/preview.jpeg')
+        }
+
+        
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 text-center">
+                <div class="post-heading">
+                    <h1>
+                        Caso de estudio - Simulación de redes de colas
+                    </h1>
+                    
+                    <span class="meta">Autor:
+                        Gao
+                        <span />
+                        Fecha:
+                        2018-12-29
+                    </span>
+                    <div class="tags text-center">
+                        
+                        <a class="tag" href="/tags/#Teoría de colas" title="Teoría de colas">
+                            Teoría de colas</a>
+                        
+                        <a class="tag" href="/tags/#Simulación de sistemas" title="Simulación de sistemas">
+                            Simulación de sistemas</a>
+                        
+                        <a class="tag" href="/tags/#Enterprise Dynamics" title="Enterprise Dynamics">
+                            Enterprise Dynamics</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            Caso de estudio - Simulación de redes de colas
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="order-lg-2 col-lg-3 col-12 toc-col" style="z-index: 1;">
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Introduccion"><span class="toc-text">Introducción</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Escenario"><span class="toc-text">Escenario</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Descripcion-de-la-red"><span class="toc-text">Descripción de la red</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Entrada"><span class="toc-text">Entrada</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#N1"><span class="toc-text">N1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#N2"><span class="toc-text">N2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#N3"><span class="toc-text">N3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reciclo"><span class="toc-text">Reciclo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hipodromos"><span class="toc-text">Hipódromos</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Boom"><span class="toc-text">Boom!</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Restricciones"><span class="toc-text">Restricciones</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Resolucion-del-problema"><span class="toc-text">Resolución del problema</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Diagrama-de-red-de-colas"><span class="toc-text">1. Diagrama de red de colas</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Analisis"><span class="toc-text">2. Análisis</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#En-N1"><span class="toc-text">En N1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#En-N2"><span class="toc-text">En N2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#En-N3"><span class="toc-text">En N3</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#En-Hipodromos"><span class="toc-text">En Hipódromos</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Diagrama-TQM"><span class="toc-text">3. Diagrama TQM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Simulacion"><span class="toc-text">4. Simulación</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Experimento"><span class="toc-text">5. Experimento</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-Objetivos"><span class="toc-text">6. Objetivos</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#a-Tiempo-medio-de-inspeccion-total"><span class="toc-text">a. Tiempo medio de inspección total</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#b-Tiempo-medio-de-espera"><span class="toc-text">b. Tiempo medio de espera</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#c-Numero-de-maletas"><span class="toc-text">c. Número de maletas</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-Repetir-el-expemento-para-nuevo-modelo"><span class="toc-text">7. Repetir el expemento para nuevo modelo</span></a></li></ol></li></ol>
+            </div>
+
+            <div class="order-lg-1 col-lg-9 col-12 post-container">
+                <h1 id="Introduccion"><a href="#Introduccion" class="headerlink" title="Introducción"></a>Introducción</h1><p>Como responsable de operaciones del aeropuerto, debemos encontrar una solución al problema planteado. Para ello debemos construir un modelo de simulación, un modelo numérico que reproduce su comportamiento, con el objetivo de estudiar el funcionamiento y las prestaciones del sistema.</p>
+<p>El software de modelado y resolución de problemas de simulación que hemos utilizado es <a target="_blank" rel="noopener" href="http://support.incontrolsim.com/en/enterprise-dynamics.html">Enterprise Dynamics de INCONTROL V10.1</a> junto con su <a target="_blank" rel="noopener" href="http://support.incontrolsim.com/en/ed-tutorials.html">manual</a>.</p>
+<h1 id="Escenario"><a href="#Escenario" class="headerlink" title="Escenario"></a><a href="practica2.pdf">Escenario</a></h1><p>En uno de los aeropuertos españoles, se va a instalar un nuevo sistema automático de tratamiento de equipajes (SATE). Este sistema realiza de forma totalmente automática el transporte de las maletas desde los puestos de facturación (check-in), las maletas se transportan a través de cintas a los hipódromos de carga, tienen que pasar por varias estaciones de inspección en cascada, donde finalmente son recogidas y llevadas a los aviones correspondientes a través de carritos.</p>
+<h1 id="Descripcion-de-la-red"><a href="#Descripcion-de-la-red" class="headerlink" title="Descripción de la red"></a>Descripción de la red</h1><h2 id="Entrada"><a href="#Entrada" class="headerlink" title="Entrada"></a>Entrada</h2><p>Las maletas que salen de los check-in y entran en el sistema de transporte siguen un proceso tipo Poisson a un ritmo de <strong>$\lambda&#x3D;5000$ maletas&#x2F;hora</strong> total para todo el sistema.</p>
+<p>$$\lambda&#x3D;5000$$</p>
+<h2 id="N1"><a href="#N1" class="headerlink" title="N1"></a>N1</h2><p>El 100% de estas maletas que tienen que pasar un primer nivel de inspección automática (N1) denominado inspección de explosivos. El tiempo promedio de inspección para cada maleta es de <strong>$\overline{X_1}&#x3D;4$ segundos</strong> y sigue un proceso de Poisson. </p>
+<p>$$I_1 &#x3D; \lambda &#x3D; 5000$$</p>
+<p>$$\mu_1 &#x3D; \frac{1}{4 &#x2F; (60 * 60)} &#x3D; 900$$</p>
+<h2 id="N2"><a href="#N2" class="headerlink" title="N2"></a>N2</h2><p>Aproximadamente el <strong>15%</strong> de las inspecciones tipo N1 resultan dudosas, por lo tanto es necesario realizar una segunda operación de inspección (N2) a través de operadores que puedan procesar un promedio de <strong>$\mu_2&#x3D;3$ maletas&#x2F;min</strong> siguiendo un proceso de tipo Poisson.</p>
+<p>$$I_2 &#x3D; 0.15 * I_1$$</p>
+<p>$$\mu_2 &#x3D; 3 * 60 &#x3D; 180$$</p>
+<h2 id="N3"><a href="#N3" class="headerlink" title="N3"></a>N3</h2><ul>
+<li>De las maletas que pasan por N2, los operadores solicitan, en un <strong>20%</strong> de los casos, una inspección adicional de tipo manual (N3). El tiempo de inspección en este caso se ajusta a una distribución exponencial con un promedio de <strong>$\overline{X_3}&#x3D;5$ minutos</strong>.</li>
+</ul>
+<p>$$I_3 &#x3D; 0.2 * I_2$$</p>
+<p>$$\mu_3 &#x3D; \frac{1}{5&#x2F;60} &#x3D; 12$$</p>
+<ul>
+<li>El resultado de esta última inspección (N3) es que en el <strong>2%</strong> de los casos las maletas se consideran <em>peligrosas</em> y las restantes se consideran <em>válidas</em>.</li>
+</ul>
+<p>$$\lambda_{peligrosas} &#x3D; 0.02 * I_3$$</p>
+<h2 id="Reciclo"><a href="#Reciclo" class="headerlink" title="Reciclo"></a>Reciclo</h2><p>Hay que considerar que en cada uno de los procesos de inspección (N1, N2 y N3), en el <strong>1%</strong> de los casos, se pierde el seguimiento del equipaje y, por lo tanto, debe recircular por el mismo equipo de inspección. Reformulamos las ecuciones de trafico:</p>
+<p>$$<br>\begin{split}<br>I_1 &amp;&#x3D; \lambda + 0.01 * I_1\\\\<br>I_2 &amp;&#x3D; 0.15 * 0.99 * I_1 + 0.01 * I_2\\\\<br>I_3 &amp;&#x3D; 0.2 * 0.99 * I_2 + 0.01 * I_3\\\\<br>\lambda_{peligrosas} &amp;&#x3D; 0.02 * 0.99 * I3\\\\<br>\end{split}<br>$$</p>
+<h2 id="Hipodromos"><a href="#Hipodromos" class="headerlink" title="Hipódromos"></a>Hipódromos</h2><ul>
+<li>Las maletas clasificadas como <em>váidas</em> (es decir, las que pasan satisfactoriamente algunos los controles N1, N2 o N3) llegan a los hipódromos y permanecen en espera de la llegada de los carritos de carga.</li>
+</ul>
+<p>$$<br>\begin{split}<br>\lambda_{validas}<br>&amp;&#x3D; 0.85 * 0.99 * I_1 + 0.8 * 0.99 * I_2 + 0.98 * 0.99 * I_3\\\\<br>&amp;&#x3D; \lambda - \lambda_{peligrosas}\\\\<br>\end{split}<br>$$</p>
+<ul>
+<li>En cada hipódromo hay dos operarios que cargan las maletas en carritos. Un operario puede cargar en el carrito un promedio de <strong>$\mu_{hipódromo}&#x3D;15$ maletas por minuto</strong> (considérese que cada operario gestiona un solo carrito).</li>
+</ul>
+<p>$$\mu_{hipódromo} &#x3D; 15 * 60 &#x3D; 900$$</p>
+<h2 id="Boom"><a href="#Boom" class="headerlink" title="Boom!"></a>Boom!</h2><p>Las maletas que no pasan las inspecciones y finalmente se consideran <em>peligrosas</em> son destruidas.</p>
+<p>$$<br>\begin{split}<br>\lambda_{peligrosas}<br>&amp;&#x3D; 0.02 * 0.99 * I_3\\\\<br>&amp;&#x3D; 0.02 * 0.99 * \frac{0.2 * 0.99 * \frac{0.15 * 0.99 * \frac{\lambda}{1 - 0.01}}{1 - 0.01}}{1 - 0.01}\\\\<br>&amp;&#x3D; 3 , \textbf{maletas por hora}\\\\<br>\end{split}<br>$$</p>
+<h1 id="Restricciones"><a href="#Restricciones" class="headerlink" title="Restricciones"></a>Restricciones</h1><ul>
+<li><p>Los equipos de inspección y los hipódromos no pueden tener un nivel de saturación&#x2F;uso superior al <strong>80%</strong></p>
+</li>
+<li><p>Se puede asumir que las maletas llegan de forma <strong>aleatoria e igualmente distribuída</strong> a los distintos hipódromos.</p>
+</li>
+</ul>
+<h1 id="Resolucion-del-problema"><a href="#Resolucion-del-problema" class="headerlink" title="Resolución del problema"></a>Resolución del problema</h1><h2 id="1-Diagrama-de-red-de-colas"><a href="#1-Diagrama-de-red-de-colas" class="headerlink" title="1. Diagrama de red de colas"></a>1. Diagrama de red de colas</h2><p><strong>Elaborar el diagrama de red de colas indicando todos los parámetros de los elementos (tasas y capacidades) y de los flujos (en porcentaje o en proporción).</strong></p>
+<p><img src="diagrama.jpg" alt="diagrama"></p>
+<h2 id="2-Analisis"><a href="#2-Analisis" class="headerlink" title="2. Análisis"></a>2. Análisis</h2><p><strong>Determinar, utilizando criterios analiticos y&#x2F;o de teoría de las colas, el número de equipos de inspección necesarios en cada nivel de inspección (N1, N2 y N3) y el número de hipódromos necesarios.</strong></p>
+<p>A partir de los resultados anteriormente obtenidos:</p>
+<p>$$<br>\begin{split}<br>I_1 &amp;&#x3D; \lambda + 0.01 * I_1\\\\<br>I_2 &amp;&#x3D; 0.15 * 0.99 * I_1 + 0.01 * I_2\\\\<br>I_3 &amp;&#x3D; 0.2 * 0.99 * I_2 + 0.01 * I_3\\\\<br>\lambda_{validas} &amp;&#x3D; 0.85 * 0.99 * I_1 + 0.8 * 0.99 * I_2 + 0.98 * 0.99 * I_3\\\\<br>\lambda_{peligrosas} &amp;&#x3D; 0.02 * 0.99 * I3\\\\<br>\end{split}<br>$$</p>
+<p>Debemos cumplir que</p>
+<p>$$<br>\begin{split}<br>\rho_i &amp;&lt; 0.8\\\\<br>\frac{I_i}{c_i \mu_i} &amp;&lt; 0.8\\\\<br>c_i &amp;&gt; \frac{I_i}{0.8 * \mu_i}\\\\<br>\end{split}<br>$$</p>
+<p>Podemos deducir las tasas de llegadas para diferentes nodos.</p>
+<h3 id="En-N1"><a href="#En-N1" class="headerlink" title="En N1"></a>En N1</h3><p>$$<br>\begin{split}<br>I_1 &amp;&#x3D; \lambda + 0.01 * I_1\\\\<br>(1 - 0.01)I_1 &amp;&#x3D; \lambda\\\\<br>I_1 &amp;&#x3D; \frac{\lambda}{1 - 0.01}\\\\<br>I_1 &amp;\approx 5050.5\\\\<br>c_1 &amp;&gt; \frac{I_1}{0.8 * \mu_1}\\\\<br>c_1 &amp;&gt; \frac{5050.5}{0.8 * 900}\\\\<br>c_1 &amp;&gt; 7.0146\\\\<br>\end{split}<br>$$</p>
+<p>necesitamos al menos <strong>8 equipos</strong>.</p>
+<h3 id="En-N2"><a href="#En-N2" class="headerlink" title="En N2"></a>En N2</h3><p>$$<br>\begin{split}<br>I_2 &amp;&#x3D; 0.15 * 0.99 * I_1 + 0.01 * I_2\\\\<br>(1 - 0.01)I_2 &amp;&#x3D; 0.15 * 0.99 * I_1\\\\<br>I_2 &amp;&#x3D; \frac{0.15 * 0.99 * I_1}{1 - 0.01}\\\\<br>I_2 &amp;\approx 757.57\\\\<br>c_2 &amp;&gt; \frac{I2}{0.8 * \mu_2}\\\\<br>c_2 &amp;&gt; \frac{757.57}{0.8 * 180}\\\\<br>c_2 &amp;&gt; 5.26\\\\<br>\end{split}<br>$$</p>
+<p>necesitamos al menos <strong>6 equipos</strong>.</p>
+<h3 id="En-N3"><a href="#En-N3" class="headerlink" title="En N3"></a>En N3</h3><p>$$<br>\begin{split}<br>I_3 &amp;&#x3D; 0.2 * 0.99 * I_2 + 0.01 * I_3\\\\<br>(1 - 0.01)I_3 &amp;&#x3D; 0.2 * 0.99 * I_2\\\\<br>I_3 &amp;&#x3D; \frac{0.2 * 0.99 * I_2}{1 - 0.01}\\\\<br>I_3 &amp;\approx 151.51\\\\<br>c_3 &amp;&gt; \frac{I3}{0.8 * \mu_3}\\\\<br>c_3 &amp;&gt; \frac{1.5151}{0.8 * 12}\\\\<br>c_3 &amp;&gt; 15.783\\\\<br>\end{split}<br>$$</p>
+<p>necesitamos al menos <strong>16 equipos</strong>.</p>
+<h3 id="En-Hipodromos"><a href="#En-Hipodromos" class="headerlink" title="En Hipódromos"></a>En Hipódromos</h3><p>$$<br>\begin{split}<br>\lambda_{validas} &amp;&#x3D; 0.85 * 0.99 * I_1 + 0.8 * 0.99 * I_2 + 0.98 * 0.99 * I_3\\\\<br>\lambda_{validas} &amp;&#x3D; 4.997\\\\<br>\lambda_{peligrosas} &amp;&#x3D; 0.02 * 0.99 * I3\\\\<br>\lambda_{peligrosas} &amp;&#x3D; \lambda - \lambda_{validas}\\\\<br>\lambda_{peligrosas} &amp;&#x3D; 3\\\\<br>c_{hipódromo} &amp;&gt; \frac{\lambda_{validas}}{0.8 * \mu_{hipódromo}}\\\\<br>c_{hipódromo} &amp;&gt; \frac{4997}{0.8 * 900}\\\\<br>c_{hipódromo} &amp;&gt; 6.94\\\\<br>\end{split}<br>$$</p>
+<p>Necesitamos al menos <strong>7 operarios</strong>, sabemos que en cada hipódromo obligariamente hay dos operarios, habrá <strong>4 hipódromos 8 operarios</strong>.</p>
+<h2 id="3-Diagrama-TQM"><a href="#3-Diagrama-TQM" class="headerlink" title="3. Diagrama TQM"></a>3. Diagrama TQM</h2><p><strong>Elaborar el diagrama TQM del modelo.</strong></p>
+<p><a href="TQM.jpg"><img src="TQM.jpg" alt="diagrama TQM"></a></p>
+<h2 id="4-Simulacion"><a href="#4-Simulacion" class="headerlink" title="4. Simulación"></a>4. <a href="simulacion1.mod">Simulación</a></h2><p><strong>Crear un modelo de simulación que represente el sistema indicado según las dimensiones calculadas previamente.</strong></p>
+<p>Los diferentes elementos del modelado son:</p>
+<ul>
+<li>Entidades: Maletas</li>
+<li>Atributos: si son peligrosas o no</li>
+<li>Actividades: Las diferentes inspecciones en N1, N2, N3 y finalmente las recogidas si son válidas o destruidas si son peligrosas</li>
+<li>Estados: si son clafisicadas como peligrosas o válidas</li>
+<li>Eventos: la llegada de una nueva maleta, el resultado de diferentes inspecciones, o si se pierden el control y hay que reciclarse</li>
+</ul>
+<p>Para facilatar la medición de unos parametros hemos cambiado un poco la estructura de diseño. En vez de diseñar los carritos y destrccón como sink. Hemos puesto como dos cola que enlazan al mismo sitio y desde ahí ya podemos hacer la medición de algunos parámetros.</p>
+<p><a href="simulacion.png"><img src="simulacion.png" alt="simulacion"></a></p>
+<p>El sistema se divide entre la entrada <strong>check-in</strong> que modela con un átomo de <strong>source</strong> en el que el tiempo medio entre llegadas sigue una distribución exponencial de T ya calculada, y luego los distintos equipos de inspecciones se modelan cada uno con un átomo de <strong>Multiservice</strong> indicando su capacidad, calculada en el apartado anterior así como su tiempo de servicio, que viene especificado por el enunciado. Entre ellos se conectan por una <strong>cola de capacidad infinita</strong>. Las maletas salen o bien por N3 hacia la destruccion o de algún punto de inspección hacia la zona de acumulación que consiste en 4 hipódromos representados con los átomos de <strong>Multiservice de capacidad 2</strong> cada uno de los cuales posee su propia <strong>cola de capacidad infinita</strong>.</p>
+<p>Con canales:</p>
+<p><a href="simulacion_con_canales.png"><img src="simulacion_con_canales.png" alt="simulacion con canales"></a></p>
+<h2 id="5-Experimento"><a href="#5-Experimento" class="headerlink" title="5. Experimento"></a>5. <a href="simulacion.xlsx">Experimento</a></h2><p><strong>Realizar un experimento de simulación, con un número suficientemente alto de réplicas. Describir los experimentos (número y duración).</strong></p>
+<p>El experimento consiste en <strong>100</strong> lanzamientos seperados y cada una dura <strong>48</strong> horas en el reloj de simulación.</p>
+<p>Intuitivamente que a mayor tiempo de ejecución reducimos la varianza de valores simulados, en nuestro caso <strong>48 horas</strong> la varianza de <strong>$\overline{x_{ij}}$</strong> es:</p>
+<p>$$\frac{\sigma^2}{I_{ij}*48}$$ </p>
+<p>donde $I_{ij}$ es la tasa de transferencia efectiva de j medición en i ejecucion.</p>
+<p>Por el teorema del límite central</p>
+<p>$$\overline{x_{ij}} \sim \mathcal{N}(\mu_j, \frac{\sigma_j^2}{I_{ij}*48})$$</p>
+<p>Para 100 ejecución la media de <strong>$n&#x3D;100$ ejecuciones</strong> </p>
+<p>$\overline{x_{j}}$ distribuye como</p>
+<p>$$\overline{x_{j}} \sim \mathcal{N}(\mu_j, \frac{\sigma_{j}^2}{I_{j}<em>48</em>100})$$</p>
+<p>Por ser $\overline{x_{ij}}$ una variable con distribución normal</p>
+<p>$$S_{j}^2 \sim \mathcal{X}^2_{100 - 1}\frac{\frac{\sigma_{j}^2}{I_{j}<em>48</em>100}}{100-1}$$</p>
+<p>Para el intervalo de confianza 95% y 100 ejecuciones de 48h nos garantiza que el error máximo de cada medición es:</p>
+<p>$$\epsilon_j &gt; z_{\frac{95}{2}}\frac{\sigma_j}{\sqrt{100<em>48</em>I_{j}}}$$</p>
+<p>Para la medición de tiempo medio de inspección total hemos puesto un triger de la salida en <strong>check-in</strong> que asigna el tiempo de comienzo la inspección a un label “inspeccion” y otro trigger de entrada en <strong>el repartior</strong> y otro trigger de salida en <strong>N3</strong> de calculamos y actualizamos al tiempo actual menos el tiempo de comienzo de la inspección, en la <strong>salida</strong> obtenemos los siguientes datos.</p>
+<table>
+<thead>
+<tr>
+<th>Átomo</th>
+<th>medición</th>
+<th>Media</th>
+<th>Var</th>
+<th>SD</th>
+<th>Min</th>
+<th>P-25</th>
+<th>Mediana</th>
+<th>P-75</th>
+<th>Max</th>
+<th>IC 95%</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Carritos de carga</td>
+<td>número de maletas validas</td>
+<td>239851.97</td>
+<td>290929.12</td>
+<td>539.38</td>
+<td>238401.00</td>
+<td>239538.00</td>
+<td>239799.50</td>
+<td>240186.25</td>
+<td>241376.00</td>
+<td>105.72</td>
+</tr>
+<tr>
+<td>Carritos de carga</td>
+<td>tiempo medio entre dos llegadas sucesivas de maletas validas</td>
+<td>0.72</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.72</td>
+<td>0.72</td>
+<td>0.72</td>
+<td>0.72</td>
+<td>0.72</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Destruye</td>
+<td>número de maletas peligrosas</td>
+<td>142.56</td>
+<td>131.26</td>
+<td>11.46</td>
+<td>116.00</td>
+<td>136.00</td>
+<td>142.00</td>
+<td>149.00</td>
+<td>172.00</td>
+<td>2.25</td>
+</tr>
+<tr>
+<td>Destruye</td>
+<td>tiempo medio entre dos llegadas sucesivas de maletas peligrosas</td>
+<td>1220.05</td>
+<td>10071.68</td>
+<td>100.36</td>
+<td>1004.65</td>
+<td>1159.73</td>
+<td>1216.90</td>
+<td>1270.59</td>
+<td>1489.66</td>
+<td>19.67</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Cola de hipodromo 1</td>
+<td>número medio de productos</td>
+<td>1.29</td>
+<td>0.00</td>
+<td>0.05</td>
+<td>1.18</td>
+<td>1.26</td>
+<td>1.29</td>
+<td>1.33</td>
+<td>1.41</td>
+<td>0.01</td>
+</tr>
+<tr>
+<td>Cola de hipodromo 1</td>
+<td>tiempo medio de espera</td>
+<td>3.72</td>
+<td>0.02</td>
+<td>0.14</td>
+<td>3.42</td>
+<td>3.63</td>
+<td>3.73</td>
+<td>3.82</td>
+<td>4.02</td>
+<td>0.03</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Cola de hipodromo 2</td>
+<td>número medio de productos</td>
+<td>1.29</td>
+<td>0.00</td>
+<td>0.05</td>
+<td>1.18</td>
+<td>1.25</td>
+<td>1.29</td>
+<td>1.31</td>
+<td>1.45</td>
+<td>0.01</td>
+</tr>
+<tr>
+<td>Cola de hipodromo 2</td>
+<td>tiempo medio de espera</td>
+<td>3.71</td>
+<td>0.02</td>
+<td>0.14</td>
+<td>3.43</td>
+<td>3.61</td>
+<td>3.70</td>
+<td>3.77</td>
+<td>4.16</td>
+<td>0.03</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Cola de hipodromo 3</td>
+<td>número medio de productos</td>
+<td>1.29</td>
+<td>0.00</td>
+<td>0.05</td>
+<td>1.18</td>
+<td>1.25</td>
+<td>1.29</td>
+<td>1.32</td>
+<td>1.49</td>
+<td>0.01</td>
+</tr>
+<tr>
+<td>Cola de hipodromo 3</td>
+<td>tiempo medio de espera</td>
+<td>3.72</td>
+<td>0.02</td>
+<td>0.15</td>
+<td>3.41</td>
+<td>3.62</td>
+<td>3.71</td>
+<td>3.80</td>
+<td>4.30</td>
+<td>0.03</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Cola de hipodromo 4</td>
+<td>numero medio de productos</td>
+<td>1.29</td>
+<td>0.00</td>
+<td>0.05</td>
+<td>1.13</td>
+<td>1.25</td>
+<td>1.28</td>
+<td>1.33</td>
+<td>1.43</td>
+<td>0.01</td>
+</tr>
+<tr>
+<td>Cola de hipodromo 4</td>
+<td>tiempo medio de espera</td>
+<td>3.72</td>
+<td>0.02</td>
+<td>0.14</td>
+<td>3.29</td>
+<td>3.61</td>
+<td>3.71</td>
+<td>3.82</td>
+<td>4.12</td>
+<td>0.03</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Cola de N1</td>
+<td>numero de medio productos</td>
+<td>0.64</td>
+<td>0.00</td>
+<td>0.02</td>
+<td>0.59</td>
+<td>0.63</td>
+<td>0.64</td>
+<td>0.65</td>
+<td>0.71</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>Cola de N1</td>
+<td>tiempo medio de espera</td>
+<td>0.46</td>
+<td>0.00</td>
+<td>0.01</td>
+<td>0.42</td>
+<td>0.45</td>
+<td>0.46</td>
+<td>0.47</td>
+<td>0.50</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Cola de N2</td>
+<td>numero de medio productos</td>
+<td>0.79</td>
+<td>0.00</td>
+<td>0.06</td>
+<td>0.67</td>
+<td>0.75</td>
+<td>0.79</td>
+<td>0.84</td>
+<td>0.96</td>
+<td>0.01</td>
+</tr>
+<tr>
+<td>Cola de N2</td>
+<td>tiempo medio de espera</td>
+<td>3.77</td>
+<td>0.07</td>
+<td>0.27</td>
+<td>3.17</td>
+<td>3.59</td>
+<td>3.76</td>
+<td>3.97</td>
+<td>4.57</td>
+<td>0.05</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Cola de N3</td>
+<td>numero de medio productos</td>
+<td>1.01</td>
+<td>0.08</td>
+<td>0.28</td>
+<td>0.50</td>
+<td>0.81</td>
+<td>0.94</td>
+<td>1.20</td>
+<td>1.97</td>
+<td>0.06</td>
+</tr>
+<tr>
+<td>Cola de N3</td>
+<td>tiempo medio de espera</td>
+<td>24.07</td>
+<td>43.19</td>
+<td>6.57</td>
+<td>12.04</td>
+<td>19.09</td>
+<td>22.73</td>
+<td>28.41</td>
+<td>45.94</td>
+<td>1.29</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Hipódromo 1</td>
+<td>nivel de uso</td>
+<td>0.69</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.69</td>
+<td>0.69</td>
+<td>0.69</td>
+<td>0.70</td>
+<td>0.70</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>Hipódromo 1</td>
+<td>numero de medio productos</td>
+<td>1.39</td>
+<td>0.00</td>
+<td>0.01</td>
+<td>1.37</td>
+<td>1.38</td>
+<td>1.39</td>
+<td>1.39</td>
+<td>1.41</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>Hipódromo 1</td>
+<td>tiempo medio de servicio</td>
+<td>4.00</td>
+<td>0.00</td>
+<td>0.02</td>
+<td>3.96</td>
+<td>3.98</td>
+<td>4.00</td>
+<td>4.01</td>
+<td>4.03</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Hipódromo 2</td>
+<td>nivel de uso</td>
+<td>0.69</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.68</td>
+<td>0.69</td>
+<td>0.69</td>
+<td>0.70</td>
+<td>0.70</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>Hipódromo 2</td>
+<td>numero de medio productos</td>
+<td>1.39</td>
+<td>0.00</td>
+<td>0.01</td>
+<td>1.37</td>
+<td>1.38</td>
+<td>1.39</td>
+<td>1.39</td>
+<td>1.41</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>Hipódromo 2</td>
+<td>tiempo medio de servicio</td>
+<td>4.00</td>
+<td>0.00</td>
+<td>0.02</td>
+<td>3.95</td>
+<td>3.98</td>
+<td>3.99</td>
+<td>4.00</td>
+<td>4.04</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Hipódromo 3</td>
+<td>nivel de uso</td>
+<td>0.69</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.68</td>
+<td>0.69</td>
+<td>0.69</td>
+<td>0.70</td>
+<td>0.70</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>Hipódromo 3</td>
+<td>numero de medio productos</td>
+<td>1.39</td>
+<td>0.00</td>
+<td>0.01</td>
+<td>1.37</td>
+<td>1.38</td>
+<td>1.39</td>
+<td>1.39</td>
+<td>1.41</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>Hipódromo 3</td>
+<td>tiempo medio de servicio</td>
+<td>4.00</td>
+<td>0.00</td>
+<td>0.02</td>
+<td>3.96</td>
+<td>3.99</td>
+<td>4.00</td>
+<td>4.01</td>
+<td>4.05</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Hipódromo 4</td>
+<td>nivel de uso</td>
+<td>0.69</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.68</td>
+<td>0.69</td>
+<td>0.69</td>
+<td>0.70</td>
+<td>0.70</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>Hipódromo 4</td>
+<td>numero de medio productos</td>
+<td>1.39</td>
+<td>0.00</td>
+<td>0.01</td>
+<td>1.36</td>
+<td>1.38</td>
+<td>1.39</td>
+<td>1.39</td>
+<td>1.40</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>Hipódromo 4</td>
+<td>tiempo medio de servicio</td>
+<td>4.00</td>
+<td>0.00</td>
+<td>0.02</td>
+<td>3.94</td>
+<td>3.99</td>
+<td>4.00</td>
+<td>4.01</td>
+<td>4.05</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>N1</td>
+<td>nivel de uso</td>
+<td>0.70</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.70</td>
+<td>0.70</td>
+<td>0.70</td>
+<td>0.70</td>
+<td>0.71</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>N1</td>
+<td>numero de medio productos</td>
+<td>5.61</td>
+<td>0.00</td>
+<td>0.02</td>
+<td>5.57</td>
+<td>5.60</td>
+<td>5.61</td>
+<td>5.62</td>
+<td>5.66</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>N1</td>
+<td>tiempo medio de servicio</td>
+<td>4.00</td>
+<td>0.00</td>
+<td>0.01</td>
+<td>3.98</td>
+<td>4.00</td>
+<td>4.00</td>
+<td>4.00</td>
+<td>4.02</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>N2</td>
+<td>nivel de uso</td>
+<td>0.70</td>
+<td>0.00</td>
+<td>0.01</td>
+<td>0.69</td>
+<td>0.70</td>
+<td>0.70</td>
+<td>0.71</td>
+<td>0.71</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>N2</td>
+<td>numero de medio productos</td>
+<td>4.21</td>
+<td>0.00</td>
+<td>0.03</td>
+<td>4.12</td>
+<td>4.19</td>
+<td>4.22</td>
+<td>4.23</td>
+<td>4.27</td>
+<td>0.01</td>
+</tr>
+<tr>
+<td>N2</td>
+<td>tiempo medio de servicio</td>
+<td>20.01</td>
+<td>0.01</td>
+<td>0.11</td>
+<td>19.73</td>
+<td>19.93</td>
+<td>20.01</td>
+<td>20.08</td>
+<td>20.34</td>
+<td>0.02</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>N3</td>
+<td>nivel de uso</td>
+<td>0.79</td>
+<td>0.00</td>
+<td>0.01</td>
+<td>0.74</td>
+<td>0.78</td>
+<td>0.79</td>
+<td>0.80</td>
+<td>0.82</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>N3</td>
+<td>numero de medio productos</td>
+<td>12.56</td>
+<td>0.05</td>
+<td>0.22</td>
+<td>11.89</td>
+<td>12.42</td>
+<td>12.56</td>
+<td>12.73</td>
+<td>13.14</td>
+<td>0.04</td>
+</tr>
+<tr>
+<td>N3</td>
+<td>tiempo medio de servicio</td>
+<td>299.31</td>
+<td>12.79</td>
+<td>3.58</td>
+<td>290.65</td>
+<td>296.73</td>
+<td>299.44</td>
+<td>302.15</td>
+<td>307.18</td>
+<td>0.70</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Salida</td>
+<td>tiempo total de inspección</td>
+<td>17.86</td>
+<td>0.12</td>
+<td>0.35</td>
+<td>16.93</td>
+<td>17.59</td>
+<td>17.86</td>
+<td>18.08</td>
+<td>18.94</td>
+<td>0.07</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Sistema</td>
+<td>Número total de maletas en el sistema</td>
+<td>35.54</td>
+<td>0.26</td>
+<td>0.51</td>
+<td>34.06</td>
+<td>35.23</td>
+<td>35.54</td>
+<td>35.86</td>
+<td>37.30</td>
+<td>0.10</td>
+</tr>
+</tbody></table>
+<p>Vemos que efectivamente <strong>el nivel de uso de las diferentes inspecciónes están por debajo de 0.8</strong>. Y para calcular el nivel de uso usamos el número medio de productos en cada sistema partidos la capacidad del mismo.</p>
+<p>[![tiempo medio entre dos llegadas sucesivas de maletas validas](tiempo medio entre dos llegadas sucesivas de maletas validas.png)](tiempo medio entre dos llegadas sucesivas de maletas validas.png)</p>
+<p>[![tiempo medio entre dos llegadas sucesivas de maletas peligrosas](tiempo medio entre dos llegadas sucesivas de maletas peligrosas.png)](tiempo medio entre dos llegadas sucesivas de maletas peligrosas.png)</p>
+<p>También notamos que los tiempos entre dos llegadas sucesivas de distintos tipos de maleta está centrado a los valores teoricos.</p>
+<p>$$<br>\begin{split}<br>T_{validas}<br>&amp;&#x3D; \frac{1}{I_{validas}}\\\\<br>&amp;&#x3D; 0.72\\\\<br>T_{peligrosas}<br>&amp;&#x3D; \frac{1}{I_{validas}}\\\\<br>&amp;&#x3D; 1200\\\\<br>\end{split}<br>$$</p>
+<h2 id="6-Objetivos"><a href="#6-Objetivos" class="headerlink" title="6. Objetivos"></a>6. Objetivos</h2><p><strong>A través de los experimentos de simulación, calcular los siguientes resultados y compararlos con los resultados teóricos:</strong></p>
+<h3 id="a-Tiempo-medio-de-inspeccion-total"><a href="#a-Tiempo-medio-de-inspeccion-total" class="headerlink" title="a. Tiempo medio de inspección total"></a>a. Tiempo medio de inspección total</h3><p><strong>Tiempo medio de inspección total</strong> para las maletas.</p>
+<p>Usamos los resultados de I que obtuvimos anteriormente.</p>
+<p>$$<br>\begin{split}<br>R_{inspección,total} &amp;&#x3D; \frac{I_1}{\lambda}R_1 + \frac{I_2}{\lambda}R_2 + \frac{I_3}{\lambda}R_3\\\\<br>R_{inspección,total} &amp;&#x3D; \frac{I_1}{\lambda}<em>(\frac{Q_1}{I_1}+X_1) + \frac{I_2}{\lambda}R_2</em>(\frac{Q_2}{I_2}+X_2) + \frac{I_3}{\lambda}<em>(\frac{Q_3}{I</em>3}+X_3)\\\\<br>R_{inspección,total} &amp;&#x3D; 1.0101*(\frac{Q_1}{5050.5}+0.00111111) + 0.153*(\frac{Q_2}{757.57}+0.0055555) + 0.0309*(\frac{Q_3}{151.51}+0.08333333)\\\\<br>\end{split}<br>$$</p>
+<p>Usamos la fórmula de calcular Q en una sistema MMC $\overline{Q}&#x3D;\frac{(c\rho)^c\lambda\mu p_0}{(c-1)!(c\mu-\lambda)^2}$</p>
+<p>$$<br>\begin{split}<br>R_{inspección,total} &amp;&#x3D; 1.0101*(\frac{0.64126535}{5050.5}+0.00111111) + 0.153*(\frac{0.79494307}{757.57}+0.0055555) + 0.0309*(\frac{1.05087585}{151.51}+0.08333333)\\\\<br>R_{inspección,total} &amp;&#x3D; 17.95,\textbf{s}\\\\<br>\end{split}<br>$$</p>
+<p>El valor experimental obtenido es $17.86 \pm 0.07$, el valor experiemental este valor está algo desviado del valor téorico.</p>
+<p>[![Tiempo medio de inspección total](tiempo medio de inspeccion total.png)](tiempo medio de inspeccion total.png)</p>
+<h3 id="b-Tiempo-medio-de-espera"><a href="#b-Tiempo-medio-de-espera" class="headerlink" title="b. Tiempo medio de espera"></a>b. Tiempo medio de espera</h3><p><strong>Tiempo medio de espera</strong> en las distintas colas de los sistemas de inspección y en el hipódromo o zonas de acumulación.</p>
+<p>Obtenemos <strong>W</strong> apartir de <strong>Q</strong> con la misma fórmula.</p>
+<p>$$<br>\begin{split}<br>Q_1 &amp;&#x3D; 0.64126535\\\\<br>W_1 &amp;&#x3D; Q_1 &#x2F; I_1\\\\<br>W_1 &amp;&#x3D; 0.457\\\\<br>Q_2 &amp;&#x3D; 0.79494307\\\\<br>W_2 &amp;&#x3D; Q_2 &#x2F; I_2\\\\<br>W_2 &amp;&#x3D; 3.78\\\\<br>Q_3 &amp;&#x3D; 1.05087585\\\\<br>W_3 &amp;&#x3D; Q_3 &#x2F; I_3\\\\<br>W_3 &amp;&#x3D; 24.97\\\\<br>\end{split}<br>$$</p>
+<p>$W_1&#x3D;0.457$ está dentro del intervalo de confianza de 95% entre $0.45661547-0.00262238$ y $0.45661547+0.00262238$</p>
+<p>$W_2&#x3D;3.77756948$ está dentro del intervalo de confianza de 95% entre $3.77093044 - 0.05249099$ y $3.77093044 + 0.05249099$</p>
+<p>$W_3&#x3D;24.96881008$ está dentro del intervalo de confianza de 95% entre $24.06570308 - 1.28800643$ y $24.06570308 + 1.28800643$</p>
+<p>Para las zonas de acumulación, tenemos 4 hipódromos, cada uno tiene su propia cola, suponemos que a cada hipódromo llegan de forma aleatoria e igualmente distribuída, de los cuales la tasa de llegagas entonces es <strong>$\frac{\lambda_{validas}}{4}$</strong>, la capacidad de cada uno de ellos es <strong>2</strong>.</p>
+<p>Para cada cola de hipódromo el tiempo de espera es:</p>
+<p>$$<br>\begin{split}<br>W_{hipódromo} &amp;&#x3D; \frac{Q_{hipódromo}}{\frac{\lambda_{validas}}{4}}\\\\<br>W_{hipódromo} &amp;&#x3D; \frac{\frac{(2<em>0.694)^2</em>1249.227<em>900</em>0.180627}{(2-1)!(2*900-1249.227)^2}}{1249.25}\\\\<br>W_{hipódromo} &amp;&#x3D; \frac{1.2899}{1249.25}\\\\<br>W_{hipódromo} &amp;&#x3D; 0.0010325395237142285,\textbf{h}\\\\<br>W_{hipódromo} &amp;&#x3D; 3.717,\textbf{s}\\\\<br>\end{split}<br>$$</p>
+<p>$W_{hipódromo}&#x3D;3.717$ está dentro del intervalo de confianza de 95% entre<br>    $3.72022139 - 0.02658777$ y $3.72022139 + 0.02658777$ y<br>    $3.70558075 - 0.02680399$ y $3.70558075 + 0.02680399$ y<br>    $3.72118768 - 0.02963179$ y $3.72118768 + 0.02963179$ y<br>    $3.71955176 - 0.02786201$ y $3.71955176 + 0.02786201$.</p>
+<h3 id="c-Numero-de-maletas"><a href="#c-Numero-de-maletas" class="headerlink" title="c. Número de maletas"></a>c. Número de maletas</h3><p><strong>Número de maletas</strong> presentes en el sistema en cada momento.</p>
+<p>Para las colas ya hemos calculado anteriormente:</p>
+<p>$$<br>\begin{split}<br>Q_1 &amp;&#x3D; 0.64126535\\\\<br>Q_2 &amp;&#x3D; 0.79494307\\\\<br>Q_3 &amp;&#x3D; 1.05087585\\\\<br>Q_{hipódromo} &amp;&#x3D; 1.28990589\\\\<br>J_1 &amp;&#x3D;  Q_1 + \rho_1<em>c_1\\\\<br>J_1 &amp;&#x3D;  6.25293763\\\\<br>J_2 &amp;&#x3D;  Q_2 + \rho_2</em>c_2\\\\<br>J_2 &amp;&#x3D;  5.00369728\\\\<br>J_3 &amp;&#x3D;  0.64417406 + 0.75780158*17\\\\<br>J_3 &amp;&#x3D;  13.67713847\\\\<br>J_{hipódromo} &amp;&#x3D;  Q_{hipódromo} + \rho_{hipódromo}*c_{hipódromo}\\\\<br>J_{hipódromo} &amp;&#x3D;  2.6779614475\\\\<br>J &amp;&#x3D; J_1 + J_2 + J_3 + J_{hipódromo} * 4\\\\<br>J &amp;&#x3D; 35.64561916939008\\\\<br>\end{split}<br>$$</p>
+<p>[![Número medio de maletas en el sistema](numero medio de maletas.png)](numero medio de maletas.png)</p>
+<p>El valor téorico esta más o menos situado en el 3º percentil.</p>
+<h2 id="7-Repetir-el-expemento-para-nuevo-modelo"><a href="#7-Repetir-el-expemento-para-nuevo-modelo" class="headerlink" title="7. Repetir el expemento para nuevo modelo"></a>7. Repetir el expemento para <a href="simulacion2.mod">nuevo modelo</a></h2><p>Repetir el experimento para el caso en el que <strong>el tiempo de inspección dependa del tipo de maleta</strong>. Existen dos tipos de maletas: normal (80%), cuyo tiempo de inspección es el que se ha indicado anteriormente, y especial (20%), cuyo tiempo de inspección es el doble del tiempo para una maleta normal. Comparar <a href="simulacion.xlsx">los resultados con el modelo original</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Átomo</th>
+<th>medición</th>
+<th>Media</th>
+<th>Var</th>
+<th>SD</th>
+<th>Min</th>
+<th>P-25</th>
+<th>Mediana</th>
+<th>P-75</th>
+<th>Max</th>
+<th>IC 95%</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Carritos de carga</td>
+<td>número de maletas validas</td>
+<td>239833.49</td>
+<td>210649.85</td>
+<td>458.97</td>
+<td>238701.00</td>
+<td>239485.25</td>
+<td>239875.50</td>
+<td>240154.25</td>
+<td>241023.00</td>
+<td>89.96</td>
+</tr>
+<tr>
+<td>Carritos de carga</td>
+<td>tiempo medio entre dos llegadas sucesivas de maletas validas</td>
+<td>0.72</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.72</td>
+<td>0.72</td>
+<td>0.72</td>
+<td>0.72</td>
+<td>0.72</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Destruye</td>
+<td>número de maletas peligrosas</td>
+<td>141.87</td>
+<td>167.43</td>
+<td>12.94</td>
+<td>110.00</td>
+<td>133.00</td>
+<td>142.00</td>
+<td>152.00</td>
+<td>171.00</td>
+<td>2.54</td>
+</tr>
+<tr>
+<td>Destruye</td>
+<td>tiempo medio entre dos llegadas sucesivas de maletas peligrosas</td>
+<td>1228.53</td>
+<td>13755.82</td>
+<td>117.29</td>
+<td>1010.53</td>
+<td>1136.84</td>
+<td>1216.90</td>
+<td>1299.25</td>
+<td>1570.91</td>
+<td>22.99</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Cola de hipodromo 1</td>
+<td>número medio de productos</td>
+<td>1.30</td>
+<td>0.00</td>
+<td>0.05</td>
+<td>1.22</td>
+<td>1.26</td>
+<td>1.30</td>
+<td>1.33</td>
+<td>1.45</td>
+<td>0.01</td>
+</tr>
+<tr>
+<td>Cola de hipodromo 1</td>
+<td>tiempo medio de espera</td>
+<td>3.75</td>
+<td>0.02</td>
+<td>0.14</td>
+<td>3.52</td>
+<td>3.63</td>
+<td>3.74</td>
+<td>3.82</td>
+<td>4.15</td>
+<td>0.03</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Cola de hipodromo 2</td>
+<td>número medio de productos</td>
+<td>1.30</td>
+<td>0.00</td>
+<td>0.05</td>
+<td>1.16</td>
+<td>1.27</td>
+<td>1.29</td>
+<td>1.33</td>
+<td>1.45</td>
+<td>0.01</td>
+</tr>
+<tr>
+<td>Cola de hipodromo 2</td>
+<td>tiempo medio de espera</td>
+<td>3.74</td>
+<td>0.02</td>
+<td>0.14</td>
+<td>3.35</td>
+<td>3.65</td>
+<td>3.74</td>
+<td>3.83</td>
+<td>4.16</td>
+<td>0.03</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Cola de hipodromo 3</td>
+<td>número medio de productos</td>
+<td>1.30</td>
+<td>0.00</td>
+<td>0.05</td>
+<td>1.20</td>
+<td>1.27</td>
+<td>1.29</td>
+<td>1.33</td>
+<td>1.43</td>
+<td>0.01</td>
+</tr>
+<tr>
+<td>Cola de hipodromo 3</td>
+<td>tiempo medio de espera</td>
+<td>3.74</td>
+<td>0.02</td>
+<td>0.14</td>
+<td>3.49</td>
+<td>3.65</td>
+<td>3.73</td>
+<td>3.83</td>
+<td>4.08</td>
+<td>0.03</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Cola de hipodromo 4</td>
+<td>numero medio de productos</td>
+<td>1.30</td>
+<td>0.00</td>
+<td>0.04</td>
+<td>1.16</td>
+<td>1.27</td>
+<td>1.30</td>
+<td>1.32</td>
+<td>1.39</td>
+<td>0.01</td>
+</tr>
+<tr>
+<td>Cola de hipodromo 4</td>
+<td>tiempo medio de espera</td>
+<td>3.74</td>
+<td>0.01</td>
+<td>0.12</td>
+<td>3.36</td>
+<td>3.67</td>
+<td>3.75</td>
+<td>3.81</td>
+<td>4.01</td>
+<td>0.02</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Cola de N1</td>
+<td>numero de medio productos</td>
+<td>3.22</td>
+<td>0.02</td>
+<td>0.14</td>
+<td>2.94</td>
+<td>3.12</td>
+<td>3.21</td>
+<td>3.29</td>
+<td>3.61</td>
+<td>0.03</td>
+</tr>
+<tr>
+<td>Cola de N1</td>
+<td>tiempo medio de espera</td>
+<td>2.29</td>
+<td>0.01</td>
+<td>0.10</td>
+<td>2.10</td>
+<td>2.22</td>
+<td>2.29</td>
+<td>2.34</td>
+<td>2.57</td>
+<td>0.02</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Cola de N2</td>
+<td>numero de medio productos</td>
+<td>3.53</td>
+<td>0.11</td>
+<td>0.33</td>
+<td>2.82</td>
+<td>3.27</td>
+<td>3.51</td>
+<td>3.76</td>
+<td>4.33</td>
+<td>0.06</td>
+</tr>
+<tr>
+<td>Cola de N2</td>
+<td>tiempo medio de espera</td>
+<td>16.74</td>
+<td>2.35</td>
+<td>1.53</td>
+<td>13.56</td>
+<td>15.57</td>
+<td>16.67</td>
+<td>17.76</td>
+<td>20.57</td>
+<td>0.30</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Cola de N3</td>
+<td>numero de medio productos</td>
+<td>14.40</td>
+<td>43.63</td>
+<td>6.61</td>
+<td>5.61</td>
+<td>9.26</td>
+<td>13.05</td>
+<td>18.21</td>
+<td>38.10</td>
+<td>1.29</td>
+</tr>
+<tr>
+<td>Cola de N3</td>
+<td>tiempo medio de espera</td>
+<td>340.78</td>
+<td>23698.07</td>
+<td>153.94</td>
+<td>134.28</td>
+<td>224.03</td>
+<td>308.16</td>
+<td>425.45</td>
+<td>891.97</td>
+<td>30.17</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Hipódromo 1</td>
+<td>nivel de uso</td>
+<td>0.69</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.68</td>
+<td>0.69</td>
+<td>0.69</td>
+<td>0.70</td>
+<td>0.70</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>Hipódromo 1</td>
+<td>numero de medio productos</td>
+<td>1.39</td>
+<td>0.00</td>
+<td>0.01</td>
+<td>1.37</td>
+<td>1.38</td>
+<td>1.39</td>
+<td>1.39</td>
+<td>1.41</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>Hipódromo 1</td>
+<td>tiempo medio de servicio</td>
+<td>4.00</td>
+<td>0.00</td>
+<td>0.02</td>
+<td>3.96</td>
+<td>3.99</td>
+<td>4.00</td>
+<td>4.01</td>
+<td>4.04</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Hipódromo 2</td>
+<td>nivel de uso</td>
+<td>0.69</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.68</td>
+<td>0.69</td>
+<td>0.69</td>
+<td>0.70</td>
+<td>0.70</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>Hipódromo 2</td>
+<td>numero de medio productos</td>
+<td>1.39</td>
+<td>0.00</td>
+<td>0.01</td>
+<td>1.37</td>
+<td>1.38</td>
+<td>1.39</td>
+<td>1.39</td>
+<td>1.41</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>Hipódromo 2</td>
+<td>tiempo medio de servicio</td>
+<td>4.00</td>
+<td>0.00</td>
+<td>0.02</td>
+<td>3.96</td>
+<td>3.99</td>
+<td>4.00</td>
+<td>4.01</td>
+<td>4.04</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Hipódromo 3</td>
+<td>nivel de uso</td>
+<td>0.69</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.68</td>
+<td>0.69</td>
+<td>0.69</td>
+<td>0.70</td>
+<td>0.71</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>Hipódromo 3</td>
+<td>numero de medio productos</td>
+<td>1.39</td>
+<td>0.00</td>
+<td>0.01</td>
+<td>1.37</td>
+<td>1.38</td>
+<td>1.39</td>
+<td>1.39</td>
+<td>1.41</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>Hipódromo 3</td>
+<td>tiempo medio de servicio</td>
+<td>4.00</td>
+<td>0.00</td>
+<td>0.02</td>
+<td>3.97</td>
+<td>3.99</td>
+<td>4.00</td>
+<td>4.01</td>
+<td>4.04</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Hipódromo 4</td>
+<td>nivel de uso</td>
+<td>0.69</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.68</td>
+<td>0.69</td>
+<td>0.69</td>
+<td>0.70</td>
+<td>0.70</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>Hipódromo 4</td>
+<td>numero de medio productos</td>
+<td>1.39</td>
+<td>0.00</td>
+<td>0.01</td>
+<td>1.36</td>
+<td>1.38</td>
+<td>1.39</td>
+<td>1.39</td>
+<td>1.41</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>Hipódromo 4</td>
+<td>tiempo medio de servicio</td>
+<td>4.00</td>
+<td>0.00</td>
+<td>0.01</td>
+<td>3.95</td>
+<td>3.99</td>
+<td>4.00</td>
+<td>4.01</td>
+<td>4.04</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>N1</td>
+<td>nivel de uso</td>
+<td>0.84</td>
+<td>0.00</td>
+<td>0.00</td>
+<td>0.84</td>
+<td>0.84</td>
+<td>0.84</td>
+<td>0.84</td>
+<td>0.85</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>N1</td>
+<td>numero de medio productos</td>
+<td>6.73</td>
+<td>0.00</td>
+<td>0.02</td>
+<td>6.68</td>
+<td>6.72</td>
+<td>6.74</td>
+<td>6.75</td>
+<td>6.77</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>N1</td>
+<td>tiempo medio de servicio</td>
+<td>4.80</td>
+<td>0.00</td>
+<td>0.01</td>
+<td>4.77</td>
+<td>4.79</td>
+<td>4.80</td>
+<td>4.81</td>
+<td>4.83</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>N2</td>
+<td>nivel de uso</td>
+<td>0.84</td>
+<td>0.00</td>
+<td>0.01</td>
+<td>0.83</td>
+<td>0.84</td>
+<td>0.84</td>
+<td>0.85</td>
+<td>0.86</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>N2</td>
+<td>numero de medio productos</td>
+<td>5.05</td>
+<td>0.00</td>
+<td>0.04</td>
+<td>4.97</td>
+<td>5.02</td>
+<td>5.05</td>
+<td>5.07</td>
+<td>5.14</td>
+<td>0.01</td>
+</tr>
+<tr>
+<td>N2</td>
+<td>tiempo medio de servicio</td>
+<td>23.98</td>
+<td>0.02</td>
+<td>0.14</td>
+<td>23.52</td>
+<td>23.91</td>
+<td>23.97</td>
+<td>24.05</td>
+<td>24.32</td>
+<td>0.03</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>N3</td>
+<td>nivel de uso</td>
+<td>0.94</td>
+<td>0.00</td>
+<td>0.02</td>
+<td>0.91</td>
+<td>0.93</td>
+<td>0.94</td>
+<td>0.95</td>
+<td>0.98</td>
+<td>0.00</td>
+</tr>
+<tr>
+<td>N3</td>
+<td>numero de medio productos</td>
+<td>15.10</td>
+<td>0.06</td>
+<td>0.25</td>
+<td>14.62</td>
+<td>14.88</td>
+<td>15.09</td>
+<td>15.26</td>
+<td>15.72</td>
+<td>0.05</td>
+</tr>
+<tr>
+<td>N3</td>
+<td>tiempo medio de servicio</td>
+<td>358.93</td>
+<td>19.16</td>
+<td>4.38</td>
+<td>349.10</td>
+<td>356.17</td>
+<td>358.75</td>
+<td>361.46</td>
+<td>369.06</td>
+<td>0.86</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Salida</td>
+<td>tiempo total de inspección</td>
+<td>34.50</td>
+<td>24.36</td>
+<td>4.94</td>
+<td>27.74</td>
+<td>30.56</td>
+<td>33.53</td>
+<td>37.54</td>
+<td>52.00</td>
+<td>0.97</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Sistema</td>
+<td>Número total de maletas en el sistema</td>
+<td>58.76</td>
+<td>47.61</td>
+<td>6.90</td>
+<td>49.33</td>
+<td>53.18</td>
+<td>57.52</td>
+<td>62.88</td>
+<td>82.84</td>
+<td>1.35</td>
+</tr>
+</tbody></table>
+<p>Vemos que el tiempo total de inspección y el número total de maletas en el sistema han incremetado.</p>
+<p>[![Tiempo medio de inspección total](tiempo medio de inspeccion total 2.png)](tiempo medio de inspeccion total 2.png)</p>
+<p>[![Número medio de maletas en el sistema](numero medio de maletas 2.png)](numero medio de maletas 2.png)</p>
+<p>En concreto, el tiempo total inspección ha incrementado un $\frac{34.499501}{17.85811949} - 1 &#x3D; 93.18 %$.<br>Y el número medio de maletas en el sistema ha incrementado un $\frac{58.760103}{35.54217902} - 1 &#x3D; 65.32 %$.</p>
+<p>Mientras que el tiempo de espera de distintos hipódromos no han flactuado por mucho.</p>
+<p>El ratio entre el número de meletas válidas y el número de maletas inválidas no han cambiando, que son medida que no depende del tipo de maletas.</p>
+<p>Con los datos experimentales descubrimos que el tiempo medio de servicio ha subido <strong>8</strong> en N1, <strong>4</strong> en N2, y <strong>60</strong> segundos en N3 aproximadamente. Los tiempo de de servicio han multiplicado por $0.2*2+0.8&#x3D;1.2$ del modelo anterior.</p>
+<p>Si utilizamos las formulas anteriores y sustituimos $\mu_1$, $\mu_2$, $\mu_3$ por $\frac{\mu_1}{1.2}$,  $\frac{\mu_2}{1.2}$ y $\frac{\mu_3}{1.2}$</p>
+<p>Nos da que el número medio de maletas en el sistema será 57.52179153613749 que está dentro de intervalo de confianza $58.760103-1.352364$ y $58.760103+1.352364$</p>
+<p>Y la misma razón para tiempo medio de inspección nos da el valor téorico 33.703160936433555 que está comprendido dentro de intervalo $34.499501-0.967288$ y $34.499501+0.967288$</p>
+
+                <hr>
+
+                <ul class="list-group">
+    
+</ul>
+
+
+                <ul class="pagination pager">
+                    
+                    <li class="page-item">
+                        <a class="page-link" href="/Estructura-Algebraica/" data-toggle="tooltip" data-placement="top" title="Estructura Algebraica">&larr; Artículo Anterior</a>
+                    </li>
+                    
+                    
+                    <li class="page-item ms-auto">
+                        <a class="page-link" href="/REGULAR-VERBS/" data-toggle="tooltip" data-placement="top" title="规则动词">Siguiente Artículo &rarr;</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        <div class="comment">
+  <!-- disqus 评论框 start -->
+  
+  <!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "blog-vnwybnwkiz";
+    var disqus_identifier = "https://vitaminac.github.io/Caso-De-Estudio-Redes-De-Colas/";
+    var disqus_url = "https://vitaminac.github.io/Caso-De-Estudio-Redes-De-Colas/";
+    var disqus_config = function () { 
+      this.language = "es";
+    };
+
+    (function () {
+      var dsq = document.createElement("script");
+      dsq.type = "text/javascript";
+      dsq.async = true;
+      dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+      (
+        document.getElementsByTagName("head")[0] ||
+        document.getElementsByTagName("body")[0]
+      ).appendChild(dsq);
+    })();
+  </script>
+  <!-- disqus 公共JS代码 end -->
+  <div id="disqus_thread" class="disqus-thread"></div>
+  <!-- disqus 评论框 end -->
+  
+</div>
+
+
+        <div class="row justify-content-center">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8`
+                col-md-10
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5 class="text-center">
+                        <a href="/tags/">FEATURED TAGS</a>
+                    </h5>
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#Teoría de colas" title="Teoría de colas">
+                            Teoría de colas</a>
+                        
+                        <a class="tag" href="/tags/#Simulación de sistemas" title="Simulación de sistemas">
+                            Simulación de sistemas</a>
+                        
+                        <a class="tag" href="/tags/#Enterprise Dynamics" title="Enterprise Dynamics">
+                            Enterprise Dynamics</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <img src="/images/QR.jpg" style="width: 100%; height: auto" />
+      <div class="pt-4"><!-- SNS Link 社交 -->
+<ul class="list-inline text-center">
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://www.linkedin.com/in/shuxig">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a href="mailto:dalao1002@gmail.com?subject=From my blog&body=Hi,I found this website very useful">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a href="tel:34688218528">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-phone fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    <li class="list-inline-item d-none d-lg-inline-block">
+        <a target="_blank" href="https://web.whatsapp.com/send?phone=34688218528">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-whatsapp fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    <li class="list-inline-item d-lg-none">
+        <a target="_blank" href="https://wa.me/34688218528">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-whatsapp fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://github.com/vitaminac">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    <li class="list-inline-item">
+        <a target="_blank" href="https://gist.github.com/vitaminac">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github-square fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://gitlab.com/vitaminac">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-gitlab fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://www.kaggle.com/dalao1002">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-kaggle fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://leetcode.com/dalao1002">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-code fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://stackoverflow.com/users/9980245">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://www.youtube.com/channel/UCn36tkFugikDQS_0tgH1p6g">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://space.bilibili.com/17108326">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-bilibili fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+</ul></div>
+      <p class="copyright text-muted">
+        Copyright &copy; Gao&#39;s Blog 2022
+      </p>
+    </div>
+  </div>
+</footer>
+
+    <!--wechat title img-->
+    <img class="wechat-title-img" src="/images/avatar.jpg">
+    <!-- Custom Theme JavaScript -->
+<script type="text/javascript" src="/js/blog.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/VincentGarreau/particles.js/particles.js"></script>
+<script>
+    particlesJS("particles-js", {
+        "particles": {
+            "number": {
+                "value": 50,
+                "density": {
+                    "enable": true,
+                    "value_area": 1000
+                }
+            },
+            "color": {
+                "value": "#ff0000"
+            },
+            "shape": {
+                "type": "circle",
+                "stroke": {
+                    "width": 0,
+                    "color": "#000000"
+                },
+                "polygon": {
+                    "nb_sides": 5
+                },
+                "image": {
+                    "src": "img/github.svg",
+                    "width": 100,
+                    "height": 100
+                }
+            },
+            "opacity": {
+                "value": 0.5,
+                "random": false,
+                "anim": {
+                    "enable": false,
+                    "speed": 1,
+                    "opacity_min": 0.1,
+                    "sync": false
+                }
+            },
+            "size": {
+                "value": 3,
+                "random": true,
+                "anim": {
+                    "enable": false,
+                    "speed": 40,
+                    "size_min": 0.1,
+                    "sync": false
+                }
+            },
+            "line_linked": {
+                "enable": true,
+                "distance": 150,
+                "color": "#ff00f0",
+                "opacity": 0.4,
+                "width": 1
+            },
+            "move": {
+                "enable": true,
+                "speed": 6,
+                "direction": "none",
+                "random": false,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+                "attract": {
+                    "enable": false,
+                    "rotateX": 600,
+                    "rotateY": 1200
+                }
+            }
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": {
+                    "enable": true,
+                    "mode": "repulse"
+                },
+                "onclick": {
+                    "enable": true,
+                    "mode": "push"
+                },
+                "resize": true
+            },
+            "modes": {
+                "grab": {
+                    "distance": 400,
+                    "line_linked": {
+                        "opacity": 1
+                    }
+                },
+                "bubble": {
+                    "distance": 400,
+                    "size": 40,
+                    "duration": 2,
+                    "opacity": 8,
+                    "speed": 3
+                },
+                "repulse": {
+                    "distance": 200,
+                    "duration": 0.4
+                },
+                "push": {
+                    "particles_nb": 4
+                },
+                "remove": {
+                    "particles_nb": 2
+                }
+            }
+        },
+        "retina_detect": true
+    });
+
+
+    /* ---- stats.js config ---- */
+
+    var count_particles, stats, update;
+    stats = new Stats;
+    stats.setMode(0);
+    stats.domElement.style.position = 'absolute';
+    stats.domElement.style.left = '0px';
+    stats.domElement.style.top = '0px';
+    document.body.appendChild(stats.domElement);
+    count_particles = document.querySelector('.js-count-particles');
+    update = function () {
+        stats.begin();
+        stats.end();
+        if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+            count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+        }
+        requestAnimationFrame(update);
+    };
+    requestAnimationFrame(update);
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script>
+    $(document).ready(function () {
+        anchors.add("p");
+    })
+</script>
+
+
+<!-- mathjax -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    jax: ["input/TeX", "output/SVG"],
+    extensions: ["tex2jax.js"],
+    showMathMenu: false,
+    SVG: { useGlobalCache: false },
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+        processEscapes: true
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    }
+});
+</script>
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full">
+</script>
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if ($('#tag_cloud').length !== 0) {
+        async ("https://vitaminac.github.io/js/jquery.tagcloud.js", function () {
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {
+                    start: '#bbbbee',
+                    end: '#0085a1'
+                },
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<script type="text/javascript" src="/js/common.js"></script>
+
+
+
+<!-- render ipynb file -->
+
+
+<!-- render ipynb file -->
+
+</body>
+
+</html>

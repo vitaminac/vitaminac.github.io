@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<!-- SEO -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>The Process Behind Compiling and Executing C Code｜Gao&#39;s Blog</title>
+    <meta property="og:title" content="The Process Behind Compiling and Executing C Code｜Gao&#39;s Blog" />
+    
+    <meta name="description" content="The Process Behind Compiling and Executing C Code｜Gao&#39;s Blog">
+    <meta property="og:description" content="The Process Behind Compiling and Executing C Code｜Gao&#39;s Blog" />
+    <meta name="author" content="Gao">
+    <meta name="robots" content="index, follow">
+    <meta property="og:image" content="https://vitaminac.github.io/images/favicon.jpg" />
+    <link rel="shortcut icon" href="/images/favicon.jpg">
+    
+    <meta name="keywords" content="C,Compilation,ELF,crt0,exit">
+    
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="alternate" type="application/atom+xml" title="Gao&#39;s Blog" href="/atom.xml">
+
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" cross-origin="anonymous" referrer-policy="no-referrer">
+    <link rel="canonical" href="https://vitaminac.github.io/Compiling-Executing-C/">
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Google Tag Manager -->
+    
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WDC9JKC');</script>
+    
+    <!-- End Google Tag Manager -->
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151409235-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-151409235-1');
+    </script>
+    
+
+    <!-- Google AdSense -->
+    <script data-ad-client="ca-pub-8356359077918854" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<meta name="generator" content="Hexo 6.1.0"></head>
+<style>
+    header.intro-header {
+        background-image: url('/images/header.gif')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+
+<body ontouchstart="" class="animated fadeIn">
+    <div id="particles-js"></div>
+    <nav
+  class="navbar navbar-expand-lg navbar-light sticky-top navbar-custom"
+  id="nav-top"
+>
+  <div class="container-fluid">
+    <a
+      class="navbar-brand animated pulse"
+      href="../index.html"
+    >
+      <span class="brand-logo">Gao&#39;s Blog</span>
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+        <li class="nav-item">
+          <a
+            class="nav-link "
+            aria-current="page"
+            href="../index.html"
+          >
+            Home
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a
+            class="nav-link "
+            aria-current="page"
+            href="../tags/index.html"
+          >
+            Tags
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/blog">New Blog</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Language
+          </a>
+          <ul
+            class="dropdown-menu dropdown-menu-end"
+            aria-labelledby="navbarDropdown"
+          >
+            
+            <li>
+              <a
+                class="dropdown-item"
+                href="../index.html"
+                >English</a
+              >
+            </li>
+            
+            <li>
+              <a
+                class="dropdown-item"
+                href="../es"
+                >Spanish</a
+              >
+            </li>
+            
+            <li>
+              <a
+                class="dropdown-item"
+                href="../zh"
+                >Chinese</a
+              >
+            </li>
+            
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js"></script>
+<!--fastClick.js -->
+<script>
+$(function() {
+  var $nav = document.querySelector("nav");
+  if ($nav) {
+    FastClick.attach($nav);
+  }
+});
+</script>
+
+    <!-- Main Content -->
+    
+<!--only post-->
+
+
+<img class="wechat-title-img" src="/images/preview.jpeg">
+
+
+<style>
+    header.intro-header {
+            background-image: url('/images/preview.jpeg')
+        }
+
+        
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 text-center">
+                <div class="post-heading">
+                    <h1>
+                        The Process Behind Compiling and Executing C Code
+                    </h1>
+                    
+                    <span class="meta">Author:
+                        Gao
+                        <span />
+                        Date:
+                        2021-12-18
+                    </span>
+                    <div class="tags text-center">
+                        
+                        <a class="tag" href="/tags/#C" title="C">
+                            C</a>
+                        
+                        <a class="tag" href="/tags/#Compilation" title="Compilation">
+                            Compilation</a>
+                        
+                        <a class="tag" href="/tags/#ELF" title="ELF">
+                            ELF</a>
+                        
+                        <a class="tag" href="/tags/#crt0" title="crt0">
+                            crt0</a>
+                        
+                        <a class="tag" href="/tags/#exit" title="exit">
+                            exit</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            The Process Behind Compiling and Executing C Code
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="order-lg-2 col-lg-3 col-12 toc-col" style="z-index: 1;">
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Introduction"><span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Preprocessing"><span class="toc-text">Preprocessing</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Compilation"><span class="toc-text">Compilation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Assembly"><span class="toc-text">Assembly</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linking"><span class="toc-text">Linking</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ELF"><span class="toc-text">ELF</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Execution"><span class="toc-text">Execution</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Load-Executable-with-Interpreter"><span class="toc-text">Load Executable with Interpreter</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Load-Dynamic-Linker"><span class="toc-text">Load Dynamic Linker</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Auxiliary-Vector"><span class="toc-text">Auxiliary Vector</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Call-Dynamic-Linker-with-Program-Entry-Point"><span class="toc-text">Call Dynamic Linker with Program Entry Point</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Dynamic-Linker"><span class="toc-text">Dynamic Linker</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Kernel-Library"><span class="toc-text">Kernel Library</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-role-of-start-function"><span class="toc-text">The role of _start function</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Initialization-and-Termination-Routines"><span class="toc-text">Initialization and Termination Routines</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Call-Main-Function"><span class="toc-text">Call Main Function</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Exit"><span class="toc-text">Exit</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Writing-program-without-startfiles"><span class="toc-text">Writing program without startfiles</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-text">Reference</span></a></li></ol>
+            </div>
+
+            <div class="order-lg-1 col-lg-9 col-12 post-container">
+                <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Compiling and executing a C program is a multi-stage process. In this post I’ll walk through each stages of compiling and executing the following C program with filename <code>test.c</code>:</p>
+<pre><code>#include &lt;stdio.h&gt;
+
+#define LOOP_TIMES 10
+
+int main(int argc, char *argv[])
+&#123;
+    for (int i = 0; i &lt; LOOP_TIMES; i++)
+    &#123;
+        printf(&quot;Hello World #%i!\n&quot;, i);
+    &#125;
+    return 0;
+&#125;
+</code></pre>
+<p>Our testings are performs on Debian Bullseye AMD64, intermediate result may vary depending on the OS and hardware.</p>
+<h2 id="Preprocessing"><a href="#Preprocessing" class="headerlink" title="Preprocessing"></a>Preprocessing</h2><p>The first stage of compilation is called preprocessing. In this stage, the C pre-processor is responsible for handling pre-processor directives (lines starting with a <code>#</code> character). These pre-processor directives form a simple macro language with its own syntax and semantics. This language is used to reduce repetition in source code, e.g. lines with <code>#include</code> are replaced by the contents of the referenced file (with different search rules for names in quotes versus those in angle brackets). Names introduced with <code>#define</code> are systematically replaced with their definitions throughout the program, <code>#if</code> and its relatives are processed to conditionally omit code, etc…</p>
+<p>To get the result of the preprocessing stage, we can pass <code>-E</code> option to <code>gcc</code></p>
+<pre><code>gcc -E -o test.i test.c
+</code></pre>
+<p>The output after preprocessing stage in my machine look like following</p>
+<pre><code>// ... omitted for brevity
+# 873 &quot;/usr/include/stdio.h&quot; 3 4
+
+# 2 &quot;test.c&quot; 2
+
+
+
+
+# 5 &quot;test.c&quot;
+int main(int argc, char *argv[])
+&#123;
+    for (int i = 0; i &lt; 10; i++)
+    &#123;
+        printf(&quot;Hello World #%i!\n&quot;, i);
+    &#125;
+    return 0;
+&#125;
+</code></pre>
+<h2 id="Compilation"><a href="#Compilation" class="headerlink" title="Compilation"></a>Compilation</h2><p>In this stage, the actual compiler translates pre-processed source into assembly language. These form an intermediate human-readable language. The existence of this step allows for C code to contain inline assembly instructions and for different assemblers to be used. To get the result of the compilation stage, pass the <code>-S</code> option to <code>gcc</code>:</p>
+<pre><code>gcc -S -o test.s test.i
+</code></pre>
+<p>The output after compilation stage in my machine look like following</p>
+<pre><code>    .file    &quot;test.c&quot;
+    .text
+    .section    .rodata
+.LC0:
+    .string    &quot;Hello World #%i!\n&quot;
+    .text
+    .globl    main
+    .type    main, @function
+main:
+.LFB0:
+    .cfi_startproc
+    pushq    %rbp
+    .cfi_def_cfa_offset 16
+    .cfi_offset 6, -16
+    movq    %rsp, %rbp
+    .cfi_def_cfa_register 6
+    subq    $32, %rsp
+    movl    %edi, -20(%rbp)
+    movq    %rsi, -32(%rbp)
+    movl    $0, -4(%rbp)
+    jmp    .L2
+.L3:
+    movl    -4(%rbp), %eax
+    movl    %eax, %esi
+    leaq    .LC0(%rip), %rdi
+    movl    $0, %eax
+    call    printf@PLT
+    addl    $1, -4(%rbp)
+.L2:
+    cmpl    $9, -4(%rbp)
+    jle    .L3
+    movl    $0, %eax
+    leave
+    .cfi_def_cfa 7, 8
+    ret
+    .cfi_endproc
+.LFE0:
+    .size    main, .-main
+    .ident    &quot;GCC: (Debian 10.2.1-6) 10.2.1 20210110&quot;
+    .section    .note.GNU-stack,&quot;&quot;,@progbits
+</code></pre>
+<h2 id="Assembly"><a href="#Assembly" class="headerlink" title="Assembly"></a>Assembly</h2><p>During this stage, The assembler converts the assembly language source to an unlinked relocatable object file in ELF format. The output contains the actual instructions to be run by the target processor. However, an unlinked relocatable object file is not executable yet: it may require definitions from other files, including libraries. To get the result of the assembly stage, pass the <code>-c</code> option to <code>gcc</code>:</p>
+<pre><code>gcc -c -o test.o test.s
+</code></pre>
+<p>or we can manually invoke <code>as</code></p>
+<pre><code>as -o test.o test.s
+</code></pre>
+<p>Running the above command will produce an unlinked relocatable object file in ELF format named <code>test.o</code>. We can inspect the ELF sections with <code>readelf -a test.o | less</code> and to see the content of specific section we can use <code>readelf -x .text test.o</code>.</p>
+<h2 id="Linking"><a href="#Linking" class="headerlink" title="Linking"></a>Linking</h2><p>The object files generated in the assembly stage is composed of machine instructions that the processor understands, but some pieces of the program are out of order or missing. The linker resolves all the references in a set of object files or archive so that functions in some pieces can successfully call functions in other ones, and then produces an executable. To get the final executable use following command, <code>-v</code> option give us detail information of linking process.</p>
+<pre><code>gcc -v -o test.elf test.o
+</code></pre>
+<p>We can also manually invoke linker separately using <code>ld</code> to get the final executable.</p>
+<pre><code>GLIBC_LIB_DIR=&quot;/usr/lib/x86_64-linux-gnu&quot;
+GCC_LIB_DIR=&quot;/usr/lib/gcc/x86_64-linux-gnu/10&quot;
+STARTFILES=&quot;$GLIBC_LIB_DIR/crt1.o $GLIBC_LIB_DIR/crti.o&quot;
+ENDFILES=&quot;$GLIBC_LIB_DIR/crtn.o&quot;
+ld -o test.elf -dynamic-linker /lib64/ld-linux-x86-64.so.2 $STARTFILES test.o $GLIBC_LIB_DIR/libc.so $ENDFILES
+</code></pre>
+<p>The final executable is also a ELF file.</p>
+<h2 id="ELF"><a href="#ELF" class="headerlink" title="ELF"></a>ELF</h2><p>Executable and Linkable Format (ELF) is a common standard file format used in UNIX system for executable files, object code, shared libraries, and core dumps.</p>
+<h2 id="Execution"><a href="#Execution" class="headerlink" title="Execution"></a>Execution</h2><p>At first, it seems when a program is executed, it starts with the <a target="_blank" rel="noopener" href="https://en.cppreference.com/w/c/language/main_function"><code>int main(int argc, char *argv[])</code></a>, however it is not quite true.</p>
+<h3 id="Load-Executable-with-Interpreter"><a href="#Load-Executable-with-Interpreter" class="headerlink" title="Load Executable with Interpreter"></a>Load Executable with Interpreter</h3><p>Firstly, when we try to run a program, it trigger an <a target="_blank" rel="noopener" href="https://elixir.bootlin.com/linux/v5.15.6/source/fs/exec.c#L2063"><code>execve</code> system call</a> to the kernel. The kernel <a target="_blank" rel="noopener" href="https://elixir.bootlin.com/linux/v5.15.6/source/fs/exec.c#L1891">allocates the structure <code>linux_binprm</code> for a new process</a>, <a target="_blank" rel="noopener" href="https://elixir.bootlin.com/linux/v5.15.6/source/fs/exec.c#L1810">open the executable file from disk</a>, <a target="_blank" rel="noopener" href="https://elixir.bootlin.com/linux/v5.15.6/source/fs/exec.c#L1766">find the corresponding interpreter for the executable</a>, in case of our C program executable in ELF format is then <a target="_blank" rel="noopener" href="https://elixir.bootlin.com/linux/v5.15.6/source/fs/exec.c#L1725">executed</a> with <a target="_blank" rel="noopener" href="https://elixir.bootlin.com/linux/v5.15.6/source/fs/binfmt_elf.c#L823">ELF loader</a>.</p>
+<h3 id="Load-Dynamic-Linker"><a href="#Load-Dynamic-Linker" class="headerlink" title="Load Dynamic Linker"></a>Load Dynamic Linker</h3><p>The ELF loader <a target="_blank" rel="noopener" href="https://elixir.bootlin.com/linux/v5.15.6/source/fs/binfmt_elf.c#L873">read program headers table of executable which contains a field <code>INTERP</code></a>. For dynamically linked program <code>INTERP</code> is the path to dynamic linker. We can use <code>readelf --program-headers test.elf</code> to see the program headers table and use <code>readelf -x .interp test.elf</code> to see the value of <code>INTERP</code>, its value is <code>/lib64/ld-linux-x86-64.so.2</code> in my machine. The kernel <a target="_blank" rel="noopener" href="https://elixir.bootlin.com/linux/v5.15.6/source/fs/binfmt_elf.c#L898">opens</a> and <a target="_blank" rel="noopener" href="https://elixir.bootlin.com/linux/v5.15.6/source/fs/binfmt_elf.c#L917">reads the dynamic linker executable in ELF format</a>.</p>
+<h3 id="Auxiliary-Vector"><a href="#Auxiliary-Vector" class="headerlink" title="Auxiliary Vector"></a>Auxiliary Vector</h3><p>Kernel uses a special structure called the <a target="_blank" rel="noopener" href="https://elixir.bootlin.com/linux/v5.15.6/source/include/linux/mm_types.h#L506">auxiliary vector or auxv</a> to comminicate with dymanic linker. Kernel <a target="_blank" rel="noopener" href="https://elixir.bootlin.com/linux/v5.15.6/source/fs/binfmt_elf.c#L1257">prepares <code>auxv</code></a> and pass <code>auxv</code> by putting on the stack for the newly created program. Thus, when the dynamic linker starts it can use its stack pointer to find the all the startup information required. It contains system specific information that may be required, such as the default size of a virtual memory page on the system or hardware capabilities. We can request the dynamic linker to show some debugging output of the auxv by specifying the environment value <code>LD_SHOW_AUXV=1</code></p>
+<h3 id="Call-Dynamic-Linker-with-Program-Entry-Point"><a href="#Call-Dynamic-Linker-with-Program-Entry-Point" class="headerlink" title="Call Dynamic Linker with Program Entry Point"></a>Call Dynamic Linker with Program Entry Point</h3><p>Kernel <a target="_blank" rel="noopener" href="https://elixir.bootlin.com/linux/v5.15.6/source/fs/binfmt_elf.c#L1193">looks for the <code>e_entry</code> field</a> from the <code>ELF</code> header of our program executable which contains the entry point address which by default is symbol <code>_start</code>. We can examine the entry point with <code>objdump -f test.elf</code>.  We can use option <code>--entry=&lt;symbol name&gt;</code> of <code>ld</code> to change entry point to other symbol.</p>
+<p>Kernel <a target="_blank" rel="noopener" href="https://elixir.bootlin.com/linux/v5.15.6/source/fs/binfmt_elf.c#L267">adds the value of <code>e_entry</code> to auxv</a>. Kernel then <a target="_blank" rel="noopener" href="https://elixir.bootlin.com/linux/v5.15.6/source/fs/binfmt_elf.c#L1313">starts the execution</a> from the <a target="_blank" rel="noopener" href="https://elixir.bootlin.com/linux/v5.15.6/source/fs/binfmt_elf.c#L1215">entry point address as specified by dynamic linker</a>.</p>
+<h3 id="Dynamic-Linker"><a href="#Dynamic-Linker" class="headerlink" title="Dynamic Linker"></a>Dynamic Linker</h3><p>Investigating the dynamic linker with command <code>objdump -f /lib64/ld-linux-x86-64.so.2</code> and <code>objdump --disassemble --section=.text /lib64/ld-linux-x86-64.so.2</code> we found the entry point of dynamic linker is <a target="_blank" rel="noopener" href="https://elixir.bootlin.com/glibc/glibc-2.31/source/elf/dl-load.c#L2263">function <code>_dl_rtld_di_serinfo</code></a>. It does some linking process on the fly by loading any libraries as specified in the dynamic section of the program executable in ELF format and then continue execution from our program executable entry point address which was passed in.</p>
+<h3 id="Kernel-Library"><a href="#Kernel-Library" class="headerlink" title="Kernel Library"></a>Kernel Library</h3><p>To avoid the overheads of system calls by triggering a trap to the processor which is slow. Kernel loads a shared library (ref: <a target="_blank" rel="noopener" href="https://elixir.bootlin.com/linux/v5.15.6/source/fs/binfmt_elf.c#L1252">#1</a>, <a target="_blank" rel="noopener" href="https://elixir.bootlin.com/linux/v5.15.6/source/include/linux/elf.h#L31">#2</a>, <a target="_blank" rel="noopener" href="https://elixir.bootlin.com/linux/v5.15.6/source/arch/x86/entry/vdso/vma.c#L394">#3</a>) into the address space of every newly created process which contains a function that makes system calls for you. When the kernel starts the dynamic linker it adds an entry <code>AT_SYSINFO_EHDR</code> to the <code>auxv</code> structure (ref: <a target="_blank" rel="noopener" href="https://elixir.bootlin.com/linux/v5.15.6/source/fs/binfmt_elf.c#L255">#1</a>, <a target="_blank" rel="noopener" href="https://elixir.bootlin.com/linux/v5.15.6/source/arch/x86/include/asm/elf.h#L352">#2</a>) which is the address in the memory that the special kernel library lives in. When the dynamic linker starts it can look for the <code>AT_SYSINFO_EHDR</code> pointer, and if found load that library for the program. The program has no idea this library exists; this is a private arrangement between the dynamic linker and the kernel.</p>
+<p>The programmers make system calls indirectly through calling functions in the standard C library. The standard C library can check to see if the special kernel binary is loaded, and if so use the functions within that to make system calls. If the kernel determines the hardware is capable, this will use the fast system call method.</p>
+<h3 id="The-role-of-start-function"><a href="#The-role-of-start-function" class="headerlink" title="The role of _start function"></a>The role of <code>_start</code> function</h3><p>As you might have already noticed, in the linking section we have to include somes extras files, this is because <a target="_blank" rel="noopener" href="https://elixir.bootlin.com/glibc/glibc-2.31/source/sysdeps/x86_64/start.S#L58">the symbol <code>_start</code></a> is defined in <code>crt1.o</code> (Some systems use <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Crt0">crt0.o</a>, while some use <code>crt1.o</code> and a few even use <code>crt2.o</code> or higher). It takes care of bootstrapping the initial execution of the program, e.g. setup arguments, prepare environment variables for program execution etc. What exactly that entails is highly <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/C_standard_library#Implementations"><code>libc</code> implementation</a> dependent. The objects are provided by <a target="_blank" rel="noopener" href="http://www.etalabs.net/compare_libcs.html">different implementations of libc</a> and cannot be mixed with other ones.</p>
+<p>The following code is disassembled version of <code>_start</code> with <code>objdump --disassemble=_start test.elf</code>:</p>
+<pre><code>0000000000401040 &lt;_start&gt;:
+          401040:          31 ed                    xor    %ebp,%ebp
+          401042:          49 89 d1                 mov    %rdx,%r9
+          401045:          5e                       pop    %rsi
+          401046:          48 89 e2                 mov    %rsp,%rdx
+          401049:          48 83 e4 f0              and    $0xfffffffffffffff0,%rsp
+          40104d:          50                       push   %rax
+          40104e:          54                       push   %rsp
+          40104f:          49 c7 c0 10 11 40 00     mov    $0x401110,%r8        # __libc_csu_fini
+          401056:          48 c7 c1 b0 10 40 00     mov    $0x4010b0,%rcx       # __libc_csu_init
+          40105d:          48 c7 c7 71 10 40 00     mov    $0x401071,%rdi       # our main function
+          401064:          ff 15 86 2f 00 00        callq  *0x2f86(%rip)        # 403ff0 &lt;__libc_start_main@GLIBC_2.2.5&gt;
+          40106a:          f4                       hlt    
+</code></pre>
+<p>On glibc 2.31, <code>_start</code> <a target="_blank" rel="noopener" href="https://elixir.bootlin.com/glibc/glibc-2.31/source/sysdeps/x86_64/start.S#L59">initializes very early ABI requirements</a> (like the stack or frame pointer), <a target="_blank" rel="noopener" href="https://elixir.bootlin.com/glibc/glibc-2.31/source/sysdeps/x86_64/start.S#L85">setting up the <code>argc</code>&#x2F;<code>argv</code>&#x2F;<code>env</code> values</a>, and then <a target="_blank" rel="noopener" href="https://elixir.bootlin.com/glibc/glibc-2.31/source/sysdeps/x86_64/start.S#L107">pass pointers</a> of <a target="_blank" rel="noopener" href="https://elixir.bootlin.com/glibc/glibc-2.31/source/csu/elf-init.c#L67">__libc_csu_init</a>, <a target="_blank" rel="noopener" href="https://elixir.bootlin.com/glibc/glibc-2.31/source/csu/elf-init.c#L95">__libc_csu_fini</a> and main function to <a target="_blank" rel="noopener" href="https://refspecs.linuxbase.org/LSB_5.0.0/LSB-Core-generic/LSB-Core-generic/baselib---libc-start-main-.html"><code>__libc_start_main</code></a> which in turn does more general bootstrapping before finally calling the real main function.</p>
+<p>The <a target="_blank" rel="noopener" href="https://elixir.bootlin.com/glibc/glibc-2.2.5/source/sysdeps/generic/libc-start.c#L49">implementation of <code>__libc_start_main</code></a> is quite complicated as it needs to be portable across the very wide number of systems and architectures that <code>glibc</code> can run on. It does a number of specific things related to setting up the C library which the most of the programmers don’t need to worry about. </p>
+<h3 id="Initialization-and-Termination-Routines"><a href="#Initialization-and-Termination-Routines" class="headerlink" title="Initialization and Termination Routines"></a>Initialization and Termination Routines</h3><p><code>init</code> and <code>fini</code> are two special parts of code in shared libraries that may need to be called before the library starts, and before the library is unloaded respectively. This might be useful for library programmers to setup variables when the library is started, or to clean up at the end. <code>__libc_start_main</code> <a target="_blank" rel="noopener" href="https://elixir.bootlin.com/glibc/glibc-2.2.5/source/sysdeps/generic/libc-start.c#L122">call the <code>__libc_csu_init</code></a> before calling our main function and <a target="_blank" rel="noopener" href="https://elixir.bootlin.com/glibc/glibc-2.2.5/source/sysdeps/generic/libc-start.c#L114">register <code>__libc_csu_fini</code> as a callback to be called before program exit</a> with <a target="_blank" rel="noopener" href="https://refspecs.linuxbase.org/LSB_5.0.0/LSB-Core-generic/LSB-Core-generic/baselib---cxa-atexit.html">__cxa_atexit</a>. What <code>__libc_csu_init</code>&#x2F;<code>__libc_csu_fini</code> do is simply loop the list of <a target="_blank" rel="noopener" href="https://elixir.bootlin.com/glibc/glibc-2.31/source/csu/elf-init.c#L88">init</a>&#x2F;<a target="_blank" rel="noopener" href="https://elixir.bootlin.com/glibc/glibc-2.31/source/csu/elf-init.c#L100">fini</a> function and invokes them.</p>
+<p>In order to traverse the list of <code>init</code> functions, two symbols <code>__init_array_start</code> and <code>__init_array_end</code> is defined during the linking process and exported as part of ELF symbol table <code>.symtab</code>.</p>
+<p>We can use <code>__attribute__((constructor))</code> and <code>__attribute__((destructor))</code> (ref: <a target="_blank" rel="noopener" href="https://gcc.gnu.org/onlinedocs/gcc/Common-Function-Attributes.html#Common-Function-Attributes">#1</a>) to add <a target="_blank" rel="noopener" href="https://gcc.gnu.org/onlinedocs/gccint/Initialization.html">initialization and termination routines</a> to our program, e.g.</p>
+<pre><code>void __attribute__((constructor)) program_init(void)
+&#123;
+    printf(&quot;init\n&quot;);
+&#125;
+
+void __attribute__((destructor)) program_fini(void)
+&#123;
+    printf(&quot;fini\n&quot;);
+&#125;
+</code></pre>
+<p>In the new realease of <code>glibc</code> the process of <code>fini</code> was changed as part of this <a target="_blank" rel="noopener" href="https://sourceware.org/git/?p=glibc.git;a=commitdiff;h=9dcafc559763e339d4a79580c333127033e39c11">commit</a>.</p>
+<h3 id="Call-Main-Function"><a href="#Call-Main-Function" class="headerlink" title="Call Main Function"></a>Call Main Function</h3><p>Once <code>__libc_start_main</code> has completed with the initialization it finally <a target="_blank" rel="noopener" href="https://elixir.bootlin.com/glibc/glibc-2.2.5/source/sysdeps/generic/libc-start.c#L129">calls the main function</a>! Remember that it had the stack setup initially with the arguments and environment pointers from the kernel; this is how main gets its <code>argc</code>, <code>argv[]</code>, <a target="_blank" rel="noopener" href="https://stackoverflow.com/a/10321474/9980245">envp[]</a> arguments.</p>
+<h3 id="Exit"><a href="#Exit" class="headerlink" title="Exit"></a>Exit</h3><p>When the main function returns <code>__libc_start_main</code> call <a target="_blank" rel="noopener" href="https://en.cppreference.com/w/c/program/exit"><code>void exit(int exit_code)</code></a> with return value of main function as exit code. The <a target="_blank" rel="noopener" href="https://elixir.bootlin.com/glibc/glibc-2.31/source/stdlib/exit.c#L137">implementation of <code>exit</code></a> is trigger a syscall exit_group (ref: <a target="_blank" rel="noopener" href="https://elixir.bootlin.com/glibc/glibc-2.31/source/sysdeps/unix/sysv/linux/_exit.c#L31">#1</a>, <a target="_blank" rel="noopener" href="https://sourceware.org/git/?p=glibc.git;a=blob;f=sysdeps/unix/sysv/linux/sysdep.h;h=3ef72dc805a6e6246f8fafd935108ff3c10591b1;hb=HEAD#l42">#2</a>, <a target="_blank" rel="noopener" href="https://sourceware.org/git/?p=glibc.git;a=blob;f=sysdeps/unix/sysv/linux/i386/sysdep.h;h=ec12c84ca877b87f0eaa7711900465e74d546565;hb=HEAD#l370">#3</a>, <a target="_blank" rel="noopener" href="https://sourceware.org/git/?p=glibc.git;a=blob;f=sysdeps/unix/sysv/linux/i386/sysdep.h;h=ec12c84ca877b87f0eaa7711900465e74d546565;hb=HEAD#l308">#4</a>, <a target="_blank" rel="noopener" href="https://sourceware.org/git/?p=glibc.git;a=blob;f=sysdeps/unix/sysv/linux/i386/sysdep.h;h=ec12c84ca877b87f0eaa7711900465e74d546565;hb=HEAD#l384">#5</a>, <a target="_blank" rel="noopener" href="https://sourceware.org/git/?p=glibc.git;a=blob;f=sysdeps/unix/sysv/linux/i386/arch-syscall.h;h=2512508b7daa8ed23d52cb5441e8ae36b5ef52da;hb=HEAD#l58">#6</a>) to immediately stops the current process.</p>
+<h2 id="Writing-program-without-startfiles"><a href="#Writing-program-without-startfiles" class="headerlink" title="Writing program without startfiles"></a>Writing program without <code>startfiles</code></h2><p>Now we know how the call to the <code>main</code> is made. We can override the <code>_start</code> function to make it call our <code>main()</code>.</p>
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+#define LOOP_TIMES 10
+
+void _start()
+&#123;
+    exit(main());
+&#125;
+
+int main(void)
+&#123;
+    for (int i = 0; i &lt; LOOP_TIMES; i++)
+    &#123;
+        printf(&quot;Hello World #%i!\n&quot;, i);
+    &#125;
+    return 0;
+&#125;
+</code></pre>
+<p>Now we have to force <code>gcc</code> to use our implementation of <code>_start()</code>.</p>
+<pre><code>gcc -nostartfiles -o test.elf test.c
+</code></pre>
+<p>We can also manually invoke <code>ld</code>:</p>
+<pre><code>gcc -c -o test.o test.c
+GLIBC_LIB_DIR=&quot;/usr/lib/x86_64-linux-gnu&quot;
+GCC_LIB_DIR=&quot;/usr/lib/gcc/x86_64-linux-gnu/10&quot;
+ld -o test.elf -dynamic-linker /lib64/ld-linux-x86-64.so.2 test.o $GLIBC_LIB_DIR/libc.so
+</code></pre>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.calleluks.com/the-four-stages-of-compiling-a-c-program/">The Four Stages of Compiling a C Program</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.bottomupcs.com/starting_a_process.xhtml">Computer Science from the Bottom Up - Chapter 8. Behind the process - Starting a process</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cs.tufts.edu/comp/40/docs/compiling-notes.html">What happens when you compile?</a></li>
+<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/a/7535848/9980245">GAS: Explanation of .cfi_def_cfa_offset</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.linuxquestions.org/questions/programming-9/segfault-when-linking-with-ld-758599/">segfault when linking with ld</a></li>
+<li><a target="_blank" rel="noopener" href="https://coderedirect.com/questions/161733/how-to-build-a-c-program-using-a-custom-version-of-glibc-and-static-linking">How to build a C program using a custom version of glibc and static linking?</a></li>
+<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/a/6658194/9980245">Linking a C program directly with ld fails with undefined reference to <code>__libc_csu_fini</code></a></li>
+<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/a/6656952/9980245">Linking a dynamically linked executable with ld</a></li>
+<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/a/27786892/9980245">What is the difference between crtbegin.o, crtbeginT.o and crtbeginS.o?</a></li>
+<li><a target="_blank" rel="noopener" href="https://linux.die.net/man/1/ld">ld(1) - Linux man page</a></li>
+<li><a target="_blank" rel="noopener" href="https://man7.org/linux/man-pages/man1/readelf.1.html">readelf(1) — Linux manual page</a></li>
+<li><a target="_blank" rel="noopener" href="https://gcc.gnu.org/onlinedocs/gcc/Link-Options.html#index-nostartfiles">GCC - Options for Linking: -nostartfiles</a></li>
+<li><a target="_blank" rel="noopener" href="https://gcc.gnu.org/onlinedocs/gcc/Code-Gen-Options.html">GCC Options for Code Generation Conventions</a></li>
+<li><a target="_blank" rel="noopener" href="https://man7.org/linux/man-pages/man1/gcc.1.html">gcc(1) — Linux manual page</a></li>
+<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/a/62167438/9980245">When is the gcc flag -nostartfiles used?</a></li>
+<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/a/34237063/9980245">How do I tell GCC not to link with the runtime library and the standard library?</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/executing-main-in-c-behind-the-scene/">Executing main() in C&#x2F;C++ – behind the scene</a></li>
+<li><a target="_blank" rel="noopener" href="https://linux.die.net/man/1/objdump">objdump(1) - Linux man page</a></li>
+<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/a/49685103/9980245">Objcopy elf to bin file</a></li>
+<li><a target="_blank" rel="noopener" href="https://linux.die.net/man/1/objcopy">objcopy(1) - Linux man page</a></li>
+<li><a target="_blank" rel="noopener" href="https://sourceware.org/binutils/docs/ld/BFD.html">BFD</a></li>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Executable_and_Linkable_Format">Wikipedia: Executable and Linkable Format</a></li>
+<li><a target="_blank" rel="noopener" href="https://man7.org/linux/man-pages/man5/elf.5.html">elf(5) — Linux manual page</a></li>
+<li><a target="_blank" rel="noopener" href="https://elixir.bootlin.com/linux/v5.15.3/source/tools/objtool/include/objtool/elf.h#L79">elf.h</a></li>
+<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/a/30452453/9980245">How can I examine contents of a data section of an ELF file on Linux?</a></li>
+<li><a target="_blank" rel="noopener" href="https://linux.die.net/man/3/exec">exec(3) - Linux man page</a></li>
+<li><a target="_blank" rel="noopener" href="https://man7.org/linux/man-pages/man2/execve.2.html">execve(2) — Linux manual page</a></li>
+<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/1283342/executing-a-flat-binary-file-under-linux">Executing a flat binary file under Linux</a></li>
+<li><a target="_blank" rel="noopener" href="https://elixir.bootlin.com/linux/v5.15.6/source/fs/binfmt_flat.c#L104">load_flat_binary</a></li>
+<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/a/3463562/9980245">What is the difference between exit and return?</a></li>
+<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/a/29694977/9980245">What is the use of _start() in C?</a></li>
+<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/a/46903734/9980245">Syscall implementation of exit()</a></li>
+</ul>
+
+                <hr>
+
+                <ul class="list-group">
+    
+</ul>
+
+
+                <ul class="pagination pager">
+                    
+                    <li class="page-item">
+                        <a class="page-link" href="/Diagonalization/" data-toggle="tooltip" data-placement="top" title="Diagonalization">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="page-item ms-auto">
+                        <a class="page-link" href="/QQTang/" data-toggle="tooltip" data-placement="top" title="浅谈QQ堂">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        <div class="comment">
+  <!-- disqus 评论框 start -->
+  
+  <!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "blog-vnwybnwkiz";
+    var disqus_identifier = "https://vitaminac.github.io/Compiling-Executing-C/";
+    var disqus_url = "https://vitaminac.github.io/Compiling-Executing-C/";
+    var disqus_config = function () { 
+      this.language = "en";
+    };
+
+    (function () {
+      var dsq = document.createElement("script");
+      dsq.type = "text/javascript";
+      dsq.async = true;
+      dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+      (
+        document.getElementsByTagName("head")[0] ||
+        document.getElementsByTagName("body")[0]
+      ).appendChild(dsq);
+    })();
+  </script>
+  <!-- disqus 公共JS代码 end -->
+  <div id="disqus_thread" class="disqus-thread"></div>
+  <!-- disqus 评论框 end -->
+  
+</div>
+
+
+        <div class="row justify-content-center">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8`
+                col-md-10
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5 class="text-center">
+                        <a href="/tags/">FEATURED TAGS</a>
+                    </h5>
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#C" title="C">
+                            C</a>
+                        
+                        <a class="tag" href="/tags/#Compilation" title="Compilation">
+                            Compilation</a>
+                        
+                        <a class="tag" href="/tags/#ELF" title="ELF">
+                            ELF</a>
+                        
+                        <a class="tag" href="/tags/#crt0" title="crt0">
+                            crt0</a>
+                        
+                        <a class="tag" href="/tags/#exit" title="exit">
+                            exit</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <img src="/images/QR.jpg" style="width: 100%; height: auto" />
+      <div class="pt-4"><!-- SNS Link 社交 -->
+<ul class="list-inline text-center">
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://www.linkedin.com/in/shuxig">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a href="mailto:dalao1002@gmail.com?subject=From my blog&body=Hi,I found this website very useful">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a href="tel:34688218528">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-phone fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    <li class="list-inline-item d-none d-lg-inline-block">
+        <a target="_blank" href="https://web.whatsapp.com/send?phone=34688218528">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-whatsapp fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    <li class="list-inline-item d-lg-none">
+        <a target="_blank" href="https://wa.me/34688218528">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-whatsapp fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://github.com/vitaminac">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    <li class="list-inline-item">
+        <a target="_blank" href="https://gist.github.com/vitaminac">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github-square fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://gitlab.com/vitaminac">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-gitlab fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://www.kaggle.com/dalao1002">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-kaggle fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://leetcode.com/dalao1002">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-code fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://stackoverflow.com/users/9980245">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://www.youtube.com/channel/UCn36tkFugikDQS_0tgH1p6g">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://space.bilibili.com/17108326">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-bilibili fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+</ul></div>
+      <p class="copyright text-muted">
+        Copyright &copy; Gao&#39;s Blog 2022
+      </p>
+    </div>
+  </div>
+</footer>
+
+    <!--wechat title img-->
+    <img class="wechat-title-img" src="/images/avatar.jpg">
+    <!-- Custom Theme JavaScript -->
+<script type="text/javascript" src="/js/blog.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/VincentGarreau/particles.js/particles.js"></script>
+<script>
+    particlesJS("particles-js", {
+        "particles": {
+            "number": {
+                "value": 50,
+                "density": {
+                    "enable": true,
+                    "value_area": 1000
+                }
+            },
+            "color": {
+                "value": "#ff0000"
+            },
+            "shape": {
+                "type": "circle",
+                "stroke": {
+                    "width": 0,
+                    "color": "#000000"
+                },
+                "polygon": {
+                    "nb_sides": 5
+                },
+                "image": {
+                    "src": "img/github.svg",
+                    "width": 100,
+                    "height": 100
+                }
+            },
+            "opacity": {
+                "value": 0.5,
+                "random": false,
+                "anim": {
+                    "enable": false,
+                    "speed": 1,
+                    "opacity_min": 0.1,
+                    "sync": false
+                }
+            },
+            "size": {
+                "value": 3,
+                "random": true,
+                "anim": {
+                    "enable": false,
+                    "speed": 40,
+                    "size_min": 0.1,
+                    "sync": false
+                }
+            },
+            "line_linked": {
+                "enable": true,
+                "distance": 150,
+                "color": "#ff00f0",
+                "opacity": 0.4,
+                "width": 1
+            },
+            "move": {
+                "enable": true,
+                "speed": 6,
+                "direction": "none",
+                "random": false,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+                "attract": {
+                    "enable": false,
+                    "rotateX": 600,
+                    "rotateY": 1200
+                }
+            }
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": {
+                    "enable": true,
+                    "mode": "repulse"
+                },
+                "onclick": {
+                    "enable": true,
+                    "mode": "push"
+                },
+                "resize": true
+            },
+            "modes": {
+                "grab": {
+                    "distance": 400,
+                    "line_linked": {
+                        "opacity": 1
+                    }
+                },
+                "bubble": {
+                    "distance": 400,
+                    "size": 40,
+                    "duration": 2,
+                    "opacity": 8,
+                    "speed": 3
+                },
+                "repulse": {
+                    "distance": 200,
+                    "duration": 0.4
+                },
+                "push": {
+                    "particles_nb": 4
+                },
+                "remove": {
+                    "particles_nb": 2
+                }
+            }
+        },
+        "retina_detect": true
+    });
+
+
+    /* ---- stats.js config ---- */
+
+    var count_particles, stats, update;
+    stats = new Stats;
+    stats.setMode(0);
+    stats.domElement.style.position = 'absolute';
+    stats.domElement.style.left = '0px';
+    stats.domElement.style.top = '0px';
+    document.body.appendChild(stats.domElement);
+    count_particles = document.querySelector('.js-count-particles');
+    update = function () {
+        stats.begin();
+        stats.end();
+        if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+            count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+        }
+        requestAnimationFrame(update);
+    };
+    requestAnimationFrame(update);
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script>
+    $(document).ready(function () {
+        anchors.add("p");
+    })
+</script>
+
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if ($('#tag_cloud').length !== 0) {
+        async ("https://vitaminac.github.io/js/jquery.tagcloud.js", function () {
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {
+                    start: '#bbbbee',
+                    end: '#0085a1'
+                },
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<script type="text/javascript" src="/js/common.js"></script>
+
+
+<script type="text/javascript">
+    $("code").addClass("language-c");
+</script>
+<script type="text/javascript" src="/js/prism.js"></script>
+<script type="text/javascript">
+    addCSS("/css/prism.css");
+    Prism.highlightAll();
+</script>
+
+
+<!-- render ipynb file -->
+
+
+<!-- render ipynb file -->
+
+</body>
+
+</html>

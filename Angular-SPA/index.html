@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<!-- SEO -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Angular SPA｜Gao&#39;s Blog</title>
+    <meta property="og:title" content="Angular SPA｜Gao&#39;s Blog" />
+    
+    <meta name="description" content="Angular SPA｜Gao&#39;s Blog">
+    <meta property="og:description" content="Angular SPA｜Gao&#39;s Blog" />
+    <meta name="author" content="Gao">
+    <meta name="robots" content="index, follow">
+    <meta property="og:image" content="https://vitaminac.github.io/images/favicon.jpg" />
+    <link rel="shortcut icon" href="/images/favicon.jpg">
+    
+    <meta name="keywords" content="SPA,Angular,Aplicación Web">
+    
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="alternate" type="application/atom+xml" title="Gao&#39;s Blog" href="/atom.xml">
+
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" cross-origin="anonymous" referrer-policy="no-referrer">
+    <link rel="canonical" href="https://vitaminac.github.io/Angular-SPA/">
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Google Tag Manager -->
+    
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WDC9JKC');</script>
+    
+    <!-- End Google Tag Manager -->
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151409235-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-151409235-1');
+    </script>
+    
+
+    <!-- Google AdSense -->
+    <script data-ad-client="ca-pub-8356359077918854" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<meta name="generator" content="Hexo 6.1.0"></head>
+<style>
+    header.intro-header {
+        background-image: url('/images/header.gif')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+
+<body ontouchstart="" class="animated fadeIn">
+    <div id="particles-js"></div>
+    <nav
+  class="navbar navbar-expand-lg navbar-light sticky-top navbar-custom"
+  id="nav-top"
+>
+  <div class="container-fluid">
+    <a
+      class="navbar-brand animated pulse"
+      href="../es"
+    >
+      <span class="brand-logo">Gao&#39;s Blog</span>
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+        <li class="nav-item">
+          <a
+            class="nav-link "
+            aria-current="page"
+            href="../es"
+          >
+            Página Principal
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a
+            class="nav-link "
+            aria-current="page"
+            href="../tags/index.html"
+          >
+            Etiquetas
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/blog">New Blog</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Idioma
+          </a>
+          <ul
+            class="dropdown-menu dropdown-menu-end"
+            aria-labelledby="navbarDropdown"
+          >
+            
+            <li>
+              <a
+                class="dropdown-item"
+                href="../index.html"
+                >Inglés</a
+              >
+            </li>
+            
+            <li>
+              <a
+                class="dropdown-item"
+                href="../es"
+                >Español</a
+              >
+            </li>
+            
+            <li>
+              <a
+                class="dropdown-item"
+                href="../zh"
+                >Chino</a
+              >
+            </li>
+            
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js"></script>
+<!--fastClick.js -->
+<script>
+$(function() {
+  var $nav = document.querySelector("nav");
+  if ($nav) {
+    FastClick.attach($nav);
+  }
+});
+</script>
+
+    <!-- Main Content -->
+    
+<!--only post-->
+
+
+<img class="wechat-title-img" src="/images/preview.jpeg">
+
+
+<style>
+    header.intro-header {
+            background-image: url('/images/preview.jpeg')
+        }
+
+        
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 text-center">
+                <div class="post-heading">
+                    <h1>
+                        Angular SPA
+                    </h1>
+                    
+                    <span class="meta">Autor:
+                        Gao
+                        <span />
+                        Fecha:
+                        2019-05-03
+                    </span>
+                    <div class="tags text-center">
+                        
+                        <a class="tag" href="/tags/#SPA" title="SPA">
+                            SPA</a>
+                        
+                        <a class="tag" href="/tags/#Angular" title="Angular">
+                            Angular</a>
+                        
+                        <a class="tag" href="/tags/#Aplicación Web" title="Aplicación Web">
+                            Aplicación Web</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            Angular SPA
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="order-lg-2 col-lg-3 col-12 toc-col" style="z-index: 1;">
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Angular"><span class="toc-text">Angular</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Introduccion-a-Angular"><span class="toc-text">Introducción a Angular</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Angular-CLI"><span class="toc-text">Angular-CLI</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Proyecto"><span class="toc-text">Proyecto</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#TypeScript"><span class="toc-text">TypeScript</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Componentes"><span class="toc-text">Componentes</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Recursos-de-la-app"><span class="toc-text">Recursos de la app</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ejecucion-de-logica"><span class="toc-text">Ejecución de lógica</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sintaxis-de-los-templates"><span class="toc-text">Sintaxis de los templates</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Data-Binding"><span class="toc-text">Data Binding</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Templates"><span class="toc-text">Templates</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Visualizacion-condicional"><span class="toc-text">Visualización condicional</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Repeticion-de-elementos"><span class="toc-text">Repetición de elementos</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Directivas"><span class="toc-text">Directivas</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Safe-Navigation-Operator"><span class="toc-text">Safe Navigation Operator</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Estilos-CSS"><span class="toc-text">Estilos CSS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Globalmente-asociado-al-index-html"><span class="toc-text">Globalmente asociado al index.html</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Definir-CSS-en-Componente"><span class="toc-text">Definir CSS en Componente</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Asociar-la-clase-de-un-elemento-a-un-atributo-string"><span class="toc-text">Asociar la clase de un elemento a un atributo string</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Activar-una-clase-concreta-con-un-atributo-boolean"><span class="toc-text">Activar una clase concreta con un atributo boolean</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Asociar-la-clase-de-un-elemento-a-un-mapa"><span class="toc-text">Asociar la clase de un elemento a un mapa</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Asociar-un-estilo-concreto-a-un-atributo"><span class="toc-text">Asociar un estilo concreto a un atributo</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Asociar-un-estilo-concreto-a-un-atributo-1"><span class="toc-text">Asociar un estilo concreto a un atributo</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Formularios"><span class="toc-text">Formularios</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Data-binding-en-campo-de-texto"><span class="toc-text">Data binding en campo de texto</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Data-binding-en-campo-de-texto-1"><span class="toc-text">Data binding en campo de texto</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Data-binding-en-checkbox"><span class="toc-text">Data binding en checkbox</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Data-binding-en-botones-de-radio"><span class="toc-text">Data binding en botones de radio</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Acceso-a-los-controles-desde-el-codigo"><span class="toc-text">Acceso a los controles desde el código</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Composicion-de-componentes"><span class="toc-text">Composición de componentes</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Comunicacion-entre-un-componente-padre-y-un-componente-hijo"><span class="toc-text">Comunicación entre un componente padre y un componente hijo</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Configuracion-de-propiedades-Padre-Hijo"><span class="toc-text">Configuración de propiedades (Padre Hijo)</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Vista"><span class="toc-text">Vista</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Controlador"><span class="toc-text">Controlador</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Envio-de-eventos-Hijo-Padre"><span class="toc-text">Envío de eventos (Hijo Padre)</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Vista-1"><span class="toc-text">Vista</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Controlador-1"><span class="toc-text">Controlador</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Invocacion-de-metodos-Padre-Hijo"><span class="toc-text">Invocación de métodos (Padre Hijo)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Compartiendo-el-mismo-servicio-Padre-Hijo"><span class="toc-text">Compartiendo el mismo servicio (Padre Hijo)</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Servicios"><span class="toc-text">Servicios</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%C2%BFComo-se-implementa-un-servicio"><span class="toc-text">¿Cómo se implementa un servicio?</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Inyeccion-de-dependencias"><span class="toc-text">Inyección de dependencias</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Router"><span class="toc-text">Router</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Configuracion-de-las-rutas"><span class="toc-text">Configuración de las rutas</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Parametro-de-router"><span class="toc-text">Parametro de router</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Navegacion-con-router"><span class="toc-text">Navegación con router</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Publicacion"><span class="toc-text">Publicación</span></a></li></ol></li></ol>
+            </div>
+
+            <div class="order-lg-1 col-lg-9 col-12 post-container">
+                <h1 id="Angular"><a href="#Angular" class="headerlink" title="Angular"></a>Angular</h1><h2 id="Introduccion-a-Angular"><a href="#Introduccion-a-Angular" class="headerlink" title="Introducción a Angular"></a>Introducción a Angular</h2><p>Angular es un framework para desarrollo SPA, permite extender el HTML con etiquetas propias.</p>
+<h2 id="Angular-CLI"><a href="#Angular-CLI" class="headerlink" title="Angular-CLI"></a>Angular-CLI</h2><p><img src="angular-cli.PNG" alt="Angular CLI"></p>
+<h2 id="Proyecto"><a href="#Proyecto" class="headerlink" title="Proyecto"></a>Proyecto</h2><p><img src="project-folder.PNG" alt="Angular Project Folder"></p>
+<ul>
+<li>src: Fuentes de la aplicación</li>
+<li>node_modules: Librerías y herramientas descargadas</li>
+<li>e2e: Testing end to end</li>
+<li>package.json: Configuración de librerías y herramientas</li>
+<li>angular-cli.json: Configuración de angular-cli</li>
+</ul>
+<p><img src="project-file.PNG" alt="Angular Project File"></p>
+<ul>
+<li>app: Carpeta que contiene los ficheros fuente principales de la aplicación.</li>
+<li>Borraremos su contenido y le sustituiremos por los ejemplos</li>
+<li>assets: Ficheros que se incluyen en el bundle cuando la aplicación se empaqueta para producción</li>
+<li>main.ts: Fichero principal de la aplicación. No es necesario modificarle</li>
+<li>favicon.ico: Icono de la aplicación</li>
+<li>index.html: Página principal. No es necesario modificarle</li>
+<li>styles.css: Estilos globales de la app</li>
+<li>tsconfig.json: Configuración del compilador TS</li>
+</ul>
+<h1 id="TypeScript"><a href="#TypeScript" class="headerlink" title="TypeScript"></a><a target="_blank" rel="noopener" href="https://www.typescriptlang.org/">TypeScript</a></h1><p>JavaScript ES6 con tipos opcionales que pueden avisar de<br>potenciales problemas.</p>
+<h1 id="Componentes"><a href="#Componentes" class="headerlink" title="Componentes"></a>Componentes</h1><ul>
+<li>Un componente es una nueva etiqueta HTML con una vista y una lógica definidas por el desarrollador.</li>
+<li>La vista es una plantilla (template) en HTML con elementos especiales.</li>
+<li>La lógica es una clase TypeScript vinculada a la vista.</li>
+</ul>
+<p><img src="componente.PNG" alt="Componente"></p>
+<p><img src="import.PNG" alt="Import"></p>
+<p>La vista del componente (HTML) se genera en función de su estado (atributos de la clase).</p>
+<h2 id="Recursos-de-la-app"><a href="#Recursos-de-la-app" class="headerlink" title="Recursos de la app"></a>Recursos de la app</h2><p>Los recursos (imágenes, fonts..) deben colocarse en una carpeta src&#x2F;assets para que estén accesibles en desarrollo y cuando se genera el paquete de producción.</p>
+<h2 id="Ejecucion-de-logica"><a href="#Ejecucion-de-logica" class="headerlink" title="Ejecución de lógica"></a>Ejecución de lógica</h2><p>Se puede ejecutar un método ante un evento producido en la vista del componente.</p>
+<p><img src="event.PNG" alt="Event"></p>
+<h2 id="Sintaxis-de-los-templates"><a href="#Sintaxis-de-los-templates" class="headerlink" title="Sintaxis de los templates"></a>Sintaxis de los templates</h2><p><img src="template-sintaxis.PNG" alt="Template Sintaxis"></p>
+<h2 id="Data-Binding"><a href="#Data-Binding" class="headerlink" title="Data Binding"></a>Data Binding</h2><p><img src="data-binding.PNG" alt="Data Binding"></p>
+<h2 id="Templates"><a href="#Templates" class="headerlink" title="Templates"></a>Templates</h2><p>Los templates permiten definir la vista en función de la información del componente.</p>
+<ul>
+<li>Visualización condicional</li>
+<li>Repetición de elementos</li>
+<li>Safe navigation operator</li>
+<li>Estilos</li>
+<li>Formularios</li>
+</ul>
+<h3 id="Visualizacion-condicional"><a href="#Visualizacion-condicional" class="headerlink" title="Visualización condicional"></a>Visualización condicional</h3><pre><code>    &lt;p *ngIf=&quot;visible&quot;&gt;Text&lt;/p&gt;
+</code></pre>
+<h3 id="Repeticion-de-elementos"><a href="#Repeticion-de-elementos" class="headerlink" title="Repetición de elementos"></a>Repetición de elementos</h3><pre><code>    &lt;div *ngFor=&quot;let elem of elems&quot;&gt;&#123;&#123;elem.desc&#125;&#125; &lt;/div&gt;
+</code></pre>
+<h3 id="Directivas"><a href="#Directivas" class="headerlink" title="Directivas"></a>Directivas</h3><p>Las directivas modifican a los elementos en los que se incluyen.</p>
+<p>Existen muchas directivas predefinidas y podemos<br>programar nuestras propias directivas.</p>
+<p>Las directivas estructurales empiezan por * y modifican el DOM del documento (*ngIf, *ngFor, *ngSwitch).</p>
+<p>No se pueden incluir dos directivas estructurales (de tipo *) en el mismo elemento.</p>
+<h3 id="Safe-Navigation-Operator"><a href="#Safe-Navigation-Operator" class="headerlink" title="Safe Navigation Operator"></a>Safe Navigation Operator</h3><p>Para evitarlo existe el safe navigator operator. Undefined se representa como cadena vacía</p>
+<pre><code>    User’s name: &#123;&#123;user?.name&#125;&#125;
+</code></pre>
+<h2 id="Estilos-CSS"><a href="#Estilos-CSS" class="headerlink" title="Estilos CSS"></a>Estilos CSS</h2><h3 id="Globalmente-asociado-al-index-html"><a href="#Globalmente-asociado-al-index-html" class="headerlink" title="Globalmente asociado al index.html"></a>Globalmente asociado al index.html</h3><p>Si creamos un fichero src&#x2F;styles.css se incluirá de forma automática en el index.html.</p>
+<h3 id="Definir-CSS-en-Componente"><a href="#Definir-CSS-en-Componente" class="headerlink" title="Definir CSS en Componente"></a>Definir CSS en Componente</h3><p>En la propiedad styles o styleUrls de @Component</p>
+<p><img src="componente-css.PNG" alt="CSS de componente"></p>
+<h3 id="Asociar-la-clase-de-un-elemento-a-un-atributo-string"><a href="#Asociar-la-clase-de-un-elemento-a-un-atributo-string" class="headerlink" title="Asociar la clase de un elemento a un atributo string"></a>Asociar la clase de un elemento a un atributo string</h3><pre><code>    &lt;h1 [class]=&quot;className&quot;&gt;Title!&lt;/h1&gt;
+</code></pre>
+<h3 id="Activar-una-clase-concreta-con-un-atributo-boolean"><a href="#Activar-una-clase-concreta-con-un-atributo-boolean" class="headerlink" title="Activar una clase concreta con un atributo boolean"></a>Activar una clase concreta con un atributo boolean</h3><pre><code>    &lt;h1 [class.red]=&quot;redActive&quot;&gt;Title!&lt;/h1&gt;
+</code></pre>
+<h3 id="Asociar-la-clase-de-un-elemento-a-un-mapa"><a href="#Asociar-la-clase-de-un-elemento-a-un-mapa" class="headerlink" title="Asociar la clase de un elemento a un mapa"></a>Asociar la clase de un elemento a un mapa</h3><pre><code>    &lt;p [ngClass]=&quot;pClasses&quot;&gt;Text&lt;/p&gt;
+</code></pre>
+<h4 id="Asociar-un-estilo-concreto-a-un-atributo"><a href="#Asociar-un-estilo-concreto-a-un-atributo" class="headerlink" title="Asociar un estilo concreto a un atributo"></a>Asociar un estilo concreto a un atributo</h4><pre><code>    &lt;p [style.backgroundColor]=&quot;pColor&quot;&gt;Text&lt;/p&gt;
+</code></pre>
+<h4 id="Asociar-un-estilo-concreto-a-un-atributo-1"><a href="#Asociar-un-estilo-concreto-a-un-atributo-1" class="headerlink" title="Asociar un estilo concreto a un atributo"></a>Asociar un estilo concreto a un atributo</h4><pre><code>    &lt;p [ngStyle]=&quot;getStyles()&quot;&gt;Text&lt;/p&gt;
+</code></pre>
+<h2 id="Formularios"><a href="#Formularios" class="headerlink" title="Formularios"></a>Formularios</h2><ul>
+<li>Vincular un control del formulario a un atributo del componente</li>
+<li>Acceso a los controles desde el código para leer y modificar su estado</li>
+<li>Mecanismos avanzados con validación con ngControl</li>
+</ul>
+<h3 id="Data-binding-en-campo-de-texto"><a href="#Data-binding-en-campo-de-texto" class="headerlink" title="Data binding en campo de texto"></a>Data binding en campo de texto</h3><h3 id="Data-binding-en-campo-de-texto-1"><a href="#Data-binding-en-campo-de-texto-1" class="headerlink" title="Data binding en campo de texto"></a>Data binding en campo de texto</h3><ul>
+<li><p>Se vincula el control a un atributo del componente<br>con <strong>[(ngModel)]</strong></p>
+</li>
+<li><p>Cualquier cambio en el control se refleja en el valor del atributo</p>
+<pre><code>  &lt;input type=&quot;text&quot; [(ngModel)]=&quot;name&quot;&gt;
+</code></pre>
+</li>
+</ul>
+<h3 id="Data-binding-en-checkbox"><a href="#Data-binding-en-checkbox" class="headerlink" title="Data binding en checkbox"></a>Data binding en checkbox</h3><p>Cada control se asocia con [(ngModel)] a un atributo booleano y su valor depende de si está “checked”</p>
+<pre><code>    &lt;input type=&quot;checkbox&quot; [(ngModel)]=&quot;booleano&quot;/&gt;
+</code></pre>
+<h3 id="Data-binding-en-botones-de-radio"><a href="#Data-binding-en-botones-de-radio" class="headerlink" title="Data binding en botones de radio"></a>Data binding en botones de radio</h3><p>Todos los botones del mismo grupo se asocian al mismo atributo con [(ngModel)]</p>
+<pre><code>    &lt;input type=&quot;radio&quot; name=&quot;gender&quot; [(ngModel)]=&quot;gender&quot; value=&quot;Male&quot;&gt;
+</code></pre>
+<h3 id="Acceso-a-los-controles-desde-el-codigo"><a href="#Acceso-a-los-controles-desde-el-codigo" class="headerlink" title="Acceso a los controles desde el código"></a>Acceso a los controles desde el código</h3><p>Un elemento del template puede asociarse a una variable: <strong>Template reference variables</strong>.</p>
+<p>Podemos usar esa variable en el código del template para manejar ese elemento.</p>
+<pre><code>    #templateVar
+</code></pre>
+<p>También podemos acceder al elemento desde el código del componente. Creamos un atributo en el componente de tipo <strong>ElementRef</strong>. Anotamos ese atributo con <strong>@ViewChild(‘refName’)</strong>.</p>
+<p><img src="elementRef.PNG" alt="Element Reference"></p>
+<h2 id="Composicion-de-componentes"><a href="#Composicion-de-componentes" class="headerlink" title="Composición de componentes"></a>Composición de componentes</h2><p><img src="component-tree.PNG" alt="Component Tree"></p>
+<p>Al cargar la app en el navegador, en el árbol DOM cada componente incluye en su elemento el contenido de la vista.</p>
+<h3 id="Comunicacion-entre-un-componente-padre-y-un-componente-hijo"><a href="#Comunicacion-entre-un-componente-padre-y-un-componente-hijo" class="headerlink" title="Comunicación entre un componente padre y un componente hijo"></a>Comunicación entre un componente padre y un componente hijo</h3><h4 id="Configuracion-de-propiedades-Padre-Hijo"><a href="#Configuracion-de-propiedades-Padre-Hijo" class="headerlink" title="Configuración de propiedades (Padre Hijo)"></a>Configuración de propiedades (Padre Hijo)</h4><h5 id="Vista"><a href="#Vista" class="headerlink" title="Vista"></a>Vista</h5><pre><code>    &lt;header [title]=&#39;appTitle&#39;&gt;&lt;/header&gt;
+</code></pre>
+<h5 id="Controlador"><a href="#Controlador" class="headerlink" title="Controlador"></a>Controlador</h5><pre><code>    export class HeaderComponent &#123;
+        @Input()
+        private title: string;
+    &#125;
+</code></pre>
+<h4 id="Envio-de-eventos-Hijo-Padre"><a href="#Envio-de-eventos-Hijo-Padre" class="headerlink" title="Envío de eventos (Hijo Padre)"></a>Envío de eventos (Hijo Padre)</h4><h5 id="Vista-1"><a href="#Vista-1" class="headerlink" title="Vista"></a>Vista</h5><pre><code>    &lt;header (hidden)=&#39;hiddenTitle($event)&#39;&gt;&lt;/header&gt;
+</code></pre>
+<h5 id="Controlador-1"><a href="#Controlador-1" class="headerlink" title="Controlador"></a>Controlador</h5><pre><code>    export class HeaderComponent &#123;
+        @Output()
+        hidden = new EventEmitter&lt;boolean&gt;();
+        visible = true;
+        click()&#123;
+        this.visible = !this.visible;
+        this.hidden.next(this.visible);
+        &#125;
+    &#125;
+</code></pre>
+<h5 id="Invocacion-de-metodos-Padre-Hijo"><a href="#Invocacion-de-metodos-Padre-Hijo" class="headerlink" title="Invocación de métodos (Padre Hijo)"></a>Invocación de métodos (Padre Hijo)</h5><h5 id="Compartiendo-el-mismo-servicio-Padre-Hijo"><a href="#Compartiendo-el-mismo-servicio-Padre-Hijo" class="headerlink" title="Compartiendo el mismo servicio (Padre Hijo)"></a>Compartiendo el mismo servicio (Padre Hijo)</h5><h2 id="Servicios"><a href="#Servicios" class="headerlink" title="Servicios"></a>Servicios</h2><p>Acoplar en el componente la lógica de las peticiones http no es una buena práctica. El componente podría llegar a ser muy complejo y difícil de ampliar &#x2F; modificar. Es mucho más difícil implementar tests unitarios si el componente tiene muchas responsabilidades. Es mucho mejor modularizar la aplicación en elementos que tengan una única responsabilidad.</p>
+<p>A los elementos de la aplicación que no se encargan del interfaz de usuario se les conoce como servicios. Angular 2 ofrece muchos servicios predefinidos. El objeto http se considera un servicio de acceso a APIs REST, pero existen más. El desarrollador puede implementar sus propios servicios en la aplicación.</p>
+<h3 id="¿Como-se-implementa-un-servicio"><a href="#¿Como-se-implementa-un-servicio" class="headerlink" title="¿Cómo se implementa un servicio?"></a>¿Cómo se implementa un servicio?</h3><ul>
+<li><p>Se crea una nueva clase para el servicio</p>
+</li>
+<li><p>Se anota esa clase con <strong>@Inyectable</strong></p>
+</li>
+<li><p>Se indica esa clase en la lista de providers del <strong>NgModule</strong></p>
+</li>
+<li><p>Se pone como <strong>parámetro en el constructor</strong> del componente que usa el servicio</p>
+<pre><code>  @Injectable()
+  export class BooksService &#123;
+      getBooks(title: string)&#123;
+          return [
+              &#39;Aprende Java en 2 días&#39;, 
+              &#39;Java para torpes&#39;, 
+              &#39;Java para expertos&#39;
+          ];
+      &#125;
+  &#125;
+</code></pre>
+</li>
+</ul>
+<h2 id="Inyeccion-de-dependencias"><a href="#Inyeccion-de-dependencias" class="headerlink" title="Inyección de dependencias"></a>Inyección de dependencias</h2><p>Es la técnica de solicitar dependencias que sean inyectadas por el framework se denomina inyección de dependencias.</p>
+<pre><code>@Component(&#123;
+selector: &#39;app­root&#39;,
+templateUrl: &#39;./app.component.html&#39;
+&#125;)
+export class AppComponent &#123;
+    private books: string[] = [];
+    constructor(private booksService: BooksService)&#123;&#125;
+    search(title: string)&#123;
+        this.books = this.booksService.getBooks(title);
+    &#125;
+&#125;
+</code></pre>
+<p>Es habitual que haya un único objeto de cada servicio en la aplicación.</p>
+<h2 id="Router"><a href="#Router" class="headerlink" title="Router"></a>Router</h2><p>Las webs SPA (single page application) pueden tener varias pantallas simulando la navegación por diferentes páginas.</p>
+<p>En app.routing.ts se define qué componente se muestra para cada URL.</p>
+<p>El componente principal de la aplicación (app-root) tiene una parte fija (cabecera, footer) y una parte cuyo contenido depende de la URL (&lt;router­outlet&gt;).</p>
+<p>Existen links especiales para navegar dentro de la aplicación web ([routerLink]).</p>
+<pre><code>    @Component(&#123;
+    selector: &#39;app­root&#39;,
+    template: `
+        &lt;h1 class=&quot;title&quot;&gt;Library&lt;/h1&gt;
+        &lt;router­outlet&gt;&lt;/router­outlet&gt;
+    `
+    &#125;)
+    export class AppComponent &#123; &#125;
+</code></pre>
+<h3 id="Configuracion-de-las-rutas"><a href="#Configuracion-de-las-rutas" class="headerlink" title="Configuración de las rutas"></a>Configuración de las rutas</h3><pre><code>    const appRoutes = [
+        &#123; path: &#39;book/:id&#39;, component: BookDetailComponent,  &#125;,
+        &#123; path: &#39;books&#39;, component: BookListComponent &#125;,
+        &#123; path: &#39;&#39;, redirectTo: &#39;books&#39;, pathMatch: &#39;full&#39; &#125;
+    ]
+</code></pre>
+<h3 id="Parametro-de-router"><a href="#Parametro-de-router" class="headerlink" title="Parametro de router"></a>Parametro de router</h3><p><img src="router-param.PNG" alt="Router Param"></p>
+<h3 id="Navegacion-con-router"><a href="#Navegacion-con-router" class="headerlink" title="Navegación con router"></a>Navegación con router</h3><p><img src="router-navigation.PNG" alt="Router Navegation"></p>
+<h2 id="Publicacion"><a href="#Publicacion" class="headerlink" title="Publicación"></a>Publicación</h2><pre><code>    ng build --target=production --environment=prod
+</code></pre>
+
+                <hr>
+
+                <ul class="list-group">
+    
+    <li class="list-group-item list-group-item-action flex-column align-items-start"><a href="../Desarrollo-de-Aplicaciones-Web/">Desarrollo de aplicaciones Web</a></li>
+    
+</ul>
+
+
+                <ul class="pagination pager">
+                    
+                    <li class="page-item">
+                        <a class="page-link" href="/Usabilidad/" data-toggle="tooltip" data-placement="top" title="Usabilidad">&larr; Artículo Anterior</a>
+                    </li>
+                    
+                    
+                    <li class="page-item ms-auto">
+                        <a class="page-link" href="/Testing-Manifesto/" data-toggle="tooltip" data-placement="top" title="Testing Manifesto">Siguiente Artículo &rarr;</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        <div class="comment">
+  <!-- disqus 评论框 start -->
+  
+  <!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "blog-vnwybnwkiz";
+    var disqus_identifier = "https://vitaminac.github.io/Angular-SPA/";
+    var disqus_url = "https://vitaminac.github.io/Angular-SPA/";
+    var disqus_config = function () { 
+      this.language = "es";
+    };
+
+    (function () {
+      var dsq = document.createElement("script");
+      dsq.type = "text/javascript";
+      dsq.async = true;
+      dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+      (
+        document.getElementsByTagName("head")[0] ||
+        document.getElementsByTagName("body")[0]
+      ).appendChild(dsq);
+    })();
+  </script>
+  <!-- disqus 公共JS代码 end -->
+  <div id="disqus_thread" class="disqus-thread"></div>
+  <!-- disqus 评论框 end -->
+  
+</div>
+
+
+        <div class="row justify-content-center">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8`
+                col-md-10
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5 class="text-center">
+                        <a href="/tags/">FEATURED TAGS</a>
+                    </h5>
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#SPA" title="SPA">
+                            SPA</a>
+                        
+                        <a class="tag" href="/tags/#Angular" title="Angular">
+                            Angular</a>
+                        
+                        <a class="tag" href="/tags/#Aplicación Web" title="Aplicación Web">
+                            Aplicación Web</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <img src="/images/QR.jpg" style="width: 100%; height: auto" />
+      <div class="pt-4"><!-- SNS Link 社交 -->
+<ul class="list-inline text-center">
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://www.linkedin.com/in/shuxig">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a href="mailto:dalao1002@gmail.com?subject=From my blog&body=Hi,I found this website very useful">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a href="tel:34688218528">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-phone fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    <li class="list-inline-item d-none d-lg-inline-block">
+        <a target="_blank" href="https://web.whatsapp.com/send?phone=34688218528">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-whatsapp fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    <li class="list-inline-item d-lg-none">
+        <a target="_blank" href="https://wa.me/34688218528">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-whatsapp fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://github.com/vitaminac">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    <li class="list-inline-item">
+        <a target="_blank" href="https://gist.github.com/vitaminac">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github-square fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://gitlab.com/vitaminac">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-gitlab fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://www.kaggle.com/dalao1002">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-kaggle fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://leetcode.com/dalao1002">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-code fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://stackoverflow.com/users/9980245">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://www.youtube.com/channel/UCn36tkFugikDQS_0tgH1p6g">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://space.bilibili.com/17108326">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-bilibili fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+</ul></div>
+      <p class="copyright text-muted">
+        Copyright &copy; Gao&#39;s Blog 2022
+      </p>
+    </div>
+  </div>
+</footer>
+
+    <!--wechat title img-->
+    <img class="wechat-title-img" src="/images/avatar.jpg">
+    <!-- Custom Theme JavaScript -->
+<script type="text/javascript" src="/js/blog.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/VincentGarreau/particles.js/particles.js"></script>
+<script>
+    particlesJS("particles-js", {
+        "particles": {
+            "number": {
+                "value": 50,
+                "density": {
+                    "enable": true,
+                    "value_area": 1000
+                }
+            },
+            "color": {
+                "value": "#ff0000"
+            },
+            "shape": {
+                "type": "circle",
+                "stroke": {
+                    "width": 0,
+                    "color": "#000000"
+                },
+                "polygon": {
+                    "nb_sides": 5
+                },
+                "image": {
+                    "src": "img/github.svg",
+                    "width": 100,
+                    "height": 100
+                }
+            },
+            "opacity": {
+                "value": 0.5,
+                "random": false,
+                "anim": {
+                    "enable": false,
+                    "speed": 1,
+                    "opacity_min": 0.1,
+                    "sync": false
+                }
+            },
+            "size": {
+                "value": 3,
+                "random": true,
+                "anim": {
+                    "enable": false,
+                    "speed": 40,
+                    "size_min": 0.1,
+                    "sync": false
+                }
+            },
+            "line_linked": {
+                "enable": true,
+                "distance": 150,
+                "color": "#ff00f0",
+                "opacity": 0.4,
+                "width": 1
+            },
+            "move": {
+                "enable": true,
+                "speed": 6,
+                "direction": "none",
+                "random": false,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+                "attract": {
+                    "enable": false,
+                    "rotateX": 600,
+                    "rotateY": 1200
+                }
+            }
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": {
+                    "enable": true,
+                    "mode": "repulse"
+                },
+                "onclick": {
+                    "enable": true,
+                    "mode": "push"
+                },
+                "resize": true
+            },
+            "modes": {
+                "grab": {
+                    "distance": 400,
+                    "line_linked": {
+                        "opacity": 1
+                    }
+                },
+                "bubble": {
+                    "distance": 400,
+                    "size": 40,
+                    "duration": 2,
+                    "opacity": 8,
+                    "speed": 3
+                },
+                "repulse": {
+                    "distance": 200,
+                    "duration": 0.4
+                },
+                "push": {
+                    "particles_nb": 4
+                },
+                "remove": {
+                    "particles_nb": 2
+                }
+            }
+        },
+        "retina_detect": true
+    });
+
+
+    /* ---- stats.js config ---- */
+
+    var count_particles, stats, update;
+    stats = new Stats;
+    stats.setMode(0);
+    stats.domElement.style.position = 'absolute';
+    stats.domElement.style.left = '0px';
+    stats.domElement.style.top = '0px';
+    document.body.appendChild(stats.domElement);
+    count_particles = document.querySelector('.js-count-particles');
+    update = function () {
+        stats.begin();
+        stats.end();
+        if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+            count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+        }
+        requestAnimationFrame(update);
+    };
+    requestAnimationFrame(update);
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script>
+    $(document).ready(function () {
+        anchors.add("p");
+    })
+</script>
+
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if ($('#tag_cloud').length !== 0) {
+        async ("https://vitaminac.github.io/js/jquery.tagcloud.js", function () {
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {
+                    start: '#bbbbee',
+                    end: '#0085a1'
+                },
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<script type="text/javascript" src="/js/common.js"></script>
+
+
+
+<!-- render ipynb file -->
+
+
+<!-- render ipynb file -->
+
+</body>
+
+</html>

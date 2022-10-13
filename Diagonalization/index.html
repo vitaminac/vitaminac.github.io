@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<!-- SEO -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Diagonalization｜Gao&#39;s Blog</title>
+    <meta property="og:title" content="Diagonalization｜Gao&#39;s Blog" />
+    
+    <meta name="description" content="Diagonalization｜Gao&#39;s Blog">
+    <meta property="og:description" content="Diagonalization｜Gao&#39;s Blog" />
+    <meta name="author" content="Gao">
+    <meta name="robots" content="index, follow">
+    <meta property="og:image" content="https://vitaminac.github.io/images/favicon.jpg" />
+    <link rel="shortcut icon" href="/images/favicon.jpg">
+    
+    <meta name="keywords" content="Math,Diagonalization,Matrix,Linear Algebra">
+    
+    <meta name="theme-color" content="#600090">
+    <meta name="msapplication-navbutton-color" content="#600090">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
+    <link rel="alternate" type="application/atom+xml" title="Gao&#39;s Blog" href="/atom.xml">
+
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" cross-origin="anonymous" referrer-policy="no-referrer">
+    <link rel="canonical" href="https://vitaminac.github.io/Diagonalization/">
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css">
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Google Tag Manager -->
+    
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WDC9JKC');</script>
+    
+    <!-- End Google Tag Manager -->
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151409235-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-151409235-1');
+    </script>
+    
+
+    <!-- Google AdSense -->
+    <script data-ad-client="ca-pub-8356359077918854" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<meta name="generator" content="Hexo 6.1.0"></head>
+<style>
+    header.intro-header {
+        background-image: url('/images/header.gif')
+    }
+</style>
+<!-- hack iOS CSS :active style -->
+
+<body ontouchstart="" class="animated fadeIn">
+    <div id="particles-js"></div>
+    <nav
+  class="navbar navbar-expand-lg navbar-light sticky-top navbar-custom"
+  id="nav-top"
+>
+  <div class="container-fluid">
+    <a
+      class="navbar-brand animated pulse"
+      href="../index.html"
+    >
+      <span class="brand-logo">Gao&#39;s Blog</span>
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+        <li class="nav-item">
+          <a
+            class="nav-link "
+            aria-current="page"
+            href="../index.html"
+          >
+            Home
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a
+            class="nav-link "
+            aria-current="page"
+            href="../tags/index.html"
+          >
+            Tags
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/blog">New Blog</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Language
+          </a>
+          <ul
+            class="dropdown-menu dropdown-menu-end"
+            aria-labelledby="navbarDropdown"
+          >
+            
+            <li>
+              <a
+                class="dropdown-item"
+                href="../index.html"
+                >English</a
+              >
+            </li>
+            
+            <li>
+              <a
+                class="dropdown-item"
+                href="../es"
+                >Spanish</a
+              >
+            </li>
+            
+            <li>
+              <a
+                class="dropdown-item"
+                href="../zh"
+                >Chinese</a
+              >
+            </li>
+            
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js"></script>
+<!--fastClick.js -->
+<script>
+$(function() {
+  var $nav = document.querySelector("nav");
+  if ($nav) {
+    FastClick.attach($nav);
+  }
+});
+</script>
+
+    <!-- Main Content -->
+    
+<!--only post-->
+
+
+<img class="wechat-title-img" src="/images/preview.jpeg">
+
+
+<style>
+    header.intro-header {
+            background-image: url('/images/preview.jpeg')
+        }
+
+        
+</style>
+
+<header class="intro-header">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 text-center">
+                <div class="post-heading">
+                    <h1>
+                        Diagonalization
+                    </h1>
+                    
+                    <span class="meta">Author:
+                        Gao
+                        <span />
+                        Date:
+                        2022-01-09
+                    </span>
+                    <div class="tags text-center">
+                        
+                        <a class="tag" href="/tags/#Math" title="Math">
+                            Math</a>
+                        
+                        <a class="tag" href="/tags/#Diagonalization" title="Diagonalization">
+                            Diagonalization</a>
+                        
+                        <a class="tag" href="/tags/#Matrix" title="Matrix">
+                            Matrix</a>
+                        
+                        <a class="tag" href="/tags/#Linear Algebra" title="Linear Algebra">
+                            Linear Algebra</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="post-title-haojen">
+        <span>
+            Diagonalization
+        </span>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <!-- Post Container -->
+            <div class="order-lg-2 col-lg-3 col-12 toc-col" style="z-index: 1;">
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#What-is-diagonalization"><span class="toc-text">What is diagonalization?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Why-we-need-diagonalization"><span class="toc-text">Why we need diagonalization?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-relationship-of-diagonalization-with-homogeneous-system"><span class="toc-text">The relationship of diagonalization with homogeneous system</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Geometric-meaning-of-eigenvalues-and-eigenvectors"><span class="toc-text">Geometric meaning of eigenvalues and eigenvectors</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#When-a-matrix-is-diagonalizable"><span class="toc-text">When a matrix is diagonalizable</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#What-matrices-are-not-diagonalizable"><span class="toc-text">What matrices are not diagonalizable</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#How-to-find-all-the-eigenvalues-and-corresponding-eigenvectors"><span class="toc-text">How to find all the eigenvalues and corresponding eigenvectors</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Application-of-diagonalization"><span class="toc-text">Application of diagonalization</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-text">Reference</span></a></li></ol>
+            </div>
+
+            <div class="order-lg-1 col-lg-9 col-12 post-container">
+                <h2 id="What-is-diagonalization"><a href="#What-is-diagonalization" class="headerlink" title="What is diagonalization?"></a>What is diagonalization?</h2><p>For a $n \times n$ matrix $A$ the diagonalization is the process to find a diagonal matrix $D$ and a invertible $n \times n$ matrix $P$ that holds following equality $A &#x3D; PDP^{-1}$</p>
+<h2 id="Why-we-need-diagonalization"><a href="#Why-we-need-diagonalization" class="headerlink" title="Why we need diagonalization?"></a>Why we need diagonalization?</h2><p>We often need to calculate the power of the matrix, this operation $A^{k}$ is expensive to calculate when $A$ and $k$ is big enough. However, if the matrix $A$ is diagonalizable. The power operation is then cheaper because $A^{k} &#x3D; (PDP^{-1})^k &#x3D; PD^{k}P^{-1}$ and the powers of diagonal matrix is straight forward.</p>
+<p>$$<br>D^{k} &#x3D;<br>\begin{bmatrix}<br>\lambda_{1}^{k} &amp; 0 &amp; \dots &amp; 0\\\\<br>0 &amp; \lambda_{2}^{k} &amp; \dots &amp; 0\\\\<br>\vdots &amp; \vdots &amp; \ddots &amp; \vdots\\\\<br>0 &amp; 0 &amp; \dots &amp; \lambda_{n}^{k}\\\\<br>\end{bmatrix}<br>$$</p>
+<h2 id="The-relationship-of-diagonalization-with-homogeneous-system"><a href="#The-relationship-of-diagonalization-with-homogeneous-system" class="headerlink" title="The relationship of diagonalization with homogeneous system"></a>The relationship of diagonalization with homogeneous system</h2><p>Because $A &#x3D; PDP^{-1} \implies AP &#x3D; PD$, if we expand the calculation</p>
+<p>$$<br>\begin{aligned}<br>\begin{bmatrix}<br>a_{11} &amp; \dots &amp; a_{1n}\\\\<br>\vdots &amp; \ddots &amp; \vdots\\\\<br>a_{n1} &amp; \dots &amp; a_{nn}\\\\<br>\end{bmatrix}<br>*<br>\begin{bmatrix}<br>p_{11} &amp; \dots &amp; p_{1n}\\\\<br>\vdots &amp; \ddots &amp; \vdots\\\\<br>p_{n1} &amp; \dots &amp; p_{nn}\\\\<br>\end{bmatrix}<br>&amp;&#x3D;<br>\begin{bmatrix}<br>p_{11} &amp; \dots &amp; p_{1n}\\\\<br>\vdots &amp; \ddots &amp; \vdots\\\\<br>p_{n1} &amp; \dots &amp; p_{nn}\\\\<br>\end{bmatrix}<br>*<br>\begin{bmatrix}<br>\lambda_{1} &amp; \dots &amp; 0\\\\<br>\vdots &amp; \ddots &amp; \vdots\\\\<br>0 &amp; \dots &amp; \lambda_{n}\\\\<br>\end{bmatrix}\\\\<br>\begin{bmatrix}<br>(a_{11}p_{11}+…+a_{1n}p_{n1}) &amp; \dots &amp; (a_{11}p_{1n}+…+a_{1n}p_{nn})\\\\<br>\vdots &amp; \ddots &amp; \vdots\\\\<br>(a_{n1}p_{11}+…+a_{nn}p_{n1}) &amp; \dots &amp; (a_{n1}p_{1n}+…+a_{nn}p_{nn})\\\\<br>\end{bmatrix}<br>&amp;&#x3D;<br>\begin{bmatrix}<br>p_{11}\lambda_{1} &amp; \dots &amp; p_{1n}\lambda_{n}\\\\<br>\vdots &amp; \ddots &amp; \vdots\\\\<br>p_{n1}\lambda{1} &amp; \dots &amp; p_{nn}\lambda{n}\\\\<br>\end{bmatrix}<br>\end{aligned}<br>$$</p>
+<p>We will have the following observation:</p>
+<p>$$<br>\begin{pmatrix}<br>a_{11}p_{1j}+…+a_{1n}p_{nj}\\\\<br>\vdots\\\\<br>a_{n1}p_{1j}+…+a_{nn}p_{nj}\\\\<br>\end{pmatrix}<br>&#x3D;<br>\begin{pmatrix}<br>p_{1j}\lambda_{j}\\\\<br>\vdots\\\\<br>p_{nj}\lambda_{j}\\\\<br>\end{pmatrix}<br>\implies<br>(A-\lambda_{j}I)<br>\cdot<br>\begin{pmatrix}<br>p_{1j}\\\\<br>\vdots\\\\<br>p_{nj}\\\\<br>\end{pmatrix}<br>&#x3D;<br>\vec{0}<br>$$</p>
+<p>The above observation is important because it is the same as solving a homogeneous system of equations </p>
+<p>$$<br>(A-\lambda_{j}I) \cdot \vec{p}_{j} &#x3D; \vec{0}<br>$$</p>
+<p>which $\vec{p}_{j}$ is</p>
+<p>$$<br>\begin{pmatrix}<br>p_{1j}\\\\<br>\vdots\\\\<br>p_{nj}\\\\<br>\end{pmatrix}<br>$$</p>
+<p>$\vec{p}_{j}$ is called <strong>eigenvector</strong>, $\lambda{j}$ is the corresponding <strong>eigenvalue</strong>.</p>
+<h2 id="Geometric-meaning-of-eigenvalues-and-eigenvectors"><a href="#Geometric-meaning-of-eigenvalues-and-eigenvectors" class="headerlink" title="Geometric meaning of eigenvalues and eigenvectors"></a>Geometric meaning of eigenvalues and eigenvectors</h2><p>From $(A-\lambda I) \cdot \vec{p} &#x3D; \vec{0}$ we know that $A\vec{p} &#x3D; \lambda\vec{p}$, so from geometrical perspective, eigenvector $\vec{p}$ only suffer stretch for a given transformation $A$ and $\lambda$ its corresponding stretch ratio.</p>
+<p>If we draw in a 2D space, the effect $v^{\prime}-v$ of applying the transformation of a $2 \times 2$ matrix $A$, where $v$ is the original vector and $v^{\prime}$ the vector after the transformation.</p>
+<p><img src="Eigenvectors.png" alt="Eigenvectors"></p>
+<p>We notice the vectors with the same direction as eigenvectors (red arrows) haven’t changed the direction after the transformation.</p>
+<p>If we use eigenvectors as basis, then the transformation is easier because we only need to multiply each component per corresponding eigenvalue. $P$ is actually the linear transformation that change basis formed by eigenvectors to standard basis and $P^{-1}$ from standard basis to basis formed by eigenvectors.</p>
+<h2 id="When-a-matrix-is-diagonalizable"><a href="#When-a-matrix-is-diagonalizable" class="headerlink" title="When a matrix is diagonalizable"></a>When a matrix is diagonalizable</h2><p>A $n \times n$ matrix $A$ is diagonalizable if and only if $A$ has $n$ linearly independent eigenvectors.</p>
+<h2 id="What-matrices-are-not-diagonalizable"><a href="#What-matrices-are-not-diagonalizable" class="headerlink" title="What matrices are not diagonalizable"></a>What matrices are not diagonalizable</h2><ul>
+<li>A rotation matrix is not diagonalizable over real fields</li>
+<li>Nonzero <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Nilpotent_matrix">nilpotent matrices</a></li>
+</ul>
+<h2 id="How-to-find-all-the-eigenvalues-and-corresponding-eigenvectors"><a href="#How-to-find-all-the-eigenvalues-and-corresponding-eigenvectors" class="headerlink" title="How to find all the eigenvalues and corresponding eigenvectors"></a>How to find all the eigenvalues and corresponding eigenvectors</h2><p>From the previous conclusion $(A-\lambda_{j}I) \cdot \vec{p}_{j} &#x3D; \vec{0}$ and <strong>invertible matrix theorem</strong>, then a number $\lambda$ is an eigenvalue of $A$ if and only if $f(\lambda) &#x3D; det(A-\lambda I)&#x3D; 0$, $f(\lambda)$ is called the characteristic polynomial of $A$.</p>
+<p>The process of finding all the eigenvalues and corresponding eigenvectors is following</p>
+<ol>
+<li>Find all the roots $\lambda$ of the characteristic polynomial.</li>
+<li>For each $\lambda$, compute corresponding eigenvectors by finding linearly independent non-trivial solutions of the homogeneous system of equations $(A-\lambda I) \cdot \vec{p} &#x3D; \vec{0}$</li>
+</ol>
+<h2 id="Application-of-diagonalization"><a href="#Application-of-diagonalization" class="headerlink" title="Application of diagonalization"></a>Application of diagonalization</h2><p>One of important application of diagonalization is <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Principal_component_analysis">PCA</a>. In PCA we need to calculate eigenvectors and eigenvalues of covariance matrix. Since covariance matrix is <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Symmetric_matrix#Real_symmetric_matrices">symmetric matrix hence it is always diagonalizable</a>.</p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://textbooks.math.gatech.edu/ila/eigenvectors.html">Interactive Linear Algebra. 5.1 Eigenvalues and Eigenvectors</a></li>
+<li><a target="_blank" rel="noopener" href="https://textbooks.math.gatech.edu/ila/characteristic-polynomial.html">Interactive Linear Algebra. 5.2 The Characteristic Polynomial</a></li>
+<li><a target="_blank" rel="noopener" href="https://textbooks.math.gatech.edu/ila/diagonalization.html">Interactive Linear Algebra. 5.4 Diagonalization</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/21874816/answer/45434660">如何理解矩阵特征值？ - 闫星光的回答 - 知乎</a></li>
+<li><a target="_blank" rel="noopener" href="https://math.stackexchange.com/questions/472915/what-kind-of-matrices-are-non-diagonalizable">What kind of matrices are non-diagonalizable?</a></li>
+</ul>
+
+                <hr>
+
+                <ul class="list-group">
+    
+    <li class="list-group-item list-group-item-action flex-column align-items-start"><a href="../Matrices-in-Computer-Graphics/">Matrices in Computer Graphics</a></li>
+    
+</ul>
+
+
+                <ul class="pagination pager">
+                    
+                    <li class="page-item">
+                        <a class="page-link" href="/Windows7-Vagrant/" data-toggle="tooltip" data-placement="top" title="How to Create a Windows7 Vagrant Base Box">&larr; Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="page-item ms-auto">
+                        <a class="page-link" href="/Compiling-Executing-C/" data-toggle="tooltip" data-placement="top" title="The Process Behind Compiling and Executing C Code">Next Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+        <div class="comment">
+  <!-- disqus 评论框 start -->
+  
+  <!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+  <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "blog-vnwybnwkiz";
+    var disqus_identifier = "https://vitaminac.github.io/Diagonalization/";
+    var disqus_url = "https://vitaminac.github.io/Diagonalization/";
+    var disqus_config = function () { 
+      this.language = "en";
+    };
+
+    (function () {
+      var dsq = document.createElement("script");
+      dsq.type = "text/javascript";
+      dsq.async = true;
+      dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+      (
+        document.getElementsByTagName("head")[0] ||
+        document.getElementsByTagName("body")[0]
+      ).appendChild(dsq);
+    })();
+  </script>
+  <!-- disqus 公共JS代码 end -->
+  <div id="disqus_thread" class="disqus-thread"></div>
+  <!-- disqus 评论框 end -->
+  
+</div>
+
+
+        <div class="row justify-content-center">
+            <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8`
+                col-md-10
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5 class="text-center">
+                        <a href="/tags/">FEATURED TAGS</a>
+                    </h5>
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/#Math" title="Math">
+                            Math</a>
+                        
+                        <a class="tag" href="/tags/#Diagonalization" title="Diagonalization">
+                            Diagonalization</a>
+                        
+                        <a class="tag" href="/tags/#Matrix" title="Matrix">
+                            Matrix</a>
+                        
+                        <a class="tag" href="/tags/#Linear Algebra" title="Linear Algebra">
+                            Linear Algebra</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+        </div>
+
+    </div>
+</article>
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row justify-content-center">
+      <img src="/images/QR.jpg" style="width: 100%; height: auto" />
+      <div class="pt-4"><!-- SNS Link 社交 -->
+<ul class="list-inline text-center">
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://www.linkedin.com/in/shuxig">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a href="mailto:dalao1002@gmail.com?subject=From my blog&body=Hi,I found this website very useful">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a href="tel:34688218528">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-phone fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    <li class="list-inline-item d-none d-lg-inline-block">
+        <a target="_blank" href="https://web.whatsapp.com/send?phone=34688218528">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-whatsapp fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    <li class="list-inline-item d-lg-none">
+        <a target="_blank" href="https://wa.me/34688218528">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-whatsapp fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://github.com/vitaminac">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    <li class="list-inline-item">
+        <a target="_blank" href="https://gist.github.com/vitaminac">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-github-square fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://gitlab.com/vitaminac">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-gitlab fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://www.kaggle.com/dalao1002">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-kaggle fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://leetcode.com/dalao1002">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fas fa-code fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://stackoverflow.com/users/9980245">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://www.youtube.com/channel/UCn36tkFugikDQS_0tgH1p6g">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+
+    
+    <li class="list-inline-item">
+        <a target="_blank" href="https://space.bilibili.com/17108326">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fab fa-bilibili fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+    
+
+    
+</ul></div>
+      <p class="copyright text-muted">
+        Copyright &copy; Gao&#39;s Blog 2022
+      </p>
+    </div>
+  </div>
+</footer>
+
+    <!--wechat title img-->
+    <img class="wechat-title-img" src="/images/avatar.jpg">
+    <!-- Custom Theme JavaScript -->
+<script type="text/javascript" src="/js/blog.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/VincentGarreau/particles.js/particles.js"></script>
+<script>
+    particlesJS("particles-js", {
+        "particles": {
+            "number": {
+                "value": 50,
+                "density": {
+                    "enable": true,
+                    "value_area": 1000
+                }
+            },
+            "color": {
+                "value": "#ff0000"
+            },
+            "shape": {
+                "type": "circle",
+                "stroke": {
+                    "width": 0,
+                    "color": "#000000"
+                },
+                "polygon": {
+                    "nb_sides": 5
+                },
+                "image": {
+                    "src": "img/github.svg",
+                    "width": 100,
+                    "height": 100
+                }
+            },
+            "opacity": {
+                "value": 0.5,
+                "random": false,
+                "anim": {
+                    "enable": false,
+                    "speed": 1,
+                    "opacity_min": 0.1,
+                    "sync": false
+                }
+            },
+            "size": {
+                "value": 3,
+                "random": true,
+                "anim": {
+                    "enable": false,
+                    "speed": 40,
+                    "size_min": 0.1,
+                    "sync": false
+                }
+            },
+            "line_linked": {
+                "enable": true,
+                "distance": 150,
+                "color": "#ff00f0",
+                "opacity": 0.4,
+                "width": 1
+            },
+            "move": {
+                "enable": true,
+                "speed": 6,
+                "direction": "none",
+                "random": false,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+                "attract": {
+                    "enable": false,
+                    "rotateX": 600,
+                    "rotateY": 1200
+                }
+            }
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": {
+                    "enable": true,
+                    "mode": "repulse"
+                },
+                "onclick": {
+                    "enable": true,
+                    "mode": "push"
+                },
+                "resize": true
+            },
+            "modes": {
+                "grab": {
+                    "distance": 400,
+                    "line_linked": {
+                        "opacity": 1
+                    }
+                },
+                "bubble": {
+                    "distance": 400,
+                    "size": 40,
+                    "duration": 2,
+                    "opacity": 8,
+                    "speed": 3
+                },
+                "repulse": {
+                    "distance": 200,
+                    "duration": 0.4
+                },
+                "push": {
+                    "particles_nb": 4
+                },
+                "remove": {
+                    "particles_nb": 2
+                }
+            }
+        },
+        "retina_detect": true
+    });
+
+
+    /* ---- stats.js config ---- */
+
+    var count_particles, stats, update;
+    stats = new Stats;
+    stats.setMode(0);
+    stats.domElement.style.position = 'absolute';
+    stats.domElement.style.left = '0px';
+    stats.domElement.style.top = '0px';
+    document.body.appendChild(stats.domElement);
+    count_particles = document.querySelector('.js-count-particles');
+    update = function () {
+        stats.begin();
+        stats.end();
+        if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+            count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+        }
+        requestAnimationFrame(update);
+    };
+    requestAnimationFrame(update);
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script>
+    $(document).ready(function () {
+        anchors.add("p");
+    })
+</script>
+
+
+<!-- mathjax -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    jax: ["input/TeX", "output/SVG"],
+    extensions: ["tex2jax.js"],
+    showMathMenu: false,
+    SVG: { useGlobalCache: false },
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+        processEscapes: true
+    },
+    TeX: {
+        equationNumbers: { autoNumber: "AMS" },
+        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+        Macros: { href: "{}" }
+    }
+});
+</script>
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full">
+</script>
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if ($('#tag_cloud').length !== 0) {
+        async ("https://vitaminac.github.io/js/jquery.tagcloud.js", function () {
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {
+                    start: '#bbbbee',
+                    end: '#0085a1'
+                },
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<script type="text/javascript" src="/js/common.js"></script>
+
+
+
+<!-- render ipynb file -->
+
+
+<!-- render ipynb file -->
+
+</body>
+
+</html>
