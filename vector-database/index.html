@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+  <!-- Head tag -->
+  <!-- SEO -->
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Vector Database｜Gao&#39;s Blog</title>
+    <meta property="og:title" content="Vector Database｜Gao&#39;s Blog" />
+
+    <meta name="description" content="Vector Database｜Gao&#39;s Blog" />
+    <meta property="og:description" content="Vector Database｜Gao&#39;s Blog" />
+    <meta name="author" content="Gao" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      property="og:image"
+      content="https://vitaminac.github.io/images/favicon.jpg"
+    />
+    <link rel="shortcut icon" href="/images/favicon.jpg" />
+
+    <meta name="keywords" content="vector database" />
+
+    <meta name="theme-color" content="#600090" />
+    <meta name="msapplication-navbutton-color" content="#600090" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090" />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="Gao&#39;s Blog"
+      href="/atom.xml"
+    />
+
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      cross-origin="anonymous"
+      referrer-policy="no-referrer"
+    />
+    <link rel="canonical" href="https://vitaminac.github.io/vector-database/" />
+
+    <!-- jQuery -->
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+    ></script>
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css" />
+    <link rel="stylesheet" href="/css/syntax.css" />
+
+    <!-- Google Tag Manager -->
+
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-WDC9JKC");
+    </script>
+
+    <!-- End Google Tag Manager -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-151409235-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-151409235-1");
+    </script>
+
+    <!-- Google AdSense -->
+    <script
+      data-ad-client="ca-pub-8356359077918854"
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+    <meta name="generator" content="Hexo 6.3.0" />
+  </head>
+  <style>
+    header.intro-header {
+      background-image: url("/images/header.gif");
+    }
+  </style>
+  <!-- hack iOS CSS :active style -->
+
+  <body ontouchstart="" class="animated fadeIn">
+    <!-- Main Content -->
+
+    <!--only post-->
+
+    <img class="wechat-title-img" src="/images/preview.jpeg" />
+
+    <style>
+      header.intro-header {
+        background-image: url("/images/preview.jpeg");
+      }
+    </style>
+
+    <header class="intro-header">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-md-10 text-center">
+            <div class="post-heading">
+              <h1>Vector Database</h1>
+
+              <span class="meta"
+                >Author: Gao
+                <span />
+                Date: 2024-09-29
+              </span>
+              <div class="tags text-center">
+                <a
+                  target="_parent"
+                  class="tag"
+                  href="/posts/langs/en/tags/vector database"
+                  title="vector database"
+                >
+                  vector database</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="post-title-haojen">
+        <span> Vector Database </span>
+      </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <!-- Post Container -->
+          <div class="order-lg-2 col-lg-3 col-12 toc-col" style="z-index: 1">
+            <ol class="toc">
+              <li class="toc-item toc-level-2">
+                <a class="toc-link" href="#Reference"
+                  ><span class="toc-text">Reference</span></a
+                >
+              </li>
+            </ol>
+          </div>
+
+          <div class="order-lg-1 col-lg-9 col-12 post-container">
+            <p>
+              A vector database indexes and stores vector embeddings for fast
+              retrieval and similarity search, with capabilities like CRUD
+              operations. Vector embeddings are generated by large language
+              models.
+            </p>
+            <p><img src="vector-database.webp" alt="vector database" /></p>
+            <ol>
+              <li>
+                Use the embedding model to create vector embeddings for the
+                content we want to index.
+              </li>
+              <li>
+                The vector embedding is inserted into the vector database, with
+                some reference to the original content the embedding was created
+                from.
+              </li>
+              <li>
+                When the application issues a query, use the same embedding
+                model to create embeddings for the query and use those
+                embeddings to query the database for similar vector embeddings.
+              </li>
+              <li>
+                Tracking back the original content associated with most similar
+                vector embeddings.
+              </li>
+            </ol>
+            <p><img src="pipeline.webp" alt="pipeline" /></p>
+            <ol>
+              <li>
+                Indexing: The vector database create indexes for vector
+                embedding using an algorithm such as Random Projection, Product
+                Quantization, Locality-sensitive hashing, or Hierarchical
+                Navigable Small World (more on these below). This step maps the
+                vector embedding to a data structure that will enable faster
+                searching.
+              </li>
+              <li>
+                Querying: The vector database compute the index of query vector
+                to find the approximated nearest neighbors vector embedding
+                applying a similarity metric.
+              </li>
+              <li>
+                Post Processing: The vector database retrieves the final nearest
+                neighbors from the dataset and compute the similarity and
+                re-ranking the nearest neighbors vector embedding.
+              </li>
+            </ol>
+            <p>
+              In vector databases, a similarity metric is applied to rank a
+              vector that is the most similar to query vector, there is
+              different similarity measure. The basic rule of thumb in selecting
+              the best similarity metric is to match it to the one used to train
+              the embedding model, which is usually the dot product.
+            </p>
+            <h2 id="Reference">
+              <a href="#Reference" class="headerlink" title="Reference"></a
+              >Reference
+            </h2>
+            <ul>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://www.pinecone.io/learn/vector-database/"
+                  >https://www.pinecone.io/learn/vector-database/</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://www.pinecone.io/learn/vector-similarity/"
+                  >https://www.pinecone.io/learn/vector-similarity/</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://www.pinecone.io/learn/series/faiss/"
+                  >https://www.pinecone.io/learn/series/faiss/</a
+                >
+              </li>
+            </ul>
+
+            <hr />
+
+            <ul class="list-group"></ul>
+
+            <ul class="pagination pager">
+              <li class="page-item">
+                <a
+                  target="_parent"
+                  class="page-link"
+                  href="/migrations/passport-renewal/"
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  title="护照更换"
+                  >&larr; Previous Post</a
+                >
+              </li>
+
+              <li class="page-item ms-auto">
+                <a
+                  target="_parent"
+                  class="page-link"
+                  href="/migrations/roadmap-ai/"
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  title="Roadmap Toward AI"
+                  >Next Post &rarr;</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="comment">
+          <!-- disqus 评论框 start -->
+
+          <!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = "blog-vnwybnwkiz";
+            var disqus_identifier =
+              "https://vitaminac.github.io/vector-database/";
+            var disqus_url = "https://vitaminac.github.io/vector-database/";
+            var disqus_config = function () {
+              this.language = "en";
+            };
+
+            (function () {
+              var dsq = document.createElement("script");
+              dsq.type = "text/javascript";
+              dsq.async = true;
+              dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+              (
+                document.getElementsByTagName("head")[0] ||
+                document.getElementsByTagName("body")[0]
+              ).appendChild(dsq);
+            })();
+          </script>
+          <!-- disqus 公共JS代码 end -->
+          <div id="disqus_thread" class="disqus-thread"></div>
+          <!-- disqus 评论框 end -->
+        </div>
+
+        <div class="row justify-content-center">
+          <!-- Sidebar Container -->
+
+          <div class="col-lg-8` col-md-10 sidebar-container">
+            <!-- Friends Blog -->
+          </div>
+        </div>
+      </div>
+    </article>
+    <!-- Custom Theme JavaScript -->
+    <script type="text/javascript" src="/js/blog.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        anchors.add("p");
+      });
+    </script>
+
+    <!-- jquery.tagcloud.js -->
+    <script>
+      // only load tagcloud.js in tag.html
+      if ($("#tag_cloud").length !== 0) {
+        async("https://vitaminac.github.io/js/jquery.tagcloud.js", function () {
+          $.fn.tagcloud.defaults = {
+            //size: {start: 1, end: 1, unit: 'em'},
+            color: {
+              start: "#bbbbee",
+              end: "#0085a1",
+            },
+          };
+          $("#tag_cloud a").tagcloud();
+        });
+      }
+    </script>
+
+    <script type="text/javascript" src="/js/common.js"></script>
+
+    <!-- render ipynb file -->
+
+    <!-- render ipynb file -->
+  </body>
+</html>

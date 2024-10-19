@@ -1,0 +1,45 @@
+{
+  "pageProps": {
+    "postData": {
+      "slug": "Testing",
+      "title": "Testing",
+      "date": "Sat Apr 24 2021 11:27:04 GMT+0000 (Coordinated Universal Time)",
+      "lang": "en",
+      "tags": [
+        "Integration Test",
+        "Contract Test",
+        "End-to-End Test",
+        "Unit Test",
+        "Load Test",
+        "Snapshot Test"
+      ],
+      "path": "/Testing/index.html"
+    },
+    "lang": "en",
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "en": {
+          "common": { "Next": "Next", "Back to home": "Back to home" },
+          "feature-tags": { "Tags": "Tags" },
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          }
+        }
+      },
+      "initialLocale": "en",
+      "ns": ["common", "feature-tags", "navbar"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

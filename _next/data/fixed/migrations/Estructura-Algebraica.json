@@ -1,0 +1,58 @@
+{
+  "pageProps": {
+    "postData": {
+      "slug": "Estructura-Algebraica",
+      "title": "Estructura Algebraica",
+      "date": "Sat Jan 26 2019 10:45:44 GMT+0000 (Coordinated Universal Time)",
+      "lang": "es",
+      "tags": [
+        "Estructura Algebraica",
+        "Grupo",
+        "Grupo abeliano",
+        "Anillo",
+        "Cuerpo",
+        "Espacio vectorial",
+        "Módulo"
+      ],
+      "path": "/Estructura-Algebraica/index.html"
+    },
+    "lang": "es",
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "es": {
+          "common": { "Next": "Siguiente", "Back to home": "Volver al inicio" },
+          "feature-tags": { "Tags": "Tags" },
+          "navbar": {
+            "Home": "Inicio",
+            "Language": "Lenguaje",
+            "Tags": "Tags",
+            "en": "Inglés",
+            "es": "Español",
+            "zh": "Chino"
+          }
+        },
+        "en": {
+          "common": { "Next": "Next", "Back to home": "Back to home" },
+          "feature-tags": { "Tags": "Tags" },
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          }
+        }
+      },
+      "initialLocale": "es",
+      "ns": ["common", "feature-tags", "navbar"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

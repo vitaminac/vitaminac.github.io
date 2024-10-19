@@ -1,0 +1,442 @@
+{
+  "pageProps": {
+    "lang": "en",
+    "pagination": 4,
+    "allPostsData": [
+      {
+        "slug": "perplexity",
+        "title": "Perplexity",
+        "date": "Mon Oct 14 2024 23:41:47 GMT+0000 (Coordinated Universal Time)",
+        "lang": "en",
+        "tags": ["Perplexity", "NLP"],
+        "path": "/perplexity/index.html"
+      },
+      {
+        "slug": "vector-database",
+        "title": "Vector Database",
+        "date": "Sun Sep 29 2024 19:19:40 GMT+0000 (Coordinated Universal Time)",
+        "lang": "en",
+        "tags": ["vector database"],
+        "path": "/vector-database/index.html"
+      },
+      {
+        "slug": "roadmap-ai",
+        "title": "Roadmap Toward AI",
+        "date": "Sun Sep 15 2024 00:20:21 GMT+0000 (Coordinated Universal Time)",
+        "lang": "en",
+        "tags": ["roadmap", "ai", "deep learning"],
+        "path": "/roadmap-ai/index.html"
+      },
+      {
+        "slug": "dll-hijacking-via-zlib-dll-proxy",
+        "title": "DLL Hijacking via zlib DLL Proxy",
+        "date": "Sun Jul 21 2024 11:59:24 GMT+0000 (Coordinated Universal Time)",
+        "lang": "en",
+        "tags": ["dll injection", "dll hijacking", "zlib", "外挂"],
+        "path": "/dll-hijacking-via-zlib-dll-proxy/index.html"
+      },
+      {
+        "slug": "flash-crDroid-redmi-note-7",
+        "title": "Flash crDroid ROM for Redmi Note 7",
+        "date": "Sat May 25 2024 18:11:53 GMT+0000 (Coordinated Universal Time)",
+        "lang": "en",
+        "tags": ["lavender", "crDroid"],
+        "path": "/flash-crDroid-redmi-note-7/index.html"
+      },
+      {
+        "slug": "RaspberryPi-Odoo",
+        "title": "RaspberryPi Odoo",
+        "date": "Tue Jan 02 2024 21:12:35 GMT+0000 (Coordinated Universal Time)",
+        "lang": "en",
+        "tags": ["Linux", "Raspberry", "Prestashop", "Odoo", "Docker"],
+        "path": "/RaspberryPi-Odoo/index.html"
+      },
+      {
+        "slug": "D-LINK-DIR-882-A1-OpenWrt",
+        "title": "OpenWrt Installation and Configuration on D-LINK DIR-882-A1",
+        "date": "Sun Oct 30 2022 17:03:37 GMT+0000 (Coordinated Universal Time)",
+        "lang": "en",
+        "tags": ["openwrt", "network", "router", "hard router"],
+        "path": "/D-LINK-DIR-882-A1-OpenWrt/index.html"
+      },
+      {
+        "slug": "Remote-Access-Via-TightVNC-To-Windows-Machine",
+        "title": "Remote Access Via TightVNC To Windows Machine",
+        "date": "Sat Aug 13 2022 11:35:55 GMT+0000 (Coordinated Universal Time)",
+        "lang": "en",
+        "tags": ["VNC", "TightVNC"],
+        "path": "/Remote-Access-Via-TightVNC-To-Windows-Machine/index.html"
+      },
+      {
+        "slug": "RaspberryPi4B-Setup",
+        "title": "Raspberry Pi 4B Setup",
+        "date": "Sun Jul 10 2022 13:00:17 GMT+0000 (Coordinated Universal Time)",
+        "lang": "en",
+        "tags": [
+          "Linux",
+          "Debian",
+          "Raspberry",
+          "Raspberry Pi 4",
+          "Prestashop"
+        ],
+        "path": "/RaspberryPi4B-Setup/index.html"
+      },
+      {
+        "slug": "Windows7-Vagrant",
+        "title": "How to Create a Windows7 Vagrant Base Box",
+        "date": "Sat Mar 26 2022 11:55:38 GMT+0000 (Coordinated Universal Time)",
+        "lang": "en",
+        "tags": ["Vagrant", "winrm"],
+        "path": "/Windows7-Vagrant/index.html"
+      },
+      {
+        "slug": "Diagonalization",
+        "title": "Diagonalization",
+        "date": "Sun Jan 09 2022 11:36:05 GMT+0000 (Coordinated Universal Time)",
+        "lang": "en",
+        "tags": ["Math", "Diagonalization", "Matrix", "Linear Algebra"],
+        "path": "/Diagonalization/index.html"
+      },
+      {
+        "slug": "Compiling-Executing-C",
+        "title": "The Process Behind Compiling and Executing C Code",
+        "date": "Sat Dec 18 2021 22:28:10 GMT+0000 (Coordinated Universal Time)",
+        "lang": "en",
+        "tags": ["C", "Compilation", "ELF", "crt0", "exit"],
+        "path": "/Compiling-Executing-C/index.html"
+      },
+      {
+        "slug": "Java-Concurrent-Programming",
+        "title": "Java Concurrent Programming",
+        "date": "Wed Oct 06 2021 23:09:55 GMT+0000 (Coordinated Universal Time)",
+        "lang": "en",
+        "tags": [
+          "Java",
+          "Concurrent Programming",
+          "Parallelism",
+          "Java Stream"
+        ],
+        "path": "/Java-Concurrent-Programming/index.html"
+      },
+      {
+        "slug": "Client-Centric-Consistency-Models",
+        "title": "Client-Centric Consistency Models",
+        "date": "Sat Jul 03 2021 15:06:02 GMT+0000 (Coordinated Universal Time)",
+        "lang": "en",
+        "tags": [
+          "Client-Centric Consistency Models",
+          "Monotonic Reads",
+          "Monotonic Writes",
+          "Read Your Writes",
+          "Writes Follow Reads"
+        ],
+        "path": "/Client-Centric-Consistency-Models/index.html"
+      },
+      {
+        "slug": "STP",
+        "title": "STP",
+        "date": "Sat May 15 2021 19:05:00 GMT+0000 (Coordinated Universal Time)",
+        "lang": "en",
+        "tags": ["Spanning Tree Protocol", "STP"],
+        "path": "/STP/index.html"
+      },
+      {
+        "slug": "Testing",
+        "title": "Testing",
+        "date": "Sat Apr 24 2021 11:27:04 GMT+0000 (Coordinated Universal Time)",
+        "lang": "en",
+        "tags": [
+          "Integration Test",
+          "Contract Test",
+          "End-to-End Test",
+          "Unit Test",
+          "Load Test",
+          "Snapshot Test"
+        ],
+        "path": "/Testing/index.html"
+      },
+      {
+        "slug": "Authenticated-Encryption",
+        "title": "Authenticated Encryption",
+        "date": "Sun Mar 28 2021 11:21:16 GMT+0000 (Coordinated Universal Time)",
+        "lang": "en",
+        "tags": [
+          "Mac",
+          "HMAC",
+          "Message Authentication Code",
+          "AE",
+          "Authenticated Encryption",
+          "Salt"
+        ],
+        "path": "/Authenticated-Encryption/index.html"
+      },
+      {
+        "slug": "Information-Security",
+        "title": "Information Security",
+        "date": "Sun Mar 28 2021 11:11:17 GMT+0000 (Coordinated Universal Time)",
+        "lang": "en",
+        "tags": [
+          "InfoSec",
+          "CIA",
+          "AAA",
+          "Information Security",
+          "Confidentiality",
+          "Integrity",
+          "Availability",
+          "Non-Repudiation",
+          "Authentication",
+          "Authorization",
+          "Accounting"
+        ],
+        "path": "/Information-Security/index.html"
+      },
+      {
+        "slug": "Minimalist-Linux-Workspace",
+        "title": "Minimalist Linux Workspace",
+        "date": "Sun Jan 31 2021 18:25:16 GMT+0000 (Coordinated Universal Time)",
+        "lang": "en",
+        "tags": ["Linux", "Debian"],
+        "path": "/Minimalist-Linux-Workspace/index.html"
+      },
+      {
+        "slug": "Testable-Design",
+        "title": "Testable Design",
+        "date": "Sun Jan 24 2021 20:30:40 GMT+0000 (Coordinated Universal Time)",
+        "lang": "en",
+        "tags": ["Testable Design"],
+        "path": "/Testable-Design/index.html"
+      },
+      {
+        "slug": "SOLID",
+        "title": "SOLID Design Principles",
+        "date": "Sun Jan 10 2021 17:14:33 GMT+0000 (Coordinated Universal Time)",
+        "lang": "en",
+        "tags": [
+          "SOLID",
+          "Object Oriented Programming",
+          "Object Oriented Design",
+          "Agile Software Development",
+          "Software Evolution"
+        ],
+        "path": "/SOLID/index.html"
+      },
+      {
+        "slug": "Test-Case-Design-Techniques",
+        "title": "Test Case Design Techniques",
+        "date": "Tue Nov 24 2020 12:56:14 GMT+0000 (Coordinated Universal Time)",
+        "lang": "en",
+        "tags": [
+          "Test Design",
+          "Boundary Value Analysis",
+          "Equivalence Partitioning"
+        ],
+        "path": "/Test-Case-Design-Techniques/index.html"
+      },
+      {
+        "slug": "Simple-Bootstrap-Linux-System",
+        "title": "Build Simple Bootstrap Linux System Image",
+        "date": "Sun Nov 08 2020 19:15:57 GMT+0000 (Coordinated Universal Time)",
+        "lang": "en",
+        "tags": ["Linux", "Embedded System"],
+        "path": "/Simple-Bootstrap-Linux-System/index.html"
+      },
+      {
+        "slug": "Java-Stream",
+        "title": "Java Stream",
+        "date": "Sat Jul 25 2020 22:19:18 GMT+0000 (Coordinated Universal Time)",
+        "lang": "en",
+        "tags": [
+          "Java",
+          "Concurrent Programming",
+          "Parallelism",
+          "Java Stream",
+          "Stream"
+        ],
+        "path": "/Java-Stream/index.html"
+      },
+      {
+        "slug": "MongoDB",
+        "title": "MongoDB",
+        "date": "Sun Jun 07 2020 13:57:06 GMT+0000 (Coordinated Universal Time)",
+        "lang": "en",
+        "tags": ["Document-oriented Database", "MongoDB"],
+        "path": "/MongoDB/index.html"
+      },
+      {
+        "slug": "Matrices-in-Computer-Graphics",
+        "title": "Matrices in Computer Graphics",
+        "date": "Sun May 31 2020 13:34:44 GMT+0000 (Coordinated Universal Time)",
+        "lang": "en",
+        "tags": [
+          "4D Matrices",
+          "Translation Matrix",
+          "Projection Matrix",
+          "Rotation Matrix",
+          "Scaling Matrix",
+          "Model Matrix",
+          "View Matrix",
+          "Projecion Matrix",
+          "Matrix",
+          "Computer Graphics"
+        ],
+        "path": "/Matrices-in-Computer-Graphics/index.html"
+      },
+      {
+        "slug": "Tree-Diameter",
+        "title": "Tree Diameter",
+        "date": "Sat Mar 07 2020 10:00:44 GMT+0000 (Coordinated Universal Time)",
+        "lang": "en",
+        "tags": ["algorithms"],
+        "path": "/Tree-Diameter/index.html"
+      },
+      {
+        "slug": "Google-Foobar-Decrypt-Message",
+        "title": "Google Foobar Decrypt Final Message",
+        "date": "Thu Dec 26 2019 21:43:50 GMT+0000 (Coordinated Universal Time)",
+        "lang": "en",
+        "tags": [],
+        "path": "/Google-Foobar-Decrypt-Message/index.html"
+      },
+      {
+        "slug": "Google-Foobar-Dodge-The-Lasers",
+        "title": "Google Foobar Dodge The Lasers",
+        "date": "Tue Dec 17 2019 22:50:54 GMT+0000 (Coordinated Universal Time)",
+        "lang": "en",
+        "tags": ["algorithms"],
+        "path": "/Google-Foobar-Dodge-The-Lasers/index.html"
+      },
+      {
+        "slug": "Google-Foobar-Escape-Pods",
+        "title": "Google Foobar Escape Pods",
+        "date": "Fri Nov 22 2019 22:35:28 GMT+0000 (Coordinated Universal Time)",
+        "lang": "en",
+        "tags": ["algorithms"],
+        "path": "/Google-Foobar-Escape-Pods/index.html"
+      },
+      {
+        "slug": "Install-Windows-Sandbox-Win10Home",
+        "title": "Install Windows Sandbox in Windoes 10 Home Edition",
+        "date": "Sat Nov 16 2019 15:07:28 GMT+0000 (Coordinated Universal Time)",
+        "lang": "en",
+        "tags": ["Hacker"],
+        "path": "/Install-Windows-Sandbox-Win10Home/index.html"
+      },
+      {
+        "slug": "Google-Foobar-Free-the-Bunny-Prisoners",
+        "title": "Google Foobar Free the Bunny Prisoners",
+        "date": "Sat Nov 09 2019 09:28:42 GMT+0000 (Coordinated Universal Time)",
+        "lang": "en",
+        "tags": ["algorithms"],
+        "path": "/Google-Foobar-Free-the-Bunny-Prisoners/index.html"
+      },
+      {
+        "slug": "Google-Kickstart-2019-Round-F-Flattening",
+        "title": "Google Kickstart 2019 Round F Flattening",
+        "date": "Sun Nov 03 2019 17:51:53 GMT+0000 (Coordinated Universal Time)",
+        "lang": "en",
+        "tags": ["algorithms"],
+        "path": "/Google-Kickstart-2019-Round-F-Flattening/index.html"
+      },
+      {
+        "slug": "Google-Kickstart-2019-Round-G-Shifts",
+        "title": "Google Kickstart 2019 Round G Shifts",
+        "date": "Sun Nov 03 2019 01:47:31 GMT+0000 (Coordinated Universal Time)",
+        "lang": "en",
+        "tags": ["algorithms"],
+        "path": "/Google-Kickstart-2019-Round-G-Shifts/index.html"
+      },
+      {
+        "slug": "Google-Kickstart-2019-Round-G-The-Equation",
+        "title": "Google Kickstart 2019 Round G The Equation",
+        "date": "Sat Nov 02 2019 22:11:00 GMT+0000 (Coordinated Universal Time)",
+        "lang": "en",
+        "tags": ["algorithms"],
+        "path": "/Google-Kickstart-2019-Round-G-The-Equation/index.html"
+      },
+      {
+        "slug": "Install-DockerDesktop-Win10Home",
+        "title": "Install Docker Desktop in Windows10 Home Edition",
+        "date": "Sat Nov 02 2019 21:11:31 GMT+0000 (Coordinated Universal Time)",
+        "lang": "en",
+        "tags": ["Docker", "Hacker"],
+        "path": "/Install-DockerDesktop-Win10Home/index.html"
+      },
+      {
+        "slug": "Google-Kickstart-2019-Round-G-Book-Reading",
+        "title": "Google Kickstart 2019 Round G Book Reading",
+        "date": "Sat Nov 02 2019 19:24:59 GMT+0000 (Coordinated Universal Time)",
+        "lang": "en",
+        "tags": ["algorithms"],
+        "path": "/Google-Kickstart-2019-Round-G-Book-Reading/index.html"
+      },
+      {
+        "slug": "Neo4j-Graph-Database",
+        "title": "Neo4j Graph Database",
+        "date": "Fri Oct 11 2019 23:37:29 GMT+0000 (Coordinated Universal Time)",
+        "lang": "en",
+        "tags": ["Database", "NoSQL", "Neo4j", "Graph Database", "CQL"],
+        "path": "/Neo4j-Graph-Database/index.html"
+      },
+      {
+        "slug": "Machine Learning Note",
+        "title": "Machine Learning Note",
+        "date": "Wed Jul 24 2019 13:21:42 GMT+0000 (Coordinated Universal Time)",
+        "lang": "en",
+        "tags": ["Machine Learning"],
+        "path": "/Machine Learning Note/index.html"
+      },
+      {
+        "slug": "Lehman-laws",
+        "title": "Lehman Laws",
+        "date": "Sun May 12 2019 21:53:33 GMT+0000 (Coordinated Universal Time)",
+        "lang": "en",
+        "tags": [
+          "Lehman laws",
+          "Software Evolution",
+          "Agile Software Development"
+        ],
+        "path": "/Lehman-laws/index.html"
+      },
+      {
+        "slug": "Survivorship-bias",
+        "title": "Survivorship bias",
+        "date": "Mon Mar 25 2019 22:57:23 GMT+0000 (Coordinated Universal Time)",
+        "lang": "en",
+        "tags": ["Operation Research", "Survivorship bias", "Selection bias"],
+        "path": "/Survivorship-bias/index.html"
+      },
+      {
+        "slug": "Microeconomics",
+        "title": "Microeconomics",
+        "date": "Thu Jan 31 2019 22:53:35 GMT+0000 (Coordinated Universal Time)",
+        "lang": "en",
+        "tags": ["Microeconomics"],
+        "path": "/Microeconomics/index.html"
+      }
+    ],
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "en": {
+          "common": { "Next": "Next", "Back to home": "Back to home" },
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          }
+        }
+      },
+      "initialLocale": "en",
+      "ns": ["common", "navbar"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

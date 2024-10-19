@@ -1,0 +1,37 @@
+{
+  "pageProps": {
+    "postData": {
+      "slug": "test-youtube",
+      "title": "Test Youtube",
+      "date": "2020-01-02",
+      "lang": "en",
+      "tags": [],
+      "content": "\r\n::youtube[CS329P]{vid=rvy3EggGH7w}\r\n",
+      "markdownSource": "\r\n::youtube[CS329P]{vid=rvy3EggGH7w}\r\n"
+    },
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "en": {
+          "common": { "Next": "Next", "Back to home": "Back to home" },
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          }
+        }
+      },
+      "initialLocale": "en",
+      "ns": ["common", "navbar"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

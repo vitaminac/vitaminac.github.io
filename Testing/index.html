@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+  <!-- Head tag -->
+  <!-- SEO -->
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Testing｜Gao&#39;s Blog</title>
+    <meta property="og:title" content="Testing｜Gao&#39;s Blog" />
+
+    <meta name="description" content="Testing｜Gao&#39;s Blog" />
+    <meta property="og:description" content="Testing｜Gao&#39;s Blog" />
+    <meta name="author" content="Gao" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      property="og:image"
+      content="https://vitaminac.github.io/images/favicon.jpg"
+    />
+    <link rel="shortcut icon" href="/images/favicon.jpg" />
+
+    <meta
+      name="keywords"
+      content="Integration Test,Contract Test,End-to-End Test,Unit Test,Load Test,Snapshot Test"
+    />
+
+    <meta name="theme-color" content="#600090" />
+    <meta name="msapplication-navbutton-color" content="#600090" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090" />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="Gao&#39;s Blog"
+      href="/atom.xml"
+    />
+
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      cross-origin="anonymous"
+      referrer-policy="no-referrer"
+    />
+    <link rel="canonical" href="https://vitaminac.github.io/Testing/" />
+
+    <!-- jQuery -->
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+    ></script>
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css" />
+    <link rel="stylesheet" href="/css/syntax.css" />
+
+    <!-- Google Tag Manager -->
+
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-WDC9JKC");
+    </script>
+
+    <!-- End Google Tag Manager -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-151409235-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-151409235-1");
+    </script>
+
+    <!-- Google AdSense -->
+    <script
+      data-ad-client="ca-pub-8356359077918854"
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+    <meta name="generator" content="Hexo 6.3.0" />
+  </head>
+  <style>
+    header.intro-header {
+      background-image: url("/images/header.gif");
+    }
+  </style>
+  <!-- hack iOS CSS :active style -->
+
+  <body ontouchstart="" class="animated fadeIn">
+    <!-- Main Content -->
+
+    <!--only post-->
+
+    <img class="wechat-title-img" src="/images/preview.jpeg" />
+
+    <style>
+      header.intro-header {
+        background-image: url("/images/preview.jpeg");
+      }
+    </style>
+
+    <header class="intro-header">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-md-10 text-center">
+            <div class="post-heading">
+              <h1>Testing</h1>
+
+              <span class="meta"
+                >Author: Gao
+                <span />
+                Date: 2021-04-24
+              </span>
+              <div class="tags text-center">
+                <a
+                  target="_parent"
+                  class="tag"
+                  href="/posts/langs/en/tags/Integration Test"
+                  title="Integration Test"
+                >
+                  Integration Test</a
+                >
+
+                <a
+                  target="_parent"
+                  class="tag"
+                  href="/posts/langs/en/tags/Contract Test"
+                  title="Contract Test"
+                >
+                  Contract Test</a
+                >
+
+                <a
+                  target="_parent"
+                  class="tag"
+                  href="/posts/langs/en/tags/End-to-End Test"
+                  title="End-to-End Test"
+                >
+                  End-to-End Test</a
+                >
+
+                <a
+                  target="_parent"
+                  class="tag"
+                  href="/posts/langs/en/tags/Unit Test"
+                  title="Unit Test"
+                >
+                  Unit Test</a
+                >
+
+                <a
+                  target="_parent"
+                  class="tag"
+                  href="/posts/langs/en/tags/Load Test"
+                  title="Load Test"
+                >
+                  Load Test</a
+                >
+
+                <a
+                  target="_parent"
+                  class="tag"
+                  href="/posts/langs/en/tags/Snapshot Test"
+                  title="Snapshot Test"
+                >
+                  Snapshot Test</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="post-title-haojen">
+        <span> Testing </span>
+      </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <!-- Post Container -->
+          <div class="order-lg-2 col-lg-3 col-12 toc-col" style="z-index: 1">
+            <ol class="toc">
+              <li class="toc-item toc-level-1">
+                <a class="toc-link" href="#Testing"
+                  ><span class="toc-text">Testing</span></a
+                >
+                <ol class="toc-child">
+                  <li class="toc-item toc-level-2">
+                    <a class="toc-link" href="#Unit-Test"
+                      ><span class="toc-text">Unit Test</span></a
+                    >
+                  </li>
+                  <li class="toc-item toc-level-2">
+                    <a class="toc-link" href="#Integration-Test"
+                      ><span class="toc-text">Integration Test</span></a
+                    >
+                  </li>
+                  <li class="toc-item toc-level-2">
+                    <a class="toc-link" href="#Contract-Test"
+                      ><span class="toc-text">Contract Test</span></a
+                    >
+                  </li>
+                  <li class="toc-item toc-level-2">
+                    <a class="toc-link" href="#End-to-End-Test"
+                      ><span class="toc-text">End-to-End Test</span></a
+                    >
+                  </li>
+                  <li class="toc-item toc-level-2">
+                    <a class="toc-link" href="#Load-Test"
+                      ><span class="toc-text">Load Test</span></a
+                    >
+                  </li>
+                  <li class="toc-item toc-level-2">
+                    <a class="toc-link" href="#Snapshot-Test"
+                      ><span class="toc-text">Snapshot Test</span></a
+                    >
+                  </li>
+                  <li class="toc-item toc-level-2">
+                    <a class="toc-link" href="#Reference"
+                      ><span class="toc-text">Reference</span></a
+                    >
+                  </li>
+                </ol>
+              </li>
+            </ol>
+          </div>
+
+          <div class="order-lg-1 col-lg-9 col-12 post-container">
+            <h1 id="Testing">
+              <a href="#Testing" class="headerlink" title="Testing"></a>Testing
+            </h1>
+            <h2 id="Unit-Test">
+              <a href="#Unit-Test" class="headerlink" title="Unit Test"></a>Unit
+              Test
+            </h2>
+            <p>
+              The purpose of unit test is to validate that each unit of the
+              software code performs as expected. A unit may be an individual
+              function, method, procedure, module, or object. Unit testing is
+              done during the development of an application by the developers.
+              If proper unit testing is done in early development, then it saves
+              time and money in the maintenance phase.
+            </p>
+            <p><img src="unit-testing.png" alt="Unit Test" /></p>
+            <h2 id="Integration-Test">
+              <a
+                href="#Integration-Test"
+                class="headerlink"
+                title="Integration Test"
+              ></a
+              >Integration Test
+            </h2>
+            <p>
+              Integration tests determine if independently developed units of
+              software work correctly when they are connected to each other. It
+              was performed by activating many modules and running higher level
+              tests against all of them to ensure they operated together.
+            </p>
+            <p><img src="integration-test.png" alt="Integration Test" /></p>
+            <h2 id="Contract-Test">
+              <a
+                href="#Contract-Test"
+                class="headerlink"
+                title="Contract Test"
+              ></a
+              >Contract Test
+            </h2>
+            <p>
+              One of the most common cases of using a test double is when you
+              are communicating with an external service. Typically, such
+              services are being maintained by a different team, they may be
+              subject to slow, and unreliable networks, and maybe unreliable
+              themselves. The test double is indeed not an accurate
+              representation of the external service, e.g. what happens if the
+              external service changes its contract?
+            </p>
+            <p><img src="contract-test.png" alt="Contract Test" /></p>
+            <p>
+              A contract change may break a production application, triggering
+              an emergency fix and an urgent conversation with the supplier
+              team. A good way to deal with this is to continue to run your own
+              tests against the double, but in addition to periodically run a
+              separate set of contract tests. These check that all the calls
+              against your test doubles return the same results as a call to the
+              external service would. A failure in any of these contract tests
+              implies you need to update your test doubles, and probably your
+              code to take into account the service contract change.
+            </p>
+            <h2 id="End-to-End-Test">
+              <a
+                href="#End-to-End-Test"
+                class="headerlink"
+                title="End-to-End Test"
+              ></a
+              >End-to-End Test
+            </h2>
+            <p>
+              E2E tests are smoke test with a very limited range of paths tested
+              that validates entire software from starting to the end along with
+              its integration with external services.
+            </p>
+            <h2 id="Load-Test">
+              <a href="#Load-Test" class="headerlink" title="Load Test"></a>Load
+              Test
+            </h2>
+            <p>
+              Load Test is a non-functional software test in which the
+              performance of software application is tested under a specific
+              expected load. It determines how the software application behaves
+              while being accessed by multiple users simultaneously. The goal of
+              Load Testing is to improve performance bottlenecks and to ensure
+              stability and smooth functioning of software application before
+              deployment.
+            </p>
+            <h2 id="Snapshot-Test">
+              <a
+                href="#Snapshot-Test"
+                class="headerlink"
+                title="Snapshot Test"
+              ></a
+              >Snapshot Test
+            </h2>
+            <p>
+              Snapshot tests ensure your serializable output (e.g. React tree)
+              does not change unexpectedly. On test runs, we will compare the
+              output with the previous snapshot, the test will fail if they do
+              not match: either the change is unexpected, or the snapshot needs
+              to be updated because of the new version of the code.
+            </p>
+            <p>
+              Snapshots identify unexpected interface changes within your
+              application – whether that interface is an API response, UI, logs,
+              or error messages.
+            </p>
+            <ul>
+              <li>
+                False positive&#x2F;false negative result in CI: The snapshot
+                should be committed alongside code changes, so CI will run the
+                test with update to date snapshots, and it should be reviewed as
+                part of your code review process. It can also provide a lot of
+                additional context during code review in which reviewers can
+                study your changes better.
+              </li>
+              <li>
+                Snapshots take a lot of time to review: We should ensure our
+                snapshots are readable by keeping them focused, short.
+              </li>
+              <li>
+                Snapshot tests fail unexpectedly: Tests should be deterministic,
+                running the same tests multiple times on a component that has
+                not changed should produce the same results every time.
+              </li>
+              <li>
+                Meaning of each snapshot: Give descriptive names for each
+                snapshot. This makes it easier for reviewers to verify the
+                snapshots during the code review.
+              </li>
+              <li>
+                Lot of unit tests: The aim of snapshot testing is not to replace
+                existing unit tests, but in some scenarios, snapshot testing can
+                potentially remove the need for unit testing for a particular
+                set of functionalities (e.g. rendering of React components).
+              </li>
+            </ul>
+            <h2 id="Reference">
+              <a href="#Reference" class="headerlink" title="Reference"></a
+              >Reference
+            </h2>
+            <ul>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://martinfowler.com/bliki/IntegrationTest.html"
+                  >IntegrationTest</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://martinfowler.com/bliki/ContractTest.html"
+                  >ContractTest</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://www.guru99.com/unit-testing-guide.html"
+                  >Unit Testing Tutorial: What is, Types, Tools &amp; Test
+                  EXAMPLE</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://www.guru99.com/end-to-end-testing.html"
+                  >END-To-END Testing Tutorial: What is E2E Testing with
+                  Example</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://www.guru99.com/load-testing-tutorial.html"
+                  >Load Testing Tutorial: What is? How to? (with Examples)</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://jestjs.io/docs/snapshot-testing"
+                  >Snapshot Testing</a
+                >
+              </li>
+            </ul>
+
+            <hr />
+
+            <ul class="list-group"></ul>
+
+            <ul class="pagination pager">
+              <li class="page-item">
+                <a
+                  target="_parent"
+                  class="page-link"
+                  href="/migrations/STP/"
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  title="STP"
+                  >&larr; Previous Post</a
+                >
+              </li>
+
+              <li class="page-item ms-auto">
+                <a
+                  target="_parent"
+                  class="page-link"
+                  href="/migrations/Authenticated-Encryption/"
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  title="Authenticated Encryption"
+                  >Next Post &rarr;</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="comment">
+          <!-- disqus 评论框 start -->
+
+          <!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = "blog-vnwybnwkiz";
+            var disqus_identifier = "https://vitaminac.github.io/Testing/";
+            var disqus_url = "https://vitaminac.github.io/Testing/";
+            var disqus_config = function () {
+              this.language = "en";
+            };
+
+            (function () {
+              var dsq = document.createElement("script");
+              dsq.type = "text/javascript";
+              dsq.async = true;
+              dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+              (
+                document.getElementsByTagName("head")[0] ||
+                document.getElementsByTagName("body")[0]
+              ).appendChild(dsq);
+            })();
+          </script>
+          <!-- disqus 公共JS代码 end -->
+          <div id="disqus_thread" class="disqus-thread"></div>
+          <!-- disqus 评论框 end -->
+        </div>
+
+        <div class="row justify-content-center">
+          <!-- Sidebar Container -->
+
+          <div class="col-lg-8` col-md-10 sidebar-container">
+            <!-- Friends Blog -->
+          </div>
+        </div>
+      </div>
+    </article>
+    <!-- Custom Theme JavaScript -->
+    <script type="text/javascript" src="/js/blog.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        anchors.add("p");
+      });
+    </script>
+
+    <!-- jquery.tagcloud.js -->
+    <script>
+      // only load tagcloud.js in tag.html
+      if ($("#tag_cloud").length !== 0) {
+        async("https://vitaminac.github.io/js/jquery.tagcloud.js", function () {
+          $.fn.tagcloud.defaults = {
+            //size: {start: 1, end: 1, unit: 'em'},
+            color: {
+              start: "#bbbbee",
+              end: "#0085a1",
+            },
+          };
+          $("#tag_cloud a").tagcloud();
+        });
+      }
+    </script>
+
+    <script type="text/javascript" src="/js/common.js"></script>
+
+    <!-- render ipynb file -->
+
+    <!-- render ipynb file -->
+  </body>
+</html>

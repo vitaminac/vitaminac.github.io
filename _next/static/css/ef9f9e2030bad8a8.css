@@ -1,0 +1,13 @@
+.AboutMe_about__UiMOu img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  opacity: 0.9;
+}
+.AboutMe_about__UiMOu p {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.AboutMe_about__UiMOu .AboutMe_list-inline__ldLZ_ > li {
+  padding-left: 0;
+}

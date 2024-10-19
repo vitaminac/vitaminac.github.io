@@ -1,0 +1,38 @@
+{
+  "pageProps": {
+    "postData": {
+      "slug": "RaspberryPi4B-Setup",
+      "title": "Raspberry Pi 4B Setup",
+      "date": "Sun Jul 10 2022 13:00:17 GMT+0000 (Coordinated Universal Time)",
+      "lang": "en",
+      "tags": ["Linux", "Debian", "Raspberry", "Raspberry Pi 4", "Prestashop"],
+      "path": "/RaspberryPi4B-Setup/index.html"
+    },
+    "lang": "en",
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "en": {
+          "common": { "Next": "Next", "Back to home": "Back to home" },
+          "feature-tags": { "Tags": "Tags" },
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          }
+        }
+      },
+      "initialLocale": "en",
+      "ns": ["common", "feature-tags", "navbar"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

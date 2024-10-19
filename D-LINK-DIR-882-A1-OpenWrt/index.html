@@ -1,0 +1,1016 @@
+<!doctype html>
+<html lang="en">
+  <!-- Head tag -->
+  <!-- SEO -->
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>
+      OpenWrt Installation and Configuration on D-LINK DIR-882-A1｜Gao&#39;s
+      Blog
+    </title>
+    <meta
+      property="og:title"
+      content="OpenWrt Installation and Configuration on D-LINK DIR-882-A1｜Gao&#39;s Blog"
+    />
+
+    <meta
+      name="description"
+      content="OpenWrt Installation and Configuration on D-LINK DIR-882-A1｜Gao&#39;s Blog"
+    />
+    <meta
+      property="og:description"
+      content="OpenWrt Installation and Configuration on D-LINK DIR-882-A1｜Gao&#39;s Blog"
+    />
+    <meta name="author" content="Gao" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      property="og:image"
+      content="https://vitaminac.github.io/images/favicon.jpg"
+    />
+    <link rel="shortcut icon" href="/images/favicon.jpg" />
+
+    <meta name="keywords" content="openwrt,network,router,hard router" />
+
+    <meta name="theme-color" content="#600090" />
+    <meta name="msapplication-navbutton-color" content="#600090" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090" />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="Gao&#39;s Blog"
+      href="/atom.xml"
+    />
+
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      cross-origin="anonymous"
+      referrer-policy="no-referrer"
+    />
+    <link
+      rel="canonical"
+      href="https://vitaminac.github.io/D-LINK-DIR-882-A1-OpenWrt/"
+    />
+
+    <!-- jQuery -->
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+    ></script>
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css" />
+    <link rel="stylesheet" href="/css/syntax.css" />
+
+    <!-- Google Tag Manager -->
+
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-WDC9JKC");
+    </script>
+
+    <!-- End Google Tag Manager -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-151409235-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-151409235-1");
+    </script>
+
+    <!-- Google AdSense -->
+    <script
+      data-ad-client="ca-pub-8356359077918854"
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+    <meta name="generator" content="Hexo 6.3.0" />
+  </head>
+  <style>
+    header.intro-header {
+      background-image: url("/images/header.gif");
+    }
+  </style>
+  <!-- hack iOS CSS :active style -->
+
+  <body ontouchstart="" class="animated fadeIn">
+    <!-- Main Content -->
+
+    <!--only post-->
+
+    <img class="wechat-title-img" src="/images/preview.jpeg" />
+
+    <style>
+      header.intro-header {
+        background-image: url("/images/preview.jpeg");
+      }
+    </style>
+
+    <header class="intro-header">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-md-10 text-center">
+            <div class="post-heading">
+              <h1>
+                OpenWrt Installation and Configuration on D-LINK DIR-882-A1
+              </h1>
+
+              <span class="meta"
+                >Author: Gao
+                <span />
+                Date: 2022-10-30
+              </span>
+              <div class="tags text-center">
+                <a
+                  target="_parent"
+                  class="tag"
+                  href="/posts/langs/en/tags/openwrt"
+                  title="openwrt"
+                >
+                  openwrt</a
+                >
+
+                <a
+                  target="_parent"
+                  class="tag"
+                  href="/posts/langs/en/tags/network"
+                  title="network"
+                >
+                  network</a
+                >
+
+                <a
+                  target="_parent"
+                  class="tag"
+                  href="/posts/langs/en/tags/router"
+                  title="router"
+                >
+                  router</a
+                >
+
+                <a
+                  target="_parent"
+                  class="tag"
+                  href="/posts/langs/en/tags/hard router"
+                  title="hard router"
+                >
+                  hard router</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="post-title-haojen">
+        <span>
+          OpenWrt Installation and Configuration on D-LINK DIR-882-A1
+        </span>
+      </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <!-- Post Container -->
+          <div class="order-lg-2 col-lg-3 col-12 toc-col" style="z-index: 1">
+            <ol class="toc">
+              <li class="toc-item toc-level-2">
+                <a class="toc-link" href="#Download-OpenWrt-Firmware"
+                  ><span class="toc-text">Download OpenWrt Firmware</span></a
+                >
+              </li>
+              <li class="toc-item toc-level-2">
+                <a class="toc-link" href="#Flash-OpenWrt-Firmware"
+                  ><span class="toc-text">Flash OpenWrt Firmware</span></a
+                >
+              </li>
+              <li class="toc-item toc-level-2">
+                <a
+                  class="toc-link"
+                  href="#Configuration-through-OpenWrt-LuCI-web-interface"
+                  ><span class="toc-text"
+                    >Configuration through OpenWrt LuCI web interface</span
+                  ></a
+                >
+              </li>
+              <li class="toc-item toc-level-2">
+                <a class="toc-link" href="#Configuration-through-OpenWrt-SSH"
+                  ><span class="toc-text"
+                    >Configuration through OpenWrt SSH</span
+                  ></a
+                >
+                <ol class="toc-child">
+                  <li class="toc-item toc-level-3">
+                    <a
+                      class="toc-link"
+                      href="#Disabling-password-authentication"
+                      ><span class="toc-text"
+                        >Disabling password authentication</span
+                      ></a
+                    >
+                  </li>
+                </ol>
+              </li>
+              <li class="toc-item toc-level-2">
+                <a class="toc-link" href="#Obtain-PPPoE-Username-amp-Password"
+                  ><span class="toc-text"
+                    >Obtain PPPoE Username &amp; Password</span
+                  ></a
+                >
+              </li>
+              <li class="toc-item toc-level-2">
+                <a class="toc-link" href="#Configure-PPPoE"
+                  ><span class="toc-text">Configure PPPoE</span></a
+                >
+              </li>
+              <li class="toc-item toc-level-2">
+                <a class="toc-link" href="#Adblock"
+                  ><span class="toc-text">Adblock</span></a
+                >
+              </li>
+              <li class="toc-item toc-level-2">
+                <a class="toc-link" href="#Other-Utilities"
+                  ><span class="toc-text">Other Utilities</span></a
+                >
+              </li>
+              <li class="toc-item toc-level-2">
+                <a class="toc-link" href="#Upgrade-Firmware"
+                  ><span class="toc-text">Upgrade Firmware</span></a
+                >
+              </li>
+              <li class="toc-item toc-level-2">
+                <a class="toc-link" href="#Benchmark"
+                  ><span class="toc-text">Benchmark</span></a
+                >
+                <ol class="toc-child">
+                  <li class="toc-item toc-level-3">
+                    <a class="toc-link" href="#Wireless-Speed-Test"
+                      ><span class="toc-text">Wireless Speed Test</span></a
+                    >
+                    <ol class="toc-child">
+                      <li class="toc-item toc-level-4">
+                        <a class="toc-link" href="#TX-Device-Wireless-Router"
+                          ><span class="toc-text"
+                            >TX: Device - Wireless - Router</span
+                          ></a
+                        >
+                      </li>
+                      <li class="toc-item toc-level-4">
+                        <a
+                          class="toc-link"
+                          href="#TX-Device-Wireless-Router-Ethernet-Device"
+                          ><span class="toc-text"
+                            >TX: Device - Wireless - Router - Ethernet -
+                            Device</span
+                          ></a
+                        >
+                      </li>
+                      <li class="toc-item toc-level-4">
+                        <a class="toc-link" href="#RX"
+                          ><span class="toc-text">RX</span></a
+                        >
+                      </li>
+                    </ol>
+                  </li>
+                </ol>
+              </li>
+              <li class="toc-item toc-level-2">
+                <a class="toc-link" href="#Map-with-a-Free-Domain"
+                  ><span class="toc-text">Map with a Free Domain</span></a
+                >
+                <ol class="toc-child">
+                  <li class="toc-item toc-level-3">
+                    <a class="toc-link" href="#Verify-NAT"
+                      ><span class="toc-text">Verify NAT</span></a
+                    >
+                  </li>
+                  <li class="toc-item toc-level-3">
+                    <a class="toc-link" href="#Create-Domain"
+                      ><span class="toc-text">Create Domain</span></a
+                    >
+                  </li>
+                  <li class="toc-item toc-level-3">
+                    <a class="toc-link" href="#Keep-the-IP-Address-Up-to-Date"
+                      ><span class="toc-text"
+                        >Keep the IP Address Up-to-Date</span
+                      ></a
+                    >
+                  </li>
+                </ol>
+              </li>
+              <li class="toc-item toc-level-2">
+                <a class="toc-link" href="#Expose-Internal-Service-to-Internet"
+                  ><span class="toc-text"
+                    >Expose Internal Service to Internet</span
+                  ></a
+                >
+              </li>
+              <li class="toc-item toc-level-2">
+                <a class="toc-link" href="#Reference"
+                  ><span class="toc-text">Reference</span></a
+                >
+              </li>
+            </ol>
+          </div>
+
+          <div class="order-lg-1 col-lg-9 col-12 post-container">
+            <h2 id="Download-OpenWrt-Firmware">
+              <a
+                href="#Download-OpenWrt-Firmware"
+                class="headerlink"
+                title="Download OpenWrt Firmware"
+              ></a
+              >Download OpenWrt Firmware
+            </h2>
+            <p>
+              Open
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://openwrt.org/toh/d-link/dir-882_a1#installation"
+                >https://openwrt.org/toh/d-link/dir-882_a1#installation</a
+              >
+              and select <em>Firmware Install</em>. At this step we need to
+              download <strong>factory</strong> version.
+            </p>
+            <h2 id="Flash-OpenWrt-Firmware">
+              <a
+                href="#Flash-OpenWrt-Firmware"
+                class="headerlink"
+                title="Flash OpenWrt Firmware"
+              ></a
+              >Flash OpenWrt Firmware
+            </h2>
+            <ol>
+              <li>Connect to D-Link router through Ethernet cable.</li>
+              <li>Power off the router</li>
+              <li>
+                Hold on the reset key and restart the router, release the reset
+                key until you see the LED starts blinking.
+              </li>
+              <li>
+                On the computer, manually assign a static IP address on the
+                192.168.0.xxx subnet, other than 192.168.0.1 (e.g. 192.168.0.2)
+              </li>
+              <li>
+                Open a web browser and navigate to
+                <a target="_blank" rel="noopener" href="http://192.168.0.1/"
+                  >http://192.168.0.1</a
+                >
+              </li>
+              <li>
+                Choose the firmware file you have downloaded previously and
+                click on <strong>Upload</strong>.
+              </li>
+              <li>
+                After the file has been uploaded, you should see a
+                <em>Device is upgrading the firmware</em> message on the web
+                browse
+              </li>
+              <li>
+                The device will reboot automatically after the flashing process
+                finishes
+              </li>
+            </ol>
+            <h2 id="Configuration-through-OpenWrt-LuCI-web-interface">
+              <a
+                href="#Configuration-through-OpenWrt-LuCI-web-interface"
+                class="headerlink"
+                title="Configuration through OpenWrt LuCI web interface"
+              ></a
+              >Configuration through OpenWrt LuCI web interface
+            </h2>
+            <ul>
+              <li>Change to DHCP mode after the router is restarted</li>
+              <li>
+                The gateway by default is
+                <a target="_blank" rel="noopener" href="http://192.168.1.1/"
+                  >http://192.168.1.1</a
+                >
+                without password
+              </li>
+              <li>
+                System &gt; Administration
+                <ul>
+                  <li>change router admin password</li>
+                  <li>
+                    SSH Access
+                    <ul>
+                      <li>modify interface to LAN</li>
+                      <li>change SSH port to other</li>
+                    </ul>
+                  </li>
+                  <li>
+                    SSH Keys
+                    <ul>
+                      <li>
+                        past the content of your public key file. It will be a
+                        long string starting with <code>ssh-rsa …</code>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Network &gt; Wireless &gt; 2.4G AP &amp; 5G AP
+                <ul>
+                  <li>
+                    Device Configuration
+                    <ul>
+                      <li>Advance Settings: modify country code</li>
+                    </ul>
+                  </li>
+                  <li>
+                    Interface Configuration
+                    <ul>
+                      <li>General Setup: modify ESSID</li>
+                      <li>
+                        Wireless Security
+                        <ul>
+                          <li>Encryption: WPA2-PSK</li>
+                          <li>Cipher: Force CCMP</li>
+                          <li>Key: Your Wi-Fi Password</li>
+                        </ul>
+                      </li>
+                      <li>
+                        Advanced Settings
+                        <ul>
+                          <li>
+                            uncheck <em>Disassociate On Low Acknowledgement</em>
+                          </li>
+                          <li>check <em>Disable Inactivity Polling</em></li>
+                          <li>Time interval for rekeying GTK: 3600</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Network &gt; Wireless &gt; 5G AP &gt; Device Configuration
+                <ul>
+                  <li>
+                    Operating frequency
+                    <ul>
+                      <li>Mode: <strong>AC</strong></li>
+                      <li>Channel: 36</li>
+                      <li>Width <strong>80mhz</strong></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>Network &gt; Wireless: Save &amp; Apply</li>
+              <li>
+                Network &gt; Interface
+                <ol>
+                  <li>
+                    LAN &gt; General Settings: modify IPv4 address to
+                    192.168.0.1 if 192.168.1.1 as gateway has conflict with
+                    upstream
+                  </li>
+                  <li>
+                    WAN &gt; Advanced Settings: unchecked
+                    <strong>Use DNS servers advertised by peer</strong>
+                  </li>
+                  <li>
+                    WAN &gt; Advanced Settings: add and click
+                    <strong>+</strong> button for following DNS
+                    <strong>1.1.1.1</strong>, <strong>8.8.8.8</strong>,
+                    <strong>8.8.4.4</strong> in
+                    <strong>Use custom DNS servers</strong>
+                  </li>
+                  <li>Save &amp; Apply</li>
+                </ol>
+              </li>
+              <li>
+                Network &gt; Firewall &gt; General Settings
+                <ol>
+                  <li>
+                    Routing&#x2F;NAT Offloading
+                    <ul>
+                      <li>check <strong>Software flow offloading</strong></li>
+                      <li>check <strong>Hardware flow offloading</strong></li>
+                    </ul>
+                  </li>
+                  <li>Save &amp; Apply</li>
+                </ol>
+              </li>
+              <li>
+                Network &gt; DHCP and DNS &gt; Hostnames: add custom binding of
+                domain name to static IP for example blocking a website. You
+                might need to add two versions of mapping, one for IPv4 and one
+                for IPv6.
+                <ul>
+                  <li>
+                    for blocking the domain it is recommended to use adblock
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <h2 id="Configuration-through-OpenWrt-SSH">
+              <a
+                href="#Configuration-through-OpenWrt-SSH"
+                class="headerlink"
+                title="Configuration through OpenWrt SSH"
+              ></a
+              >Configuration through OpenWrt SSH
+            </h2>
+            <h3 id="Disabling-password-authentication">
+              <a
+                href="#Disabling-password-authentication"
+                class="headerlink"
+                title="Disabling password authentication"
+              ></a
+              >Disabling password authentication
+            </h3>
+            <pre><code>uci set dropbear.@dropbear[0].PasswordAuth=&quot;0&quot;
+uci set dropbear.@dropbear[0].RootPasswordAuth=&quot;0&quot;
+uci commit dropbear
+/etc/init.d/dropbear restart
+</code></pre>
+            <h2 id="Obtain-PPPoE-Username-amp-Password">
+              <a
+                href="#Obtain-PPPoE-Username-amp-Password"
+                class="headerlink"
+                title="Obtain PPPoE Username &amp; Password"
+              ></a
+              >Obtain PPPoE Username &amp; Password
+            </h2>
+            <p>
+              The steps to obtain PPPoE will vary per country and operator. I’ve
+              followed
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://www.frikidelto.com/tutorial/como-conseguir-el-usuario-y-contrasena-pppoe-para-instalar-un-router-neutro/"
+                >this tutorial</a
+              >.
+            </p>
+            <h2 id="Configure-PPPoE">
+              <a
+                href="#Configure-PPPoE"
+                class="headerlink"
+                title="Configure PPPoE"
+              ></a
+              >Configure PPPoE
+            </h2>
+            <ol>
+              <li>
+                Network&gt; Interfaces &gt; Devices: Add device configuration
+                <ol>
+                  <li>Select VLAN (802.1q) as device type</li>
+                  <li>Select WAN as base device</li>
+                  <li>
+                    Introduce 20 in VLAN ID 20 (This configuration depends on
+                    the operator)
+                  </li>
+                  <li>uncheck “Enable IPv6”</li>
+                  <li>Save</li>
+                  <li>Save &amp; apply</li>
+                </ol>
+              </li>
+              <li>
+                Network&gt; Interfaces &gt; Interface: click edit on WAN
+                configuration
+                <ol>
+                  <li>Change protocol to PPPoE</li>
+                  <li>Select Software VLAN wan.20 as device</li>
+                  <li>Introduce PPPoE username and password</li>
+                  <li>Save</li>
+                  <li>Save &amp; apply</li>
+                </ol>
+              </li>
+            </ol>
+            <h2 id="Adblock">
+              <a href="#Adblock" class="headerlink" title="Adblock"></a>Adblock
+            </h2>
+            <ul>
+              <li>System &gt; Software: Update lists</li>
+              <li>
+                System &gt; Software: Search <strong>curl</strong> and install.
+              </li>
+              <li>
+                System &gt; Software: Search <code>adblock</code>,
+                <code>luci-app-adblock</code> and install.
+              </li>
+              <li>
+                Services &gt; Adblock &gt; Additional Settings &gt; Download
+                Utility: Select <strong>curl</strong>
+              </li>
+              <li>
+                Services &gt; Edit Blacklist: add domain you want to block
+              </li>
+              <li>Services &gt; Adblock: Save &amp; Apply</li>
+            </ul>
+            <h2 id="Other-Utilities">
+              <a
+                href="#Other-Utilities"
+                class="headerlink"
+                title="Other Utilities"
+              ></a
+              >Other Utilities
+            </h2>
+            <ul>
+              <li>System &gt; Software: Search <em>htop</em> and install.</li>
+            </ul>
+            <p>
+              You can also access router OS through SSH with
+              <code>ssh root@192.168.0.1</code> and install the packages with
+              <code>opkg</code> command. It is recommended to not upgrade
+              <code>luci-*</code> packages, this package is web interface of
+              router, and it often generates conflict between the new version
+              and old version.
+            </p>
+            <h2 id="Upgrade-Firmware">
+              <a
+                href="#Upgrade-Firmware"
+                class="headerlink"
+                title="Upgrade Firmware"
+              ></a
+              >Upgrade Firmware
+            </h2>
+            <p>
+              Go to
+              <a
+                href="https://firmware-selector.openwrt.org/?version=22.03.2&amp;target=ramips/mt7621&amp;id=dlink_dir-882-a1"
+                >https://firmware-selector.openwrt.org/?version=22.03.2&amp;target=ramips%2Fmt7621&amp;id=dlink_dir-882-a1</a
+              >
+              and add <code>luci</code>, <code>luci-ssl</code> and any of your
+              packages, in my case are <code>luci</code>, <code>luci-ssl</code>,
+              <code>curl</code>, <code>adblock</code>,
+              <code>luci-app-adblock</code>, <code>htop</code>, click
+              <strong>Request Build</strong>, and download the
+              <strong>sysupgrade</strong> OpenWrt firmware and then enter System
+              &gt; Backup&#x2F;Flash Firmware to upload the bin file, it is
+              recommended to backup and export the configuration.
+            </p>
+            <h2 id="Benchmark">
+              <a href="#Benchmark" class="headerlink" title="Benchmark"></a
+              >Benchmark
+            </h2>
+            <h3 id="Wireless-Speed-Test">
+              <a
+                href="#Wireless-Speed-Test"
+                class="headerlink"
+                title="Wireless Speed Test"
+              ></a
+              >Wireless Speed Test
+            </h3>
+            <h4 id="TX-Device-Wireless-Router">
+              <a
+                href="#TX-Device-Wireless-Router"
+                class="headerlink"
+                title="TX: Device - Wireless - Router"
+              ></a
+              >TX: Device - Wireless - Router
+            </h4>
+            <p>
+              Install
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://openwrt.org/packages/pkgdata/iperf3"
+                ><code>iperf3</code></a
+              >
+              on OpenWrt and after than run <code>iperf3 -s</code>. Then from a
+              client device connected to the network through wireless execute
+              the command
+              <code
+                >iperf3 -c &lt;IP Address of Your OpenWrt Router&gt; -p
+                &lt;iperf3 Server Port&gt; -f m -t 30 -w 256k -P 4</code
+              >.
+            </p>
+            <h4 id="TX-Device-Wireless-Router-Ethernet-Device">
+              <a
+                href="#TX-Device-Wireless-Router-Ethernet-Device"
+                class="headerlink"
+                title="TX: Device - Wireless - Router - Ethernet - Device"
+              ></a
+              >TX: Device - Wireless - Router - Ethernet - Device
+            </h4>
+            <p>
+              Install <code>iperf3</code> on another device connected to the
+              network through Ethernet interface and then repeat the same
+              testing again this device. The reason we need to repeat the
+              testing with this configuration is because
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://forum.openwrt.org/t/iperf-measure-network-speed/9203/2"
+                >your router might not be able to process the packets as
+                consumer efficiently but do switch packet quickly</a
+              >.
+            </p>
+            <h4 id="RX"><a href="#RX" class="headerlink" title="RX"></a>RX</h4>
+            <p>
+              Repeat the experiments but reverse the relationship of server and
+              client. You should now run <code>iperf3 -s</code> in your device
+              to verify the download speed.
+            </p>
+            <h2 id="Map-with-a-Free-Domain">
+              <a
+                href="#Map-with-a-Free-Domain"
+                class="headerlink"
+                title="Map with a Free Domain"
+              ></a
+              >Map with a Free Domain
+            </h2>
+            <h3 id="Verify-NAT">
+              <a href="#Verify-NAT" class="headerlink" title="Verify NAT"></a
+              >Verify NAT
+            </h3>
+            <p>
+              First you need to confirm with your internet provider that your
+              router doesn’t live behind a
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://en.wikipedia.org/wiki/Network_address_translation"
+                >NAT</a
+              >
+              or
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://en.wikipedia.org/wiki/Carrier-grade_NAT"
+                >CGNAT</a
+              >. You can also manually verify this by checking your IP address
+              when you search in Google and the IP address from OpenWrt GUI
+              -&gt; Network -&gt; Interfaces -&gt; WAN -&gt; IPv4.
+            </p>
+            <h3 id="Create-Domain">
+              <a
+                href="#Create-Domain"
+                class="headerlink"
+                title="Create Domain"
+              ></a
+              >Create Domain
+            </h3>
+            <p>
+              You can request a free domain with
+              <a target="_blank" rel="noopener" href="https://www.duckdns.org/"
+                >Duck DNS</a
+              >.
+            </p>
+            <h3 id="Keep-the-IP-Address-Up-to-Date">
+              <a
+                href="#Keep-the-IP-Address-Up-to-Date"
+                class="headerlink"
+                title="Keep the IP Address Up-to-Date"
+              ></a
+              ><a
+                target="_blank"
+                rel="noopener"
+                href="https://www.duckdns.org/install.jsp"
+                >Keep the IP Address Up-to-Date</a
+              >
+            </h3>
+            <h2 id="Expose-Internal-Service-to-Internet">
+              <a
+                href="#Expose-Internal-Service-to-Internet"
+                class="headerlink"
+                title="Expose Internal Service to Internet"
+              ></a
+              >Expose Internal Service to Internet
+            </h2>
+            <p>
+              From OpenWrt Luci GUI -&gt; Network -&gt; DHCP and DNS -&gt;
+              Static Leases, set your internal host with a static IP address so
+              port forwarding can work.
+            </p>
+            <p>
+              Go to OpenWrt Luci GUI -&gt; Network -&gt; Firewall -&gt; Port
+              Forwards, then add rules to forward traffic from Internet to your
+              internal host which lives inside of private network e.g. port
+              forwarding to SSH server.
+            </p>
+            <h2 id="Reference">
+              <a href="#Reference" class="headerlink" title="Reference"></a
+              >Reference
+            </h2>
+            <ul>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://openwrt.org/docs/techref/image.format"
+                  >Image formats</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://openwrt.org/docs/guide-user/installation/recovery_methods/d-link_recovery_gui"
+                  >D-Link Recovery GUI</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://bandaancha.eu/articulos/canales-wifi-banda-5-ghz-espana-mejor-9826"
+                  >Canales wifi en la banda 5 GHz en España: Lo que nunca te han
+                  contado</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://bandaancha.eu/articulos/todas-canales-bandas-wifi-2-4-5-6ghz-10117"
+                  >Todos los canales y bandas de frecuencias wifi legales en
+                  España en 2,4; 5 y 6 GHz</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://bandaancha.eu/articulos/mejor-router-wifi-tiene-muchas-antenas-9810"
+                  >¿Es mejor un router wifi si tiene muchas antenas MIMO?</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://www.cbtnuggets.com/blog/certifications/cisco/when-to-use-20mhz-vs-40mhz-vs-80mhz"
+                  >When to Use 20mhz vs 40mhz vs 80mhz</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://www.smallnetbuilder.com/wireless/wireless-features/33228-wi-fi-ping-spikes-causes-and-fixes"
+                  >Wi-Fi Ping Spikes: Causes and Fixes</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://www.intel.com/content/www/us/en/support/articles/000005725/wireless/legacy-intel-wireless-products.html"
+                  >Different Wi-Fi Protocols and Data Rates</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://forum.archive.openwrt.org/viewtopic.php?id=54943"
+                  >Edit &#x2F;etc&#x2F;hosts via WebUI</a
+                >
+              </li>
+            </ul>
+
+            <hr />
+
+            <ul class="list-group"></ul>
+
+            <ul class="pagination pager">
+              <li class="page-item">
+                <a
+                  target="_parent"
+                  class="page-link"
+                  href="/migrations/RaspberryPi-Odoo/"
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  title="RaspberryPi Odoo"
+                  >&larr; Previous Post</a
+                >
+              </li>
+
+              <li class="page-item ms-auto">
+                <a
+                  target="_parent"
+                  class="page-link"
+                  href="/migrations/Remote-Access-Via-TightVNC-To-Windows-Machine/"
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  title="Remote Access Via TightVNC To Windows Machine"
+                  >Next Post &rarr;</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="comment">
+          <!-- disqus 评论框 start -->
+
+          <!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = "blog-vnwybnwkiz";
+            var disqus_identifier =
+              "https://vitaminac.github.io/D-LINK-DIR-882-A1-OpenWrt/";
+            var disqus_url =
+              "https://vitaminac.github.io/D-LINK-DIR-882-A1-OpenWrt/";
+            var disqus_config = function () {
+              this.language = "en";
+            };
+
+            (function () {
+              var dsq = document.createElement("script");
+              dsq.type = "text/javascript";
+              dsq.async = true;
+              dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+              (
+                document.getElementsByTagName("head")[0] ||
+                document.getElementsByTagName("body")[0]
+              ).appendChild(dsq);
+            })();
+          </script>
+          <!-- disqus 公共JS代码 end -->
+          <div id="disqus_thread" class="disqus-thread"></div>
+          <!-- disqus 评论框 end -->
+        </div>
+
+        <div class="row justify-content-center">
+          <!-- Sidebar Container -->
+
+          <div class="col-lg-8` col-md-10 sidebar-container">
+            <!-- Friends Blog -->
+          </div>
+        </div>
+      </div>
+    </article>
+    <!-- Custom Theme JavaScript -->
+    <script type="text/javascript" src="/js/blog.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        anchors.add("p");
+      });
+    </script>
+
+    <!-- jquery.tagcloud.js -->
+    <script>
+      // only load tagcloud.js in tag.html
+      if ($("#tag_cloud").length !== 0) {
+        async("https://vitaminac.github.io/js/jquery.tagcloud.js", function () {
+          $.fn.tagcloud.defaults = {
+            //size: {start: 1, end: 1, unit: 'em'},
+            color: {
+              start: "#bbbbee",
+              end: "#0085a1",
+            },
+          };
+          $("#tag_cloud a").tagcloud();
+        });
+      }
+    </script>
+
+    <script type="text/javascript" src="/js/common.js"></script>
+
+    <!-- render ipynb file -->
+
+    <!-- render ipynb file -->
+  </body>
+</html>

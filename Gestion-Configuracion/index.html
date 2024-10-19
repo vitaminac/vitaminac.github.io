@@ -1,0 +1,691 @@
+<!doctype html>
+<html lang="en">
+  <!-- Head tag -->
+  <!-- SEO -->
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Gestion de Configuración｜Gao&#39;s Blog</title>
+    <meta
+      property="og:title"
+      content="Gestion de Configuración｜Gao&#39;s Blog"
+    />
+
+    <meta
+      name="description"
+      content="Gestion de Configuración｜Gao&#39;s Blog"
+    />
+    <meta
+      property="og:description"
+      content="Gestion de Configuración｜Gao&#39;s Blog"
+    />
+    <meta name="author" content="Gao" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      property="og:image"
+      content="https://vitaminac.github.io/images/favicon.jpg"
+    />
+    <link rel="shortcut icon" href="/images/favicon.jpg" />
+
+    <meta
+      name="keywords"
+      content="Software Evolution,Gestión de Configuración"
+    />
+
+    <meta name="theme-color" content="#600090" />
+    <meta name="msapplication-navbutton-color" content="#600090" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090" />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="Gao&#39;s Blog"
+      href="/atom.xml"
+    />
+
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      cross-origin="anonymous"
+      referrer-policy="no-referrer"
+    />
+    <link
+      rel="canonical"
+      href="https://vitaminac.github.io/Gestion-Configuracion/"
+    />
+
+    <!-- jQuery -->
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+    ></script>
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css" />
+    <link rel="stylesheet" href="/css/syntax.css" />
+
+    <!-- Google Tag Manager -->
+
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-WDC9JKC");
+    </script>
+
+    <!-- End Google Tag Manager -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-151409235-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-151409235-1");
+    </script>
+
+    <!-- Google AdSense -->
+    <script
+      data-ad-client="ca-pub-8356359077918854"
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+    <meta name="generator" content="Hexo 6.3.0" />
+  </head>
+  <style>
+    header.intro-header {
+      background-image: url("/images/header.gif");
+    }
+  </style>
+  <!-- hack iOS CSS :active style -->
+
+  <body ontouchstart="" class="animated fadeIn">
+    <!-- Main Content -->
+
+    <!--only post-->
+
+    <img class="wechat-title-img" src="/images/preview.jpeg" />
+
+    <style>
+      header.intro-header {
+        background-image: url("/images/preview.jpeg");
+      }
+    </style>
+
+    <header class="intro-header">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-md-10 text-center">
+            <div class="post-heading">
+              <h1>Gestion de Configuración</h1>
+
+              <span class="meta"
+                >Autor: Gao
+                <span />
+                Fecha: 2019-05-12
+              </span>
+              <div class="tags text-center">
+                <a
+                  target="_parent"
+                  class="tag"
+                  href="/posts/langs/es/tags/Software Evolution"
+                  title="Software Evolution"
+                >
+                  Software Evolution</a
+                >
+
+                <a
+                  target="_parent"
+                  class="tag"
+                  href="/posts/langs/es/tags/Gestión de Configuración"
+                  title="Gestión de Configuración"
+                >
+                  Gestión de Configuración</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="post-title-haojen">
+        <span> Gestion de Configuración </span>
+      </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <!-- Post Container -->
+          <div class="order-lg-2 col-lg-3 col-12 toc-col" style="z-index: 1">
+            <ol class="toc">
+              <li class="toc-item toc-level-2">
+                <a
+                  class="toc-link"
+                  href="#Gestion-de-la-configuracion-del-software"
+                  ><span class="toc-text"
+                    >Gestión de la configuración del software</span
+                  ></a
+                >
+              </li>
+              <li class="toc-item toc-level-2">
+                <a class="toc-link" href="#Estandar-ISO-12207"
+                  ><span class="toc-text">Estándar ISO 12207</span></a
+                >
+              </li>
+              <li class="toc-item toc-level-2">
+                <a class="toc-link" href="#Origenes-del-cambio"
+                  ><span class="toc-text">Orígenes del cambio</span></a
+                >
+              </li>
+              <li class="toc-item toc-level-2">
+                <a class="toc-link" href="#Configuracion-software"
+                  ><span class="toc-text">Configuración software</span></a
+                >
+              </li>
+              <li class="toc-item toc-level-2">
+                <a class="toc-link" href="#Elemento-de-configuracion"
+                  ><span class="toc-text">Elemento de configuración</span></a
+                >
+              </li>
+              <li class="toc-item toc-level-2">
+                <a class="toc-link" href="#Linea-base"
+                  ><span class="toc-text">Línea base</span></a
+                >
+              </li>
+              <li class="toc-item toc-level-2">
+                <a class="toc-link" href="#Actividades-de-la-GCS"
+                  ><span class="toc-text">Actividades de la GCS</span></a
+                >
+              </li>
+              <li class="toc-item toc-level-2">
+                <a class="toc-link" href="#Documento-del-Plan-de-GCS"
+                  ><span class="toc-text">Documento del Plan de GCS</span></a
+                >
+              </li>
+              <li class="toc-item toc-level-2">
+                <a class="toc-link" href="#Control-de-cambios"
+                  ><span class="toc-text">Control de cambios</span></a
+                >
+              </li>
+              <li class="toc-item toc-level-2">
+                <a class="toc-link" href="#Control-de-versiones"
+                  ><span class="toc-text">Control de versiones</span></a
+                >
+                <ol class="toc-child">
+                  <li class="toc-item toc-level-3">
+                    <a class="toc-link" href="#Repositorio"
+                      ><span class="toc-text">Repositorio</span></a
+                    >
+                    <ol class="toc-child">
+                      <li class="toc-item toc-level-4">
+                        <a
+                          class="toc-link"
+                          href="#Bloqueo-Modificacion-Desbloqueo"
+                          ><span class="toc-text"
+                            >Bloqueo-Modificación-Desbloqueo</span
+                          ></a
+                        >
+                      </li>
+                      <li class="toc-item toc-level-4">
+                        <a class="toc-link" href="#Copiar-Modificar-Mezclar"
+                          ><span class="toc-text"
+                            >Copiar-Modificar-Mezclar</span
+                          ></a
+                        >
+                      </li>
+                    </ol>
+                  </li>
+                  <li class="toc-item toc-level-3">
+                    <a
+                      class="toc-link"
+                      href="#Evoluciones-posibles-y-sus-definiciones"
+                      ><span class="toc-text"
+                        >Evoluciones posibles y sus definiciones</span
+                      ></a
+                    >
+                    <ol class="toc-child">
+                      <li class="toc-item toc-level-4">
+                        <a class="toc-link" href="#Revision"
+                          ><span class="toc-text">Revisión</span></a
+                        >
+                      </li>
+                      <li class="toc-item toc-level-4">
+                        <a class="toc-link" href="#Variante"
+                          ><span class="toc-text">Variante</span></a
+                        >
+                      </li>
+                      <li class="toc-item toc-level-4">
+                        <a class="toc-link" href="#Version"
+                          ><span class="toc-text">Versión</span></a
+                        >
+                      </li>
+                      <li class="toc-item toc-level-4">
+                        <a class="toc-link" href="#Delta"
+                          ><span class="toc-text">Delta</span></a
+                        >
+                      </li>
+                    </ol>
+                  </li>
+                  <li class="toc-item toc-level-3">
+                    <a class="toc-link" href="#Gestion-de-entregas"
+                      ><span class="toc-text">Gestión de entregas</span></a
+                    >
+                  </li>
+                </ol>
+              </li>
+            </ol>
+          </div>
+
+          <div class="order-lg-1 col-lg-9 col-12 post-container">
+            <h2 id="Gestion-de-la-configuracion-del-software">
+              <a
+                href="#Gestion-de-la-configuracion-del-software"
+                class="headerlink"
+                title="Gestión de la configuración del software"
+              ></a
+              >Gestión de la configuración del software
+            </h2>
+            <p>
+              Identificar, organizar, revisar y controlar las modificaciones que
+              sufre durante el proceso de software para maximizar la producción
+              y minimizar los errores.
+            </p>
+            <h2 id="Estandar-ISO-12207">
+              <a
+                href="#Estandar-ISO-12207"
+                class="headerlink"
+                title="Estándar ISO 12207"
+              ></a
+              >Estándar ISO 12207
+            </h2>
+            <p>
+              Es un marco de referencia común para los procesos del ciclo de via
+              de software con una terminologia bien definida. Entre los 8
+              procesos de soporte, está el de la
+              <strong>Gestión de la Configuración del Software</strong>.
+            </p>
+            <h2 id="Origenes-del-cambio">
+              <a
+                href="#Origenes-del-cambio"
+                class="headerlink"
+                title="Orígenes del cambio"
+              ></a
+              >Orígenes del cambio
+            </h2>
+            <ul>
+              <li>Cambios en el mercado</li>
+              <li>Cambios hechos por el cliente</li>
+              <li>Reorganización de las prioridades</li>
+              <li>Restricciones</li>
+            </ul>
+            <h2 id="Configuracion-software">
+              <a
+                href="#Configuracion-software"
+                class="headerlink"
+                title="Configuración software"
+              ></a
+              >Configuración software
+            </h2>
+            <p>
+              Conjunto de elementos que contienen toda la información prooducida
+              por el proceso software.
+            </p>
+            <h2 id="Elemento-de-configuracion">
+              <a
+                href="#Elemento-de-configuracion"
+                class="headerlink"
+                title="Elemento de configuración"
+              ></a
+              >Elemento de configuración
+            </h2>
+            <p>
+              Es el conjunto de partes en las cuales se divide el software y
+              sobre las que se quieren controlar los cambios.
+            </p>
+            <h2 id="Linea-base">
+              <a href="#Linea-base" class="headerlink" title="Línea base"></a
+              >Línea base
+            </h2>
+            <p>
+              Especificación o producto revisado que sirve como base para el
+              posterior desarrollo y sólo puede cambiarse por procedimientos
+              formales de control de cambios.
+            </p>
+            <ul>
+              <li><strong>LB funcinoal</strong></li>
+              <li><strong>LB de asignación</strong></li>
+              <li><strong>LB de diseño</strong></li>
+              <li><strong>LB de producto</strong></li>
+              <li><strong>LB de Explotación</strong></li>
+            </ul>
+            <h2 id="Actividades-de-la-GCS">
+              <a
+                href="#Actividades-de-la-GCS"
+                class="headerlink"
+                title="Actividades de la GCS"
+              ></a
+              >Actividades de la GCS
+            </h2>
+            <ol>
+              <li>Identificación de la configuración</li>
+              <li>
+                Control de la configuración
+                <ol>
+                  <li>
+                    Identificación de la necesidad del cambio y documentación
+                  </li>
+                  <li>Análisis y evaluación de la petición de cambio</li>
+                  <li>Aprobación o desaprobación del cambio</li>
+                  <li>Implementación del cambio</li>
+                </ol>
+              </li>
+              <li>
+                Contabilidad del estado de la configuración
+                <ul>
+                  <li>Permiten dar a conocer al equipo de desarrollo</li>
+                </ul>
+              </li>
+              <li>Auditoría y revisiones de la configuración</li>
+            </ol>
+            <h2 id="Documento-del-Plan-de-GCS">
+              <a
+                href="#Documento-del-Plan-de-GCS"
+                class="headerlink"
+                title="Documento del Plan de GCS"
+              ></a
+              >Documento del Plan de GCS
+            </h2>
+            <p>IEEE Std. 828-2005</p>
+            <h2 id="Control-de-cambios">
+              <a
+                href="#Control-de-cambios"
+                class="headerlink"
+                title="Control de cambios"
+              ></a
+              >Control de cambios
+            </h2>
+            <ul>
+              <li>
+                <p>Control informal: Antes de aprobarse nuevo elemento</p>
+              </li>
+              <li>
+                <p>
+                  Control de gestión: Conduce a la aprobación de un nuevo
+                  elemento
+                </p>
+              </li>
+              <li><p>Control formal</p></li>
+            </ul>
+            <h2 id="Control-de-versiones">
+              <a
+                href="#Control-de-versiones"
+                class="headerlink"
+                title="Control de versiones"
+              ></a
+              >Control de versiones
+            </h2>
+            <p>
+              El uso de procedimientos y herramientas para la gestión de las
+              versiones.
+            </p>
+            <ul>
+              <li>
+                <strong>Versión</strong>: Forma particular que adopta un
+                elemento de configuracion de un instante determinado.
+              </li>
+              <li>
+                <strong>Elemento genéricos</strong>: de un sistema de control de
+                versiones
+              </li>
+              <li>
+                <strong>Gestor de versiones</strong>: almacena todas las
+                versinoes y permite crear nuevas a partir de las versiones
+                almacenadas.
+              </li>
+            </ul>
+            <h3 id="Repositorio">
+              <a href="#Repositorio" class="headerlink" title="Repositorio"></a
+              >Repositorio
+            </h3>
+            <p>Base de datos del proyecto</p>
+            <h4 id="Bloqueo-Modificacion-Desbloqueo">
+              <a
+                href="#Bloqueo-Modificacion-Desbloqueo"
+                class="headerlink"
+                title="Bloqueo-Modificación-Desbloqueo"
+              ></a
+              >Bloqueo-Modificación-Desbloqueo
+            </h4>
+            <p>Siempre centralizado.</p>
+            <h4 id="Copiar-Modificar-Mezclar">
+              <a
+                href="#Copiar-Modificar-Mezclar"
+                class="headerlink"
+                title="Copiar-Modificar-Mezclar"
+              ></a
+              >Copiar-Modificar-Mezclar
+            </h4>
+            <p>Puede ser centralizado o distribuido.</p>
+            <h3 id="Evoluciones-posibles-y-sus-definiciones">
+              <a
+                href="#Evoluciones-posibles-y-sus-definiciones"
+                class="headerlink"
+                title="Evoluciones posibles y sus definiciones"
+              ></a
+              >Evoluciones posibles y sus definiciones
+            </h3>
+            <h4 id="Revision">
+              <a href="#Revision" class="headerlink" title="Revisión"></a
+              >Revisión
+            </h4>
+            <p>
+              Conjunto de versiones en un instante determinado con el objetivo
+              de reemplazar versiones anteriores
+            </p>
+            <h4 id="Variante">
+              <a href="#Variante" class="headerlink" title="Variante"></a
+              >Variante
+            </h4>
+            <p>Se añade a las versiones existentes sin reemplazarlas</p>
+            <h4 id="Version">
+              <a href="#Version" class="headerlink" title="Versión"></a>Versión
+            </h4>
+            <p>
+              Ubstabcua de sustena de dufuera de akguna manera de otras
+              instancias del mismo sistema
+            </p>
+            <h4 id="Delta">
+              <a href="#Delta" class="headerlink" title="Delta"></a>Delta
+            </h4>
+            <p>onjunto de cambios</p>
+            <h3 id="Gestion-de-entregas">
+              <a
+                href="#Gestion-de-entregas"
+                class="headerlink"
+                title="Gestión de entregas"
+              ></a
+              >Gestión de entregas
+            </h3>
+            <p>
+              Una entrega es una versión del sistema que se entrega a los
+              clientes
+            </p>
+
+            <hr />
+
+            <ul class="list-group">
+              <li
+                class="list-group-item list-group-item-action flex-column align-items-start"
+              >
+                <a
+                  target="_parent"
+                  href="/migrations/Evolucion-Adaptacion-Software/"
+                >
+                  Evolución Adaptacion Software
+                </a>
+              </li>
+
+              <li
+                class="list-group-item list-group-item-action flex-column align-items-start"
+              >
+                <a target="_parent" href="/migrations/Evolucion-De-Calidad/">
+                  Evolución de la calidad
+                </a>
+              </li>
+
+              <li
+                class="list-group-item list-group-item-action flex-column align-items-start"
+              >
+                <a target="_parent" href="/migrations/Lehman-laws/">
+                  Lehman Laws
+                </a>
+              </li>
+
+              <li
+                class="list-group-item list-group-item-action flex-column align-items-start"
+              >
+                <a target="_parent" href="/migrations/SOLID/">
+                  SOLID Design Principles
+                </a>
+              </li>
+            </ul>
+
+            <ul class="pagination pager">
+              <li class="page-item">
+                <a
+                  target="_parent"
+                  class="page-link"
+                  href="/migrations/Lehman-laws/"
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  title="Lehman Laws"
+                  >&larr; Artículo Anterior</a
+                >
+              </li>
+
+              <li class="page-item ms-auto">
+                <a
+                  target="_parent"
+                  class="page-link"
+                  href="/migrations/Evolucion-Adaptacion-Software/"
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  title="Evolución Adaptacion Software"
+                  >Siguiente Artículo &rarr;</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="comment">
+          <!-- disqus 评论框 start -->
+
+          <!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = "blog-vnwybnwkiz";
+            var disqus_identifier =
+              "https://vitaminac.github.io/Gestion-Configuracion/";
+            var disqus_url =
+              "https://vitaminac.github.io/Gestion-Configuracion/";
+            var disqus_config = function () {
+              this.language = "es";
+            };
+
+            (function () {
+              var dsq = document.createElement("script");
+              dsq.type = "text/javascript";
+              dsq.async = true;
+              dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+              (
+                document.getElementsByTagName("head")[0] ||
+                document.getElementsByTagName("body")[0]
+              ).appendChild(dsq);
+            })();
+          </script>
+          <!-- disqus 公共JS代码 end -->
+          <div id="disqus_thread" class="disqus-thread"></div>
+          <!-- disqus 评论框 end -->
+        </div>
+
+        <div class="row justify-content-center">
+          <!-- Sidebar Container -->
+
+          <div class="col-lg-8` col-md-10 sidebar-container">
+            <!-- Friends Blog -->
+          </div>
+        </div>
+      </div>
+    </article>
+    <!-- Custom Theme JavaScript -->
+    <script type="text/javascript" src="/js/blog.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        anchors.add("p");
+      });
+    </script>
+
+    <!-- jquery.tagcloud.js -->
+    <script>
+      // only load tagcloud.js in tag.html
+      if ($("#tag_cloud").length !== 0) {
+        async("https://vitaminac.github.io/js/jquery.tagcloud.js", function () {
+          $.fn.tagcloud.defaults = {
+            //size: {start: 1, end: 1, unit: 'em'},
+            color: {
+              start: "#bbbbee",
+              end: "#0085a1",
+            },
+          };
+          $("#tag_cloud a").tagcloud();
+        });
+      }
+    </script>
+
+    <script type="text/javascript" src="/js/common.js"></script>
+
+    <!-- render ipynb file -->
+
+    <!-- render ipynb file -->
+  </body>
+</html>

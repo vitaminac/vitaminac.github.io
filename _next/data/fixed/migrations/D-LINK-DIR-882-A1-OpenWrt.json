@@ -1,0 +1,38 @@
+{
+  "pageProps": {
+    "postData": {
+      "slug": "D-LINK-DIR-882-A1-OpenWrt",
+      "title": "OpenWrt Installation and Configuration on D-LINK DIR-882-A1",
+      "date": "Sun Oct 30 2022 17:03:37 GMT+0000 (Coordinated Universal Time)",
+      "lang": "en",
+      "tags": ["openwrt", "network", "router", "hard router"],
+      "path": "/D-LINK-DIR-882-A1-OpenWrt/index.html"
+    },
+    "lang": "en",
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "en": {
+          "common": { "Next": "Next", "Back to home": "Back to home" },
+          "feature-tags": { "Tags": "Tags" },
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          }
+        }
+      },
+      "initialLocale": "en",
+      "ns": ["common", "feature-tags", "navbar"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

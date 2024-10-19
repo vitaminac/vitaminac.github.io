@@ -1,0 +1,2514 @@
+<!doctype html>
+<html lang="en">
+  <!-- Head tag -->
+  <!-- SEO -->
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Programación Lineal y Entera｜Gao&#39;s Blog</title>
+    <meta
+      property="og:title"
+      content="Programación Lineal y Entera｜Gao&#39;s Blog"
+    />
+
+    <meta
+      name="description"
+      content="Programación Lineal y Entera｜Gao&#39;s Blog"
+    />
+    <meta
+      property="og:description"
+      content="Programación Lineal y Entera｜Gao&#39;s Blog"
+    />
+    <meta name="author" content="Gao" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      property="og:image"
+      content="https://vitaminac.github.io/images/favicon.jpg"
+    />
+    <link rel="shortcut icon" href="/images/favicon.jpg" />
+
+    <meta
+      name="keywords"
+      content="Investigación Operativa,Programación Lineal,Programación,Operation Research,Linear Programming"
+    />
+
+    <meta name="theme-color" content="#600090" />
+    <meta name="msapplication-navbutton-color" content="#600090" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090" />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="Gao&#39;s Blog"
+      href="/atom.xml"
+    />
+
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      cross-origin="anonymous"
+      referrer-policy="no-referrer"
+    />
+    <link
+      rel="canonical"
+      href="https://vitaminac.github.io/Programacion-Lineal-Entera/"
+    />
+
+    <!-- jQuery -->
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+    ></script>
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css" />
+    <link rel="stylesheet" href="/css/syntax.css" />
+
+    <!-- Google Tag Manager -->
+
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-WDC9JKC");
+    </script>
+
+    <!-- End Google Tag Manager -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-151409235-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-151409235-1");
+    </script>
+
+    <!-- Google AdSense -->
+    <script
+      data-ad-client="ca-pub-8356359077918854"
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+    <meta name="generator" content="Hexo 6.3.0" />
+  </head>
+  <style>
+    header.intro-header {
+      background-image: url("/images/header.gif");
+    }
+  </style>
+  <!-- hack iOS CSS :active style -->
+
+  <body ontouchstart="" class="animated fadeIn">
+    <!-- Main Content -->
+
+    <!--only post-->
+
+    <img class="wechat-title-img" src="/images/preview.jpeg" />
+
+    <style>
+      header.intro-header {
+        background-image: url("/images/preview.jpeg");
+      }
+    </style>
+
+    <header class="intro-header">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-md-10 text-center">
+            <div class="post-heading">
+              <h1>Programación Lineal y Entera</h1>
+
+              <span class="meta"
+                >Autor: Gao
+                <span />
+                Fecha: 2019-05-30
+              </span>
+              <div class="tags text-center">
+                <a
+                  target="_parent"
+                  class="tag"
+                  href="/posts/langs/es/tags/Investigación Operativa"
+                  title="Investigación Operativa"
+                >
+                  Investigación Operativa</a
+                >
+
+                <a
+                  target="_parent"
+                  class="tag"
+                  href="/posts/langs/es/tags/Programación Lineal"
+                  title="Programación Lineal"
+                >
+                  Programación Lineal</a
+                >
+
+                <a
+                  target="_parent"
+                  class="tag"
+                  href="/posts/langs/es/tags/Programación"
+                  title="Programación"
+                >
+                  Programación</a
+                >
+
+                <a
+                  target="_parent"
+                  class="tag"
+                  href="/posts/langs/es/tags/Operation Research"
+                  title="Operation Research"
+                >
+                  Operation Research</a
+                >
+
+                <a
+                  target="_parent"
+                  class="tag"
+                  href="/posts/langs/es/tags/Linear Programming"
+                  title="Linear Programming"
+                >
+                  Linear Programming</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="post-title-haojen">
+        <span> Programación Lineal y Entera </span>
+      </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <!-- Post Container -->
+          <div class="order-lg-2 col-lg-3 col-12 toc-col" style="z-index: 1">
+            <ol class="toc">
+              <li class="toc-item toc-level-1">
+                <a class="toc-link" href="#Programacion-Lineal"
+                  ><span class="toc-text">Programación Lineal</span></a
+                >
+                <ol class="toc-child">
+                  <li class="toc-item toc-level-2">
+                    <a class="toc-link" href="#Introduccion"
+                      ><span class="toc-text">Introducción</span></a
+                    >
+                  </li>
+                  <li class="toc-item toc-level-2">
+                    <a class="toc-link" href="#Construccion-de-modelos"
+                      ><span class="toc-text">Construcción de modelos</span></a
+                    >
+                  </li>
+                  <li class="toc-item toc-level-2">
+                    <a class="toc-link" href="#Programacion-lineal"
+                      ><span class="toc-text">Programación lineal</span></a
+                    >
+                  </li>
+                  <li class="toc-item toc-level-2">
+                    <a class="toc-link" href="#Forma-estandar-del-modelo"
+                      ><span class="toc-text"
+                        >Forma estándar del modelo</span
+                      ></a
+                    >
+                  </li>
+                  <li class="toc-item toc-level-2">
+                    <a class="toc-link" href="#Tipos-de-puntos-en-un-PL"
+                      ><span class="toc-text">Tipos de puntos en un PL</span></a
+                    >
+                    <ol class="toc-child">
+                      <li class="toc-item toc-level-3">
+                        <a class="toc-link" href="#Observacion"
+                          ><span class="toc-text">Observación</span></a
+                        >
+                      </li>
+                    </ol>
+                  </li>
+                  <li class="toc-item toc-level-2">
+                    <a
+                      class="toc-link"
+                      href="#Modelos-de-asignacion-de-recursos"
+                      ><span class="toc-text"
+                        >Modelos de asignación de recursos</span
+                      ></a
+                    >
+                    <ol class="toc-child">
+                      <li class="toc-item toc-level-3">
+                        <a class="toc-link" href="#Variables-de-decision"
+                          ><span class="toc-text"
+                            >Variables de decisión</span
+                          ></a
+                        >
+                      </li>
+                      <li class="toc-item toc-level-3">
+                        <a class="toc-link" href="#Restricciones-de-repartos"
+                          ><span class="toc-text"
+                            >Restricciónes de repartos</span
+                          ></a
+                        >
+                      </li>
+                    </ol>
+                  </li>
+                  <li class="toc-item toc-level-2">
+                    <a class="toc-link" href="#Modelos-de-mezclas"
+                      ><span class="toc-text">Modelos de mezclas</span></a
+                    >
+                    <ol class="toc-child">
+                      <li class="toc-item toc-level-3">
+                        <a class="toc-link" href="#Variables-de-mezclas"
+                          ><span class="toc-text">Variables de mezclas</span></a
+                        >
+                      </li>
+                      <li class="toc-item toc-level-3">
+                        <a class="toc-link" href="#Restricciones-de-composicion"
+                          ><span class="toc-text"
+                            >Restricciones de composición</span
+                          ></a
+                        >
+                      </li>
+                    </ol>
+                  </li>
+                  <li class="toc-item toc-level-2">
+                    <a
+                      class="toc-link"
+                      href="#Modelos-de-planificacion-de-operaciones"
+                      ><span class="toc-text"
+                        >Modelos de planificación de operaciones</span
+                      ></a
+                    >
+                    <ol class="toc-child">
+                      <li class="toc-item toc-level-3">
+                        <a
+                          class="toc-link"
+                          href="#Variables-de-decision-de-gran-magnitud"
+                          ><span class="toc-text"
+                            >Variables de decisión de gran magnitud</span
+                          ></a
+                        >
+                      </li>
+                      <li class="toc-item toc-level-3">
+                        <a class="toc-link" href="#Restricciones-de-balance"
+                          ><span class="toc-text"
+                            >Restricciones de balance</span
+                          ></a
+                        >
+                      </li>
+                    </ol>
+                  </li>
+                  <li class="toc-item toc-level-2">
+                    <a class="toc-link" href="#Modelos-de-gestion-de-personal"
+                      ><span class="toc-text"
+                        >Modelos de gestión de personal</span
+                      ></a
+                    >
+                    <ol class="toc-child">
+                      <li class="toc-item toc-level-3">
+                        <a class="toc-link" href="#Restricciones-de-cubrimiento"
+                          ><span class="toc-text"
+                            >Restricciones de cubrimiento</span
+                          ></a
+                        >
+                      </li>
+                    </ol>
+                  </li>
+                  <li class="toc-item toc-level-2">
+                    <a
+                      class="toc-link"
+                      href="#Modelos-de-planificacion-multiperiodo"
+                      ><span class="toc-text"
+                        >Modelos de planificación multiperiodo</span
+                      ></a
+                    >
+                    <ol class="toc-child">
+                      <li class="toc-item toc-level-3">
+                        <a
+                          class="toc-link"
+                          href="#Variables-de-decision-por-periodo"
+                          ><span class="toc-text"
+                            >Variables de decisión por periodo</span
+                          ></a
+                        >
+                      </li>
+                      <li class="toc-item toc-level-3">
+                        <a class="toc-link" href="#Restricciones-de-balace"
+                          ><span class="toc-text"
+                            >Restricciones de balace</span
+                          ></a
+                        >
+                      </li>
+                    </ol>
+                  </li>
+                  <li class="toc-item toc-level-2">
+                    <a class="toc-link" href="#Resolucion-geometrica-de-un-PL"
+                      ><span class="toc-text"
+                        >Resolución geométrica de un PL</span
+                      ></a
+                    >
+                    <ol class="toc-child">
+                      <li class="toc-item toc-level-3">
+                        <a
+                          class="toc-link"
+                          href="#Paso-a-seguir-para-la-resolucion-de-forma-grafica"
+                          ><span class="toc-text"
+                            >Paso a seguir para la resolución de forma
+                            gráfica</span
+                          ></a
+                        >
+                      </li>
+                    </ol>
+                  </li>
+                  <li class="toc-item toc-level-2">
+                    <a class="toc-link" href="#Postoptimizacion"
+                      ><span class="toc-text">Postoptimización</span></a
+                    >
+                    <ol class="toc-child">
+                      <li class="toc-item toc-level-3">
+                        <a class="toc-link" href="#Sensibilidad-cualitativa"
+                          ><span class="toc-text"
+                            >Sensibilidad cualitativa</span
+                          ></a
+                        >
+                        <ol class="toc-child">
+                          <li class="toc-item toc-level-4">
+                            <a
+                              class="toc-link"
+                              href="#Aumento-del-conjunto-factible"
+                              ><span class="toc-text"
+                                >Aumento del conjunto factible</span
+                              ></a
+                            >
+                          </li>
+                          <li class="toc-item toc-level-4">
+                            <a
+                              class="toc-link"
+                              href="#Reduccion-del-conjunto-factible"
+                              ><span class="toc-text"
+                                >Reduccion del conjunto factible</span
+                              ></a
+                            >
+                          </li>
+                          <li class="toc-item toc-level-4">
+                            <a
+                              class="toc-link"
+                              href="#Cambios-en-Right-Hand-Side"
+                              ><span class="toc-text"
+                                >Cambios en Right-Hand Side</span
+                              ></a
+                            >
+                            <ol class="toc-child">
+                              <li class="toc-item toc-level-5">
+                                <a
+                                  class="toc-link"
+                                  href="#Relajar-una-restriccion"
+                                  ><span class="toc-text"
+                                    >Relajar una restriccion</span
+                                  ></a
+                                >
+                              </li>
+                              <li class="toc-item toc-level-5">
+                                <a
+                                  class="toc-link"
+                                  href="#Tensar-una-restriccion"
+                                  ><span class="toc-text"
+                                    >Tensar una restriccion</span
+                                  ></a
+                                >
+                              </li>
+                            </ol>
+                          </li>
+                          <li class="toc-item toc-level-4">
+                            <a class="toc-link" href="#Cambios-en-A"
+                              ><span class="toc-text">Cambios en A</span></a
+                            >
+                            <ol class="toc-child">
+                              <li class="toc-item toc-level-5">
+                                <a
+                                  class="toc-link"
+                                  href="#Inclusion-de-nuevas-restricciones"
+                                  ><span class="toc-text"
+                                    >Inclusion de nuevas restricciones</span
+                                  ></a
+                                >
+                              </li>
+                              <li class="toc-item toc-level-5">
+                                <a
+                                  class="toc-link"
+                                  href="#Eliminacion-de-restricciones"
+                                  ><span class="toc-text"
+                                    >Eliminacion de restricciones</span
+                                  ></a
+                                >
+                              </li>
+                              <li class="toc-item toc-level-5">
+                                <a
+                                  class="toc-link"
+                                  href="#Inclusion-de-nuevas-variables"
+                                  ><span class="toc-text"
+                                    >Inclusion de nuevas variables</span
+                                  ></a
+                                >
+                              </li>
+                              <li class="toc-item toc-level-5">
+                                <a
+                                  class="toc-link"
+                                  href="#Eliminacion-de-variables"
+                                  ><span class="toc-text"
+                                    >Eliminacion de variables</span
+                                  ></a
+                                >
+                              </li>
+                            </ol>
+                          </li>
+                        </ol>
+                      </li>
+                      <li class="toc-item toc-level-3">
+                        <a class="toc-link" href="#Sensibilidad-cuantitativa"
+                          ><span class="toc-text"
+                            >Sensibilidad cuantitativa</span
+                          ></a
+                        >
+                        <ol class="toc-child">
+                          <li class="toc-item toc-level-4">
+                            <a class="toc-link" href="#Variables-duales"
+                              ><span class="toc-text">Variables duales</span></a
+                            >
+                          </li>
+                          <li class="toc-item toc-level-4">
+                            <a
+                              class="toc-link"
+                              href="#Signo-de-una-variable-dual"
+                              ><span class="toc-text"
+                                >Signo de una variable dual</span
+                              ></a
+                            >
+                          </li>
+                        </ol>
+                      </li>
+                      <li class="toc-item toc-level-3">
+                        <a
+                          class="toc-link"
+                          href="#Formulacion-del-problema-dual"
+                          ><span class="toc-text"
+                            >Formulación del problema dual</span
+                          ></a
+                        >
+                      </li>
+                      <li class="toc-item toc-level-3">
+                        <a class="toc-link" href="#Teoremas-de-dualidad"
+                          ><span class="toc-text">Teoremas de dualidad</span></a
+                        >
+                        <ol class="toc-child">
+                          <li class="toc-item toc-level-4">
+                            <a
+                              class="toc-link"
+                              href="#Teorema-debil-de-dualidad"
+                              ><span class="toc-text"
+                                >Teorema débil de dualidad</span
+                              ></a
+                            >
+                          </li>
+                        </ol>
+                      </li>
+                      <li class="toc-item toc-level-3">
+                        <a class="toc-link" href="#Teorema-fuerte-de-dualidad"
+                          ><span class="toc-text"
+                            >Teorema fuerte de dualidad</span
+                          ></a
+                        >
+                      </li>
+                      <li class="toc-item toc-level-3">
+                        <a
+                          class="toc-link"
+                          href="#Casos-factible-infactible-y-no-acotado"
+                          ><span class="toc-text"
+                            >Casos factible, infactible y no acotado</span
+                          ></a
+                        >
+                      </li>
+                    </ol>
+                  </li>
+                </ol>
+              </li>
+              <li class="toc-item toc-level-1">
+                <a class="toc-link" href="#Programacion-Entera"
+                  ><span class="toc-text">Programación Entera</span></a
+                >
+                <ol class="toc-child">
+                  <li class="toc-item toc-level-2">
+                    <a class="toc-link" href="#Problema-de-la-mochila"
+                      ><span class="toc-text">Problema de la mochila</span></a
+                    >
+                    <ol class="toc-child">
+                      <li class="toc-item toc-level-3">
+                        <a class="toc-link" href="#Objetivo"
+                          ><span class="toc-text">Objetivo</span></a
+                        >
+                      </li>
+                      <li class="toc-item toc-level-3">
+                        <a class="toc-link" href="#Variable-de-decision"
+                          ><span class="toc-text">Variable de decisión</span></a
+                        >
+                      </li>
+                      <li class="toc-item toc-level-3">
+                        <a class="toc-link" href="#Formulacion"
+                          ><span class="toc-text">Formulación</span></a
+                        >
+                      </li>
+                    </ol>
+                  </li>
+                  <li class="toc-item toc-level-2">
+                    <a
+                      class="toc-link"
+                      href="#Modelos-de-asignacion-del-presupuesto"
+                      ><span class="toc-text"
+                        >Modelos de asignacion del presupuesto</span
+                      ></a
+                    >
+                  </li>
+                  <li class="toc-item toc-level-2">
+                    <a class="toc-link" href="#Modelos-de-asignacion"
+                      ><span class="toc-text">Modelos de asignación</span></a
+                    >
+                    <ol class="toc-child">
+                      <li class="toc-item toc-level-3">
+                        <a class="toc-link" href="#Objetivo-1"
+                          ><span class="toc-text">Objetivo</span></a
+                        >
+                      </li>
+                      <li class="toc-item toc-level-3">
+                        <a class="toc-link" href="#Variable-de-decision-1"
+                          ><span class="toc-text">Variable de decisión</span></a
+                        >
+                      </li>
+                      <li class="toc-item toc-level-3">
+                        <a class="toc-link" href="#Restricciones"
+                          ><span class="toc-text">Restricciones</span></a
+                        >
+                      </li>
+                      <li class="toc-item toc-level-3">
+                        <a class="toc-link" href="#Formulacion-1"
+                          ><span class="toc-text">Formulación</span></a
+                        >
+                      </li>
+                    </ol>
+                  </li>
+                  <li class="toc-item toc-level-2">
+                    <a
+                      class="toc-link"
+                      href="#Modelos-de-asignacion-generalizada"
+                      ><span class="toc-text"
+                        >Modelos de asignación generalizada</span
+                      ></a
+                    >
+                    <ol class="toc-child">
+                      <li class="toc-item toc-level-3">
+                        <a class="toc-link" href="#Formulacion-2"
+                          ><span class="toc-text">Formulación</span></a
+                        >
+                      </li>
+                    </ol>
+                  </li>
+                  <li class="toc-item toc-level-2">
+                    <a
+                      class="toc-link"
+                      href="#Modelos-de-la-optimizacion-discreta"
+                      ><span class="toc-text"
+                        >Modelos de la optimización discreta</span
+                      ></a
+                    >
+                  </li>
+                  <li class="toc-item toc-level-2">
+                    <a
+                      class="toc-link"
+                      href="#Problema-de-cubrimiento-y-particion"
+                      ><span class="toc-text"
+                        >Problema de cubrimiento y partición</span
+                      ></a
+                    >
+                    <ol class="toc-child">
+                      <li class="toc-item toc-level-3">
+                        <a class="toc-link" href="#Parametros"
+                          ><span class="toc-text">Parametros</span></a
+                        >
+                      </li>
+                      <li class="toc-item toc-level-3">
+                        <a class="toc-link" href="#Restricciones-1"
+                          ><span class="toc-text">Restricciones</span></a
+                        >
+                        <ol class="toc-child">
+                          <li class="toc-item toc-level-4">
+                            <a class="toc-link" href="#Problema-de-cubrimiento"
+                              ><span class="toc-text"
+                                >Problema de cubrimiento</span
+                              ></a
+                            >
+                          </li>
+                          <li class="toc-item toc-level-4">
+                            <a class="toc-link" href="#Problema-de-particion"
+                              ><span class="toc-text"
+                                >Problema de partición</span
+                              ></a
+                            >
+                          </li>
+                        </ol>
+                      </li>
+                    </ol>
+                  </li>
+                  <li class="toc-item toc-level-2">
+                    <a class="toc-link" href="#Diseno-de-redes"
+                      ><span class="toc-text">Diseño de redes</span></a
+                    >
+                    <ol class="toc-child">
+                      <li class="toc-item toc-level-3">
+                        <a class="toc-link" href="#Objetivo-2"
+                          ><span class="toc-text">Objetivo</span></a
+                        >
+                      </li>
+                      <li class="toc-item toc-level-3">
+                        <a class="toc-link" href="#Formulacion-3"
+                          ><span class="toc-text">Formulación</span></a
+                        >
+                      </li>
+                    </ol>
+                  </li>
+                  <li class="toc-item toc-level-2">
+                    <a class="toc-link" href="#Localizacion-de-plantas"
+                      ><span class="toc-text">Localización de plantas</span></a
+                    >
+                    <ol class="toc-child">
+                      <li class="toc-item toc-level-3">
+                        <a class="toc-link" href="#Objetivo-3"
+                          ><span class="toc-text">Objetivo</span></a
+                        >
+                      </li>
+                      <li class="toc-item toc-level-3">
+                        <a class="toc-link" href="#Formulacion-4"
+                          ><span class="toc-text">Formulación</span></a
+                        >
+                      </li>
+                    </ol>
+                  </li>
+                  <li class="toc-item toc-level-2">
+                    <a class="toc-link" href="#Problema-de-viajante"
+                      ><span class="toc-text">Problema de viajante</span></a
+                    >
+                    <ol class="toc-child">
+                      <li class="toc-item toc-level-3">
+                        <a class="toc-link" href="#Variable-de-decision-2"
+                          ><span class="toc-text">Variable de decisión</span></a
+                        >
+                      </li>
+                      <li class="toc-item toc-level-3">
+                        <a class="toc-link" href="#Restricciones-2"
+                          ><span class="toc-text">Restricciones</span></a
+                        >
+                        <ol class="toc-child">
+                          <li class="toc-item toc-level-4">
+                            <a
+                              class="toc-link"
+                              href="#El-agente-debe-salir-de-todas-las-ciudades"
+                              ><span class="toc-text"
+                                >El agente debe salir de todas las
+                                ciudades</span
+                              ></a
+                            >
+                          </li>
+                          <li class="toc-item toc-level-4">
+                            <a
+                              class="toc-link"
+                              href="#El-agente-debe-llegar-a-todas-las-ciudades"
+                              ><span class="toc-text"
+                                >El agente debe llegar a todas las
+                                ciudades</span
+                              ></a
+                            >
+                          </li>
+                          <li class="toc-item toc-level-4">
+                            <a class="toc-link" href="#Eliminacion-de-subciclos"
+                              ><span class="toc-text"
+                                >Eliminación de subciclos</span
+                              ></a
+                            >
+                          </li>
+                        </ol>
+                      </li>
+                    </ol>
+                  </li>
+                  <li class="toc-item toc-level-2">
+                    <a class="toc-link" href="#Modelado-de-condiciones-logica"
+                      ><span class="toc-text"
+                        >Modelado de condiciones lógica</span
+                      ></a
+                    >
+                    <ol class="toc-child">
+                      <li class="toc-item toc-level-3">
+                        <a class="toc-link" href="#Seleccion-multiple"
+                          ><span class="toc-text">Selección múltiple</span></a
+                        >
+                        <ol class="toc-child">
+                          <li class="toc-item toc-level-4">
+                            <a
+                              class="toc-link"
+                              href="#Al-menos-dos-tipos-seleccionados"
+                              ><span class="toc-text"
+                                >Al menos dos tipos seleccionados</span
+                              ></a
+                            >
+                          </li>
+                          <li class="toc-item toc-level-4">
+                            <a
+                              class="toc-link"
+                              href="#Exactamente-dos-tipos-seleccionados"
+                              ><span class="toc-text"
+                                >Exactamente dos tipos seleccionados</span
+                              ></a
+                            >
+                          </li>
+                          <li class="toc-item toc-level-4">
+                            <a
+                              class="toc-link"
+                              href="#A-lo-sumo-dos-tipos-seleccionados"
+                              ><span class="toc-text"
+                                >A lo sumo dos tipos seleccionados</span
+                              ></a
+                            >
+                          </li>
+                        </ol>
+                      </li>
+                      <li class="toc-item toc-level-3">
+                        <a class="toc-link" href="#Costes-fijos"
+                          ><span class="toc-text">Costes fijos</span></a
+                        >
+                      </li>
+                      <li class="toc-item toc-level-3">
+                        <a class="toc-link" href="#Variables-semicontinuas"
+                          ><span class="toc-text"
+                            >Variables semicontinuas</span
+                          ></a
+                        >
+                      </li>
+                      <li class="toc-item toc-level-3">
+                        <a class="toc-link" href="#Implicaciones"
+                          ><span class="toc-text">Implicaciones</span></a
+                        >
+                        <ol class="toc-child">
+                          <li class="toc-item toc-level-4">
+                            <a class="toc-link" href="#1-o-2-gt-3"
+                              ><span class="toc-text">1 o 2 -&gt; 3</span></a
+                            >
+                          </li>
+                          <li class="toc-item toc-level-4">
+                            <a class="toc-link" href="#1-y-2-gt-no-3"
+                              ><span class="toc-text">1 y 2 -&gt; no 3</span></a
+                            >
+                          </li>
+                          <li class="toc-item toc-level-4">
+                            <a class="toc-link" href="#Incompatibilidad"
+                              ><span class="toc-text">Incompatibilidad</span></a
+                            >
+                          </li>
+                          <li class="toc-item toc-level-4">
+                            <a class="toc-link" href="#Disyuncion"
+                              ><span class="toc-text">Disyunción</span></a
+                            >
+                          </li>
+                        </ol>
+                      </li>
+                    </ol>
+                  </li>
+                  <li class="toc-item toc-level-2">
+                    <a class="toc-link" href="#Decisiones-Multiobjetivo"
+                      ><span class="toc-text">Decisiones Multiobjetivo</span></a
+                    >
+                    <ol class="toc-child">
+                      <li class="toc-item toc-level-3">
+                        <a class="toc-link" href="#Puntos-eficientes"
+                          ><span class="toc-text">Puntos eficientes</span></a
+                        >
+                      </li>
+                      <li class="toc-item toc-level-3">
+                        <a
+                          class="toc-link"
+                          href="#Optimizacion-multiobjetivo-por-suma-ponderada-de-objetivos"
+                          ><span class="toc-text"
+                            >Optimización multiobjetivo por suma ponderada de
+                            objetivos</span
+                          ></a
+                        >
+                      </li>
+                      <li class="toc-item toc-level-3">
+                        <a
+                          class="toc-link"
+                          href="#Optimizacion-multiobjetivo-por-metas"
+                          ><span class="toc-text"
+                            >Optimizacion multiobjetivo por metas</span
+                          ></a
+                        >
+                      </li>
+                    </ol>
+                  </li>
+                </ol>
+              </li>
+              <li class="toc-item toc-level-1">
+                <a class="toc-link" href="#Reference"
+                  ><span class="toc-text">Reference</span></a
+                >
+              </li>
+            </ol>
+          </div>
+
+          <div class="order-lg-1 col-lg-9 col-12 post-container">
+            <h1 id="Programacion-Lineal">
+              <a
+                href="#Programacion-Lineal"
+                class="headerlink"
+                title="Programación Lineal"
+              ></a
+              >Programación Lineal
+            </h1>
+            <h2 id="Introduccion">
+              <a
+                href="#Introduccion"
+                class="headerlink"
+                title="Introducción"
+              ></a
+              >Introducción
+            </h2>
+            <p>
+              La programación lineal es una herramienta matemática que nos
+              proporciona una forma modelar el sistema y selelcionar el valor de
+              las variables controlables que permiten un funcionamiento óptimo
+              del sistema.
+            </p>
+            <h2 id="Construccion-de-modelos">
+              <a
+                href="#Construccion-de-modelos"
+                class="headerlink"
+                title="Construcción de modelos"
+              ></a
+              >Construcción de modelos
+            </h2>
+            <ul>
+              <li>
+                <p>Definir unas variables, de estado, de control, de salida.</p>
+              </li>
+              <li>
+                <p>
+                  Variables no controlables se modelan como variables aleatorias
+                </p>
+              </li>
+              <li><p>Determinar los parámetros</p></li>
+              <li>
+                <p>
+                  Estudiar las relaciones entre los distintos elementos y
+                  representarlos mediante expresiones matemáticas.
+                </p>
+              </li>
+            </ul>
+            <h2 id="Programacion-lineal">
+              <a
+                href="#Programacion-lineal"
+                class="headerlink"
+                title="Programación lineal"
+              ></a
+              >Programación lineal
+            </h2>
+            <p>
+              La Programación Lineal estudia la optimización de una función
+              lineal en presencia de restricciones lineales.
+            </p>
+            <p>En un problema general podemos encontrar</p>
+            <ul>
+              <li><p>$m$ recursos</p></li>
+              <li><p>$n$ actividad</p></li>
+              <li><p>nivel de actividad</p></li>
+              <li><p>rendiemiento global $Z$</p></li>
+            </ul>
+            <p>
+              Denotamos varios componentes de un modelo de programación con los
+              siguientes siguientes simbolos
+            </p>
+            <ul>
+              <li>
+                <p>
+                  $Z$ &#x3D; valor de la medida global del rendimiento,
+                  Normalmente puede interpretarse como el coste o el beneficio.
+                </p>
+              </li>
+              <li>
+                <p>
+                  $x_j$ &#x3D; nivel de actividad $j$ para $j &#x3D; 1,2,…,n$
+                </p>
+              </li>
+              <li>
+                <p>
+                  $c_j$ &#x3D; el impacto en la funcion objetivo por unidad de
+                  actividad j.
+                </p>
+              </li>
+              <li>
+                <p>
+                  $b_i$ &#x3D; cantidad de recurso que está disponible para la
+                  asignación a actividades.
+                </p>
+              </li>
+              <li>
+                <p>
+                  $a_{ij}$ &#x3D; cantidad de recursos $i$ consumido por cada
+                  unidad de actividad $j$
+                </p>
+              </li>
+              <li>
+                <p>
+                  $x_1, x_2, x_3, x_4$ son llamadas las variables de decisión,
+                  cada variable de decision de un PL (x1, . . . , xn)
+                  normalmente puede interpretarse como la eleccion del nivel de
+                  una actividad.
+                </p>
+              </li>
+            </ul>
+            <p><img src="problema.png" alt="Problema" /></p>
+            <p>
+              Los $c_j$, $b_i$, $a_{ij}$ también se refieren como los
+              párametros, algunos de ellos podrían ser estimaciones del valor
+              exacto.
+            </p>
+            <h2 id="Forma-estandar-del-modelo">
+              <a
+                href="#Forma-estandar-del-modelo"
+                class="headerlink"
+                title="Forma estándar del modelo"
+              ></a
+              >Forma estándar del modelo
+            </h2>
+            <p>
+              $$<br />\begin{split}<br />\max Z &amp;&#x3D;
+              \sum_j{c_jx_j}\\\\<br />Sujeto , a \quad<br />\sum_{i}{a_{ij}}x_i
+              &amp;&lt; b_i \forall{j}\\\\<br />\end{split}<br />$$
+            </p>
+            <h2 id="Tipos-de-puntos-en-un-PL">
+              <a
+                href="#Tipos-de-puntos-en-un-PL"
+                class="headerlink"
+                title="Tipos de puntos en un PL"
+              ></a
+              >Tipos de puntos en un PL
+            </h2>
+            <p>
+              un <strong>punto factible</strong> es una solución que cumple
+              todas las restricciones.
+            </p>
+            <p>
+              un <strong>punto no factible</strong> es una solucón que se viola
+              al menos una restricción.
+            </p>
+            <p>
+              un <strong>punto de frontera</strong> es una solución que al menos
+              una de desigualdad se cumple la igualdad.
+            </p>
+            <p>
+              un <strong>punto interior</strong> Punto factible que no es punto
+              frontera.
+            </p>
+            <p>
+              un <strong>punto estremo</strong> or
+              <strong>CPF corner-point feasible</strong> es la solución que se
+              encuentra en la intersección de dos o mas línea, son los vértices
+              del conjunto factible.
+            </p>
+            <p>
+              Una <strong>solución óptima</strong> es punto factible con el
+              mejor valor de la función objetivo.
+            </p>
+            <p>
+              La <strong>región factible</strong> es la colección de todas los
+              puntos factibles.
+            </p>
+            <h3 id="Observacion">
+              <a href="#Observacion" class="headerlink" title="Observación"></a
+              >Observación
+            </h3>
+            <p>
+              Un PL puede tener 0, 1, ó infinitos puntos óptimos. El mejor punto
+              extremo debe ser una solución óptima.
+            </p>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/vitaminac/OperationsResearch/blob/master/Linear%20Programming/pl-ejemplo1.gms"
+                >Ejemplo</a
+              >
+            </p>
+            <h2 id="Modelos-de-asignacion-de-recursos">
+              <a
+                href="#Modelos-de-asignacion-de-recursos"
+                class="headerlink"
+                title="Modelos de asignación de recursos"
+              ></a
+              >Modelos de asignación de recursos
+            </h2>
+            <p>Repartimos un recursos entre varias actividades.</p>
+            <h3 id="Variables-de-decision">
+              <a
+                href="#Variables-de-decision"
+                class="headerlink"
+                title="Variables de decisión"
+              ></a
+              >Variables de decisión
+            </h3>
+            <p>
+              Determinan qué <em>cantidad de recursos</em> asignamos a cada
+              actividad.
+            </p>
+            <h3 id="Restricciones-de-repartos">
+              <a
+                href="#Restricciones-de-repartos"
+                class="headerlink"
+                title="Restricciónes de repartos"
+              ></a
+              >Restricciónes de repartos
+            </h3>
+            <p>Son restricciones de igualdad.</p>
+            <p>
+              $$<br />\begin{split}<br />\min z(x) &amp;&#x3D; \sum_i {c_i
+              x_i}\\\\<br />s.a. A\textbf{x}&amp;&#x3D;\textbf{b}\\\\<br />x
+              &amp;\ge 0\\\\<br />\end{split}<br />$$
+            </p>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/vitaminac/OperationsResearch/blob/master/Linear%20Programming/cerveza.gms"
+                >Modelo de Asignación - Cerveza</a
+              >
+            </p>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/vitaminac/OperationsResearch/blob/master/Linear%20Programming/petroquimica.gms"
+                >Modelo de Asignación - Petroquimica</a
+              >
+            </p>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/vitaminac/OperationsResearch/blob/master/Linear%20Programming/minera.gms"
+                >Modelo de Asignación - Minera</a
+              >
+            </p>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/vitaminac/OperationsResearch/blob/master/Linear%20Programming/cabre.gms"
+                >Modelo de Asignación - cabre</a
+              >
+            </p>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/vitaminac/OperationsResearch/blob/master/Linear%20Programming/refineria.gms"
+                >Modelo de Asignación - Refinería</a
+              >
+            </p>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/vitaminac/OperationsResearch/blob/master/Linear%20Programming/leche.gms"
+                >Modelo de Asignación - Leche</a
+              >
+            </p>
+            <h2 id="Modelos-de-mezclas">
+              <a
+                href="#Modelos-de-mezclas"
+                class="headerlink"
+                title="Modelos de mezclas"
+              ></a
+              >Modelos de mezclas
+            </h2>
+            <p>Los combinamos los recursos</p>
+            <h3 id="Variables-de-mezclas">
+              <a
+                href="#Variables-de-mezclas"
+                class="headerlink"
+                title="Variables de mezclas"
+              ></a
+              >Variables de mezclas
+            </h3>
+            <p>
+              Determinan qué cantidad de cada recurso incluimos en la mezcla.
+            </p>
+            <h3 id="Restricciones-de-composicion">
+              <a
+                href="#Restricciones-de-composicion"
+                class="headerlink"
+                title="Restricciones de composición"
+              ></a
+              >Restricciones de composición
+            </h3>
+            <p>
+              Determinan cotas superiores y&#x2F;o inferiores a las propiedades
+              de la mezcla resultante.
+            </p>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/vitaminac/OperationsResearch/blob/master/Linear%20Programming/refinado.gms"
+                >Modelo de mezclas - Refinado</a
+              >
+            </p>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/vitaminac/OperationsResearch/blob/master/Linear%20Programming/siderurgica.gms"
+                >Modelo de mezclas - Siderúrgica</a
+              >
+            </p>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/vitaminac/OperationsResearch/blob/master/Linear%20Programming/dieta.gms"
+                >Modelo de mezclas - Dieta</a
+              >
+            </p>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/vitaminac/OperationsResearch/blob/master/Linear%20Programming/gasolina.gms"
+                >Modelo de mezclas - Gasolina</a
+              >
+            </p>
+            <h2 id="Modelos-de-planificacion-de-operaciones">
+              <a
+                href="#Modelos-de-planificacion-de-operaciones"
+                class="headerlink"
+                title="Modelos de planificación de operaciones"
+              ></a
+              >Modelos de planificación de operaciones
+            </h2>
+            <p>Debemos decidir qué hacer, cuando, y donde.</p>
+            <h3 id="Variables-de-decision-de-gran-magnitud">
+              <a
+                href="#Variables-de-decision-de-gran-magnitud"
+                class="headerlink"
+                title="Variables de decisión de gran magnitud"
+              ></a
+              >Variables de decisión de gran magnitud
+            </h3>
+            <p>
+              Las variables de decisión enteras y de gran magnitud se suelen
+              tratar como variables continuas para simplificar la solución del
+              problemas.
+            </p>
+            <h3 id="Restricciones-de-balance">
+              <a
+                href="#Restricciones-de-balance"
+                class="headerlink"
+                title="Restricciones de balance"
+              ></a
+              >Restricciones de balance
+            </h3>
+            <p>
+              El flujo entrante de materias primas debe ser igual al flujo
+              saliente de productos manufacturados (ecuación de balance).
+            </p>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/vitaminac/OperationsResearch/blob/master/Linear%20Programming/produccion.gms"
+                >Modelos de planificación de operaciones - Producción</a
+              >
+            </p>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/vitaminac/OperationsResearch/blob/master/Linear%20Programming/transporte.gms"
+                >Modelo de planificación de operaciones - Transporte</a
+              >
+            </p>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/vitaminac/OperationsResearch/blob/master/Linear%20Programming/transbordo.gms"
+                >Modelo de planificación de operaciones - Transbordo</a
+              >
+            </p>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/vitaminac/OperationsResearch/blob/master/Linear%20Programming/sumistradora.gms"
+                >Modelo de planificación de operaciones - Sumistradora</a
+              >
+            </p>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/vitaminac/OperationsResearch/blob/master/Linear%20Programming/residuos.gms"
+                >Modelo de planificación de operaciones - Residuos</a
+              >
+            </p>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/vitaminac/OperationsResearch/blob/master/Linear%20Programming/accion.gms"
+                >Modelo de planificación de operaciones - Accion</a
+              >
+            </p>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/vitaminac/OperationsResearch/blob/master/Linear%20Programming/agricultora.gms"
+                >Modelo de planificación de operaciones - Agricultora</a
+              >
+            </p>
+            <h2 id="Modelos-de-gestion-de-personal">
+              <a
+                href="#Modelos-de-gestion-de-personal"
+                class="headerlink"
+                title="Modelos de gestión de personal"
+              ></a
+              >Modelos de gestión de personal
+            </h2>
+            <p>
+              Los modelos de gestión de operaciones deciden qué tarea realizar
+              en cada momento de forma que los recursos sean usados
+              eficientemente, decidimos qué tipo de empleado y cuántos de cada
+              tipo deben realizar cada tarea.
+            </p>
+            <h3 id="Restricciones-de-cubrimiento">
+              <a
+                href="#Restricciones-de-cubrimiento"
+                class="headerlink"
+                title="Restricciones de cubrimiento"
+              ></a
+              >Restricciones de cubrimiento
+            </h3>
+            <p>
+              En la planificación de los turnos debemos asegurar que el número
+              de operario asignados cubre las necesidades de cada periodo. Para
+              ello imponemos la siguiente restricción de cubrimiento.
+            </p>
+            <p>
+              $$<br />\sum_{turnos} (Producción , por , operario) * (Operarios ,
+              en , servicio) \ge , del , periodo<br />$$
+            </p>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/vitaminac/OperationsResearch/blob/master/Linear%20Programming/jornada.gms"
+                >Modelo de gestión de personal - Jornada</a
+              >
+            </p>
+            <h2 id="Modelos-de-planificacion-multiperiodo">
+              <a
+                href="#Modelos-de-planificacion-multiperiodo"
+                class="headerlink"
+                title="Modelos de planificación multiperiodo"
+              ></a
+              >Modelos de planificación multiperiodo
+            </h2>
+            <p>
+              Planificar en un horizonte de tiempo que abarca varios periodos,
+              medelos dinámicos.
+            </p>
+            <h3 id="Variables-de-decision-por-periodo">
+              <a
+                href="#Variables-de-decision-por-periodo"
+                class="headerlink"
+                title="Variables de decisión por periodo"
+              ></a
+              >Variables de decisión por periodo
+            </h3>
+            <p>
+              Muchas variables de decisión tiene una versión para cada periodo
+            </p>
+            <h3 id="Restricciones-de-balace">
+              <a
+                href="#Restricciones-de-balace"
+                class="headerlink"
+                title="Restricciones de balace"
+              ></a
+              >Restricciones de balace
+            </h3>
+            <p>Describen la evolucion temporal de una magnitud</p>
+            <p>
+              $$<br />Situación_{t} + Cambios_{t} &#x3D; Situación_{t + 1}<br />$$
+            </p>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/vitaminac/OperationsResearch/blob/master/Linear%20Programming/piensos.gms"
+                >Modelos de planificación multiperiodo - Piensos</a
+              >
+            </p>
+            <h2 id="Resolucion-geometrica-de-un-PL">
+              <a
+                href="#Resolucion-geometrica-de-un-PL"
+                class="headerlink"
+                title="Resolución geométrica de un PL"
+              ></a
+              >Resolución geométrica de un PL
+            </h2>
+            <p>Consideramos un PL de dimesión dos, cuya función objectivo es</p>
+            <p>$$<br />z(x) &#x3D; c^{T}x<br />$$</p>
+            <p>donde $c^{T} &#x3D; (c_1, c_2)$ y $x &#x3D; (x_1, x_2) $.</p>
+            <p>Para todos los puntos sobre la recta</p>
+            <p>$$<br />R_k &#x3D; c^{T}x &#x3D; k<br />$$</p>
+            <p>El valor de la función objetivo es $k$.</p>
+            <p>
+              La rectas $R_k$ son perpendiculares a $c$ y por tanto paralelas
+              entre ellas.
+            </p>
+            <p>
+              La curva de nivel $k$ de $z(x)$ es la curva que cumple $z(x)
+              &#x3D; k$. Y las curvas de nivel de $z(x) &#x3D; k$ son las rectas
+              $R_k$ para todo $k \in \mathbb{R}$.
+            </p>
+            <p>
+              La región factible de PL corresponde a la región determinada por
+              los puntos que cumplen todas las restricciones.
+            </p>
+            <h3 id="Paso-a-seguir-para-la-resolucion-de-forma-grafica">
+              <a
+                href="#Paso-a-seguir-para-la-resolucion-de-forma-grafica"
+                class="headerlink"
+                title="Paso a seguir para la resolución de forma gráfica"
+              ></a
+              >Paso a seguir para la resolución de forma gráfica
+            </h3>
+            <ol>
+              <li>Representar el conjunto factible</li>
+              <li>Representar el vector $c$</li>
+              <li>
+                Representar la recta $R_{k*} &#x3D; c^{T}x &#x3D; k*$ tal que<br />
+                a. Es perpendicular a $c$<br />
+                b. Intersecta el conjunto factible<br />
+                c. $k*$ tiene el valor máximo posible
+              </li>
+              <li>
+                Elegir un $vértice$ factible que pertenezca a $R_k*$ y que
+                llamamos $x*$
+              </li>
+              <li>
+                Determinar las coordenadas exactas de $x*$ resolviendo el
+                <em>sistema lineal</em> asociado a las restricciones que
+                determinan $x*$
+              </li>
+              <li>
+                El punto óptimo del PL es $x*$ y el <em>beneficio</em> óptimo es
+                $z(x)$.
+              </li>
+              <li>
+                En caso de minimizar hacemos lo mismo salvo que en el anterior
+                algoritmo debemos sustitutir $c$ por $-c$.
+              </li>
+            </ol>
+            <h2 id="Postoptimizacion">
+              <a
+                href="#Postoptimizacion"
+                class="headerlink"
+                title="Postoptimización"
+              ></a
+              >Postoptimización
+            </h2>
+            <p>
+              El análisis de sensibilidad permite conocer si la solución
+              obtenida es sensible a pequeños cambios de los parámetros.
+            </p>
+            <ul>
+              <li>
+                Recursos limitados: Dado un b ≥ 0, una restriccion ≤ normalmente
+                corresponde a un límite en la disponibilidad de un recurso.
+              </li>
+              <li>
+                Satisfaccion de demandas: Dado un b ≥ 0, una restriccion ≥
+                normalmente corresponde a la satisfaccion de una demanda.
+              </li>
+              <li>
+                Restricciones de igualdad: Una restriccion de igualdad puede
+                interpretarse como dos restricciones de desigualdad simultaneas
+                y opuestas.
+              </li>
+              <li>
+                Restriccion de no negatividad: x ≥ 0: Aunque es una restriccion,
+                normalmente se interpreta como una declaracion de un tipo de
+                variable.
+              </li>
+            </ul>
+            <h3 id="Sensibilidad-cualitativa">
+              <a
+                href="#Sensibilidad-cualitativa"
+                class="headerlink"
+                title="Sensibilidad cualitativa"
+              ></a
+              >Sensibilidad cualitativa
+            </h3>
+            <h4 id="Aumento-del-conjunto-factible">
+              <a
+                href="#Aumento-del-conjunto-factible"
+                class="headerlink"
+                title="Aumento del conjunto factible"
+              ></a
+              >Aumento del conjunto factible
+            </h4>
+            <p>
+              Si el nuevo conjunto factible incluye al conjunto factible
+              inicial, el optimo no cambia o mejora.
+            </p>
+            <h4 id="Reduccion-del-conjunto-factible">
+              <a
+                href="#Reduccion-del-conjunto-factible"
+                class="headerlink"
+                title="Reduccion del conjunto factible"
+              ></a
+              >Reduccion del conjunto factible
+            </h4>
+            <p>
+              Si el nuevo conjunto factible esta incluido en el conjunto
+              factible inicial, el optimo no cambia o empeora.
+            </p>
+            <h4 id="Cambios-en-Right-Hand-Side">
+              <a
+                href="#Cambios-en-Right-Hand-Side"
+                class="headerlink"
+                title="Cambios en Right-Hand Side"
+              ></a
+              >Cambios en Right-Hand Side
+            </h4>
+            <h5 id="Relajar-una-restriccion">
+              <a
+                href="#Relajar-una-restriccion"
+                class="headerlink"
+                title="Relajar una restriccion"
+              ></a
+              >Relajar una restriccion
+            </h5>
+            <p>
+              Modificar dicha restricción de forma que el conjunto factible
+              aumente, el óptimo o no cambia o mejora.
+            </p>
+            <h5 id="Tensar-una-restriccion">
+              <a
+                href="#Tensar-una-restriccion"
+                class="headerlink"
+                title="Tensar una restriccion"
+              ></a
+              >Tensar una restriccion
+            </h5>
+            <p>
+              Modificar dicha restricción de forma que el conjunto factible
+              disminuya, el óptimo o no cambia o empeora.
+            </p>
+            <h4 id="Cambios-en-A">
+              <a
+                href="#Cambios-en-A"
+                class="headerlink"
+                title="Cambios en A"
+              ></a
+              >Cambios en A
+            </h4>
+            <h5 id="Inclusion-de-nuevas-restricciones">
+              <a
+                href="#Inclusion-de-nuevas-restricciones"
+                class="headerlink"
+                title="Inclusion de nuevas restricciones"
+              ></a
+              >Inclusion de nuevas restricciones
+            </h5>
+            <p>
+              Si en un PL incluimos nuevas restricciones el optimo ser a igual o
+              peor.
+            </p>
+            <h5 id="Eliminacion-de-restricciones">
+              <a
+                href="#Eliminacion-de-restricciones"
+                class="headerlink"
+                title="Eliminacion de restricciones"
+              ></a
+              >Eliminacion de restricciones
+            </h5>
+            <p>
+              Si en un PL eliminamos restricciones el optimo ser a igual o
+              mejor.
+            </p>
+            <h5 id="Inclusion-de-nuevas-variables">
+              <a
+                href="#Inclusion-de-nuevas-variables"
+                class="headerlink"
+                title="Inclusion de nuevas variables"
+              ></a
+              >Inclusion de nuevas variables
+            </h5>
+            <p>
+              Si en un PL incluimos nuevas variables el optimo ser a igual o
+              mejor.
+            </p>
+            <h5 id="Eliminacion-de-variables">
+              <a
+                href="#Eliminacion-de-variables"
+                class="headerlink"
+                title="Eliminacion de variables"
+              ></a
+              >Eliminacion de variables
+            </h5>
+            <p>
+              Si en un PL eliminamos variables el optimo ser a igual o peor.
+            </p>
+            <h3 id="Sensibilidad-cuantitativa">
+              <a
+                href="#Sensibilidad-cuantitativa"
+                class="headerlink"
+                title="Sensibilidad cuantitativa"
+              ></a
+              >Sensibilidad cuantitativa
+            </h3>
+            <p>
+              El problema dual es un problema de optimizacion auxiliar que puede
+              ser utilizado para cuantificar la sensibilidad de la solucion
+              primal (óptima) ante cambios en los parametros.
+            </p>
+            <h4 id="Variables-duales">
+              <a
+                href="#Variables-duales"
+                class="headerlink"
+                title="Variables duales"
+              ></a
+              >Variables duales
+            </h4>
+            <p>
+              Son las variables del problema dual. Tenemos una variable dual
+              $v_i$ por cada restriccion del problema primal, $i \in I &#x3D;
+              {1, . . . , m}$.
+            </p>
+            <p>
+              Cada variable dual optima representa la tasa de cambio del coste
+              optimo respecto a cambios en el termino de la derecha de la
+              restricción correspondiente. La variable dual óptima $v^*_i$ puede
+              interpretarse como <em>precio sombra</em> del producto o recurso
+              asociado a la restricción <em>i</em>.
+            </p>
+            <p>
+              Cada variable dual optima representa la pendiente de $C_i$($b_i$):
+            </p>
+            <p>$$<br />v^{∗}<em>i &#x3D; C^{‘}</em>{i}(bi)<br />$$</p>
+            <p>(excepto en los puntos no derivables).</p>
+            <p>
+              El problema dual nos dara sólo los valores de la tasa de cambio
+              del coste optimo correspondiente al b concreto de nuestro problema
+            </p>
+            <p>$$<br />C^{‘}_1(b_1), . . . , C^{‘}_m(b_m).<br />$$</p>
+            <h4 id="Signo-de-una-variable-dual">
+              <a
+                href="#Signo-de-una-variable-dual"
+                class="headerlink"
+                title="Signo de una variable dual"
+              ></a
+              >Signo de una variable dual
+            </h4>
+            <table>
+              <thead>
+                <tr>
+                  <th>Primal</th>
+                  <th align="center">Restriccion i $\le$</th>
+                  <th align="center">Restriccion i $\ge$</th>
+                  <th align="right">Restriccion i &#x3D;</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Min</td>
+                  <td align="center">$v_i \le 0$</td>
+                  <td align="center">$v_i \gt 0$</td>
+                  <td align="right">Sin restricción de signo</td>
+                </tr>
+                <tr>
+                  <td>Max</td>
+                  <td align="center">$v_i \gt 0$</td>
+                  <td align="center">$v_i \le 0$</td>
+                  <td align="right">Sin restricción de signo</td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 id="Formulacion-del-problema-dual">
+              <a
+                href="#Formulacion-del-problema-dual"
+                class="headerlink"
+                title="Formulación del problema dual"
+              ></a
+              >Formulación del problema dual
+            </h3>
+            <p><img src="Problema-Dual.PNG" alt="Problema Dual" /></p>
+            <h3 id="Teoremas-de-dualidad">
+              <a
+                href="#Teoremas-de-dualidad"
+                class="headerlink"
+                title="Teoremas de dualidad"
+              ></a
+              >Teoremas de dualidad
+            </h3>
+            <p>Un PL versión minimización (P) y su dual (D)</p>
+            <h4 id="Teorema-debil-de-dualidad">
+              <a
+                href="#Teorema-debil-de-dualidad"
+                class="headerlink"
+                title="Teorema débil de dualidad"
+              ></a
+              >Teorema débil de dualidad
+            </h4>
+            <p>
+              La función objetivo dual en $\overline{v}$ es una cota inferior a
+              la función objetivo primal en $\overline{v}$ y viceversa
+            </p>
+            <h3 id="Teorema-fuerte-de-dualidad">
+              <a
+                href="#Teorema-fuerte-de-dualidad"
+                class="headerlink"
+                title="Teorema fuerte de dualidad"
+              ></a
+              >Teorema fuerte de dualidad
+            </h3>
+            <p>
+              Si cualquiera de las dos soluciones es óptima, la otro también y
+              además sus valores óptimos respectivos coinciden.
+            </p>
+            <h3 id="Casos-factible-infactible-y-no-acotado">
+              <a
+                href="#Casos-factible-infactible-y-no-acotado"
+                class="headerlink"
+                title="Casos factible, infactible y no acotado"
+              ></a
+              >Casos factible, infactible y no acotado
+            </h3>
+            <ul>
+              <li>
+                La función objetivo de (P) tiene un valor óptimo finito
+                &#x3D;&gt; La función objetivo de (D) tiene un valor óptimo
+                finito.
+              </li>
+              <li>
+                La función objetivo de (P) no está acotada (inferiormente)
+                &#x3D;&gt; El problema (D) es infactible.
+              </li>
+              <li>
+                La función objetivo de (D) no está acotada (superiormente)
+                &#x3D;&gt; El problema (P) es infactible.
+              </li>
+            </ul>
+            <h1 id="Programacion-Entera">
+              <a
+                href="#Programacion-Entera"
+                class="headerlink"
+                title="Programación Entera"
+              ></a
+              >Programación Entera
+            </h1>
+            <p>
+              La PLE corresponde a los problemas de Programacion Lineal (PL)
+              donde además se impone la condición de que algunas o todas las
+              variables sean enteras.
+            </p>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/vitaminac/OperationsResearch/blob/master//Integer%20Programming/ejemplo1.gms"
+                >Ejemplo 1</a
+              >
+            </p>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/vitaminac/OperationsResearch/blob/master//Integer%20Programming/ejemplo2.gms"
+                >Ejemplo 2</a
+              >
+            </p>
+            <h2 id="Problema-de-la-mochila">
+              <a
+                href="#Problema-de-la-mochila"
+                class="headerlink"
+                title="Problema de la mochila"
+              ></a
+              >Problema de la mochila
+            </h2>
+            <h3 id="Objetivo">
+              <a href="#Objetivo" class="headerlink" title="Objetivo"></a
+              >Objetivo
+            </h3>
+            <p>
+              seleccionar un subconjunto óptimo de objetos que maximize la
+              utilidad total
+            </p>
+            <h3 id="Variable-de-decision">
+              <a
+                href="#Variable-de-decision"
+                class="headerlink"
+                title="Variable de decisión"
+              ></a
+              >Variable de decisión
+            </h3>
+            <p>
+              $$<br />x_j &#x3D;<br />\begin{cases}<br />
+              &amp; 1 \quad \text{si el objeto j es seleccionado} \\\\<br />
+              &amp; 0 \quad \text{en otro caso}\\\\<br />\end{cases}<br />$$
+            </p>
+            <h3 id="Formulacion">
+              <a href="#Formulacion" class="headerlink" title="Formulación"></a
+              >Formulación
+            </h3>
+            <p>
+              $$<br />\begin{split}<br />\max &amp; \quad c^Tx\\\\<br />s.t
+              &amp; \quad Ax \le b\\\\<br />&amp; \quad x \in {0,1}^n\\\\<br />\end{split}<br />$$
+            </p>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/vitaminac/OperationsResearch/blob/master//Integer%20Programming/mochila.gms"
+                >Mochila</a
+              >
+            </p>
+            <h2 id="Modelos-de-asignacion-del-presupuesto">
+              <a
+                href="#Modelos-de-asignacion-del-presupuesto"
+                class="headerlink"
+                title="Modelos de asignacion del presupuesto"
+              ></a
+              >Modelos de asignacion del presupuesto
+            </h2>
+            <p>
+              seleccionar el mejor reparto de un presupuesto entre n proyectos o
+              inversiones bajo m restricciones.
+            </p>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/vitaminac/OperationsResearch/blob/master//Integer%20Programming/proyectoID.gms"
+                >Proyecto I+D</a
+              >
+            </p>
+            <h2 id="Modelos-de-asignacion">
+              <a
+                href="#Modelos-de-asignacion"
+                class="headerlink"
+                title="Modelos de asignación"
+              ></a
+              >Modelos de asignación
+            </h2>
+            <h3 id="Objetivo-1">
+              <a href="#Objetivo-1" class="headerlink" title="Objetivo"></a
+              >Objetivo
+            </h3>
+            <p>
+              Asignar eficientemente un conjunto de trabajadores a un conjunto
+              de tareas.
+            </p>
+            <h3 id="Variable-de-decision-1">
+              <a
+                href="#Variable-de-decision-1"
+                class="headerlink"
+                title="Variable de decisión"
+              ></a
+              >Variable de decisión
+            </h3>
+            <p>
+              $$<br />x_{ij} &#x3D;<br />\begin{cases}<br />
+              &amp; 1 \quad \text{si el trabajador i se asigna a la tarea j}
+              \\\\<br />
+              &amp; 0 \quad \text{en otro caso}\\\\<br />\end{cases}<br />$$
+            </p>
+            <h3 id="Restricciones">
+              <a
+                href="#Restricciones"
+                class="headerlink"
+                title="Restricciones"
+              ></a
+              >Restricciones
+            </h3>
+            <p>
+              $$<br />\begin{split}<br />\sum_{i&#x3D;1}^{n}{x_{ij}} &amp;&#x3D;
+              1 \quad \text{Cada tarea se realiza una vez}\\\\<br />\sum_{j&#x3D;1}^{n}{x_{ij}}
+              &amp;&#x3D; 1 \quad \text{Cada trabajador realiza una
+              tarea}\\\\<br />\end{split}<br />$$
+            </p>
+            <h3 id="Formulacion-1">
+              <a
+                href="#Formulacion-1"
+                class="headerlink"
+                title="Formulación"
+              ></a
+              >Formulación
+            </h3>
+            <p>$$\min \sum_i{\sum_j{c_{ij}x_{ij}}}$$</p>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/vitaminac/OperationsResearch/blob/master//Integer%20Programming/abogado.gms"
+                >Abogado</a
+              >
+            </p>
+            <h2 id="Modelos-de-asignacion-generalizada">
+              <a
+                href="#Modelos-de-asignacion-generalizada"
+                class="headerlink"
+                title="Modelos de asignación generalizada"
+              ></a
+              >Modelos de asignación generalizada
+            </h2>
+            <p>
+              Es una generalización del modelo anterior. Cada trabajador puede
+              hacer más de una tarea simultáneamente
+            </p>
+            <h3 id="Formulacion-2">
+              <a
+                href="#Formulacion-2"
+                class="headerlink"
+                title="Formulación"
+              ></a
+              >Formulación
+            </h3>
+            <p>
+              $$<br />\begin{split}<br />z &amp;&#x3D; \min
+              \sum_i{\sum_j{c_{ij}x_{ij}}}\\\\<br />\sum_{i&#x3D;1}^{n}{x_{ij}}
+              &amp;&#x3D; 1 \quad \text{Cada tarea se realiza una vez}\\\\<br />\sum_{j&#x3D;1}^{n}{a_{ij}x_{ij}}
+              &amp;\le b_i \quad \text{La capacidad maxima de cada
+              trabajador}\\\\<br />x_{ij} &amp;\in {0,1}\\\\<br />\end{split}<br />$$
+            </p>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/vitaminac/OperationsResearch/blob/master//Integer%20Programming/maquinaria.gms"
+                >Maquinaria</a
+              >
+            </p>
+            <h2 id="Modelos-de-la-optimizacion-discreta">
+              <a
+                href="#Modelos-de-la-optimizacion-discreta"
+                class="headerlink"
+                title="Modelos de la optimización discreta"
+              ></a
+              >Modelos de la optimización discreta
+            </h2>
+            <p>
+              Alguna o todas variables de un problema deben tomar valores
+              enteros
+            </p>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/vitaminac/OperationsResearch/blob/master//Integer%20Programming/ordenador.gms"
+                >Ordenador</a
+              >
+            </p>
+            <h2 id="Problema-de-cubrimiento-y-particion">
+              <a
+                href="#Problema-de-cubrimiento-y-particion"
+                class="headerlink"
+                title="Problema de cubrimiento y partición"
+              ></a
+              >Problema de cubrimiento y partición
+            </h2>
+            <h3 id="Parametros">
+              <a href="#Parametros" class="headerlink" title="Parametros"></a
+              >Parametros
+            </h3>
+            <p>
+              $$<br />a_{ij} &#x3D;<br />\begin{cases}<br />
+              &amp; 1 \quad i \in S_j\\\\<br />
+              &amp; 0 \quad \text{en otro caso}\\\\<br />\end{cases}<br />$$
+            </p>
+            <h3 id="Restricciones-1">
+              <a
+                href="#Restricciones-1"
+                class="headerlink"
+                title="Restricciones"
+              ></a
+              >Restricciones
+            </h3>
+            <h4 id="Problema-de-cubrimiento">
+              <a
+                href="#Problema-de-cubrimiento"
+                class="headerlink"
+                title="Problema de cubrimiento"
+              ></a
+              >Problema de cubrimiento
+            </h4>
+            <p>
+              $$<br />\sum_{i&#x3D;1}^{n}{a_{ij}x_{ij}} \ge 1 \quad \text{Cada
+              objeto debe pertenecer al menos a un conjunto}\\\\<br />$$
+            </p>
+            <h4 id="Problema-de-particion">
+              <a
+                href="#Problema-de-particion"
+                class="headerlink"
+                title="Problema de partición"
+              ></a
+              >Problema de partición
+            </h4>
+            <p>
+              $$<br />\sum_{i&#x3D;1}^{n}{a_{ij}x_{ij}} &#x3D; 1 \quad
+              \text{Cada objeto debe pertenecer exactamente a un
+              conjunto}\\\\<br />$$
+            </p>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/vitaminac/OperationsResearch/blob/master//Integer%20Programming/ambulancia.gms"
+                >Ambulancia</a
+              >
+            </p>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/vitaminac/OperationsResearch/blob/master//Integer%20Programming/cinta.gms"
+                >Cinta</a
+              >
+            </p>
+            <h2 id="Diseno-de-redes">
+              <a
+                href="#Diseno-de-redes"
+                class="headerlink"
+                title="Diseño de redes"
+              ></a
+              >Diseño de redes
+            </h2>
+            <h3 id="Objetivo-2">
+              <a href="#Objetivo-2" class="headerlink" title="Objetivo"></a
+              >Objetivo
+            </h3>
+            <p>
+              Decidir qué arcos de una red abrimos de forma que el coste de
+              servicio más costes fijos sea mínimo.
+            </p>
+            <h3 id="Formulacion-3">
+              <a
+                href="#Formulacion-3"
+                class="headerlink"
+                title="Formulación"
+              ></a
+              >Formulación
+            </h3>
+            <ul>
+              <li>$A$ conjunto de arcos de la red</li>
+              <li>$ij$ par de indices para los arcos de $A$</li>
+              <li>$V$ conjunto de nodos de la red</li>
+              <li>$k$ indice para los nodos de $V$</li>
+              <li>$x_{ij}$ flujo del arco $ij$</li>
+              <li>$y_{ij}$ es 1 si decidimos conectar $i$ con $j$</li>
+              <li>$b_{k}$ demanda de k</li>
+              <li>$c_{ij}$ coste por unidad de flujo</li>
+              <li>$f_{ij}$ coste de conectar i con j</li>
+              <li>$u_{ij}$ capacidad del arco $ij$</li>
+            </ul>
+            <p>
+              $$<br />\min_{x,y} \quad z &#x3D; \sum_{ij \in A}{c_{ij}x_{ij}} +
+              \sum_{ij \ in A}{f_{ij}y_{ij}} \quad \text{coste total}\\\\<br />s.a.
+              \quad \sum_{ik \in A}{x_{ik}} - \sum_{kj \in A}{x_{kj}} &#x3D; b_k
+              \quad \text{para todo k. (demanda)}\\\\<br />0 \le x_{ij} \le
+              u_{ij}y_{ij} \quad \text{para todo ij (capacidad)}\\\\<br />y_{ij}
+              \in {0,1} \text{para todo ij}<br />$$
+            </p>
+            <h2 id="Localizacion-de-plantas">
+              <a
+                href="#Localizacion-de-plantas"
+                class="headerlink"
+                title="Localización de plantas"
+              ></a
+              >Localización de plantas
+            </h2>
+            <h3 id="Objetivo-3">
+              <a href="#Objetivo-3" class="headerlink" title="Objetivo"></a
+              >Objetivo
+            </h3>
+            <p>
+              Decidi qué plantas abrimos de forma que el coste de explotación
+              sea mínimo.
+            </p>
+            <h3 id="Formulacion-4">
+              <a
+                href="#Formulacion-4"
+                class="headerlink"
+                title="Formulación"
+              ></a
+              >Formulación
+            </h3>
+            <p>
+              $$<br />\min_{x,y} \quad z &#x3D; \sum_{ij}{c_{ij}d_{j}x_{ij}} +
+              \sum_{i}{f_{i}y_{i}} \quad \text{coste total}\\\\<br />s.a.
+              \sum_{i}{x_{ij}} &#x3D; 1 \quad \text{satisfaccion de la demanda
+              para todo j}\\\\<br />\sum_j{d_j x_{ij} \le u_i y_i} \quad
+              \text{restricciones de capacidad para todo ij}\\\\<br />x_{ij} \ge
+              0\\\\<br />y_{ij} \in {0,1}\\\\<br />$$
+            </p>
+            <h2 id="Problema-de-viajante">
+              <a
+                href="#Problema-de-viajante"
+                class="headerlink"
+                title="Problema de viajante"
+              ></a
+              >Problema de viajante
+            </h2>
+            <h3 id="Variable-de-decision-2">
+              <a
+                href="#Variable-de-decision-2"
+                class="headerlink"
+                title="Variable de decisión"
+              ></a
+              >Variable de decisión
+            </h3>
+            <p>
+              $$<br />a_{ij} &#x3D;<br />\begin{cases}<br />
+              &amp; 1 \quad \text{si el agente va de la ciudad i a la ciudad
+              j}\\\\<br />
+              &amp; 0 \quad \text{en otro caso}\\\\<br />\end{cases}<br />$$
+            </p>
+            <h3 id="Restricciones-2">
+              <a
+                href="#Restricciones-2"
+                class="headerlink"
+                title="Restricciones"
+              ></a
+              >Restricciones
+            </h3>
+            <h4 id="El-agente-debe-salir-de-todas-las-ciudades">
+              <a
+                href="#El-agente-debe-salir-de-todas-las-ciudades"
+                class="headerlink"
+                title="El agente debe salir de todas las ciudades"
+              ></a
+              >El agente debe salir de todas las ciudades
+            </h4>
+            <p>$$<br />\sum_{i}^{n}x_{ij} &#x3D; 1\\\\<br />$$</p>
+            <h4 id="El-agente-debe-llegar-a-todas-las-ciudades">
+              <a
+                href="#El-agente-debe-llegar-a-todas-las-ciudades"
+                class="headerlink"
+                title="El agente debe llegar a todas las ciudades"
+              ></a
+              >El agente debe llegar a todas las ciudades
+            </h4>
+            <p>$$<br />\sum_{j} x_{ij} &#x3D; 1\\\\<br />$$</p>
+            <h4 id="Eliminacion-de-subciclos">
+              <a
+                href="#Eliminacion-de-subciclos"
+                class="headerlink"
+                title="Eliminación de subciclos"
+              ></a
+              >Eliminación de subciclos
+            </h4>
+            <p>
+              $$<br />\sum_{i \in S}{\sum_{j \not\in S}} x_{ij} \ge 1<br />$$
+            </p>
+            <h2 id="Modelado-de-condiciones-logica">
+              <a
+                href="#Modelado-de-condiciones-logica"
+                class="headerlink"
+                title="Modelado de condiciones lógica"
+              ></a
+              >Modelado de condiciones lógica
+            </h2>
+            <h3 id="Seleccion-multiple">
+              <a
+                href="#Seleccion-multiple"
+                class="headerlink"
+                title="Selección múltiple"
+              ></a
+              >Selección múltiple
+            </h3>
+            <h4 id="Al-menos-dos-tipos-seleccionados">
+              <a
+                href="#Al-menos-dos-tipos-seleccionados"
+                class="headerlink"
+                title="Al menos dos tipos seleccionados"
+              ></a
+              >Al menos dos tipos seleccionados
+            </h4>
+            <p>$$<br />\sum_i{\delta_i} \ge 2<br />$$</p>
+            <h4 id="Exactamente-dos-tipos-seleccionados">
+              <a
+                href="#Exactamente-dos-tipos-seleccionados"
+                class="headerlink"
+                title="Exactamente dos tipos seleccionados"
+              ></a
+              >Exactamente dos tipos seleccionados
+            </h4>
+            <p>$$<br />\sum_i{\delta_i} &#x3D; 2<br />$$</p>
+            <h4 id="A-lo-sumo-dos-tipos-seleccionados">
+              <a
+                href="#A-lo-sumo-dos-tipos-seleccionados"
+                class="headerlink"
+                title="A lo sumo dos tipos seleccionados"
+              ></a
+              >A lo sumo dos tipos seleccionados
+            </h4>
+            <p>$$<br />\sum_i{\delta_i} \le 2<br />$$</p>
+            <h3 id="Costes-fijos">
+              <a
+                href="#Costes-fijos"
+                class="headerlink"
+                title="Costes fijos"
+              ></a
+              >Costes fijos
+            </h3>
+            <p>$$<br />\delta * coste<br />$$</p>
+            <h3 id="Variables-semicontinuas">
+              <a
+                href="#Variables-semicontinuas"
+                class="headerlink"
+                title="Variables semicontinuas"
+              ></a
+              >Variables semicontinuas
+            </h3>
+            <p>$$<br />minimo<em>\delta \le x \le maximo</em>\delta<br />$$</p>
+            <h3 id="Implicaciones">
+              <a
+                href="#Implicaciones"
+                class="headerlink"
+                title="Implicaciones"
+              ></a
+              >Implicaciones
+            </h3>
+            <h4 id="1-o-2-gt-3">
+              <a href="#1-o-2-gt-3" class="headerlink" title="1 o 2 -&gt; 3"></a
+              >1 o 2 -&gt; 3
+            </h4>
+            <p>$$\delta_1 + \delta_2 \le 2*\delta_3$$</p>
+            <h4 id="1-y-2-gt-no-3">
+              <a
+                href="#1-y-2-gt-no-3"
+                class="headerlink"
+                title="1 y 2 -&gt; no 3"
+              ></a
+              >1 y 2 -&gt; no 3
+            </h4>
+            <p>$$\delta_1 + \delta_2 \le 2 - \delta_3$$</p>
+            <h4 id="Incompatibilidad">
+              <a
+                href="#Incompatibilidad"
+                class="headerlink"
+                title="Incompatibilidad"
+              ></a
+              >Incompatibilidad
+            </h4>
+            <p>$$\delta_1 + \delta_2 \le 1$$</p>
+            <h4 id="Disyuncion">
+              <a href="#Disyuncion" class="headerlink" title="Disyunción"></a
+              >Disyunción
+            </h4>
+            <p>$\sum_i{a_ix_i} \le a$ o $\sum_j{b_jy_j} \ge b$</p>
+            <p>Se puede modelar utilizado</p>
+            <p>
+              $\sum_i{a_ix_i} \le a + M\delta$ y $\sum_j{b_jy_j} \ge b +
+              m(1-\delta)$
+            </p>
+            <p>con $M$ suficientemente grande y $m$ suficientemente pequeño</p>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/vitaminac/OperationsResearch/blob/master//Integer%20Programming/aceite.gms"
+                >Aceite</a
+              >
+            </p>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/vitaminac/OperationsResearch/blob/master//Integer%20Programming/petroquimica.gms"
+                >Petroquímica</a
+              >
+            </p>
+            <h2 id="Decisiones-Multiobjetivo">
+              <a
+                href="#Decisiones-Multiobjetivo"
+                class="headerlink"
+                title="Decisiones Multiobjetivo"
+              ></a
+              >Decisiones Multiobjetivo
+            </h2>
+            <p>
+              En muchos problemas de decisión, es muy complicado o no es
+              imposible transformar todos los objetivos involucrados en un único
+              objetivo
+            </p>
+            <h3 id="Puntos-eficientes">
+              <a
+                href="#Puntos-eficientes"
+                class="headerlink"
+                title="Puntos eficientes"
+              ></a
+              >Puntos eficientes
+            </h3>
+            <p>
+              También se denomina punto de pareto, si al moverlo dentro de la
+              región factible para mejorar algún objetivos, tenemos que empeorar
+              al menos otro objetivo.
+            </p>
+            <h3 id="Optimizacion-multiobjetivo-por-suma-ponderada-de-objetivos">
+              <a
+                href="#Optimizacion-multiobjetivo-por-suma-ponderada-de-objetivos"
+                class="headerlink"
+                title="Optimización multiobjetivo por suma ponderada de objetivos"
+              ></a
+              >Optimización multiobjetivo por suma ponderada de objetivos
+            </h3>
+            <p>
+              $$<br />min \quad z_1(x)\\\\<br />\vdots\\\\<br />min \quad
+              z_m(x)\\\\<br />$$
+            </p>
+            <p>en la suma ponderada de objetivos</p>
+            <p>$$<br />min z(x) &#x3D; \sum_{i}\gamma_i z_i(x)<br />$$</p>
+            <p>
+              donde cada peso $\gamma_i$ es un escalar estrictamente positivo
+              para todo $i$.
+            </p>
+            <h3 id="Optimizacion-multiobjetivo-por-metas">
+              <a
+                href="#Optimizacion-multiobjetivo-por-metas"
+                class="headerlink"
+                title="Optimizacion multiobjetivo por metas"
+              ></a
+              >Optimizacion multiobjetivo por metas
+            </h3>
+            <p>Tranforma siguiente problema</p>
+            <p>
+              $$<br />meta \quad z_1(x) \le m_1\\\\<br />\vdots\\\\<br />meta
+              \quad z_m(x) \le m_m\\\\<br />$$
+            </p>
+            <p>en</p>
+            <p>
+              $$<br />min z(d) &#x3D; \sum_{i}\gamma_i z_i(d_i)\\\\<br />s.a.
+              \quad<br />z_1(x) - d_1 \le m_1\\\\<br />\vdots\\\\<br />,,,,,,,,\quad<br />z_m(x)
+              - d_m \le m_m\\\\<br />$$
+            </p>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://github.com/vitaminac/OperationsResearch/blob/master//Integer%20Programming/multiobjetivo.gms"
+                >Multiobjetivo</a
+              >
+            </p>
+            <h1 id="Reference">
+              <a href="#Reference" class="headerlink" title="Reference"></a
+              >Reference
+            </h1>
+            <ul>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://www.amazon.com/dp/1259162982/ref=pd_lpo_sbs_dp_ss_1?pf_rd_p=b4bbef4e-170e-463d-8538-7eff3394b224&pf_rd_s=lpo-top-stripe-1&pf_rd_t=201&pf_rd_i=0073376299&pf_rd_m=ATVPDKIKX0DER&pf_rd_r=327YGFC7GSK9M21G7G3E&pf_rd_r=327YGFC7GSK9M21G7G3E&pf_rd_p=b4bbef4e-170e-463d-8538-7eff3394b224"
+                  >Introduction to Operations Research</a
+                >
+                pag. 32-34
+              </li>
+            </ul>
+
+            <hr />
+
+            <ul class="list-group">
+              <li
+                class="list-group-item list-group-item-action flex-column align-items-start"
+              >
+                <a target="_parent" href="/migrations/Survivorship-bias/">
+                  Survivorship bias
+                </a>
+              </li>
+            </ul>
+
+            <ul class="pagination pager">
+              <li class="page-item">
+                <a
+                  target="_parent"
+                  class="page-link"
+                  href="/migrations/Machine Learning Note/"
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  title="Machine Learning Note"
+                  >&larr; Artículo Anterior</a
+                >
+              </li>
+
+              <li class="page-item ms-auto">
+                <a
+                  target="_parent"
+                  class="page-link"
+                  href="/migrations/Lehman-laws/"
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  title="Lehman Laws"
+                  >Siguiente Artículo &rarr;</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="comment">
+          <!-- disqus 评论框 start -->
+
+          <!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = "blog-vnwybnwkiz";
+            var disqus_identifier =
+              "https://vitaminac.github.io/Programacion-Lineal-Entera/";
+            var disqus_url =
+              "https://vitaminac.github.io/Programacion-Lineal-Entera/";
+            var disqus_config = function () {
+              this.language = "es";
+            };
+
+            (function () {
+              var dsq = document.createElement("script");
+              dsq.type = "text/javascript";
+              dsq.async = true;
+              dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+              (
+                document.getElementsByTagName("head")[0] ||
+                document.getElementsByTagName("body")[0]
+              ).appendChild(dsq);
+            })();
+          </script>
+          <!-- disqus 公共JS代码 end -->
+          <div id="disqus_thread" class="disqus-thread"></div>
+          <!-- disqus 评论框 end -->
+        </div>
+
+        <div class="row justify-content-center">
+          <!-- Sidebar Container -->
+
+          <div class="col-lg-8` col-md-10 sidebar-container">
+            <!-- Friends Blog -->
+          </div>
+        </div>
+      </div>
+    </article>
+    <!-- Custom Theme JavaScript -->
+    <script type="text/javascript" src="/js/blog.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        anchors.add("p");
+      });
+    </script>
+
+    <!-- mathjax -->
+    <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          jax: ["input/TeX", "output/SVG"],
+          extensions: ["tex2jax.js"],
+          showMathMenu: false,
+          SVG: { useGlobalCache: false },
+          tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+              processEscapes: true
+          },
+          TeX: {
+              equationNumbers: { autoNumber: "AMS" },
+              noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+              Macros: { href: "{}" }
+          }
+      });
+    </script>
+    <script
+      type="text/javascript"
+      async
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"
+    ></script>
+
+    <!-- jquery.tagcloud.js -->
+    <script>
+      // only load tagcloud.js in tag.html
+      if ($("#tag_cloud").length !== 0) {
+        async("https://vitaminac.github.io/js/jquery.tagcloud.js", function () {
+          $.fn.tagcloud.defaults = {
+            //size: {start: 1, end: 1, unit: 'em'},
+            color: {
+              start: "#bbbbee",
+              end: "#0085a1",
+            },
+          };
+          $("#tag_cloud a").tagcloud();
+        });
+      }
+    </script>
+
+    <script type="text/javascript" src="/js/common.js"></script>
+
+    <!-- render ipynb file -->
+
+    <!-- render ipynb file -->
+
+    <script type="text/javascript" src="/js/render.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        render_files("gms", "");
+      });
+    </script>
+  </body>
+</html>

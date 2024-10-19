@@ -1,0 +1,64 @@
+{
+  "pageProps": {
+    "postData": {
+      "slug": "TDD-BDD-ATDD",
+      "title": "Testing TDD BDD y ATDD",
+      "date": "Sat Apr 27 2019 12:55:45 GMT+0000 (Coordinated Universal Time)",
+      "lang": "es",
+      "tags": [
+        "Testing",
+        "Agile Software Development",
+        "BDD",
+        "Behauvior Driven Development",
+        "ATDD",
+        "Acceptance Test Driven Development",
+        "TDD",
+        "Test Driven Development",
+        "Integración continua",
+        "IC",
+        "Continuous Integration",
+        "CI",
+        "Domain-Driven Design"
+      ],
+      "path": "/TDD-BDD-ATDD/index.html"
+    },
+    "lang": "es",
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "es": {
+          "common": { "Next": "Siguiente", "Back to home": "Volver al inicio" },
+          "feature-tags": { "Tags": "Tags" },
+          "navbar": {
+            "Home": "Inicio",
+            "Language": "Lenguaje",
+            "Tags": "Tags",
+            "en": "Inglés",
+            "es": "Español",
+            "zh": "Chino"
+          }
+        },
+        "en": {
+          "common": { "Next": "Next", "Back to home": "Back to home" },
+          "feature-tags": { "Tags": "Tags" },
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          }
+        }
+      },
+      "initialLocale": "es",
+      "ns": ["common", "feature-tags", "navbar"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

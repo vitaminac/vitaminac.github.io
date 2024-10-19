@@ -1,0 +1,38 @@
+{
+  "pageProps": {
+    "postData": {
+      "slug": "perplexity",
+      "title": "Perplexity",
+      "date": "Mon Oct 14 2024 23:41:47 GMT+0000 (Coordinated Universal Time)",
+      "lang": "en",
+      "tags": ["Perplexity", "NLP"],
+      "path": "/perplexity/index.html"
+    },
+    "lang": "en",
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "en": {
+          "common": { "Next": "Next", "Back to home": "Back to home" },
+          "feature-tags": { "Tags": "Tags" },
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          }
+        }
+      },
+      "initialLocale": "en",
+      "ns": ["common", "feature-tags", "navbar"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

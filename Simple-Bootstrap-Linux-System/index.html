@@ -1,0 +1,1428 @@
+<!doctype html>
+<html lang="en">
+  <!-- Head tag -->
+  <!-- SEO -->
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Build Simple Bootstrap Linux System Image｜Gao&#39;s Blog</title>
+    <meta
+      property="og:title"
+      content="Build Simple Bootstrap Linux System Image｜Gao&#39;s Blog"
+    />
+
+    <meta
+      name="description"
+      content="Build Simple Bootstrap Linux System Image｜Gao&#39;s Blog"
+    />
+    <meta
+      property="og:description"
+      content="Build Simple Bootstrap Linux System Image｜Gao&#39;s Blog"
+    />
+    <meta name="author" content="Gao" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      property="og:image"
+      content="https://vitaminac.github.io/images/favicon.jpg"
+    />
+    <link rel="shortcut icon" href="/images/favicon.jpg" />
+
+    <meta name="keywords" content="Embedded System,Linux" />
+
+    <meta name="theme-color" content="#600090" />
+    <meta name="msapplication-navbutton-color" content="#600090" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090" />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="Gao&#39;s Blog"
+      href="/atom.xml"
+    />
+
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      cross-origin="anonymous"
+      referrer-policy="no-referrer"
+    />
+    <link
+      rel="canonical"
+      href="https://vitaminac.github.io/Simple-Bootstrap-Linux-System/"
+    />
+
+    <!-- jQuery -->
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+    ></script>
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css" />
+    <link rel="stylesheet" href="/css/syntax.css" />
+
+    <!-- Google Tag Manager -->
+
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-WDC9JKC");
+    </script>
+
+    <!-- End Google Tag Manager -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-151409235-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-151409235-1");
+    </script>
+
+    <!-- Google AdSense -->
+    <script
+      data-ad-client="ca-pub-8356359077918854"
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+    <meta name="generator" content="Hexo 6.3.0" />
+  </head>
+  <style>
+    header.intro-header {
+      background-image: url("/images/header.gif");
+    }
+  </style>
+  <!-- hack iOS CSS :active style -->
+
+  <body ontouchstart="" class="animated fadeIn">
+    <!-- Main Content -->
+
+    <!--only post-->
+
+    <img class="wechat-title-img" src="/images/preview.jpeg" />
+
+    <style>
+      header.intro-header {
+        background-image: url("/images/preview.jpeg");
+      }
+    </style>
+
+    <header class="intro-header">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-md-10 text-center">
+            <div class="post-heading">
+              <h1>Build Simple Bootstrap Linux System Image</h1>
+
+              <span class="meta"
+                >Author: Gao
+                <span />
+                Date: 2020-11-08
+              </span>
+              <div class="tags text-center">
+                <a
+                  target="_parent"
+                  class="tag"
+                  href="/posts/langs/en/tags/Embedded System"
+                  title="Embedded System"
+                >
+                  Embedded System</a
+                >
+
+                <a
+                  target="_parent"
+                  class="tag"
+                  href="/posts/langs/en/tags/Linux"
+                  title="Linux"
+                >
+                  Linux</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="post-title-haojen">
+        <span> Build Simple Bootstrap Linux System Image </span>
+      </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <!-- Post Container -->
+          <div class="order-lg-2 col-lg-3 col-12 toc-col" style="z-index: 1">
+            <ol class="toc">
+              <li class="toc-item toc-level-2">
+                <a class="toc-link" href="#Kernel-Image-for-Emulation"
+                  ><span class="toc-text">Kernel Image for Emulation</span></a
+                >
+              </li>
+              <li class="toc-item toc-level-2">
+                <a class="toc-link" href="#Initramfs"
+                  ><span class="toc-text">Initramfs</span></a
+                >
+                <ol class="toc-child">
+                  <li class="toc-item toc-level-3">
+                    <a class="toc-link" href="#Shell-Environment"
+                      ><span class="toc-text">Shell Environment</span></a
+                    >
+                  </li>
+                  <li class="toc-item toc-level-3">
+                    <a
+                      class="toc-link"
+                      href="#Configure-Keyboard-Layout-for-Spanish"
+                      ><span class="toc-text"
+                        >Configure Keyboard Layout for Spanish</span
+                      ></a
+                    >
+                  </li>
+                  <li class="toc-item toc-level-3">
+                    <a class="toc-link" href="#Support-USB-Devices"
+                      ><span class="toc-text">Support USB Devices</span></a
+                    >
+                  </li>
+                  <li class="toc-item toc-level-3">
+                    <a class="toc-link" href="#Init-Script"
+                      ><span class="toc-text">Init Script</span></a
+                    >
+                    <ol class="toc-child">
+                      <li class="toc-item toc-level-4">
+                        <a
+                          class="toc-link"
+                          href="#Install-Busybox-Symbolic-Links"
+                          ><span class="toc-text"
+                            >Install Busybox Symbolic Links</span
+                          ></a
+                        >
+                      </li>
+                      <li class="toc-item toc-level-4">
+                        <a
+                          class="toc-link"
+                          href="#Initial-Population-and-Dynamic-Updates"
+                          ><span class="toc-text"
+                            >Initial Population and Dynamic Updates</span
+                          ></a
+                        >
+                      </li>
+                      <li class="toc-item toc-level-4">
+                        <a class="toc-link" href="#Traditional-Init-Program"
+                          ><span class="toc-text"
+                            >Traditional Init Program</span
+                          ></a
+                        >
+                      </li>
+                    </ol>
+                  </li>
+                </ol>
+              </li>
+              <li class="toc-item toc-level-2">
+                <a class="toc-link" href="#Test-the-Constructed-Image"
+                  ><span class="toc-text">Test the Constructed Image</span></a
+                >
+                <ol class="toc-child">
+                  <li class="toc-item toc-level-3">
+                    <a class="toc-link" href="#Run-with-QEMU-Emulator"
+                      ><span class="toc-text">Run with QEMU Emulator</span></a
+                    >
+                  </li>
+                  <li class="toc-item toc-level-3">
+                    <a class="toc-link" href="#Booting-a-real-machine"
+                      ><span class="toc-text">Booting a real machine</span></a
+                    >
+                    <ol class="toc-child">
+                      <li class="toc-item toc-level-4">
+                        <a
+                          class="toc-link"
+                          href="#Syslinux-Boot-Process-Overview"
+                          ><span class="toc-text"
+                            >Syslinux Boot Process Overview</span
+                          ></a
+                        >
+                      </li>
+                      <li class="toc-item toc-level-4">
+                        <a class="toc-link" href="#Config-for-syslinux"
+                          ><span class="toc-text">Config for syslinux</span></a
+                        >
+                      </li>
+                      <li class="toc-item toc-level-4">
+                        <a class="toc-link" href="#Burning-the-Bootloader"
+                          ><span class="toc-text"
+                            >Burning the Bootloader</span
+                          ></a
+                        >
+                      </li>
+                      <li class="toc-item toc-level-4">
+                        <a class="toc-link" href="#Test-with-VirtualBox"
+                          ><span class="toc-text">Test with VirtualBox</span></a
+                        >
+                      </li>
+                      <li class="toc-item toc-level-4">
+                        <a class="toc-link" href="#Mount-USB"
+                          ><span class="toc-text">Mount USB</span></a
+                        >
+                      </li>
+                    </ol>
+                  </li>
+                </ol>
+              </li>
+              <li class="toc-item toc-level-2">
+                <a class="toc-link" href="#Reference"
+                  ><span class="toc-text">Reference</span></a
+                >
+              </li>
+            </ol>
+          </div>
+
+          <div class="order-lg-1 col-lg-9 col-12 post-container">
+            <h2 id="Kernel-Image-for-Emulation">
+              <a
+                href="#Kernel-Image-for-Emulation"
+                class="headerlink"
+                title="Kernel Image for Emulation"
+              ></a
+              >Kernel Image for Emulation
+            </h2>
+            <p>
+              We will create a tiny Linux system with absolute minimum
+              additional software. We reuse host kernel image
+              <strong>vmlinuz</strong> to simply the process.
+            </p>
+            <pre><code>cp /vmlinuz vmlinuz
+</code></pre>
+            <p>
+              <strong>vmlinux</strong> is a
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://en.wikipedia.org/wiki/Executable_and_Linkable_Format"
+                >ELF format</a
+              >
+              based Linux kernel executable image and
+              <strong
+                ><a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://s905060.gitbooks.io/site-reliability-engineer-handbook/content/anatomy_of_the_initrd_and_vmlinuz.html"
+                  >vmlinuz</a
+                >
+                (Virtual Memory Linux gZip)</strong
+              >
+              is a compressed version of <strong>vmlinux</strong>. At the
+              beginning of <strong>vmlinuz</strong> is a routine that does some
+              minimal amount of hardware setup and then decompresses the kernel
+              contained within the kernel image and places it into high memory.
+              The routine then calls the kernel and the kernel boot begins.
+            </p>
+            <h2 id="Initramfs">
+              <a href="#Initramfs" class="headerlink" title="Initramfs"></a
+              >Initramfs
+            </h2>
+            <p>
+              We need a temporary root file system, an
+              <strong>initramfs</strong> when the kernel boots up. An initramfs
+              is a <strong>cpio</strong> compressed archive. Unlike the
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://www.kernel.org/doc/html/latest/filesystems/ramfs-rootfs-initramfs.html?highlight=initramfs#ramfs-and-ramdisk"
+                >old initrd</a
+              >, <strong>initramfs</strong> reuse disk cache mechanism of main
+              memory so <strong>initramfs</strong> doesn’t require creating a
+              synthetic block device nor having a intermediate file-system
+              driver inside the kernel to interpret the data which may have
+              license problem and avoid unnecessarily copying memory from the
+              fake block device into the page cache. Bootloader places
+              <strong>initramfs</strong> image(s) in a memory location and then
+              pass its location and its size as
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://www.kernel.org/doc/html/latest/admin-guide/kernel-parameters.html"
+                >parameter</a
+              >
+              to kernel. The kernel checks for the presence of the
+              <strong>initramfs</strong> and if found it is unpacked into a RAM
+              disk at kernel initialization, mounts it as
+              <strong>&#x2F;</strong>. Once <strong>initramfs</strong> is
+              extracted, into <strong>rootfs</strong> the kernel checks if it
+              contains a file <strong>&#x2F;init</strong>. If it does, the
+              kernel executes this <strong>&#x2F;init</strong> file.
+            </p>
+            <pre><code>mkdir simple
+cd simple
+</code></pre>
+            <h3 id="Shell-Environment">
+              <a
+                href="#Shell-Environment"
+                class="headerlink"
+                title="Shell Environment"
+              ></a
+              >Shell Environment
+            </h3>
+            <pre><code>sudo apt install busybox-static
+</code></pre>
+            <p>
+              We have to install
+              <strong
+                ><a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://packages.debian.org/buster/busybox-static"
+                  >busybox-static</a
+                ></strong
+              >,
+              <strong
+                ><a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://packages.debian.org/buster/utils/busybox"
+                  >busybox</a
+                ></strong
+              >
+              does not install symbolic links for any of the supported
+              utilities.
+            </p>
+            <pre><code>mkdir -p bin sbin usr/bin usr/sbin
+cp /bin/busybox bin/busybox
+ln -s busybox bin/sh
+</code></pre>
+            <h3 id="Configure-Keyboard-Layout-for-Spanish">
+              <a
+                href="#Configure-Keyboard-Layout-for-Spanish"
+                class="headerlink"
+                title="Configure Keyboard Layout for Spanish"
+              ></a
+              >Configure Keyboard Layout for Spanish
+            </h3>
+            <p>
+              We have to
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://stackoverflow.com/a/34882663/9980245"
+                >install the list of keymaps</a
+              >
+            </p>
+            <pre><code>sudo apt install kbd console-data
+</code></pre>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://bbs.archlinux.org/viewtopic.php?id=191064"
+                >Convert to binary format</a
+              >
+              and copy to our <strong>initramfs</strong>
+            </p>
+            <pre><code>loadkeys -b /usr/share/keymaps/i386/qwerty/es.kmap.gz &gt; es.kmap
+</code></pre>
+            <h3 id="Support-USB-Devices">
+              <a
+                href="#Support-USB-Devices"
+                class="headerlink"
+                title="Support USB Devices"
+              ></a
+              ><a
+                target="_blank"
+                rel="noopener"
+                href="https://www.cyberciti.biz/faq/usb-drive-not-being-recognized-under-linux/"
+                >Support USB Devices</a
+              >
+            </h3>
+            <p>
+              We repeatedly use this command
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://askubuntu.com/a/521231"
+                >sudo lsmod | grep usb_storage</a
+              >
+              to recursively find all modules that are required for USB
+              hot-plug. They are the
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://unix.stackexchange.com/a/299501"
+                >following modules</a
+              >
+              in total
+            </p>
+            <ul>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://www.kernel.org/doc/html/latest/usb/ohci.html"
+                  >ohci-hcd</a
+                >
+              </li>
+              <li>ohci-pci</li>
+              <li>uas</li>
+              <li>usb_storage</li>
+              <li>usbcore</li>
+              <li>scsi_mod</li>
+              <li>usb_common</li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://tldp.org/HOWTO/SCSI-2.4-HOWTO/sd.html"
+                  >sd_mod</a
+                >
+              </li>
+              <li>fat</li>
+              <li>vfat</li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://unix.stackexchange.com/q/62086"
+                  >nls_* e.g. nls_cp437, nls_ascii</a
+                >
+              </li>
+            </ul>
+            <p>
+              We then use
+              <strong
+                ><a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://www.cyberciti.biz/faq/linux-how-to-load-a-kernel-module-automatically-at-boot-time/"
+                  >sudo modinfo [module name]</a
+                ></strong
+              >
+              to find each module path and copy to our
+              <strong>initramfs</strong>.
+            </p>
+            <pre><code>mkdir -p lib/modules/$(uname -r)
+cp /lib/modules/$(uname -r)/kernel/drivers/usb/host/ohci-hcd.ko lib/modules/$(uname -r)
+cp /lib/modules/$(uname -r)/kernel/drivers/usb/host/ohci-pci.ko lib/modules/$(uname -r)
+cp /lib/modules/$(uname -r)/kernel/drivers/usb/storage/uas.ko lib/modules/$(uname -r)
+cp /lib/modules/$(uname -r)/kernel/drivers/usb/storage/usb-storage.ko lib/modules/$(uname -r)
+cp /lib/modules/$(uname -r)/kernel/drivers/usb/core/usbcore.ko lib/modules/$(uname -r)
+cp /lib/modules/$(uname -r)/kernel/drivers/usb/core/usbcore.ko lib/modules/$(uname -r)
+cp /lib/modules/$(uname -r)/kernel/drivers/scsi/scsi_mod.ko lib/modules/$(uname -r)
+cp /lib/modules/$(uname -r)/kernel/drivers/usb/common/usb-common.ko lib/modules/$(uname -r)
+cp /lib/modules/$(uname -r)/kernel/drivers/scsi/sd_mod.ko lib/modules/$(uname -r)
+cp /lib/modules/$(uname -r)/kernel/fs/fat/vfat.ko lib/modules/$(uname -r)
+cp /lib/modules/$(uname -r)/kernel/fs/fat/fat.ko lib/modules/$(uname -r)
+cp /lib/modules/$(uname -r)/kernel/fs/nls/*.ko lib/modules/$(uname -r)
+</code></pre>
+            <h3 id="Init-Script">
+              <a href="#Init-Script" class="headerlink" title="Init Script"></a
+              >Init Script
+            </h3>
+            <p>
+              We will require a <strong>&#x2F;init</strong> program, it is
+              typically a shell script. It configures some basic device nodes
+              and directories, mounts the special <strong>&#x2F;sys</strong> and
+              <strong>&#x2F;proc</strong> file systems, and starts the
+              processing of hotplug events using mdev and then execute the
+              more-typical &#x2F;sbin&#x2F;init program.
+            </p>
+            <pre><code>nano init
+</code></pre>
+            <p>and put following content</p>
+            <pre><code>#!/bin/sh
+# install symlinks for all of the suppoted utilities
+# install busybox symbolic links
+/bin/busybox --install -s
+#
+[ -d /dev ] || mkdir -m 0755 /dev
+[ -d /root ] || mkdir --mode=0700 /root
+[ -d /sys ] || mkdir /sys
+[ -d /proc ] || mkdir /proc
+[ -d /tmp ] || mkdir /tmp
+mkdir -p /var/lock
+#
+mount -t sysfs none /sys -onodev,noexec,nosuid
+mount -t proc none /proc -onodev,noexec,nosuid
+#
+mknod /dev/zero c 1 5
+mknod /dev/null c 1 3
+mknod /dev/tty c 5 0
+mknod /dev/console c 5 1
+mknod /dev/ptmx c 5 2
+mknod /dev/tty0 c 4 0
+mknod /dev/tty1 c 4 1
+# load USB drivers
+depmod -a # https://stackoverflow.com/q/45658297/9980245
+modprobe ohci-pci
+modprobe uas
+modprobe sd_mod
+# initial population and dynamic updates
+echo &quot;/sbin/mdev&quot; &gt; /proc/sys/kernel/hotplug
+/sbin/mdev -s
+# change keymaps http://ilikelinux69.github.io/How-to-change-the-keyboard-layout-in-Busybox
+loadkmap &lt; es.kmap
+# traditional init program
+exec /sbin/init
+</code></pre>
+            <p>add the execution permission</p>
+            <pre><code>chmod a+x init
+</code></pre>
+            <p>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://www.kernel.org/doc/html/latest/admin-guide/initrd.html#compressed-cpio-images"
+                >compress into cpio images</a
+              >
+            </p>
+            <pre><code>find . | cpio --quiet -o -H newc | gzip &gt;../simple.igz
+</code></pre>
+            <p>
+              The result <strong>simple.igz</strong> is our
+              <strong>initramfs</strong>.
+            </p>
+            <h4 id="Install-Busybox-Symbolic-Links">
+              <a
+                href="#Install-Busybox-Symbolic-Links"
+                class="headerlink"
+                title="Install Busybox Symbolic Links"
+              ></a
+              >Install Busybox Symbolic Links
+            </h4>
+            <p>
+              The <strong>busybox</strong> provide a
+              <strong>–install</strong> options to create symbolic links
+              (<strong>-s</strong>) for all the supported commands in
+              <strong>&#x2F;bin</strong>, <strong>&#x2F;sbin</strong>,
+              <strong>&#x2F;usr&#x2F;sbin</strong>. Here are the list of command
+              that <strong>busybox</strong> install.
+            </p>
+            <ul>
+              <li>
+                ls -al <strong>&#x2F;bin</strong> | grep “-&gt;” | less
+                <ul>
+                  <li>arch</li>
+                  <li>ash</li>
+                  <li>cat</li>
+                  <li>chgrp</li>
+                  <li>chmod</li>
+                  <li>chown</li>
+                  <li>cp</li>
+                  <li>cpio</li>
+                  <li>cttyhack</li>
+                  <li>date</li>
+                  <li>dd</li>
+                  <li>df</li>
+                  <li>dmesg</li>
+                  <li>dnsdomainname</li>
+                  <li>dumkmap</li>
+                  <li>echo</li>
+                  <li>ed</li>
+                  <li>egrep</li>
+                  <li>false</li>
+                  <li>fatattr</li>
+                  <li>fgrep</li>
+                  <li>getopt</li>
+                  <li>grep</li>
+                  <li>hunzip</li>
+                  <li>gzip</li>
+                  <li>hostname</li>
+                  <li>ionice</li>
+                  <li>ipcalc</li>
+                  <li>kill</li>
+                  <li>link</li>
+                  <li>linux32</li>
+                  <li>linux64</li>
+                  <li>ln</li>
+                  <li>login</li>
+                  <li>ls</li>
+                  <li>lzop</li>
+                  <li>mkdir</li>
+                  <li>mknod</li>
+                  <li>mktemp</li>
+                  <li>more</li>
+                  <li>mount</li>
+                  <li>mt</li>
+                  <li>mv</li>
+                  <li>netstat</li>
+                  <li>nuke</li>
+                  <li>pidof</li>
+                  <li>ping</li>
+                  <li>ping6</li>
+                  <li>ps</li>
+                  <li>pwd</li>
+                  <li>readlink</li>
+                  <li>resume</li>
+                  <li>rev</li>
+                  <li>rm</li>
+                  <li>rmdir</li>
+                  <li>rpm</li>
+                  <li>run-parts</li>
+                  <li>sed</li>
+                  <li>setpriv</li>
+                  <li>sh</li>
+                  <li>sleep</li>
+                  <li>slat</li>
+                  <li>stty</li>
+                  <li>su</li>
+                  <li>sync</li>
+                  <li>tar</li>
+                  <li>touch</li>
+                  <li>true</li>
+                  <li>umount</li>
+                  <li>uname</li>
+                  <li>uncompress</li>
+                  <li>usleep</li>
+                  <li>vi</li>
+                  <li>watch</li>
+                  <li>zcat</li>
+                </ul>
+              </li>
+              <li>
+                ls -al <strong>&#x2F;sbin</strong> | grep “-&gt;” | less
+                <ul>
+                  <li>acpid</li>
+                  <li>adjtimex</li>
+                  <li>arp</li>
+                  <li>blockdev</li>
+                  <li>depmod</li>
+                  <li>devmem</li>
+                  <li>fdisk</li>
+                  <li>freeramdisk</li>
+                  <li>fstrim</li>
+                  <li>getty</li>
+                  <li>halt</li>
+                  <li>hwclock</li>
+                  <li>ifconfig</li>
+                  <li>ifdown</li>
+                  <li>ifup</li>
+                  <li>init</li>
+                  <li>insmod</li>
+                  <li>ip</li>
+                  <li>ipneigh</li>
+                  <li>klogd</li>
+                  <li>loadkmap</li>
+                  <li>logread</li>
+                  <li>losetup</li>
+                  <li>lsmod</li>
+                  <li>mdev</li>
+                  <li>mkdosfs</li>
+                  <li>mke2fs</li>
+                  <li>mkswap</li>
+                  <li>modinfo</li>
+                  <li>modprobe</li>
+                  <li>nameif</li>
+                  <li>pivot_root</li>
+                  <li>poweroff</li>
+                  <li>reboot</li>
+                  <li>rmmod</li>
+                  <li>route</li>
+                  <li>run-init</li>
+                  <li>start-stop-daemon</li>
+                  <li>sulogin</li>
+                  <li>swapon</li>
+                  <li>switch_root</li>
+                  <li>sysctl</li>
+                  <li>syslogd</li>
+                  <li>tc</li>
+                  <li>tunctl</li>
+                  <li>udhcpc</li>
+                  <li>uevent</li>
+                  <li>vconfig</li>
+                  <li>watchdog</li>
+                </ul>
+              </li>
+              <li>
+                ls -al <strong>&#x2F;usr&#x2F;bin</strong> | grep “-&gt;” | less
+                <ul>
+                  <li>[</li>
+                  <li>[[</li>
+                  <li>ar</li>
+                  <li>awk</li>
+                  <li>basename</li>
+                  <li>bc</li>
+                  <li>blkdiscard</li>
+                  <li>bunzip2</li>
+                  <li>bzcat</li>
+                  <li>bzip2</li>
+                  <li>cal</li>
+                  <li>chvt</li>
+                  <li>clear</li>
+                  <li>cmp</li>
+                  <li>crontab</li>
+                  <li>cut</li>
+                  <li>dc</li>
+                  <li>deallocvt</li>
+                  <li>diff</li>
+                  <li>dirname</li>
+                  <li>dos2unix</li>
+                  <li>dkpg</li>
+                  <li>dkpg-deb</li>
+                  <li>du</li>
+                  <li>dumpleases</li>
+                  <li>env</li>
+                  <li>expand</li>
+                  <li>expr</li>
+                  <li>factor</li>
+                  <li>fallocate</li>
+                  <li>find</li>
+                  <li>fold</li>
+                  <li>free</li>
+                  <li>ftpget</li>
+                  <li>ftpput</li>
+                  <li>groups</li>
+                  <li>head</li>
+                  <li>hexdump</li>
+                  <li>hostid</li>
+                  <li>id</li>
+                  <li>killall</li>
+                  <li>last</li>
+                  <li>less</li>
+                  <li>loggger</li>
+                  <li>logname</li>
+                  <li>lsscsi</li>
+                  <li>lzcat</li>
+                  <li>lzma</li>
+                  <li>md5sum</li>
+                  <li>microcom</li>
+                  <li>mkfifo</li>
+                  <li>mkpasswd</li>
+                  <li>nc</li>
+                  <li>nl</li>
+                  <li>nproc</li>
+                  <li>nsenter</li>
+                  <li>nslookup</li>
+                  <li>od</li>
+                  <li>openvt</li>
+                  <li>passwd</li>
+                  <li>paste</li>
+                  <li>patch</li>
+                  <li>printf</li>
+                  <li>realpath</li>
+                  <li>renice</li>
+                  <li>reset</li>
+                  <li>rpm2cpio</li>
+                  <li>seq</li>
+                  <li>setkeycodes</li>
+                  <li>setsid</li>
+                  <li>sha1sum</li>
+                  <li>sha256sum</li>
+                  <li>sha512sum</li>
+                  <li>shred</li>
+                  <li>shuf</li>
+                  <li>sort</li>
+                  <li>ssl_client</li>
+                  <li>strings</li>
+                  <li>svc</li>
+                  <li>svok</li>
+                  <li>tac</li>
+                  <li>tail</li>
+                  <li>taskset</li>
+                  <li>tee</li>
+                  <li>telnet</li>
+                  <li>test</li>
+                  <li>tftp</li>
+                  <li>time</li>
+                  <li>timeout</li>
+                  <li>top</li>
+                  <li>tr</li>
+                  <li>traceroute</li>
+                  <li>traceroute6</li>
+                  <li>truncate</li>
+                  <li>tty</li>
+                  <li>unexpand</li>
+                  <li>uniq</li>
+                  <li>unix2dos</li>
+                  <li>unlink</li>
+                  <li>unlzma</li>
+                  <li>unshare</li>
+                  <li>unxz</li>
+                  <li>unzip</li>
+                  <li>uptime</li>
+                  <li>uudecode</li>
+                  <li>uuencode</li>
+                  <li>w</li>
+                  <li>wc</li>
+                  <li>wget</li>
+                  <li>which</li>
+                  <li>who</li>
+                  <li>whoami</li>
+                  <li>xargs</li>
+                  <li>xxd</li>
+                  <li>xz</li>
+                  <li>xzcat</li>
+                  <li>yes</li>
+                </ul>
+              </li>
+            </ul>
+            <h4 id="Initial-Population-and-Dynamic-Updates">
+              <a
+                href="#Initial-Population-and-Dynamic-Updates"
+                class="headerlink"
+                title="Initial Population and Dynamic Updates"
+              ></a
+              ><a
+                target="_blank"
+                rel="noopener"
+                href="https://git.busybox.net/busybox/plain/docs/mdev.txt"
+                >Initial Population and Dynamic Updates</a
+              >
+            </h4>
+            <p>
+              We instruct the kernel to execute &#x2F;sbin&#x2F;mdev whenever a
+              device is added or removed so that the device node can be created
+              or destroyed. Then we seed &#x2F;dev with all the device nodes
+              that were created while the system was booting.
+            </p>
+            <h4 id="Traditional-Init-Program">
+              <a
+                href="#Traditional-Init-Program"
+                class="headerlink"
+                title="Traditional Init Program"
+              ></a
+              >Traditional Init Program
+            </h4>
+            <p>
+              At the end of <strong>&#x2F;init</strong> we call
+              <strong>&#x2F;sbin&#x2F;init</strong> program which coordinates
+              the rest of the boot process and configures the enviroment for the
+              user. It becomes the parent or grandparent of all the processes
+              that start up automatically on the system. In our case
+              <strong>&#x2F;sbin&#x2F;init</strong> is our
+              <strong>busybox</strong> console. At this point we have two
+              busybox running one executing the &#x2F;init and second one - our
+              console <strong>&#x2F;sbin&#x2F;init</strong> that is executed by
+              <strong>&#x2F;init</strong>.
+            </p>
+            <h2 id="Test-the-Constructed-Image">
+              <a
+                href="#Test-the-Constructed-Image"
+                class="headerlink"
+                title="Test the Constructed Image"
+              ></a
+              >Test the Constructed Image
+            </h2>
+            <pre><code>cd ..
+</code></pre>
+            <h3 id="Run-with-QEMU-Emulator">
+              <a
+                href="#Run-with-QEMU-Emulator"
+                class="headerlink"
+                title="Run with QEMU Emulator"
+              ></a
+              >Run with QEMU Emulator
+            </h3>
+            <p>Install the QEMU</p>
+            <pre><code>sudo apt install qemu-system
+</code></pre>
+            <p>Execute the kernel with host architecture e.g. x86_64.</p>
+            <pre><code>qemu-system-x86_64 -vnc :0 -kernel vmlinuz -initrd simple.igz -append &quot;root=/dev/ram&quot; /dev/zero
+</code></pre>
+            <h3 id="Booting-a-real-machine">
+              <a
+                href="#Booting-a-real-machine"
+                class="headerlink"
+                title="Booting a real machine"
+              ></a
+              >Booting a real machine
+            </h3>
+            <p>
+              The <strong>syslinux</strong> package allows us to construct
+              bootable systems for standard PCs on DOS-formatted storage.
+            </p>
+            <pre><code>sudo apt install syslinux
+</code></pre>
+            <p>
+              A suitable medium should be chosen to boot from, e.g., a
+              DOS-formatted USB flash drive. The DOS partition of the USB flash
+              drive must be marked bootable. Some USB flash drives might need
+              repartitioning and reformatting with the Linux tools in order to
+              work correctly.
+            </p>
+            <h4 id="Syslinux-Boot-Process-Overview">
+              <a
+                href="#Syslinux-Boot-Process-Overview"
+                class="headerlink"
+                title="Syslinux Boot Process Overview"
+              ></a
+              ><a
+                target="_blank"
+                rel="noopener"
+                href="https://wiki.archlinux.org/index.php/syslinux#Boot_process_overview"
+                >Syslinux Boot Process Overview</a
+              >
+            </h4>
+            <ol>
+              <li>
+                <strong
+                  >Stage 1 - Part 1 - Load
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="https://en.wikipedia.org/wiki/Master_boot_record#Sector_layout"
+                    >MBR</a
+                  ></strong
+                >: At boot, the BIOS loads the 440 byte
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://git.kernel.org/pub/scm/boot/syslinux/syslinux.git/tree/mbr/mbr.S?id=4298786ca19e9121568ecd4cc8b79d276ccfd24a"
+                  >MBR boot code</a
+                >
+                at the start of the disk
+                (<strong>&#x2F;usr&#x2F;lib&#x2F;syslinux&#x2F;bios&#x2F;mbr.bin</strong>).
+              </li>
+              <li>
+                <strong
+                  >Stage 1 - Part 2 -
+                  <a
+                    target="_blank"
+                    rel="noopener"
+                    href="https://git.kernel.org/pub/scm/boot/syslinux/syslinux.git/tree/mbr/mbr.S?id=4298786ca19e9121568ecd4cc8b79d276ccfd24a#n195"
+                    >Search active partition</a
+                  ></strong
+                >: The MBR boot code looks for the active partition that is
+                marked with boot flag. e.g.
+                <strong>&#x2F;boot</strong> partition.
+              </li>
+              <li>
+                <strong>Stage 2 - Part 1 - Execute volume boot record:</strong>
+                The
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://git.kernel.org/pub/scm/boot/syslinux/syslinux.git/tree/core/diskstart.inc?id=10f6cf6eef0a7da7dad1933efdbfb101155792d0#n154"
+                  >MBR boot code executes the Volume Boot Record (VBR) of the
+                  &#x2F;boot partition</a
+                >. In the case of Syslinux, the VBR boot code is the starting
+                sector of &#x2F;boot&#x2F;syslinux&#x2F;ldlinux.sys which is
+                created by the extlinux –install command.
+              </li>
+              <li>
+                <strong
+                  >Stage 2 - Part 2 - Execute
+                  &#x2F;boot&#x2F;syslinux&#x2F;ldlinux.sys:</strong
+                >
+                - The VBR will
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://git.kernel.org/pub/scm/boot/syslinux/syslinux.git/tree/core/diskstart.inc#n154"
+                  >load the rest of &#x2F;boot&#x2F;syslinux&#x2F;ldlinux.sys</a
+                >. The sector location of
+                &#x2F;boot&#x2F;syslinux&#x2F;ldlinux.sys should not change,
+                otherwise syslinux will not boot.
+              </li>
+              <li>
+                <strong
+                  >Stage 3 - Load
+                  &#x2F;boot&#x2F;syslinux&#x2F;ldlinux.c32:</strong
+                >
+                The &#x2F;boot&#x2F;syslinux&#x2F;ldlinux.sys will load the
+                &#x2F;boot&#x2F;syslinux&#x2F;ldlinux.c32 (core module) that
+                contains the rest of the core part of syslinux that could not be
+                fit into ldlinux.sys (due to file-size constraints). The
+                ldlinux.c32 file should be present in every Syslinux
+                installation and should match the version of ldlinux.sys
+                installed in the partition.
+              </li>
+              <li>
+                <strong>Stage 4 - Search and Load configuration file:</strong> -
+                Once Syslinux is fully loaded, it
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://git.kernel.org/pub/scm/boot/syslinux/syslinux.git/tree/core/fs/lib/loadconfig.c?id=7d9c9eca562857fed25b4c8ef902e3de968d7631"
+                  >looks for &#x2F;boot&#x2F;syslinux&#x2F;syslinux.cfg and
+                  loads</a
+                >.
+              </li>
+            </ol>
+            <h4 id="Config-for-syslinux">
+              <a
+                href="#Config-for-syslinux"
+                class="headerlink"
+                title="Config for syslinux"
+              ></a
+              >Config for syslinux
+            </h4>
+            <p>
+              The syslinux program should be run on the device something similar
+              to &#x2F;dev&#x2F;sdx1 for a USB flash drive. You should be
+              careful, as selecting the wrong devide name might overwrite your
+              host system’s hard drive. The syslinux loader can be<br />configured
+              using a file called <strong>syslinux.cfg</strong>
+            </p>
+            <pre><code>nano syslinux.cfg
+</code></pre>
+            <p>which would look something like:</p>
+            <pre><code>Default simple
+timeout 100
+prompt 1
+label simple
+  kernel vmlinuz
+  append initrd=simple.igz root=/dev/ram
+</code></pre>
+            <h4 id="Burning-the-Bootloader">
+              <a
+                href="#Burning-the-Bootloader"
+                class="headerlink"
+                title="Burning the Bootloader"
+              ></a
+              >Burning the Bootloader
+            </h4>
+            <p>
+              We give our user permission that allow
+              <strong>syslinux</strong> to write code to MBR. We add our
+              username to
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://wiki.debian.org/SystemGroups#Groups_without_an_associated_user"
+                >disk</a
+              >
+              group which have <strong>raw access to disks</strong> with
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://man7.org/linux/man-pages/man8/usermod.8.html"
+                >usermod</a
+              >.
+            </p>
+            <pre><code>sudo usermod -G disk -a $(whoami)
+</code></pre>
+            <p>
+              We execute this command only once, the change is permanent. We now
+              mount the USB devices and copy the remaining archives to normal
+              file system, we can use <strong>dmesg</strong> to find
+              <strong>sdX1</strong>.
+            </p>
+            <pre><code>sudo syslinux /dev/sdX1
+# Mount hand if not magicaly mounted when connected.
+sudo mkdir /mnt/test
+sudo mount -t vfat /dev/sdX1 /mnt/test
+# And then work with /mnt/test
+sudo cp vmlinuz simple.igz syslinux.cfg /mnt/test
+sudo umount /mnt/test
+</code></pre>
+            <p>
+              The device may now be removed and booted on an appropriate PC.
+            </p>
+            <h4 id="Test-with-VirtualBox">
+              <a
+                href="#Test-with-VirtualBox"
+                class="headerlink"
+                title="Test with VirtualBox"
+              ></a
+              >Test with VirtualBox
+            </h4>
+            <ol>
+              <li>
+                Download
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://www.plop.at/en/bootmanager/download.html"
+                  >Plop Boot Manager</a
+                >
+              </li>
+              <li>Extract plpbt.iso</li>
+              <li>
+                From Settings -&gt; Sorage -&gt; Controller: IDE -&gt; Add -&gt;
+                Select plpbt.iso
+              </li>
+              <li>
+                From Settings -&gt; System -&gt; Boot Order -&gt; Ensure Optical
+                is before any other devices
+              </li>
+              <li>From Plop boot menu select USB device</li>
+            </ol>
+            <p>
+              When we finish booting from USB, we can unplug USB. All content,
+              kernel and initramfs is available in the main memory, we don’t use
+              USB anymore. We could not access the content of our USB since
+              there is no corresponding driver for USB and file system.
+            </p>
+            <h4 id="Mount-USB">
+              <a href="#Mount-USB" class="headerlink" title="Mount USB"></a
+              ><a
+                target="_blank"
+                rel="noopener"
+                href="https://unix.stackexchange.com/a/134516"
+                >Mount USB</a
+              >
+            </h4>
+            <p>
+              Since there is no
+              <strong
+                ><a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://wiki.debian.org/udev"
+                  >udev</a
+                ></strong
+              >
+              running, we have to create block device node in
+              <strong>&#x2F;dev</strong> manually. First check with
+              <strong>dmesg</strong> if drivers detect USB and which identifier
+              it has e.g. sda1 and then create our block device manually which
+              following parameters for sda1, if identifier is diferrent you have
+              to check
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/Documentation/admin-guide/devices.txt?id=15ab85695595fbaba1ccccd07f7b0cede57cccf2#n200"
+                >here</a
+              >.
+            </p>
+            <pre><code>mknod /dev/sda b 8 0
+mknod /dev/sda1 b 8 1
+mkdir -p /mnt/test
+mount -t vfat /dev/sda1 /mnt/test
+</code></pre>
+            <h2 id="Reference">
+              <a href="#Reference" class="headerlink" title="Reference"></a
+              >Reference
+            </h2>
+            <ul>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="http://www.datsi.fi.upm.es/docencia/SEUM/publico/practica_USLES.pdf"
+                  >Un Sistema Linux Empotrado Sencillo</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://opensource.com/article/17/2/linux-boot-and-startup"
+                  >An introduction to the Linux boot and startup processes</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/5/html/installation_guide/s1-boot-init-shutdown-process"
+                  >A DETAILED LOOK AT THE BOOT PROCESS</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://wiki.debian.org/SystemGroups#Groups_without_an_associated_user"
+                  >Disk Group</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://s905060.gitbooks.io/site-reliability-engineer-handbook/content/anatomy_of_the_initrd_and_vmlinuz.html"
+                  >Anatomy of the initrd and vmlinuz</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://www.kernel.org/doc/html/latest/filesystems/ramfs-rootfs-initramfs.html?highlight=initramfs#ramfs-and-ramdisk"
+                  >Ramfs, rootfs and initramfs</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://packages.debian.org/buster/utils/busybox"
+                  >Package: busybox</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://docs.windriver.com/bundle/Wind_River_Linux_Users_Guide_3.0_1/page/497722.html"
+                  >QEMU Example: Deploying initramfs</a
+                >
+              </li>
+            </ul>
+
+            <hr />
+
+            <ul class="list-group">
+              <li
+                class="list-group-item list-group-item-action flex-column align-items-start"
+              >
+                <a
+                  target="_parent"
+                  href="/migrations/Minimalist-Linux-Workspace/"
+                >
+                  Minimalist Linux Workspace
+                </a>
+              </li>
+
+              <li
+                class="list-group-item list-group-item-action flex-column align-items-start"
+              >
+                <a target="_parent" href="/migrations/RaspberryPi-Odoo/">
+                  RaspberryPi Odoo
+                </a>
+              </li>
+
+              <li
+                class="list-group-item list-group-item-action flex-column align-items-start"
+              >
+                <a target="_parent" href="/migrations/RaspberryPi4B-Setup/">
+                  Raspberry Pi 4B Setup
+                </a>
+              </li>
+
+              <li
+                class="list-group-item list-group-item-action flex-column align-items-start"
+              >
+                <a target="_parent" href="/migrations/minishell/">
+                  La implementación de minishell en Linux
+                </a>
+              </li>
+            </ul>
+
+            <ul class="pagination pager">
+              <li class="page-item">
+                <a
+                  target="_parent"
+                  class="page-link"
+                  href="/migrations/Test-Case-Design-Techniques/"
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  title="Test Case Design Techniques"
+                  >&larr; Previous Post</a
+                >
+              </li>
+
+              <li class="page-item ms-auto">
+                <a
+                  target="_parent"
+                  class="page-link"
+                  href="/migrations/Java-Stream/"
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  title="Java Stream"
+                  >Next Post &rarr;</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="comment">
+          <!-- disqus 评论框 start -->
+
+          <!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = "blog-vnwybnwkiz";
+            var disqus_identifier =
+              "https://vitaminac.github.io/Simple-Bootstrap-Linux-System/";
+            var disqus_url =
+              "https://vitaminac.github.io/Simple-Bootstrap-Linux-System/";
+            var disqus_config = function () {
+              this.language = "en";
+            };
+
+            (function () {
+              var dsq = document.createElement("script");
+              dsq.type = "text/javascript";
+              dsq.async = true;
+              dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+              (
+                document.getElementsByTagName("head")[0] ||
+                document.getElementsByTagName("body")[0]
+              ).appendChild(dsq);
+            })();
+          </script>
+          <!-- disqus 公共JS代码 end -->
+          <div id="disqus_thread" class="disqus-thread"></div>
+          <!-- disqus 评论框 end -->
+        </div>
+
+        <div class="row justify-content-center">
+          <!-- Sidebar Container -->
+
+          <div class="col-lg-8` col-md-10 sidebar-container">
+            <!-- Friends Blog -->
+          </div>
+        </div>
+      </div>
+    </article>
+    <!-- Custom Theme JavaScript -->
+    <script type="text/javascript" src="/js/blog.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        anchors.add("p");
+      });
+    </script>
+
+    <!-- jquery.tagcloud.js -->
+    <script>
+      // only load tagcloud.js in tag.html
+      if ($("#tag_cloud").length !== 0) {
+        async("https://vitaminac.github.io/js/jquery.tagcloud.js", function () {
+          $.fn.tagcloud.defaults = {
+            //size: {start: 1, end: 1, unit: 'em'},
+            color: {
+              start: "#bbbbee",
+              end: "#0085a1",
+            },
+          };
+          $("#tag_cloud a").tagcloud();
+        });
+      }
+    </script>
+
+    <script type="text/javascript" src="/js/common.js"></script>
+
+    <!-- render ipynb file -->
+
+    <!-- render ipynb file -->
+  </body>
+</html>

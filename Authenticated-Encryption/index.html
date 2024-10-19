@@ -1,0 +1,788 @@
+<!doctype html>
+<html lang="en">
+  <!-- Head tag -->
+  <!-- SEO -->
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Authenticated Encryption｜Gao&#39;s Blog</title>
+    <meta
+      property="og:title"
+      content="Authenticated Encryption｜Gao&#39;s Blog"
+    />
+
+    <meta
+      name="description"
+      content="Authenticated Encryption｜Gao&#39;s Blog"
+    />
+    <meta
+      property="og:description"
+      content="Authenticated Encryption｜Gao&#39;s Blog"
+    />
+    <meta name="author" content="Gao" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      property="og:image"
+      content="https://vitaminac.github.io/images/favicon.jpg"
+    />
+    <link rel="shortcut icon" href="/images/favicon.jpg" />
+
+    <meta
+      name="keywords"
+      content="Mac,HMAC,Message Authentication Code,AE,Authenticated Encryption,Salt"
+    />
+
+    <meta name="theme-color" content="#600090" />
+    <meta name="msapplication-navbutton-color" content="#600090" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090" />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="Gao&#39;s Blog"
+      href="/atom.xml"
+    />
+
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      cross-origin="anonymous"
+      referrer-policy="no-referrer"
+    />
+    <link
+      rel="canonical"
+      href="https://vitaminac.github.io/Authenticated-Encryption/"
+    />
+
+    <!-- jQuery -->
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+    ></script>
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css" />
+    <link rel="stylesheet" href="/css/syntax.css" />
+
+    <!-- Google Tag Manager -->
+
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-WDC9JKC");
+    </script>
+
+    <!-- End Google Tag Manager -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-151409235-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-151409235-1");
+    </script>
+
+    <!-- Google AdSense -->
+    <script
+      data-ad-client="ca-pub-8356359077918854"
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+    <meta name="generator" content="Hexo 6.3.0" />
+  </head>
+  <style>
+    header.intro-header {
+      background-image: url("/images/header.gif");
+    }
+  </style>
+  <!-- hack iOS CSS :active style -->
+
+  <body ontouchstart="" class="animated fadeIn">
+    <!-- Main Content -->
+
+    <!--only post-->
+
+    <img class="wechat-title-img" src="/images/preview.jpeg" />
+
+    <style>
+      header.intro-header {
+        background-image: url("/images/preview.jpeg");
+      }
+    </style>
+
+    <header class="intro-header">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-md-10 text-center">
+            <div class="post-heading">
+              <h1>Authenticated Encryption</h1>
+
+              <span class="meta"
+                >Author: Gao
+                <span />
+                Date: 2021-03-28
+              </span>
+              <div class="tags text-center">
+                <a
+                  target="_parent"
+                  class="tag"
+                  href="/posts/langs/en/tags/Mac"
+                  title="Mac"
+                >
+                  Mac</a
+                >
+
+                <a
+                  target="_parent"
+                  class="tag"
+                  href="/posts/langs/en/tags/HMAC"
+                  title="HMAC"
+                >
+                  HMAC</a
+                >
+
+                <a
+                  target="_parent"
+                  class="tag"
+                  href="/posts/langs/en/tags/Message Authentication Code"
+                  title="Message Authentication Code"
+                >
+                  Message Authentication Code</a
+                >
+
+                <a
+                  target="_parent"
+                  class="tag"
+                  href="/posts/langs/en/tags/AE"
+                  title="AE"
+                >
+                  AE</a
+                >
+
+                <a
+                  target="_parent"
+                  class="tag"
+                  href="/posts/langs/en/tags/Authenticated Encryption"
+                  title="Authenticated Encryption"
+                >
+                  Authenticated Encryption</a
+                >
+
+                <a
+                  target="_parent"
+                  class="tag"
+                  href="/posts/langs/en/tags/Salt"
+                  title="Salt"
+                >
+                  Salt</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="post-title-haojen">
+        <span> Authenticated Encryption </span>
+      </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <!-- Post Container -->
+          <div class="order-lg-2 col-lg-3 col-12 toc-col" style="z-index: 1">
+            <ol class="toc">
+              <li class="toc-item toc-level-2">
+                <a class="toc-link" href="#Glossary"
+                  ><span class="toc-text">Glossary</span></a
+                >
+                <ol class="toc-child">
+                  <li class="toc-item toc-level-3">
+                    <a class="toc-link" href="#Cryptographic-Hash-Function"
+                      ><span class="toc-text"
+                        >Cryptographic Hash Function</span
+                      ></a
+                    >
+                  </li>
+                  <li class="toc-item toc-level-3">
+                    <a class="toc-link" href="#Salt"
+                      ><span class="toc-text">Salt</span></a
+                    >
+                    <ol class="toc-child">
+                      <li class="toc-item toc-level-4">
+                        <a class="toc-link" href="#Reuse-Salt"
+                          ><span class="toc-text">Reuse Salt</span></a
+                        >
+                      </li>
+                      <li class="toc-item toc-level-4">
+                        <a class="toc-link" href="#Short-Salt"
+                          ><span class="toc-text">Short Salt</span></a
+                        >
+                      </li>
+                    </ol>
+                  </li>
+                  <li class="toc-item toc-level-3">
+                    <a class="toc-link" href="#Message-Authentication-Code"
+                      ><span class="toc-text"
+                        >Message Authentication Code</span
+                      ></a
+                    >
+                  </li>
+                  <li class="toc-item toc-level-3">
+                    <a class="toc-link" href="#Comparison"
+                      ><span class="toc-text">Comparison</span></a
+                    >
+                  </li>
+                </ol>
+              </li>
+              <li class="toc-item toc-level-2">
+                <a
+                  class="toc-link"
+                  href="#Example-Application-Tamper-Proof-Query-Parameter"
+                  ><span class="toc-text"
+                    >Example Application: Tamper-Proof Query Parameter</span
+                  ></a
+                >
+                <ol class="toc-child">
+                  <li class="toc-item toc-level-3">
+                    <a
+                      class="toc-link"
+                      href="#Approach-1-Cryptographic-Hash-Function"
+                      ><span class="toc-text"
+                        >Approach 1: Cryptographic Hash Function</span
+                      ></a
+                    >
+                  </li>
+                  <li class="toc-item toc-level-3">
+                    <a
+                      class="toc-link"
+                      href="#Approach-2-Cryptographic-Hash-Function-With-Salt"
+                      ><span class="toc-text"
+                        >Approach 2: Cryptographic Hash Function With Salt</span
+                      ></a
+                    >
+                  </li>
+                  <li class="toc-item toc-level-3">
+                    <a
+                      class="toc-link"
+                      href="#Approach-3-Message-Authentication-Code"
+                      ><span class="toc-text"
+                        >Approach 3: Message Authentication Code</span
+                      ></a
+                    >
+                  </li>
+                  <li class="toc-item toc-level-3">
+                    <a
+                      class="toc-link"
+                      href="#Approach-4-Authenticated-Encryption"
+                      ><span class="toc-text"
+                        >Approach 4: Authenticated Encryption</span
+                      ></a
+                    >
+                    <ol class="toc-child">
+                      <li class="toc-item toc-level-4">
+                        <a
+                          class="toc-link"
+                          href="#Approach-4-1-Encrypt-then-MAC"
+                          ><span class="toc-text"
+                            >Approach 4.1: Encrypt-then-MAC</span
+                          ></a
+                        >
+                      </li>
+                    </ol>
+                  </li>
+                </ol>
+              </li>
+              <li class="toc-item toc-level-2">
+                <a class="toc-link" href="#Reference"
+                  ><span class="toc-text">Reference</span></a
+                >
+              </li>
+            </ol>
+          </div>
+
+          <div class="order-lg-1 col-lg-9 col-12 post-container">
+            <h2 id="Glossary">
+              <a href="#Glossary" class="headerlink" title="Glossary"></a
+              >Glossary
+            </h2>
+            <h3 id="Cryptographic-Hash-Function">
+              <a
+                href="#Cryptographic-Hash-Function"
+                class="headerlink"
+                title="Cryptographic Hash Function"
+              ></a
+              >Cryptographic Hash Function
+            </h3>
+            <p>
+              It is a <strong>one-way function</strong> that maps data of
+              arbitrary size (often called the <strong>message</strong>) to a
+              bit array of a fixed size (the <strong>hash value</strong>,
+              <strong>hash</strong>, or <strong>message digest</strong>).
+              Ideally, it should be infeasible to invert and the only way to
+              find a message that produces a given hash is to attempt a
+              brute-force search of possible inputs to see if they produce a
+              match.
+            </p>
+            <h3 id="Salt">
+              <a href="#Salt" class="headerlink" title="Salt"></a>Salt
+            </h3>
+            <p>
+              Salt is random data that is used as an additional input to a
+              one-way function. Salts defend against attacks that use
+              precomputed tables (e.g. rainbow table) as they can make the size
+              of table needed for a successful attack extremely large.
+            </p>
+            <h4 id="Reuse-Salt">
+              <a href="#Reuse-Salt" class="headerlink" title="Reuse Salt"></a
+              >Reuse Salt
+            </h4>
+            <p>
+              Reusing the same salt for numerous inputs is dangerous because it
+              allows precomputed table which simply apply same salt to all the
+              items in the brute force dictionary.
+            </p>
+            <h4 id="Short-Salt">
+              <a href="#Short-Salt" class="headerlink" title="Short Salt"></a
+              >Short Salt
+            </h4>
+            <p>
+              If a salt is too short, an attacker may precompute a table of all
+              combinations of every possible salts and every likely plaintext.
+            </p>
+            <h3 id="Message-Authentication-Code">
+              <a
+                href="#Message-Authentication-Code"
+                class="headerlink"
+                title="Message Authentication Code"
+              ></a
+              >Message Authentication Code
+            </h3>
+            <p>
+              MAC is cryptographic checksum that are used to detect when an
+              attacker has tampered with a message, so we can confirm that the
+              message come from the trusted sender(ourselves). The MAC value
+              protects a message integrity as well as its authenticity.
+            </p>
+            <h3 id="Comparison">
+              <a href="#Comparison" class="headerlink" title="Comparison"></a
+              >Comparison
+            </h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Security Goal</th>
+                  <th>Hash</th>
+                  <th>MAC</th>
+                  <th>Digital Signature</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Integrity</td>
+                  <td>Yes</td>
+                  <td>Yes</td>
+                  <td>Yes</td>
+                </tr>
+                <tr>
+                  <td>Authentication</td>
+                  <td>No</td>
+                  <td>Yes</td>
+                  <td>Yes</td>
+                </tr>
+                <tr>
+                  <td>Non-Repudiation</td>
+                  <td>No</td>
+                  <td>No</td>
+                  <td>Yes</td>
+                </tr>
+                <tr>
+                  <td>Keys</td>
+                  <td>N&#x2F;A</td>
+                  <td>Symmetric</td>
+                  <td>Asymmetric</td>
+                </tr>
+              </tbody>
+            </table>
+            <h2 id="Example-Application-Tamper-Proof-Query-Parameter">
+              <a
+                href="#Example-Application-Tamper-Proof-Query-Parameter"
+                class="headerlink"
+                title="Example Application: Tamper-Proof Query Parameter"
+              ></a
+              >Example Application: Tamper-Proof Query Parameter
+            </h2>
+            <p>
+              Since URLs can easily be changed by even the most novice user, you
+              need to validate to ensure that the user has not modified the
+              query parameter to an unacceptable state.
+            </p>
+            <p>
+              The standard approach is a proper authentication and authorization
+              control system in the backend or avoid passing such critical
+              information through query parameter by using data store or
+              external service.
+            </p>
+            <p>
+              However, there are time when important state needs to be passed
+              through the query parameter and, under no circumstances, should be
+              it be able to be modified by the end user. In order to preserve
+              the integrity of query parameter you will have to apply some
+              security mechanisms.
+            </p>
+            <h3 id="Approach-1-Cryptographic-Hash-Function">
+              <a
+                href="#Approach-1-Cryptographic-Hash-Function"
+                class="headerlink"
+                title="Approach 1: Cryptographic Hash Function"
+              ></a
+              >Approach 1: Cryptographic Hash Function
+            </h3>
+            <p>
+              You can use a cryptographic hash function to sign the value of
+              query parameter that you do not want to be edited by user and
+              append this signature to the query parameter. We can validate the
+              value of query parameter by applying the same hash function to
+              ensure that it matches to the signature we have included
+              previously.
+            </p>
+            <p>
+              However, this approach presents a problem, even the hash function
+              is private to us, user might end up realizing the hash function we
+              are using, e.g. sha256. Then the user can forge the value of query
+              parameter and update the signature manually.
+            </p>
+            <h3 id="Approach-2-Cryptographic-Hash-Function-With-Salt">
+              <a
+                href="#Approach-2-Cryptographic-Hash-Function-With-Salt"
+                class="headerlink"
+                title="Approach 2: Cryptographic Hash Function With Salt"
+              ></a
+              >Approach 2: Cryptographic Hash Function With Salt
+            </h3>
+            <p>
+              To mitigate user generating signature of query parameter, we can
+              add the additional input (salt) before hashing. However, this
+              approach still present certain problems, e.g. vulnerable to reply
+              attack, authenticated users could cut and paste valid query
+              parameter value to other users or cached by search engine, to
+              prevent this from happening we need to create our own protocol,
+              e.g. ensure the salt value is bind to each user e.g. session id,
+              or make it expire after a period of time e.g. timestamp. However,
+              most of the time salt value is not meant to be completely
+              invisible to user, e.g. we can often retrieve session id from the
+              browser cookie or other header and saving salt for each user might
+              be expensive since the length of salt should be long enough and
+              different for each user to prevent precomputed dictionary attack.
+            </p>
+            <h3 id="Approach-3-Message-Authentication-Code">
+              <a
+                href="#Approach-3-Message-Authentication-Code"
+                class="headerlink"
+                title="Approach 3: Message Authentication Code"
+              ></a
+              >Approach 3: Message Authentication Code
+            </h3>
+            <p>
+              We can use MAC to provide better data integrity and authenticity,
+              MAC resist signature forgery under chosen-plaintext attacks while
+              cryptographic hash functions doesn’t. However, MAC doesn’t provide
+              confidentiality of query parameter value, it is still visible to
+              the user, same problem with reply attack and doesn’t provide
+              confidentiality of query parameter value.
+            </p>
+            <h3 id="Approach-4-Authenticated-Encryption">
+              <a
+                href="#Approach-4-Authenticated-Encryption"
+                class="headerlink"
+                title="Approach 4: Authenticated Encryption"
+              ></a
+              >Approach 4: Authenticated Encryption
+            </h3>
+            <p>
+              In addition to the benefits of previous approach it provides
+              confidentiality of message. Authenticated encryption schemes can
+              recognize improperly-constructed ciphertexts and refuse to decrypt
+              them.
+            </p>
+            <h4 id="Approach-4-1-Encrypt-then-MAC">
+              <a
+                href="#Approach-4-1-Encrypt-then-MAC"
+                class="headerlink"
+                title="Approach 4.1: Encrypt-then-MAC"
+              ></a
+              >Approach 4.1: Encrypt-then-MAC
+            </h4>
+            <p>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Authenticated_Encryption_EtM.png/220px-Authenticated_Encryption_EtM.png"
+                alt="EtM"
+              />
+            </p>
+            <h2 id="Reference">
+              <a href="#Reference" class="headerlink" title="Reference"></a
+              >Reference
+            </h2>
+            <ul>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="http://aspnet.4guysfromrolla.com/articles/083105-1.aspx"
+                  >Passing Tamper-Proof Query Parameters</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://en.wikipedia.org/wiki/Message_authentication_code"
+                  >Wikipedia: Message Authentication Code</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://en.wikipedia.org/wiki/HMAC"
+                  >Wikipedia: HMAC</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation"
+                  >Wikipedia: Block_cipher_mode_of_operation</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://en.wikipedia.org/wiki/Authenticated_encryption"
+                  >Wikipedia: Authenticated Encryption</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://en.wikipedia.org/wiki/Salt_(cryptography)"
+                  >Wikipedia: Salt</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://en.wikipedia.org/wiki/Rainbow_table"
+                  >Wikipedia: Rainbow table</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://crypto.stackexchange.com/a/10758"
+                  >Stack Exchange: Difference between salt and MAC</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://en.wikipedia.org/wiki/Digital_signature_forgery"
+                  >Wikipedia: Digital Signature Forgery</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://en.wikipedia.org/wiki/Chosen-plaintext_attack"
+                  >Wikipedia: Chosen-Plaintext Attack</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://crypto.stackexchange.com/a/5647"
+                  >Stack Exchange: What are the differences between a digital
+                  signature, a MAC and a hash?
+                </a>
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://security.stackexchange.com/a/32134"
+                  >Stack Exchange: What is the difference between a mac and a
+                  digital signiture
+                </a>
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://tools.ietf.org/html/rfc5116"
+                  >RFC: An Interface and Algorithms for Authenticated
+                  Encryption</a
+                >
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://www.cosic.esat.kuleuven.be/school-iot/slides/AuthenticatedEncryptionII.pdf"
+                  >Royal Holloway University: Authenticated Encryption</a
+                >
+              </li>
+            </ul>
+
+            <hr />
+
+            <ul class="list-group"></ul>
+
+            <ul class="pagination pager">
+              <li class="page-item">
+                <a
+                  target="_parent"
+                  class="page-link"
+                  href="/migrations/Testing/"
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  title="Testing"
+                  >&larr; Previous Post</a
+                >
+              </li>
+
+              <li class="page-item ms-auto">
+                <a
+                  target="_parent"
+                  class="page-link"
+                  href="/migrations/Information-Security/"
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  title="Information Security"
+                  >Next Post &rarr;</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="comment">
+          <!-- disqus 评论框 start -->
+
+          <!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+          <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = "blog-vnwybnwkiz";
+            var disqus_identifier =
+              "https://vitaminac.github.io/Authenticated-Encryption/";
+            var disqus_url =
+              "https://vitaminac.github.io/Authenticated-Encryption/";
+            var disqus_config = function () {
+              this.language = "en";
+            };
+
+            (function () {
+              var dsq = document.createElement("script");
+              dsq.type = "text/javascript";
+              dsq.async = true;
+              dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+              (
+                document.getElementsByTagName("head")[0] ||
+                document.getElementsByTagName("body")[0]
+              ).appendChild(dsq);
+            })();
+          </script>
+          <!-- disqus 公共JS代码 end -->
+          <div id="disqus_thread" class="disqus-thread"></div>
+          <!-- disqus 评论框 end -->
+        </div>
+
+        <div class="row justify-content-center">
+          <!-- Sidebar Container -->
+
+          <div class="col-lg-8` col-md-10 sidebar-container">
+            <!-- Friends Blog -->
+          </div>
+        </div>
+      </div>
+    </article>
+    <!-- Custom Theme JavaScript -->
+    <script type="text/javascript" src="/js/blog.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        anchors.add("p");
+      });
+    </script>
+
+    <!-- jquery.tagcloud.js -->
+    <script>
+      // only load tagcloud.js in tag.html
+      if ($("#tag_cloud").length !== 0) {
+        async("https://vitaminac.github.io/js/jquery.tagcloud.js", function () {
+          $.fn.tagcloud.defaults = {
+            //size: {start: 1, end: 1, unit: 'em'},
+            color: {
+              start: "#bbbbee",
+              end: "#0085a1",
+            },
+          };
+          $("#tag_cloud a").tagcloud();
+        });
+      }
+    </script>
+
+    <script type="text/javascript" src="/js/common.js"></script>
+
+    <!-- render ipynb file -->
+
+    <!-- render ipynb file -->
+  </body>
+</html>

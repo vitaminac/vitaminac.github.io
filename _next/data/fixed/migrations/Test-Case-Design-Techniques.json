@@ -1,0 +1,42 @@
+{
+  "pageProps": {
+    "postData": {
+      "slug": "Test-Case-Design-Techniques",
+      "title": "Test Case Design Techniques",
+      "date": "Tue Nov 24 2020 12:56:14 GMT+0000 (Coordinated Universal Time)",
+      "lang": "en",
+      "tags": [
+        "Test Design",
+        "Boundary Value Analysis",
+        "Equivalence Partitioning"
+      ],
+      "path": "/Test-Case-Design-Techniques/index.html"
+    },
+    "lang": "en",
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "en": {
+          "common": { "Next": "Next", "Back to home": "Back to home" },
+          "feature-tags": { "Tags": "Tags" },
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          }
+        }
+      },
+      "initialLocale": "en",
+      "ns": ["common", "feature-tags", "navbar"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

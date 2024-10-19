@@ -1,0 +1,38 @@
+{
+  "pageProps": {
+    "postData": {
+      "slug": "Google-Foobar-Decrypt-Message",
+      "title": "Google Foobar Decrypt Final Message",
+      "date": "Thu Dec 26 2019 21:43:50 GMT+0000 (Coordinated Universal Time)",
+      "lang": "en",
+      "tags": [],
+      "path": "/Google-Foobar-Decrypt-Message/index.html"
+    },
+    "lang": "en",
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "en": {
+          "common": { "Next": "Next", "Back to home": "Back to home" },
+          "feature-tags": { "Tags": "Tags" },
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          }
+        }
+      },
+      "initialLocale": "en",
+      "ns": ["common", "feature-tags", "navbar"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}
