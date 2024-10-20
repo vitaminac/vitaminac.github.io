@@ -1,42 +1,40 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [531],
+  [405],
   {
-    4753: function (n, t, e) {
+    8312: function (n, t, e) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
-        "/posts/langs/[lang]",
+        "/",
         function () {
-          return e(3734);
+          return e(1854);
         },
       ]);
     },
-    3734: function (n, t, e) {
+    1854: function (n, t, e) {
       "use strict";
       e.r(t),
         e.d(t, {
           __N_SSG: function () {
-            return r;
+            return o;
           },
           default: function () {
-            return s;
+            return c;
           },
         });
       var u = e(5893),
         i = e(9008),
-        o = e.n(i),
-        r = !0;
-      function s(n) {
+        r = e.n(i),
+        o = !0;
+      function c(n) {
         let t = [
           n.domain,
           n.basePath,
           "posts",
           "langs",
-          n.language,
-          "pagination",
-          "1",
+          n.siteConfig.defaultLanguage,
         ]
           .filter((n) => n)
           .join("/");
-        return (0, u.jsxs)(o(), {
+        return (0, u.jsxs)(r(), {
           children: [
             (0, u.jsx)("meta", {
               httpEquiv: "refresh",
@@ -48,12 +46,12 @@
       }
     },
     9008: function (n, t, e) {
-      n.exports = e(6665);
+      n.exports = e(3867);
     },
   },
   function (n) {
     n.O(0, [888, 774, 179], function () {
-      return n((n.s = 4753));
+      return n((n.s = 8312));
     }),
       (_N_E = n.O());
   },

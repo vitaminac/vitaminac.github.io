@@ -1,18 +1,18 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [87],
   {
-    4446: function (e, A, t) {
+    4446: function (e, t, A) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/drafts/[slug]",
         function () {
-          return t(1188);
+          return A(871);
         },
       ]);
     },
-    1130: function (e, A, t) {
+    2610: function (e, t, A) {
       "use strict";
-      t.r(A),
-        (A.default = {
+      A.r(t),
+        (t.default = {
           src: "/_next/static/media/test.bd907638.jpg",
           height: 1920,
           width: 1920,
@@ -22,15 +22,15 @@
           blurHeight: 8,
         });
     },
-    8247: function (e, A, t) {
+    9277: function (e, t, A) {
       "use strict";
-      t.d(A, {
+      A.d(t, {
         q: function () {
           return s;
         },
       });
-      var n = t(5893),
-        i = t(6235),
+      var n = A(5893),
+        i = A(261),
         r = {
           src: "/_next/static/media/avatar.f1819002.jpg",
           height: 520,
@@ -44,25 +44,25 @@
         return (0, n.jsx)(i.t, { src: r, alt: "Avatar", ...e });
       }
     },
-    5909: function (e, A, t) {
+    4958: function (e, t, A) {
       "use strict";
-      t.d(A, {
+      A.d(t, {
         j: function () {
-          return h;
+          return f;
         },
       });
-      var n = t(5893),
-        i = t(3967),
-        r = t.n(i),
-        s = t(1798),
-        a = t(1664),
-        c = t.n(a),
-        o = t(9631),
-        l = t.n(o);
+      var n = A(5893),
+        i = A(3967),
+        r = A.n(i),
+        s = A(1798),
+        a = A(1664),
+        c = A.n(a),
+        o = A(8716),
+        l = A.n(o);
       function u(e) {
-        let { tags: A } = e,
-          { t } = (0, s.$G)("feature-tags"),
-          i = A.map((e) =>
+        let { tags: t } = e,
+          { t: A } = (0, s.$G)("feature-tags"),
+          i = t.map((e) =>
             (0, n.jsx)(
               "li",
               {
@@ -79,41 +79,66 @@
         return (0, n.jsxs)("section", {
           className: r()(l().tags, "tw-text-center"),
           children: [
-            (0, n.jsx)("h6", { children: t("Tags") }),
+            (0, n.jsx)("h6", { children: A("Tags") }),
             (0, n.jsx)("ul", { className: "tw-p-0", children: i }),
           ],
         });
       }
-      var d = t(1864);
-      function h(e) {
-        let { children: A, postData: t, siteConfig: i } = e,
-          { siteAuthor: r } = i;
+      var d = A(5853),
+        g = A(5152),
+        h = A.n(g),
+        m = A(3944);
+      function x(e) {
+        return (0, n.jsx)(m.qw, {
+          shortname: e.username,
+          config: {
+            url: window.location.href,
+            identifier: e.id,
+            title: e.title,
+            language: e.lang,
+          },
+        });
+      }
+      let _ = h()(() => Promise.resolve(x), { ssr: !1 });
+      function f(e) {
+        let { children: t, postData: A, siteConfig: i } = e,
+          { siteAuthor: r, disqusUsername: s } = i;
         return (0, n.jsxs)(n.Fragment, {
           children: [
             (0, n.jsx)(d.K, {
-              title: t.title,
+              title: A.title,
               author: r,
-              lang: t.lang,
-              description: t.description,
-              keywords: t.tags,
+              lang: A.lang,
+              description: A.description,
+              keywords: A.tags,
             }),
             (0, n.jsxs)("main", {
-              children: [A, (0, n.jsx)(u, { tags: t.tags })],
+              className: "tw-mx-auto tw-w-11/12",
+              children: [
+                t,
+                (0, n.jsx)(_, {
+                  username: s,
+                  id: A.slug,
+                  title: A.title,
+                  lang: A.lang,
+                }),
+                (0, n.jsx)(u, { tags: A.tags }),
+              ],
             }),
           ],
         });
       }
     },
-    1864: function (e, A, t) {
+    5853: function (e, t, A) {
       "use strict";
-      t.d(A, {
+      A.d(t, {
         K: function () {
           return s;
         },
       });
-      var n = t(5893),
-        i = t(9008),
-        r = t.n(i);
+      var n = A(5893),
+        i = A(9008),
+        r = A.n(i);
       function s(e) {
         return (0, n.jsxs)(r(), {
           children: [
@@ -165,10 +190,10 @@
         });
       }
     },
-    1188: function (e, A, t) {
+    871: function (e, t, A) {
       "use strict";
-      t.r(A),
-        t.d(A, {
+      A.r(t),
+        A.d(t, {
           __N_SSG: function () {
             return M;
           },
@@ -176,35 +201,35 @@
             return S;
           },
         });
-      var n = t(5893),
-        i = t(1798),
-        r = t(1664),
-        s = t.n(r),
-        a = t(8247),
-        c = t(7294),
-        o = t(3595),
-        l = t(3717);
+      var n = A(5893),
+        i = A(1798),
+        r = A(1664),
+        s = A.n(r),
+        a = A(9277),
+        c = A(7294),
+        o = A(197),
+        l = A(949);
       function u(e) {
-        let { dateString: A } = e,
-          t = (0, o.D)(A);
+        let { dateString: t } = e,
+          A = (0, o.D)(t);
         return (0, n.jsx)("time", {
-          dateTime: A,
-          children: (0, l.WU)(t, "LLLL d, yyyy"),
+          dateTime: t,
+          children: (0, l.WU)(A, "LLLL d, yyyy"),
         });
       }
-      var d = t(9875),
-        h = t(3698),
-        g = t(65),
-        m = t(7437),
-        x = t(5343),
-        _ = t(3846),
-        j = t(1623);
-      let f = () => (e) => {
-        (0, j.Vn)(e, (e) => {
+      var d = A(9875),
+        g = A(3698),
+        h = A(65),
+        m = A(7437),
+        x = A(5343),
+        _ = A(3846),
+        f = A(1623);
+      let j = () => (e) => {
+        (0, f.Vn)(e, (e) => {
           if ("leafDirective" === e.type && "youtube" === e.name) {
-            let A = e.data || (e.data = {});
-            (A.hName = "iframe"),
-              (A.hProperties = {
+            let t = e.data || (e.data = {});
+            (t.hName = "iframe"),
+              (t.hProperties = {
                 src: "https://www.youtube.com/embed/".concat(e.attributes.vid),
                 title: e.children[0].value,
                 width: "560",
@@ -218,27 +243,27 @@
           }
         });
       };
-      var E = t(7797),
-        p = t(5280),
-        w = t(9360),
-        B = t(1924),
-        Q = t(2935),
-        I = t(3687),
-        C = t(6235);
+      var w = A(7797),
+        E = A(5280),
+        p = A(9360),
+        B = A(1924),
+        Q = A(2935),
+        I = A(3687),
+        C = A(261);
       let v = {
         img: function (e) {
-          let { alt: A, src: i, width: r, height: s, ...a } = e;
+          let { alt: t, src: i, width: r, height: s, ...a } = e;
           return i.startsWith("http")
             ? (0, n.jsx)("img", {
                 src: i,
-                alt: A,
+                alt: t,
                 width: r && (Number.isInteger(r) ? r : parseInt(r)),
                 height: s && (Number.isInteger(s) ? s : parseInt(s)),
                 ...a,
               })
             : (0, n.jsx)(C.t, {
-                src: t(7192)("./".concat(i)),
-                alt: A || "image",
+                src: A(7192)("./".concat(i)),
+                alt: t || "image",
                 sizes: "responsive",
                 width: void 0,
                 height: void 0,
@@ -247,24 +272,24 @@
         },
       };
       function b(e) {
-        let { markdownSource: A } = e;
+        let { markdownSource: t } = e;
         return (0, c.useMemo)(
           () =>
-            (function (e, A) {
-              let t = {
+            (function (e, t) {
+              let A = {
                 jsx: n.jsx,
                 jsxs: n.jsxs,
                 Fragment: n.Fragment,
-                components: A,
+                components: t,
                 development: !1,
               };
               return (0, d.l)()
-                .use(h.Z)
-                .use([g.Z, m.Z, x.Z, _.Z, f])
-                .use(E.Z)
+                .use(g.Z)
+                .use([h.Z, m.Z, x.Z, _.Z, j])
+                .use(w.Z)
                 .use([
+                  E.Z,
                   p.Z,
-                  w.Z,
                   B.Z,
                   [
                     Q.Z,
@@ -279,22 +304,22 @@
                     },
                   ],
                 ])
-                .use(I.Z, t)
+                .use(I.Z, A)
                 .processSync(e).result;
-            })(A, v),
-          [A],
+            })(t, v),
+          [t],
         );
       }
-      var y = t(6368),
-        D = t.n(y),
-        N = t(5909),
-        k = t(8516),
-        F = t.n(k),
+      var y = A(1995),
+        D = A.n(y),
+        N = A(4958),
+        k = A(3260),
+        F = A.n(k),
         M = !0,
         S = function (e) {
-          let { postData: A, siteConfig: t } = e,
+          let { postData: t, siteConfig: A } = e,
             { t: r } = (0, i.$G)("common"),
-            { siteAuthor: c } = t;
+            { siteAuthor: c } = A;
           return (0, n.jsx)(N.j, {
             ...e,
             children: (0, n.jsxs)("div", {
@@ -325,20 +350,20 @@
                   children: [
                     (0, n.jsx)("h1", {
                       className: D().headingXl,
-                      children: A.title,
+                      children: t.title,
                     }),
-                    A.date &&
+                    t.date &&
                       (0, n.jsx)("div", {
                         className: D().lightText,
-                        children: (0, n.jsx)(u, { dateString: A.date }),
+                        children: (0, n.jsx)(u, { dateString: t.date }),
                       }),
-                    (0, n.jsx)(b, { markdownSource: A.markdownSource }),
+                    (0, n.jsx)(b, { markdownSource: t.markdownSource }),
                   ],
                 }),
                 (0, n.jsx)("div", {
                   className: F().backToHome,
                   children: (0, n.jsx)(s(), {
-                    href: "/".concat(A.lang),
+                    href: "/".concat(t.lang),
                     children: r("Back to home"),
                   }),
                 }),
@@ -347,20 +372,20 @@
           });
         };
     },
-    9631: function (e) {
+    8716: function (e) {
       e.exports = {
         tags: "FeaturesTags_tags__qev0a",
         tag: "FeaturesTags_tag__f8Svr",
       };
     },
-    8516: function (e) {
+    3260: function (e) {
       e.exports = {
         container: "Post_container__UTtnv",
         header: "Post_header__LayjC",
         backToHome: "Post_backToHome__tpOvL",
       };
     },
-    6368: function (e) {
+    1995: function (e) {
       e.exports = {
         heading2Xl: "utils_heading2Xl__laoHY",
         headingXl: "utils_headingXl__H5ueI",
@@ -374,15 +399,15 @@
         lightText: "utils_lightText__4lyO2",
       };
     },
-    7192: function (e, A, t) {
-      var n = { "./test.jpg": 1130 };
+    7192: function (e, t, A) {
+      var n = { "./test.jpg": 2610 };
       function i(e) {
-        return t(r(e));
+        return A(r(e));
       }
       function r(e) {
-        if (!t.o(n, e)) {
-          var A = Error("Cannot find module '" + e + "'");
-          throw ((A.code = "MODULE_NOT_FOUND"), A);
+        if (!A.o(n, e)) {
+          var t = Error("Cannot find module '" + e + "'");
+          throw ((t.code = "MODULE_NOT_FOUND"), t);
         }
         return n[e];
       }
@@ -395,7 +420,7 @@
     },
   },
   function (e) {
-    e.O(0, [658, 265, 124, 888, 774, 179], function () {
+    e.O(0, [658, 265, 98, 266, 888, 774, 179], function () {
       return e((e.s = 4446));
     }),
       (_N_E = e.O());

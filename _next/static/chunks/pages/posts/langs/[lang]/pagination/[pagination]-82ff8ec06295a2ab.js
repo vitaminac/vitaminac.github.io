@@ -5,11 +5,11 @@
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/posts/langs/[lang]/pagination/[pagination]",
         function () {
-          return s(4702);
+          return s(9424);
         },
       ]);
     },
-    8247: function (e, i, s) {
+    9277: function (e, i, s) {
       "use strict";
       s.d(i, {
         q: function () {
@@ -17,7 +17,7 @@
         },
       });
       var a = s(5893),
-        t = s(6235),
+        t = s(261),
         n = {
           src: "/_next/static/media/avatar.f1819002.jpg",
           height: 520,
@@ -31,7 +31,7 @@
         return (0, a.jsx)(t.t, { src: n, alt: "Avatar", ...e });
       }
     },
-    455: function (e, i, s) {
+    5414: function (e, i, s) {
       "use strict";
       s.d(i, {
         h: function () {
@@ -41,8 +41,8 @@
       var a = s(5893),
         t = s(3967),
         n = s.n(t),
-        l = s(8247),
-        c = s(6991),
+        l = s(9277),
+        c = s(7845),
         A = s.n(c);
       function r(e) {
         return (0, a.jsxs)("ul", {
@@ -174,7 +174,7 @@
         return (0, a.jsx)("header", { children: (0, a.jsx)(m, { ...e }) });
       }
     },
-    4227: function (e, i, s) {
+    2144: function (e, i, s) {
       "use strict";
       s.d(i, {
         C: function () {
@@ -216,7 +216,7 @@
         );
       }
     },
-    1864: function (e, i, s) {
+    5853: function (e, i, s) {
       "use strict";
       s.d(i, {
         K: function () {
@@ -277,7 +277,7 @@
         });
       }
     },
-    4702: function (e, i, s) {
+    9424: function (e, i, s) {
       "use strict";
       s.r(i),
         s.d(i, {
@@ -290,9 +290,9 @@
         });
       var a = s(5893),
         t = s(1798),
-        n = s(455),
-        l = s(4227),
-        c = s(1864),
+        n = s(5414),
+        l = s(2144),
+        c = s(5853),
         A = !0,
         r = function (e) {
           let { allPostsData: i, siteConfig: s, lang: A, pagination: r } = e,
@@ -323,14 +323,14 @@
           });
         };
     },
-    6991: function (e) {
+    7845: function (e) {
       e.exports = {
         about: "AboutMe_about__UiMOu",
         "list-inline": "AboutMe_list-inline__ldLZ_",
       };
     },
     9008: function (e, i, s) {
-      e.exports = s(6665);
+      e.exports = s(3867);
     },
   },
   function (e) {

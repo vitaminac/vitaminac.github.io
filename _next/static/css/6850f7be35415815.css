@@ -342,6 +342,9 @@ video {
 .tw-inline {
   display: inline;
 }
+.tw-w-11\/12 {
+  width: 91.666667%;
+}
 .tw-max-w-full {
   max-width: 100%;
 }

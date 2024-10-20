@@ -1,15 +1,15 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [749],
+  [528],
   {
-    8303: function (e, i, s) {
+    7230: function (e, i, s) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
-        "/posts/langs/[lang]/tags/[tag]",
+        "/posts/langs/[lang]/tags",
         function () {
-          return s(8332);
+          return s(1629);
         },
       ]);
     },
-    8247: function (e, i, s) {
+    9277: function (e, i, s) {
       "use strict";
       s.d(i, {
         q: function () {
@@ -17,7 +17,7 @@
         },
       });
       var a = s(5893),
-        t = s(6235),
+        t = s(261),
         n = {
           src: "/_next/static/media/avatar.f1819002.jpg",
           height: 520,
@@ -31,7 +31,7 @@
         return (0, a.jsx)(t.t, { src: n, alt: "Avatar", ...e });
       }
     },
-    455: function (e, i, s) {
+    5414: function (e, i, s) {
       "use strict";
       s.d(i, {
         h: function () {
@@ -41,8 +41,8 @@
       var a = s(5893),
         t = s(3967),
         n = s.n(t),
-        l = s(8247),
-        c = s(6991),
+        l = s(9277),
+        c = s(7845),
         A = s.n(c);
       function r(e) {
         return (0, a.jsxs)("ul", {
@@ -174,7 +174,7 @@
         return (0, a.jsx)("header", { children: (0, a.jsx)(m, { ...e }) });
       }
     },
-    4227: function (e, i, s) {
+    2144: function (e, i, s) {
       "use strict";
       s.d(i, {
         C: function () {
@@ -216,7 +216,7 @@
         );
       }
     },
-    1864: function (e, i, s) {
+    5853: function (e, i, s) {
       "use strict";
       s.d(i, {
         K: function () {
@@ -277,7 +277,7 @@
         });
       }
     },
-    8332: function (e, i, s) {
+    1629: function (e, i, s) {
       "use strict";
       s.r(i),
         s.d(i, {
@@ -289,40 +289,40 @@
           },
         });
       var a = s(5893),
-        t = s(455),
-        n = s(4227),
-        l = s(1864),
+        t = s(5414),
+        n = s(2144),
+        l = s(5853),
         c = !0,
         A = function (e) {
-          let { lang: i, tag: s, siteConfig: c } = e,
-            { siteAuthor: A, siteTitle: r, siteDescription: m } = c;
+          let { lang: i, siteConfig: s } = e,
+            { siteAuthor: c, siteTitle: A, siteDescription: r } = s;
           return (0, a.jsxs)(a.Fragment, {
             children: [
-              (0, a.jsx)(l.K, { title: r, author: A, lang: i, description: m }),
-              (0, a.jsx)(t.h, { ...c }),
+              (0, a.jsx)(l.K, { title: A, author: c, lang: i, description: r }),
+              (0, a.jsx)(t.h, { ...s }),
               (0, a.jsx)("main", {
                 children: (0, a.jsx)(n.C, {
-                  title: s,
-                  src: "/tags/".concat(s.replaceAll(" ", "-"), "/index.html"),
+                  title: "Tags",
+                  src: "/tags/index.html",
                 }),
               }),
             ],
           });
         };
     },
-    6991: function (e) {
+    7845: function (e) {
       e.exports = {
         about: "AboutMe_about__UiMOu",
         "list-inline": "AboutMe_list-inline__ldLZ_",
       };
     },
     9008: function (e, i, s) {
-      e.exports = s(6665);
+      e.exports = s(3867);
     },
   },
   function (e) {
     e.O(0, [888, 774, 179], function () {
-      return e((e.s = 8303));
+      return e((e.s = 7230));
     }),
       (_N_E = e.O());
   },

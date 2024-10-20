@@ -5,31 +5,31 @@
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/posts/[slug]",
         function () {
-          return n(2375);
+          return n(8204);
         },
       ]);
     },
-    4227: function (t, e, n) {
+    2144: function (t, e, n) {
       "use strict";
       n.d(e, {
         C: function () {
-          return i;
+          return r;
         },
       });
       var s = n(5893),
-        r = n(7294);
-      function i(t) {
-        let e = (0, r.useRef)(null),
-          [n, i] = (0, r.useState)(),
-          [a, c] = (0, r.useState)(0),
-          o = (0, r.useCallback)(() => {
-            i(e.current.contentWindow.document.body);
-          }, [i]),
-          u = (0, r.useCallback)(() => {
+        i = n(7294);
+      function r(t) {
+        let e = (0, i.useRef)(null),
+          [n, r] = (0, i.useState)(),
+          [a, c] = (0, i.useState)(0),
+          o = (0, i.useCallback)(() => {
+            r(e.current.contentWindow.document.body);
+          }, [r]),
+          u = (0, i.useCallback)(() => {
             c(n.scrollHeight);
           }, [n, c]);
         return (
-          (0, r.useEffect)(() => {
+          (0, i.useEffect)(() => {
             if (n) {
               let t = new ResizeObserver(u);
               return (
@@ -51,25 +51,25 @@
         );
       }
     },
-    5909: function (t, e, n) {
+    4958: function (t, e, n) {
       "use strict";
       n.d(e, {
         j: function () {
-          return m;
+          return w;
         },
       });
       var s = n(5893),
-        r = n(3967),
-        i = n.n(r),
+        i = n(3967),
+        r = n.n(i),
         a = n(1798),
         c = n(1664),
         o = n.n(c),
-        u = n(9631),
+        u = n(8716),
         l = n.n(u);
       function d(t) {
         let { tags: e } = t,
           { t: n } = (0, a.$G)("feature-tags"),
-          r = e.map((t) =>
+          i = e.map((t) =>
             (0, s.jsx)(
               "li",
               {
@@ -84,34 +84,59 @@
             ),
           );
         return (0, s.jsxs)("section", {
-          className: i()(l().tags, "tw-text-center"),
+          className: r()(l().tags, "tw-text-center"),
           children: [
             (0, s.jsx)("h6", { children: n("Tags") }),
-            (0, s.jsx)("ul", { className: "tw-p-0", children: r }),
+            (0, s.jsx)("ul", { className: "tw-p-0", children: i }),
           ],
         });
       }
-      var f = n(1864);
-      function m(t) {
-        let { children: e, postData: n, siteConfig: r } = t,
-          { siteAuthor: i } = r;
+      var g = n(5853),
+        m = n(5152),
+        f = n.n(m),
+        x = n(3944);
+      function h(t) {
+        return (0, s.jsx)(x.qw, {
+          shortname: t.username,
+          config: {
+            url: window.location.href,
+            identifier: t.id,
+            title: t.title,
+            language: t.lang,
+          },
+        });
+      }
+      let j = f()(() => Promise.resolve(h), { ssr: !1 });
+      function w(t) {
+        let { children: e, postData: n, siteConfig: i } = t,
+          { siteAuthor: r, disqusUsername: a } = i;
         return (0, s.jsxs)(s.Fragment, {
           children: [
-            (0, s.jsx)(f.K, {
+            (0, s.jsx)(g.K, {
               title: n.title,
-              author: i,
+              author: r,
               lang: n.lang,
               description: n.description,
               keywords: n.tags,
             }),
             (0, s.jsxs)("main", {
-              children: [e, (0, s.jsx)(d, { tags: n.tags })],
+              className: "tw-mx-auto tw-w-11/12",
+              children: [
+                e,
+                (0, s.jsx)(j, {
+                  username: a,
+                  id: n.slug,
+                  title: n.title,
+                  lang: n.lang,
+                }),
+                (0, s.jsx)(d, { tags: n.tags }),
+              ],
             }),
           ],
         });
       }
     },
-    1864: function (t, e, n) {
+    5853: function (t, e, n) {
       "use strict";
       n.d(e, {
         K: function () {
@@ -119,10 +144,10 @@
         },
       });
       var s = n(5893),
-        r = n(9008),
-        i = n.n(r);
+        i = n(9008),
+        r = n.n(i);
       function a(t) {
-        return (0, s.jsxs)(i(), {
+        return (0, s.jsxs)(r(), {
           children: [
             (0, s.jsx)("meta", { charSet: "utf-8" }),
             (0, s.jsx)("meta", {
@@ -172,7 +197,7 @@
         });
       }
     },
-    2375: function (t, e, n) {
+    8204: function (t, e, n) {
       "use strict";
       n.r(e),
         n.d(e, {
@@ -184,31 +209,28 @@
           },
         });
       var s = n(5893),
-        r = n(4227),
-        i = n(5909),
+        i = n(2144),
+        r = n(4958),
         a = !0,
         c = function (t) {
-          return (0, s.jsx)(i.j, {
+          return (0, s.jsx)(r.j, {
             ...t,
-            children: (0, s.jsx)(r.C, {
+            children: (0, s.jsx)(i.C, {
               title: t.postData.slug,
               src: t.postData.path,
             }),
           });
         };
     },
-    9631: function (t) {
+    8716: function (t) {
       t.exports = {
         tags: "FeaturesTags_tags__qev0a",
         tag: "FeaturesTags_tag__f8Svr",
       };
     },
-    9008: function (t, e, n) {
-      t.exports = n(6665);
-    },
   },
   function (t) {
-    t.O(0, [888, 774, 179], function () {
+    t.O(0, [98, 888, 774, 179], function () {
       return t((t.s = 592));
     }),
       (_N_E = t.O());

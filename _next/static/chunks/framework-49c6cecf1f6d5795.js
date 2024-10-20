@@ -3,15 +3,7 @@
   [774],
   {
     4448: function (e, n, t) {
-      /**
-       * @license React
-       * react-dom.production.min.js
-       *
-       * Copyright (c) Facebook, Inc. and its affiliates.
-       *
-       * This source code is licensed under the MIT license found in the
-       * LICENSE file in the root directory of this source tree.
-       */ var r,
+      var r,
         l,
         a,
         u,
@@ -8356,7 +8348,7 @@
               key: null == r ? null : "" + r,
               children: e,
               containerInfo: n,
-              implementation: null,
+              implementation: t,
             };
           })(e, n, null, t);
         }),
@@ -8459,15 +8451,7 @@
         (e.exports = t(4448));
     },
     5251: function (e, n, t) {
-      /**
-       * @license React
-       * react-jsx-runtime.production.min.js
-       *
-       * Copyright (c) Facebook, Inc. and its affiliates.
-       *
-       * This source code is licensed under the MIT license found in the
-       * LICENSE file in the root directory of this source tree.
-       */ var r = t(7294),
+      var r = t(7294),
         l = Symbol.for("react.element"),
         a = Symbol.for("react.fragment"),
         u = Object.prototype.hasOwnProperty,
@@ -8499,15 +8483,7 @@
       (n.Fragment = a), (n.jsx = s), (n.jsxs = s);
     },
     2408: function (e, n) {
-      /**
-       * @license React
-       * react.production.min.js
-       *
-       * Copyright (c) Facebook, Inc. and its affiliates.
-       *
-       * This source code is licensed under the MIT license found in the
-       * LICENSE file in the root directory of this source tree.
-       */ var t = Symbol.for("react.element"),
+      var t = Symbol.for("react.element"),
         r = Symbol.for("react.portal"),
         l = Symbol.for("react.fragment"),
         a = Symbol.for("react.strict_mode"),
@@ -8897,15 +8873,7 @@
       e.exports = t(5251);
     },
     53: function (e, n) {
-      /**
-       * @license React
-       * scheduler.production.min.js
-       *
-       * Copyright (c) Facebook, Inc. and its affiliates.
-       *
-       * This source code is licensed under the MIT license found in the
-       * LICENSE file in the root directory of this source tree.
-       */ function t(e, n) {
+      function t(e, n) {
         var t = e.length;
         for (e.push(n); 0 < t; ) {
           var r = (t - 1) >>> 1,

@@ -5,11 +5,11 @@
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/404",
         function () {
-          return t(9805);
+          return t(3232);
         },
       ]);
     },
-    9805: function (n, u, t) {
+    3232: function (n, u, t) {
       "use strict";
       t.r(u),
         t.d(u, {
