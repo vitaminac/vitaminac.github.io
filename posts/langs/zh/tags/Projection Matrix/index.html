@@ -126,7 +126,7 @@
                   class="nav-link active"
                   aria-current="page"
                   href="/posts/langs/zh/"
-                  >Home</a
+                  >主页</a
                 >
               </li>
               <li class="nav-item">
@@ -134,7 +134,7 @@
                   class="nav-link"
                   aria-current="page"
                   href="/posts/langs/zh/tags/"
-                  >Tags</a
+                  >标签</a
                 >
               </li>
               <li class="nav-item dropdown">
@@ -144,9 +144,19 @@
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
-                  >Language</a
+                  >语言</a
                 >
-                <ul class="dropdown-menu dropdown-menu-end"></ul>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li>
+                    <a class="dropdown-item" href="/posts/langs/en/">英语</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/posts/langs/es/">西语</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/posts/langs/zh/">中文</a>
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>
@@ -330,7 +340,48 @@
     <script id="__NEXT_DATA__" type="application/json">
       {
         "props": {
-          "pageProps": { "lang": "zh", "tag": "Projection Matrix" },
+          "pageProps": {
+            "lang": "zh",
+            "tag": "Projection Matrix",
+            "_nextI18Next": {
+              "initialI18nStore": {
+                "zh": {
+                  "navbar": {
+                    "Home": "主页",
+                    "Language": "语言",
+                    "Tags": "标签",
+                    "en": "英语",
+                    "es": "西语",
+                    "zh": "中文"
+                  }
+                },
+                "en": {
+                  "navbar": {
+                    "Home": "Home",
+                    "Language": "Language",
+                    "Tags": "Tags",
+                    "en": "English",
+                    "es": "Spanish",
+                    "zh": "Chinese"
+                  }
+                }
+              },
+              "initialLocale": "zh",
+              "ns": ["navbar"],
+              "userConfig": {
+                "i18n": {
+                  "defaultLocale": "en",
+                  "locales": ["en", "es", "zh"]
+                },
+                "default": {
+                  "i18n": {
+                    "defaultLocale": "en",
+                    "locales": ["en", "es", "zh"]
+                  }
+                }
+              }
+            }
+          },
           "__N_SSG": true
         },
         "page": "/posts/langs/[lang]/tags/[tag]",
