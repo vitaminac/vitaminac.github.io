@@ -30,16 +30,16 @@
         },
       });
       var r = n(5893),
-        i = n(1798),
-        a = n(3967),
-        s = n.n(a),
+        a = n(1798),
+        s = n(3967),
+        i = n.n(s),
         A = n(1664),
         c = n.n(A),
         o = n(8716),
         l = n.n(o);
       function u(e) {
         let { lang: t, tags: n } = e,
-          { t: a } = (0, i.$G)("feature-tags"),
+          { t: s } = (0, a.$G)("feature-tags"),
           A = n.map((e) =>
             (0, r.jsx)(
               "li",
@@ -48,7 +48,7 @@
                 children: (0, r.jsx)(
                   c(),
                   {
-                    className: s()(l().tag, "tw-border-white tw-text-white"),
+                    className: i()(l().tag, "tw-border-white tw-text-white"),
                     href: "/posts/langs/".concat(t, "/tags/").concat(e),
                     children: e,
                   },
@@ -59,9 +59,9 @@
             ),
           );
         return (0, r.jsxs)("section", {
-          className: s()(l().tags, "tw-text-center"),
+          className: i()(l().tags, "tw-text-center"),
           children: [
-            (0, r.jsx)("h6", { children: a("Tags") }),
+            (0, r.jsx)("h6", { children: s("Tags") }),
             (0, r.jsx)("ul", { className: "tw-p-0", children: A }),
           ],
         });
@@ -73,16 +73,22 @@
       function m(e) {
         let { dateString: t } = e,
           n = (0, g.D)(t);
-        return (0, r.jsx)("time", {
-          dateTime: t,
-          children: (0, h.WU)(n, "LLLL d, yyyy"),
+        return (0, r.jsxs)("span", {
+          children: [
+            (0, r.jsx)("i", { className: "fa-regular fa-calendar" }),
+            (0, r.jsx)("time", {
+              className: "tw-pl-1.5",
+              dateTime: t,
+              children: (0, h.WU)(n, "LLLL d, yyyy"),
+            }),
+          ],
         });
       }
       var w = n(5152),
         x = n.n(w),
-        f = n(3944);
-      function p(e) {
-        return (0, r.jsx)(f.qw, {
+        p = n(3944);
+      function f(e) {
+        return (0, r.jsx)(p.qw, {
           shortname: e.username,
           config: {
             url: window.location.href,
@@ -92,11 +98,11 @@
           },
         });
       }
-      let j = x()(() => Promise.resolve(p), { ssr: !1 });
+      let j = x()(() => Promise.resolve(f), { ssr: !1 });
       function v(e) {
-        let { children: t, postData: n, siteConfig: a } = e,
-          { t: s } = (0, i.$G)("post-layout"),
-          { siteAuthor: A, disqusUsername: c } = a;
+        let { children: t, postData: n, siteConfig: s } = e,
+          { t: i } = (0, a.$G)("post-layout"),
+          { siteAuthor: A, disqusUsername: c } = s;
         return (0, r.jsxs)(r.Fragment, {
           children: [
             (0, r.jsx)(d.K, {
@@ -117,8 +123,8 @@
               },
               children: [
                 (0, r.jsx)("h1", { children: n.title }),
-                (0, r.jsx)("h6", { children: s("Author", { author: A }) }),
-                (0, r.jsx)("h6", {
+                (0, r.jsx)("span", { children: i("Author", { author: A }) }),
+                (0, r.jsx)("span", {
                   children: (0, r.jsx)(m, { dateString: n.date }),
                 }),
                 (0, r.jsx)(u, { lang: n.lang, tags: n.tags }),
@@ -144,14 +150,14 @@
       "use strict";
       n.d(t, {
         K: function () {
-          return s;
+          return i;
         },
       });
       var r = n(5893),
-        i = n(9008),
-        a = n.n(i);
-      function s(e) {
-        return (0, r.jsxs)(a(), {
+        a = n(9008),
+        s = n.n(a);
+      function i(e) {
+        return (0, r.jsxs)(s(), {
           children: [
             (0, r.jsx)("meta", { charSet: "utf-8" }),
             (0, r.jsx)("meta", {
@@ -213,9 +219,9 @@
           },
         });
       var r = n(5893),
-        i = n(7294),
-        a = n(9875),
-        s = n(3698),
+        a = n(7294),
+        s = n(9875),
+        i = n(3698),
         A = n(65),
         c = n(7437),
         o = n(5343),
@@ -245,21 +251,21 @@
         m = n(9360),
         w = n(1924),
         x = n(2935),
-        f = n(3687),
-        p = n(261);
+        p = n(3687),
+        f = n(261);
       let j = {
         img: function (e) {
-          let { alt: t, src: i, width: a, height: s, ...A } = e;
-          return i.startsWith("http")
+          let { alt: t, src: a, width: s, height: i, ...A } = e;
+          return a.startsWith("http")
             ? (0, r.jsx)("img", {
-                src: i,
+                src: a,
                 alt: t,
-                width: a && (Number.isInteger(a) ? a : parseInt(a)),
-                height: s && (Number.isInteger(s) ? s : parseInt(s)),
+                width: s && (Number.isInteger(s) ? s : parseInt(s)),
+                height: i && (Number.isInteger(i) ? i : parseInt(i)),
                 ...A,
               })
-            : (0, r.jsx)(p.t, {
-                src: n(7192)("./".concat(i)),
+            : (0, r.jsx)(f.t, {
+                src: n(7192)("./".concat(a)),
                 alt: t || "image",
                 sizes: "responsive",
                 width: void 0,
@@ -270,7 +276,7 @@
       };
       function v(e) {
         let { markdownSource: t } = e;
-        return (0, i.useMemo)(
+        return (0, a.useMemo)(
           () =>
             (function (e, t) {
               let n = {
@@ -280,8 +286,8 @@
                 components: t,
                 development: !1,
               };
-              return (0, a.l)()
-                .use(s.Z)
+              return (0, s.l)()
+                .use(i.Z)
                 .use([A.Z, c.Z, o.Z, l.Z, d])
                 .use(g.Z)
                 .use([
@@ -301,7 +307,7 @@
                     },
                   ],
                 ])
-                .use(f.Z, n)
+                .use(p.Z, n)
                 .processSync(e).result;
             })(t, j),
           [t],
@@ -327,22 +333,22 @@
     },
     7192: function (e, t, n) {
       var r = { "./test.jpg": 2610 };
-      function i(e) {
-        return n(a(e));
-      }
       function a(e) {
+        return n(s(e));
+      }
+      function s(e) {
         if (!n.o(r, e)) {
           var t = Error("Cannot find module '" + e + "'");
           throw ((t.code = "MODULE_NOT_FOUND"), t);
         }
         return r[e];
       }
-      (i.keys = function () {
+      (a.keys = function () {
         return Object.keys(r);
       }),
-        (i.resolve = a),
-        (e.exports = i),
-        (i.id = 7192);
+        (a.resolve = s),
+        (e.exports = a),
+        (a.id = 7192);
     },
   },
   function (e) {

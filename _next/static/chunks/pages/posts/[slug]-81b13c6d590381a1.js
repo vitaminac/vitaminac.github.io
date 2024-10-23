@@ -13,23 +13,23 @@
       "use strict";
       n.d(e, {
         C: function () {
-          return a;
+          return r;
         },
       });
       var s = n(5893),
-        r = n(7294);
-      function a(t) {
-        let e = (0, r.useRef)(null),
-          [n, a] = (0, r.useState)(),
-          [i, c] = (0, r.useState)(0),
-          o = (0, r.useCallback)(() => {
-            a(e.current.contentWindow.document.body);
-          }, [a]),
-          l = (0, r.useCallback)(() => {
+        a = n(7294);
+      function r(t) {
+        let e = (0, a.useRef)(null),
+          [n, r] = (0, a.useState)(),
+          [i, c] = (0, a.useState)(0),
+          o = (0, a.useCallback)(() => {
+            r(e.current.contentWindow.document.body);
+          }, [r]),
+          l = (0, a.useCallback)(() => {
             c(n.scrollHeight);
           }, [n, c]);
         return (
-          (0, r.useEffect)(() => {
+          (0, a.useEffect)(() => {
             if (n) {
               let t = new ResizeObserver(l);
               return (
@@ -59,16 +59,16 @@
         },
       });
       var s = n(5893),
-        r = n(1798),
-        a = n(3967),
-        i = n.n(a),
+        a = n(1798),
+        r = n(3967),
+        i = n.n(r),
         c = n(1664),
         o = n.n(c),
         l = n(8716),
         u = n.n(l);
       function d(t) {
         let { lang: e, tags: n } = t,
-          { t: a } = (0, r.$G)("feature-tags"),
+          { t: r } = (0, a.$G)("feature-tags"),
           c = n.map((t) =>
             (0, s.jsx)(
               "li",
@@ -90,25 +90,31 @@
         return (0, s.jsxs)("section", {
           className: i()(u().tags, "tw-text-center"),
           children: [
-            (0, s.jsx)("h6", { children: a("Tags") }),
+            (0, s.jsx)("h6", { children: r("Tags") }),
             (0, s.jsx)("ul", { className: "tw-p-0", children: c }),
           ],
         });
       }
       var g = n(5853);
       n(7294);
-      var h = n(197),
+      var m = n(197),
         w = n(949);
-      function m(t) {
+      function x(t) {
         let { dateString: e } = t,
-          n = (0, h.D)(e);
-        return (0, s.jsx)("time", {
-          dateTime: e,
-          children: (0, w.WU)(n, "LLLL d, yyyy"),
+          n = (0, m.D)(e);
+        return (0, s.jsxs)("span", {
+          children: [
+            (0, s.jsx)("i", { className: "fa-regular fa-calendar" }),
+            (0, s.jsx)("time", {
+              className: "tw-pl-1.5",
+              dateTime: e,
+              children: (0, w.WU)(n, "LLLL d, yyyy"),
+            }),
+          ],
         });
       }
-      var x = n(5152),
-        f = n.n(x),
+      var h = n(5152),
+        f = n.n(h),
         j = n(3944);
       function p(t) {
         return (0, s.jsx)(j.qw, {
@@ -123,9 +129,9 @@
       }
       let _ = f()(() => Promise.resolve(p), { ssr: !1 });
       function v(t) {
-        let { children: e, postData: n, siteConfig: a } = t,
-          { t: i } = (0, r.$G)("post-layout"),
-          { siteAuthor: c, disqusUsername: o } = a;
+        let { children: e, postData: n, siteConfig: r } = t,
+          { t: i } = (0, a.$G)("post-layout"),
+          { siteAuthor: c, disqusUsername: o } = r;
         return (0, s.jsxs)(s.Fragment, {
           children: [
             (0, s.jsx)(g.K, {
@@ -146,9 +152,9 @@
               },
               children: [
                 (0, s.jsx)("h1", { children: n.title }),
-                (0, s.jsx)("h6", { children: i("Author", { author: c }) }),
-                (0, s.jsx)("h6", {
-                  children: (0, s.jsx)(m, { dateString: n.date }),
+                (0, s.jsx)("span", { children: i("Author", { author: c }) }),
+                (0, s.jsx)("span", {
+                  children: (0, s.jsx)(x, { dateString: n.date }),
                 }),
                 (0, s.jsx)(d, { lang: n.lang, tags: n.tags }),
               ],
@@ -177,10 +183,10 @@
         },
       });
       var s = n(5893),
-        r = n(9008),
-        a = n.n(r);
+        a = n(9008),
+        r = n.n(a);
       function i(t) {
-        return (0, s.jsxs)(a(), {
+        return (0, s.jsxs)(r(), {
           children: [
             (0, s.jsx)("meta", { charSet: "utf-8" }),
             (0, s.jsx)("meta", {
@@ -242,13 +248,13 @@
           },
         });
       var s = n(5893),
-        r = n(2144),
-        a = n(3101),
+        a = n(2144),
+        r = n(3101),
         i = !0,
         c = function (t) {
-          return (0, s.jsx)(a.j, {
+          return (0, s.jsx)(r.j, {
             ...t,
-            children: (0, s.jsx)(r.C, {
+            children: (0, s.jsx)(a.C, {
               title: t.postData.slug,
               src: t.postData.path,
             }),
