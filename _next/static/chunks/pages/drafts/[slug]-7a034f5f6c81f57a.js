@@ -124,9 +124,7 @@
               children: [
                 (0, r.jsx)("h1", { children: n.title }),
                 (0, r.jsx)("span", { children: i("Author", { author: A }) }),
-                (0, r.jsx)("span", {
-                  children: (0, r.jsx)(m, { dateString: n.date }),
-                }),
+                (0, r.jsx)(m, { dateString: n.date }),
                 (0, r.jsx)(u, { lang: n.lang, tags: n.tags }),
               ],
             }),

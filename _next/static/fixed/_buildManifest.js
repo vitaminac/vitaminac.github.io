@@ -10,7 +10,7 @@
       a,
       "static/chunks/893-8a8dbcf4bdaf247f.js",
       t,
-      "static/chunks/pages/drafts/[slug]-77dc434a8ea233a7.js",
+      "static/chunks/pages/drafts/[slug]-7a034f5f6c81f57a.js",
     ],
     "/posts/langs/[lang]": [
       "static/chunks/pages/posts/langs/[lang]-7ac0aa1c3002eaa9.js",
@@ -30,7 +30,7 @@
     "/posts/[slug]": [
       a,
       t,
-      "static/chunks/pages/posts/[slug]-81b13c6d590381a1.js",
+      "static/chunks/pages/posts/[slug]-0eda6a993d402e47.js",
     ],
     sortedPages: [
       "/",

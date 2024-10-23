@@ -153,9 +153,7 @@
               children: [
                 (0, s.jsx)("h1", { children: n.title }),
                 (0, s.jsx)("span", { children: i("Author", { author: c }) }),
-                (0, s.jsx)("span", {
-                  children: (0, s.jsx)(x, { dateString: n.date }),
-                }),
+                (0, s.jsx)(x, { dateString: n.date }),
                 (0, s.jsx)(d, { lang: n.lang, tags: n.tags }),
               ],
             }),
