@@ -31,16 +31,16 @@
       });
       var r = n(5893),
         i = n(1798),
-        s = n(3967),
-        a = n.n(s),
+        a = n(3967),
+        s = n.n(a),
         A = n(1664),
         c = n.n(A),
         o = n(8716),
         l = n.n(o);
       function u(e) {
-        let { tags: t } = e,
-          { t: n } = (0, i.$G)("feature-tags"),
-          s = t.map((e) =>
+        let { lang: t, tags: n } = e,
+          { t: a } = (0, i.$G)("feature-tags"),
+          A = n.map((e) =>
             (0, r.jsx)(
               "li",
               {
@@ -48,8 +48,8 @@
                 children: (0, r.jsx)(
                   c(),
                   {
-                    className: a()(l().tag, "tw-border-white tw-text-white"),
-                    href: "/tags#".concat(e),
+                    className: s()(l().tag, "tw-border-white tw-text-white"),
+                    href: "/posts/langs/".concat(t, "/tags/").concat(e),
                     children: e,
                   },
                   e,
@@ -59,10 +59,10 @@
             ),
           );
         return (0, r.jsxs)("section", {
-          className: a()(l().tags, "tw-text-center"),
+          className: s()(l().tags, "tw-text-center"),
           children: [
-            (0, r.jsx)("h6", { children: n("Tags") }),
-            (0, r.jsx)("ul", { className: "tw-p-0", children: s }),
+            (0, r.jsx)("h6", { children: a("Tags") }),
+            (0, r.jsx)("ul", { className: "tw-p-0", children: A }),
           ],
         });
       }
@@ -81,7 +81,7 @@
       var w = n(5152),
         x = n.n(w),
         f = n(3944);
-      function j(e) {
+      function p(e) {
         return (0, r.jsx)(f.qw, {
           shortname: e.username,
           config: {
@@ -92,11 +92,11 @@
           },
         });
       }
-      let p = x()(() => Promise.resolve(j), { ssr: !1 });
+      let j = x()(() => Promise.resolve(p), { ssr: !1 });
       function v(e) {
-        let { children: t, postData: n, siteConfig: s } = e,
-          { t: a } = (0, i.$G)("post-layout"),
-          { siteAuthor: A, disqusUsername: c } = s;
+        let { children: t, postData: n, siteConfig: a } = e,
+          { t: s } = (0, i.$G)("post-layout"),
+          { siteAuthor: A, disqusUsername: c } = a;
         return (0, r.jsxs)(r.Fragment, {
           children: [
             (0, r.jsx)(d.K, {
@@ -117,18 +117,18 @@
               },
               children: [
                 (0, r.jsx)("h1", { children: n.title }),
-                (0, r.jsx)("h6", { children: a("Author", { author: A }) }),
+                (0, r.jsx)("h6", { children: s("Author", { author: A }) }),
                 (0, r.jsx)("h6", {
                   children: (0, r.jsx)(m, { dateString: n.date }),
                 }),
-                (0, r.jsx)(u, { tags: n.tags }),
+                (0, r.jsx)(u, { lang: n.lang, tags: n.tags }),
               ],
             }),
             (0, r.jsxs)("main", {
               className: "tw-mx-auto tw-w-11/12",
               children: [
                 t,
-                (0, r.jsx)(p, {
+                (0, r.jsx)(j, {
                   username: c,
                   id: n.slug,
                   title: n.title,
@@ -144,14 +144,14 @@
       "use strict";
       n.d(t, {
         K: function () {
-          return a;
+          return s;
         },
       });
       var r = n(5893),
         i = n(9008),
-        s = n.n(i);
-      function a(e) {
-        return (0, r.jsxs)(s(), {
+        a = n.n(i);
+      function s(e) {
+        return (0, r.jsxs)(a(), {
           children: [
             (0, r.jsx)("meta", { charSet: "utf-8" }),
             (0, r.jsx)("meta", {
@@ -214,8 +214,8 @@
         });
       var r = n(5893),
         i = n(7294),
-        s = n(9875),
-        a = n(3698),
+        a = n(9875),
+        s = n(3698),
         A = n(65),
         c = n(7437),
         o = n(5343),
@@ -246,19 +246,19 @@
         w = n(1924),
         x = n(2935),
         f = n(3687),
-        j = n(261);
-      let p = {
+        p = n(261);
+      let j = {
         img: function (e) {
-          let { alt: t, src: i, width: s, height: a, ...A } = e;
+          let { alt: t, src: i, width: a, height: s, ...A } = e;
           return i.startsWith("http")
             ? (0, r.jsx)("img", {
                 src: i,
                 alt: t,
-                width: s && (Number.isInteger(s) ? s : parseInt(s)),
-                height: a && (Number.isInteger(a) ? a : parseInt(a)),
+                width: a && (Number.isInteger(a) ? a : parseInt(a)),
+                height: s && (Number.isInteger(s) ? s : parseInt(s)),
                 ...A,
               })
-            : (0, r.jsx)(j.t, {
+            : (0, r.jsx)(p.t, {
                 src: n(7192)("./".concat(i)),
                 alt: t || "image",
                 sizes: "responsive",
@@ -280,8 +280,8 @@
                 components: t,
                 development: !1,
               };
-              return (0, s.l)()
-                .use(a.Z)
+              return (0, a.l)()
+                .use(s.Z)
                 .use([A.Z, c.Z, o.Z, l.Z, d])
                 .use(g.Z)
                 .use([
@@ -303,7 +303,7 @@
                 ])
                 .use(f.Z, n)
                 .processSync(e).result;
-            })(t, p),
+            })(t, j),
           [t],
         );
       }
@@ -328,9 +328,9 @@
     7192: function (e, t, n) {
       var r = { "./test.jpg": 2610 };
       function i(e) {
-        return n(s(e));
+        return n(a(e));
       }
-      function s(e) {
+      function a(e) {
         if (!n.o(r, e)) {
           var t = Error("Cannot find module '" + e + "'");
           throw ((t.code = "MODULE_NOT_FOUND"), t);
@@ -340,7 +340,7 @@
       (i.keys = function () {
         return Object.keys(r);
       }),
-        (i.resolve = s),
+        (i.resolve = a),
         (e.exports = i),
         (i.id = 7192);
     },
