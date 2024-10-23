@@ -9,16 +9,18 @@
         },
       ]);
     },
-    9277: function (e, i, s) {
+    8305: function (e, i, s) {
       "use strict";
       s.d(i, {
-        q: function () {
-          return l;
+        h: function () {
+          return j;
         },
       });
       var a = s(5893),
-        t = s(261),
-        n = {
+        t = s(3967),
+        n = s.n(t),
+        l = s(261),
+        c = {
           src: "/_next/static/media/avatar.f1819002.jpg",
           height: 520,
           width: 463,
@@ -27,24 +29,12 @@
           blurWidth: 7,
           blurHeight: 8,
         };
-      function l(e) {
-        return (0, a.jsx)(t.t, { src: n, alt: "Avatar", ...e });
+      function A(e) {
+        return (0, a.jsx)(l.t, { src: c, alt: "Avatar", ...e });
       }
-    },
-    5414: function (e, i, s) {
-      "use strict";
-      s.d(i, {
-        h: function () {
-          return o;
-        },
-      });
-      var a = s(5893),
-        t = s(3967),
-        n = s.n(t),
-        l = s(9277),
-        c = s(7845),
-        A = s.n(c);
-      function r(e) {
+      var r = s(7845),
+        m = s.n(r);
+      function o(e) {
         return (0, a.jsxs)("ul", {
           className: "list-inline text-center",
           children: [
@@ -155,23 +145,19 @@
           ],
         });
       }
-      function m(e) {
+      function x(e) {
         return (0, a.jsxs)("section", {
-          className: n()(A().about, "tw-text-gray-300", "tw-text-center"),
+          className: n()(m().about, "tw-text-gray-300", "tw-text-center"),
           children: [
-            (0, a.jsx)(l.q, {
-              height: 108,
-              width: 108,
-              className: "tw-m-auto",
-            }),
+            (0, a.jsx)(A, { height: 108, width: 108, className: "tw-m-auto" }),
             (0, a.jsx)("h5", { children: e.siteAuthor }),
-            (0, a.jsx)(r, {}),
+            (0, a.jsx)(o, {}),
             (0, a.jsx)("p", { children: e.siteAuthorDescription }),
           ],
         });
       }
-      function o(e) {
-        return (0, a.jsx)("header", { children: (0, a.jsx)(m, { ...e }) });
+      function j(e) {
+        return (0, a.jsx)("header", { children: (0, a.jsx)(x, { ...e }) });
       }
     },
     2144: function (e, i, s) {
@@ -290,7 +276,7 @@
         });
       var a = s(5893),
         t = s(1798),
-        n = s(5414),
+        n = s(8305),
         l = s(2144),
         c = s(5853),
         A = !0,

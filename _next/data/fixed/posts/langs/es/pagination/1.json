@@ -6,7 +6,7 @@
       {
         "slug": "vppl",
         "title": "VPPL - Vivienda de Protección Pública de Precio Limitado",
-        "date": "Sun Sep 01 2024 20:17:51 GMT+0000 (Coordinated Universal Time)",
+        "date": "2024-09-01 20:17:51",
         "lang": "es",
         "tags": ["VPPL", "IPREM"],
         "path": "/vppl/index.html"
@@ -14,7 +14,7 @@
       {
         "slug": "Prestamo",
         "title": "Como calcular un préstamo",
-        "date": "Sat Oct 23 2021 12:09:41 GMT+0000 (Coordinated Universal Time)",
+        "date": "2021-10-23 12:09:41",
         "lang": "es",
         "tags": ["TAE", "TIN", "prestamo", "Economy"],
         "path": "/Prestamo/index.html"
@@ -22,7 +22,7 @@
       {
         "slug": "Grafico-Por-Computador",
         "title": "Grafico Por Computador",
-        "date": "Sun May 31 2020 11:18:28 GMT+0000 (Coordinated Universal Time)",
+        "date": "2020-05-31 11:18:28",
         "lang": "es",
         "tags": ["Computer Graphics"],
         "path": "/Grafico-Por-Computador/index.html"
@@ -30,7 +30,7 @@
       {
         "slug": "Hacer-Una-Libreria-C",
         "title": "Hacer Una Libreria C",
-        "date": "Tue Nov 05 2019 00:14:26 GMT+0000 (Coordinated Universal Time)",
+        "date": "2019-11-05 00:14:26",
         "lang": "es",
         "tags": ["Systema Operativo"],
         "path": "/Hacer-Una-Libreria-C/index.html"
@@ -38,7 +38,7 @@
       {
         "slug": "Programacion-Lineal-Entera",
         "title": "Programación Lineal y Entera",
-        "date": "Thu May 30 2019 18:05:04 GMT+0000 (Coordinated Universal Time)",
+        "date": "2019-05-30 18:05:04",
         "lang": "es",
         "tags": [
           "Investigación Operativa",
@@ -52,7 +52,7 @@
       {
         "slug": "Gestion-Configuracion",
         "title": "Gestion de Configuración",
-        "date": "Sun May 12 2019 12:19:53 GMT+0000 (Coordinated Universal Time)",
+        "date": "2019-05-12 12:19:53",
         "lang": "es",
         "tags": ["Gestión de Configuración", "Software Evolution"],
         "path": "/Gestion-Configuracion/index.html"
@@ -60,7 +60,7 @@
       {
         "slug": "Evolucion-Adaptacion-Software",
         "title": "Evolución Adaptacion Software",
-        "date": "Sat May 11 2019 13:09:55 GMT+0000 (Coordinated Universal Time)",
+        "date": "2019-05-11 13:09:55",
         "lang": "es",
         "tags": ["Software Evolution"],
         "path": "/Evolucion-Adaptacion-Software/index.html"
@@ -68,7 +68,7 @@
       {
         "slug": "Evaluacion-De-Interfaces",
         "title": "Evaluación de interfaces",
-        "date": "Thu May 09 2019 16:11:07 GMT+0000 (Coordinated Universal Time)",
+        "date": "2019-05-09 16:11:07",
         "lang": "es",
         "tags": ["Interación Persona-Ordenador", "Evaluación heurística"],
         "path": "/Evaluacion-De-Interfaces/index.html"
@@ -76,7 +76,7 @@
       {
         "slug": "Usabilidad",
         "title": "Usabilidad",
-        "date": "Thu May 09 2019 07:54:04 GMT+0000 (Coordinated Universal Time)",
+        "date": "2019-05-09 07:54:04",
         "lang": "es",
         "tags": ["Usabilidad", "Interación Persona-Ordenador"],
         "path": "/Usabilidad/index.html"
@@ -84,7 +84,7 @@
       {
         "slug": "Angular-SPA",
         "title": "Angular SPA",
-        "date": "Fri May 03 2019 13:28:22 GMT+0000 (Coordinated Universal Time)",
+        "date": "2019-05-03 13:28:22",
         "lang": "es",
         "tags": ["SPA", "Angular", "Aplicación Web"],
         "path": "/Angular-SPA/index.html"
@@ -92,7 +92,7 @@
       {
         "slug": "Testing-Manifesto",
         "title": "Testing Manifesto",
-        "date": "Wed May 01 2019 10:30:55 GMT+0000 (Coordinated Universal Time)",
+        "date": "2019-05-01 10:30:55",
         "lang": "es",
         "tags": ["Testing Manifesto", "Testing"],
         "path": "/Testing-Manifesto/index.html"
@@ -100,7 +100,7 @@
       {
         "slug": "Agile-Testing-Quadrants",
         "title": "Agile Testing Quadrants",
-        "date": "Wed May 01 2019 10:11:15 GMT+0000 (Coordinated Universal Time)",
+        "date": "2019-05-01 10:11:15",
         "lang": "es",
         "tags": [
           "Agile Testing Quadrants",
@@ -112,7 +112,7 @@
       {
         "slug": "Pair-Review",
         "title": "Pair Review",
-        "date": "Wed May 01 2019 09:41:55 GMT+0000 (Coordinated Universal Time)",
+        "date": "2019-05-01 09:41:55",
         "lang": "es",
         "tags": ["Agile Software Development"],
         "path": "/Pair-Review/index.html"
@@ -120,7 +120,7 @@
       {
         "slug": "Complejidad-Ciclomatica",
         "title": "Complejidad Ciclomatica",
-        "date": "Wed May 01 2019 09:27:05 GMT+0000 (Coordinated Universal Time)",
+        "date": "2019-05-01 09:27:05",
         "lang": "es",
         "tags": ["Software Quality Metrics"],
         "path": "/Complejidad-Ciclomatica/index.html"
@@ -128,7 +128,7 @@
       {
         "slug": "Test-in-the-Toilet",
         "title": "Testing in the Toilet",
-        "date": "Tue Apr 30 2019 00:34:18 GMT+0000 (Coordinated Universal Time)",
+        "date": "2019-04-30 00:34:18",
         "lang": "es",
         "tags": ["Testing", "Software Quality Metrics"],
         "path": "/Test-in-the-Toilet/index.html"
@@ -136,7 +136,7 @@
       {
         "slug": "SonarQube",
         "title": "SonarQube",
-        "date": "Sun Apr 28 2019 23:24:42 GMT+0000 (Coordinated Universal Time)",
+        "date": "2019-04-28 23:24:42",
         "lang": "es",
         "tags": ["Software Quality Metrics", "SonarQube"],
         "path": "/SonarQube/index.html"
@@ -144,7 +144,7 @@
       {
         "slug": "Behat",
         "title": "Behat",
-        "date": "Sun Apr 28 2019 23:08:37 GMT+0000 (Coordinated Universal Time)",
+        "date": "2019-04-28 23:08:37",
         "lang": "es",
         "tags": ["BDD"],
         "path": "/Behat/index.html"
@@ -152,7 +152,7 @@
       {
         "slug": "Github-Trello",
         "title": "Github Trello",
-        "date": "Sun Apr 28 2019 22:19:41 GMT+0000 (Coordinated Universal Time)",
+        "date": "2019-04-28 22:19:41",
         "lang": "es",
         "tags": ["Version Control"],
         "path": "/Github-Trello/index.html"
@@ -160,7 +160,7 @@
       {
         "slug": "Deuda-Tecnica",
         "title": "Deuda Técnica",
-        "date": "Sun Apr 28 2019 20:14:22 GMT+0000 (Coordinated Universal Time)",
+        "date": "2019-04-28 20:14:22",
         "lang": "es",
         "tags": ["Deuda Técnica"],
         "path": "/Deuda-Tecnica/index.html"
@@ -168,7 +168,7 @@
       {
         "slug": "QA-Agil",
         "title": "Quality Ágil",
-        "date": "Sun Apr 28 2019 19:39:23 GMT+0000 (Coordinated Universal Time)",
+        "date": "2019-04-28 19:39:23",
         "lang": "es",
         "tags": ["Software Quality Metrics"],
         "path": "/QA-Agil/index.html"
@@ -176,7 +176,7 @@
       {
         "slug": "Mock-Fake-Testing",
         "title": "Mock Fake Testing",
-        "date": "Sun Apr 28 2019 18:51:51 GMT+0000 (Coordinated Universal Time)",
+        "date": "2019-04-28 18:51:51",
         "lang": "es",
         "tags": ["Testing", "Mock", "Fake"],
         "path": "/Mock-Fake-Testing/index.html"
@@ -184,7 +184,7 @@
       {
         "slug": "Code-Smell",
         "title": "Code Smell",
-        "date": "Sun Apr 28 2019 10:01:41 GMT+0000 (Coordinated Universal Time)",
+        "date": "2019-04-28 10:01:41",
         "lang": "es",
         "tags": [
           "Software Quality Metrics",
@@ -196,7 +196,7 @@
       {
         "slug": "Evolucion-De-Calidad",
         "title": "Evolución de la calidad",
-        "date": "Sun Apr 28 2019 09:24:43 GMT+0000 (Coordinated Universal Time)",
+        "date": "2019-04-28 09:24:43",
         "lang": "es",
         "tags": ["Software Evolution"],
         "path": "/Evolucion-De-Calidad/index.html"
@@ -204,7 +204,7 @@
       {
         "slug": "Escuelas-del-Testing",
         "title": "Escuelas del Testing",
-        "date": "Sun Apr 28 2019 00:18:12 GMT+0000 (Coordinated Universal Time)",
+        "date": "2019-04-28 00:18:12",
         "lang": "es",
         "tags": ["Testing", "Agile Software Development", "BDD", "TDD"],
         "path": "/Escuelas-del-Testing/index.html"
@@ -212,7 +212,7 @@
       {
         "slug": "Smoke-Test",
         "title": "Smoke Test",
-        "date": "Sat Apr 27 2019 23:50:38 GMT+0000 (Coordinated Universal Time)",
+        "date": "2019-04-27 23:50:38",
         "lang": "es",
         "tags": [
           "Testing",
@@ -228,7 +228,7 @@
       {
         "slug": "TDD-BDD-ATDD",
         "title": "Testing TDD BDD y ATDD",
-        "date": "Sat Apr 27 2019 12:55:45 GMT+0000 (Coordinated Universal Time)",
+        "date": "2019-04-27 12:55:45",
         "lang": "es",
         "tags": [
           "Testing",
@@ -250,7 +250,7 @@
       {
         "slug": "Cracking-Simpler-Cipher",
         "title": "Cracking Simpler Cipher",
-        "date": "Mon Mar 25 2019 15:43:58 GMT+0000 (Coordinated Universal Time)",
+        "date": "2019-03-25 15:43:58",
         "lang": "es",
         "tags": [
           "Caesar Cipher",
@@ -266,7 +266,7 @@
       {
         "slug": "Virtualization",
         "title": "Virtualización, Contenedores y Cloud Computing",
-        "date": "Tue Feb 26 2019 23:19:07 GMT+0000 (Coordinated Universal Time)",
+        "date": "2019-02-26 23:19:07",
         "lang": "es",
         "tags": [
           "Virtualización",
@@ -281,7 +281,7 @@
       {
         "slug": "Docker",
         "title": "Docker",
-        "date": "Tue Feb 26 2019 22:31:02 GMT+0000 (Coordinated Universal Time)",
+        "date": "2019-02-26 22:31:02",
         "lang": "es",
         "tags": [
           "Docker",
@@ -295,7 +295,7 @@
       {
         "slug": "Desarrollo-de-Aplicaciones-Web",
         "title": "Desarrollo de aplicaciones Web",
-        "date": "Mon Feb 25 2019 11:29:55 GMT+0000 (Coordinated Universal Time)",
+        "date": "2019-02-25 11:29:55",
         "lang": "es",
         "tags": [
           "Aplicación Web",
@@ -311,7 +311,7 @@
       {
         "slug": "Estructura-Algebraica",
         "title": "Estructura Algebraica",
-        "date": "Sat Jan 26 2019 10:45:44 GMT+0000 (Coordinated Universal Time)",
+        "date": "2019-01-26 10:45:44",
         "lang": "es",
         "tags": [
           "Estructura Algebraica",
@@ -327,7 +327,7 @@
       {
         "slug": "Caso-De-Estudio-Redes-De-Colas",
         "title": "Caso de estudio - Simulación de redes de colas",
-        "date": "Sat Dec 29 2018 13:28:40 GMT+0000 (Coordinated Universal Time)",
+        "date": "2018-12-29 13:28:40",
         "lang": "es",
         "tags": [
           "Teoría de colas",
@@ -339,7 +339,7 @@
       {
         "slug": "Teoria-De-Colas",
         "title": "Teoria de colas",
-        "date": "Tue Dec 25 2018 16:20:53 GMT+0000 (Coordinated Universal Time)",
+        "date": "2018-12-25 16:20:53",
         "lang": "es",
         "tags": ["Teoria de colas"],
         "path": "/Teoria-De-Colas/index.html"
@@ -347,7 +347,7 @@
       {
         "slug": "minishell",
         "title": "La implementación de minishell en Linux",
-        "date": "Mon Dec 03 2018 18:05:41 GMT+0000 (Coordinated Universal Time)",
+        "date": "2018-12-03 18:05:41",
         "lang": "es",
         "tags": ["Linux", "Shell", "Bash", "Process"],
         "path": "/minishell/index.html"
@@ -355,7 +355,7 @@
       {
         "slug": "Gestion-De-Procesos",
         "title": "Gestión de procesos en Linux",
-        "date": "Mon Nov 26 2018 18:20:30 GMT+0000 (Coordinated Universal Time)",
+        "date": "2018-11-26 18:20:30",
         "lang": "es",
         "tags": ["Linux Process Abstraction", "Linux Kernel"],
         "path": "/Gestion-De-Procesos/index.html"

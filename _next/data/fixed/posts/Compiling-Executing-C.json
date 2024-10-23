@@ -3,7 +3,7 @@
     "postData": {
       "slug": "Compiling-Executing-C",
       "title": "The Process Behind Compiling and Executing C Code",
-      "date": "Sat Dec 18 2021 22:28:10 GMT+0000 (Coordinated Universal Time)",
+      "date": "2021-12-18 22:28:10",
       "lang": "en",
       "tags": ["C", "Compilation", "ELF", "crt0", "exit"],
       "path": "/Compiling-Executing-C/index.html"

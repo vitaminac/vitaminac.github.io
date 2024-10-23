@@ -6,7 +6,7 @@
       {
         "slug": "passport-renewal",
         "title": "护照更换",
-        "date": "Thu Oct 10 2024 23:54:23 GMT+0000 (Coordinated Universal Time)",
+        "date": "2024-10-10 23:54:23",
         "lang": "zh",
         "tags": ["护照"],
         "path": "/passport-renewal/index.html"
@@ -14,7 +14,7 @@
       {
         "slug": "nie",
         "title": "更换西班牙居留卡",
-        "date": "Sat Aug 31 2024 19:20:12 GMT+0000 (Coordinated Universal Time)",
+        "date": "2024-08-31 19:20:12",
         "lang": "zh",
         "tags": ["NIE", "TIE"],
         "path": "/nie/index.html"
@@ -22,7 +22,7 @@
       {
         "slug": "jyqxz",
         "title": "金庸群侠传3贺岁版",
-        "date": "Sat Aug 31 2024 12:23:16 GMT+0000 (Coordinated Universal Time)",
+        "date": "2024-08-31 12:23:16",
         "lang": "zh",
         "tags": ["Game", "Flash", "金庸群侠传", "半瓶神仙醋"],
         "path": "/jyqxz/index.html"
@@ -30,7 +30,7 @@
       {
         "slug": "skyrim",
         "title": "老滚5天际周年版安装教程",
-        "date": "Thu Aug 29 2024 20:29:39 GMT+0000 (Coordinated Universal Time)",
+        "date": "2024-08-29 20:29:39",
         "lang": "zh",
         "tags": ["Game"],
         "path": "/skyrim/index.html"
@@ -38,7 +38,7 @@
       {
         "slug": "cheating",
         "title": "外挂开发原理",
-        "date": "Sun Jul 28 2024 10:26:32 GMT+0000 (Coordinated Universal Time)",
+        "date": "2024-07-28 10:26:32",
         "lang": "zh",
         "tags": ["外挂", "hook"],
         "path": "/cheating/index.html"
@@ -46,7 +46,7 @@
       {
         "slug": "driving-license",
         "title": "西班牙驾照换中国驾照流程 - 长乐版",
-        "date": "Thu May 30 2024 22:00:44 GMT+0000 (Coordinated Universal Time)",
+        "date": "2024-05-30 22:00:44",
         "lang": "zh",
         "tags": ["驾照认证"],
         "path": "/driving-license/index.html"
@@ -54,7 +54,7 @@
       {
         "slug": "python-exe-reverse-engineering",
         "title": "Python打包的可执行文件的逆向工程",
-        "date": "Thu Mar 28 2024 20:39:24 GMT+0000 (Coordinated Universal Time)",
+        "date": "2024-03-28 20:39:24",
         "lang": "zh",
         "tags": ["python", "PyInstaller"],
         "path": "/python-exe-reverse-engineering/index.html"
@@ -62,7 +62,7 @@
       {
         "slug": "moyu24",
         "title": "魔域2.4小游戏分析",
-        "date": "Sat Feb 17 2024 15:02:08 GMT+0000 (Coordinated Universal Time)",
+        "date": "2024-02-17 15:02:08",
         "lang": "zh",
         "tags": ["Game", "Flash", "魔域2.4"],
         "path": "/moyu24/index.html"
@@ -70,7 +70,7 @@
       {
         "slug": "QQTang",
         "title": "浅谈QQ堂",
-        "date": "Wed Nov 24 2021 14:33:25 GMT+0000 (Coordinated Universal Time)",
+        "date": "2021-11-24 14:33:25",
         "lang": "zh",
         "tags": ["QQ堂", "外挂", "Game", "zlib"],
         "path": "/QQTang/index.html"
@@ -78,7 +78,7 @@
       {
         "slug": "Game-Theory",
         "title": "浅谈博弈论",
-        "date": "Wed Feb 20 2019 21:05:31 GMT+0000 (Coordinated Universal Time)",
+        "date": "2019-02-20 21:05:31",
         "lang": "zh",
         "tags": [
           "博弈论",
@@ -96,7 +96,7 @@
       {
         "slug": "REGULAR-VERBS",
         "title": "规则动词",
-        "date": "Tue Dec 25 2018 22:50:48 GMT+0000 (Coordinated Universal Time)",
+        "date": "2018-12-25 22:50:48",
         "lang": "zh",
         "tags": ["西班牙语语法", "动词变位", "西班牙语基础"],
         "path": "/REGULAR-VERBS/index.html"
@@ -104,7 +104,7 @@
       {
         "slug": "SUBJECT-PRONOUNS",
         "title": "主语代词",
-        "date": "Sun Nov 25 2018 21:30:28 GMT+0000 (Coordinated Universal Time)",
+        "date": "2018-11-25 21:30:28",
         "lang": "zh",
         "tags": ["西班牙语语法", "代词", "主语"],
         "path": "/SUBJECT-PRONOUNS/index.html"
@@ -112,7 +112,7 @@
       {
         "slug": "The-Verb-Form-Hay",
         "title": "动词形式hay",
-        "date": "Mon Nov 19 2018 19:43:01 GMT+0000 (Coordinated Universal Time)",
+        "date": "2018-11-19 19:43:01",
         "lang": "zh",
         "tags": ["西班牙语语法", "动词变位", "西班牙语基础"],
         "path": "/The-Verb-Form-Hay/index.html"
@@ -120,7 +120,7 @@
       {
         "slug": "Polygon-Mesh-Data-Structure",
         "title": "计算机图形数据结构",
-        "date": "Sun Nov 11 2018 22:14:47 GMT+0000 (Coordinated Universal Time)",
+        "date": "2018-11-11 22:14:47",
         "lang": "zh",
         "tags": ["计算机图形", "三角网格", "向量", "几何", "图形结构"],
         "path": "/Polygon-Mesh-Data-Structure/index.html"
@@ -128,7 +128,7 @@
       {
         "slug": "DEFINITE-AND-INDEFINITE-ARTICLES",
         "title": "定冠词和不定冠词",
-        "date": "Sun Nov 11 2018 13:26:27 GMT+0000 (Coordinated Universal Time)",
+        "date": "2018-11-11 13:26:27",
         "lang": "zh",
         "tags": ["西班牙语语法", "冠词", "定冠词", "不定冠词"],
         "path": "/DEFINITE-AND-INDEFINITE-ARTICLES/index.html"
@@ -136,7 +136,7 @@
       {
         "slug": "PLURAL-FORMS-OF-NOUNS",
         "title": "名词的复数形式",
-        "date": "Thu Nov 08 2018 13:17:02 GMT+0000 (Coordinated Universal Time)",
+        "date": "2018-11-08 13:17:02",
         "lang": "zh",
         "tags": ["西班牙语语法", "名词", "复数"],
         "path": "/PLURAL-FORMS-OF-NOUNS/index.html"
@@ -144,7 +144,7 @@
       {
         "slug": "CARDINAL-NUMBERS",
         "title": "西班牙语基数1-10",
-        "date": "Wed Nov 07 2018 00:40:31 GMT+0000 (Coordinated Universal Time)",
+        "date": "2018-11-07 00:40:31",
         "lang": "zh",
         "tags": ["西班牙语语法", "数字", "西班牙语基础"],
         "path": "/CARDINAL-NUMBERS/index.html"
@@ -152,7 +152,7 @@
       {
         "slug": "GENDER-OF-NOUNS",
         "title": "西班牙语名词的阴阳性",
-        "date": "Sat Oct 27 2018 23:58:56 GMT+0000 (Coordinated Universal Time)",
+        "date": "2018-10-27 23:58:56",
         "lang": "zh",
         "tags": ["西班牙语语法", "名词", "阴性", "阳性"],
         "path": "/GENDER-OF-NOUNS/index.html"

@@ -3,7 +3,7 @@
     "postData": {
       "slug": "python-exe-reverse-engineering",
       "title": "Python打包的可执行文件的逆向工程",
-      "date": "Thu Mar 28 2024 20:39:24 GMT+0000 (Coordinated Universal Time)",
+      "date": "2024-03-28 20:39:24",
       "lang": "zh",
       "tags": ["python", "PyInstaller"],
       "path": "/python-exe-reverse-engineering/index.html"
