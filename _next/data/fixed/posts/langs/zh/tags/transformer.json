@@ -1,26 +1,20 @@
 {
   "pageProps": {
-    "postData": {
-      "slug": "perplexity",
-      "title": "Perplexity",
-      "date": "2024-10-14 23:41:47",
-      "lang": "en",
-      "tags": [
-        "Perplexity",
-        "NLP",
-        "information theory",
-        "cross-entropy",
-        "LLM",
-        "transformer"
-      ],
-      "path": "/perplexity/index.html"
-    },
-    "lang": "en",
+    "lang": "zh",
+    "tag": "transformer",
     "_nextI18Next": {
       "initialI18nStore": {
+        "zh": {
+          "navbar": {
+            "Home": "主页",
+            "Language": "语言",
+            "Tags": "标签",
+            "en": "英语",
+            "es": "西语",
+            "zh": "中文"
+          }
+        },
         "en": {
-          "common": { "Next": "Next", "Back to home": "Back to home" },
-          "feature-tags": { "Tags": "Tags" },
           "navbar": {
             "Home": "Home",
             "Language": "Language",
@@ -31,8 +25,8 @@
           }
         }
       },
-      "initialLocale": "en",
-      "ns": ["common", "feature-tags", "navbar"],
+      "initialLocale": "zh",
+      "ns": ["navbar"],
       "userConfig": {
         "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
         "default": {

@@ -1,20 +1,18 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="content-language" content="en" />
+    <meta http-equiv="content-language" content="es" />
     <link rel="icon" href="/favicon.ico" />
-    <title>Perplexity</title>
-    <meta name="og:title" content="Perplexity" />
+    <title>Gao&#x27;s blog</title>
+    <meta name="og:title" content="Gao&#x27;s blog" />
     <meta name="author" content="Gao" />
-    <meta
-      name="keywords"
-      content="Perplexity,NLP,information theory,cross-entropy,LLM,transformer"
-    />
+    <meta name="description" content="Gao&#x27;s blog" />
+    <meta name="og:description" content="Gao&#x27;s blog" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="next-head-count" content="10" />
+    <meta name="next-head-count" content="11" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -55,12 +53,12 @@
     />
     <link
       rel="preload"
-      href="/_next/static/css/31e9a53e4d0a3f1c.css"
+      href="/_next/static/css/ef9f9e2030bad8a8.css"
       as="style"
     />
     <link
       rel="stylesheet"
-      href="/_next/static/css/31e9a53e4d0a3f1c.css"
+      href="/_next/static/css/ef9f9e2030bad8a8.css"
       data-n-p=""
     />
     <noscript data-n-css=""></noscript>
@@ -85,9 +83,8 @@
       src="/_next/static/chunks/pages/_app-4103696f59b676b9.js"
       defer=""
     ></script>
-    <script src="/_next/static/chunks/98-b981dc0bbf6bafab.js" defer=""></script>
     <script
-      src="/_next/static/chunks/pages/posts/%5Bslug%5D-5312f124adf76c2b.js"
+      src="/_next/static/chunks/pages/posts/langs/%5Blang%5D/tags/%5Btag%5D-a13386ee0f7a2cd0.js"
       defer=""
     ></script>
     <script src="/_next/static/fixed/_buildManifest.js" defer=""></script>
@@ -128,15 +125,15 @@
                 <a
                   class="nav-link active"
                   aria-current="page"
-                  href="/posts/langs/en/"
-                  >Home</a
+                  href="/posts/langs/es/"
+                  >Inicio</a
                 >
               </li>
               <li class="nav-item">
                 <a
                   class="nav-link"
                   aria-current="page"
-                  href="/posts/langs/en/tags/"
+                  href="/posts/langs/es/tags/"
                   >Tags</a
                 >
               </li>
@@ -147,17 +144,17 @@
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
-                  >Language</a
+                  >Lenguaje</a
                 >
                 <ul class="dropdown-menu dropdown-menu-end">
                   <li>
-                    <a class="dropdown-item" href="/posts/langs/en/">English</a>
+                    <a class="dropdown-item" href="/posts/langs/en/">Inglés</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="/posts/langs/es/">Spanish</a>
+                    <a class="dropdown-item" href="/posts/langs/es/">Español</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="/posts/langs/zh/">Chinese</a>
+                    <a class="dropdown-item" href="/posts/langs/zh/">Chino</a>
                   </li>
                 </ul>
               </li>
@@ -165,46 +162,69 @@
           </div>
         </div>
       </nav>
-      <main class="tw-mx-auto tw-w-11/12">
+      <header>
+        <section class="AboutMe_about__UiMOu tw-text-center tw-text-gray-300">
+          <img
+            alt="Avatar"
+            loading="lazy"
+            width="108"
+            height="108"
+            decoding="async"
+            data-nimg="1"
+            class="tw-m-auto"
+            style="
+              color: transparent;
+              background-size: cover;
+              background-position: 50% 50%;
+              background-repeat: no-repeat;
+              background-image: url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 280 320&#x27;%3E%3Cfilter id=&#x27;b&#x27; color-interpolation-filters=&#x27;sRGB&#x27;%3E%3CfeGaussianBlur stdDeviation=&#x27;20&#x27;/%3E%3CfeColorMatrix values=&#x27;1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 100 -1&#x27; result=&#x27;s&#x27;/%3E%3CfeFlood x=&#x27;0&#x27; y=&#x27;0&#x27; width=&#x27;100%25&#x27; height=&#x27;100%25&#x27;/%3E%3CfeComposite operator=&#x27;out&#x27; in=&#x27;s&#x27;/%3E%3CfeComposite in2=&#x27;SourceGraphic&#x27;/%3E%3CfeGaussianBlur stdDeviation=&#x27;20&#x27;/%3E%3C/filter%3E%3Cimage width=&#x27;100%25&#x27; height=&#x27;100%25&#x27; x=&#x27;0&#x27; y=&#x27;0&#x27; preserveAspectRatio=&#x27;none&#x27; style=&#x27;filter: url(%23b);&#x27; href=&#x27;data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoKCgoKCgsMDAsPEA4QDxYUExMUFiIYGhgaGCIzICUgICUgMy03LCksNy1RQDg4QFFeT0pPXnFlZXGPiI+7u/sBCgoKCgoKCwwMCw8QDhAPFhQTExQWIhgaGBoYIjMgJSAgJSAzLTcsKSw3LVFAODhAUV5PSk9ecWVlcY+Ij7u7+//CABEIAAgABwMBIgACEQEDEQH/xAAoAAEBAAAAAAAAAAAAAAAAAAAABwEBAQAAAAAAAAAAAAAAAAAAAQT/2gAMAwEAAhADEAAAAK6JX//EABsQAAIBBQAAAAAAAAAAAAAAAAECEQADEyFR/9oACAEBAAE/AEzJfYluxI1X/8QAHREAAQIHAAAAAAAAAAAAAAAAAgABBBESEyMyQf/aAAgBAgEBPwCGG2BtWRZD2efV/8QAFhEAAwAAAAAAAAAAAAAAAAAAAALB/9oACAEDAQE/AGh//9k=&#x27;/%3E%3C/svg%3E&quot;);
+            "
+            src="/_next/static/media/avatar.f1819002.jpg"
+          />
+          <h5>Gao</h5>
+          <ul class="list-inline text-center">
+            <li class="list-inline-item"><i class="fab fa-android"></i></li>
+            <li class="list-inline-item"><i class="fab fa-angular"></i></li>
+            <li class="list-inline-item"><i class="fas fa-blog"></i></li>
+            <li class="list-inline-item"><i class="fab fa-bootstrap"></i></li>
+            <li class="list-inline-item"><i class="fab fa-chrome"></i></li>
+            <li class="list-inline-item"><i class="fas fa-cloud"></i></li>
+            <li class="list-inline-item"><i class="fas">C</i></li>
+            <li class="list-inline-item"><i class="fas">C#</i></li>
+            <li class="list-inline-item"><i class="fab fa-docker"></i></li>
+            <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
+            <li class="list-inline-item"><i class="fas fa-database"></i></li>
+            <li class="list-inline-item"><i class="fab fa-git"></i></li>
+            <li class="list-inline-item"><i class="fab fa-html5"></i></li>
+            <li class="list-inline-item"><i class="fab fa-java"></i></li>
+            <li class="list-inline-item"><i class="fab fa-js"></i></li>
+            <li class="list-inline-item"><i class="fab fa-linux"></i></li>
+            <li class="list-inline-item"><i class="fab fa-markdown"></i></li>
+            <li class="list-inline-item"><i class="fab fa-microsoft"></i></li>
+            <li class="list-inline-item"><i class="fab fa-node-js"></i></li>
+            <li class="list-inline-item"><i class="fab fa-python"></i></li>
+            <li class="list-inline-item">
+              <i class="fab fa-raspberry-pi"></i>
+            </li>
+            <li class="list-inline-item"><i class="fab fa-react"></i></li>
+            <li class="list-inline-item"><i class="fab fa-r-project"></i></li>
+            <li class="list-inline-item"><i class="fas fa-server"></i></li>
+            <li class="list-inline-item"><i class="fab fa-trello"></i></li>
+            <li class="list-inline-item"><i class="fab fa-vuejs"></i></li>
+          </ul>
+          <p>
+            It is the time you have wasted for your rose that makes your rose so
+            important.
+          </p>
+        </section>
+      </header>
+      <main>
         <iframe
-          title="perplexity"
-          src="/perplexity/index.html"
+          title="transformer"
+          src="/tags/transformer/index.html"
           width="100%"
           height="0px"
         ></iframe>
-        <section class="FeaturesTags_tags__qev0a tw-text-center">
-          <h6>Tags</h6>
-          <ul class="tw-p-0">
-            <li class="tw-inline tw-px-1">
-              <a class="FeaturesTags_tag__f8Svr" href="/tags/#Perplexity"
-                >Perplexity</a
-              >
-            </li>
-            <li class="tw-inline tw-px-1">
-              <a class="FeaturesTags_tag__f8Svr" href="/tags/#NLP">NLP</a>
-            </li>
-            <li class="tw-inline tw-px-1">
-              <a
-                class="FeaturesTags_tag__f8Svr"
-                href="/tags/#information%20theory"
-                >information theory</a
-              >
-            </li>
-            <li class="tw-inline tw-px-1">
-              <a class="FeaturesTags_tag__f8Svr" href="/tags/#cross-entropy"
-                >cross-entropy</a
-              >
-            </li>
-            <li class="tw-inline tw-px-1">
-              <a class="FeaturesTags_tag__f8Svr" href="/tags/#LLM">LLM</a>
-            </li>
-            <li class="tw-inline tw-px-1">
-              <a class="FeaturesTags_tag__f8Svr" href="/tags/#transformer"
-                >transformer</a
-              >
-            </li>
-          </ul>
-        </section>
       </main>
       <footer class="tw-text-center tw-text-gray-400">
         <div class="row justify-content-center">
@@ -321,27 +341,21 @@
       {
         "props": {
           "pageProps": {
-            "postData": {
-              "slug": "perplexity",
-              "title": "Perplexity",
-              "date": "2024-10-14 23:41:47",
-              "lang": "en",
-              "tags": [
-                "Perplexity",
-                "NLP",
-                "information theory",
-                "cross-entropy",
-                "LLM",
-                "transformer"
-              ],
-              "path": "/perplexity/index.html"
-            },
-            "lang": "en",
+            "lang": "es",
+            "tag": "transformer",
             "_nextI18Next": {
               "initialI18nStore": {
+                "es": {
+                  "navbar": {
+                    "Home": "Inicio",
+                    "Language": "Lenguaje",
+                    "Tags": "Tags",
+                    "en": "Inglés",
+                    "es": "Español",
+                    "zh": "Chino"
+                  }
+                },
                 "en": {
-                  "common": { "Next": "Next", "Back to home": "Back to home" },
-                  "feature-tags": { "Tags": "Tags" },
                   "navbar": {
                     "Home": "Home",
                     "Language": "Language",
@@ -352,8 +366,8 @@
                   }
                 }
               },
-              "initialLocale": "en",
-              "ns": ["common", "feature-tags", "navbar"],
+              "initialLocale": "es",
+              "ns": ["navbar"],
               "userConfig": {
                 "i18n": {
                   "defaultLocale": "en",
@@ -370,8 +384,8 @@
           },
           "__N_SSG": true
         },
-        "page": "/posts/[slug]",
-        "query": { "slug": "perplexity" },
+        "page": "/posts/langs/[lang]/tags/[tag]",
+        "query": { "lang": "es", "tag": "transformer" },
         "buildId": "fixed",
         "isFallback": false,
         "gsp": true,
