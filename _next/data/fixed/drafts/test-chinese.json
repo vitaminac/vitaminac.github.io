@@ -12,7 +12,7 @@
     "_nextI18Next": {
       "initialI18nStore": {
         "zh": {
-          "common": { "Next": "下一页", "Back to home": "回到主页" },
+          "common": { "Next": "下一页" },
           "navbar": {
             "Home": "主页",
             "Language": "语言",
@@ -20,10 +20,11 @@
             "en": "英语",
             "es": "西语",
             "zh": "中文"
-          }
+          },
+          "post-layout": { "Author": "作者: {{author}}" }
         },
         "en": {
-          "common": { "Next": "Next", "Back to home": "Back to home" },
+          "common": { "Next": "Next" },
           "navbar": {
             "Home": "Home",
             "Language": "Language",
@@ -31,11 +32,12 @@
             "en": "English",
             "es": "Spanish",
             "zh": "Chinese"
-          }
+          },
+          "post-layout": { "Author": "Author: {{author}}" }
         }
       },
       "initialLocale": "zh",
-      "ns": ["common", "navbar"],
+      "ns": ["common", "navbar", "post-layout"],
       "userConfig": {
         "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
         "default": {

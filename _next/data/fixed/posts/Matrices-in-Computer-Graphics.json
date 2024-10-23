@@ -23,7 +23,7 @@
     "_nextI18Next": {
       "initialI18nStore": {
         "en": {
-          "common": { "Next": "Next", "Back to home": "Back to home" },
+          "common": { "Next": "Next" },
           "feature-tags": { "Tags": "Tags" },
           "navbar": {
             "Home": "Home",
@@ -32,11 +32,12 @@
             "en": "English",
             "es": "Spanish",
             "zh": "Chinese"
-          }
+          },
+          "post-layout": { "Author": "Author: {{author}}" }
         }
       },
       "initialLocale": "en",
-      "ns": ["common", "feature-tags", "navbar"],
+      "ns": ["common", "feature-tags", "navbar", "post-layout"],
       "userConfig": {
         "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
         "default": {

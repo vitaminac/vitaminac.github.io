@@ -161,7 +161,7 @@
     "_nextI18Next": {
       "initialI18nStore": {
         "zh": {
-          "common": { "Next": "下一页", "Back to home": "回到主页" },
+          "common": { "Next": "下一页" },
           "navbar": {
             "Home": "主页",
             "Language": "语言",
@@ -172,7 +172,7 @@
           }
         },
         "en": {
-          "common": { "Next": "Next", "Back to home": "Back to home" },
+          "common": { "Next": "Next" },
           "navbar": {
             "Home": "Home",
             "Language": "Language",

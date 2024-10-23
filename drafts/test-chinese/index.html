@@ -99,7 +99,7 @@
       defer=""
     ></script>
     <script
-      src="/_next/static/chunks/pages/drafts/%5Bslug%5D-d72cda767b32f632.js"
+      src="/_next/static/chunks/pages/drafts/%5Bslug%5D-f15380b1ad2b96e4.js"
       defer=""
     ></script>
     <script src="/_next/static/fixed/_buildManifest.js" defer=""></script>
@@ -184,8 +184,8 @@
         "
       >
         <h1>Test ES</h1>
-        <h6>Author: <span>Gao</span></h6>
-        <h6>Date: <time datetime="2020-01-02">January 2, 2020</time></h6>
+        <h6>作者: Gao</h6>
+        <h6><time datetime="2020-01-02">January 2, 2020</time></h6>
         <section class="FeaturesTags_tags__qev0a tw-text-center">
           <h6>标签</h6>
           <ul class="tw-p-0"></ul>
@@ -321,7 +321,7 @@
             "_nextI18Next": {
               "initialI18nStore": {
                 "zh": {
-                  "common": { "Next": "下一页", "Back to home": "回到主页" },
+                  "common": { "Next": "下一页" },
                   "navbar": {
                     "Home": "主页",
                     "Language": "语言",
@@ -329,10 +329,11 @@
                     "en": "英语",
                     "es": "西语",
                     "zh": "中文"
-                  }
+                  },
+                  "post-layout": { "Author": "作者: {{author}}" }
                 },
                 "en": {
-                  "common": { "Next": "Next", "Back to home": "Back to home" },
+                  "common": { "Next": "Next" },
                   "navbar": {
                     "Home": "Home",
                     "Language": "Language",
@@ -340,11 +341,12 @@
                     "en": "English",
                     "es": "Spanish",
                     "zh": "Chinese"
-                  }
+                  },
+                  "post-layout": { "Author": "Author: {{author}}" }
                 }
               },
               "initialLocale": "zh",
-              "ns": ["common", "navbar"],
+              "ns": ["common", "navbar", "post-layout"],
               "userConfig": {
                 "i18n": {
                   "defaultLocale": "en",

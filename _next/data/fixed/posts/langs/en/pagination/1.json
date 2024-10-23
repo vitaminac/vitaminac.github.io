@@ -416,7 +416,7 @@
     "_nextI18Next": {
       "initialI18nStore": {
         "en": {
-          "common": { "Next": "Next", "Back to home": "Back to home" },
+          "common": { "Next": "Next" },
           "navbar": {
             "Home": "Home",
             "Language": "Language",

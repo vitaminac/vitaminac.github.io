@@ -87,7 +87,7 @@
       defer=""
     ></script>
     <script
-      src="/_next/static/chunks/pages/posts/%5Bslug%5D-8ca05a52f9e0b6b2.js"
+      src="/_next/static/chunks/pages/posts/%5Bslug%5D-d4bd392683be4baf.js"
       defer=""
     ></script>
     <script src="/_next/static/fixed/_buildManifest.js" defer=""></script>
@@ -172,8 +172,8 @@
         "
       >
         <h1>Angular SPA</h1>
-        <h6>Author: <span>Gao</span></h6>
-        <h6>Date: <time datetime="2019-05-03 13:28:22">May 3, 2019</time></h6>
+        <h6>Autor: Gao</h6>
+        <h6><time datetime="2019-05-03 13:28:22">May 3, 2019</time></h6>
         <section class="FeaturesTags_tags__qev0a tw-text-center">
           <h6>Tags</h6>
           <ul class="tw-p-0">
@@ -336,10 +336,7 @@
             "_nextI18Next": {
               "initialI18nStore": {
                 "es": {
-                  "common": {
-                    "Next": "Siguiente",
-                    "Back to home": "Volver al inicio"
-                  },
+                  "common": { "Next": "Siguiente" },
                   "feature-tags": { "Tags": "Tags" },
                   "navbar": {
                     "Home": "Inicio",
@@ -348,10 +345,11 @@
                     "en": "Inglés",
                     "es": "Español",
                     "zh": "Chino"
-                  }
+                  },
+                  "post-layout": { "Author": "Autor: {{author}}" }
                 },
                 "en": {
-                  "common": { "Next": "Next", "Back to home": "Back to home" },
+                  "common": { "Next": "Next" },
                   "feature-tags": { "Tags": "Tags" },
                   "navbar": {
                     "Home": "Home",
@@ -360,11 +358,12 @@
                     "en": "English",
                     "es": "Spanish",
                     "zh": "Chinese"
-                  }
+                  },
+                  "post-layout": { "Author": "Author: {{author}}" }
                 }
               },
               "initialLocale": "es",
-              "ns": ["common", "feature-tags", "navbar"],
+              "ns": ["common", "feature-tags", "navbar", "post-layout"],
               "userConfig": {
                 "i18n": {
                   "defaultLocale": "en",

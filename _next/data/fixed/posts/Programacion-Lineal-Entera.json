@@ -18,7 +18,7 @@
     "_nextI18Next": {
       "initialI18nStore": {
         "es": {
-          "common": { "Next": "Siguiente", "Back to home": "Volver al inicio" },
+          "common": { "Next": "Siguiente" },
           "feature-tags": { "Tags": "Tags" },
           "navbar": {
             "Home": "Inicio",
@@ -27,10 +27,11 @@
             "en": "Inglés",
             "es": "Español",
             "zh": "Chino"
-          }
+          },
+          "post-layout": { "Author": "Autor: {{author}}" }
         },
         "en": {
-          "common": { "Next": "Next", "Back to home": "Back to home" },
+          "common": { "Next": "Next" },
           "feature-tags": { "Tags": "Tags" },
           "navbar": {
             "Home": "Home",
@@ -39,11 +40,12 @@
             "en": "English",
             "es": "Spanish",
             "zh": "Chinese"
-          }
+          },
+          "post-layout": { "Author": "Author: {{author}}" }
         }
       },
       "initialLocale": "es",
-      "ns": ["common", "feature-tags", "navbar"],
+      "ns": ["common", "feature-tags", "navbar", "post-layout"],
       "userConfig": {
         "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
         "default": {

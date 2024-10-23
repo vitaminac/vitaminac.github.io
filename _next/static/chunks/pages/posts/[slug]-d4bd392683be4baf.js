@@ -16,20 +16,20 @@
           return i;
         },
       });
-      var s = n(5893),
-        r = n(7294);
+      var r = n(5893),
+        s = n(7294);
       function i(t) {
-        let e = (0, r.useRef)(null),
-          [n, i] = (0, r.useState)(),
-          [a, c] = (0, r.useState)(0),
-          o = (0, r.useCallback)(() => {
+        let e = (0, s.useRef)(null),
+          [n, i] = (0, s.useState)(),
+          [a, c] = (0, s.useState)(0),
+          o = (0, s.useCallback)(() => {
             i(e.current.contentWindow.document.body);
           }, [i]),
-          l = (0, r.useCallback)(() => {
+          l = (0, s.useCallback)(() => {
             c(n.scrollHeight);
           }, [n, c]);
         return (
-          (0, r.useEffect)(() => {
+          (0, s.useEffect)(() => {
             if (n) {
               let t = new ResizeObserver(l);
               return (
@@ -40,7 +40,7 @@
               );
             }
           }, [n, l]),
-          (0, s.jsx)("iframe", {
+          (0, r.jsx)("iframe", {
             title: t.title,
             src: t.src,
             width: "100%",
@@ -58,26 +58,26 @@
           return v;
         },
       });
-      var s = n(5893),
-        r = n(3967),
-        i = n.n(r),
-        a = n(1798),
+      var r = n(5893),
+        s = n(1798),
+        i = n(3967),
+        a = n.n(i),
         c = n(1664),
         o = n.n(c),
         l = n(8716),
         u = n.n(l);
       function d(t) {
         let { tags: e } = t,
-          { t: n } = (0, a.$G)("feature-tags"),
-          r = e.map((t) =>
-            (0, s.jsx)(
+          { t: n } = (0, s.$G)("feature-tags"),
+          i = e.map((t) =>
+            (0, r.jsx)(
               "li",
               {
                 className: "tw-inline tw-px-1",
-                children: (0, s.jsx)(
+                children: (0, r.jsx)(
                   o(),
                   {
-                    className: i()(u().tag, "tw-border-white tw-text-white"),
+                    className: a()(u().tag, "tw-border-white tw-text-white"),
                     href: "/tags#".concat(t),
                     children: t,
                   },
@@ -87,11 +87,11 @@
               t,
             ),
           );
-        return (0, s.jsxs)("section", {
-          className: i()(u().tags, "tw-text-center"),
+        return (0, r.jsxs)("section", {
+          className: a()(u().tags, "tw-text-center"),
           children: [
-            (0, s.jsx)("h6", { children: n("Tags") }),
-            (0, s.jsx)("ul", { className: "tw-p-0", children: r }),
+            (0, r.jsx)("h6", { children: n("Tags") }),
+            (0, r.jsx)("ul", { className: "tw-p-0", children: i }),
           ],
         });
       }
@@ -99,19 +99,19 @@
       n(7294);
       var h = n(197),
         w = n(949);
-      function x(t) {
+      function m(t) {
         let { dateString: e } = t,
           n = (0, h.D)(e);
-        return (0, s.jsx)("time", {
+        return (0, r.jsx)("time", {
           dateTime: e,
           children: (0, w.WU)(n, "LLLL d, yyyy"),
         });
       }
-      var m = n(5152),
-        f = n.n(m),
+      var x = n(5152),
+        f = n.n(x),
         j = n(3944);
       function p(t) {
-        return (0, s.jsx)(j.qw, {
+        return (0, r.jsx)(j.qw, {
           shortname: t.username,
           config: {
             url: window.location.href,
@@ -123,18 +123,19 @@
       }
       let _ = f()(() => Promise.resolve(p), { ssr: !1 });
       function v(t) {
-        let { children: e, postData: n, siteConfig: r } = t,
-          { siteAuthor: i, disqusUsername: a } = r;
-        return (0, s.jsxs)(s.Fragment, {
+        let { children: e, postData: n, siteConfig: i } = t,
+          { t: a } = (0, s.$G)("post-layout"),
+          { siteAuthor: c, disqusUsername: o } = i;
+        return (0, r.jsxs)(r.Fragment, {
           children: [
-            (0, s.jsx)(g.K, {
+            (0, r.jsx)(g.K, {
               title: n.title,
-              author: i,
+              author: c,
               lang: n.lang,
               description: n.description,
               keywords: n.tags,
             }),
-            (0, s.jsxs)("header", {
+            (0, r.jsxs)("header", {
               className:
                 "tw-flex tw-h-96 tw-w-screen tw-flex-col tw-content-center tw-justify-center tw-bg-cover tw-bg-center tw-bg-no-repeat tw-text-center tw-text-white",
               style: {
@@ -144,22 +145,20 @@
                 ),
               },
               children: [
-                (0, s.jsx)("h1", { children: n.title }),
-                (0, s.jsxs)("h6", {
-                  children: ["Author: ", (0, s.jsx)("span", { children: i })],
+                (0, r.jsx)("h1", { children: n.title }),
+                (0, r.jsx)("h6", { children: a("Author", { author: c }) }),
+                (0, r.jsx)("h6", {
+                  children: (0, r.jsx)(m, { dateString: n.date }),
                 }),
-                (0, s.jsxs)("h6", {
-                  children: ["Date: ", (0, s.jsx)(x, { dateString: n.date })],
-                }),
-                (0, s.jsx)(d, { tags: n.tags }),
+                (0, r.jsx)(d, { tags: n.tags }),
               ],
             }),
-            (0, s.jsxs)("main", {
+            (0, r.jsxs)("main", {
               className: "tw-mx-auto tw-w-11/12",
               children: [
                 e,
-                (0, s.jsx)(_, {
-                  username: a,
+                (0, r.jsx)(_, {
+                  username: o,
                   id: n.slug,
                   title: n.title,
                   lang: n.lang,
@@ -177,53 +176,53 @@
           return a;
         },
       });
-      var s = n(5893),
-        r = n(9008),
-        i = n.n(r);
+      var r = n(5893),
+        s = n(9008),
+        i = n.n(s);
       function a(t) {
-        return (0, s.jsxs)(i(), {
+        return (0, r.jsxs)(i(), {
           children: [
-            (0, s.jsx)("meta", { charSet: "utf-8" }),
-            (0, s.jsx)("meta", {
+            (0, r.jsx)("meta", { charSet: "utf-8" }),
+            (0, r.jsx)("meta", {
               httpEquiv: "X-UA-Compatible",
               content: "IE=edge",
             }),
-            (0, s.jsx)("meta", {
+            (0, r.jsx)("meta", {
               name: "viewport",
               content: "width=device-width, initial-scale=1.0",
             }),
-            (0, s.jsx)("meta", {
+            (0, r.jsx)("meta", {
               httpEquiv: "content-language",
               content: t.lang,
             }),
-            (0, s.jsx)("link", { rel: "icon", href: "/favicon.ico" }),
-            (0, s.jsx)("title", { children: t.title }),
-            (0, s.jsx)("meta", { name: "og:title", content: t.title }),
-            (0, s.jsx)("meta", { name: "author", content: t.author }),
+            (0, r.jsx)("link", { rel: "icon", href: "/favicon.ico" }),
+            (0, r.jsx)("title", { children: t.title }),
+            (0, r.jsx)("meta", { name: "og:title", content: t.title }),
+            (0, r.jsx)("meta", { name: "author", content: t.author }),
             t.description &&
-              (0, s.jsxs)(s.Fragment, {
+              (0, r.jsxs)(r.Fragment, {
                 children: [
-                  (0, s.jsx)("meta", {
+                  (0, r.jsx)("meta", {
                     name: "description",
                     content: t.description,
                   }),
-                  (0, s.jsx)("meta", {
+                  (0, r.jsx)("meta", {
                     name: "og:description",
                     content: t.description,
                   }),
                 ],
               }),
             t.previewImage &&
-              (0, s.jsx)("meta", {
+              (0, r.jsx)("meta", {
                 property: "og:image",
                 content: t.previewImage,
               }),
             t.keywords &&
-              (0, s.jsx)("meta", {
+              (0, r.jsx)("meta", {
                 name: "keywords",
                 content: t.keywords.join(","),
               }),
-            (0, s.jsx)("meta", {
+            (0, r.jsx)("meta", {
               name: "twitter:card",
               content: "summary_large_image",
             }),
@@ -242,14 +241,14 @@
             return c;
           },
         });
-      var s = n(5893),
-        r = n(2144),
+      var r = n(5893),
+        s = n(2144),
         i = n(3101),
         a = !0,
         c = function (t) {
-          return (0, s.jsx)(i.j, {
+          return (0, r.jsx)(i.j, {
             ...t,
-            children: (0, s.jsx)(r.C, {
+            children: (0, r.jsx)(s.C, {
               title: t.postData.slug,
               src: t.postData.path,
             }),

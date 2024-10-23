@@ -364,7 +364,7 @@
     "_nextI18Next": {
       "initialI18nStore": {
         "es": {
-          "common": { "Next": "Siguiente", "Back to home": "Volver al inicio" },
+          "common": { "Next": "Siguiente" },
           "navbar": {
             "Home": "Inicio",
             "Language": "Lenguaje",
@@ -375,7 +375,7 @@
           }
         },
         "en": {
-          "common": { "Next": "Next", "Back to home": "Back to home" },
+          "common": { "Next": "Next" },
           "navbar": {
             "Home": "Home",
             "Language": "Language",

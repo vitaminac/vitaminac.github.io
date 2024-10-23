@@ -30,17 +30,17 @@
         },
       });
       var r = n(5893),
-        i = n(3967),
-        s = n.n(i),
-        a = n(1798),
+        i = n(1798),
+        s = n(3967),
+        a = n.n(s),
         A = n(1664),
         c = n.n(A),
         o = n(8716),
         l = n.n(o);
       function u(e) {
         let { tags: t } = e,
-          { t: n } = (0, a.$G)("feature-tags"),
-          i = t.map((e) =>
+          { t: n } = (0, i.$G)("feature-tags"),
+          s = t.map((e) =>
             (0, r.jsx)(
               "li",
               {
@@ -48,7 +48,7 @@
                 children: (0, r.jsx)(
                   c(),
                   {
-                    className: s()(l().tag, "tw-border-white tw-text-white"),
+                    className: a()(l().tag, "tw-border-white tw-text-white"),
                     href: "/tags#".concat(e),
                     children: e,
                   },
@@ -59,10 +59,10 @@
             ),
           );
         return (0, r.jsxs)("section", {
-          className: s()(l().tags, "tw-text-center"),
+          className: a()(l().tags, "tw-text-center"),
           children: [
             (0, r.jsx)("h6", { children: n("Tags") }),
-            (0, r.jsx)("ul", { className: "tw-p-0", children: i }),
+            (0, r.jsx)("ul", { className: "tw-p-0", children: s }),
           ],
         });
       }
@@ -94,13 +94,14 @@
       }
       let p = x()(() => Promise.resolve(j), { ssr: !1 });
       function v(e) {
-        let { children: t, postData: n, siteConfig: i } = e,
-          { siteAuthor: s, disqusUsername: a } = i;
+        let { children: t, postData: n, siteConfig: s } = e,
+          { t: a } = (0, i.$G)("post-layout"),
+          { siteAuthor: A, disqusUsername: c } = s;
         return (0, r.jsxs)(r.Fragment, {
           children: [
             (0, r.jsx)(d.K, {
               title: n.title,
-              author: s,
+              author: A,
               lang: n.lang,
               description: n.description,
               keywords: n.tags,
@@ -116,11 +117,9 @@
               },
               children: [
                 (0, r.jsx)("h1", { children: n.title }),
-                (0, r.jsxs)("h6", {
-                  children: ["Author: ", (0, r.jsx)("span", { children: s })],
-                }),
-                (0, r.jsxs)("h6", {
-                  children: ["Date: ", (0, r.jsx)(m, { dateString: n.date })],
+                (0, r.jsx)("h6", { children: a("Author", { author: A }) }),
+                (0, r.jsx)("h6", {
+                  children: (0, r.jsx)(m, { dateString: n.date }),
                 }),
                 (0, r.jsx)(u, { tags: n.tags }),
               ],
@@ -130,7 +129,7 @@
               children: [
                 t,
                 (0, r.jsx)(p, {
-                  username: a,
+                  username: c,
                   id: n.slug,
                   title: n.title,
                   lang: n.lang,
