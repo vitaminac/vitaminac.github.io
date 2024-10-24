@@ -18,18 +18,18 @@
       });
       var s = n(5893);
       n(7294);
-      var a = n(197),
-        r = n(949);
+      var r = n(197),
+        a = n(949);
       function i(t) {
         let { dateString: e } = t,
-          n = (0, a.D)(e);
+          n = (0, r.D)(e);
         return (0, s.jsxs)("span", {
           children: [
             (0, s.jsx)("i", { className: "fa-regular fa-calendar" }),
             (0, s.jsx)("time", {
               className: "tw-pl-1.5",
               dateTime: e,
-              children: (0, r.WU)(n, "LLLL d, yyyy"),
+              children: (0, a.WU)(n, "LLLL d, yyyy"),
             }),
           ],
         });
@@ -39,23 +39,23 @@
       "use strict";
       n.d(e, {
         C: function () {
-          return r;
+          return a;
         },
       });
       var s = n(5893),
-        a = n(7294);
-      function r(t) {
-        let e = (0, a.useRef)(null),
-          [n, r] = (0, a.useState)(),
-          [i, c] = (0, a.useState)(0),
-          o = (0, a.useCallback)(() => {
-            r(e.current.contentWindow.document.body);
-          }, [r]),
-          l = (0, a.useCallback)(() => {
+        r = n(7294);
+      function a(t) {
+        let e = (0, r.useRef)(null),
+          [n, a] = (0, r.useState)(),
+          [i, c] = (0, r.useState)(0),
+          o = (0, r.useCallback)(() => {
+            a(e.current.contentWindow.document.body);
+          }, [a]),
+          l = (0, r.useCallback)(() => {
             c(n.scrollHeight);
           }, [n, c]);
         return (
-          (0, a.useEffect)(() => {
+          (0, r.useEffect)(() => {
             if (n) {
               let t = new ResizeObserver(l);
               return (
@@ -85,16 +85,16 @@
         },
       });
       var s = n(5893),
-        a = n(1798),
-        r = n(3967),
-        i = n.n(r),
+        r = n(1798),
+        a = n(3967),
+        i = n.n(a),
         c = n(1664),
         o = n.n(c),
         l = n(8716),
         u = n.n(l);
       function d(t) {
         let { lang: e, tags: n } = t,
-          { t: r } = (0, a.$G)("feature-tags"),
+          { t: a } = (0, r.$G)("feature-tags"),
           c = n.map((t) =>
             (0, s.jsx)(
               "li",
@@ -116,7 +116,7 @@
         return (0, s.jsxs)("section", {
           className: i()(u().tags, "tw-text-center"),
           children: [
-            (0, s.jsx)("h6", { children: r("Tags") }),
+            (0, s.jsx)("h6", { children: a("Tags") }),
             (0, s.jsx)("ul", { className: "tw-p-0", children: c }),
           ],
         });
@@ -124,10 +124,10 @@
       var g = n(5853),
         m = n(3045),
         w = n(5152),
-        f = n.n(w),
-        x = n(3944);
-      function h(t) {
-        return (0, s.jsx)(x.qw, {
+        x = n.n(w),
+        h = n(3944);
+      function f(t) {
+        return (0, s.jsx)(h.qw, {
           shortname: t.username,
           config: {
             url: window.location.href,
@@ -137,11 +137,11 @@
           },
         });
       }
-      let j = f()(() => Promise.resolve(h), { ssr: !1 });
+      let j = x()(() => Promise.resolve(f), { ssr: !1 });
       function p(t) {
-        let { children: e, postData: n, siteConfig: r } = t,
-          { t: i } = (0, a.$G)("post-layout"),
-          { siteAuthor: c, disqusUsername: o } = r;
+        let { children: e, postData: n, siteConfig: a } = t,
+          { t: i } = (0, r.$G)("post-layout"),
+          { siteAuthor: c, disqusUsername: o } = a;
         return (0, s.jsxs)(s.Fragment, {
           children: [
             (0, s.jsx)(g.K, {
@@ -150,6 +150,7 @@
               lang: n.lang,
               description: n.description,
               keywords: n.tags,
+              previewImage: n.previewImageUrl,
             }),
             (0, s.jsxs)("header", {
               className:
@@ -167,15 +168,19 @@
                 (0, s.jsx)(d, { lang: n.lang, tags: n.tags }),
               ],
             }),
-            (0, s.jsxs)("main", {
+            (0, s.jsxs)("div", {
               className: "tw-mx-auto tw-w-11/12",
               children: [
-                e,
-                (0, s.jsx)(j, {
-                  username: o,
-                  id: n.slug,
-                  title: n.title,
-                  lang: n.lang,
+                (0, s.jsx)("main", {
+                  children: (0, s.jsx)("article", { children: e }),
+                }),
+                (0, s.jsx)("aside", {
+                  children: (0, s.jsx)(j, {
+                    username: o,
+                    id: n.slug,
+                    title: n.title,
+                    lang: n.lang,
+                  }),
                 }),
               ],
             }),
@@ -191,10 +196,10 @@
         },
       });
       var s = n(5893),
-        a = n(9008),
-        r = n.n(a);
+        r = n(9008),
+        a = n.n(r);
       function i(t) {
-        return (0, s.jsxs)(r(), {
+        return (0, s.jsxs)(a(), {
           children: [
             (0, s.jsx)("meta", { charSet: "utf-8" }),
             (0, s.jsx)("meta", {
@@ -256,16 +261,15 @@
           },
         });
       var s = n(5893),
-        a = n(2144),
-        r = n(269),
+        r = n(2144),
+        a = n(269),
         i = !0,
         c = function (t) {
-          return (0, s.jsx)(r.j, {
-            ...t,
-            children: (0, s.jsx)(a.C, {
-              title: t.postData.slug,
-              src: t.postData.path,
-            }),
+          let { postData: e, siteConfig: n } = t;
+          return (0, s.jsx)(a.j, {
+            postData: e,
+            siteConfig: n,
+            children: (0, s.jsx)(r.C, { title: e.slug, src: e.path }),
           });
         };
     },

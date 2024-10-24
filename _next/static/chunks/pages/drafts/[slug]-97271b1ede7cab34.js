@@ -52,7 +52,7 @@
       "use strict";
       n.d(t, {
         j: function () {
-          return p;
+          return f;
         },
       });
       var r = n(5893),
@@ -108,8 +108,8 @@
           },
         });
       }
-      let f = m()(() => Promise.resolve(x), { ssr: !1 });
-      function p(e) {
+      let p = m()(() => Promise.resolve(x), { ssr: !1 });
+      function f(e) {
         let { children: t, postData: n, siteConfig: s } = e,
           { t: i } = (0, a.$G)("post-layout"),
           { siteAuthor: A, disqusUsername: c } = s;
@@ -121,6 +121,7 @@
               lang: n.lang,
               description: n.description,
               keywords: n.tags,
+              previewImage: n.previewImageUrl,
             }),
             (0, r.jsxs)("header", {
               className:
@@ -138,15 +139,19 @@
                 (0, r.jsx)(u, { lang: n.lang, tags: n.tags }),
               ],
             }),
-            (0, r.jsxs)("main", {
+            (0, r.jsxs)("div", {
               className: "tw-mx-auto tw-w-11/12",
               children: [
-                t,
-                (0, r.jsx)(f, {
-                  username: c,
-                  id: n.slug,
-                  title: n.title,
-                  lang: n.lang,
+                (0, r.jsx)("main", {
+                  children: (0, r.jsx)("article", { children: t }),
+                }),
+                (0, r.jsx)("aside", {
+                  children: (0, r.jsx)(p, {
+                    username: c,
+                    id: n.slug,
+                    title: n.title,
+                    lang: n.lang,
+                  }),
                 }),
               ],
             }),
@@ -259,8 +264,8 @@
         m = n(9360),
         w = n(1924),
         x = n(2935),
-        f = n(3687),
-        p = n(261);
+        p = n(3687),
+        f = n(261);
       let j = {
         img: function (e) {
           let { alt: t, src: a, width: s, height: i, ...A } = e;
@@ -272,7 +277,7 @@
                 height: i && (Number.isInteger(i) ? i : parseInt(i)),
                 ...A,
               })
-            : (0, r.jsx)(p.t, {
+            : (0, r.jsx)(f.t, {
                 src: n(7192)("./".concat(a)),
                 alt: t || "image",
                 sizes: "responsive",
@@ -282,7 +287,7 @@
               });
         },
       };
-      function E(e) {
+      function v(e) {
         let { markdownSource: t } = e;
         return (0, a.useMemo)(
           () =>
@@ -315,21 +320,20 @@
                     },
                   ],
                 ])
-                .use(f.Z, n)
+                .use(p.Z, n)
                 .processSync(e).result;
             })(t, j),
           [t],
         );
       }
-      var v = n(269),
+      var E = n(269),
         _ = !0,
         b = function (e) {
-          let { postData: t } = e;
-          return (0, r.jsx)(v.j, {
-            ...e,
-            children: (0, r.jsx)("article", {
-              children: (0, r.jsx)(E, { markdownSource: t.markdownSource }),
-            }),
+          let { postData: t, siteConfig: n } = e;
+          return (0, r.jsx)(E.j, {
+            postData: t,
+            siteConfig: n,
+            children: (0, r.jsx)(v, { markdownSource: t.markdownSource }),
           });
         };
     },
