@@ -1,13 +1,12 @@
 {
   "pageProps": {
     "postData": {
-      "slug": "test-youtube",
       "title": "Test Youtube",
       "date": "2020-01-02",
       "lang": "en",
       "tags": [],
-      "content": "\r\n::youtube[CS329P]{vid=rvy3EggGH7w}\r\n",
-      "markdownSource": "\r\n::youtube[CS329P]{vid=rvy3EggGH7w}\r\n"
+      "markdownContentSource": "\r\n::youtube[CS329P]{vid=rvy3EggGH7w}\r\n",
+      "slug": "test-youtube"
     },
     "_nextI18Next": {
       "initialI18nStore": {

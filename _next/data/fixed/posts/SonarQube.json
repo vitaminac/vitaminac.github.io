@@ -1,13 +1,13 @@
 {
   "pageProps": {
     "postData": {
-      "slug": "SonarQube",
       "title": "SonarQube",
+      "markdownContentSource": "\nSonarQube es la implementación SQALE, que se trata de \"organizar los requisitos no funcionales relacionados con la calidad del código\".\n\nLa implementación de SQALE en SonarQube se basa únicamente en reglas y problemas.\n\n* Bloques duplicados\n* Pruebas unitarias fallidas\n* Insuficiente cobertura de sucursales por pruebas unitarias.\n* Densidad de comentarios insuficiente\n* Cobertura de línea insuficiente por pruebas unitarias.\n* Pruebas unitarias omitidas\n\n![Quality](quality.png)\n\nEstas mediciones se realizan sumando la deuda técnica acumulada para cada emisión, que puede ver en cada bloque de emisión. También puede ver los totales de deuda por criterios en la interfaz de problemas seleccionando la visualización de la deuda en la parte superior de la interfaz de búsqueda de problemas. La deuda técnica de un proyecto es simplemente la suma de la deuda técnica de cada “bad smell” de código en el proyecto.",
+      "slug": "SonarQube",
       "date": "2019-04-28 23:24:42",
       "lang": "es",
       "tags": ["Software Quality Metrics", "SonarQube"],
-      "path": "/SonarQube/index.html",
-      "markdownContentSource": "\nSonarQube es la implementación SQALE, que se trata de \"organizar los requisitos no funcionales relacionados con la calidad del código\".\n\nLa implementación de SQALE en SonarQube se basa únicamente en reglas y problemas.\n\n* Bloques duplicados\n* Pruebas unitarias fallidas\n* Insuficiente cobertura de sucursales por pruebas unitarias.\n* Densidad de comentarios insuficiente\n* Cobertura de línea insuficiente por pruebas unitarias.\n* Pruebas unitarias omitidas\n\n![Quality](quality.png)\n\nEstas mediciones se realizan sumando la deuda técnica acumulada para cada emisión, que puede ver en cada bloque de emisión. También puede ver los totales de deuda por criterios en la interfaz de problemas seleccionando la visualización de la deuda en la parte superior de la interfaz de búsqueda de problemas. La deuda técnica de un proyecto es simplemente la suma de la deuda técnica de cada “bad smell” de código en el proyecto."
+      "path": "/SonarQube/index.html"
     },
     "lang": "es",
     "_nextI18Next": {

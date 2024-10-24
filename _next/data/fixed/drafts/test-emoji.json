@@ -1,13 +1,12 @@
 {
   "pageProps": {
     "postData": {
-      "slug": "test-emoji",
       "title": "Test Emoji",
       "date": "2020-01-02",
       "lang": "en",
       "tags": [],
-      "content": "\r\nEmojis in this text will be replaced: :dog: :+1:\r\n",
-      "markdownSource": "\r\nEmojis in this text will be replaced: :dog: :+1:\r\n"
+      "markdownContentSource": "\r\nEmojis in this text will be replaced: :dog: :+1:\r\n",
+      "slug": "test-emoji"
     },
     "_nextI18Next": {
       "initialI18nStore": {

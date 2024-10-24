@@ -1,13 +1,12 @@
 {
   "pageProps": {
     "postData": {
-      "slug": "test-gfm",
       "title": "Test GFM",
       "date": "2020-01-02",
       "lang": "en",
       "tags": [],
-      "content": "\r\n- [ ] foo\r\n- [x] bar\r\n",
-      "markdownSource": "\r\n- [ ] foo\r\n- [x] bar\r\n"
+      "markdownContentSource": "\r\n- [ ] foo\r\n- [x] bar\r\n",
+      "slug": "test-gfm"
     },
     "_nextI18Next": {
       "initialI18nStore": {

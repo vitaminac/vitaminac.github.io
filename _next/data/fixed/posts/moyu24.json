@@ -1,13 +1,13 @@
 {
   "pageProps": {
     "postData": {
-      "slug": "moyu24",
       "title": "魔域2.4小游戏分析",
+      "markdownContentSource": "\n魔域2.4是个曾经比较火的小游戏, 但是自从[Adobe取消Flash支持](https://www.adobe.com/products/flashplayer/end-of-life.html)现在最新的浏览器已经玩不了。这个网页内嵌了这个小游戏但是你需要下载一些还支持Flash的国内厂商的浏览器，例如[QQ浏览器](https://browser.qq.com/), 然后还需要安装[中国地区的Flash插件](https://www.flash.cn/download-wins)才能加载。如果你不想安装这个插件你可以试试这个选项[Clean Flash](https://gitlab.com/cleanflash/installer/-/releases)。\n\n{% flash moyu2_4.swf 800 %}\n\n如果你不想安装奇怪的浏览器而直接玩这个小游戏你可以[下载swf文件](moyu2_4.swf)然后用[Adobe Flash Player Content Projector Debugger](flashplayer_32_sa_debug.exe)打开。玩的不过瘾的话你还可以修改存档, 搜一搜**flash sol修改器**或者**flash sol editor**就能找到甚至还有开源选项例如[minerva](https://github.com/gmariani/minerva)和[flash-lso](https://github.com/ruffle-rs/rust-flash-lso)。\n\n开源社区有尝试过[让Adobe主动开源Flash实现](https://github.com/open-source-flash/open-source-flash)但是并没有得到回复。Adobe有开源AS的实现[avmplus](https://github.com/adobe/avmplus)。现在有一些开源项目立志于重新构建一个独立的Flash运行模拟器例如[Ruffle](https://github.com/ruffle-rs/ruffle)和[Lightspark](https://github.com/lightspark/lightspark)。还有一些项目例如[swf2js](https://github.com/swf2js/swf2js)尝试用现代的网页技术HTML5+Javascript+WebGL重现Flash。[FlashPatch](https://github.com/darktohka/FlashPatch)提供了一种现代浏览器也能运行Flash的可能性。\n\n想要用其他游戏引擎复刻曾经的小游戏可以使用[JPEXS Free Flash Decompiler](https://github.com/jindrapetrik/jpexs-decompiler)或者收费选项[Sothink SWF Decompiler](https://www.sothink.com/product/flashdecompiler/)反编译`.swf`成`.fla`然后用`Adobe Flash Professional CC 2015`打开进行辅助分析。",
+      "slug": "moyu24",
       "date": "2024-02-17 15:02:08",
       "lang": "zh",
       "tags": ["Game", "Flash", "魔域2.4"],
-      "path": "/moyu24/index.html",
-      "markdownContentSource": "\n魔域2.4是个曾经比较火的小游戏, 但是自从[Adobe取消Flash支持](https://www.adobe.com/products/flashplayer/end-of-life.html)现在最新的浏览器已经玩不了。这个网页内嵌了这个小游戏但是你需要下载一些还支持Flash的国内厂商的浏览器，例如[QQ浏览器](https://browser.qq.com/), 然后还需要安装[中国地区的Flash插件](https://www.flash.cn/download-wins)才能加载。如果你不想安装这个插件你可以试试这个选项[Clean Flash](https://gitlab.com/cleanflash/installer/-/releases)。\n\n{% flash moyu2_4.swf 800 %}\n\n如果你不想安装奇怪的浏览器而直接玩这个小游戏你可以[下载swf文件](moyu2_4.swf)然后用[Adobe Flash Player Content Projector Debugger](flashplayer_32_sa_debug.exe)打开。玩的不过瘾的话你还可以修改存档, 搜一搜**flash sol修改器**或者**flash sol editor**就能找到甚至还有开源选项例如[minerva](https://github.com/gmariani/minerva)和[flash-lso](https://github.com/ruffle-rs/rust-flash-lso)。\n\n开源社区有尝试过[让Adobe主动开源Flash实现](https://github.com/open-source-flash/open-source-flash)但是并没有得到回复。Adobe有开源AS的实现[avmplus](https://github.com/adobe/avmplus)。现在有一些开源项目立志于重新构建一个独立的Flash运行模拟器例如[Ruffle](https://github.com/ruffle-rs/ruffle)和[Lightspark](https://github.com/lightspark/lightspark)。还有一些项目例如[swf2js](https://github.com/swf2js/swf2js)尝试用现代的网页技术HTML5+Javascript+WebGL重现Flash。[FlashPatch](https://github.com/darktohka/FlashPatch)提供了一种现代浏览器也能运行Flash的可能性。\n\n想要用其他游戏引擎复刻曾经的小游戏可以使用[JPEXS Free Flash Decompiler](https://github.com/jindrapetrik/jpexs-decompiler)或者收费选项[Sothink SWF Decompiler](https://www.sothink.com/product/flashdecompiler/)反编译`.swf`成`.fla`然后用`Adobe Flash Professional CC 2015`打开进行辅助分析。"
+      "path": "/moyu24/index.html"
     },
     "lang": "zh",
     "_nextI18Next": {

@@ -1,13 +1,13 @@
 {
   "pageProps": {
     "postData": {
-      "slug": "DEFINITE-AND-INDEFINITE-ARTICLES",
       "title": "定冠词和不定冠词",
+      "markdownContentSource": "\n# 定冠词和不定冠词\n\n## 定冠词和不定冠词的区别\n\n注意下面两个英文句子\n\n第一个句子讲的是一个特定(definite)的饼干\nGive me **the** chocolate chip cookie.\n\n第二个句子只得是任意(indefinite)一个饼干\nGive me **a** cookie, please.\n\n它们的区别是一个是指某个特定的,另一个是随意一个\n\n## 4种定冠词的形式\n西语的定冠词跟英语的有点不同,它会根据词性和复数变化, 总共有4种形式\n\n**el gato**\n**los gatos**\n**la gata**\n**las gatas**\n\n如果群体既有阴性也有阳性我们会用los.\n\n**el** 阳性单数\n**la** 阴性单数\n**los** 阳性复数\n**las** 阴性复数\n\n用英语举例不定冠词有 \"a\", \"an\" 和 \"some\"\na cookie\nan apple\nsome books\n\n## 4种不定冠词的形式\n在西语里不定冠词也有四种形态\nun gato\nunos gatos\nuna gata\nunas gatas\n\n如果群体里包含一个以上的雄性成员则使用阳性复数形式\n\n**un**\n阳性单数\n\n**una**\n阴性单数\n\n**unos**\n阳性复数\n\n**unas**\n阴性复数\n\n\n下面把定冠词和不定冠词按性和复数形式分类\nel, un\n阳性单数\n\nla, una\n阴性单数\n\nlos, unos\n阳性复数\n\nlas, unas\n阴性复数\n\n## 例子\nel gato\nlos gatos\nla gata\nlas gatas\n\nun gato\nunos gatos\nuna gata\nunas gatas\nun libro\nuna pluma\nuna manzana",
+      "slug": "DEFINITE-AND-INDEFINITE-ARTICLES",
       "date": "2018-11-11 13:26:27",
       "lang": "zh",
       "tags": ["西班牙语语法", "冠词", "定冠词", "不定冠词"],
-      "path": "/DEFINITE-AND-INDEFINITE-ARTICLES/index.html",
-      "markdownContentSource": "\n# 定冠词和不定冠词\n\n## 定冠词和不定冠词的区别\n\n注意下面两个英文句子\n\n第一个句子讲的是一个特定(definite)的饼干\nGive me **the** chocolate chip cookie.\n\n第二个句子只得是任意(indefinite)一个饼干\nGive me **a** cookie, please.\n\n它们的区别是一个是指某个特定的,另一个是随意一个\n\n## 4种定冠词的形式\n西语的定冠词跟英语的有点不同,它会根据词性和复数变化, 总共有4种形式\n\n**el gato**\n**los gatos**\n**la gata**\n**las gatas**\n\n如果群体既有阴性也有阳性我们会用los.\n\n**el** 阳性单数\n**la** 阴性单数\n**los** 阳性复数\n**las** 阴性复数\n\n用英语举例不定冠词有 \"a\", \"an\" 和 \"some\"\na cookie\nan apple\nsome books\n\n## 4种不定冠词的形式\n在西语里不定冠词也有四种形态\nun gato\nunos gatos\nuna gata\nunas gatas\n\n如果群体里包含一个以上的雄性成员则使用阳性复数形式\n\n**un**\n阳性单数\n\n**una**\n阴性单数\n\n**unos**\n阳性复数\n\n**unas**\n阴性复数\n\n\n下面把定冠词和不定冠词按性和复数形式分类\nel, un\n阳性单数\n\nla, una\n阴性单数\n\nlos, unos\n阳性复数\n\nlas, unas\n阴性复数\n\n## 例子\nel gato\nlos gatos\nla gata\nlas gatas\n\nun gato\nunos gatos\nuna gata\nunas gatas\nun libro\nuna pluma\nuna manzana"
+      "path": "/DEFINITE-AND-INDEFINITE-ARTICLES/index.html"
     },
     "lang": "zh",
     "_nextI18Next": {

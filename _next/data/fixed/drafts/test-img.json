@@ -1,13 +1,12 @@
 {
   "pageProps": {
     "postData": {
-      "slug": "test-img",
       "title": "Test Image",
       "date": "2020-01-02",
       "lang": "en",
       "tags": [],
-      "content": "\r\n![Image](test.jpg)\r\n",
-      "markdownSource": "\r\n![Image](test.jpg)\r\n"
+      "markdownContentSource": "\r\n![Image](test.jpg)\r\n",
+      "slug": "test-img"
     },
     "_nextI18Next": {
       "initialI18nStore": {

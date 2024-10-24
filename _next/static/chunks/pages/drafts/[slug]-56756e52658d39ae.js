@@ -333,7 +333,9 @@
           return (0, r.jsx)(E.j, {
             postData: t,
             siteConfig: n,
-            children: (0, r.jsx)(v, { markdownSource: t.markdownSource }),
+            children: (0, r.jsx)(v, {
+              markdownSource: t.markdownContentSource,
+            }),
           });
         };
     },

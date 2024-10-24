@@ -1,13 +1,12 @@
 {
   "pageProps": {
     "postData": {
-      "slug": "test-math",
       "title": "Test Math",
       "date": "2020-01-02",
       "lang": "en",
       "tags": [],
-      "content": "\r\n$$\r\nL = \\frac{1}{2} \\rho v^2 S C_L\r\n$$\r\n",
-      "markdownSource": "\r\n$$\r\nL = \\frac{1}{2} \\rho v^2 S C_L\r\n$$\r\n"
+      "markdownContentSource": "\r\n$$\r\nL = \\frac{1}{2} \\rho v^2 S C_L\r\n$$\r\n",
+      "slug": "test-math"
     },
     "_nextI18Next": {
       "initialI18nStore": {

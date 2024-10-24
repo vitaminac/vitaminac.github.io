@@ -11,7 +11,7 @@
       t,
       "static/chunks/893-04920b8a1103a842.js",
       g,
-      "static/chunks/pages/drafts/[slug]-09495ffc2dd2e7d3.js",
+      "static/chunks/pages/drafts/[slug]-56756e52658d39ae.js",
     ],
     "/posts/langs/[lang]": [
       "static/chunks/pages/posts/langs/[lang]-7ac0aa1c3002eaa9.js",

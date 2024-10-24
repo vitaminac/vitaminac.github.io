@@ -1,13 +1,13 @@
 {
   "pageProps": {
     "postData": {
-      "slug": "Google-Kickstart-2019-Round-F-Flattening",
       "title": "Google Kickstart 2019 Round F Flattening",
+      "markdownContentSource": "\n# [Google Kickstart 2019 Round F Flattening](https://codingcompetitions.withgoogle.com/kickstart/round/0000000000050edc/000000000018666c)\n\nFirst, we find the major height $H_k$ from each position $i$ to each position $j$. The change is not more than K, it means it will have at most $K+1$ group. We start counting the minimum number of steps needed to position j if we allow $g$ group exists. Follow this sequence of operation, we start from $g=0$ until we get $g=k+1$.\n\n[Solution](https://github.com/vitaminac/code/blob/master/competition/kickstart/kickstart2019RoundF_Flattening.cpp)",
+      "slug": "Google-Kickstart-2019-Round-F-Flattening",
       "date": "2019-11-03 17:51:53",
       "lang": "en",
       "tags": ["algorithms"],
-      "path": "/Google-Kickstart-2019-Round-F-Flattening/index.html",
-      "markdownContentSource": "\n# [Google Kickstart 2019 Round F Flattening](https://codingcompetitions.withgoogle.com/kickstart/round/0000000000050edc/000000000018666c)\n\nFirst, we find the major height $H_k$ from each position $i$ to each position $j$. The change is not more than K, it means it will have at most $K+1$ group. We start counting the minimum number of steps needed to position j if we allow $g$ group exists. Follow this sequence of operation, we start from $g=0$ until we get $g=k+1$.\n\n[Solution](https://github.com/vitaminac/code/blob/master/competition/kickstart/kickstart2019RoundF_Flattening.cpp)"
+      "path": "/Google-Kickstart-2019-Round-F-Flattening/index.html"
     },
     "lang": "en",
     "_nextI18Next": {

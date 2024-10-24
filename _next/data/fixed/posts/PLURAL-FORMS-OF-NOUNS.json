@@ -1,13 +1,13 @@
 {
   "pageProps": {
     "postData": {
-      "slug": "PLURAL-FORMS-OF-NOUNS",
       "title": "名词的复数形式",
+      "markdownContentSource": "\n# 名词的复数形式\n\n## 元音结尾的名词, 复数形式结尾于-s\n\n**libro** : **libros** (libro + s)\n\n**pluma** : **plumas** (pluma + s)\n\n**chico** : **chicos** (chico + s)\n\n**señora** : **señoras** (señora + s)\n\n## 定冠词(el, la) 同样要换成复数形式 \"los\" 和 \"las\". \n\nel libro: **los libros**\nla pluma: **las plumas**\nel chico: **los chicos**\nla señora: **las señoras**\n\n## 如果是辅音结尾则加上后缀 -es\n\n**el borrador**: **los borradores**\n(borrador + es)\n\n**la universidad**: **las universidades**\n(universidad + es)\n\n**el profesor**: **los profesores**\n(profesor + es)\n\n**la ciudad**: **las ciudades**\n(ciudad + es)\n\n## 如果名词结尾与 -ión, 加上 -es和去掉重音\n\nel avión : **los aviones**\n\nla converesación : **las conversaciones**\n\nla sección : **las secciones**\n\nla televisión : **las televisiones**\n\n*你或许会奇怪为什么 \"avión\" 不是阴性. 它并不符合我们之前提到的规则 -ción 和 -sión 结尾的阴性名词.*\n\n## 如果名词结尾 -z, 加上 -es 然后把 z 改成 c\n\nel lápiz : **los lapices**\nla voz : **las voces**\nel tapiz : **los tapices**\nla actriz : **las actrices**\n\n当指多个个体不同性别的时候 使用阳性复数形式\n\n2 perros + 6 perras = 8 perros\n1 gato + 8 gatas = 9 gatos\n\n复合名词是由两个单词合成一个\n\n例如: abre + latas ¡ abrelatas / 开 + 罐头 = 开罐器\n\n## 这些复合名词永远是阳性, 他的复数形式是把 \"el\" 改成 \"los\"\n\nel abrelatas\n**los abrelatas**\n\nel paraguas\n**los paraguas**\n\n## 总结\n\n* 元音 结尾的名词 加 -s\n* 辅音 结尾的名词 加 -es\n* -z   结尾的名词 把 -z 改成 -c 然后加上 -es\n* -ión 结尾的名词 去掉重音加上 -es\n* 如果指男女混合的群体 需要使用阳性形式\n* 对于复合名词只需要把 \"el\" 改成 \"los\"\n",
+      "slug": "PLURAL-FORMS-OF-NOUNS",
       "date": "2018-11-08 13:17:02",
       "lang": "zh",
       "tags": ["西班牙语语法", "名词", "复数"],
-      "path": "/PLURAL-FORMS-OF-NOUNS/index.html",
-      "markdownContentSource": "\n# 名词的复数形式\n\n## 元音结尾的名词, 复数形式结尾于-s\n\n**libro** : **libros** (libro + s)\n\n**pluma** : **plumas** (pluma + s)\n\n**chico** : **chicos** (chico + s)\n\n**señora** : **señoras** (señora + s)\n\n## 定冠词(el, la) 同样要换成复数形式 \"los\" 和 \"las\". \n\nel libro: **los libros**\nla pluma: **las plumas**\nel chico: **los chicos**\nla señora: **las señoras**\n\n## 如果是辅音结尾则加上后缀 -es\n\n**el borrador**: **los borradores**\n(borrador + es)\n\n**la universidad**: **las universidades**\n(universidad + es)\n\n**el profesor**: **los profesores**\n(profesor + es)\n\n**la ciudad**: **las ciudades**\n(ciudad + es)\n\n## 如果名词结尾与 -ión, 加上 -es和去掉重音\n\nel avión : **los aviones**\n\nla converesación : **las conversaciones**\n\nla sección : **las secciones**\n\nla televisión : **las televisiones**\n\n*你或许会奇怪为什么 \"avión\" 不是阴性. 它并不符合我们之前提到的规则 -ción 和 -sión 结尾的阴性名词.*\n\n## 如果名词结尾 -z, 加上 -es 然后把 z 改成 c\n\nel lápiz : **los lapices**\nla voz : **las voces**\nel tapiz : **los tapices**\nla actriz : **las actrices**\n\n当指多个个体不同性别的时候 使用阳性复数形式\n\n2 perros + 6 perras = 8 perros\n1 gato + 8 gatas = 9 gatos\n\n复合名词是由两个单词合成一个\n\n例如: abre + latas ¡ abrelatas / 开 + 罐头 = 开罐器\n\n## 这些复合名词永远是阳性, 他的复数形式是把 \"el\" 改成 \"los\"\n\nel abrelatas\n**los abrelatas**\n\nel paraguas\n**los paraguas**\n\n## 总结\n\n* 元音 结尾的名词 加 -s\n* 辅音 结尾的名词 加 -es\n* -z   结尾的名词 把 -z 改成 -c 然后加上 -es\n* -ión 结尾的名词 去掉重音加上 -es\n* 如果指男女混合的群体 需要使用阳性形式\n* 对于复合名词只需要把 \"el\" 改成 \"los\"\n"
+      "path": "/PLURAL-FORMS-OF-NOUNS/index.html"
     },
     "lang": "zh",
     "_nextI18Next": {

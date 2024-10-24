@@ -1,13 +1,12 @@
 {
   "pageProps": {
     "postData": {
-      "slug": "test-chinese",
       "title": "Test ES",
       "date": "2020-01-02",
       "lang": "zh",
       "tags": [],
-      "content": "\n你好\n",
-      "markdownSource": "\n你好\n"
+      "markdownContentSource": "\n你好\n",
+      "slug": "test-chinese"
     },
     "_nextI18Next": {
       "initialI18nStore": {

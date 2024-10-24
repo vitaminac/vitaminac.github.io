@@ -1,13 +1,12 @@
 {
   "pageProps": {
     "postData": {
-      "slug": "test-es",
       "title": "Test ES",
       "date": "2020-01-02",
       "lang": "es",
       "tags": [],
-      "content": "\r\nHola Mundo\r\n",
-      "markdownSource": "\r\nHola Mundo\r\n"
+      "markdownContentSource": "\r\nHola Mundo\r\n",
+      "slug": "test-es"
     },
     "_nextI18Next": {
       "initialI18nStore": {
