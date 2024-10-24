@@ -369,8 +369,8 @@ video {
 .tw-max-w-full {
   max-width: 100%;
 }
-.tw-max-w-screen-lg {
-  max-width: 1024px;
+.tw-max-w-screen-xl {
+  max-width: 1280px;
 }
 .tw-list-none {
   list-style-type: none;

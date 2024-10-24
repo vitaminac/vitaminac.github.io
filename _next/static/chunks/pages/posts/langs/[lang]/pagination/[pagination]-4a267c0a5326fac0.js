@@ -218,7 +218,7 @@
           } = e,
           { siteAuthor: x, siteTitle: j, siteDescription: d } = o;
         return (0, a.jsxs)("div", {
-          className: "tw-mx-auto tw-w-11/12 tw-max-w-screen-lg",
+          className: "tw-mx-auto tw-w-11/12 tw-max-w-screen-xl",
           children: [
             (0, a.jsx)(r.K, { title: j, author: x, lang: s, description: d }),
             (0, a.jsx)(c.h, { ...o }),
