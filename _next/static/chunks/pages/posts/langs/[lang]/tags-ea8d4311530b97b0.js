@@ -1,51 +1,25 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [749],
+  [528],
   {
-    8303: function (e, s, i) {
+    7230: function (i, s, e) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
-        "/posts/langs/[lang]/tags/[tag]",
+        "/posts/langs/[lang]/tags",
         function () {
-          return i(1949);
+          return e(1629);
         },
       ]);
     },
-    3045: function (e, s, i) {
+    8305: function (i, s, e) {
       "use strict";
-      i.d(s, {
-        E: function () {
-          return l;
-        },
-      });
-      var a = i(5893);
-      i(7294);
-      var t = i(197),
-        n = i(949);
-      function l(e) {
-        let { dateString: s } = e,
-          i = (0, t.D)(s);
-        return (0, a.jsxs)("span", {
-          children: [
-            (0, a.jsx)("i", { className: "fa-regular fa-calendar" }),
-            (0, a.jsx)("time", {
-              className: "tw-pl-1.5",
-              dateTime: s,
-              children: (0, n.WU)(i, "LLLL d, yyyy"),
-            }),
-          ],
-        });
-      }
-    },
-    8305: function (e, s, i) {
-      "use strict";
-      i.d(s, {
+      e.d(s, {
         h: function () {
           return j;
         },
       });
-      var a = i(5893),
-        t = i(3967),
-        n = i.n(t),
-        l = i(261),
+      var a = e(5893),
+        t = e(3967),
+        n = e.n(t),
+        l = e(261),
         c = {
           src: "/_next/static/media/avatar.f1819002.jpg",
           height: 520,
@@ -55,12 +29,12 @@
           blurWidth: 7,
           blurHeight: 8,
         };
-      function r(e) {
-        return (0, a.jsx)(l.t, { src: c, alt: "Avatar", ...e });
+      function A(i) {
+        return (0, a.jsx)(l.t, { src: c, alt: "Avatar", ...i });
       }
-      var A = i(7845),
-        m = i.n(A);
-      function o(e) {
+      var r = e(7845),
+        m = e.n(r);
+      function o(i) {
         return (0, a.jsxs)("ul", {
           className: "list-inline text-center",
           children: [
@@ -171,132 +145,66 @@
           ],
         });
       }
-      function x(e) {
+      function x(i) {
         return (0, a.jsxs)("section", {
           className: n()(m().about, "tw-text-gray-300", "tw-text-center"),
           children: [
-            (0, a.jsx)(r, { height: 108, width: 108, className: "tw-m-auto" }),
-            (0, a.jsx)("h5", { children: e.siteAuthor }),
+            (0, a.jsx)(A, { height: 108, width: 108, className: "tw-m-auto" }),
+            (0, a.jsx)("h5", { children: i.siteAuthor }),
             (0, a.jsx)(o, {}),
-            (0, a.jsx)("p", { children: e.siteAuthorDescription }),
+            (0, a.jsx)("p", { children: i.siteAuthorDescription }),
           ],
         });
       }
-      function j(e) {
-        return (0, a.jsx)("header", { children: (0, a.jsx)(x, { ...e }) });
+      function j(i) {
+        return (0, a.jsx)("header", { children: (0, a.jsx)(x, { ...i }) });
       }
     },
-    2826: function (e, s, i) {
+    1734: function (i, s, e) {
       "use strict";
-      i.d(s, {
-        v: function () {
-          return o;
+      e.d(s, {
+        w: function () {
+          return l;
         },
       });
-      var a = i(5893),
-        t = i(1664),
-        n = i.n(t),
-        l = i(1798),
-        c = i(3045),
-        r = i(8305),
-        A = i(5853);
-      function m(e) {
-        let { url: s, children: i } = e;
-        return (0, a.jsx)(n(), {
-          className:
-            "tw-block tw-rounded tw-border-2 tw-border-solid tw-border-neutral-100 tw-p-4 tw-font-mono tw-text-sm tw-font-extrabold tw-tracking-wider tw-text-black tw-no-underline hover:tw-bg-sky-300 hover:tw-text-white",
-          href: s,
-          children: i,
-        });
-      }
-      function o(e) {
-        let {
-            lang: s,
-            prevPageUrl: i,
-            nextPageUrl: t,
-            previews: o,
-            siteConfig: x,
-          } = e,
-          { t: j } = (0, l.$G)("paginated-index"),
-          { siteAuthor: d, siteTitle: h, siteDescription: f } = x;
-        return (0, a.jsxs)("div", {
-          className: "tw-mx-auto tw-w-11/12 tw-max-w-screen-xl",
-          children: [
-            (0, a.jsx)(A.K, { title: h, author: d, lang: s, description: f }),
-            (0, a.jsx)(r.h, { ...x }),
-            (0, a.jsx)("main", {
-              children: o
-                .map((e) =>
-                  (0, a.jsxs)(
-                    "section",
-                    {
-                      className: "tw-min-h-32",
-                      children: [
-                        (0, a.jsx)("h4", {
-                          children: (0, a.jsx)(n(), {
-                            className: "tw-text-black tw-no-underline",
-                            href: "/posts/".concat(e.slug),
-                            children: e.title,
-                          }),
-                        }),
-                        (0, a.jsx)(c.E, { dateString: e.date }),
-                        (0, a.jsx)("p", {
-                          className: "tw-mt-3",
-                          children: e.content,
-                        }),
-                      ],
-                    },
-                    e.slug,
-                  ),
-                )
-                .flatMap((e, s) => [
-                  (0, a.jsx)(
-                    "hr",
-                    {},
-                    "separator-between-(".concat(s - 1, ")-(").concat(s, ")"),
-                  ),
-                  e,
-                ])
-                .concat([(0, a.jsx)("hr", {}, "seperator-end")]),
-            }),
-            (i || t) &&
-              (0, a.jsxs)("ul", {
-                role: "navigation",
-                className:
-                  "tw-flex tw-list-none tw-flex-row tw-justify-between tw-p-0",
-                children: [
-                  i &&
-                    (0, a.jsx)("li", {
-                      children: (0, a.jsx)(m, {
-                        url: i,
-                        children: j("PrevPage"),
-                      }),
-                    }),
-                  t &&
-                    (0, a.jsx)("li", {
-                      className: "tw-ml-auto",
-                      children: (0, a.jsx)(m, {
-                        url: t,
-                        children: j("NextPage"),
-                      }),
-                    }),
-                ],
-              }),
-          ],
-        });
+      var a = e(5893),
+        t = e(1664),
+        n = e.n(t);
+      function l(i) {
+        let { lang: s, tags: e } = i,
+          t = e.map((i) =>
+            (0, a.jsx)(
+              "li",
+              {
+                className: "tw-inline tw-px-1",
+                children: (0, a.jsx)(
+                  n(),
+                  {
+                    className:
+                      "tw-m-0.5 tw-inline-block tw-rounded tw-border tw-border-solid tw-border-white tw-bg-neutral-300 tw-px-2 tw-text-sm tw-leading-6 tw-text-white tw-no-underline hover:tw-bg-sky-300",
+                    href: "/posts/langs/".concat(s, "/tags/").concat(i),
+                    children: i,
+                  },
+                  i,
+                ),
+              },
+              i,
+            ),
+          );
+        return (0, a.jsx)("ul", { className: "tw-p-0", children: t });
       }
     },
-    5853: function (e, s, i) {
+    5853: function (i, s, e) {
       "use strict";
-      i.d(s, {
+      e.d(s, {
         K: function () {
           return l;
         },
       });
-      var a = i(5893),
-        t = i(9008),
-        n = i.n(t);
-      function l(e) {
+      var a = e(5893),
+        t = e(9008),
+        n = e.n(t);
+      function l(i) {
         return (0, a.jsxs)(n(), {
           children: [
             (0, a.jsx)("meta", { charSet: "utf-8" }),
@@ -310,34 +218,34 @@
             }),
             (0, a.jsx)("meta", {
               httpEquiv: "content-language",
-              content: e.lang,
+              content: i.lang,
             }),
             (0, a.jsx)("link", { rel: "icon", href: "/favicon.ico" }),
-            (0, a.jsx)("title", { children: e.title }),
-            (0, a.jsx)("meta", { name: "og:title", content: e.title }),
-            (0, a.jsx)("meta", { name: "author", content: e.author }),
-            e.description &&
+            (0, a.jsx)("title", { children: i.title }),
+            (0, a.jsx)("meta", { name: "og:title", content: i.title }),
+            (0, a.jsx)("meta", { name: "author", content: i.author }),
+            i.description &&
               (0, a.jsxs)(a.Fragment, {
                 children: [
                   (0, a.jsx)("meta", {
                     name: "description",
-                    content: e.description,
+                    content: i.description,
                   }),
                   (0, a.jsx)("meta", {
                     name: "og:description",
-                    content: e.description,
+                    content: i.description,
                   }),
                 ],
               }),
-            e.previewImage &&
+            i.previewImage &&
               (0, a.jsx)("meta", {
                 property: "og:image",
-                content: e.previewImage,
+                content: i.previewImage,
               }),
-            e.keywords &&
+            i.keywords &&
               (0, a.jsx)("meta", {
                 name: "keywords",
-                content: e.keywords.join(","),
+                content: i.keywords.join(","),
               }),
             (0, a.jsx)("meta", {
               name: "twitter:card",
@@ -347,29 +255,51 @@
         });
       }
     },
-    1949: function (e, s, i) {
+    1629: function (i, s, e) {
       "use strict";
-      i.r(s),
-        i.d(s, {
+      e.r(s),
+        e.d(s, {
           __N_SSG: function () {
-            return t;
+            return c;
+          },
+          default: function () {
+            return A;
           },
         });
-      var a = i(2826),
-        t = !0;
-      s.default = a.v;
+      var a = e(5893),
+        t = e(8305),
+        n = e(1734),
+        l = e(5853),
+        c = !0,
+        A = function (i) {
+          let { lang: s, tags: e, siteConfig: c } = i,
+            { siteAuthor: A, siteTitle: r, siteDescription: m } = c;
+          return (0, a.jsxs)(a.Fragment, {
+            children: [
+              (0, a.jsx)(l.K, { title: r, author: A, lang: s, description: m }),
+              (0, a.jsx)(t.h, { ...c }),
+              (0, a.jsx)("main", {
+                className: "tw-mx-auto tw-w-11/12 md:tw-w-2/3",
+                children: (0, a.jsx)(n.w, { lang: s, tags: e }),
+              }),
+            ],
+          });
+        };
     },
-    7845: function (e) {
-      e.exports = {
+    7845: function (i) {
+      i.exports = {
         about: "AboutMe_about__UiMOu",
         "list-inline": "AboutMe_list-inline__ldLZ_",
       };
     },
+    9008: function (i, s, e) {
+      i.exports = e(3867);
+    },
   },
-  function (e) {
-    e.O(0, [470, 888, 774, 179], function () {
-      return e((e.s = 8303));
+  function (i) {
+    i.O(0, [888, 774, 179], function () {
+      return i((i.s = 7230));
     }),
-      (_N_E = e.O());
+      (_N_E = i.O());
   },
 ]);

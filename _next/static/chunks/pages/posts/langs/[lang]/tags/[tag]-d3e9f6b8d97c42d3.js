@@ -1,11 +1,11 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [965],
+  [749],
   {
-    5115: function (e, s, i) {
+    8303: function (e, s, i) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
-        "/posts/langs/[lang]/pagination/[pagination]",
+        "/posts/langs/[lang]/tags/[tag]",
         function () {
-          return i(474);
+          return i(1949);
         },
       ]);
     },
@@ -204,7 +204,7 @@
         let { url: s, children: i } = e;
         return (0, a.jsx)(n(), {
           className:
-            "tw-block tw-rounded tw-border-2 tw-border-solid tw-border-neutral-100 tw-p-4 tw-font-mono tw-text-sm tw-font-extrabold tw-tracking-wider tw-text-black tw-no-underline hover:tw-bg-sky-300 hover:tw-text-white",
+            "tw-block tw-rounded tw-border tw-border-solid tw-border-neutral-100 tw-p-4 tw-font-mono tw-text-sm tw-font-extrabold tw-tracking-wider tw-text-black tw-no-underline hover:tw-bg-sky-300 hover:tw-text-white",
           href: s,
           children: i,
         });
@@ -347,7 +347,7 @@
         });
       }
     },
-    474: function (e, s, i) {
+    1949: function (e, s, i) {
       "use strict";
       i.r(s),
         i.d(s, {
@@ -368,7 +368,7 @@
   },
   function (e) {
     e.O(0, [470, 888, 774, 179], function () {
-      return e((e.s = 5115));
+      return e((e.s = 8303));
     }),
       (_N_E = e.O());
   },

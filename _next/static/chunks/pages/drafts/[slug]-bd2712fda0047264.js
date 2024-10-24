@@ -48,50 +48,23 @@
         });
       }
     },
-    5375: function (e, t, n) {
+    8174: function (e, t, n) {
       "use strict";
       n.d(t, {
         j: function () {
-          return f;
+          return w;
         },
       });
       var r = n(5893),
         i = n(1798),
-        s = n(3967),
-        a = n.n(s),
-        A = n(1664),
-        c = n.n(A),
-        o = n(3285),
-        l = n.n(o);
+        s = n(1734),
+        a = n(5853),
+        A = n(3045),
+        c = n(5152),
+        o = n.n(c),
+        l = n(3944);
       function u(e) {
-        let { className: t, lang: n, tags: i } = e,
-          s = i.map((e) =>
-            (0, r.jsx)(
-              "li",
-              {
-                className: "tw-inline tw-px-1",
-                children: (0, r.jsx)(
-                  c(),
-                  {
-                    className: a()(l().tag, "tw-border-white tw-text-white"),
-                    href: "/posts/langs/".concat(n, "/tags/").concat(e),
-                    children: e,
-                  },
-                  e,
-                ),
-              },
-              e,
-            ),
-          );
-        return (0, r.jsx)("ul", { className: a()(t, "tw-p-0"), children: s });
-      }
-      var d = n(5853),
-        g = n(3045),
-        h = n(5152),
-        m = n.n(h),
-        w = n(3944);
-      function p(e) {
-        return (0, r.jsx)(w.qw, {
+        return (0, r.jsx)(l.qw, {
           shortname: e.username,
           config: {
             url: window.location.href,
@@ -101,16 +74,16 @@
           },
         });
       }
-      let x = m()(() => Promise.resolve(p), { ssr: !1 });
-      function f(e) {
-        let { children: t, postData: n, siteConfig: s } = e,
-          { t: a } = (0, i.$G)("post-layout"),
-          { siteAuthor: A, disqusUsername: c } = s;
+      let d = o()(() => Promise.resolve(u), { ssr: !1 });
+      function w(e) {
+        let { children: t, postData: n, siteConfig: c } = e,
+          { t: o } = (0, i.$G)("post-layout"),
+          { siteAuthor: l, disqusUsername: u } = c;
         return (0, r.jsxs)(r.Fragment, {
           children: [
-            (0, r.jsx)(d.K, {
+            (0, r.jsx)(a.K, {
               title: n.title,
-              author: A,
+              author: l,
               lang: n.lang,
               description: n.description,
               keywords: n.tags,
@@ -127,13 +100,13 @@
               },
               children: [
                 (0, r.jsx)("h1", { children: n.title }),
-                (0, r.jsx)("p", { children: a("Author", { author: A }) }),
-                (0, r.jsx)(g.E, { dateString: n.date }),
+                (0, r.jsx)("p", { children: o("Author", { author: l }) }),
+                (0, r.jsx)(A.E, { dateString: n.date }),
                 (0, r.jsxs)("section", {
                   className: "tw-mt-3 tw-text-center",
                   children: [
-                    (0, r.jsxs)("p", { children: [a("Tags"), ":"] }),
-                    (0, r.jsx)(u, { lang: n.lang, tags: n.tags }),
+                    (0, r.jsxs)("p", { children: [o("Tags"), ":"] }),
+                    (0, r.jsx)(s.w, { lang: n.lang, tags: n.tags }),
                   ],
                 }),
               ],
@@ -145,8 +118,8 @@
                   children: (0, r.jsx)("article", { children: t }),
                 }),
                 (0, r.jsx)("aside", {
-                  children: (0, r.jsx)(x, {
-                    username: c,
+                  children: (0, r.jsx)(d, {
+                    username: u,
                     id: n.slug,
                     title: n.title,
                     lang: n.lang,
@@ -156,6 +129,40 @@
             }),
           ],
         });
+      }
+    },
+    1734: function (e, t, n) {
+      "use strict";
+      n.d(t, {
+        w: function () {
+          return a;
+        },
+      });
+      var r = n(5893),
+        i = n(1664),
+        s = n.n(i);
+      function a(e) {
+        let { lang: t, tags: n } = e,
+          i = n.map((e) =>
+            (0, r.jsx)(
+              "li",
+              {
+                className: "tw-inline tw-px-1",
+                children: (0, r.jsx)(
+                  s(),
+                  {
+                    className:
+                      "tw-m-0.5 tw-inline-block tw-rounded tw-border tw-border-solid tw-border-white tw-bg-neutral-300 tw-px-2 tw-text-sm tw-leading-6 tw-text-white tw-no-underline hover:tw-bg-sky-300",
+                    href: "/posts/langs/".concat(t, "/tags/").concat(e),
+                    children: e,
+                  },
+                  e,
+                ),
+              },
+              e,
+            ),
+          );
+        return (0, r.jsx)("ul", { className: "tw-p-0", children: i });
       }
     },
     5853: function (e, t, n) {
@@ -258,12 +265,12 @@
           }
         });
       };
-      var g = n(7797),
-        h = n(5280),
-        m = n(9360),
-        w = n(1924),
-        p = n(2935),
-        x = n(3687),
+      var w = n(7797),
+        g = n(5280),
+        h = n(9360),
+        m = n(1924),
+        x = n(2935),
+        p = n(3687),
         f = n(261);
       let j = {
         img: function (e) {
@@ -301,13 +308,13 @@
               return (0, s.l)()
                 .use(a.Z)
                 .use([A.Z, c.Z, o.Z, l.Z, d])
-                .use(g.Z)
+                .use(w.Z)
                 .use([
+                  g.Z,
                   h.Z,
                   m.Z,
-                  w.Z,
                   [
-                    p.Z,
+                    x.Z,
                     {
                       behavior: "prepend",
                       content: {
@@ -319,13 +326,13 @@
                     },
                   ],
                 ])
-                .use(x.Z, n)
+                .use(p.Z, n)
                 .processSync(e).result;
             })(t, j),
           [t],
         );
       }
-      var E = n(5375),
+      var E = n(8174),
         b = !0,
         y = function (e) {
           let { postData: t, siteConfig: n } = e;
@@ -337,9 +344,6 @@
             }),
           });
         };
-    },
-    3285: function (e) {
-      e.exports = { tag: "PostTags_tag__3LUVs" };
     },
     7192: function (e, t, n) {
       var r = { "./test.jpg": 2610 };

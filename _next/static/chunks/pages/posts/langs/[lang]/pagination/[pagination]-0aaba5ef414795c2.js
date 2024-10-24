@@ -1,25 +1,51 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [528],
+  [965],
   {
-    7230: function (e, i, s) {
+    5115: function (e, s, i) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
-        "/posts/langs/[lang]/tags",
+        "/posts/langs/[lang]/pagination/[pagination]",
         function () {
-          return s(1629);
+          return i(474);
         },
       ]);
     },
-    8305: function (e, i, s) {
+    3045: function (e, s, i) {
       "use strict";
-      s.d(i, {
+      i.d(s, {
+        E: function () {
+          return l;
+        },
+      });
+      var a = i(5893);
+      i(7294);
+      var t = i(197),
+        n = i(949);
+      function l(e) {
+        let { dateString: s } = e,
+          i = (0, t.D)(s);
+        return (0, a.jsxs)("span", {
+          children: [
+            (0, a.jsx)("i", { className: "fa-regular fa-calendar" }),
+            (0, a.jsx)("time", {
+              className: "tw-pl-1.5",
+              dateTime: s,
+              children: (0, n.WU)(i, "LLLL d, yyyy"),
+            }),
+          ],
+        });
+      }
+    },
+    8305: function (e, s, i) {
+      "use strict";
+      i.d(s, {
         h: function () {
           return j;
         },
       });
-      var a = s(5893),
-        t = s(3967),
-        n = s.n(t),
-        l = s(261),
+      var a = i(5893),
+        t = i(3967),
+        n = i.n(t),
+        l = i(261),
         c = {
           src: "/_next/static/media/avatar.f1819002.jpg",
           height: 520,
@@ -29,11 +55,11 @@
           blurWidth: 7,
           blurHeight: 8,
         };
-      function A(e) {
+      function r(e) {
         return (0, a.jsx)(l.t, { src: c, alt: "Avatar", ...e });
       }
-      var r = s(7845),
-        m = s.n(r);
+      var A = i(7845),
+        m = i.n(A);
       function o(e) {
         return (0, a.jsxs)("ul", {
           className: "list-inline text-center",
@@ -149,7 +175,7 @@
         return (0, a.jsxs)("section", {
           className: n()(m().about, "tw-text-gray-300", "tw-text-center"),
           children: [
-            (0, a.jsx)(A, { height: 108, width: 108, className: "tw-m-auto" }),
+            (0, a.jsx)(r, { height: 108, width: 108, className: "tw-m-auto" }),
             (0, a.jsx)("h5", { children: e.siteAuthor }),
             (0, a.jsx)(o, {}),
             (0, a.jsx)("p", { children: e.siteAuthorDescription }),
@@ -160,58 +186,116 @@
         return (0, a.jsx)("header", { children: (0, a.jsx)(x, { ...e }) });
       }
     },
-    2144: function (e, i, s) {
+    2826: function (e, s, i) {
       "use strict";
-      s.d(i, {
-        C: function () {
-          return n;
+      i.d(s, {
+        v: function () {
+          return o;
         },
       });
-      var a = s(5893),
-        t = s(7294);
-      function n(e) {
-        let i = (0, t.useRef)(null),
-          [s, n] = (0, t.useState)(),
-          [l, c] = (0, t.useState)(0),
-          A = (0, t.useCallback)(() => {
-            n(i.current.contentWindow.document.body);
-          }, [n]),
-          r = (0, t.useCallback)(() => {
-            c(s.scrollHeight);
-          }, [s, c]);
-        return (
-          (0, t.useEffect)(() => {
-            if (s) {
-              let e = new ResizeObserver(r);
-              return (
-                e.observe(s),
-                () => {
-                  e.unobserve(s);
-                }
-              );
-            }
-          }, [s, r]),
-          (0, a.jsx)("iframe", {
-            title: e.title,
-            src: e.src,
-            width: "100%",
-            height: "".concat(l, "px"),
-            ref: i,
-            onLoad: A,
-          })
-        );
+      var a = i(5893),
+        t = i(1664),
+        n = i.n(t),
+        l = i(1798),
+        c = i(3045),
+        r = i(8305),
+        A = i(5853);
+      function m(e) {
+        let { url: s, children: i } = e;
+        return (0, a.jsx)(n(), {
+          className:
+            "tw-block tw-rounded tw-border tw-border-solid tw-border-neutral-100 tw-p-4 tw-font-mono tw-text-sm tw-font-extrabold tw-tracking-wider tw-text-black tw-no-underline hover:tw-bg-sky-300 hover:tw-text-white",
+          href: s,
+          children: i,
+        });
+      }
+      function o(e) {
+        let {
+            lang: s,
+            prevPageUrl: i,
+            nextPageUrl: t,
+            previews: o,
+            siteConfig: x,
+          } = e,
+          { t: j } = (0, l.$G)("paginated-index"),
+          { siteAuthor: d, siteTitle: h, siteDescription: f } = x;
+        return (0, a.jsxs)("div", {
+          className: "tw-mx-auto tw-w-11/12 tw-max-w-screen-xl",
+          children: [
+            (0, a.jsx)(A.K, { title: h, author: d, lang: s, description: f }),
+            (0, a.jsx)(r.h, { ...x }),
+            (0, a.jsx)("main", {
+              children: o
+                .map((e) =>
+                  (0, a.jsxs)(
+                    "section",
+                    {
+                      className: "tw-min-h-32",
+                      children: [
+                        (0, a.jsx)("h4", {
+                          children: (0, a.jsx)(n(), {
+                            className: "tw-text-black tw-no-underline",
+                            href: "/posts/".concat(e.slug),
+                            children: e.title,
+                          }),
+                        }),
+                        (0, a.jsx)(c.E, { dateString: e.date }),
+                        (0, a.jsx)("p", {
+                          className: "tw-mt-3",
+                          children: e.content,
+                        }),
+                      ],
+                    },
+                    e.slug,
+                  ),
+                )
+                .flatMap((e, s) => [
+                  (0, a.jsx)(
+                    "hr",
+                    {},
+                    "separator-between-(".concat(s - 1, ")-(").concat(s, ")"),
+                  ),
+                  e,
+                ])
+                .concat([(0, a.jsx)("hr", {}, "seperator-end")]),
+            }),
+            (i || t) &&
+              (0, a.jsxs)("ul", {
+                role: "navigation",
+                className:
+                  "tw-flex tw-list-none tw-flex-row tw-justify-between tw-p-0",
+                children: [
+                  i &&
+                    (0, a.jsx)("li", {
+                      children: (0, a.jsx)(m, {
+                        url: i,
+                        children: j("PrevPage"),
+                      }),
+                    }),
+                  t &&
+                    (0, a.jsx)("li", {
+                      className: "tw-ml-auto",
+                      children: (0, a.jsx)(m, {
+                        url: t,
+                        children: j("NextPage"),
+                      }),
+                    }),
+                ],
+              }),
+          ],
+        });
       }
     },
-    5853: function (e, i, s) {
+    5853: function (e, s, i) {
       "use strict";
-      s.d(i, {
+      i.d(s, {
         K: function () {
           return l;
         },
       });
-      var a = s(5893),
-        t = s(9008),
-        n = s.n(t);
+      var a = i(5893),
+        t = i(9008),
+        n = i.n(t);
       function l(e) {
         return (0, a.jsxs)(n(), {
           children: [
@@ -263,38 +347,17 @@
         });
       }
     },
-    1629: function (e, i, s) {
+    474: function (e, s, i) {
       "use strict";
-      s.r(i),
-        s.d(i, {
+      i.r(s),
+        i.d(s, {
           __N_SSG: function () {
-            return c;
-          },
-          default: function () {
-            return A;
+            return t;
           },
         });
-      var a = s(5893),
-        t = s(8305),
-        n = s(2144),
-        l = s(5853),
-        c = !0,
-        A = function (e) {
-          let { lang: i, siteConfig: s } = e,
-            { siteAuthor: c, siteTitle: A, siteDescription: r } = s;
-          return (0, a.jsxs)(a.Fragment, {
-            children: [
-              (0, a.jsx)(l.K, { title: A, author: c, lang: i, description: r }),
-              (0, a.jsx)(t.h, { ...s }),
-              (0, a.jsx)("main", {
-                children: (0, a.jsx)(n.C, {
-                  title: "Tags",
-                  src: "/tags/index.html",
-                }),
-              }),
-            ],
-          });
-        };
+      var a = i(2826),
+        t = !0;
+      s.default = a.v;
     },
     7845: function (e) {
       e.exports = {
@@ -302,13 +365,10 @@
         "list-inline": "AboutMe_list-inline__ldLZ_",
       };
     },
-    9008: function (e, i, s) {
-      e.exports = s(3867);
-    },
   },
   function (e) {
-    e.O(0, [888, 774, 179], function () {
-      return e((e.s = 7230));
+    e.O(0, [470, 888, 774, 179], function () {
+      return e((e.s = 5115));
     }),
       (_N_E = e.O());
   },
