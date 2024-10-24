@@ -19,7 +19,7 @@
     "/posts/langs/[lang]/pagination/[pagination]": [
       s,
       a,
-      "static/chunks/pages/posts/langs/[lang]/pagination/[pagination]-4a267c0a5326fac0.js",
+      "static/chunks/pages/posts/langs/[lang]/pagination/[pagination]-e2b589bf46a7c307.js",
     ],
     "/posts/langs/[lang]/tags": [
       a,
@@ -28,7 +28,7 @@
     "/posts/langs/[lang]/tags/[tag]": [
       s,
       a,
-      "static/chunks/pages/posts/langs/[lang]/tags/[tag]-fd087d537d2be72e.js",
+      "static/chunks/pages/posts/langs/[lang]/tags/[tag]-79a254365cc37e85.js",
     ],
     "/posts/[slug]": [
       s,

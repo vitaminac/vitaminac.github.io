@@ -19,8 +19,6 @@
     "_nextI18Next": {
       "initialI18nStore": {
         "en": {
-          "common": { "Next": "Next" },
-          "feature-tags": {},
           "navbar": {
             "Home": "Home",
             "Language": "Language",
@@ -33,7 +31,7 @@
         }
       },
       "initialLocale": "en",
-      "ns": ["common", "feature-tags", "navbar", "post-layout"],
+      "ns": ["navbar", "post-layout"],
       "userConfig": {
         "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
         "default": {

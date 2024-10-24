@@ -67,7 +67,6 @@
     "_nextI18Next": {
       "initialI18nStore": {
         "zh": {
-          "common": { "Next": "下一页" },
           "navbar": {
             "Home": "主页",
             "Language": "语言",
@@ -75,10 +74,10 @@
             "en": "英语",
             "es": "西语",
             "zh": "中文"
-          }
+          },
+          "paginated-index": { "PrevPage": "← 前一页", "NextPage": "下一页 →" }
         },
         "en": {
-          "common": { "Next": "Next" },
           "navbar": {
             "Home": "Home",
             "Language": "Language",
@@ -86,11 +85,15 @@
             "en": "English",
             "es": "Spanish",
             "zh": "Chinese"
+          },
+          "paginated-index": {
+            "PrevPage": "← NEWER POSTS",
+            "NextPage": "OLDER POSTS →"
           }
         }
       },
       "initialLocale": "zh",
-      "ns": ["common", "navbar"],
+      "ns": ["navbar", "paginated-index"],
       "userConfig": {
         "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
         "default": {

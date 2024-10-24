@@ -23,8 +23,6 @@
     "_nextI18Next": {
       "initialI18nStore": {
         "zh": {
-          "common": { "Next": "下一页" },
-          "feature-tags": {},
           "navbar": {
             "Home": "主页",
             "Language": "语言",
@@ -36,8 +34,6 @@
           "post-layout": { "Author": "作者: {{author}}", "Tags": "标签" }
         },
         "en": {
-          "common": { "Next": "Next" },
-          "feature-tags": {},
           "navbar": {
             "Home": "Home",
             "Language": "Language",
@@ -50,7 +46,7 @@
         }
       },
       "initialLocale": "zh",
-      "ns": ["common", "feature-tags", "navbar", "post-layout"],
+      "ns": ["navbar", "post-layout"],
       "userConfig": {
         "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
         "default": {

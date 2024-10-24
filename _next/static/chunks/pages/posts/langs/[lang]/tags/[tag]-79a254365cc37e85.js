@@ -16,17 +16,17 @@
           return l;
         },
       });
-      var t = i(5893);
+      var a = i(5893);
       i(7294);
-      var a = i(197),
+      var t = i(197),
         n = i(949);
       function l(e) {
         let { dateString: s } = e,
-          i = (0, a.D)(s);
-        return (0, t.jsxs)("span", {
+          i = (0, t.D)(s);
+        return (0, a.jsxs)("span", {
           children: [
-            (0, t.jsx)("i", { className: "fa-regular fa-calendar" }),
-            (0, t.jsx)("time", {
+            (0, a.jsx)("i", { className: "fa-regular fa-calendar" }),
+            (0, a.jsx)("time", {
               className: "tw-pl-1.5",
               dateTime: s,
               children: (0, n.WU)(i, "LLLL d, yyyy"),
@@ -42,9 +42,9 @@
           return j;
         },
       });
-      var t = i(5893),
-        a = i(3967),
-        n = i.n(a),
+      var a = i(5893),
+        t = i(3967),
+        n = i.n(t),
         l = i(261),
         c = {
           src: "/_next/static/media/avatar.f1819002.jpg",
@@ -56,189 +56,191 @@
           blurHeight: 8,
         };
       function r(e) {
-        return (0, t.jsx)(l.t, { src: c, alt: "Avatar", ...e });
+        return (0, a.jsx)(l.t, { src: c, alt: "Avatar", ...e });
       }
       var A = i(7845),
         m = i.n(A);
       function o(e) {
-        return (0, t.jsxs)("ul", {
+        return (0, a.jsxs)("ul", {
           className: "list-inline text-center",
           children: [
-            (0, t.jsx)("li", {
+            (0, a.jsx)("li", {
               className: "list-inline-item",
-              children: (0, t.jsx)("i", { className: "fab fa-android" }),
+              children: (0, a.jsx)("i", { className: "fab fa-android" }),
             }),
-            (0, t.jsx)("li", {
+            (0, a.jsx)("li", {
               className: "list-inline-item",
-              children: (0, t.jsx)("i", { className: "fab fa-angular" }),
+              children: (0, a.jsx)("i", { className: "fab fa-angular" }),
             }),
-            (0, t.jsx)("li", {
+            (0, a.jsx)("li", {
               className: "list-inline-item",
-              children: (0, t.jsx)("i", { className: "fas fa-blog" }),
+              children: (0, a.jsx)("i", { className: "fas fa-blog" }),
             }),
-            (0, t.jsx)("li", {
+            (0, a.jsx)("li", {
               className: "list-inline-item",
-              children: (0, t.jsx)("i", { className: "fab fa-bootstrap" }),
+              children: (0, a.jsx)("i", { className: "fab fa-bootstrap" }),
             }),
-            (0, t.jsx)("li", {
+            (0, a.jsx)("li", {
               className: "list-inline-item",
-              children: (0, t.jsx)("i", { className: "fab fa-chrome" }),
+              children: (0, a.jsx)("i", { className: "fab fa-chrome" }),
             }),
-            (0, t.jsx)("li", {
+            (0, a.jsx)("li", {
               className: "list-inline-item",
-              children: (0, t.jsx)("i", { className: "fas fa-cloud" }),
+              children: (0, a.jsx)("i", { className: "fas fa-cloud" }),
             }),
-            (0, t.jsx)("li", {
+            (0, a.jsx)("li", {
               className: "list-inline-item",
-              children: (0, t.jsx)("i", { className: "fas", children: "C" }),
+              children: (0, a.jsx)("i", { className: "fas", children: "C" }),
             }),
-            (0, t.jsx)("li", {
+            (0, a.jsx)("li", {
               className: "list-inline-item",
-              children: (0, t.jsx)("i", { className: "fas", children: "C#" }),
+              children: (0, a.jsx)("i", { className: "fas", children: "C#" }),
             }),
-            (0, t.jsx)("li", {
+            (0, a.jsx)("li", {
               className: "list-inline-item",
-              children: (0, t.jsx)("i", { className: "fab fa-docker" }),
+              children: (0, a.jsx)("i", { className: "fab fa-docker" }),
             }),
-            (0, t.jsx)("li", {
+            (0, a.jsx)("li", {
               className: "list-inline-item",
-              children: (0, t.jsx)("i", { className: "fab fa-css3-alt" }),
+              children: (0, a.jsx)("i", { className: "fab fa-css3-alt" }),
             }),
-            (0, t.jsx)("li", {
+            (0, a.jsx)("li", {
               className: "list-inline-item",
-              children: (0, t.jsx)("i", { className: "fas fa-database" }),
+              children: (0, a.jsx)("i", { className: "fas fa-database" }),
             }),
-            (0, t.jsx)("li", {
+            (0, a.jsx)("li", {
               className: "list-inline-item",
-              children: (0, t.jsx)("i", { className: "fab fa-git" }),
+              children: (0, a.jsx)("i", { className: "fab fa-git" }),
             }),
-            (0, t.jsx)("li", {
+            (0, a.jsx)("li", {
               className: "list-inline-item",
-              children: (0, t.jsx)("i", { className: "fab fa-html5" }),
+              children: (0, a.jsx)("i", { className: "fab fa-html5" }),
             }),
-            (0, t.jsx)("li", {
+            (0, a.jsx)("li", {
               className: "list-inline-item",
-              children: (0, t.jsx)("i", { className: "fab fa-java" }),
+              children: (0, a.jsx)("i", { className: "fab fa-java" }),
             }),
-            (0, t.jsx)("li", {
+            (0, a.jsx)("li", {
               className: "list-inline-item",
-              children: (0, t.jsx)("i", { className: "fab fa-js" }),
+              children: (0, a.jsx)("i", { className: "fab fa-js" }),
             }),
-            (0, t.jsx)("li", {
+            (0, a.jsx)("li", {
               className: "list-inline-item",
-              children: (0, t.jsx)("i", { className: "fab fa-linux" }),
+              children: (0, a.jsx)("i", { className: "fab fa-linux" }),
             }),
-            (0, t.jsx)("li", {
+            (0, a.jsx)("li", {
               className: "list-inline-item",
-              children: (0, t.jsx)("i", { className: "fab fa-markdown" }),
+              children: (0, a.jsx)("i", { className: "fab fa-markdown" }),
             }),
-            (0, t.jsx)("li", {
+            (0, a.jsx)("li", {
               className: "list-inline-item",
-              children: (0, t.jsx)("i", { className: "fab fa-microsoft" }),
+              children: (0, a.jsx)("i", { className: "fab fa-microsoft" }),
             }),
-            (0, t.jsx)("li", {
+            (0, a.jsx)("li", {
               className: "list-inline-item",
-              children: (0, t.jsx)("i", { className: "fab fa-node-js" }),
+              children: (0, a.jsx)("i", { className: "fab fa-node-js" }),
             }),
-            (0, t.jsx)("li", {
+            (0, a.jsx)("li", {
               className: "list-inline-item",
-              children: (0, t.jsx)("i", { className: "fab fa-python" }),
+              children: (0, a.jsx)("i", { className: "fab fa-python" }),
             }),
-            (0, t.jsx)("li", {
+            (0, a.jsx)("li", {
               className: "list-inline-item",
-              children: (0, t.jsx)("i", { className: "fab fa-raspberry-pi" }),
+              children: (0, a.jsx)("i", { className: "fab fa-raspberry-pi" }),
             }),
-            (0, t.jsx)("li", {
+            (0, a.jsx)("li", {
               className: "list-inline-item",
-              children: (0, t.jsx)("i", { className: "fab fa-react" }),
+              children: (0, a.jsx)("i", { className: "fab fa-react" }),
             }),
-            (0, t.jsx)("li", {
+            (0, a.jsx)("li", {
               className: "list-inline-item",
-              children: (0, t.jsx)("i", { className: "fab fa-r-project" }),
+              children: (0, a.jsx)("i", { className: "fab fa-r-project" }),
             }),
-            (0, t.jsx)("li", {
+            (0, a.jsx)("li", {
               className: "list-inline-item",
-              children: (0, t.jsx)("i", { className: "fas fa-server" }),
+              children: (0, a.jsx)("i", { className: "fas fa-server" }),
             }),
-            (0, t.jsx)("li", {
+            (0, a.jsx)("li", {
               className: "list-inline-item",
-              children: (0, t.jsx)("i", { className: "fab fa-trello" }),
+              children: (0, a.jsx)("i", { className: "fab fa-trello" }),
             }),
-            (0, t.jsx)("li", {
+            (0, a.jsx)("li", {
               className: "list-inline-item",
-              children: (0, t.jsx)("i", { className: "fab fa-vuejs" }),
+              children: (0, a.jsx)("i", { className: "fab fa-vuejs" }),
             }),
           ],
         });
       }
       function x(e) {
-        return (0, t.jsxs)("section", {
+        return (0, a.jsxs)("section", {
           className: n()(m().about, "tw-text-gray-300", "tw-text-center"),
           children: [
-            (0, t.jsx)(r, { height: 108, width: 108, className: "tw-m-auto" }),
-            (0, t.jsx)("h5", { children: e.siteAuthor }),
-            (0, t.jsx)(o, {}),
-            (0, t.jsx)("p", { children: e.siteAuthorDescription }),
+            (0, a.jsx)(r, { height: 108, width: 108, className: "tw-m-auto" }),
+            (0, a.jsx)("h5", { children: e.siteAuthor }),
+            (0, a.jsx)(o, {}),
+            (0, a.jsx)("p", { children: e.siteAuthorDescription }),
           ],
         });
       }
       function j(e) {
-        return (0, t.jsx)("header", { children: (0, t.jsx)(x, { ...e }) });
+        return (0, a.jsx)("header", { children: (0, a.jsx)(x, { ...e }) });
       }
     },
     2826: function (e, s, i) {
       "use strict";
       i.d(s, {
         v: function () {
-          return m;
+          return o;
         },
       });
-      var t = i(5893),
-        a = i(1664),
-        n = i.n(a),
-        l = i(3045),
-        c = i(8305),
-        r = i(5853);
-      function A(e) {
+      var a = i(5893),
+        t = i(1664),
+        n = i.n(t),
+        l = i(1798),
+        c = i(3045),
+        r = i(8305),
+        A = i(5853);
+      function m(e) {
         let { url: s, children: i } = e;
-        return (0, t.jsx)(n(), {
+        return (0, a.jsx)(n(), {
           className:
             "tw-block tw-rounded tw-border-2 tw-border-solid tw-border-neutral-100 tw-p-4 tw-font-mono tw-text-sm tw-font-extrabold tw-tracking-wider tw-text-black tw-no-underline hover:tw-bg-sky-300 hover:tw-text-white",
           href: s,
           children: i,
         });
       }
-      function m(e) {
+      function o(e) {
         let {
             lang: s,
             prevPageUrl: i,
-            nextPageUrl: a,
-            previews: m,
-            siteConfig: o,
+            nextPageUrl: t,
+            previews: o,
+            siteConfig: x,
           } = e,
-          { siteAuthor: x, siteTitle: j, siteDescription: d } = o;
-        return (0, t.jsxs)("div", {
+          { t: j } = (0, l.$G)("paginated-index"),
+          { siteAuthor: d, siteTitle: h, siteDescription: f } = x;
+        return (0, a.jsxs)("div", {
           className: "tw-mx-auto tw-w-11/12 tw-max-w-screen-xl",
           children: [
-            (0, t.jsx)(r.K, { title: j, author: x, lang: s, description: d }),
-            (0, t.jsx)(c.h, { ...o }),
-            (0, t.jsx)("main", {
-              children: m
+            (0, a.jsx)(A.K, { title: h, author: d, lang: s, description: f }),
+            (0, a.jsx)(r.h, { ...x }),
+            (0, a.jsx)("main", {
+              children: o
                 .map((e) =>
-                  (0, t.jsxs)(
+                  (0, a.jsxs)(
                     "section",
                     {
                       className: "tw-min-h-32",
                       children: [
-                        (0, t.jsx)("h4", {
-                          children: (0, t.jsx)(n(), {
+                        (0, a.jsx)("h4", {
+                          children: (0, a.jsx)(n(), {
                             className: "tw-text-black tw-no-underline",
                             href: "/posts/".concat(e.slug),
                             children: e.title,
                           }),
                         }),
-                        (0, t.jsx)(l.E, { dateString: e.date }),
-                        (0, t.jsx)("p", {
+                        (0, a.jsx)(c.E, { dateString: e.date }),
+                        (0, a.jsx)("p", {
                           className: "tw-mt-3",
                           children: e.content,
                         }),
@@ -248,34 +250,34 @@
                   ),
                 )
                 .flatMap((e, s) => [
-                  (0, t.jsx)(
+                  (0, a.jsx)(
                     "hr",
                     {},
                     "separator-between-(".concat(s - 1, ")-(").concat(s, ")"),
                   ),
                   e,
                 ])
-                .concat([(0, t.jsx)("hr", {}, "seperator-end")]),
+                .concat([(0, a.jsx)("hr", {}, "seperator-end")]),
             }),
-            (i || a) &&
-              (0, t.jsxs)("ul", {
+            (i || t) &&
+              (0, a.jsxs)("ul", {
                 role: "navigation",
                 className:
                   "tw-flex tw-list-none tw-flex-row tw-justify-between tw-p-0",
                 children: [
                   i &&
-                    (0, t.jsx)("li", {
-                      children: (0, t.jsx)(A, {
+                    (0, a.jsx)("li", {
+                      children: (0, a.jsx)(m, {
                         url: i,
-                        children: "← NEWER POSTS",
+                        children: j("PrevPage"),
                       }),
                     }),
-                  a &&
-                    (0, t.jsx)("li", {
+                  t &&
+                    (0, a.jsx)("li", {
                       className: "tw-ml-auto",
-                      children: (0, t.jsx)(A, {
-                        url: a,
-                        children: "OLDER POSTS →",
+                      children: (0, a.jsx)(m, {
+                        url: t,
+                        children: j("NextPage"),
                       }),
                     }),
                 ],
@@ -291,53 +293,53 @@
           return l;
         },
       });
-      var t = i(5893),
-        a = i(9008),
-        n = i.n(a);
+      var a = i(5893),
+        t = i(9008),
+        n = i.n(t);
       function l(e) {
-        return (0, t.jsxs)(n(), {
+        return (0, a.jsxs)(n(), {
           children: [
-            (0, t.jsx)("meta", { charSet: "utf-8" }),
-            (0, t.jsx)("meta", {
+            (0, a.jsx)("meta", { charSet: "utf-8" }),
+            (0, a.jsx)("meta", {
               httpEquiv: "X-UA-Compatible",
               content: "IE=edge",
             }),
-            (0, t.jsx)("meta", {
+            (0, a.jsx)("meta", {
               name: "viewport",
               content: "width=device-width, initial-scale=1.0",
             }),
-            (0, t.jsx)("meta", {
+            (0, a.jsx)("meta", {
               httpEquiv: "content-language",
               content: e.lang,
             }),
-            (0, t.jsx)("link", { rel: "icon", href: "/favicon.ico" }),
-            (0, t.jsx)("title", { children: e.title }),
-            (0, t.jsx)("meta", { name: "og:title", content: e.title }),
-            (0, t.jsx)("meta", { name: "author", content: e.author }),
+            (0, a.jsx)("link", { rel: "icon", href: "/favicon.ico" }),
+            (0, a.jsx)("title", { children: e.title }),
+            (0, a.jsx)("meta", { name: "og:title", content: e.title }),
+            (0, a.jsx)("meta", { name: "author", content: e.author }),
             e.description &&
-              (0, t.jsxs)(t.Fragment, {
+              (0, a.jsxs)(a.Fragment, {
                 children: [
-                  (0, t.jsx)("meta", {
+                  (0, a.jsx)("meta", {
                     name: "description",
                     content: e.description,
                   }),
-                  (0, t.jsx)("meta", {
+                  (0, a.jsx)("meta", {
                     name: "og:description",
                     content: e.description,
                   }),
                 ],
               }),
             e.previewImage &&
-              (0, t.jsx)("meta", {
+              (0, a.jsx)("meta", {
                 property: "og:image",
                 content: e.previewImage,
               }),
             e.keywords &&
-              (0, t.jsx)("meta", {
+              (0, a.jsx)("meta", {
                 name: "keywords",
                 content: e.keywords.join(","),
               }),
-            (0, t.jsx)("meta", {
+            (0, a.jsx)("meta", {
               name: "twitter:card",
               content: "summary_large_image",
             }),
@@ -350,12 +352,12 @@
       i.r(s),
         i.d(s, {
           __N_SSG: function () {
-            return a;
+            return t;
           },
         });
-      var t = i(2826),
-        a = !0;
-      s.default = t.v;
+      var a = i(2826),
+        t = !0;
+      s.default = a.v;
     },
     7845: function (e) {
       e.exports = {

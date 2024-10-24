@@ -190,16 +190,17 @@
       "use strict";
       i.d(s, {
         v: function () {
-          return m;
+          return o;
         },
       });
       var a = i(5893),
         t = i(1664),
         n = i.n(t),
-        l = i(3045),
-        c = i(8305),
-        r = i(5853);
-      function A(e) {
+        l = i(1798),
+        c = i(3045),
+        r = i(8305),
+        A = i(5853);
+      function m(e) {
         let { url: s, children: i } = e;
         return (0, a.jsx)(n(), {
           className:
@@ -208,22 +209,23 @@
           children: i,
         });
       }
-      function m(e) {
+      function o(e) {
         let {
             lang: s,
             prevPageUrl: i,
             nextPageUrl: t,
-            previews: m,
-            siteConfig: o,
+            previews: o,
+            siteConfig: x,
           } = e,
-          { siteAuthor: x, siteTitle: j, siteDescription: d } = o;
+          { t: j } = (0, l.$G)("paginated-index"),
+          { siteAuthor: d, siteTitle: h, siteDescription: f } = x;
         return (0, a.jsxs)("div", {
           className: "tw-mx-auto tw-w-11/12 tw-max-w-screen-xl",
           children: [
-            (0, a.jsx)(r.K, { title: j, author: x, lang: s, description: d }),
-            (0, a.jsx)(c.h, { ...o }),
+            (0, a.jsx)(A.K, { title: h, author: d, lang: s, description: f }),
+            (0, a.jsx)(r.h, { ...x }),
             (0, a.jsx)("main", {
-              children: m
+              children: o
                 .map((e) =>
                   (0, a.jsxs)(
                     "section",
@@ -237,7 +239,7 @@
                             children: e.title,
                           }),
                         }),
-                        (0, a.jsx)(l.E, { dateString: e.date }),
+                        (0, a.jsx)(c.E, { dateString: e.date }),
                         (0, a.jsx)("p", {
                           className: "tw-mt-3",
                           children: e.content,
@@ -265,17 +267,17 @@
                 children: [
                   i &&
                     (0, a.jsx)("li", {
-                      children: (0, a.jsx)(A, {
+                      children: (0, a.jsx)(m, {
                         url: i,
-                        children: "← NEWER POSTS",
+                        children: j("PrevPage"),
                       }),
                     }),
                   t &&
                     (0, a.jsx)("li", {
                       className: "tw-ml-auto",
-                      children: (0, a.jsx)(A, {
+                      children: (0, a.jsx)(m, {
                         url: t,
-                        children: "OLDER POSTS →",
+                        children: j("NextPage"),
                       }),
                     }),
                 ],
