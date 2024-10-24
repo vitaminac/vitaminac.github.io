@@ -5,7 +5,7 @@
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/drafts/[slug]",
         function () {
-          return n(1360);
+          return n(9032);
         },
       ]);
     },
@@ -220,7 +220,7 @@
         });
       }
     },
-    1360: function (e, t, n) {
+    9032: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
