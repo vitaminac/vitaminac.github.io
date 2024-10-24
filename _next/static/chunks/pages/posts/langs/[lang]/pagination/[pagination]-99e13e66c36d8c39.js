@@ -1,17 +1,17 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
-  [749],
+  [965],
   {
-    8303: function (s, e, i) {
+    5115: function (e, s, i) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
-        "/posts/langs/[lang]/tags/[tag]",
+        "/posts/langs/[lang]/pagination/[pagination]",
         function () {
-          return i(9409);
+          return i(474);
         },
       ]);
     },
-    3045: function (s, e, i) {
+    3045: function (e, s, i) {
       "use strict";
-      i.d(e, {
+      i.d(s, {
         E: function () {
           return l;
         },
@@ -20,26 +20,26 @@
       i(7294);
       var t = i(197),
         n = i(949);
-      function l(s) {
-        let { dateString: e } = s,
-          i = (0, t.D)(e);
+      function l(e) {
+        let { dateString: s } = e,
+          i = (0, t.D)(s);
         return (0, a.jsxs)("span", {
           children: [
             (0, a.jsx)("i", { className: "fa-regular fa-calendar" }),
             (0, a.jsx)("time", {
               className: "tw-pl-1.5",
-              dateTime: e,
+              dateTime: s,
               children: (0, n.WU)(i, "LLLL d, yyyy"),
             }),
           ],
         });
       }
     },
-    8305: function (s, e, i) {
+    8305: function (e, s, i) {
       "use strict";
-      i.d(e, {
+      i.d(s, {
         h: function () {
-          return o;
+          return j;
         },
       });
       var a = i(5893),
@@ -55,12 +55,12 @@
           blurWidth: 7,
           blurHeight: 8,
         };
-      function A(s) {
-        return (0, a.jsx)(l.t, { src: c, alt: "Avatar", ...s });
+      function r(e) {
+        return (0, a.jsx)(l.t, { src: c, alt: "Avatar", ...e });
       }
-      var r = i(7845),
-        m = i.n(r);
-      function x(s) {
+      var A = i(7845),
+        m = i.n(A);
+      function o(e) {
         return (0, a.jsxs)("ul", {
           className: "list-inline text-center",
           children: [
@@ -171,24 +171,122 @@
           ],
         });
       }
-      function j(s) {
+      function x(e) {
         return (0, a.jsxs)("section", {
           className: n()(m().about, "tw-text-gray-300", "tw-text-center"),
           children: [
-            (0, a.jsx)(A, { height: 108, width: 108, className: "tw-m-auto" }),
-            (0, a.jsx)("h5", { children: s.siteAuthor }),
-            (0, a.jsx)(x, {}),
-            (0, a.jsx)("p", { children: s.siteAuthorDescription }),
+            (0, a.jsx)(r, { height: 108, width: 108, className: "tw-m-auto" }),
+            (0, a.jsx)("h5", { children: e.siteAuthor }),
+            (0, a.jsx)(o, {}),
+            (0, a.jsx)("p", { children: e.siteAuthorDescription }),
           ],
         });
       }
-      function o(s) {
-        return (0, a.jsx)("header", { children: (0, a.jsx)(j, { ...s }) });
+      function j(e) {
+        return (0, a.jsx)("header", { children: (0, a.jsx)(x, { ...e }) });
       }
     },
-    5853: function (s, e, i) {
+    2826: function (e, s, i) {
       "use strict";
-      i.d(e, {
+      i.d(s, {
+        v: function () {
+          return m;
+        },
+      });
+      var a = i(5893),
+        t = i(1664),
+        n = i.n(t),
+        l = i(3045),
+        c = i(8305),
+        r = i(5853);
+      function A(e) {
+        let { url: s, children: i } = e;
+        return (0, a.jsx)(n(), {
+          className:
+            "tw-block tw-rounded tw-border-2 tw-border-solid tw-border-neutral-100 tw-p-4 tw-font-mono tw-text-sm tw-font-extrabold tw-tracking-wider tw-text-black tw-no-underline hover:tw-bg-sky-300 hover:tw-text-white",
+          href: s,
+          children: i,
+        });
+      }
+      function m(e) {
+        let {
+            lang: s,
+            prevPageUrl: i,
+            nextPageUrl: t,
+            previews: m,
+            siteConfig: o,
+          } = e,
+          { siteAuthor: x, siteTitle: j, siteDescription: d } = o;
+        return (0, a.jsxs)("div", {
+          className: "tw-mx-auto tw-w-11/12 tw-max-w-screen-lg",
+          children: [
+            (0, a.jsx)(r.K, { title: j, author: x, lang: s, description: d }),
+            (0, a.jsx)(c.h, { ...o }),
+            (0, a.jsx)("main", {
+              children: m
+                .map((e) =>
+                  (0, a.jsxs)(
+                    "section",
+                    {
+                      className: "tw-min-h-32",
+                      children: [
+                        (0, a.jsx)("h4", {
+                          children: (0, a.jsx)(n(), {
+                            className: "tw-text-black tw-no-underline",
+                            href: "/posts/".concat(e.slug),
+                            children: e.title,
+                          }),
+                        }),
+                        (0, a.jsx)(l.E, { dateString: e.date }),
+                        (0, a.jsx)("p", {
+                          className: "tw-mt-3",
+                          children: e.content,
+                        }),
+                      ],
+                    },
+                    e.slug,
+                  ),
+                )
+                .flatMap((e, s) => [
+                  (0, a.jsx)(
+                    "hr",
+                    {},
+                    "separator-between-(".concat(s - 1, ")-(").concat(s, ")"),
+                  ),
+                  e,
+                ])
+                .concat([(0, a.jsx)("hr", {}, "seperator-end")]),
+            }),
+            (i || t) &&
+              (0, a.jsxs)("ul", {
+                role: "navigation",
+                className:
+                  "tw-flex tw-list-none tw-flex-row tw-justify-between tw-p-0",
+                children: [
+                  i &&
+                    (0, a.jsx)("li", {
+                      children: (0, a.jsx)(A, {
+                        url: i,
+                        children: "← NEWER POSTS",
+                      }),
+                    }),
+                  t &&
+                    (0, a.jsx)("li", {
+                      className: "tw-ml-auto",
+                      children: (0, a.jsx)(A, {
+                        url: t,
+                        children: "OLDER POSTS →",
+                      }),
+                    }),
+                ],
+              }),
+          ],
+        });
+      }
+    },
+    5853: function (e, s, i) {
+      "use strict";
+      i.d(s, {
         K: function () {
           return l;
         },
@@ -196,7 +294,7 @@
       var a = i(5893),
         t = i(9008),
         n = i.n(t);
-      function l(s) {
+      function l(e) {
         return (0, a.jsxs)(n(), {
           children: [
             (0, a.jsx)("meta", { charSet: "utf-8" }),
@@ -210,34 +308,34 @@
             }),
             (0, a.jsx)("meta", {
               httpEquiv: "content-language",
-              content: s.lang,
+              content: e.lang,
             }),
             (0, a.jsx)("link", { rel: "icon", href: "/favicon.ico" }),
-            (0, a.jsx)("title", { children: s.title }),
-            (0, a.jsx)("meta", { name: "og:title", content: s.title }),
-            (0, a.jsx)("meta", { name: "author", content: s.author }),
-            s.description &&
+            (0, a.jsx)("title", { children: e.title }),
+            (0, a.jsx)("meta", { name: "og:title", content: e.title }),
+            (0, a.jsx)("meta", { name: "author", content: e.author }),
+            e.description &&
               (0, a.jsxs)(a.Fragment, {
                 children: [
                   (0, a.jsx)("meta", {
                     name: "description",
-                    content: s.description,
+                    content: e.description,
                   }),
                   (0, a.jsx)("meta", {
                     name: "og:description",
-                    content: s.description,
+                    content: e.description,
                   }),
                 ],
               }),
-            s.previewImage &&
+            e.previewImage &&
               (0, a.jsx)("meta", {
                 property: "og:image",
-                content: s.previewImage,
+                content: e.previewImage,
               }),
-            s.keywords &&
+            e.keywords &&
               (0, a.jsx)("meta", {
                 name: "keywords",
-                content: s.keywords.join(","),
+                content: e.keywords.join(","),
               }),
             (0, a.jsx)("meta", {
               name: "twitter:card",
@@ -247,81 +345,29 @@
         });
       }
     },
-    9409: function (s, e, i) {
+    474: function (e, s, i) {
       "use strict";
-      i.r(e),
-        i.d(e, {
+      i.r(s),
+        i.d(s, {
           __N_SSG: function () {
-            return r;
-          },
-          default: function () {
-            return m;
+            return t;
           },
         });
-      var a = i(5893),
-        t = i(1664),
-        n = i.n(t),
-        l = i(3045),
-        c = i(8305),
-        A = i(5853),
-        r = !0,
-        m = function (s) {
-          let { lang: e, previews: i, siteConfig: t } = s,
-            { siteAuthor: r, siteTitle: m, siteDescription: x } = t;
-          return (0, a.jsxs)(a.Fragment, {
-            children: [
-              (0, a.jsx)(A.K, { title: m, author: r, lang: e, description: x }),
-              (0, a.jsx)(c.h, { ...t }),
-              (0, a.jsx)("main", {
-                children: i
-                  .map((s) =>
-                    (0, a.jsxs)(
-                      "section",
-                      {
-                        className: "tw-mx-auto tw-min-h-32 tw-w-11/12",
-                        children: [
-                          (0, a.jsx)("h4", {
-                            children: (0, a.jsx)(n(), {
-                              className: "tw-text-black tw-no-underline",
-                              href: "/posts/".concat(s.slug),
-                              children: s.title,
-                            }),
-                          }),
-                          (0, a.jsx)(l.E, { dateString: s.date }),
-                          (0, a.jsx)("p", {
-                            className: "tw-mt-3",
-                            children: s.content,
-                          }),
-                        ],
-                      },
-                      s.slug,
-                    ),
-                  )
-                  .flatMap((s, e) => [
-                    (0, a.jsx)(
-                      "hr",
-                      {},
-                      "separator-between-(".concat(e - 1, ")-(").concat(e, ")"),
-                    ),
-                    s,
-                  ])
-                  .slice(1),
-              }),
-            ],
-          });
-        };
+      var a = i(2826),
+        t = !0;
+      s.default = a.v;
     },
-    7845: function (s) {
-      s.exports = {
+    7845: function (e) {
+      e.exports = {
         about: "AboutMe_about__UiMOu",
         "list-inline": "AboutMe_list-inline__ldLZ_",
       };
     },
   },
-  function (s) {
-    s.O(0, [470, 888, 774, 179], function () {
-      return s((s.s = 8303));
+  function (e) {
+    e.O(0, [470, 888, 774, 179], function () {
+      return e((e.s = 5115));
     }),
-      (_N_E = s.O());
+      (_N_E = e.O());
   },
 ]);
