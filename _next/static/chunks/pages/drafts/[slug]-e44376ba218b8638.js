@@ -26,16 +26,16 @@
       "use strict";
       n.d(t, {
         E: function () {
-          return i;
+          return a;
         },
       });
       var r = n(5893);
       n(7294);
-      var a = n(197),
+      var i = n(197),
         s = n(949);
-      function i(e) {
+      function a(e) {
         let { dateString: t } = e,
-          n = (0, a.D)(t);
+          n = (0, i.D)(t);
         return (0, r.jsxs)("span", {
           children: [
             (0, r.jsx)("i", { className: "fa-regular fa-calendar" }),
@@ -48,7 +48,7 @@
         });
       }
     },
-    269: function (e, t, n) {
+    5375: function (e, t, n) {
       "use strict";
       n.d(t, {
         j: function () {
@@ -56,17 +56,16 @@
         },
       });
       var r = n(5893),
-        a = n(1798),
+        i = n(1798),
         s = n(3967),
-        i = n.n(s),
+        a = n.n(s),
         A = n(1664),
         c = n.n(A),
-        o = n(8716),
+        o = n(3285),
         l = n.n(o);
       function u(e) {
-        let { lang: t, tags: n } = e,
-          { t: s } = (0, a.$G)("feature-tags"),
-          A = n.map((e) =>
+        let { className: t, lang: n, tags: i } = e,
+          s = i.map((e) =>
             (0, r.jsx)(
               "li",
               {
@@ -74,8 +73,8 @@
                 children: (0, r.jsx)(
                   c(),
                   {
-                    className: i()(l().tag, "tw-border-white tw-text-white"),
-                    href: "/posts/langs/".concat(t, "/tags/").concat(e),
+                    className: a()(l().tag, "tw-border-white tw-text-white"),
+                    href: "/posts/langs/".concat(n, "/tags/").concat(e),
                     children: e,
                   },
                   e,
@@ -84,20 +83,14 @@
               e,
             ),
           );
-        return (0, r.jsxs)("section", {
-          className: i()(l().tags, "tw-text-center"),
-          children: [
-            (0, r.jsx)("h6", { children: s("Tags") }),
-            (0, r.jsx)("ul", { className: "tw-p-0", children: A }),
-          ],
-        });
+        return (0, r.jsx)("ul", { className: a()(t, "tw-p-0"), children: s });
       }
       var d = n(5853),
         g = n(3045),
         h = n(5152),
         m = n.n(h),
         w = n(3944);
-      function x(e) {
+      function p(e) {
         return (0, r.jsx)(w.qw, {
           shortname: e.username,
           config: {
@@ -108,10 +101,10 @@
           },
         });
       }
-      let p = m()(() => Promise.resolve(x), { ssr: !1 });
+      let x = m()(() => Promise.resolve(p), { ssr: !1 });
       function f(e) {
         let { children: t, postData: n, siteConfig: s } = e,
-          { t: i } = (0, a.$G)("post-layout"),
+          { t: a } = (0, i.$G)("post-layout"),
           { siteAuthor: A, disqusUsername: c } = s;
         return (0, r.jsxs)(r.Fragment, {
           children: [
@@ -134,9 +127,15 @@
               },
               children: [
                 (0, r.jsx)("h1", { children: n.title }),
-                (0, r.jsx)("span", { children: i("Author", { author: A }) }),
+                (0, r.jsx)("p", { children: a("Author", { author: A }) }),
                 (0, r.jsx)(g.E, { dateString: n.date }),
-                (0, r.jsx)(u, { lang: n.lang, tags: n.tags }),
+                (0, r.jsxs)("section", {
+                  className: "tw-mt-3 tw-text-center",
+                  children: [
+                    (0, r.jsxs)("p", { children: [a("Tags"), ":"] }),
+                    (0, r.jsx)(u, { lang: n.lang, tags: n.tags }),
+                  ],
+                }),
               ],
             }),
             (0, r.jsxs)("div", {
@@ -146,7 +145,7 @@
                   children: (0, r.jsx)("article", { children: t }),
                 }),
                 (0, r.jsx)("aside", {
-                  children: (0, r.jsx)(p, {
+                  children: (0, r.jsx)(x, {
                     username: c,
                     id: n.slug,
                     title: n.title,
@@ -163,13 +162,13 @@
       "use strict";
       n.d(t, {
         K: function () {
-          return i;
+          return a;
         },
       });
       var r = n(5893),
-        a = n(9008),
-        s = n.n(a);
-      function i(e) {
+        i = n(9008),
+        s = n.n(i);
+      function a(e) {
         return (0, r.jsxs)(s(), {
           children: [
             (0, r.jsx)("meta", { charSet: "utf-8" }),
@@ -225,16 +224,16 @@
       n.r(t),
         n.d(t, {
           __N_SSG: function () {
-            return _;
+            return b;
           },
           default: function () {
-            return b;
+            return y;
           },
         });
       var r = n(5893),
-        a = n(7294),
+        i = n(7294),
         s = n(9875),
-        i = n(3698),
+        a = n(3698),
         A = n(65),
         c = n(7437),
         o = n(5343),
@@ -263,22 +262,22 @@
         h = n(5280),
         m = n(9360),
         w = n(1924),
-        x = n(2935),
-        p = n(3687),
+        p = n(2935),
+        x = n(3687),
         f = n(261);
       let j = {
         img: function (e) {
-          let { alt: t, src: a, width: s, height: i, ...A } = e;
-          return a.startsWith("http")
+          let { alt: t, src: i, width: s, height: a, ...A } = e;
+          return i.startsWith("http")
             ? (0, r.jsx)("img", {
-                src: a,
+                src: i,
                 alt: t,
                 width: s && (Number.isInteger(s) ? s : parseInt(s)),
-                height: i && (Number.isInteger(i) ? i : parseInt(i)),
+                height: a && (Number.isInteger(a) ? a : parseInt(a)),
                 ...A,
               })
             : (0, r.jsx)(f.t, {
-                src: n(7192)("./".concat(a)),
+                src: n(7192)("./".concat(i)),
                 alt: t || "image",
                 sizes: "responsive",
                 width: void 0,
@@ -289,7 +288,7 @@
       };
       function v(e) {
         let { markdownSource: t } = e;
-        return (0, a.useMemo)(
+        return (0, i.useMemo)(
           () =>
             (function (e, t) {
               let n = {
@@ -300,7 +299,7 @@
                 development: !1,
               };
               return (0, s.l)()
-                .use(i.Z)
+                .use(a.Z)
                 .use([A.Z, c.Z, o.Z, l.Z, d])
                 .use(g.Z)
                 .use([
@@ -308,7 +307,7 @@
                   m.Z,
                   w.Z,
                   [
-                    x.Z,
+                    p.Z,
                     {
                       behavior: "prepend",
                       content: {
@@ -320,15 +319,15 @@
                     },
                   ],
                 ])
-                .use(p.Z, n)
+                .use(x.Z, n)
                 .processSync(e).result;
             })(t, j),
           [t],
         );
       }
-      var E = n(269),
-        _ = !0,
-        b = function (e) {
+      var E = n(5375),
+        b = !0,
+        y = function (e) {
           let { postData: t, siteConfig: n } = e;
           return (0, r.jsx)(E.j, {
             postData: t,
@@ -339,15 +338,12 @@
           });
         };
     },
-    8716: function (e) {
-      e.exports = {
-        tags: "FeaturesTags_tags__qev0a",
-        tag: "FeaturesTags_tag__f8Svr",
-      };
+    3285: function (e) {
+      e.exports = { tag: "PostTags_tag__3LUVs" };
     },
     7192: function (e, t, n) {
       var r = { "./test.jpg": 2610 };
-      function a(e) {
+      function i(e) {
         return n(s(e));
       }
       function s(e) {
@@ -357,12 +353,12 @@
         }
         return r[e];
       }
-      (a.keys = function () {
+      (i.keys = function () {
         return Object.keys(r);
       }),
-        (a.resolve = s),
-        (e.exports = a),
-        (a.id = 7192);
+        (i.resolve = s),
+        (e.exports = i),
+        (i.id = 7192);
     },
   },
   function (e) {

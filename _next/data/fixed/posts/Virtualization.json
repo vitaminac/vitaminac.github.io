@@ -21,7 +21,7 @@
       "initialI18nStore": {
         "es": {
           "common": { "Next": "Siguiente" },
-          "feature-tags": { "Tags": "Tags" },
+          "feature-tags": {},
           "navbar": {
             "Home": "Inicio",
             "Language": "Lenguaje",
@@ -30,11 +30,11 @@
             "es": "Español",
             "zh": "Chino"
           },
-          "post-layout": { "Author": "Autor: {{author}}" }
+          "post-layout": { "Author": "Autor: {{author}}", "Tags": "Tags" }
         },
         "en": {
           "common": { "Next": "Next" },
-          "feature-tags": { "Tags": "Tags" },
+          "feature-tags": {},
           "navbar": {
             "Home": "Home",
             "Language": "Language",
@@ -43,7 +43,7 @@
             "es": "Spanish",
             "zh": "Chinese"
           },
-          "post-layout": { "Author": "Author: {{author}}" }
+          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
         }
       },
       "initialLocale": "es",

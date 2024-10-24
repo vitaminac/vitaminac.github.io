@@ -20,7 +20,7 @@
             "es": "西语",
             "zh": "中文"
           },
-          "post-layout": { "Author": "作者: {{author}}" }
+          "post-layout": { "Author": "作者: {{author}}", "Tags": "标签" }
         },
         "en": {
           "common": { "Next": "Next" },
@@ -32,7 +32,7 @@
             "es": "Spanish",
             "zh": "Chinese"
           },
-          "post-layout": { "Author": "Author: {{author}}" }
+          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
         }
       },
       "initialLocale": "zh",

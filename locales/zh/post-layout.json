@@ -1,3 +1,4 @@
 {
-  "Author": "作者: {{author}}"
+  "Author": "作者: {{author}}",
+  "Tags": "标签"
 }

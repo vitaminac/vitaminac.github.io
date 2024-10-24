@@ -24,7 +24,7 @@
       "initialI18nStore": {
         "zh": {
           "common": { "Next": "下一页" },
-          "feature-tags": { "Tags": "标签" },
+          "feature-tags": {},
           "navbar": {
             "Home": "主页",
             "Language": "语言",
@@ -33,11 +33,11 @@
             "es": "西语",
             "zh": "中文"
           },
-          "post-layout": { "Author": "作者: {{author}}" }
+          "post-layout": { "Author": "作者: {{author}}", "Tags": "标签" }
         },
         "en": {
           "common": { "Next": "Next" },
-          "feature-tags": { "Tags": "Tags" },
+          "feature-tags": {},
           "navbar": {
             "Home": "Home",
             "Language": "Language",
@@ -46,7 +46,7 @@
             "es": "Spanish",
             "zh": "Chinese"
           },
-          "post-layout": { "Author": "Author: {{author}}" }
+          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
         }
       },
       "initialLocale": "zh",

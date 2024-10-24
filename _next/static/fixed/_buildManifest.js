@@ -11,7 +11,7 @@
       t,
       "static/chunks/893-04920b8a1103a842.js",
       g,
-      "static/chunks/pages/drafts/[slug]-56756e52658d39ae.js",
+      "static/chunks/pages/drafts/[slug]-e44376ba218b8638.js",
     ],
     "/posts/langs/[lang]": [
       "static/chunks/pages/posts/langs/[lang]-7ac0aa1c3002eaa9.js",
@@ -34,7 +34,7 @@
       s,
       t,
       g,
-      "static/chunks/pages/posts/[slug]-b2e1f70da9b1d978.js",
+      "static/chunks/pages/posts/[slug]-e7a2f8c290316fd0.js",
     ],
     sortedPages: [
       "/",
@@ -53,6 +53,6 @@
   "static/chunks/470-88ca63604181d961.js",
   "static/css/ef9f9e2030bad8a8.css",
   "static/chunks/287-15331c4732f63f37.js",
-  "static/css/f7c7169dc43ab236.css",
+  "static/css/f2f580b8a013fccf.css",
 )),
   self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB();

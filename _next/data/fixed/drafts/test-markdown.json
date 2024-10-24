@@ -20,7 +20,7 @@
             "es": "Spanish",
             "zh": "Chinese"
           },
-          "post-layout": { "Author": "Author: {{author}}" }
+          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
         }
       },
       "initialLocale": "en",

@@ -1,3 +1,4 @@
 {
-  "Author": "Author: {{author}}"
+  "Author": "Author: {{author}}",
+  "Tags": "Tags"
 }

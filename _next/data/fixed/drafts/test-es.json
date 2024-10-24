@@ -20,7 +20,7 @@
             "es": "Español",
             "zh": "Chino"
           },
-          "post-layout": { "Author": "Autor: {{author}}" }
+          "post-layout": { "Author": "Autor: {{author}}", "Tags": "Tags" }
         },
         "en": {
           "common": { "Next": "Next" },
@@ -32,7 +32,7 @@
             "es": "Spanish",
             "zh": "Chinese"
           },
-          "post-layout": { "Author": "Author: {{author}}" }
+          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
         }
       },
       "initialLocale": "es",

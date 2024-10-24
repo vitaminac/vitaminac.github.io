@@ -1,7 +1,4 @@
-.FeaturesTags_tags__qev0a {
-  margin-top: 20px;
-}
-.FeaturesTags_tags__qev0a .FeaturesTags_tag__f8Svr {
+.PostTags_tag__3LUVs {
   display: inline-block;
   border: 1px solid hsla(0, 0%, 100%, 0.8);
   border-radius: 4px;
@@ -11,8 +8,8 @@
   text-decoration: none;
   margin: 0 1px 6px;
 }
-.FeaturesTags_tags__qev0a .FeaturesTags_tag__f8Svr:active,
-.FeaturesTags_tags__qev0a .FeaturesTags_tag__f8Svr:hover {
+.PostTags_tag__3LUVs:active,
+.PostTags_tag__3LUVs:hover {
   background-color: hsla(0, 0%, 100%, 0.4);
   text-decoration: none;
 }

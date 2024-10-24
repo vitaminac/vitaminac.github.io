@@ -20,7 +20,7 @@
       "initialI18nStore": {
         "en": {
           "common": { "Next": "Next" },
-          "feature-tags": { "Tags": "Tags" },
+          "feature-tags": {},
           "navbar": {
             "Home": "Home",
             "Language": "Language",
@@ -29,7 +29,7 @@
             "es": "Spanish",
             "zh": "Chinese"
           },
-          "post-layout": { "Author": "Author: {{author}}" }
+          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
         }
       },
       "initialLocale": "en",

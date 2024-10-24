@@ -13,14 +13,14 @@
       "use strict";
       n.d(e, {
         E: function () {
-          return i;
+          return a;
         },
       });
       var s = n(5893);
       n(7294);
       var r = n(197),
-        a = n(949);
-      function i(t) {
+        i = n(949);
+      function a(t) {
         let { dateString: e } = t,
           n = (0, r.D)(e);
         return (0, s.jsxs)("span", {
@@ -29,7 +29,7 @@
             (0, s.jsx)("time", {
               className: "tw-pl-1.5",
               dateTime: e,
-              children: (0, a.WU)(n, "LLLL d, yyyy"),
+              children: (0, i.WU)(n, "LLLL d, yyyy"),
             }),
           ],
         });
@@ -39,18 +39,18 @@
       "use strict";
       n.d(e, {
         C: function () {
-          return a;
+          return i;
         },
       });
       var s = n(5893),
         r = n(7294);
-      function a(t) {
+      function i(t) {
         let e = (0, r.useRef)(null),
-          [n, a] = (0, r.useState)(),
-          [i, c] = (0, r.useState)(0),
+          [n, i] = (0, r.useState)(),
+          [a, c] = (0, r.useState)(0),
           o = (0, r.useCallback)(() => {
-            a(e.current.contentWindow.document.body);
-          }, [a]),
+            i(e.current.contentWindow.document.body);
+          }, [i]),
           l = (0, r.useCallback)(() => {
             c(n.scrollHeight);
           }, [n, c]);
@@ -70,14 +70,14 @@
             title: t.title,
             src: t.src,
             width: "100%",
-            height: "".concat(i, "px"),
+            height: "".concat(a, "px"),
             ref: e,
             onLoad: o,
           })
         );
       }
     },
-    269: function (t, e, n) {
+    5375: function (t, e, n) {
       "use strict";
       n.d(e, {
         j: function () {
@@ -86,16 +86,15 @@
       });
       var s = n(5893),
         r = n(1798),
-        a = n(3967),
-        i = n.n(a),
+        i = n(3967),
+        a = n.n(i),
         c = n(1664),
         o = n.n(c),
-        l = n(8716),
+        l = n(3285),
         u = n.n(l);
       function d(t) {
-        let { lang: e, tags: n } = t,
-          { t: a } = (0, r.$G)("feature-tags"),
-          c = n.map((t) =>
+        let { className: e, lang: n, tags: r } = t,
+          i = r.map((t) =>
             (0, s.jsx)(
               "li",
               {
@@ -103,8 +102,8 @@
                 children: (0, s.jsx)(
                   o(),
                   {
-                    className: i()(u().tag, "tw-border-white tw-text-white"),
-                    href: "/posts/langs/".concat(e, "/tags/").concat(t),
+                    className: a()(u().tag, "tw-border-white tw-text-white"),
+                    href: "/posts/langs/".concat(n, "/tags/").concat(t),
                     children: t,
                   },
                   t,
@@ -113,18 +112,12 @@
               t,
             ),
           );
-        return (0, s.jsxs)("section", {
-          className: i()(u().tags, "tw-text-center"),
-          children: [
-            (0, s.jsx)("h6", { children: a("Tags") }),
-            (0, s.jsx)("ul", { className: "tw-p-0", children: c }),
-          ],
-        });
+        return (0, s.jsx)("ul", { className: a()(e, "tw-p-0"), children: i });
       }
-      var g = n(5853),
-        m = n(3045),
-        w = n(5152),
-        x = n.n(w),
+      var m = n(5853),
+        w = n(3045),
+        g = n(5152),
+        x = n.n(g),
         h = n(3944);
       function f(t) {
         return (0, s.jsx)(h.qw, {
@@ -139,12 +132,12 @@
       }
       let j = x()(() => Promise.resolve(f), { ssr: !1 });
       function p(t) {
-        let { children: e, postData: n, siteConfig: a } = t,
-          { t: i } = (0, r.$G)("post-layout"),
-          { siteAuthor: c, disqusUsername: o } = a;
+        let { children: e, postData: n, siteConfig: i } = t,
+          { t: a } = (0, r.$G)("post-layout"),
+          { siteAuthor: c, disqusUsername: o } = i;
         return (0, s.jsxs)(s.Fragment, {
           children: [
-            (0, s.jsx)(g.K, {
+            (0, s.jsx)(m.K, {
               title: n.title,
               author: c,
               lang: n.lang,
@@ -163,9 +156,15 @@
               },
               children: [
                 (0, s.jsx)("h1", { children: n.title }),
-                (0, s.jsx)("span", { children: i("Author", { author: c }) }),
-                (0, s.jsx)(m.E, { dateString: n.date }),
-                (0, s.jsx)(d, { lang: n.lang, tags: n.tags }),
+                (0, s.jsx)("p", { children: a("Author", { author: c }) }),
+                (0, s.jsx)(w.E, { dateString: n.date }),
+                (0, s.jsxs)("section", {
+                  className: "tw-mt-3 tw-text-center",
+                  children: [
+                    (0, s.jsxs)("p", { children: [a("Tags"), ":"] }),
+                    (0, s.jsx)(d, { lang: n.lang, tags: n.tags }),
+                  ],
+                }),
               ],
             }),
             (0, s.jsxs)("div", {
@@ -192,14 +191,14 @@
       "use strict";
       n.d(e, {
         K: function () {
-          return i;
+          return a;
         },
       });
       var s = n(5893),
         r = n(9008),
-        a = n.n(r);
-      function i(t) {
-        return (0, s.jsxs)(a(), {
+        i = n.n(r);
+      function a(t) {
+        return (0, s.jsxs)(i(), {
           children: [
             (0, s.jsx)("meta", { charSet: "utf-8" }),
             (0, s.jsx)("meta", {
@@ -254,7 +253,7 @@
       n.r(e),
         n.d(e, {
           __N_SSG: function () {
-            return i;
+            return a;
           },
           default: function () {
             return c;
@@ -262,22 +261,19 @@
         });
       var s = n(5893),
         r = n(2144),
-        a = n(269),
-        i = !0,
+        i = n(5375),
+        a = !0,
         c = function (t) {
           let { postData: e, siteConfig: n } = t;
-          return (0, s.jsx)(a.j, {
+          return (0, s.jsx)(i.j, {
             postData: e,
             siteConfig: n,
             children: (0, s.jsx)(r.C, { title: e.slug, src: e.path }),
           });
         };
     },
-    8716: function (t) {
-      t.exports = {
-        tags: "FeaturesTags_tags__qev0a",
-        tag: "FeaturesTags_tag__f8Svr",
-      };
+    3285: function (t) {
+      t.exports = { tag: "PostTags_tag__3LUVs" };
     },
   },
   function (t) {
