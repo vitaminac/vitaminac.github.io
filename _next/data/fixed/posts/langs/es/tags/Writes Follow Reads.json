@@ -2,6 +2,7 @@
   "pageProps": {
     "lang": "es",
     "tag": "Writes Follow Reads",
+    "previews": [],
     "_nextI18Next": {
       "initialI18nStore": {
         "es": {

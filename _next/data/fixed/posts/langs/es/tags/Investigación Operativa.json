@@ -2,6 +2,14 @@
   "pageProps": {
     "lang": "es",
     "tag": "Investigación Operativa",
+    "previews": [
+      {
+        "slug": "Programacion-Lineal-Entera",
+        "title": "Programación Lineal y Entera",
+        "date": "2019-05-30 18:05:04",
+        "content": "Programación Lineal Introducción  La programación lineal es una herramienta matemática que nos proporciona una forma modelar el sistema y selelcionar..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "es": {

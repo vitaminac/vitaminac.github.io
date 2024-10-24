@@ -22,11 +22,37 @@
           blurHeight: 8,
         });
     },
-    3101: function (e, t, n) {
+    3045: function (e, t, n) {
+      "use strict";
+      n.d(t, {
+        E: function () {
+          return i;
+        },
+      });
+      var r = n(5893);
+      n(7294);
+      var a = n(197),
+        s = n(949);
+      function i(e) {
+        let { dateString: t } = e,
+          n = (0, a.D)(t);
+        return (0, r.jsxs)("span", {
+          children: [
+            (0, r.jsx)("i", { className: "fa-regular fa-calendar" }),
+            (0, r.jsx)("time", {
+              className: "tw-pl-1.5",
+              dateTime: t,
+              children: (0, s.WU)(n, "LLLL d, yyyy"),
+            }),
+          ],
+        });
+      }
+    },
+    269: function (e, t, n) {
       "use strict";
       n.d(t, {
         j: function () {
-          return v;
+          return p;
         },
       });
       var r = n(5893),
@@ -66,29 +92,13 @@
           ],
         });
       }
-      var d = n(5853);
-      n(7294);
-      var g = n(197),
-        h = n(949);
-      function m(e) {
-        let { dateString: t } = e,
-          n = (0, g.D)(t);
-        return (0, r.jsxs)("span", {
-          children: [
-            (0, r.jsx)("i", { className: "fa-regular fa-calendar" }),
-            (0, r.jsx)("time", {
-              className: "tw-pl-1.5",
-              dateTime: t,
-              children: (0, h.WU)(n, "LLLL d, yyyy"),
-            }),
-          ],
-        });
-      }
-      var w = n(5152),
-        x = n.n(w),
-        p = n(3944);
-      function f(e) {
-        return (0, r.jsx)(p.qw, {
+      var d = n(5853),
+        g = n(3045),
+        h = n(5152),
+        m = n.n(h),
+        w = n(3944);
+      function x(e) {
+        return (0, r.jsx)(w.qw, {
           shortname: e.username,
           config: {
             url: window.location.href,
@@ -98,8 +108,8 @@
           },
         });
       }
-      let j = x()(() => Promise.resolve(f), { ssr: !1 });
-      function v(e) {
+      let f = m()(() => Promise.resolve(x), { ssr: !1 });
+      function p(e) {
         let { children: t, postData: n, siteConfig: s } = e,
           { t: i } = (0, a.$G)("post-layout"),
           { siteAuthor: A, disqusUsername: c } = s;
@@ -124,7 +134,7 @@
               children: [
                 (0, r.jsx)("h1", { children: n.title }),
                 (0, r.jsx)("span", { children: i("Author", { author: A }) }),
-                (0, r.jsx)(m, { dateString: n.date }),
+                (0, r.jsx)(g.E, { dateString: n.date }),
                 (0, r.jsx)(u, { lang: n.lang, tags: n.tags }),
               ],
             }),
@@ -132,7 +142,7 @@
               className: "tw-mx-auto tw-w-11/12",
               children: [
                 t,
-                (0, r.jsx)(j, {
+                (0, r.jsx)(f, {
                   username: c,
                   id: n.slug,
                   title: n.title,
@@ -249,8 +259,8 @@
         m = n(9360),
         w = n(1924),
         x = n(2935),
-        p = n(3687),
-        f = n(261);
+        f = n(3687),
+        p = n(261);
       let j = {
         img: function (e) {
           let { alt: t, src: a, width: s, height: i, ...A } = e;
@@ -262,7 +272,7 @@
                 height: i && (Number.isInteger(i) ? i : parseInt(i)),
                 ...A,
               })
-            : (0, r.jsx)(f.t, {
+            : (0, r.jsx)(p.t, {
                 src: n(7192)("./".concat(a)),
                 alt: t || "image",
                 sizes: "responsive",
@@ -272,7 +282,7 @@
               });
         },
       };
-      function v(e) {
+      function E(e) {
         let { markdownSource: t } = e;
         return (0, a.useMemo)(
           () =>
@@ -305,20 +315,20 @@
                     },
                   ],
                 ])
-                .use(p.Z, n)
+                .use(f.Z, n)
                 .processSync(e).result;
             })(t, j),
           [t],
         );
       }
-      var E = n(3101),
+      var v = n(269),
         _ = !0,
         b = function (e) {
           let { postData: t } = e;
-          return (0, r.jsx)(E.j, {
+          return (0, r.jsx)(v.j, {
             ...e,
             children: (0, r.jsx)("article", {
-              children: (0, r.jsx)(v, { markdownSource: t.markdownSource }),
+              children: (0, r.jsx)(E, { markdownSource: t.markdownSource }),
             }),
           });
         };
@@ -350,7 +360,7 @@
     },
   },
   function (e) {
-    e.O(0, [658, 265, 446, 893, 888, 774, 179], function () {
+    e.O(0, [658, 265, 470, 287, 893, 888, 774, 179], function () {
       return e((e.s = 4446));
     }),
       (_N_E = e.O());

@@ -2,6 +2,7 @@
   "pageProps": {
     "lang": "es",
     "tag": "Information Security",
+    "previews": [],
     "_nextI18Next": {
       "initialI18nStore": {
         "es": {

@@ -1,25 +1,51 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [749],
   {
-    8303: function (e, i, s) {
+    8303: function (s, e, i) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/posts/langs/[lang]/tags/[tag]",
         function () {
-          return s(7614);
+          return i(7614);
         },
       ]);
     },
-    8305: function (e, i, s) {
+    3045: function (s, e, i) {
       "use strict";
-      s.d(i, {
-        h: function () {
-          return j;
+      i.d(e, {
+        E: function () {
+          return l;
         },
       });
-      var a = s(5893),
-        t = s(3967),
-        n = s.n(t),
-        l = s(261),
+      var a = i(5893);
+      i(7294);
+      var t = i(197),
+        n = i(949);
+      function l(s) {
+        let { dateString: e } = s,
+          i = (0, t.D)(e);
+        return (0, a.jsxs)("span", {
+          children: [
+            (0, a.jsx)("i", { className: "fa-regular fa-calendar" }),
+            (0, a.jsx)("time", {
+              className: "tw-pl-1.5",
+              dateTime: e,
+              children: (0, n.WU)(i, "LLLL d, yyyy"),
+            }),
+          ],
+        });
+      }
+    },
+    8305: function (s, e, i) {
+      "use strict";
+      i.d(e, {
+        h: function () {
+          return o;
+        },
+      });
+      var a = i(5893),
+        t = i(3967),
+        n = i.n(t),
+        l = i(261),
         c = {
           src: "/_next/static/media/avatar.f1819002.jpg",
           height: 520,
@@ -29,12 +55,12 @@
           blurWidth: 7,
           blurHeight: 8,
         };
-      function A(e) {
-        return (0, a.jsx)(l.t, { src: c, alt: "Avatar", ...e });
+      function A(s) {
+        return (0, a.jsx)(l.t, { src: c, alt: "Avatar", ...s });
       }
-      var r = s(7845),
-        m = s.n(r);
-      function o(e) {
+      var r = i(7845),
+        m = i.n(r);
+      function x(s) {
         return (0, a.jsxs)("ul", {
           className: "list-inline text-center",
           children: [
@@ -145,74 +171,32 @@
           ],
         });
       }
-      function x(e) {
+      function j(s) {
         return (0, a.jsxs)("section", {
           className: n()(m().about, "tw-text-gray-300", "tw-text-center"),
           children: [
             (0, a.jsx)(A, { height: 108, width: 108, className: "tw-m-auto" }),
-            (0, a.jsx)("h5", { children: e.siteAuthor }),
-            (0, a.jsx)(o, {}),
-            (0, a.jsx)("p", { children: e.siteAuthorDescription }),
+            (0, a.jsx)("h5", { children: s.siteAuthor }),
+            (0, a.jsx)(x, {}),
+            (0, a.jsx)("p", { children: s.siteAuthorDescription }),
           ],
         });
       }
-      function j(e) {
-        return (0, a.jsx)("header", { children: (0, a.jsx)(x, { ...e }) });
+      function o(s) {
+        return (0, a.jsx)("header", { children: (0, a.jsx)(j, { ...s }) });
       }
     },
-    2144: function (e, i, s) {
+    5853: function (s, e, i) {
       "use strict";
-      s.d(i, {
-        C: function () {
-          return n;
-        },
-      });
-      var a = s(5893),
-        t = s(7294);
-      function n(e) {
-        let i = (0, t.useRef)(null),
-          [s, n] = (0, t.useState)(),
-          [l, c] = (0, t.useState)(0),
-          A = (0, t.useCallback)(() => {
-            n(i.current.contentWindow.document.body);
-          }, [n]),
-          r = (0, t.useCallback)(() => {
-            c(s.scrollHeight);
-          }, [s, c]);
-        return (
-          (0, t.useEffect)(() => {
-            if (s) {
-              let e = new ResizeObserver(r);
-              return (
-                e.observe(s),
-                () => {
-                  e.unobserve(s);
-                }
-              );
-            }
-          }, [s, r]),
-          (0, a.jsx)("iframe", {
-            title: e.title,
-            src: e.src,
-            width: "100%",
-            height: "".concat(l, "px"),
-            ref: i,
-            onLoad: A,
-          })
-        );
-      }
-    },
-    5853: function (e, i, s) {
-      "use strict";
-      s.d(i, {
+      i.d(e, {
         K: function () {
           return l;
         },
       });
-      var a = s(5893),
-        t = s(9008),
-        n = s.n(t);
-      function l(e) {
+      var a = i(5893),
+        t = i(9008),
+        n = i.n(t);
+      function l(s) {
         return (0, a.jsxs)(n(), {
           children: [
             (0, a.jsx)("meta", { charSet: "utf-8" }),
@@ -226,34 +210,34 @@
             }),
             (0, a.jsx)("meta", {
               httpEquiv: "content-language",
-              content: e.lang,
+              content: s.lang,
             }),
             (0, a.jsx)("link", { rel: "icon", href: "/favicon.ico" }),
-            (0, a.jsx)("title", { children: e.title }),
-            (0, a.jsx)("meta", { name: "og:title", content: e.title }),
-            (0, a.jsx)("meta", { name: "author", content: e.author }),
-            e.description &&
+            (0, a.jsx)("title", { children: s.title }),
+            (0, a.jsx)("meta", { name: "og:title", content: s.title }),
+            (0, a.jsx)("meta", { name: "author", content: s.author }),
+            s.description &&
               (0, a.jsxs)(a.Fragment, {
                 children: [
                   (0, a.jsx)("meta", {
                     name: "description",
-                    content: e.description,
+                    content: s.description,
                   }),
                   (0, a.jsx)("meta", {
                     name: "og:description",
-                    content: e.description,
+                    content: s.description,
                   }),
                 ],
               }),
-            e.previewImage &&
+            s.previewImage &&
               (0, a.jsx)("meta", {
                 property: "og:image",
-                content: e.previewImage,
+                content: s.previewImage,
               }),
-            e.keywords &&
+            s.keywords &&
               (0, a.jsx)("meta", {
                 name: "keywords",
-                content: e.keywords.join(","),
+                content: s.keywords.join(","),
               }),
             (0, a.jsx)("meta", {
               name: "twitter:card",
@@ -263,53 +247,81 @@
         });
       }
     },
-    7614: function (e, i, s) {
+    7614: function (s, e, i) {
       "use strict";
-      s.r(i),
-        s.d(i, {
+      i.r(e),
+        i.d(e, {
           __N_SSG: function () {
-            return c;
+            return r;
           },
           default: function () {
-            return A;
+            return m;
           },
         });
-      var a = s(5893),
-        t = s(8305),
-        n = s(2144),
-        l = s(5853),
-        c = !0,
-        A = function (e) {
-          let { lang: i, tag: s, siteConfig: c } = e,
-            { siteAuthor: A, siteTitle: r, siteDescription: m } = c;
+      var a = i(5893),
+        t = i(1664),
+        n = i.n(t),
+        l = i(3045),
+        c = i(8305),
+        A = i(5853),
+        r = !0,
+        m = function (s) {
+          let { lang: e, tag: i, previews: t, siteConfig: r } = s,
+            { siteAuthor: m, siteTitle: x, siteDescription: j } = r;
           return (0, a.jsxs)(a.Fragment, {
             children: [
-              (0, a.jsx)(l.K, { title: r, author: A, lang: i, description: m }),
-              (0, a.jsx)(t.h, { ...c }),
+              (0, a.jsx)(A.K, { title: x, author: m, lang: e, description: j }),
+              (0, a.jsx)(c.h, { ...r }),
               (0, a.jsx)("main", {
-                children: (0, a.jsx)(n.C, {
-                  title: s,
-                  src: "/tags/".concat(s.replaceAll(" ", "-"), "/index.html"),
-                }),
+                children: t
+                  .map((s) =>
+                    (0, a.jsxs)(
+                      "section",
+                      {
+                        className: "tw-mx-auto tw-h-32 tw-w-11/12",
+                        children: [
+                          (0, a.jsx)("h4", {
+                            children: (0, a.jsx)(n(), {
+                              className: "tw-text-black tw-no-underline",
+                              href: "/posts/".concat(s.slug),
+                              children: s.title,
+                            }),
+                          }),
+                          (0, a.jsx)(l.E, { dateString: s.date }),
+                          (0, a.jsx)("p", {
+                            className: "tw-mt-3",
+                            children: s.content,
+                          }),
+                        ],
+                      },
+                      s.slug,
+                    ),
+                  )
+                  .flatMap((s, e) => [
+                    (0, a.jsx)(
+                      "hr",
+                      {},
+                      "separator-between-(".concat(e - 1, ")-(").concat(e, ")"),
+                    ),
+                    s,
+                  ])
+                  .slice(1),
               }),
             ],
           });
         };
     },
-    7845: function (e) {
-      e.exports = {
+    7845: function (s) {
+      s.exports = {
         about: "AboutMe_about__UiMOu",
         "list-inline": "AboutMe_list-inline__ldLZ_",
       };
     },
-    9008: function (e, i, s) {
-      e.exports = s(3867);
-    },
   },
-  function (e) {
-    e.O(0, [888, 774, 179], function () {
-      return e((e.s = 8303));
+  function (s) {
+    s.O(0, [470, 888, 774, 179], function () {
+      return s((s.s = 8303));
     }),
-      (_N_E = e.O());
+      (_N_E = s.O());
   },
 ]);

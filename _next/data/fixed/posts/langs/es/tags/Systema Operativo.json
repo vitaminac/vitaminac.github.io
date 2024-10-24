@@ -2,6 +2,14 @@
   "pageProps": {
     "lang": "es",
     "tag": "Systema Operativo",
+    "previews": [
+      {
+        "slug": "Hacer-Una-Libreria-C",
+        "title": "Hacer Una Libreria C",
+        "date": "2019-11-05 00:14:26",
+        "content": "Libraría.h  Interfaz de Usuario  Esta práctica consiste en implementar una librería en el lenguaje de programación C. con tres funciones, head, tail..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "es": {

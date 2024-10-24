@@ -6,7 +6,8 @@
       "date": "2019-03-25 22:57:23",
       "lang": "en",
       "tags": ["Operation Research", "Survivorship bias", "Selection bias"],
-      "path": "/Survivorship-bias/index.html"
+      "path": "/Survivorship-bias/index.html",
+      "markdownContentSource": "\n# Introduction\n\nSurvivorship bias or survival bias is the logical error of concentrating on the people or things that made it past some selection process and overlooking those that did not, typically because of their lack of visibility. This can lead to false conclusions in several ways. It is a form of selection bias. It is a form of selection bias.\n\n# History\n\nDuring World War II, the statistician Abraham Wald took survivorship bias into his calculations when considering how to minimize bomber losses to enemy fire. Researchers from the Center for Naval Analyses had conducted a study of the damage done to aircraft that had returned from missions, and had recommended that armor be added to the areas that showed the most damage. Wald noted that the study only considered the aircraft that had survived their missions—the bombers that had been shot down were not present for the damage assessment. The holes in the returning aircraft, then, represented areas where a bomber could take damage and still return home safely. Wald proposed that the Navy reinforce areas where the returning aircraft were unscathed[, since those were the areas that, if hit, would cause the plane to be lost.\n\n# Conclusion\n\nSurvivorship bias (or survivor bias) is studies on the remaining population are fallaciously compared with the historic average despite the survivors having unusual properties, mostly, the unusual property in question is a track record of success."
     },
     "lang": "en",
     "_nextI18Next": {

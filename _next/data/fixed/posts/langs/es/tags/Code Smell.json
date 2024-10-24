@@ -2,6 +2,14 @@
   "pageProps": {
     "lang": "es",
     "tag": "Code Smell",
+    "previews": [
+      {
+        "slug": "Code-Smell",
+        "title": "Code Smell",
+        "date": "2019-04-28 10:01:41",
+        "content": "Es cualquier síntoma en el código fuente de un programa que posiblemente indica un problema más profundo.  Código duplicado Método grande Clase..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "es": {

@@ -2,6 +2,14 @@
   "pageProps": {
     "lang": "es",
     "tag": "Mock",
+    "previews": [
+      {
+        "slug": "Mock-Fake-Testing",
+        "title": "Mock Fake Testing",
+        "date": "2019-04-28 18:51:51",
+        "content": "Mock se refiere al término Mock Object, los cuales son objetos que imitan el comportamiento de objetos reales de una forma controlada. Se usan para..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "es": {

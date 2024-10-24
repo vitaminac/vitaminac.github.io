@@ -2,6 +2,14 @@
   "pageProps": {
     "lang": "es",
     "tag": "Cifrado César",
+    "previews": [
+      {
+        "slug": "Cracking-Simpler-Cipher",
+        "title": "Cracking Simpler Cipher",
+        "date": "2019-03-25 15:43:58",
+        "content": "Cifrado por sustitución monoalfabética (Cifrado César)  El cifrado César, también conocido como cifrado por desplazamiento es un cifrado por..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "es": {

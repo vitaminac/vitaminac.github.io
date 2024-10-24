@@ -2,6 +2,7 @@
   "pageProps": {
     "lang": "es",
     "tag": "Scaling Matrix",
+    "previews": [],
     "_nextI18Next": {
       "initialI18nStore": {
         "es": {

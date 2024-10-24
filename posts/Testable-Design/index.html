@@ -42,12 +42,12 @@
     />
     <link
       rel="preload"
-      href="/_next/static/css/59780ec8268c9a89.css"
+      href="/_next/static/css/3a64a6ca67f103bf.css"
       as="style"
     />
     <link
       rel="stylesheet"
-      href="/_next/static/css/59780ec8268c9a89.css"
+      href="/_next/static/css/3a64a6ca67f103bf.css"
       data-n-g=""
     />
     <link
@@ -83,11 +83,15 @@
       defer=""
     ></script>
     <script
-      src="/_next/static/chunks/446-53d742d198e75399.js"
+      src="/_next/static/chunks/470-88ca63604181d961.js"
       defer=""
     ></script>
     <script
-      src="/_next/static/chunks/pages/posts/%5Bslug%5D-0eda6a993d402e47.js"
+      src="/_next/static/chunks/287-15331c4732f63f37.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/pages/posts/%5Bslug%5D-c1cf5e010b0d3fb7.js"
       defer=""
     ></script>
     <script src="/_next/static/fixed/_buildManifest.js" defer=""></script>
@@ -321,7 +325,8 @@
               "date": "2021-01-24 20:30:40",
               "lang": "en",
               "tags": ["Testable Design"],
-              "path": "/Testable-Design/index.html"
+              "path": "/Testable-Design/index.html",
+              "markdownContentSource": "\n# Guidelines for Testable Design\n\n## Testability issues\n\nA programmer struggling to write a test is facing off against one of a few common show-stoppers. They mostly fall under two categories: restricted access, and inability to substitute certain parts of the implementation.\n\n### Can’t instantiate a class\n\nThis mostly happens with third-party libraries that weren’t designed with testability in mind. Another common cause for the inability to instantiate a class is that constructor depends on some static initialization.\n\n### Can’t substitute a collaborator\n\nIf the method is supposed to engage in an interaction with collaborating objects, but you find yourself incapable of intercepting the interaction you’re interested in. This might be because the collaborator is hard-wired into the method/class you’re testing and can’t be substituted with a test double.\n\n## Avoid complex private methods\n\nYou should strive to write private method so that you don’t feel the need to test your private methods directly, make your public methods read well, it should be perfectly fine that they get tested\nonly through those public methods.\n\n## Avoid final methods\n\nThe main purpose of marking a method as final is to ensure that it isn’t overwritten by a subclass, but often burden of worse testability outweigh the benefit of having the final.\n\n## Avoid static methods\n\nA static method is easy to write, but you’ll have a hard time later if you ever need to stub it out in a test. Instead, create an object that provides that functionality through an instance method.\n\n## Use new with care\n\nEvery time you “new up” an object you’re nailing down its exact implementation. For that reason, your methods should only instantiate objects you won’t want to substitute with test doubles, it should be passed into the method somehow rather than instantiated from within that method.\n\n## Avoid logic in constructors\n\nConstructors are hard to bypass because a subclass’s constructor will always trigger at least one of the superclass constructors. Hence, you should avoid any test-critical code or logic in your constructors.\n\n## Avoid the Singleton\n\nThere are situations where you want just one instance of a class to exist at runtime. But the Singleton pattern tends to prevent tests from creating different variants. If you do find yourself with a static Singleton accessor, consider making the singleton **getInstance()** method return an interface instead of the concrete class. An interface is much easier to fake. The much testable design would be that doesn’t enforce a single instance but rather relies on the programmers’ agreement or modern dependency injection framework.\n\n## Favor composition over inheritance\n\nInheritance does allow you to reuse code but it also brings a rigid class hierarchy that inhibits testability. If your intent is to reuse functionality it’s often better to do that by means of composition: using another object rather than inheriting from its class.\n\n## Wrap external libraries\n\nWrap the untestable piece of code of the external library behind your own interface, a thin layer that is testable that's test-friendly and makes it easy to substitute the actual implementation.\n\n## Reference\n\n* [Effective Unit Testing](https://www.manning.com/books/effective-unit-testing)"
             },
             "lang": "en",
             "_nextI18Next": {

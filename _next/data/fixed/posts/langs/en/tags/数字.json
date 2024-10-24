@@ -2,6 +2,7 @@
   "pageProps": {
     "lang": "en",
     "tag": "数字",
+    "previews": [],
     "_nextI18Next": {
       "initialI18nStore": {
         "en": {

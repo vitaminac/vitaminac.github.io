@@ -2,6 +2,20 @@
   "pageProps": {
     "lang": "en",
     "tag": "Matrix",
+    "previews": [
+      {
+        "slug": "Diagonalization",
+        "title": "Diagonalization",
+        "date": "2022-01-09 11:36:05",
+        "content": "What is diagonalization?  For a $n \\times n$ matrix $A$ the diagonalization is the process to find a diagonal matrix $D$ and a invertible $n \\times..."
+      },
+      {
+        "slug": "Matrices-in-Computer-Graphics",
+        "title": "Matrices in Computer Graphics",
+        "date": "2020-05-31 13:34:44",
+        "content": "Matrix Transformations  The matrices are used frequently in computer graphics and the matrix transformations are one of the core mechanics of any 3D..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "en": {

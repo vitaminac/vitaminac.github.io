@@ -2,6 +2,14 @@
   "pageProps": {
     "lang": "en",
     "tag": "Embedded System",
+    "previews": [
+      {
+        "slug": "Simple-Bootstrap-Linux-System",
+        "title": "Build Simple Bootstrap Linux System Image",
+        "date": "2020-11-08 19:15:57",
+        "content": "Kernel Image for Emulation  We will create a tiny Linux system with absolute minimum additional software. We reuse host kernel image vmlinuz to..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "en": {

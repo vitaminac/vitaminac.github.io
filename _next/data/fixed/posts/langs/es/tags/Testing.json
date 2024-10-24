@@ -2,6 +2,50 @@
   "pageProps": {
     "lang": "es",
     "tag": "Testing",
+    "previews": [
+      {
+        "slug": "Testing-Manifesto",
+        "title": "Testing Manifesto",
+        "date": "2019-05-01 10:30:55",
+        "content": "Pruebas a lo largo de OVER pruebas al final  Aumentamos de manera exponencial la cantidad de retrabajo cuando intentamos encontrar y corregir errores..."
+      },
+      {
+        "slug": "Agile-Testing-Quadrants",
+        "title": "Agile Testing Quadrants",
+        "date": "2019-05-01 10:11:15",
+        "content": "Un test enfocado al negocio(technology facing) es aquel que podrías describir a un experto del negocio en términos que le podrían interesar.  También..."
+      },
+      {
+        "slug": "Test-in-the-Toilet",
+        "title": "Testing in the Toilet",
+        "date": "2019-04-30 00:34:18",
+        "content": "Testing In The Toilet  Una buena prueba unitaria debería exhibir otra serie de propiedades a parte de la de comprobar nuestro código para..."
+      },
+      {
+        "slug": "Mock-Fake-Testing",
+        "title": "Mock Fake Testing",
+        "date": "2019-04-28 18:51:51",
+        "content": "Mock se refiere al término Mock Object, los cuales son objetos que imitan el comportamiento de objetos reales de una forma controlada. Se usan para..."
+      },
+      {
+        "slug": "Escuelas-del-Testing",
+        "title": "Escuelas del Testing",
+        "date": "2019-04-28 00:18:12",
+        "content": "Cinco manera de ver el testing Testing formal Testing de los procesos, estándares Muy relacionada con la tabla de estándares Habla de seguir un..."
+      },
+      {
+        "slug": "Smoke-Test",
+        "title": "Smoke Test",
+        "date": "2019-04-27 23:50:38",
+        "content": "Smoke Testing  En programación informática y pruebas de software, smoke testing (también conocido como \"Build Verification Testing\") son un..."
+      },
+      {
+        "slug": "TDD-BDD-ATDD",
+        "title": "Testing TDD BDD y ATDD",
+        "date": "2019-04-27 12:55:45",
+        "content": "Común problema de desarrollo software Alejamiento entre usuario y desarrollo incumplimiento de requisitos del usuario la funcionalidad del software..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "es": {

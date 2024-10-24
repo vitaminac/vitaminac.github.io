@@ -2,6 +2,14 @@
   "pageProps": {
     "lang": "es",
     "tag": "prestamo",
+    "previews": [
+      {
+        "slug": "Prestamo",
+        "title": "Como calcular un préstamo",
+        "date": "2021-10-23 12:09:41",
+        "content": "¿En qué consiste un préstamo?  Hay varios factores que influyen el rendimiento final de un préstamo  Capital o importe del préstamo: Es el dinero que..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "es": {

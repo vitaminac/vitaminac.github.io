@@ -2,6 +2,14 @@
   "pageProps": {
     "lang": "zh",
     "tag": "数字",
+    "previews": [
+      {
+        "slug": "CARDINAL-NUMBERS",
+        "title": "西班牙语基数1-10",
+        "date": "2018-11-07 00:40:31",
+        "content": "从一到十 uno dos tres cuatro cinco seis siete ocho nueve diez 数字\"uno\"在阳性名词前面变成\"un\"  un libro 一本书 un perro 一直狗(公的) un hombre 一个男人  数字\"uno\"在阴性名词前面变成\"una\" ..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "zh": {

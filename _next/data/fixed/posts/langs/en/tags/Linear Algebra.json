@@ -2,6 +2,14 @@
   "pageProps": {
     "lang": "en",
     "tag": "Linear Algebra",
+    "previews": [
+      {
+        "slug": "Diagonalization",
+        "title": "Diagonalization",
+        "date": "2022-01-09 11:36:05",
+        "content": "What is diagonalization?  For a $n \\times n$ matrix $A$ the diagonalization is the process to find a diagonal matrix $D$ and a invertible $n \\times..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "en": {

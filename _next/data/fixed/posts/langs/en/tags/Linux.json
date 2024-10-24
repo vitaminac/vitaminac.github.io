@@ -2,6 +2,32 @@
   "pageProps": {
     "lang": "en",
     "tag": "Linux",
+    "previews": [
+      {
+        "slug": "RaspberryPi-Odoo",
+        "title": "RaspberryPi Odoo",
+        "date": "2024-01-02 21:12:35",
+        "content": "Configure Prestashop Install Docker Engine Install Docker Compose  Since Docker Compose stable release doesn't provide binary for armv7, you need to..."
+      },
+      {
+        "slug": "RaspberryPi4B-Setup",
+        "title": "Raspberry Pi 4B Setup",
+        "date": "2022-07-10 13:00:17",
+        "content": "Buy a Raspberry Pi 4B  You can buy the Raspberry Pi 4B board on Amazon, the recommended version is 4 GB. You may also need to buy a SD card, and..."
+      },
+      {
+        "slug": "Minimalist-Linux-Workspace",
+        "title": "Minimalist Linux Workspace",
+        "date": "2021-01-31 18:25:16",
+        "content": "Download Image  Download Debian image, let we choose the net-install ISO since we don't need any heavy desktop enviroment e.g. KDE, GNOME, etc... . ..."
+      },
+      {
+        "slug": "Simple-Bootstrap-Linux-System",
+        "title": "Build Simple Bootstrap Linux System Image",
+        "date": "2020-11-08 19:15:57",
+        "content": "Kernel Image for Emulation  We will create a tiny Linux system with absolute minimum additional software. We reuse host kernel image vmlinuz to..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "en": {

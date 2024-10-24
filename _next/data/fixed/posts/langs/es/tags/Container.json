@@ -2,6 +2,14 @@
   "pageProps": {
     "lang": "es",
     "tag": "Container",
+    "previews": [
+      {
+        "slug": "Docker",
+        "title": "Docker",
+        "date": "2019-02-26 22:31:02",
+        "content": "Introducción  La idea detrás de Docker es crear contenedores ligeros y portables para las aplicaciones software que puedan ejecutarse en cualquier..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "es": {

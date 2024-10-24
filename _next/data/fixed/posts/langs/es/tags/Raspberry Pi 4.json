@@ -2,6 +2,7 @@
   "pageProps": {
     "lang": "es",
     "tag": "Raspberry Pi 4",
+    "previews": [],
     "_nextI18Next": {
       "initialI18nStore": {
         "es": {

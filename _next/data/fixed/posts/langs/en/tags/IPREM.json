@@ -2,6 +2,7 @@
   "pageProps": {
     "lang": "en",
     "tag": "IPREM",
+    "previews": [],
     "_nextI18Next": {
       "initialI18nStore": {
         "en": {

@@ -42,12 +42,12 @@
     />
     <link
       rel="preload"
-      href="/_next/static/css/59780ec8268c9a89.css"
+      href="/_next/static/css/3a64a6ca67f103bf.css"
       as="style"
     />
     <link
       rel="stylesheet"
-      href="/_next/static/css/59780ec8268c9a89.css"
+      href="/_next/static/css/3a64a6ca67f103bf.css"
       data-n-g=""
     />
     <link
@@ -83,11 +83,15 @@
       defer=""
     ></script>
     <script
-      src="/_next/static/chunks/446-53d742d198e75399.js"
+      src="/_next/static/chunks/470-88ca63604181d961.js"
       defer=""
     ></script>
     <script
-      src="/_next/static/chunks/pages/posts/%5Bslug%5D-0eda6a993d402e47.js"
+      src="/_next/static/chunks/287-15331c4732f63f37.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/pages/posts/%5Bslug%5D-c1cf5e010b0d3fb7.js"
       defer=""
     ></script>
     <script src="/_next/static/fixed/_buildManifest.js" defer=""></script>
@@ -328,7 +332,8 @@
               "date": "2021-05-15 19:05:00",
               "lang": "en",
               "tags": ["Spanning Tree Protocol", "STP"],
-              "path": "/STP/index.html"
+              "path": "/STP/index.html",
+              "markdownContentSource": "\n## Motivation\n\nThe Spanning Tree Protocol (STP) is a layer 2 protocol that runs on bridges and switches. The main purpose of STP is to ensure that you can build a loop-free networks when you have redundant links. Redundant links are important to provide fault tolerance if an active link fails. However, if redundant links are used to connect switches, it creates a switching loop resulting in [broadcast storm](https://en.wikipedia.org/wiki/Broadcast_storm) and MAC table instability.\n\n## Introduction\n\nAs the name suggests, STP creates a spanning tree within a network connected by layer-2 bridges, those links that are part of spanning tree are set up as preferred links. These preferred links is used for transmission unless it fails. STP also forces redundant links into a standby state. The configuration leaves a single active path between any two network nodes. If a link in the forwarding state becomes unavailable, STP reconfigures the network and reroutes data through the activation of the appropriate standby redundant link.\n\nIn following network, a redundant link is created between Switch A and Switch B. However, this setup creates the possibility of a bridging loop. For example, a broadcast or multicast packet that transmits from Station M and is destined for Station N simply continues to circulate between both switches.\n\n![Backup link](backup-link.png)\n\nHowever, when STP runs on both switches, the network logically looks like this:\n\n![Backup link when STP is enabled](backup-link-stp.png)\n\n## Implementation\n\nSTP designates one layer-2 switch as **root bridge** that becomes the focal point in the network. All other decisions in the network, such as which port to block and which port to put in forwarding mode, are made from the perspective of this **root bridge**.\n\nBefore you configure STP, you select a switch to be the **root bridge**. This switch does not need to be the most powerful switch, but choose the most centralized switch on the network. The **backbone switches** is often chosen because these switches typically do not connect to end stations, also, moves and changes within the network are less likely to affect these switches.\n\nOnce **root bridge** is selected, the switches comply to these rules:\n\n1. All ports of the root switch must be in forwarding mode.\n2. Each switch determines the best path to get to the root. The switches determine this path by a comparison of the information in all the [BPDUs](https://en.wikipedia.org/wiki/Bridge_Protocol_Data_Unit) that the switches receive on all ports. The port that receives least number of information in the [BPDUs](https://en.wikipedia.org/wiki/Bridge_Protocol_Data_Unit) is the root port and set to forwarding to mode.\n3. All the other ports of all the switches must be placed in blocking mode. The rule only applies to ports that connect to other bridges or switches. STP does not affect ports that connect to workstations or PCs. These ports remain forwarded.\n4. STP calculates the path cos based on the bandwidth of the links between switches. The port with lowest path cost to the root bridge becomes the root port.\n\n## Reference\n\n* [Understanding and Configuring Spanning Tree Protocol (STP) on Catalyst Switches](https://www.cisco.com/c/en/us/support/docs/lan-switching/spanning-tree-protocol/5234-5.html)\n* [Wiki: Spanning Tree Protocol](https://en.wikipedia.org/wiki/Spanning_Tree_Protocol)"
             },
             "lang": "en",
             "_nextI18Next": {

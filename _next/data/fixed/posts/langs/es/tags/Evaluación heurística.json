@@ -2,6 +2,14 @@
   "pageProps": {
     "lang": "es",
     "tag": "Evaluación heurística",
+    "previews": [
+      {
+        "slug": "Evaluacion-De-Interfaces",
+        "title": "Evaluación de interfaces",
+        "date": "2019-05-09 16:11:07",
+        "content": "Objetivos Plannificación de una evaluación Procedimientos de evaluacion analítica Procedimientos de evaluación empírica Introducción  Las interfaces..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "es": {

@@ -2,6 +2,20 @@
   "pageProps": {
     "lang": "es",
     "tag": "TDD",
+    "previews": [
+      {
+        "slug": "Escuelas-del-Testing",
+        "title": "Escuelas del Testing",
+        "date": "2019-04-28 00:18:12",
+        "content": "Cinco manera de ver el testing Testing formal Testing de los procesos, estándares Muy relacionada con la tabla de estándares Habla de seguir un..."
+      },
+      {
+        "slug": "TDD-BDD-ATDD",
+        "title": "Testing TDD BDD y ATDD",
+        "date": "2019-04-27 12:55:45",
+        "content": "Común problema de desarrollo software Alejamiento entre usuario y desarrollo incumplimiento de requisitos del usuario la funcionalidad del software..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "es": {

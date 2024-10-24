@@ -2,6 +2,7 @@
   "pageProps": {
     "lang": "en",
     "tag": "驾照认证",
+    "previews": [],
     "_nextI18Next": {
       "initialI18nStore": {
         "en": {

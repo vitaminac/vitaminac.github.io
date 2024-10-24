@@ -2,6 +2,14 @@
   "pageProps": {
     "lang": "en",
     "tag": "Odoo",
+    "previews": [
+      {
+        "slug": "RaspberryPi-Odoo",
+        "title": "RaspberryPi Odoo",
+        "date": "2024-01-02 21:12:35",
+        "content": "Configure Prestashop Install Docker Engine Install Docker Compose  Since Docker Compose stable release doesn't provide binary for armv7, you need to..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "en": {

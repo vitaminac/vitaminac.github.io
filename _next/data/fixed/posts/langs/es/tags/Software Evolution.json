@@ -2,6 +2,26 @@
   "pageProps": {
     "lang": "es",
     "tag": "Software Evolution",
+    "previews": [
+      {
+        "slug": "Gestion-Configuracion",
+        "title": "Gestion de Configuración",
+        "date": "2019-05-12 12:19:53",
+        "content": "Gestión de la configuración del software  Identificar, organizar, revisar y controlar las modificaciones que sufre durante el proceso de software..."
+      },
+      {
+        "slug": "Evolucion-Adaptacion-Software",
+        "title": "Evolución Adaptacion Software",
+        "date": "2019-05-11 13:09:55",
+        "content": "Evolución y Mantenimiento del Software Qué es la evolución del software  Todas las actividades de programación que se orientan a generar una nueva..."
+      },
+      {
+        "slug": "Evolucion-De-Calidad",
+        "title": "Evolución de la calidad",
+        "date": "2019-04-28 09:24:43",
+        "content": "La calidad de un software  Un software funcione no significa que esté bien hecho. No gestiona la calidad del producto genera deuda técnica. Gestionar..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "es": {

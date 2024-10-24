@@ -2,6 +2,14 @@
   "pageProps": {
     "lang": "es",
     "tag": "Bash",
+    "previews": [
+      {
+        "slug": "minishell",
+        "title": "La implementación de minishell en Linux",
+        "date": "2018-12-03 18:05:41",
+        "content": "La Implementación de intérprete de mandatos en Linux Introducción  ¿Qué es un intérprete de mandatos? Es un programa que hace la interfaz en modo..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "es": {

@@ -2,6 +2,14 @@
   "pageProps": {
     "lang": "es",
     "tag": "Simulación de sistemas",
+    "previews": [
+      {
+        "slug": "Caso-De-Estudio-Redes-De-Colas",
+        "title": "Caso de estudio - Simulación de redes de colas",
+        "date": "2018-12-29 13:28:40",
+        "content": "Introducción  Como responsable de operaciones del aeropuerto, debemos encontrar una solución al problema planteado. Para ello debemos construir un..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "es": {

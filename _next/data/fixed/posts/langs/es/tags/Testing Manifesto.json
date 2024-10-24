@@ -2,6 +2,14 @@
   "pageProps": {
     "lang": "es",
     "tag": "Testing Manifesto",
+    "previews": [
+      {
+        "slug": "Testing-Manifesto",
+        "title": "Testing Manifesto",
+        "date": "2019-05-01 10:30:55",
+        "content": "Pruebas a lo largo de OVER pruebas al final  Aumentamos de manera exponencial la cantidad de retrabajo cuando intentamos encontrar y corregir errores..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "es": {

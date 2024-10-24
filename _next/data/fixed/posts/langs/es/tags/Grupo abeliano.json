@@ -2,6 +2,14 @@
   "pageProps": {
     "lang": "es",
     "tag": "Grupo abeliano",
+    "previews": [
+      {
+        "slug": "Estructura-Algebraica",
+        "title": "Estructura Algebraica",
+        "date": "2019-01-26 10:45:44",
+        "content": "Intruducción  Una estructura algebraica es una n-tuple $(a_1,a_2,a_3,...,a_n)$ donde $a_1$ es un conjunto no vacío, y $(a_2,...,a_n)$ un conjunto de..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "es": {

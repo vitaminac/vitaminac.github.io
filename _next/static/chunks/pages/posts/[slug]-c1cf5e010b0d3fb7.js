@@ -9,6 +9,32 @@
         },
       ]);
     },
+    3045: function (t, e, n) {
+      "use strict";
+      n.d(e, {
+        E: function () {
+          return i;
+        },
+      });
+      var s = n(5893);
+      n(7294);
+      var a = n(197),
+        r = n(949);
+      function i(t) {
+        let { dateString: e } = t,
+          n = (0, a.D)(e);
+        return (0, s.jsxs)("span", {
+          children: [
+            (0, s.jsx)("i", { className: "fa-regular fa-calendar" }),
+            (0, s.jsx)("time", {
+              className: "tw-pl-1.5",
+              dateTime: e,
+              children: (0, r.WU)(n, "LLLL d, yyyy"),
+            }),
+          ],
+        });
+      }
+    },
     2144: function (t, e, n) {
       "use strict";
       n.d(e, {
@@ -51,11 +77,11 @@
         );
       }
     },
-    3101: function (t, e, n) {
+    269: function (t, e, n) {
       "use strict";
       n.d(e, {
         j: function () {
-          return v;
+          return p;
         },
       });
       var s = n(5893),
@@ -95,29 +121,13 @@
           ],
         });
       }
-      var g = n(5853);
-      n(7294);
-      var m = n(197),
-        w = n(949);
-      function x(t) {
-        let { dateString: e } = t,
-          n = (0, m.D)(e);
-        return (0, s.jsxs)("span", {
-          children: [
-            (0, s.jsx)("i", { className: "fa-regular fa-calendar" }),
-            (0, s.jsx)("time", {
-              className: "tw-pl-1.5",
-              dateTime: e,
-              children: (0, w.WU)(n, "LLLL d, yyyy"),
-            }),
-          ],
-        });
-      }
-      var h = n(5152),
-        f = n.n(h),
-        j = n(3944);
-      function p(t) {
-        return (0, s.jsx)(j.qw, {
+      var g = n(5853),
+        m = n(3045),
+        w = n(5152),
+        f = n.n(w),
+        x = n(3944);
+      function h(t) {
+        return (0, s.jsx)(x.qw, {
           shortname: t.username,
           config: {
             url: window.location.href,
@@ -127,8 +137,8 @@
           },
         });
       }
-      let _ = f()(() => Promise.resolve(p), { ssr: !1 });
-      function v(t) {
+      let j = f()(() => Promise.resolve(h), { ssr: !1 });
+      function p(t) {
         let { children: e, postData: n, siteConfig: r } = t,
           { t: i } = (0, a.$G)("post-layout"),
           { siteAuthor: c, disqusUsername: o } = r;
@@ -153,7 +163,7 @@
               children: [
                 (0, s.jsx)("h1", { children: n.title }),
                 (0, s.jsx)("span", { children: i("Author", { author: c }) }),
-                (0, s.jsx)(x, { dateString: n.date }),
+                (0, s.jsx)(m.E, { dateString: n.date }),
                 (0, s.jsx)(d, { lang: n.lang, tags: n.tags }),
               ],
             }),
@@ -161,7 +171,7 @@
               className: "tw-mx-auto tw-w-11/12",
               children: [
                 e,
-                (0, s.jsx)(_, {
+                (0, s.jsx)(j, {
                   username: o,
                   id: n.slug,
                   title: n.title,
@@ -247,7 +257,7 @@
         });
       var s = n(5893),
         a = n(2144),
-        r = n(3101),
+        r = n(269),
         i = !0,
         c = function (t) {
           return (0, s.jsx)(r.j, {
@@ -267,7 +277,7 @@
     },
   },
   function (t) {
-    t.O(0, [446, 888, 774, 179], function () {
+    t.O(0, [470, 287, 888, 774, 179], function () {
       return t((t.s = 592));
     }),
       (_N_E = t.O());

@@ -10,7 +10,8 @@
         "Code Smell",
         "Agile Software Development"
       ],
-      "path": "/Code-Smell/index.html"
+      "path": "/Code-Smell/index.html",
+      "markdownContentSource": "\nEs cualquier síntoma en el código fuente de un programa que posiblemente indica un problema más profundo.\n\n* Código duplicado\n* Método grande\n* Clase grande\n* Demasiados parámetros\n* Una clase que usa excesivamente métodos de otra clase\n* una clase que tiene dependencias en detalles de implementación de otra clase\n* No cumple el principio de sustitución de Liskov\n* Clase perezosa que hace poco\n* Uso de patrones de diseño demasiado complicados\n* Identificadores excesivamente largos, cortos\n* Callback excesivos"
     },
     "lang": "es",
     "_nextI18Next": {

@@ -2,6 +2,7 @@
   "pageProps": {
     "lang": "zh",
     "tag": "Object Oriented Design",
+    "previews": [],
     "_nextI18Next": {
       "initialI18nStore": {
         "zh": {

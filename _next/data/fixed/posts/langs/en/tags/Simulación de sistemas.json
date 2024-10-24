@@ -2,6 +2,7 @@
   "pageProps": {
     "lang": "en",
     "tag": "Simulación de sistemas",
+    "previews": [],
     "_nextI18Next": {
       "initialI18nStore": {
         "en": {

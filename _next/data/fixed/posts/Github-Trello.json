@@ -6,7 +6,8 @@
       "date": "2019-04-28 22:19:41",
       "lang": "es",
       "tags": ["Version Control"],
-      "path": "/Github-Trello/index.html"
+      "path": "/Github-Trello/index.html",
+      "markdownContentSource": "\nUna vez incluyes una Pull Request (PR) a una tarjeta de Trello toda la información relevante a cerca de la rama se cargará directamente en la tarjeta. Esto incluye el nombre del PR, si ha pasado checkeos, quien ha abierto el PR.\n\nTrello sugiere el PR en el que se ha trabajado más recientemente, haciendo fácil el seleccionar el PR que deseas. El resumen también muestra los últimos datos de GitHub, así que los cambios de tu equipo se verán reflejados en las tarjetas. También muestra el nombre de la rama en la que se mergeará un commit en particular."
     },
     "lang": "es",
     "_nextI18Next": {

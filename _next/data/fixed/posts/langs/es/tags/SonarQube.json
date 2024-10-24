@@ -2,6 +2,14 @@
   "pageProps": {
     "lang": "es",
     "tag": "SonarQube",
+    "previews": [
+      {
+        "slug": "SonarQube",
+        "title": "SonarQube",
+        "date": "2019-04-28 23:24:42",
+        "content": "SonarQube es la implementación SQALE, que se trata de \"organizar los requisitos no funcionales relacionados con la calidad del código\".  La..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "es": {

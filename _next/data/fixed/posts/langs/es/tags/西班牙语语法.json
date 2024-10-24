@@ -2,6 +2,7 @@
   "pageProps": {
     "lang": "es",
     "tag": "西班牙语语法",
+    "previews": [],
     "_nextI18Next": {
       "initialI18nStore": {
         "es": {

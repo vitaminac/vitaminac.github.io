@@ -42,12 +42,12 @@
     />
     <link
       rel="preload"
-      href="/_next/static/css/59780ec8268c9a89.css"
+      href="/_next/static/css/3a64a6ca67f103bf.css"
       as="style"
     />
     <link
       rel="stylesheet"
-      href="/_next/static/css/59780ec8268c9a89.css"
+      href="/_next/static/css/3a64a6ca67f103bf.css"
       data-n-g=""
     />
     <link
@@ -83,11 +83,15 @@
       defer=""
     ></script>
     <script
-      src="/_next/static/chunks/446-53d742d198e75399.js"
+      src="/_next/static/chunks/470-88ca63604181d961.js"
       defer=""
     ></script>
     <script
-      src="/_next/static/chunks/pages/posts/%5Bslug%5D-0eda6a993d402e47.js"
+      src="/_next/static/chunks/287-15331c4732f63f37.js"
+      defer=""
+    ></script>
+    <script
+      src="/_next/static/chunks/pages/posts/%5Bslug%5D-c1cf5e010b0d3fb7.js"
       defer=""
     ></script>
     <script src="/_next/static/fixed/_buildManifest.js" defer=""></script>
@@ -321,7 +325,8 @@
               "date": "2019-11-03 01:47:31",
               "lang": "en",
               "tags": ["algorithms"],
-              "path": "/Google-Kickstart-2019-Round-G-Shifts/index.html"
+              "path": "/Google-Kickstart-2019-Round-G-Shifts/index.html",
+              "markdownContentSource": "\n# [Google Kickstart 2019 Round G Shifts](https://codingcompetitions.withgoogle.com/kickstart/round/0000000000050e02/000000000018fd5e)\n\nWe need to calculate the number of valid combinations that makes two guards happy. I first tried backtracking but it will have TL problem. In each node, we have three options, so in fact, we will have $3^{20}$ in the hidden set. We need to discard as many options as early as possible. As the max n is 20 less the 32 we can use bit representation for each combination. We first calculate valid **a** and **b** guard's permutations separately.  For each valid b guard's permutation, we find also the number of permutation that can convert to that permutation flipping some zero bit to one. And then for each valid, a guard permutation finds the corresponding b guard's permutation.\n\nPay attention that the sum of happiness may exceed 32 bit.\n\n[Solution](https://github.com/vitaminac/code/blob/master/competition/kickstart/kickstart2019RoundG_Shifts.cpp)\n"
             },
             "lang": "en",
             "_nextI18Next": {

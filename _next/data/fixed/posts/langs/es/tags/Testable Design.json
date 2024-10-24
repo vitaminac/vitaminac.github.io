@@ -2,6 +2,7 @@
   "pageProps": {
     "lang": "es",
     "tag": "Testable Design",
+    "previews": [],
     "_nextI18Next": {
       "initialI18nStore": {
         "es": {

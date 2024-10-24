@@ -2,6 +2,20 @@
   "pageProps": {
     "lang": "en",
     "tag": "Java Stream",
+    "previews": [
+      {
+        "slug": "Java-Concurrent-Programming",
+        "title": "Java Concurrent Programming",
+        "date": "2021-10-06 23:09:55",
+        "content": "Introduction  At the beginning, a program ran from start to finish, it had access to all resources on the system. Nowadays with operating systems we..."
+      },
+      {
+        "slug": "Java-Stream",
+        "title": "Java Stream",
+        "date": "2020-07-25 22:19:18",
+        "content": "Streams  A stream represents a sequence of elements and can perform a series of operations on them  strings.stream() .filter(s -> !s.equals(\"\"))..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "en": {

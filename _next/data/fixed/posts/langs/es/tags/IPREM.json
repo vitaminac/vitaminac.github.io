@@ -2,6 +2,14 @@
   "pageProps": {
     "lang": "es",
     "tag": "IPREM",
+    "previews": [
+      {
+        "slug": "vppl",
+        "title": "VPPL - Vivienda de Protección Pública de Precio Limitado",
+        "date": "2024-09-01 20:17:51",
+        "content": "Vivienda de Protección Pública de Precio Limitado (VPPL) es una vivienda protegida con una superficie construida máxima de 150 $m^2$ y precio..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "es": {

@@ -2,6 +2,14 @@
   "pageProps": {
     "lang": "en",
     "tag": "Document-oriented Database",
+    "previews": [
+      {
+        "slug": "MongoDB",
+        "title": "MongoDB",
+        "date": "2020-06-07 13:57:06",
+        "content": "Scalability  NoSQL is intented to offer more scalability. A balance between the scalability and the consistency.  Vertical  Functional decomposition ..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "en": {

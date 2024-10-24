@@ -2,6 +2,14 @@
   "pageProps": {
     "lang": "en",
     "tag": "transformer",
+    "previews": [
+      {
+        "slug": "perplexity",
+        "title": "Perplexity",
+        "date": "2024-10-14 23:41:47",
+        "content": "Introduction  The perplexity is a widely used evaluation metric in natural language processing (NLP) that measures how well a auto-regressive/causal..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "en": {

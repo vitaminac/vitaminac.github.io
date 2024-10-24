@@ -2,6 +2,14 @@
   "pageProps": {
     "lang": "es",
     "tag": "Linux Kernel",
+    "previews": [
+      {
+        "slug": "Gestion-De-Procesos",
+        "title": "Gestión de procesos en Linux",
+        "date": "2018-11-26 18:20:30",
+        "content": "¿Qué es un proceso?  Un proceso es una abstracción de una programa en ejecucion. Y un programa es un conjunto de código maquina y dato almacenado en..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "es": {

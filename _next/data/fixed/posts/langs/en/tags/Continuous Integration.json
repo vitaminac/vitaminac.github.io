@@ -2,6 +2,7 @@
   "pageProps": {
     "lang": "en",
     "tag": "Continuous Integration",
+    "previews": [],
     "_nextI18Next": {
       "initialI18nStore": {
         "en": {

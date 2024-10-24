@@ -2,6 +2,7 @@
   "pageProps": {
     "lang": "es",
     "tag": "计算机图形",
+    "previews": [],
     "_nextI18Next": {
       "initialI18nStore": {
         "es": {

@@ -2,6 +2,14 @@
   "pageProps": {
     "lang": "en",
     "tag": "Testable Design",
+    "previews": [
+      {
+        "slug": "Testable-Design",
+        "title": "Testable Design",
+        "date": "2021-01-24 20:30:40",
+        "content": "Guidelines for Testable Design Testability issues  A programmer struggling to write a test is facing off against one of a few common show-stoppers...."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "en": {

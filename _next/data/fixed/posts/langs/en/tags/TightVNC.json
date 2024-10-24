@@ -2,6 +2,14 @@
   "pageProps": {
     "lang": "en",
     "tag": "TightVNC",
+    "previews": [
+      {
+        "slug": "Remote-Access-Via-TightVNC-To-Windows-Machine",
+        "title": "Remote Access Via TightVNC To Windows Machine",
+        "date": "2022-08-13 11:35:55",
+        "content": "Install VNC Server on Windows Machine  Download TightVNC which is free VNC server that support Windows 11 and then install TightVNC on Windows..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "en": {

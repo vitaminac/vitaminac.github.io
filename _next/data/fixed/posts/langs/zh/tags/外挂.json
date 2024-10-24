@@ -2,6 +2,20 @@
   "pageProps": {
     "lang": "zh",
     "tag": "外挂",
+    "previews": [
+      {
+        "slug": "cheating",
+        "title": "外挂开发原理",
+        "date": "2024-07-28 10:26:32",
+        "content": "先说一下写一个外挂需要什么条件，想要写外挂至少需要掌握一门编程语言，主要负责写一些上层逻辑例如外挂界面，可以是易语言，但是单单会易语言是远远不够的。目前的外挂和主流PC游戏大部分底层逻辑都是用C/C++写的，拥有熟练的C/C++语言和Win32..."
+      },
+      {
+        "slug": "QQTang",
+        "title": "浅谈QQ堂",
+        "date": "2021-11-24 14:33:25",
+        "content": "QQ堂DLL劫持  在QQ堂目录下面有个zlib1.dll文件, 我们可以利用之前介绍的技巧制作自己的zlib1.dll当作我们的外挂程序.  修复版本过低和验证码闪退补丁  下载QQ游戏客户端, 然后在QQ游戏客户端文件夹里面找SSOCommon.dll, SSOPlatform.dll,..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "zh": {

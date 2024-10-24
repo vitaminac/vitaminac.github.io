@@ -2248,6 +2248,7 @@
           "hr",
           "html",
           "legend",
+          "li",
           "listing",
           "main",
           "menu",
@@ -2260,12 +2261,12 @@
           "ul",
           "xmp",
         ]);
-      function m(e, t = {}) {
+      function m(e, t) {
         let n;
         let r = "children" in e ? e.children : [],
           a = f(e),
           o = h(e, {
-            whitespace: t.whitespace || "normal",
+            whitespace: (t || {}).whitespace || "normal",
             breakBefore: !1,
             breakAfter: !1,
           }),

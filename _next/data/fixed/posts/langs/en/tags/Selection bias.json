@@ -2,6 +2,14 @@
   "pageProps": {
     "lang": "en",
     "tag": "Selection bias",
+    "previews": [
+      {
+        "slug": "Survivorship-bias",
+        "title": "Survivorship bias",
+        "date": "2019-03-25 22:57:23",
+        "content": "Introduction  Survivorship bias or survival bias is the logical error of concentrating on the people or things that made it past some selection..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "en": {

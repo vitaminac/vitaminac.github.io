@@ -2,6 +2,7 @@
   "pageProps": {
     "lang": "es",
     "tag": "沉没成本",
+    "previews": [],
     "_nextI18Next": {
       "initialI18nStore": {
         "es": {

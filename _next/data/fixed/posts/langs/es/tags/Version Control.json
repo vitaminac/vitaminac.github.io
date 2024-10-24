@@ -2,6 +2,14 @@
   "pageProps": {
     "lang": "es",
     "tag": "Version Control",
+    "previews": [
+      {
+        "slug": "Github-Trello",
+        "title": "Github Trello",
+        "date": "2019-04-28 22:19:41",
+        "content": "Una vez incluyes una Pull Request (PR) a una tarjeta de Trello toda la información relevante a cerca de la rama se cargará directamente en la..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "es": {

@@ -2,6 +2,14 @@
   "pageProps": {
     "lang": "zh",
     "tag": "代词",
+    "previews": [
+      {
+        "slug": "SUBJECT-PRONOUNS",
+        "title": "主语代词",
+        "date": "2018-11-25 21:30:28",
+        "content": "动词代表一个动作, 而动作需要一个实施者, 在句子中我们通过使用主语带代表动作的实施者. 例如, 你, 我, 他, 她, 我们, 你们, 他们.  yo 我  tú 你  usted 您  él 他  ella 她  nosotros/nosotras 我们  vosotros/vosotras..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "zh": {

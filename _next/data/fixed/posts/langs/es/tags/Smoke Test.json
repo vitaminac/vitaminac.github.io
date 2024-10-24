@@ -2,6 +2,14 @@
   "pageProps": {
     "lang": "es",
     "tag": "Smoke Test",
+    "previews": [
+      {
+        "slug": "Smoke-Test",
+        "title": "Smoke Test",
+        "date": "2019-04-27 23:50:38",
+        "content": "Smoke Testing  En programación informática y pruebas de software, smoke testing (también conocido como \"Build Verification Testing\") son un..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "es": {

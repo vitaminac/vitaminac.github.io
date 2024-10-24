@@ -2,6 +2,7 @@
   "pageProps": {
     "lang": "es",
     "tag": "information theory",
+    "previews": [],
     "_nextI18Next": {
       "initialI18nStore": {
         "es": {

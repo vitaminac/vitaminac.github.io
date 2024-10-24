@@ -2,6 +2,7 @@
   "pageProps": {
     "lang": "es",
     "tag": "代词",
+    "previews": [],
     "_nextI18Next": {
       "initialI18nStore": {
         "es": {

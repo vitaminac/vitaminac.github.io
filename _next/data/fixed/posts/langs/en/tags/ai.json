@@ -2,6 +2,14 @@
   "pageProps": {
     "lang": "en",
     "tag": "ai",
+    "previews": [
+      {
+        "slug": "roadmap-ai",
+        "title": "Roadmap Toward AI",
+        "date": "2024-09-15 00:20:21",
+        "content": "CMU B.S. AI Curriculum Mathematics Courses [x] Mathematics for Machine Learning Specialization Books [ ] Mathematics for Machine Learning [ ]..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "en": {

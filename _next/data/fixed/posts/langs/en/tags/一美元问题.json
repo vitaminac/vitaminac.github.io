@@ -2,6 +2,7 @@
   "pageProps": {
     "lang": "en",
     "tag": "一美元问题",
+    "previews": [],
     "_nextI18Next": {
       "initialI18nStore": {
         "en": {

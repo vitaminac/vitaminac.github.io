@@ -2,6 +2,50 @@
   "pageProps": {
     "lang": "zh",
     "tag": "西班牙语语法",
+    "previews": [
+      {
+        "slug": "REGULAR-VERBS",
+        "title": "规则动词",
+        "date": "2018-12-25 22:50:48",
+        "content": "第一部分  所有的西班牙语动词分为两类规则动词和不规则动词. 这篇主要介绍规则动词.  注意他们的最后两个字母  hablar 说话  comer 吃  vivir 住在  有三种不同形式的动词  -ar 动词例如 hablar  -er 动词例如 comer  -ir 动词例如 vivir ..."
+      },
+      {
+        "slug": "SUBJECT-PRONOUNS",
+        "title": "主语代词",
+        "date": "2018-11-25 21:30:28",
+        "content": "动词代表一个动作, 而动作需要一个实施者, 在句子中我们通过使用主语带代表动作的实施者. 例如, 你, 我, 他, 她, 我们, 你们, 他们.  yo 我  tú 你  usted 您  él 他  ella 她  nosotros/nosotras 我们  vosotros/vosotras..."
+      },
+      {
+        "slug": "The-Verb-Form-Hay",
+        "title": "动词形式hay",
+        "date": "2018-11-19 19:43:01",
+        "content": "动词Hay的是有,存在的意思, 在英语种对应的是  there is there are  例如 Hay muchos libros en la biblioteca. 图书馆里有很多书.  Hay un libro encima de la mesa. 桌子上有一本书  Hay dos..."
+      },
+      {
+        "slug": "DEFINITE-AND-INDEFINITE-ARTICLES",
+        "title": "定冠词和不定冠词",
+        "date": "2018-11-11 13:26:27",
+        "content": "定冠词和不定冠词 定冠词和不定冠词的区别  注意下面两个英文句子  第一个句子讲的是一个特定(definite)的饼干 Give me the chocolate chip cookie.  第二个句子只得是任意(indefinite)一个饼干 Give me a cookie, please. ..."
+      },
+      {
+        "slug": "PLURAL-FORMS-OF-NOUNS",
+        "title": "名词的复数形式",
+        "date": "2018-11-08 13:17:02",
+        "content": "名词的复数形式 元音结尾的名词, 复数形式结尾于-s  libro : libros (libro + s)  pluma : plumas (pluma + s)  chico : chicos (chico + s)  señora : señoras (señora + s) ..."
+      },
+      {
+        "slug": "CARDINAL-NUMBERS",
+        "title": "西班牙语基数1-10",
+        "date": "2018-11-07 00:40:31",
+        "content": "从一到十 uno dos tres cuatro cinco seis siete ocho nueve diez 数字\"uno\"在阳性名词前面变成\"un\"  un libro 一本书 un perro 一直狗(公的) un hombre 一个男人  数字\"uno\"在阴性名词前面变成\"una\" ..."
+      },
+      {
+        "slug": "GENDER-OF-NOUNS",
+        "title": "西班牙语名词的阴阳性",
+        "date": "2018-10-27 23:58:56",
+        "content": "第一部分 名词阴阳性  名词是用来指人,物,地点,抽象概念的表达 在西班牙语中, 所有的名词  阳性 | 阴性 ------------- | ------------- el chico(男孩) | la chica(女孩) el jardín(花园) | la universidad(大学)..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "zh": {

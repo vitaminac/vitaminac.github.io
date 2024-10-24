@@ -2,6 +2,14 @@
   "pageProps": {
     "lang": "es",
     "tag": "Agile Testing Quadrants",
+    "previews": [
+      {
+        "slug": "Agile-Testing-Quadrants",
+        "title": "Agile Testing Quadrants",
+        "date": "2019-05-01 10:11:15",
+        "content": "Un test enfocado al negocio(technology facing) es aquel que podrías describir a un experto del negocio en términos que le podrían interesar.  También..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "es": {

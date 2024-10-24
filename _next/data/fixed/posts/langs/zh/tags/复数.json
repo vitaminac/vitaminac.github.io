@@ -2,6 +2,14 @@
   "pageProps": {
     "lang": "zh",
     "tag": "复数",
+    "previews": [
+      {
+        "slug": "PLURAL-FORMS-OF-NOUNS",
+        "title": "名词的复数形式",
+        "date": "2018-11-08 13:17:02",
+        "content": "名词的复数形式 元音结尾的名词, 复数形式结尾于-s  libro : libros (libro + s)  pluma : plumas (pluma + s)  chico : chicos (chico + s)  señora : señoras (señora + s) ..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "zh": {

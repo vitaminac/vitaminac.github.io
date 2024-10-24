@@ -2,6 +2,14 @@
   "pageProps": {
     "lang": "es",
     "tag": "Tomcat",
+    "previews": [
+      {
+        "slug": "Desarrollo-de-Aplicaciones-Web",
+        "title": "Desarrollo de aplicaciones Web",
+        "date": "2019-02-25 11:29:55",
+        "content": "Introducción  El navegador hace la petición mediante URL a un servidor, suele ser servidor remoto y ese servidor devuelve la información. Todo esto..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "es": {

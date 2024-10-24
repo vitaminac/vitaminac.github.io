@@ -2,6 +2,14 @@
   "pageProps": {
     "lang": "en",
     "tag": "winrm",
+    "previews": [
+      {
+        "slug": "Windows7-Vagrant",
+        "title": "How to Create a Windows7 Vagrant Base Box",
+        "date": "2022-03-26 11:55:38",
+        "content": "How to Create a Windows 7 Vagrant Base Box? Introduction  Since Vagrant 1.6 release, Vagrant add support for Windows VMs. We will go through the..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "en": {

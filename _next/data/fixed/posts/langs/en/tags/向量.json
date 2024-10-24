@@ -2,6 +2,7 @@
   "pageProps": {
     "lang": "en",
     "tag": "向量",
+    "previews": [],
     "_nextI18Next": {
       "initialI18nStore": {
         "en": {

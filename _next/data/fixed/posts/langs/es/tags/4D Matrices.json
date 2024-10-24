@@ -2,6 +2,7 @@
   "pageProps": {
     "lang": "es",
     "tag": "4D Matrices",
+    "previews": [],
     "_nextI18Next": {
       "initialI18nStore": {
         "es": {

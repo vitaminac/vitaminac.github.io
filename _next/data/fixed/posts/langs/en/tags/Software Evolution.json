@@ -2,6 +2,20 @@
   "pageProps": {
     "lang": "en",
     "tag": "Software Evolution",
+    "previews": [
+      {
+        "slug": "SOLID",
+        "title": "SOLID Design Principles",
+        "date": "2021-01-10 17:14:33",
+        "content": "SOLID Design Principles  In object-oriented computer programming, SOLID is acronym and stands for a set of five design principles documented by..."
+      },
+      {
+        "slug": "Lehman-laws",
+        "title": "Lehman Laws",
+        "date": "2019-05-12 21:53:33",
+        "content": "The Lehman laws describe a balance between forces driving new developments on one hand, and forces that slow down progress on the other hand.  Lehman..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "en": {

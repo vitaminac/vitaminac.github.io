@@ -2,6 +2,7 @@
   "pageProps": {
     "lang": "es",
     "tag": "三角网格",
+    "previews": [],
     "_nextI18Next": {
       "initialI18nStore": {
         "es": {

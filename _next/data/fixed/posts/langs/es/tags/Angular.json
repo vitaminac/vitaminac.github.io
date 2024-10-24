@@ -2,6 +2,14 @@
   "pageProps": {
     "lang": "es",
     "tag": "Angular",
+    "previews": [
+      {
+        "slug": "Angular-SPA",
+        "title": "Angular SPA",
+        "date": "2019-05-03 13:28:22",
+        "content": "Angular Introducción a Angular  Angular es un framework para desarrollo SPA, permite extender el HTML con etiquetas propias.  Angular-CLI  Proyecto ..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "es": {

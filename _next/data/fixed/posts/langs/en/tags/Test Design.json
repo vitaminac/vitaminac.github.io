@@ -2,6 +2,14 @@
   "pageProps": {
     "lang": "en",
     "tag": "Test Design",
+    "previews": [
+      {
+        "slug": "Test-Case-Design-Techniques",
+        "title": "Test Case Design Techniques",
+        "date": "2020-11-24 12:56:14",
+        "content": "| Approach/Implementation | White Box | Black Box | | | |-------------------------|---------------------------|-------------------|---|---| |..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "en": {

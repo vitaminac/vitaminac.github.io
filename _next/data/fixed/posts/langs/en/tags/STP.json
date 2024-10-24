@@ -2,6 +2,14 @@
   "pageProps": {
     "lang": "en",
     "tag": "STP",
+    "previews": [
+      {
+        "slug": "STP",
+        "title": "STP",
+        "date": "2021-05-15 19:05:00",
+        "content": "Motivation  The Spanning Tree Protocol (STP) is a layer 2 protocol that runs on bridges and switches. The main purpose of STP is to ensure that you..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "en": {

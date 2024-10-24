@@ -2,6 +2,56 @@
   "pageProps": {
     "lang": "en",
     "tag": "algorithms",
+    "previews": [
+      {
+        "slug": "Tree-Diameter",
+        "title": "Tree Diameter",
+        "date": "2020-03-07 10:00:44",
+        "content": "Definition  The diameter of a tree is the distance of the longest path between two end nodes $\\arg\\max_{(u, v) \\in G}d(u, v)$, where $d(u, v)$ is the..."
+      },
+      {
+        "slug": "Google-Foobar-Dodge-The-Lasers",
+        "title": "Google Foobar Dodge The Lasers",
+        "date": "2019-12-17 22:50:54",
+        "content": "Beatty sequence  This problem require to calculate $\\sum_{i=1}^{n} \\lfloor i\\sqrt{2} \\rfloor$. We must take into consideration the precision and the..."
+      },
+      {
+        "slug": "Google-Foobar-Escape-Pods",
+        "title": "Google Foobar Escape Pods",
+        "date": "2019-11-22 22:35:28",
+        "content": "This problem involves solving the equivalent maximum flow problem. We can use Ford–Fulkerson algorithm with BFS to calculate the total flow.  Maximum..."
+      },
+      {
+        "slug": "Google-Foobar-Free-the-Bunny-Prisoners",
+        "title": "Google Foobar Free the Bunny Prisoners",
+        "date": "2019-11-09 09:28:42",
+        "content": "Free the Bunny Prisoners Analysys  The problem can be rearrange as follow:  If you have N bunnies, and M locks, distribute M distinct keys among the..."
+      },
+      {
+        "slug": "Google-Kickstart-2019-Round-F-Flattening",
+        "title": "Google Kickstart 2019 Round F Flattening",
+        "date": "2019-11-03 17:51:53",
+        "content": "Google Kickstart 2019 Round F Flattening  First, we find the major height $H_k$ from each position $i$ to each position $j$. The change is not more..."
+      },
+      {
+        "slug": "Google-Kickstart-2019-Round-G-Shifts",
+        "title": "Google Kickstart 2019 Round G Shifts",
+        "date": "2019-11-03 01:47:31",
+        "content": "Google Kickstart 2019 Round G Shifts  We need to calculate the number of valid combinations that makes two guards happy. I first tried backtracking..."
+      },
+      {
+        "slug": "Google-Kickstart-2019-Round-G-The-Equation",
+        "title": "Google Kickstart 2019 Round G The Equation",
+        "date": "2019-11-02 22:11:00",
+        "content": "Google Kickstart 2019 Round G The Equation  The essential of the problem is to find the number $k$ that xor with each $A_i$ gives the largest number...."
+      },
+      {
+        "slug": "Google-Kickstart-2019-Round-G-Book-Reading",
+        "title": "Google Kickstart 2019 Round G Book Reading",
+        "date": "2019-11-02 19:24:59",
+        "content": "Google Kickstart 2019 Round G Book Reading  The most challenge part of this problem is that Q and N is a very larger number. So making a nested for..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "en": {

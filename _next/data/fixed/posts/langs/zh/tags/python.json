@@ -2,6 +2,14 @@
   "pageProps": {
     "lang": "zh",
     "tag": "python",
+    "previews": [
+      {
+        "slug": "python-exe-reverse-engineering",
+        "title": "Python打包的可执行文件的逆向工程",
+        "date": "2024-03-28 20:39:24",
+        "content": "PyInstaller  如果exe文件是使用PyInstaller打包的。我们可以用PyInstaller Extractor解包exe文件。  python pyinstxtractor.py <文件名>.exe  ..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "zh": {

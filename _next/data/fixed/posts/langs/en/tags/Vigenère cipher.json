@@ -2,6 +2,7 @@
   "pageProps": {
     "lang": "en",
     "tag": "Vigenère cipher",
+    "previews": [],
     "_nextI18Next": {
       "initialI18nStore": {
         "en": {

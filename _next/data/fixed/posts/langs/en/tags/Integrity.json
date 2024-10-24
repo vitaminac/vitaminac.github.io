@@ -2,6 +2,14 @@
   "pageProps": {
     "lang": "en",
     "tag": "Integrity",
+    "previews": [
+      {
+        "slug": "Information-Security",
+        "title": "Information Security",
+        "date": "2021-03-28 11:11:17",
+        "content": "Information Security  Information security(infosec), is the practice of protecting information by mitigating information risks like ..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "en": {

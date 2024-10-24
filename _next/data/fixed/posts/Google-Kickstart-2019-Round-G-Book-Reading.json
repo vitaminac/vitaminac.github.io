@@ -6,7 +6,8 @@
       "date": "2019-11-02 19:24:59",
       "lang": "en",
       "tags": ["algorithms"],
-      "path": "/Google-Kickstart-2019-Round-G-Book-Reading/index.html"
+      "path": "/Google-Kickstart-2019-Round-G-Book-Reading/index.html",
+      "markdownContentSource": "\n# [Google Kickstart 2019 Round G Book Reading](https://codingcompetitions.withgoogle.com/kickstart/round/0000000000050e02/000000000018fd0d)\n\nThe most challenge part of this problem is that Q and N is a very larger number. So making a nested for loop will cause $N^2$ complexity. Instead, we use an array of size of MAX N to cache the answer. Thanks to multiple readers could probably have the same $R_i$. Another trick is that $R_i$ is not necessarily smaller than N, we should take into account and skip unnecessary operation. It is faster if we count the reading pages by stepping $R_i$ towards the N. A mistake I had was that I didn´t realize the answer size, the sum of Q readers' reading pages will probably be larger the 32 bits, we must define the answer with at least 64 bits integer.\n\n[Solution](https://github.com/vitaminac/code/blob/master/competition/kickstart/kickstart2019RoundG_BookReading.cpp)\n"
     },
     "lang": "en",
     "_nextI18Next": {

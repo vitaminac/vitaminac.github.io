@@ -2,6 +2,14 @@
   "pageProps": {
     "lang": "en",
     "tag": "Mac",
+    "previews": [
+      {
+        "slug": "Authenticated-Encryption",
+        "title": "Authenticated Encryption",
+        "date": "2021-03-28 11:21:16",
+        "content": "Glossary Cryptographic Hash Function  It is a one-way function that maps data of arbitrary size (often called the message) to a bit array of a fixed..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "en": {

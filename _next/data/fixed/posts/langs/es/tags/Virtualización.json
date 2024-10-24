@@ -2,6 +2,20 @@
   "pageProps": {
     "lang": "es",
     "tag": "Virtualización",
+    "previews": [
+      {
+        "slug": "Virtualization",
+        "title": "Virtualización, Contenedores y Cloud Computing",
+        "date": "2019-02-26 23:19:07",
+        "content": "Introducción  La virtualización es una técnica que permite la emulación de algún recurso tecnológico.  Máquina virtual  Virtualización de un entorno..."
+      },
+      {
+        "slug": "Docker",
+        "title": "Docker",
+        "date": "2019-02-26 22:31:02",
+        "content": "Introducción  La idea detrás de Docker es crear contenedores ligeros y portables para las aplicaciones software que puedan ejecutarse en cualquier..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "es": {

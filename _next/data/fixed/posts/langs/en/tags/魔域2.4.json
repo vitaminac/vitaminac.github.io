@@ -2,6 +2,7 @@
   "pageProps": {
     "lang": "en",
     "tag": "魔域2.4",
+    "previews": [],
     "_nextI18Next": {
       "initialI18nStore": {
         "en": {

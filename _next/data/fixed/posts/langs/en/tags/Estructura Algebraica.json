@@ -2,6 +2,7 @@
   "pageProps": {
     "lang": "en",
     "tag": "Estructura Algebraica",
+    "previews": [],
     "_nextI18Next": {
       "initialI18nStore": {
         "en": {

@@ -2,6 +2,14 @@
   "pageProps": {
     "lang": "en",
     "tag": "C",
+    "previews": [
+      {
+        "slug": "Compiling-Executing-C",
+        "title": "The Process Behind Compiling and Executing C Code",
+        "date": "2021-12-18 22:28:10",
+        "content": "Introduction  Compiling and executing a C program is a multi-stage process. In this post I’ll walk through each stages of compiling and executing the..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "en": {
