@@ -348,11 +348,11 @@ video {
 .tw-flex {
   display: flex;
 }
-.tw-h-32 {
-  height: 8rem;
-}
 .tw-h-96 {
   height: 24rem;
+}
+.tw-min-h-32 {
+  min-height: 8rem;
 }
 .tw-w-11\/12 {
   width: 91.666667%;

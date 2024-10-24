@@ -27,7 +27,7 @@
     "/posts/langs/[lang]/tags/[tag]": [
       s,
       a,
-      "static/chunks/pages/posts/langs/[lang]/tags/[tag]-e308e1ec048da587.js",
+      "static/chunks/pages/posts/langs/[lang]/tags/[tag]-8f800a9521071e00.js",
     ],
     "/posts/[slug]": [
       s,

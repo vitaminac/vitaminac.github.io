@@ -5,7 +5,7 @@
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/posts/langs/[lang]/tags/[tag]",
         function () {
-          return i(7614);
+          return i(9409);
         },
       ]);
     },
@@ -247,7 +247,7 @@
         });
       }
     },
-    7614: function (s, e, i) {
+    9409: function (s, e, i) {
       "use strict";
       i.r(e),
         i.d(e, {
@@ -266,19 +266,19 @@
         A = i(5853),
         r = !0,
         m = function (s) {
-          let { lang: e, tag: i, previews: t, siteConfig: r } = s,
-            { siteAuthor: m, siteTitle: x, siteDescription: j } = r;
+          let { lang: e, previews: i, siteConfig: t } = s,
+            { siteAuthor: r, siteTitle: m, siteDescription: x } = t;
           return (0, a.jsxs)(a.Fragment, {
             children: [
-              (0, a.jsx)(A.K, { title: x, author: m, lang: e, description: j }),
-              (0, a.jsx)(c.h, { ...r }),
+              (0, a.jsx)(A.K, { title: m, author: r, lang: e, description: x }),
+              (0, a.jsx)(c.h, { ...t }),
               (0, a.jsx)("main", {
-                children: t
+                children: i
                   .map((s) =>
                     (0, a.jsxs)(
                       "section",
                       {
-                        className: "tw-mx-auto tw-h-32 tw-w-11/12",
+                        className: "tw-mx-auto tw-min-h-32 tw-w-11/12",
                         children: [
                           (0, a.jsx)("h4", {
                             children: (0, a.jsx)(n(), {
