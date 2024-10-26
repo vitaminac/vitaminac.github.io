@@ -1,6 +1,6 @@
 self.__SSG_MANIFEST = new Set([
   "\u002F",
-  "\u002Fdrafts\u002F[slug]",
+  "\u002Farchives\u002F[slug]",
   "\u002Fposts\u002F[slug]",
   "\u002Fposts\u002Flangs\u002F[lang]",
   "\u002Fposts\u002Flangs\u002F[lang]\u002Fpagination\u002F[pagination]",
