@@ -8,7 +8,7 @@
       "static/chunks/5423ad26-257b22e576552beb.js",
       "static/chunks/175675d1-4ecee8fd0a8f0622.js",
       "static/chunks/893-04920b8a1103a842.js",
-      "static/chunks/pages/archives/[slug]-88801e4a845db74a.js",
+      "static/chunks/pages/archives/[slug]-06db4819515184e6.js",
     ],
     "/posts/langs/[lang]": [
       "static/chunks/pages/posts/langs/[lang]-5e2e3629b1d421c7.js",
@@ -16,7 +16,7 @@
     "/posts/langs/[lang]/pagination/[pagination]": [
       s,
       a,
-      "static/chunks/pages/posts/langs/[lang]/pagination/[pagination]-c8ddb441030aba68.js",
+      "static/chunks/pages/posts/langs/[lang]/pagination/[pagination]-0aaba5ef414795c2.js",
     ],
     "/posts/langs/[lang]/tags": [
       a,

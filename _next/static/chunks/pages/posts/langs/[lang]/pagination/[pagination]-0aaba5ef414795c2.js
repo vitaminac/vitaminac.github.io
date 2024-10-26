@@ -1,7 +1,7 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [965],
   {
-    458: function (e, s, i) {
+    5115: function (e, s, i) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/posts/langs/[lang]/pagination/[pagination]",
         function () {
@@ -368,7 +368,7 @@
   },
   function (e) {
     e.O(0, [470, 888, 774, 179], function () {
-      return e((e.s = 458));
+      return e((e.s = 5115));
     }),
       (_N_E = e.O());
   },
