@@ -2,10 +2,10 @@
   "pageProps": {
     "postData": {
       "title": "Evolución de la calidad",
+      "lang": "es",
       "markdownContentSource": "\n# La calidad de un software\n\nUn software funcione no significa que esté bien hecho. No gestiona la calidad del producto genera deuda técnica. Gestionar sólo procesos no es suficiente, es sólo parte de la solución. Hay que fijarse en cómo está el producto además del proceso.\n\nCuando externalizamos, la certificación del proceso no es garantía suficiente:\n\n1. Se basa en un muestreo\n2. Sello concedido en el pasado\n\n# Qué refactorizamos\n\nTengo 3 Millones de LOC y 500 clases. Las tengo ordenadas por Complejidad Ciclomática. ¿Cómo selecciono cuales modificar?\n\nLo primero que hay que tener en cuenta es que la complejidad ciclomática mide la **mantenibilidad**. Y el segundo es comprobar la probabilidad de que una clase cambie, y evitar realizar un esfuerzo inútil intentando mejorar algo que nunca va a cambiar. Una manera de comprobar si una clase va a cambiar es fijarnos en la evolución que ha tenido en el pasado. La media de cambios por mes de cada una de las clases se le multiplica su complejidad ciclomática. Nos da una lista que tiene en cuenta el valor de la métrica de calidad y su probabilidad de cambio.",
       "slug": "Evolucion-De-Calidad",
       "date": "2019-04-28 09:24:43",
-      "lang": "es",
       "tags": ["Software Evolution"],
       "path": "/Evolucion-De-Calidad/index.html"
     },

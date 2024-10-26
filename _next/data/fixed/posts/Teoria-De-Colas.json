@@ -2,10 +2,10 @@
   "pageProps": {
     "postData": {
       "title": "Teoria de colas",
+      "lang": "es",
       "markdownContentSource": "\n[Teoría de colas](https://github.com/vitaminac/OperationsResearch/blob/master/Queueing%20theory/Teor%C3%ADa%20de%20colas.ipynb)\n",
       "slug": "Teoria-De-Colas",
       "date": "2018-12-25 16:20:53",
-      "lang": "es",
       "tags": ["Teoria de colas"],
       "path": "/Teoria-De-Colas/index.html"
     },

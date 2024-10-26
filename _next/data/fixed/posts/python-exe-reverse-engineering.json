@@ -2,10 +2,10 @@
   "pageProps": {
     "postData": {
       "title": "Python打包的可执行文件的逆向工程",
+      "lang": "zh",
       "markdownContentSource": "\n## PyInstaller\n\n如果`exe`文件是使用[PyInstaller](https://github.com/pyinstaller/pyinstaller)打包的。我们可以用[PyInstaller Extractor](https://github.com/extremecoders-re/pyinstxtractor)解包`exe`文件。\n\n    python pyinstxtractor.py <文件名>.exe\n\n但是必须要使用相同的`Python`版本运行命令才能解包`PYZ`文件。解包成功后我们会得到一系列的`.pyc`文件。\n\n我们可以使用[uncompyle6](https://github.com/rocky/python-uncompyle6/)去反编译`.pyc`文件\n\n    uncompyle6 xxx.pyc\n\n### 加密\n\n假如解压`PYZ`文件的过程中出现下面的这些错误的话, 那这个文件在生成的时候是被加密了\n\n    ...\n    [!] Error: Failed to decompress PYZ-00.pyz_extracted\\xxx.pyc, probably encrypted. Extracting as is.\n    ...\n\n加密的密钥可以在`pyimod00_crypto_key.pyc`这个文件找到\n\n    uncompyle6 pyimod00_crypto_key.pyc > pyimod00_crypto_key.py\n\n`Pyinstaller`的加密功能使用[tinyaes](https://github.com/naufraghi/tinyaes-py)实现的。既然有了密钥只需要逆向解密成正常的`.pyc`文件再用`uncompyle6`转为`.py`文件。 \n\n{% include_code lang:py from:5 to:60 py/decompile-python-exe.py %}\n\n在`Pyinstaller`最新的版本中已经[移除了加密的功能](https://pyinstaller.org/en/stable/CHANGES.html?highlight=encrypt#:~:text=Remove%20bytecode%20encryption)\n\n有些文件用`uncompyle6`会解析失败 因为对Python 3.7以上的版本支持并不完全 所以还可以用[decompyle3](https://github.com/rocky/python-decompile3)去尝试失败的文件\n\n## 参考\n\n* https://zondatw.github.io/2021/decompile_encrypted_pyinstaller_exe/",
       "slug": "python-exe-reverse-engineering",
       "date": "2024-03-28 20:39:24",
-      "lang": "zh",
       "tags": ["python", "PyInstaller"],
       "path": "/python-exe-reverse-engineering/index.html"
     },

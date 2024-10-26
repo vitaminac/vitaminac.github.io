@@ -2,10 +2,10 @@
   "pageProps": {
     "postData": {
       "title": "Code Smell",
+      "lang": "es",
       "markdownContentSource": "\nEs cualquier síntoma en el código fuente de un programa que posiblemente indica un problema más profundo.\n\n* Código duplicado\n* Método grande\n* Clase grande\n* Demasiados parámetros\n* Una clase que usa excesivamente métodos de otra clase\n* una clase que tiene dependencias en detalles de implementación de otra clase\n* No cumple el principio de sustitución de Liskov\n* Clase perezosa que hace poco\n* Uso de patrones de diseño demasiado complicados\n* Identificadores excesivamente largos, cortos\n* Callback excesivos",
       "slug": "Code-Smell",
       "date": "2019-04-28 10:01:41",
-      "lang": "es",
       "tags": [
         "Software Quality Metrics",
         "Code Smell",

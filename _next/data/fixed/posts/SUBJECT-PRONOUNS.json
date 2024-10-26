@@ -2,10 +2,10 @@
   "pageProps": {
     "postData": {
       "title": "主语代词",
+      "lang": "zh",
       "markdownContentSource": "\n动词代表一个动作, 而动作需要一个实施者, 在句子中我们通过使用主语带代表动作的实施者. 例如, 你, 我, 他, 她, 我们, 你们, 他们.\n\n**yo**\n我\n\n**tú**\n你\n\n**usted**\n您\n\n**él**\n他\n\n**ella**\n她\n\n**nosotros/nosotras**\n我们\n\n**vosotros/vosotras**\n你们\n\n**ustedes**\n您们\n\n**ellos/ellas**\n他们/她们\n\nusted是一种更正式礼貌的形式来表达你, tú更适用于朋友亲人之间.\n\n跟老板说话的时候用**usted**\n跟女儿说话的时候用**tú**\n跟老师说话的时候用**usted**\n跟朋友说话的时候用**tú**\n\nvosotros和ustedes的区别也是同根同源\n\n他们之间的主要差别就是不同程度的正式性和礼貌性.\n\nusted可以用**Ud.**或**Vd.**, ustedes可以用**Uds.**或**Vds.**\n\n在西班牙语中同时还区别主语的性别例如:\n**nosotros**\n我们(男性团体, 或者男女混合)\n**nosotras**\n当我们全部人都是由女性组成的\n\n当我们对一个人或团体说话的时候用你\nustedes\nvosotros\nvosotras\n\n当我们谈论起一个团体的时候用\nellos/ellas\n\n#总结\n\n## 单数\n\n**yo**-我\n**tú**-你\n**él**-他\n**ella**-她\n**usted**-您\n\n## 复数\n\n**nosotros**\n我们(男性群体或者男女混合团体)\n\n**nosotras**\n我们(女性群体)\n\n**vosotros**\n你们(男性群体)\n\n**vosotras**\n你们(女性群体)\n\n**ellos**\n他们\n\n**ellas**\n她们\n\n**ustedes**\n您们",
       "slug": "SUBJECT-PRONOUNS",
       "date": "2018-11-25 21:30:28",
-      "lang": "zh",
       "tags": ["西班牙语语法", "代词", "主语"],
       "path": "/SUBJECT-PRONOUNS/index.html"
     },
