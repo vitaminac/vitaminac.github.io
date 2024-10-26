@@ -11,7 +11,7 @@
       "static/chunks/pages/archives/[slug]-06db4819515184e6.js",
     ],
     "/posts/langs/[lang]": [
-      "static/chunks/pages/posts/langs/[lang]-7ac0aa1c3002eaa9.js",
+      "static/chunks/pages/posts/langs/[lang]-5e2e3629b1d421c7.js",
     ],
     "/posts/langs/[lang]/pagination/[pagination]": [
       s,

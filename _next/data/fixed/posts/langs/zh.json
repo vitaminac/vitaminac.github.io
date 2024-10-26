@@ -2,7 +2,7 @@
   "pageProps": {
     "basePath": "",
     "domain": "https://vitaminac.github.io",
-    "language": "zh"
+    "lang": "zh"
   },
   "__N_SSG": true
 }

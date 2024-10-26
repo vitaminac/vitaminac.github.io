@@ -3567,6 +3567,12 @@
         });
       }
     },
+    4421: function (e) {
+      "use strict";
+      e.exports = {
+        i18n: { defaultLocale: "en", locales: ["en", "es", "zh"] },
+      };
+    },
     8199: function (e, t) {
       "use strict";
       var n, r, i, s;
@@ -4520,7 +4526,7 @@
       n.r(t),
         n.d(t, {
           default: function () {
-            return x;
+            return w;
           },
         });
       var r = n(5893),
@@ -4860,27 +4866,29 @@
         });
       }
       var v = JSON.parse(
-        '{"siteAuthor":"Gao","siteTitle":"Gao\'s blog","siteDescription":"Gao\'s blog","siteAuthorDescription":"It is the time you have wasted for your rose that makes your rose so important.","defaultLanguage":"en","email":"dalao1002@gmail.com","linkedin":"shuxig","github":"vitaminac","gitlab":"vitaminac","kaggle":"dalao1002","leetcode":"dalao1002","stackoverflow":"9980245","disqusUsername":"blog-vnwybnwkiz"}',
-      );
+          '{"siteAuthor":"Gao","siteTitle":"Gao\'s blog","siteDescription":"Gao\'s blog","siteAuthorDescription":"It is the time you have wasted for your rose that makes your rose so important.","email":"dalao1002@gmail.com","linkedin":"shuxig","github":"vitaminac","gitlab":"vitaminac","kaggle":"dalao1002","leetcode":"dalao1002","stackoverflow":"9980245","disqusUsername":"blog-vnwybnwkiz"}',
+        ),
+        x = n(4421),
+        S = n.n(x);
       n(3434);
-      var x = (0, i.Jc)(function (e) {
-        var t, n;
-        let { Component: i, pageProps: s } = e;
+      var w = (0, i.Jc)(function (e) {
+        let { Component: t, pageProps: n } = e,
+          i = {
+            ...v,
+            defaultLanguage: S().i18n.defaultLocale,
+            supportedLanguages: S().i18n.locales,
+          },
+          s = n.lang || i.defaultLanguage;
         return (0, r.jsxs)(r.Fragment, {
           children: [
             (0, r.jsx)(a, {}),
             (0, r.jsx)(b, {
-              siteTitle: v.siteTitle,
-              lang: s.lang,
-              supportedLanguages:
-                (null === (n = s._nextI18Next) || void 0 === n
-                  ? void 0
-                  : null === (t = n.userConfig) || void 0 === t
-                    ? void 0
-                    : t.i18n.locales) || [],
+              siteTitle: i.siteTitle,
+              lang: s,
+              supportedLanguages: i.supportedLanguages,
             }),
-            (0, r.jsx)(i, { siteConfig: v, ...s }),
-            (0, r.jsx)(d, { ...v }),
+            (0, r.jsx)(t, { ...n, lang: s, siteConfig: i }),
+            (0, r.jsx)(d, { ...i }),
           ],
         });
       });
