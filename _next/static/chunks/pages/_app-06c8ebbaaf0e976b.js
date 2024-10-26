@@ -4810,7 +4810,7 @@
                       children: (0, r.jsx)(u(), {
                         className: "nav-link active",
                         "aria-current": "page",
-                        href: "/posts/langs/".concat(e.lang),
+                        href: "/posts/langs/".concat(e.lang, "/pagination/1"),
                         children: t("Home"),
                       }),
                     }),
