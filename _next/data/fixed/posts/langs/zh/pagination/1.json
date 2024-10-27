@@ -3,6 +3,12 @@
     "lang": "zh",
     "previews": [
       {
+        "slug": "flash",
+        "title": "Flash小游戏",
+        "date": "2024-10-27 10:08:36",
+        "content": "Flash小游戏曾经在xp/win7时代是很火的, 更带火了一些小游戏网站例如4399.com，7k7k.com。 但是自从Adobe取消Flash支持现在最新的浏览器已经玩不了。现在想玩Flash小游戏都需要单独下载一些还支持Flash的国内厂商的浏览器，例如QQ浏览器,..."
+      },
+      {
         "slug": "passport-renewal",
         "title": "护照更换",
         "date": "2024-10-10 23:54:23",
@@ -48,19 +54,13 @@
         "slug": "moyu24",
         "title": "魔域2.4小游戏分析",
         "date": "2024-02-17 15:02:08",
-        "content": "魔域2.4是个曾经比较火的小游戏, 但是自从Adobe取消Flash支持现在最新的浏览器已经玩不了。这个网页内嵌了这个小游戏但是你需要下载一些还支持Flash的国内厂商的浏览器，例如QQ浏览器, 然后还需要安装中国地区的Flash插件才能加载。如果你不想安装这个插件你可以试试这个选项Clean..."
+        "content": "{% flash moyu2_4.swf 800..."
       },
       {
         "slug": "QQTang",
         "title": "浅谈QQ堂",
         "date": "2021-11-24 14:33:25",
         "content": "QQ堂DLL劫持  在QQ堂目录下面有个zlib1.dll文件, 我们可以利用之前介绍的技巧制作自己的zlib1.dll当作我们的外挂程序.  修复版本过低和验证码闪退补丁  下载QQ游戏客户端, 然后在QQ游戏客户端文件夹里面找SSOCommon.dll, SSOPlatform.dll,..."
-      },
-      {
-        "slug": "Game-Theory",
-        "title": "浅谈博弈论",
-        "date": "2019-02-20 21:05:31",
-        "content": "浅谈博弈论  博弈论(Game Theory)主要研究具有斗争或竞争性质现象的数学理论和方法, 考虑了游戏中的个体的预测行为和实际行为，并研究它们的优化策略. 在这类行为中，参加竞争的各方各自具有不同的利益. 为了达到各自的目标, 各方必须考虑对手的各种可能的行动方案,..."
       }
     ],
     "nextPageUrl": "/posts/langs/zh/pagination/2",

@@ -1,0 +1,49 @@
+{
+  "pageProps": {
+    "postData": {
+      "title": "Flash小游戏",
+      "lang": "zh",
+      "markdownContentSource": "\nFlash小游戏曾经在xp/win7时代是很火的, 更带火了一些小游戏网站例如4399.com，7k7k.com。 但是自从[Adobe取消Flash支持](https://www.adobe.com/products/flashplayer/end-of-life.html)现在最新的浏览器已经玩不了。现在想玩Flash小游戏都需要单独下载一些还支持Flash的国内厂商的浏览器，例如[QQ浏览器](https://browser.qq.com/), 然后还需要安装[中国地区的Flash插件](https://www.flash.cn/download-wins)才能加载。如果你不想安装这个插件你可以试试这个选项[Clean Flash](https://gitlab.com/cleanflash/installer/-/releases)。\n\n如果你不想安装奇怪的浏览器而直接玩Flash小游戏你可以下载对应的swf文件然后用[Adobe Flash Player Content Projector Debugger](flashplayer_32_sa_debug.exe)打开。有些Flash小游戏玩的不过瘾的话你还可以修改存档, 搜一搜**flash sol修改器**或者**flash sol editor**就能找到甚至还有开源选项例如[minerva](https://github.com/gmariani/minerva)和[flash-lso](https://github.com/ruffle-rs/rust-flash-lso)。\n\n开源社区有尝试过[让Adobe主动开源Flash实现](https://github.com/open-source-flash/open-source-flash)但是并没有得到回复。Adobe有开源AS的实现[avmplus](https://github.com/adobe/avmplus)。现在有一些开源项目立志于重新构建一个独立的Flash运行模拟器例如[Ruffle](https://github.com/ruffle-rs/ruffle)和[Lightspark](https://github.com/lightspark/lightspark)。还有一些项目例如[swf2js](https://github.com/swf2js/swf2js)尝试用现代的网页技术HTML5+Javascript+WebGL重现Flash。[FlashPatch](https://github.com/darktohka/FlashPatch)提供了一种现代浏览器也能运行Flash的可能性。\n\n想要用其他游戏引擎复刻曾经的小游戏可以使用[JPEXS Free Flash Decompiler](https://github.com/jindrapetrik/jpexs-decompiler)或者收费选项[Sothink SWF Decompiler](https://www.sothink.com/product/flashdecompiler/)反编译`.swf`成`.fla`然后用`Adobe Flash Professional CC 2015`打开进行辅助分析。",
+      "slug": "flash",
+      "date": "2024-10-27 10:08:36",
+      "tags": ["Game", "Flash"],
+      "path": "/flash/index.html"
+    },
+    "lang": "zh",
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "zh": {
+          "navbar": {
+            "Home": "主页",
+            "Language": "语言",
+            "Tags": "标签",
+            "en": "英语",
+            "es": "西语",
+            "zh": "中文"
+          },
+          "post-layout": { "Author": "作者: {{author}}", "Tags": "标签" }
+        },
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          },
+          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
+        }
+      },
+      "initialLocale": "zh",
+      "ns": ["navbar", "post-layout"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}
