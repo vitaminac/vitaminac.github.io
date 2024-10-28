@@ -133,7 +133,8 @@
           let { markdownContentSource: e, tocHtml: t } = A;
           return (0, r.jsxs)("main", {
             children: [
-              (0, r.jsx)("nav", { dangerouslySetInnerHTML: { __html: t } }),
+              t &&
+                (0, r.jsx)("nav", { dangerouslySetInnerHTML: { __html: t } }),
               (0, r.jsx)("article", {
                 children: (0, r.jsx)(B, { markdownSource: e }),
               }),
