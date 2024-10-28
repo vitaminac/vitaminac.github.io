@@ -3,7 +3,6 @@
     "postData": {
       "title": "西班牙语基数1-10",
       "lang": "zh",
-      "markdownContentSource": "\n# 从一到十\n1. uno\n2. dos\n3. tres\n4. cuatro\n5. cinco\n6. seis\n7. siete\n8. ocho\n9. nueve\n10. diez\n\n## 数字\"uno\"在阳性名词前面变成\"un\"\n\nun libro 一本书\nun perro 一直狗(公的)\nun hombre 一个男人\n\n## 数字\"uno\"在阴性名词前面变成\"una\"\n\nuna pluma 一只钢笔\nuna gata 一只猫\nuna chica 一位女孩\n\n数数的时候我们用\"uno\" 但是当我们数某个物体的时候用 \"un\" 或者 \"una\"\nun libro 一本书\nuna pluma 一只钢笔\nuno dos tres 一二三",
       "slug": "CARDINAL-NUMBERS",
       "date": "2018-11-07 00:40:31",
       "tags": ["西班牙语语法", "数字", "西班牙语基础"],

@@ -3,7 +3,6 @@
     "postData": {
       "title": "魔域2.4小游戏分析",
       "lang": "zh",
-      "markdownContentSource": "\n{% flash moyu2_4.swf 800 %}",
       "slug": "moyu24",
       "date": "2024-02-17 15:02:08",
       "tags": ["Game", "魔域2.4"],

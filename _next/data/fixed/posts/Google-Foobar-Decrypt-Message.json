@@ -3,7 +3,6 @@
     "postData": {
       "title": "Google Foobar Decrypt Final Message",
       "lang": "en",
-      "markdownContentSource": "\nAfter i have finished Google Foobar challenge I get a encrypted message. The ciphertext was xored with my username and then encode with base64, just do the reverse process.\n\n[Decrypt Final Message](https://github.com/vitaminac/code/blob/master/competition/foobar/decrypt_message.py)",
       "slug": "Google-Foobar-Decrypt-Message",
       "date": "2019-12-26 21:43:50",
       "tags": [],
