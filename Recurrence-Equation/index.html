@@ -8,19 +8,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Google Foobar Escape Pods｜Gao&#39;s Blog</title>
-    <meta
-      property="og:title"
-      content="Google Foobar Escape Pods｜Gao&#39;s Blog"
-    />
+    <title>Recurrence Equation｜Gao&#39;s Blog</title>
+    <meta property="og:title" content="Recurrence Equation｜Gao&#39;s Blog" />
 
-    <meta
-      name="description"
-      content="Google Foobar Escape Pods｜Gao&#39;s Blog"
-    />
+    <meta name="description" content="Recurrence Equation｜Gao&#39;s Blog" />
     <meta
       property="og:description"
-      content="Google Foobar Escape Pods｜Gao&#39;s Blog"
+      content="Recurrence Equation｜Gao&#39;s Blog"
     />
     <meta name="author" content="Gao" />
     <meta name="robots" content="index, follow" />
@@ -30,7 +24,10 @@
     />
     <link rel="shortcut icon" href="/images/favicon.jpg" />
 
-    <meta name="keywords" content="algorithms" />
+    <meta
+      name="keywords"
+      content="algorithms,Generating Function,Complexity,Recurrence Equation"
+    />
 
     <meta name="theme-color" content="#600090" />
     <meta name="msapplication-navbutton-color" content="#600090" />
@@ -55,7 +52,7 @@
     />
     <link
       rel="canonical"
-      href="https://vitaminac.github.io/Google-Foobar-Escape-Pods/"
+      href="https://vitaminac.github.io/Recurrence-Equation/"
     />
 
     <!-- jQuery -->
@@ -150,283 +147,260 @@
           <!-- Post Container -->
           <div class="order-lg-2 col-lg-3 col-12 toc-col" style="z-index: 1">
             <ol class="toc">
-              <li class="toc-item toc-level-1">
-                <a class="toc-link" href="#Maximum-flow-problem"
-                  ><span class="toc-text">Maximum flow problem</span></a
+              <li class="toc-item toc-level-2">
+                <a class="toc-link" href="#Introduction"
+                  ><span class="toc-text">Introduction</span></a
+                >
+              </li>
+              <li class="toc-item toc-level-2">
+                <a
+                  class="toc-link"
+                  href="#Solving-Recurrence-Relations-for-Fibonacci-Numbers"
+                  ><span class="toc-text"
+                    >Solving Recurrence Relations for Fibonacci Numbers</span
+                  ></a
                 >
                 <ol class="toc-child">
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Definition"
-                      ><span class="toc-text">Definition</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Transformation"
-                      ><span class="toc-text">Transformation</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Residual-Network"
-                      ><span class="toc-text">Residual Network</span></a
-                    >
-                    <ol class="toc-child">
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Augmenting-Paths"
-                          ><span class="toc-text">Augmenting Paths</span></a
-                        >
-                      </li>
-                    </ol>
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#The-Ford-Fulkerson-Method"
+                  <li class="toc-item toc-level-3">
+                    <a class="toc-link" href="#Define-Generating-Functions"
                       ><span class="toc-text"
-                        >The Ford Fulkerson Method</span
+                        >Define Generating Functions</span
                       ></a
                     >
                   </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Reference"
-                      ><span class="toc-text">Reference</span></a
+                  <li class="toc-item toc-level-3">
+                    <a class="toc-link" href="#Find-The-Relationship"
+                      ><span class="toc-text">Find The Relationship</span></a
+                    >
+                  </li>
+                  <li class="toc-item toc-level-3">
+                    <a class="toc-link" href="#Solve-the-equation"
+                      ><span class="toc-text">Solve the equation</span></a
+                    >
+                  </li>
+                  <li class="toc-item toc-level-3">
+                    <a class="toc-link" href="#Obtain-closed-form-expression"
+                      ><span class="toc-text"
+                        >Obtain closed-form expression</span
+                      ></a
                     >
                   </li>
                 </ol>
+              </li>
+              <li class="toc-item toc-level-2">
+                <a class="toc-link" href="#Reference"
+                  ><span class="toc-text">Reference</span></a
+                >
               </li>
             </ol>
           </div>
 
           <div class="order-lg-1 col-lg-9 col-12 post-container">
-            <p>
-              This problem involves solving the equivalent maximum flow problem.
-              We can use Ford–Fulkerson algorithm with BFS to calculate the
-              total flow.
-            </p>
-            <h1 id="Maximum-flow-problem">
+            <h2 id="Introduction">
               <a
-                href="#Maximum-flow-problem"
+                href="#Introduction"
                 class="headerlink"
-                title="Maximum flow problem"
+                title="Introduction"
               ></a
-              >Maximum flow problem
-            </h1>
-            <p>
-              We can use a directed graph as a flow network where the source
-              produces the elements at some rate and the sink consumes the
-              material at the same rate.
-            </p>
-            <h2 id="Definition">
-              <a href="#Definition" class="headerlink" title="Definition"></a
-              >Definition
+              >Introduction
             </h2>
             <p>
-              We define a flow network $G &#x3D; (V, E)$ as a directed graph in
-              which each edge $(u, y) \in E$ has a nonnegative capacity $c(u, v)
-              \ge 0$ and there is not an edge $(v, u)$ in the reverse direction.
-              We distinguish two vertices in a flow network: a
-              <strong>source s</strong> and a <strong>sink t</strong>, thus for
-              each vertex $v \in V$, the flow network contains a path $ s
-              \rightsquigarrow v \rightsquigarrow t$. A <strong>flow</strong> in
-              $G$ is a real-valued function $f: V \times V \to R$ that satisfies
-              $0 \le f(u, v) \le c(u, v)$ and
-              <strong>flow conservation</strong> implies for all $u \in V -
-              \\\\{s, t\\\\}$, $\sum_{v \in V} f(v, u) &#x3D; \sum_{v \in V}
-              f(u, v)$.
-            </p>
-            <p>
-              We call the nonegative quantity $f(u, v)$ the flow from vertex $u$
-              to vertex $v$. When $(u, v) \notin E$, there can be no flow from
-              $u$ to $v$, and $f(u, v) &#x3D; 0$. The
-              <strong>value</strong> $|f|$ of a flow $f$ is defined as $|f|
-              &#x3D; \sum_{v \in V} f(s, v) - \sum_{v \in V} f(v, s)$. In the
-              <strong>maximum-flow problem</strong>, we are given a flow network
-              $G$ with source $s$ and sink $t$, and we wish to find a flow of
-              maximum value.
-            </p>
-            <h2 id="Transformation">
-              <a
-                href="#Transformation"
-                class="headerlink"
-                title="Transformation"
-              ></a
-              >Transformation
-            </h2>
-            <p>
-              We call the two edges $(v_1, v_2)$ and $(v_2, v_1)$ antiparallel.
-              And if we wish model a flow problem with
-              <strong>antiparallel edges</strong>, we must transform the network
-              into an equivalent one containing without antiparallel edges by
-              adding a new vertex $v^\prime$ and replacing edege $(v_1, v_2)$
-              with the pair of edges $(v_1, v^\prime)$ and $(v^\prime, v_2)$.
-            </p>
-            <p>
-              <img
-                src="equivalent-antiparallel-flow.png"
-                alt="Equivalent Antiparallel Flow"
-              />
-            </p>
-            <p>
-              When there are several sources and sinks, we can reduce the
-              problem to an ordinary maximum flow problem by adding a
-              <strong>supersource</strong> $s$ and a directed edge $(s, s_i)$
-              with capacity $c(s, s_i) &#x3D; \infty$ for each $i&#x3D;1, 2, …,
-              n$ and a new <strong>supersink</strong> $t$ and a directed edge
-              $(t_i, t)$ with capacity $c(t_i, t) &#x3D; \infty$ for each $i
-              &#x3D; 1, 2, .., n$.
-            </p>
-            <p>
-              <img
-                src="equivalent-multiple-sources-sinks-flow.png"
-                alt="Equivalent Multiple Sources Sinks Flow"
-              />
-            </p>
-            <h2 id="Residual-Network">
-              <a
-                href="#Residual-Network"
-                class="headerlink"
-                title="Residual Network"
-              ></a
-              >Residual Network
-            </h2>
-            <p>
-              Given a flow network $G &#x3D; (V, E)$ with source $s$ and sink
-              $t$ and a flow $f$, the <strong>residual network</strong> $G_{f}$
-              consists of <strong>residual edges</strong> with capacities
-              $c_{f}(u, v)$
-            </p>
-            <p>
-              $$<br />c_{f}(u, v) &#x3D;<br />\begin{cases}<br />
-              c(u, v) - f(u, v) &amp; \text{ if } (u, v) \in E\\\\<br />
-              f(v, u) &amp; \text{ if } (v, u) \in E\\\\<br />
-              0 &amp; \text{otherwise}\\\\<br />\end{cases}<br />$$
-            </p>
-            <p><img src="residual-network.png" alt="Residual Network" /></p>
-            <h3 id="Augmenting-Paths">
-              <a
-                href="#Augmenting-Paths"
-                class="headerlink"
-                title="Augmenting Paths"
-              ></a
-              >Augmenting Paths
-            </h3>
-            <p>
-              Given a flow network $G &#x3D; (V, E)$ and a flow $f$, an
-              <strong>augmenting path</strong> $p$ is a simple path from $s$ to
-              $t$ in the residual network $G_{f}$. We call the maximum amount by
-              which we can increase the flow on each edge in an augmenting path
-              $p$ the <strong>residual capacity</strong> of $p$, given by
-              $c_f(p) &#x3D; \min{ \\\\{ c_f(u, v) : (u, v) \text{ is on } p
-              \\\\} }$.
-            </p>
-            <h2 id="The-Ford-Fulkerson-Method">
-              <a
-                href="#The-Ford-Fulkerson-Method"
-                class="headerlink"
-                title="The Ford Fulkerson Method"
-              ></a
-              >The Ford Fulkerson Method
-            </h2>
-            <p>
-              The Ford-Fulkerson method is a
-              <strong>greedy algorithm</strong> that iteratively increases the
-              value of the flow. At each iteration.
-            </p>
-            <p>
-              Given a network $G &#x3D; (V, E)$ with flow capacity $c$, a source
-              node $s$ and a sink node $t$
-            </p>
-            <ol>
-              <li>$f \leftarrow 0$</li>
-              <li>$f(u, v) \leftarrow 0$ for all edges $(u, v) \in E$</li>
-              <li>
-                <strong>while</strong> there exists an
-                <strong>augmenting path</strong> $p$
-                <ol>
-                  <li>Find $c_f(p)$</li>
-                  <li>$f \leftarrow f + c_f(p)$</li>
-                  <li>
-                    for each edge $(u, v) \in p$
-                    <ol>
-                      <li>
-                        if $(u, v) \in E$
-                        <ol>
-                          <li>$f(u, v) \leftarrow f(u, v) + c_f(p)$</li>
-                        </ol>
-                      </li>
-                      <li>
-                        else
-                        <ol>
-                          <li>$f(v, u) \leftarrow f(v, u) - c_f(p)$</li>
-                        </ol>
-                      </li>
-                    </ol>
-                  </li>
-                </ol>
-              </li>
-              <li><strong>return</strong> $f$</li>
-            </ol>
-            <p>
+              Sometimes we need to know the complexity of a recursive function,
+              we usually use induction method (or sometimes is called
+              substitution method), recursion-tree method and
               <a
                 target="_blank"
                 rel="noopener"
-                href="https://github.com/vitaminac/code/blob/2c9df93333/judge/src/main/java/foobar/l4/EscapePods.java"
-                >Escape Pods</a
+                href="https://en.wikipedia.org/wiki/Master_theorem_(analysis_of_algorithms)"
+                >master theorem</a
+              >. However all these methods only give a big $\mathcal{O}$ uppper
+              bound approximation. If we want to find a closed-form expression
+              of recursive algorithm’s complexity we can solve
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://en.wikipedia.org/wiki/Recurrence_relation"
+                >recurrence equation</a
               >
+              using <strong>generating functions</strong>.
+            </p>
+            <p>
+              A famous example for the recurrence equation is for the Fibonacci
+              numbers
+            </p>
+            <p>
+              $$<br />\begin{split}<br />f_0 &amp;&#x3D; 0\\\\<br />f_1
+              &amp;&#x3D; 1\\\\<br />f_n &amp;&#x3D; f_{n - 1} + f_{n - 2} \quad
+              n \ge 2<br />\end{split}<br />$$
+            </p>
+            <p>
+              By using the generating functions one can obtained the closed-form
+              expression for the complexity of a recursive algorithm by
+              following these steps
+            </p>
+            <ol>
+              <li>Define some proper <strong>generating functions</strong></li>
+              <li>Find the <strong>relationship</strong> between them</li>
+              <li>
+                Solve the equations in terms of other generating functions
+              </li>
+              <li>
+                Find the coefficients using
+                <strong>partial fractions</strong> and
+                <strong>differentiation</strong> and obtain the closed-form
+                expression
+              </li>
+            </ol>
+            <h2 id="Solving-Recurrence-Relations-for-Fibonacci-Numbers">
+              <a
+                href="#Solving-Recurrence-Relations-for-Fibonacci-Numbers"
+                class="headerlink"
+                title="Solving Recurrence Relations for Fibonacci Numbers"
+              ></a
+              >Solving Recurrence Relations for Fibonacci Numbers
+            </h2>
+            <h3 id="Define-Generating-Functions">
+              <a
+                href="#Define-Generating-Functions"
+                class="headerlink"
+                title="Define Generating Functions"
+              ></a
+              >Define Generating Functions
+            </h3>
+            <p>
+              $$<br />G(x) \longleftrightarrow \langle f_0, f_1, f_2, f_3, \dots
+              \rangle \longleftrightarrow \langle 0, 1, f_1 + f_0, f_2 + f_1,
+              f_3 + f_2, \dots \rangle\\\\<br />$$
+            </p>
+            <h3 id="Find-The-Relationship">
+              <a
+                href="#Find-The-Relationship"
+                class="headerlink"
+                title="Find The Relationship"
+              ></a
+              >Find The Relationship
+            </h3>
+            <p>
+              $$<br />\begin{split}<br />\langle 0, 1, 0, 0, 0, \dots \rangle
+              &amp; \longleftrightarrow x\\\\<br />\langle 0, f_0, f_1, f_2,
+              f_3, \dots \rangle &amp; \longleftrightarrow x \cdot G(x)\\\\<br />\langle
+              0, 0, f_0, f_1, f_2, \dots \rangle &amp; \longleftrightarrow x^2
+              \cdot G(x)\\\\<br />\langle 0, 1 + f_0, f_1 + f_2, f_2 + f_1, f_3
+              + f_2, \dots \rangle &amp; \longleftrightarrow x + x \cdot G(x) +
+              x^2 \cdot G(x)\\\\<br />\end{split}<br />$$
+            </p>
+            <h3 id="Solve-the-equation">
+              <a
+                href="#Solve-the-equation"
+                class="headerlink"
+                title="Solve the equation"
+              ></a
+              >Solve the equation
+            </h3>
+            <p>
+              $$<br />\begin{split}<br />G(x) &amp;&#x3D; x + x \cdot G(x) + x^2
+              \cdot G(x)\\\\<br />G(x) &amp;&#x3D; \frac{x}{1 - x - x^2}<br />\end{split}<br />$$
+            </p>
+            <h3 id="Obtain-closed-form-expression">
+              <a
+                href="#Obtain-closed-form-expression"
+                class="headerlink"
+                title="Obtain closed-form expression"
+              ></a
+              >Obtain closed-form expression
+            </h3>
+            <p>We can factor the denominator</p>
+            <p>$$<br />1 - x - x^2 &#x3D; (1 - a_1 x) (1 - a_2 x)<br />$$</p>
+            <p>so we can calculate that</p>
+            <p>
+              $$<br />\begin{split}<br />a_1 &amp;&#x3D; \frac{1 +
+              \sqrt{5}}{2}\\\\<br />a_2 &amp;&#x3D; \frac{1 -
+              \sqrt{5}}{2}\\\\<br />\end{split}<br />$$
+            </p>
+            <p>then we can find $c_1$ and $c_2$ that satisfies</p>
+            <p>
+              $$<br />\frac{x}{1 - x - x^2} &#x3D; \frac{c_1}{1 - a_1 x} +
+              \frac{c_2}{1 - a_2 x}<br />$$
+            </p>
+            <p>after some calculates (see reference #1) we can know</p>
+            <p>
+              $$<br />\begin{split}<br />c_1 + c_2 &amp;&#x3D; 0\\\\<br />-(c_1
+              a_2 + c_2 a_1) &amp;&#x3D; 1\\\\<br />\end{split}<br />$$
+            </p>
+            <p>so we get</p>
+            <p>
+              $$<br />\begin{split}<br />c_1 &#x3D; \frac{1}{a_1 - a_2}\\\\<br />c_2
+              &#x3D; \frac{-1}{a_1 - a_2}\\\\<br />\end{split}<br />$$
+            </p>
+            <p>using partial fractions we know</p>
+            <p>
+              $$<br />f_n &#x3D; \frac{a_1^n}{\sqrt{5}} - \frac{a_2^n}{\sqrt{5}}
+              &#x3D; \frac{1}{\sqrt{5}} \Bigg( \Big( \frac{1 + \sqrt{5}}{2}
+              \Big)^n - \Big( \frac{1 - \sqrt{5}}{2} \Big)^n \Bigg)<br />$$
             </p>
             <h2 id="Reference">
               <a href="#Reference" class="headerlink" title="Reference"></a
               >Reference
             </h2>
-            <ul>
-              <li>Introduction to Algorithms, pages 708~730</li>
+            <ol>
               <li>
                 <a
                   target="_blank"
                   rel="noopener"
-                  href="https://en.wikipedia.org/wiki/Ford%E2%80%93Fulkerson_algorithm#Algorithm"
-                  >Ford–Fulkerson algorithm</a
+                  href="https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/aadb9105d1139c866272ca0425fc6440_MIT6_042JF10_chap12.pdf"
+                  >MIT 6.042j 2010 Readings Chapter 12 - Generating Functions</a
                 >
               </li>
               <li>
                 <a
                   target="_blank"
                   rel="noopener"
-                  href="https://www.geeksforgeeks.org/ford-fulkerson-algorithm-for-maximum-flow-problem/"
-                  >GeeksforGeeks: Ford-Fulkerson Algorithm for Maximum Flow
-                  Problem</a
+                  href="https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/18b5495f7408055f9679e3afebb108ab_MIT6_042JF10_chap10.pdf"
+                  >MIT 6.042j 2010 Readings Chapter 10 - Recurrences</a
                 >
               </li>
               <li>
                 <a
                   target="_blank"
                   rel="noopener"
-                  href="https://www.youtube.com/watch?v=SqGeM3FYkfo"
-                  >Edmonds Karp Algorithm for Max-Flow</a
+                  href="https://courses.csail.mit.edu/6.042/spring18/mcs.pdf"
+                  >MIT 6.042j 2018 Book</a
                 >
               </li>
               <li>
                 <a
                   target="_blank"
                   rel="noopener"
-                  href="https://surajshetiya.github.io/Google-foobar/#round-4"
-                  >Google Foobar Round 4</a
+                  href="http://discrete.openmathbooks.org/dmoi2/section-27.html"
+                  >Discrete Mathematics - An Open Introduction: 5.1 Generating
+                  Functions</a
                 >
               </li>
               <li>
                 <a
                   target="_blank"
                   rel="noopener"
-                  href="https://github.com/nkapliev/google-foo.bar/blob/master/problems/4.2_escape_pods.py"
-                  >4.2_escape_pods.py</a
+                  href="https://math.stackexchange.com/questions/206158/solving-recurrence-relation-in-2-variables"
+                  >Solving recurrence relation in 2 variables</a
                 >
               </li>
               <li>
                 <a
                   target="_blank"
                   rel="noopener"
-                  href="http://xiaohanyu.me/posts/2017-04-30-google-foobar-interview/#cb8"
-                  >Google foo.bar 面试记</a
+                  href="https://www.enjoyalgorithms.com/blog/time-complexity-analysis-of-recursion-in-programming"
+                  >Time Complexity Analysis of Recursive Algorithms</a
                 >
               </li>
-            </ul>
+              <li>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://www.geeksforgeeks.org/how-to-analyse-complexity-of-recurrence-relation/"
+                  >How to analyse Complexity of Recurrence Relation</a
+                >
+              </li>
+            </ol>
 
             <hr />
 
@@ -439,6 +413,14 @@
                   href="/posts/Google-Foobar-Dodge-The-Lasers/"
                 >
                   Google Foobar Dodge The Lasers
+                </a>
+              </li>
+
+              <li
+                class="list-group-item list-group-item-action flex-column align-items-start"
+              >
+                <a target="_parent" href="/posts/Google-Foobar-Escape-Pods/">
+                  Google Foobar Escape Pods
                 </a>
               </li>
 
@@ -500,16 +482,16 @@
               <li
                 class="list-group-item list-group-item-action flex-column align-items-start"
               >
-                <a target="_parent" href="/posts/Recurrence-Equation/">
-                  Recurrence Equation
+                <a target="_parent" href="/posts/Tree-Diameter/">
+                  Tree Diameter
                 </a>
               </li>
 
               <li
                 class="list-group-item list-group-item-action flex-column align-items-start"
               >
-                <a target="_parent" href="/posts/Tree-Diameter/">
-                  Tree Diameter
+                <a target="_parent" href="/posts/Generating-Function/">
+                  Generating Function
                 </a>
               </li>
             </ul>
@@ -578,24 +560,8 @@
 
     <script type="text/javascript" src="/js/common.js"></script>
 
-    <script type="text/javascript">
-      $("code").addClass("language-java");
-    </script>
-    <script type="text/javascript" src="/js/prism.js"></script>
-    <script type="text/javascript">
-      addCSS("//css/prism.css");
-      Prism.highlightAll();
-    </script>
-
     <!-- render ipynb file -->
 
     <!-- render ipynb file -->
-
-    <script type="text/javascript" src="/js/render.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        render_files("java", "java");
-      });
-    </script>
   </body>
 </html>

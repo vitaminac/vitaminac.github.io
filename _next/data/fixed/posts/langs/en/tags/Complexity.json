@@ -1,14 +1,8 @@
 {
   "pageProps": {
     "lang": "en",
-    "tag": "Generating Function",
+    "tag": "Complexity",
     "previews": [
-      {
-        "slug": "Generating-Function",
-        "title": "Generating Function",
-        "date": "2024-10-28",
-        "content": "Definition  We define the generating function as the characteristic function which encodes an infinite sequence  $$ \\langle g_0, g_1, g_2, g_3 \\dots..."
-      },
       {
         "slug": "Recurrence-Equation",
         "title": "Recurrence Equation",

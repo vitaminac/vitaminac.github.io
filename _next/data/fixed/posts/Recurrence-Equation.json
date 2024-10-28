@@ -1,0 +1,42 @@
+{
+  "pageProps": {
+    "postData": {
+      "title": "Recurrence Equation",
+      "lang": "en",
+      "slug": "Recurrence-Equation",
+      "date": "2024-10-27",
+      "tags": [
+        "algorithms",
+        "Complexity",
+        "Recurrence Equation",
+        "Generating Function"
+      ],
+      "path": "/Recurrence-Equation/index.html"
+    },
+    "lang": "en",
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          },
+          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
+        }
+      },
+      "initialLocale": "en",
+      "ns": ["navbar", "post-layout"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

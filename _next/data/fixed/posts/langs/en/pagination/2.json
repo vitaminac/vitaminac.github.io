@@ -3,6 +3,12 @@
     "lang": "en",
     "previews": [
       {
+        "slug": "RaspberryPi4B-Setup",
+        "title": "Raspberry Pi 4B Setup",
+        "date": "2022-07-10 13:00:17",
+        "content": "Buy a Raspberry Pi 4B  You can buy the Raspberry Pi 4B board on Amazon, the recommended version is 4 GB. You may also need to buy a SD card, and..."
+      },
+      {
         "slug": "Windows7-Vagrant",
         "title": "How to Create a Windows7 Vagrant Base Box",
         "date": "2022-03-26 11:55:38",
@@ -55,12 +61,6 @@
         "title": "Information Security",
         "date": "2021-03-28 11:11:17",
         "content": "Information Security  Information security(infosec), is the practice of protecting information by mitigating information risks like ..."
-      },
-      {
-        "slug": "Minimalist-Linux-Workspace",
-        "title": "Minimalist Linux Workspace",
-        "date": "2021-01-31 18:25:16",
-        "content": "Download Image  Download Debian image, let we choose the net-install ISO since we don't need any heavy desktop enviroment e.g. KDE, GNOME, etc... . ..."
       }
     ],
     "prevPageUrl": "/posts/langs/en/pagination/1",

@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="content-language" content="en" />
     <link rel="icon" href="/favicon.ico" />
-    <title>Gao&#x27;s blog</title>
-    <meta name="og:title" content="Gao&#x27;s blog" />
+    <title>Recurrence Equation</title>
+    <meta name="og:title" content="Recurrence Equation" />
     <meta name="author" content="Gao" />
-    <meta name="description" content="Gao&#x27;s blog" />
-    <meta name="og:description" content="Gao&#x27;s blog" />
+    <meta
+      name="keywords"
+      content="algorithms,Complexity,Recurrence Equation,Generating Function"
+    />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="next-head-count" content="11" />
+    <meta name="next-head-count" content="10" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -51,16 +53,6 @@
       href="/_next/static/css/02f4e97d1c9ded28.css"
       data-n-g=""
     />
-    <link
-      rel="preload"
-      href="/_next/static/css/ef9f9e2030bad8a8.css"
-      as="style"
-    />
-    <link
-      rel="stylesheet"
-      href="/_next/static/css/ef9f9e2030bad8a8.css"
-      data-n-p=""
-    />
     <noscript data-n-css=""></noscript>
     <script
       defer=""
@@ -72,8 +64,9 @@
     <script src="/_next/static/chunks/main.js" defer=""></script>
     <script src="/_next/static/chunks/pages/_app.js" defer=""></script>
     <script src="/_next/static/chunks/470.js" defer=""></script>
+    <script src="/_next/static/chunks/287.js" defer=""></script>
     <script
-      src="/_next/static/chunks/pages/posts/langs/%5Blang%5D/pagination/%5Bpagination%5D.js"
+      src="/_next/static/chunks/pages/posts/%5Bslug%5D.js"
       defer=""
     ></script>
     <script src="/_next/static/fixed/_buildManifest.js" defer=""></script>
@@ -151,141 +144,66 @@
           </div>
         </div>
       </nav>
-      <div class="tw-mx-auto tw-w-11/12 tw-max-w-screen-xl">
-        <header>
-          <section class="AboutMe_about__UiMOu tw-text-center tw-text-gray-300">
-            <img
-              alt="Avatar"
-              loading="lazy"
-              width="108"
-              height="108"
-              decoding="async"
-              data-nimg="1"
-              class="tw-m-auto"
-              style="
-                color: transparent;
-                background-size: cover;
-                background-position: 50% 50%;
-                background-repeat: no-repeat;
-                background-image: url(&quot;data:image/svg+xml;charset=utf-8,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 280 320&#x27;%3E%3Cfilter id=&#x27;b&#x27; color-interpolation-filters=&#x27;sRGB&#x27;%3E%3CfeGaussianBlur stdDeviation=&#x27;20&#x27;/%3E%3CfeColorMatrix values=&#x27;1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 100 -1&#x27; result=&#x27;s&#x27;/%3E%3CfeFlood x=&#x27;0&#x27; y=&#x27;0&#x27; width=&#x27;100%25&#x27; height=&#x27;100%25&#x27;/%3E%3CfeComposite operator=&#x27;out&#x27; in=&#x27;s&#x27;/%3E%3CfeComposite in2=&#x27;SourceGraphic&#x27;/%3E%3CfeGaussianBlur stdDeviation=&#x27;20&#x27;/%3E%3C/filter%3E%3Cimage width=&#x27;100%25&#x27; height=&#x27;100%25&#x27; x=&#x27;0&#x27; y=&#x27;0&#x27; preserveAspectRatio=&#x27;none&#x27; style=&#x27;filter: url(%23b);&#x27; href=&#x27;data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoKCgoKCgsMDAsPEA4QDxYUExMUFiIYGhgaGCIzICUgICUgMy03LCksNy1RQDg4QFFeT0pPXnFlZXGPiI+7u/sBCgoKCgoKCwwMCw8QDhAPFhQTExQWIhgaGBoYIjMgJSAgJSAzLTcsKSw3LVFAODhAUV5PSk9ecWVlcY+Ij7u7+//CABEIAAgABwMBIgACEQEDEQH/xAAoAAEBAAAAAAAAAAAAAAAAAAAABwEBAQAAAAAAAAAAAAAAAAAAAQT/2gAMAwEAAhADEAAAAK6JX//EABsQAAIBBQAAAAAAAAAAAAAAAAECEQADEyFR/9oACAEBAAE/AEzJfYluxI1X/8QAHREAAQIHAAAAAAAAAAAAAAAAAgABBBESEyMyQf/aAAgBAgEBPwCGG2BtWRZD2efV/8QAFhEAAwAAAAAAAAAAAAAAAAAAAALB/9oACAEDAQE/AGh//9k=&#x27;/%3E%3C/svg%3E&quot;);
-              "
-              src="/_next/static/media/avatar.f1819002.jpg"
-            />
-            <h5>Gao</h5>
-            <ul class="list-inline text-center">
-              <li class="list-inline-item"><i class="fab fa-android"></i></li>
-              <li class="list-inline-item"><i class="fab fa-angular"></i></li>
-              <li class="list-inline-item"><i class="fas fa-blog"></i></li>
-              <li class="list-inline-item"><i class="fab fa-bootstrap"></i></li>
-              <li class="list-inline-item"><i class="fab fa-chrome"></i></li>
-              <li class="list-inline-item"><i class="fas fa-cloud"></i></li>
-              <li class="list-inline-item"><i class="fas">C</i></li>
-              <li class="list-inline-item"><i class="fas">C#</i></li>
-              <li class="list-inline-item"><i class="fab fa-docker"></i></li>
-              <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
-              <li class="list-inline-item"><i class="fas fa-database"></i></li>
-              <li class="list-inline-item"><i class="fab fa-git"></i></li>
-              <li class="list-inline-item"><i class="fab fa-html5"></i></li>
-              <li class="list-inline-item"><i class="fab fa-java"></i></li>
-              <li class="list-inline-item"><i class="fab fa-js"></i></li>
-              <li class="list-inline-item"><i class="fab fa-linux"></i></li>
-              <li class="list-inline-item"><i class="fab fa-markdown"></i></li>
-              <li class="list-inline-item"><i class="fab fa-microsoft"></i></li>
-              <li class="list-inline-item"><i class="fab fa-node-js"></i></li>
-              <li class="list-inline-item"><i class="fab fa-python"></i></li>
-              <li class="list-inline-item">
-                <i class="fab fa-raspberry-pi"></i>
-              </li>
-              <li class="list-inline-item"><i class="fab fa-react"></i></li>
-              <li class="list-inline-item"><i class="fab fa-r-project"></i></li>
-              <li class="list-inline-item"><i class="fas fa-server"></i></li>
-              <li class="list-inline-item"><i class="fab fa-trello"></i></li>
-              <li class="list-inline-item"><i class="fab fa-vuejs"></i></li>
-            </ul>
-            <p>
-              It is the time you have wasted for your rose that makes your rose
-              so important.
-            </p>
-          </section>
-        </header>
-        <main>
-          <hr />
-          <section class="tw-min-h-32">
-            <h4>
-              <a
-                class="tw-text-black tw-no-underline"
-                href="/posts/Lehman-laws/"
-                >Lehman Laws</a
-              >
-            </h4>
-            <span
-              ><i class="fa-regular fa-calendar"></i
-              ><time class="tw-pl-1.5" datetime="2019-05-12 21:53:33"
-                >May 12, 2019</time
-              ></span
-            >
-            <p class="tw-mt-3">
-              The Lehman laws describe a balance between forces driving new
-              developments on one hand, and forces that slow down progress on
-              the other hand. Lehman...
-            </p>
-          </section>
-          <hr />
-          <section class="tw-min-h-32">
-            <h4>
-              <a
-                class="tw-text-black tw-no-underline"
-                href="/posts/Survivorship-bias/"
-                >Survivorship bias</a
-              >
-            </h4>
-            <span
-              ><i class="fa-regular fa-calendar"></i
-              ><time class="tw-pl-1.5" datetime="2019-03-25 22:57:23"
-                >March 25, 2019</time
-              ></span
-            >
-            <p class="tw-mt-3">
-              Introduction Survivorship bias or survival bias is the logical
-              error of concentrating on the people or things that made it past
-              some selection...
-            </p>
-          </section>
-          <hr />
-          <section class="tw-min-h-32">
-            <h4>
-              <a
-                class="tw-text-black tw-no-underline"
-                href="/posts/Microeconomics/"
-                >Microeconomics</a
-              >
-            </h4>
-            <span
-              ><i class="fa-regular fa-calendar"></i
-              ><time class="tw-pl-1.5" datetime="2019-01-31 22:53:35"
-                >January 31, 2019</time
-              ></span
-            >
-            <p class="tw-mt-3">
-              Supply, demand, and market equilibrium Introduction to economics
-              He being an economic actor, neither intends to promote the public
-              interest, nor...
-            </p>
-          </section>
-          <hr />
-        </main>
-        <ul
-          role="navigation"
-          class="tw-flex tw-list-none tw-flex-row tw-justify-between tw-p-0"
+      <header
+        class="tw-flex tw-h-96 tw-w-screen tw-flex-col tw-content-center tw-justify-center tw-bg-cover tw-bg-center tw-bg-no-repeat tw-text-center tw-text-white"
+        style="
+          background-image: url(/_next/static/media/default-post-preview.c96b099a.jpeg);
+        "
+      >
+        <h1>Recurrence Equation</h1>
+        <p>Author: Gao</p>
+        <span
+          ><i class="fa-regular fa-calendar"></i
+          ><time class="tw-pl-1.5" datetime="2024-10-27"
+            >October 27, 2024</time
+          ></span
         >
-          <li>
-            <a
-              class="tw-block tw-rounded tw-border tw-border-solid tw-border-neutral-100 tw-p-4 tw-font-mono tw-text-sm tw-font-extrabold tw-tracking-wider tw-text-black tw-no-underline hover:tw-bg-sky-300 hover:tw-text-white"
-              href="/posts/langs/en/pagination/4/"
-              >← NEWER POSTS</a
-            >
-          </li>
-        </ul>
+        <section class="tw-mt-3 tw-text-center">
+          <p>Tags<!-- -->:</p>
+          <ul class="tw-p-0">
+            <li class="tw-inline tw-px-1">
+              <a
+                class="tw-m-0.5 tw-inline-block tw-rounded tw-border tw-border-solid tw-border-white tw-bg-neutral-300 tw-px-2 tw-text-sm tw-leading-6 tw-text-white tw-no-underline hover:tw-bg-sky-300"
+                href="/posts/langs/en/tags/algorithms/"
+                >algorithms</a
+              >
+            </li>
+            <li class="tw-inline tw-px-1">
+              <a
+                class="tw-m-0.5 tw-inline-block tw-rounded tw-border tw-border-solid tw-border-white tw-bg-neutral-300 tw-px-2 tw-text-sm tw-leading-6 tw-text-white tw-no-underline hover:tw-bg-sky-300"
+                href="/posts/langs/en/tags/Complexity/"
+                >Complexity</a
+              >
+            </li>
+            <li class="tw-inline tw-px-1">
+              <a
+                class="tw-m-0.5 tw-inline-block tw-rounded tw-border tw-border-solid tw-border-white tw-bg-neutral-300 tw-px-2 tw-text-sm tw-leading-6 tw-text-white tw-no-underline hover:tw-bg-sky-300"
+                href="/posts/langs/en/tags/Recurrence%20Equation/"
+                >Recurrence Equation</a
+              >
+            </li>
+            <li class="tw-inline tw-px-1">
+              <a
+                class="tw-m-0.5 tw-inline-block tw-rounded tw-border tw-border-solid tw-border-white tw-bg-neutral-300 tw-px-2 tw-text-sm tw-leading-6 tw-text-white tw-no-underline hover:tw-bg-sky-300"
+                href="/posts/langs/en/tags/Generating%20Function/"
+                >Generating Function</a
+              >
+            </li>
+          </ul>
+        </section>
+      </header>
+      <div class="tw-mx-auto tw-w-11/12">
+        <main>
+          <article>
+            <iframe
+              title="Recurrence-Equation"
+              src="/Recurrence-Equation/index.html"
+              width="100%"
+              height="0px"
+            ></iframe>
+          </article>
+        </main>
+        <aside></aside>
       </div>
       <footer class="tw-text-center tw-text-gray-400">
         <div class="row justify-content-center">
@@ -402,28 +320,20 @@
       {
         "props": {
           "pageProps": {
+            "postData": {
+              "title": "Recurrence Equation",
+              "lang": "en",
+              "slug": "Recurrence-Equation",
+              "date": "2024-10-27",
+              "tags": [
+                "algorithms",
+                "Complexity",
+                "Recurrence Equation",
+                "Generating Function"
+              ],
+              "path": "/Recurrence-Equation/index.html"
+            },
             "lang": "en",
-            "previews": [
-              {
-                "slug": "Lehman-laws",
-                "title": "Lehman Laws",
-                "date": "2019-05-12 21:53:33",
-                "content": "The Lehman laws describe a balance between forces driving new developments on one hand, and forces that slow down progress on the other hand.  Lehman..."
-              },
-              {
-                "slug": "Survivorship-bias",
-                "title": "Survivorship bias",
-                "date": "2019-03-25 22:57:23",
-                "content": "Introduction  Survivorship bias or survival bias is the logical error of concentrating on the people or things that made it past some selection..."
-              },
-              {
-                "slug": "Microeconomics",
-                "title": "Microeconomics",
-                "date": "2019-01-31 22:53:35",
-                "content": "Supply, demand, and market equilibrium Introduction to economics  He being an economic actor, neither intends to promote the public interest, nor..."
-              }
-            ],
-            "prevPageUrl": "/posts/langs/en/pagination/4",
             "_nextI18Next": {
               "initialI18nStore": {
                 "en": {
@@ -435,14 +345,14 @@
                     "es": "Spanish",
                     "zh": "Chinese"
                   },
-                  "paginated-index": {
-                    "PrevPage": "← NEWER POSTS",
-                    "NextPage": "OLDER POSTS →"
+                  "post-layout": {
+                    "Author": "Author: {{author}}",
+                    "Tags": "Tags"
                   }
                 }
               },
               "initialLocale": "en",
-              "ns": ["navbar", "paginated-index"],
+              "ns": ["navbar", "post-layout"],
               "userConfig": {
                 "i18n": {
                   "defaultLocale": "en",
@@ -459,8 +369,8 @@
           },
           "__N_SSG": true
         },
-        "page": "/posts/langs/[lang]/pagination/[pagination]",
-        "query": { "lang": "en", "pagination": "5" },
+        "page": "/posts/[slug]",
+        "query": { "slug": "Recurrence-Equation" },
         "buildId": "fixed",
         "isFallback": false,
         "gsp": true,

@@ -4,6 +4,12 @@
     "tag": "algorithms",
     "previews": [
       {
+        "slug": "Recurrence-Equation",
+        "title": "Recurrence Equation",
+        "date": "2024-10-27",
+        "content": "Introduction  Sometimes we need to know the complexity of a recursive function, we usually use induction method (or sometimes is called substitution..."
+      },
+      {
         "slug": "Tree-Diameter",
         "title": "Tree Diameter",
         "date": "2020-03-07 10:00:44",
