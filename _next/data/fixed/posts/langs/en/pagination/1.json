@@ -3,6 +3,12 @@
     "lang": "en",
     "previews": [
       {
+        "slug": "Generating-Function",
+        "title": "Generating Function",
+        "date": "2024-10-28",
+        "content": "Definition  We define the generating function as the characteristic function which encodes an infinite sequence  $$ \\langle a_0, a_1, a_2, a_3 \\dots..."
+      },
+      {
         "slug": "perplexity",
         "title": "Perplexity",
         "date": "2024-10-14 23:41:47",
@@ -55,12 +61,6 @@
         "title": "Raspberry Pi 4B Setup",
         "date": "2022-07-10 13:00:17",
         "content": "Buy a Raspberry Pi 4B  You can buy the Raspberry Pi 4B board on Amazon, the recommended version is 4 GB. You may also need to buy a SD card, and..."
-      },
-      {
-        "slug": "Windows7-Vagrant",
-        "title": "How to Create a Windows7 Vagrant Base Box",
-        "date": "2022-03-26 11:55:38",
-        "content": "How to Create a Windows 7 Vagrant Base Box? Introduction  Since Vagrant 1.6 release, Vagrant add support for Windows VMs. We will go through the..."
       }
     ],
     "nextPageUrl": "/posts/langs/en/pagination/2",

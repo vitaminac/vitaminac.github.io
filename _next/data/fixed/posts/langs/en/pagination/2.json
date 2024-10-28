@@ -3,6 +3,12 @@
     "lang": "en",
     "previews": [
       {
+        "slug": "Windows7-Vagrant",
+        "title": "How to Create a Windows7 Vagrant Base Box",
+        "date": "2022-03-26 11:55:38",
+        "content": "How to Create a Windows 7 Vagrant Base Box? Introduction  Since Vagrant 1.6 release, Vagrant add support for Windows VMs. We will go through the..."
+      },
+      {
         "slug": "Diagonalization",
         "title": "Diagonalization",
         "date": "2022-01-09 11:36:05",
@@ -55,12 +61,6 @@
         "title": "Minimalist Linux Workspace",
         "date": "2021-01-31 18:25:16",
         "content": "Download Image  Download Debian image, let we choose the net-install ISO since we don't need any heavy desktop enviroment e.g. KDE, GNOME, etc... . ..."
-      },
-      {
-        "slug": "Testable-Design",
-        "title": "Testable Design",
-        "date": "2021-01-24 20:30:40",
-        "content": "Guidelines for Testable Design Testability issues  A programmer struggling to write a test is facing off against one of a few common show-stoppers...."
       }
     ],
     "prevPageUrl": "/posts/langs/en/pagination/1",

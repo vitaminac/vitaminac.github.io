@@ -3,6 +3,12 @@
     "lang": "en",
     "previews": [
       {
+        "slug": "Google-Foobar-Escape-Pods",
+        "title": "Google Foobar Escape Pods",
+        "date": "2019-11-22 22:35:28",
+        "content": "This problem involves solving the equivalent maximum flow problem. We can use Ford–Fulkerson algorithm with BFS to calculate the total flow.  Maximum..."
+      },
+      {
         "slug": "Install-Windows-Sandbox-Win10Home",
         "title": "Install Windows Sandbox in Windoes 10 Home Edition",
         "date": "2019-11-16 15:07:28",
@@ -55,12 +61,6 @@
         "title": "Lehman Laws",
         "date": "2019-05-12 21:53:33",
         "content": "The Lehman laws describe a balance between forces driving new developments on one hand, and forces that slow down progress on the other hand.  Lehman..."
-      },
-      {
-        "slug": "Survivorship-bias",
-        "title": "Survivorship bias",
-        "date": "2019-03-25 22:57:23",
-        "content": "Introduction  Survivorship bias or survival bias is the logical error of concentrating on the people or things that made it past some selection..."
       }
     ],
     "prevPageUrl": "/posts/langs/en/pagination/3",
