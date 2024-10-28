@@ -7,7 +7,7 @@
         "slug": "Generating-Function",
         "title": "Generating Function",
         "date": "2024-10-28",
-        "content": "Definition  We define the generating function as the characteristic function which encodes an infinite sequence  $$ \\langle a_0, a_1, a_2, a_3 \\dots..."
+        "content": "Definition  We define the generating function as the characteristic function which encodes an infinite sequence  $$ \\langle g_0, g_1, g_2, g_3 \\dots..."
       }
     ],
     "_nextI18Next": {

@@ -234,10 +234,10 @@
               We define the generating function as the characteristic function
               which encodes an infinite sequence
             </p>
-            <p>$$<br />\langle a_0, a_1, a_2, a_3 \dots \rangle<br />$$</p>
+            <p>$$<br />\langle g_0, g_1, g_2, g_3 \dots \rangle<br />$$</p>
             <p>as below</p>
             <p>
-              $$<br />G(x) &#x3D; \sum_{i &#x3D; 0}^{\infty} a_{i}x^{i}<br />$$
+              $$<br />G(x) &#x3D; \sum_{i &#x3D; 0}^{\infty} g_{i}x^{i}<br />$$
             </p>
             <p>
               For example, the generating function of the following sequences
@@ -281,15 +281,15 @@
             </h3>
             <p>If</p>
             <p>
-              $$<br />\langle a_0, a_1, a_2, a_3, \dots \rangle
+              $$<br />\langle g_0, g_1, g_2, g_3, \dots \rangle
               \longleftrightarrow G(x)\\\\<br />$$
             </p>
             <p>then</p>
             <p>
-              $$<br />\langle c \cdot a_0, c \cdot a_1, c \cdot a_2, c \cdot
-              a_3, \dots \rangle \longleftrightarrow H(x) &#x3D; \sum_{i &#x3D;
-              0}^{\infty} c \cdot a_{i}x^{i} &#x3D; c \cdot \sum_{i &#x3D;
-              0}^{\infty} a_{i}x^{i} &#x3D; c \cdot G(x)\\\\<br />$$
+              $$<br />\langle c \cdot g_0, c \cdot g_1, c \cdot g_2, c \cdot
+              g_3, \dots \rangle \longleftrightarrow H(x) &#x3D; \sum_{i &#x3D;
+              0}^{\infty} c \cdot g_{i}x^{i} &#x3D; c \cdot \sum_{i &#x3D;
+              0}^{\infty} g_{i}x^{i} &#x3D; c \cdot G(x)\\\\<br />$$
             </p>
             <p>For Example</p>
             <p>
@@ -304,16 +304,16 @@
             </h3>
             <p>If</p>
             <p>
-              $$<br />\langle a_0, a_1, a_2, a_3, \dots \rangle
-              \longleftrightarrow G(x)\\\\<br />\langle b_0, b_1, b_2, b_3,
+              $$<br />\langle g_0, g_1, g_2, g_3, \dots \rangle
+              \longleftrightarrow G(x)\\\\<br />\langle h_0, h_1, h_2, h_3,
               \dots \rangle \longleftrightarrow H(x)\\\\<br />$$
             </p>
             <p>then</p>
             <p>
-              $$<br />\langle a_0 + b_0, a_1 + b_1, a_2 + b_2, a_3 + b_3, \dots
-              \rangle \longleftrightarrow \sum_{i &#x3D; 0}^{\infty} (a_{i} +
-              b_{i}) \cdot x^{i} &#x3D; \sum_{i &#x3D; 0}^{\infty} a_{i}x^{i} +
-              \sum_{i &#x3D; 0}^{\infty} b_{i}x^{i} &#x3D; G(x) + H(x)\\\\<br />$$
+              $$<br />\langle g_0 + h_0, g_1 + h_1, g_2 + h_2, g_3 + h_3, \dots
+              \rangle \longleftrightarrow \sum_{i &#x3D; 0}^{\infty} (g_{i} +
+              h_{i}) \cdot x^{i} &#x3D; \sum_{i &#x3D; 0}^{\infty} g_{i}x^{i} +
+              \sum_{i &#x3D; 0}^{\infty} h_{i}x^{i} &#x3D; G(x) + H(x)\\\\<br />$$
             </p>
             <p>For Example</p>
             <p>
@@ -332,15 +332,15 @@
             </h3>
             <p>If</p>
             <p>
-              $$<br />\langle a_0, a_1, a_2, a_3, \dots \rangle
+              $$<br />\langle g_0, g_1, g_2, g_3, \dots \rangle
               \longleftrightarrow G(x)\\\\<br />$$
             </p>
             <p>then the sequence by adding k leading zeros</p>
             <p>
-              $$<br />\langle 0, 0, \dots, 0, a_0, a_1, a_2, a_3, \dots \rangle
+              $$<br />\langle 0, 0, \dots, 0, g_0, g_1, g_2, g_3, \dots \rangle
               \implies x^k \cdot G(x) &#x3D; \sum_{i &#x3D; 0}^{\infty}
-              a_{i}x^{i}x^{k} &#x3D; a_{0}x^{k} + a_{1}x^{k + 1} + a_{2}x^{k +
-              2} + a_{3}x^{k + 3} + \dots\\\\<br />$$
+              g_{i}x^{i}x^{k} &#x3D; g_{0}x^{k} + g_{1}x^{k + 1} + g_{2}x^{k +
+              2} + g_{3}x^{k + 3} + \dots\\\\<br />$$
             </p>
             <p>For Example</p>
             <p>
@@ -357,14 +357,14 @@
             </h3>
             <p>If</p>
             <p>
-              $$<br />\langle a_0, a_1, a_2, a_3, \dots \rangle
+              $$<br />\langle g_0, g_1, g_2, g_3, \dots \rangle
               \longleftrightarrow G(x)\\\\<br />$$
             </p>
             <p>then</p>
             <p>
-              $$<br />G^{\prime}(x) &#x3D; \frac{d}{dx}(a_{0} + a_{1}x +
-              a_{2}x^{2} + a_{3}x^{3} + a_{4}x^{4} + \dots) \longleftrightarrow
-              \langle a_1, 2a_2, 3a_3, 4a_4, \dots \rangle<br />$$
+              $$<br />G^{\prime}(x) &#x3D; \frac{d}{dx}(g_{0} + g_{1}x +
+              g_{2}x^{2} + g_{3}x^{3} + g_{4}x^{4} + \dots) \longleftrightarrow
+              \langle g_1, 2 g_2, 3 g_3, 4 g_4, \dots \rangle<br />$$
             </p>
             <p>For Example</p>
             <p>
@@ -388,8 +388,8 @@
             </h3>
             <p>If</p>
             <p>
-              $$<br />\langle a_0, a_1, a_2, a_3, \dots \rangle
-              \longleftrightarrow G(x)\\\\<br />\langle b_0, b_1, b_2, b_3,
+              $$<br />\langle g_0, g_1, g_2, g_3, \dots \rangle
+              \longleftrightarrow G(x)\\\\<br />\langle h_0, h_1, h_2, h_3,
               \dots \rangle \longleftrightarrow H(x)\\\\<br />$$
             </p>
             <p>then</p>
@@ -399,20 +399,20 @@
             </p>
             <p>where</p>
             <p>
-              $$<br />c_n :&#x3D; \sum_{i &#x3D; 0}^{n} a_{i}b_{n - i}<br />$$
+              $$<br />c_n :&#x3D; \sum_{i &#x3D; 0}^{n} g_{i}h_{n - i}<br />$$
             </p>
             <h4 id="Proof">
               <a href="#Proof" class="headerlink" title="Proof"></a>Proof
             </h4>
             <p>
               $$<br />\begin{array}{l|lllll}<br />
-              &amp; b_{0}x^{0} &amp; b_{1}x^{1} &amp; b_{2}x^{2} &amp;
-              b_{3}x^{3} &amp; \dots\\\\<br />\hline<br />a_{0}x^{0} &amp;
-              a_{0}b_{0}x^{0} &amp; a_{0}b_{1}x^{1} &amp; a_{0}b_{2}x^{2} &amp;
-              a_{0}b_{3}x^{3} &amp; \\\\<br />a_{1}x^{1} &amp; a_{1}b_{0}x^{1}
-              &amp; a_{1}b_{1}x^{2} &amp; a_{1}b_{2}x^{3} &amp; \dots &amp;
-              \\\\<br />a_{2}x^{2} &amp; a_{2}b_{0}x^{2} &amp; a_{2}b_{1}x^{3}
-              &amp; \dots &amp; &amp; \\\\<br />a_{3}x^{3} &amp; a_{3}b_{0}x^{3}
+              &amp; h_{0}x^{0} &amp; h_{1}x^{1} &amp; h_{2}x^{2} &amp;
+              h_{3}x^{3} &amp; \dots\\\\<br />\hline<br />g_{0}x^{0} &amp;
+              g_{0}h_{0}x^{0} &amp; g_{0}h_{1}x^{1} &amp; g_{0}h_{2}x^{2} &amp;
+              g_{0}h_{3}x^{3} &amp; \\\\<br />g_{1}x^{1} &amp; g_{1}h_{0}x^{1}
+              &amp; g_{1}h_{1}x^{2} &amp; g_{1}h_{2}x^{3} &amp; \dots &amp;
+              \\\\<br />g_{2}x^{2} &amp; g_{2}h_{0}x^{2} &amp; g_{2}h_{1}x^{3}
+              &amp; \dots &amp; &amp; \\\\<br />g_{3}x^{3} &amp; g_{3}h_{0}x^{3}
               &amp; \dots &amp; &amp; &amp; \\\\<br />\vdots &amp; \dots &amp;
               &amp; &amp; &amp;<br />\end{array}<br />$$
             </p>
@@ -426,7 +426,7 @@
             </h3>
             <p>If</p>
             <p>
-              $$<br />\langle a_0, a_1, a_2, a_3, \dots \rangle
+              $$<br />\langle g_0, g_1, g_2, g_3, \dots \rangle
               \longleftrightarrow G(x)\\\\<br />$$
             </p>
             <p>then</p>
@@ -435,7 +435,7 @@
               \longleftrightarrow \frac{G(x)}{1 - x}\\\\<br />$$
             </p>
             <p>where</p>
-            <p>$$<br />s_n :&#x3D; \sum_{i &#x3D; 0}^{n} a_{i}<br />$$</p>
+            <p>$$<br />s_n :&#x3D; \sum_{i &#x3D; 0}^{n} g_{i}<br />$$</p>
             <p>For Example</p>
             <p>
               $$<br />\frac{1}{1 - x} \frac{x(1 + x)}{(1 - x)^3} &#x3D;
@@ -455,7 +455,7 @@
               \dots \rangle<br />$$
             </p>
             <p>then the nth element of the sequence is</p>
-            <p>$$<br />\sum_{i &#x3D; 0}^{n} a_{i} \cdot 1<br />$$</p>
+            <p>$$<br />\sum_{i &#x3D; 0}^{n} g_{i} \cdot 1<br />$$</p>
             <h2 id="Find-the-nth-element">
               <a
                 href="#Find-the-nth-element"
@@ -475,10 +475,10 @@
             <p>Let</p>
             <p>$$<br />G(x)<br />$$</p>
             <p>be the generating function for the sequence</p>
-            <p>$$<br />\langle a_0, a_1, a_2, a_3, \dots \rangle<br />$$</p>
+            <p>$$<br />\langle g_0, g_1, g_2, g_3, \dots \rangle<br />$$</p>
             <p>then</p>
             <p>
-              $$<br />a_0 &#x3D; G(0)\\\\<br />a_n &#x3D;
+              $$<br />g_0 &#x3D; G(0)\\\\<br />g_n &#x3D;
               \frac{G^{(n)}(0)}{n!}\\\\<br />$$
             </p>
             <h3 id="Partial-Fractions">
@@ -514,7 +514,7 @@
               <a href="#Reference" class="headerlink" title="Reference"></a
               >Reference
             </h2>
-            <ul>
+            <ol>
               <li>
                 <a
                   target="_blank"
@@ -531,7 +531,7 @@
                   >Wikipedia: Generating Function</a
                 >
               </li>
-            </ul>
+            </ol>
 
             <hr />
 
