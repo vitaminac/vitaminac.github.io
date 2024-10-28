@@ -54,7 +54,7 @@
     <script src="/_next/static/chunks/pages/_app.js" defer=""></script>
     <script src="/_next/static/chunks/5423ad26.js" defer=""></script>
     <script src="/_next/static/chunks/175675d1.js" defer=""></script>
-    <script src="/_next/static/chunks/321.js" defer=""></script>
+    <script src="/_next/static/chunks/893.js" defer=""></script>
     <script
       src="/_next/static/chunks/pages/archives/%5Bslug%5D.js"
       defer=""
@@ -270,6 +270,7 @@
         "props": {
           "pageProps": {
             "markdownContentSource": "\r\n- [ ] foo\r\n- [x] bar\r\n",
+            "tocHtml": "\u003cul\u003e\n\u003cli\u003e[ ] foo\u003c/li\u003e\n\u003cli\u003e[x] bar\u003c/li\u003e\n\u003c/ul\u003e\n",
             "_nextI18Next": {
               "initialI18nStore": {
                 "en": {
@@ -280,15 +281,11 @@
                     "en": "English",
                     "es": "Spanish",
                     "zh": "Chinese"
-                  },
-                  "post-layout": {
-                    "Author": "Author: {{author}}",
-                    "Tags": "Tags"
                   }
                 }
               },
               "initialLocale": "en",
-              "ns": ["navbar", "post-layout"],
+              "ns": ["navbar"],
               "userConfig": {
                 "i18n": {
                   "defaultLocale": "en",

@@ -1,6 +1,7 @@
 {
   "pageProps": {
     "markdownContentSource": "\r\nEmojis in this text will be replaced: :dog: :+1:\r\n",
+    "tocHtml": "",
     "_nextI18Next": {
       "initialI18nStore": {
         "en": {
@@ -11,12 +12,11 @@
             "en": "English",
             "es": "Spanish",
             "zh": "Chinese"
-          },
-          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
+          }
         }
       },
       "initialLocale": "en",
-      "ns": ["navbar", "post-layout"],
+      "ns": ["navbar"],
       "userConfig": {
         "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
         "default": {

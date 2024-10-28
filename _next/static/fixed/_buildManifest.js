@@ -7,7 +7,7 @@
     "/archives/[slug]": [
       "static/chunks/5423ad26.js",
       "static/chunks/175675d1.js",
-      "static/chunks/321.js",
+      "static/chunks/893.js",
       "static/chunks/pages/archives/[slug].js",
     ],
     "/posts/langs/[lang]": ["static/chunks/pages/posts/langs/[lang].js"],

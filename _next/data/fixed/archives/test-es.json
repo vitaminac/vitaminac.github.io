@@ -1,6 +1,7 @@
 {
   "pageProps": {
     "markdownContentSource": "\r\nHola Mundo\r\n",
+    "tocHtml": "",
     "_nextI18Next": {
       "initialI18nStore": {
         "es": {
@@ -11,8 +12,7 @@
             "en": "Inglés",
             "es": "Español",
             "zh": "Chino"
-          },
-          "post-layout": { "Author": "Autor: {{author}}", "Tags": "Tags" }
+          }
         },
         "en": {
           "navbar": {
@@ -22,12 +22,11 @@
             "en": "English",
             "es": "Spanish",
             "zh": "Chinese"
-          },
-          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
+          }
         }
       },
       "initialLocale": "es",
-      "ns": ["navbar", "post-layout"],
+      "ns": ["navbar"],
       "userConfig": {
         "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
         "default": {

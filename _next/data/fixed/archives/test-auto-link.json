@@ -1,6 +1,7 @@
 {
   "pageProps": {
     "markdownContentSource": "\r\n# Heading 1\r\n\r\n## Heading 2\r\n\r\n### Heading 3\r\n\r\nparagraph\r\n",
+    "tocHtml": "<ul>\n<li><a href=\"#heading-1\">Heading 1</a>\n<ul>\n<li><a href=\"#heading-2\">Heading 2</a>\n<ul>\n<li><a href=\"#heading-3\">Heading 3</a></li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>\n",
     "_nextI18Next": {
       "initialI18nStore": {
         "en": {
@@ -11,12 +12,11 @@
             "en": "English",
             "es": "Spanish",
             "zh": "Chinese"
-          },
-          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
+          }
         }
       },
       "initialLocale": "en",
-      "ns": ["navbar", "post-layout"],
+      "ns": ["navbar"],
       "userConfig": {
         "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
         "default": {

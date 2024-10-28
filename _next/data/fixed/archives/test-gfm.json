@@ -1,6 +1,7 @@
 {
   "pageProps": {
     "markdownContentSource": "\r\n- [ ] foo\r\n- [x] bar\r\n",
+    "tocHtml": "<ul>\n<li>[ ] foo</li>\n<li>[x] bar</li>\n</ul>\n",
     "_nextI18Next": {
       "initialI18nStore": {
         "en": {
@@ -11,12 +12,11 @@
             "en": "English",
             "es": "Spanish",
             "zh": "Chinese"
-          },
-          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
+          }
         }
       },
       "initialLocale": "en",
-      "ns": ["navbar", "post-layout"],
+      "ns": ["navbar"],
       "userConfig": {
         "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
         "default": {

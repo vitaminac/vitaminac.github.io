@@ -54,7 +54,7 @@
     <script src="/_next/static/chunks/pages/_app.js" defer=""></script>
     <script src="/_next/static/chunks/5423ad26.js" defer=""></script>
     <script src="/_next/static/chunks/175675d1.js" defer=""></script>
-    <script src="/_next/static/chunks/321.js" defer=""></script>
+    <script src="/_next/static/chunks/893.js" defer=""></script>
     <script
       src="/_next/static/chunks/pages/archives/%5Bslug%5D.js"
       defer=""
@@ -265,6 +265,7 @@
         "props": {
           "pageProps": {
             "markdownContentSource": "\r\n```c\r\n    #include \u003cstdio.h\u003e\r\n    \r\n    int main(int argc, char *argv[])\r\n    {\r\n        printf(\"argc = %d\\n\", argc);\r\n        for(int ndx = 0; ndx != argc; ++ndx)\r\n            printf(\"argv[%d] --\u003e %s\\n\", ndx, argv[ndx]);\r\n        printf(\"argv[argc] = %p\\n\", (void*)argv[argc]);\r\n    }\r\n```\r\n",
+            "tocHtml": "",
             "_nextI18Next": {
               "initialI18nStore": {
                 "en": {
@@ -275,15 +276,11 @@
                     "en": "English",
                     "es": "Spanish",
                     "zh": "Chinese"
-                  },
-                  "post-layout": {
-                    "Author": "Author: {{author}}",
-                    "Tags": "Tags"
                   }
                 }
               },
               "initialLocale": "en",
-              "ns": ["navbar", "post-layout"],
+              "ns": ["navbar"],
               "userConfig": {
                 "i18n": {
                   "defaultLocale": "en",

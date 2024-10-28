@@ -1,6 +1,7 @@
 {
   "pageProps": {
     "markdownContentSource": "\r\nNext.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.\r\n\r\n* **Static Generation** is the pre-rendering method that generates the HTML at **build time**. The pre-rendered HTML is then _reused_ on each request.\r\n* **Server-side Rendering** is the pre-rendering method that generates the HTML on **each request**.\r\n\r\nImportantly, Next.js lets you **choose** which pre-rendering form to use for each page. You can create a \"hybrid\" Next.js app by using Static Generation for most pages and using Server-side Rendering for others.\r\n\r\nWe recommend using **Static Generation** (with and without data) whenever possible because your page can be built once and served by CDN, which makes it much faster than having a server render the page on every request.\r\n\r\nYou can use Static Generation for many types of pages, including:\r\n\r\n- Marketing pages\r\n- Blog posts\r\n- E-commerce product listings\r\n- Help and documentation\r\n\r\nYou should ask yourself: \"Can I pre-render this page **ahead** of a user's request?\" If the answer is yes, then you should choose Static Generation.\r\n\r\nOn the other hand, Static Generation is **not** a good idea if you cannot pre-render a page ahead of a user's request. Maybe your page shows frequently updated data, and the page content changes on every request.\r\n\r\nIn that case, you can use **Server-Side Rendering**. It will be slower, but the pre-rendered page will always be up-to-date. Or you can skip pre-rendering and use client-side JavaScript to populate data.\r\n",
+    "tocHtml": "",
     "_nextI18Next": {
       "initialI18nStore": {
         "en": {
@@ -11,12 +12,11 @@
             "en": "English",
             "es": "Spanish",
             "zh": "Chinese"
-          },
-          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
+          }
         }
       },
       "initialLocale": "en",
-      "ns": ["navbar", "post-layout"],
+      "ns": ["navbar"],
       "userConfig": {
         "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
         "default": {
