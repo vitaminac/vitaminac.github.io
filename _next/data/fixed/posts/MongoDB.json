@@ -2,10 +2,10 @@
   "pageProps": {
     "postData": {
       "title": "MongoDB",
+      "date": "2020-06-07 13:57:06",
       "lang": "en",
       "slug": "MongoDB",
       "tags": ["Document-oriented Database", "MongoDB"],
-      "date": "2020-06-07 13:57:06",
       "isLegacy": true,
       "path": "/MongoDB/index.html"
     },

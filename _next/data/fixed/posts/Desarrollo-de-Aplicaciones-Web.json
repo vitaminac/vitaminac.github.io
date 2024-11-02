@@ -2,6 +2,7 @@
   "pageProps": {
     "postData": {
       "title": "Desarrollo de aplicaciones Web",
+      "date": "2019-02-25 11:29:55",
       "lang": "es",
       "slug": "Desarrollo-de-Aplicaciones-Web",
       "tags": [
@@ -13,7 +14,6 @@
         "JPA",
         "Tomcat"
       ],
-      "date": "2019-02-25 11:29:55",
       "isLegacy": true,
       "path": "/Desarrollo-de-Aplicaciones-Web/index.html"
     },

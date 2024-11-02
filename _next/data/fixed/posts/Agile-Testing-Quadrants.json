@@ -2,6 +2,7 @@
   "pageProps": {
     "postData": {
       "title": "Agile Testing Quadrants",
+      "date": "2019-05-01 10:11:15",
       "lang": "es",
       "slug": "Agile-Testing-Quadrants",
       "tags": [
@@ -9,7 +10,6 @@
         "Testing",
         "Agile Software Development"
       ],
-      "date": "2019-05-01 10:11:15",
       "isLegacy": true,
       "path": "/Agile-Testing-Quadrants/index.html"
     },

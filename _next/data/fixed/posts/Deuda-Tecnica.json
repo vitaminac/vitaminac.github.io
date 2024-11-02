@@ -2,10 +2,10 @@
   "pageProps": {
     "postData": {
       "title": "Deuda Técnica",
+      "date": "2019-04-28 20:14:22",
       "lang": "es",
       "slug": "Deuda-Tecnica",
       "tags": ["Deuda Técnica"],
-      "date": "2019-04-28 20:14:22",
       "isLegacy": true,
       "path": "/Deuda-Tecnica/index.html"
     },

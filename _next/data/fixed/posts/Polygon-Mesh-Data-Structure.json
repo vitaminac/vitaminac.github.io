@@ -2,10 +2,10 @@
   "pageProps": {
     "postData": {
       "title": "计算机图形数据结构",
+      "date": "2018-11-11 22:14:47",
       "lang": "zh",
       "slug": "Polygon-Mesh-Data-Structure",
       "tags": ["计算机图形", "三角网格", "向量", "几何", "图形结构"],
-      "date": "2018-11-11 22:14:47",
       "isLegacy": true,
       "path": "/Polygon-Mesh-Data-Structure/index.html"
     },

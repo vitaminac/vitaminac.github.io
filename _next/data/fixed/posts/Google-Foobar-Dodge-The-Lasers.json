@@ -2,10 +2,10 @@
   "pageProps": {
     "postData": {
       "title": "Google Foobar Dodge The Lasers",
+      "date": "2019-12-17 22:50:54",
       "lang": "en",
       "slug": "Google-Foobar-Dodge-The-Lasers",
       "tags": ["algorithms"],
-      "date": "2019-12-17 22:50:54",
       "isLegacy": true,
       "path": "/Google-Foobar-Dodge-The-Lasers/index.html"
     },

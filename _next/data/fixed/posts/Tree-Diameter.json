@@ -2,10 +2,10 @@
   "pageProps": {
     "postData": {
       "title": "Tree Diameter",
+      "date": "2020-03-07 10:00:44",
       "lang": "en",
       "slug": "Tree-Diameter",
       "tags": ["algorithms"],
-      "date": "2020-03-07 10:00:44",
       "isLegacy": true,
       "path": "/Tree-Diameter/index.html"
     },

@@ -2,10 +2,10 @@
   "pageProps": {
     "postData": {
       "title": "DLL Hijacking via zlib DLL Proxy",
+      "date": "2024-07-21 11:59:24",
       "lang": "en",
       "slug": "dll-hijacking-via-zlib-dll-proxy",
       "tags": ["dll injection", "dll hijacking", "zlib", "外挂"],
-      "date": "2024-07-21 11:59:24",
       "isLegacy": true,
       "path": "/dll-hijacking-via-zlib-dll-proxy/index.html"
     },

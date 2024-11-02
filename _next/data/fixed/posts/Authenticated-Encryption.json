@@ -2,6 +2,7 @@
   "pageProps": {
     "postData": {
       "title": "Authenticated Encryption",
+      "date": "2021-03-28 11:21:16",
       "lang": "en",
       "slug": "Authenticated-Encryption",
       "tags": [
@@ -12,7 +13,6 @@
         "Authenticated Encryption",
         "Salt"
       ],
-      "date": "2021-03-28 11:21:16",
       "isLegacy": true,
       "path": "/Authenticated-Encryption/index.html"
     },

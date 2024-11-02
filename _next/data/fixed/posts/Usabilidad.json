@@ -2,10 +2,10 @@
   "pageProps": {
     "postData": {
       "title": "Usabilidad",
+      "date": "2019-05-09 07:54:04",
       "lang": "es",
       "slug": "Usabilidad",
       "tags": ["Usabilidad", "Interación Persona-Ordenador"],
-      "date": "2019-05-09 07:54:04",
       "isLegacy": true,
       "path": "/Usabilidad/index.html"
     },

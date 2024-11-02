@@ -2,10 +2,10 @@
   "pageProps": {
     "postData": {
       "title": "SonarQube",
+      "date": "2019-04-28 23:24:42",
       "lang": "es",
       "slug": "SonarQube",
       "tags": ["Software Quality Metrics", "SonarQube"],
-      "date": "2019-04-28 23:24:42",
       "isLegacy": true,
       "path": "/SonarQube/index.html"
     },

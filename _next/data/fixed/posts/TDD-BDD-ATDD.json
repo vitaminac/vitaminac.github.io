@@ -2,6 +2,7 @@
   "pageProps": {
     "postData": {
       "title": "Testing TDD BDD y ATDD",
+      "date": "2019-04-27 12:55:45",
       "lang": "es",
       "slug": "TDD-BDD-ATDD",
       "tags": [
@@ -19,7 +20,6 @@
         "CI",
         "Domain-Driven Design"
       ],
-      "date": "2019-04-27 12:55:45",
       "isLegacy": true,
       "path": "/TDD-BDD-ATDD/index.html"
     },

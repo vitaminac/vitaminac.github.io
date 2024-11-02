@@ -2,10 +2,10 @@
   "pageProps": {
     "postData": {
       "title": "Diagonalization",
+      "date": "2022-01-09 11:36:05",
       "lang": "en",
       "slug": "Diagonalization",
       "tags": ["Math", "Diagonalization", "Matrix", "Linear Algebra"],
-      "date": "2022-01-09 11:36:05",
       "isLegacy": true,
       "path": "/Diagonalization/index.html"
     },

@@ -2,10 +2,10 @@
   "pageProps": {
     "postData": {
       "title": "Evolución Adaptacion Software",
+      "date": "2019-05-11 13:09:55",
       "lang": "es",
       "slug": "Evolucion-Adaptacion-Software",
       "tags": ["Software Evolution"],
-      "date": "2019-05-11 13:09:55",
       "isLegacy": true,
       "path": "/Evolucion-Adaptacion-Software/index.html"
     },

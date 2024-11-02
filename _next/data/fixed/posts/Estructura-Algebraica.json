@@ -2,6 +2,7 @@
   "pageProps": {
     "postData": {
       "title": "Estructura Algebraica",
+      "date": "2019-01-26 10:45:44",
       "lang": "es",
       "slug": "Estructura-Algebraica",
       "tags": [
@@ -13,7 +14,6 @@
         "Espacio vectorial",
         "Módulo"
       ],
-      "date": "2019-01-26 10:45:44",
       "isLegacy": true,
       "path": "/Estructura-Algebraica/index.html"
     },
