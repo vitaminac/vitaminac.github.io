@@ -2,10 +2,11 @@
   "pageProps": {
     "postData": {
       "title": "The Process Behind Compiling and Executing C Code",
-      "date": "2021-12-18 22:28:10",
       "lang": "en",
       "slug": "Compiling-Executing-C",
       "tags": ["C", "Compilation", "ELF", "crt0", "exit"],
+      "date": "2021-12-18 22:28:10",
+      "isLegacy": true,
       "path": "/Compiling-Executing-C/index.html"
     },
     "lang": "en",

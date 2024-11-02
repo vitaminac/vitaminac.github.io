@@ -2,10 +2,11 @@
   "pageProps": {
     "postData": {
       "title": "Hacer Una Libreria C",
-      "date": "2019-11-05 00:14:26",
       "lang": "es",
       "slug": "Hacer-Una-Libreria-C",
       "tags": ["Systema Operativo"],
+      "date": "2019-11-05 00:14:26",
+      "isLegacy": true,
       "path": "/Hacer-Una-Libreria-C/index.html"
     },
     "lang": "es",

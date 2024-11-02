@@ -2,7 +2,6 @@
   "pageProps": {
     "postData": {
       "title": "Lehman Laws",
-      "date": "2019-05-12 21:53:33",
       "lang": "en",
       "slug": "Lehman-laws",
       "tags": [
@@ -10,6 +9,8 @@
         "Software Evolution",
         "Agile Software Development"
       ],
+      "date": "2019-05-12 21:53:33",
+      "isLegacy": true,
       "path": "/Lehman-laws/index.html"
     },
     "lang": "en",

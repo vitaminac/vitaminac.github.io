@@ -2,7 +2,6 @@
   "pageProps": {
     "postData": {
       "title": "Programación Lineal y Entera",
-      "date": "2019-05-30 18:05:04",
       "lang": "es",
       "slug": "Programacion-Lineal-Entera",
       "tags": [
@@ -12,6 +11,8 @@
         "Operation Research",
         "Linear Programming"
       ],
+      "date": "2019-05-30 18:05:04",
+      "isLegacy": true,
       "path": "/Programacion-Lineal-Entera/index.html"
     },
     "lang": "es",

@@ -2,7 +2,6 @@
   "pageProps": {
     "postData": {
       "title": "Testing",
-      "date": "2021-04-24 11:27:04",
       "lang": "en",
       "slug": "Testing",
       "tags": [
@@ -13,6 +12,8 @@
         "Load Test",
         "Snapshot Test"
       ],
+      "date": "2021-04-24 11:27:04",
+      "isLegacy": true,
       "path": "/Testing/index.html"
     },
     "lang": "en",

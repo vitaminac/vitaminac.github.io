@@ -2,7 +2,6 @@
   "pageProps": {
     "postData": {
       "title": "Information Security",
-      "date": "2021-03-28 11:11:17",
       "lang": "en",
       "slug": "Information-Security",
       "tags": [
@@ -18,6 +17,8 @@
         "Authorization",
         "Accounting"
       ],
+      "date": "2021-03-28 11:11:17",
+      "isLegacy": true,
       "path": "/Information-Security/index.html"
     },
     "lang": "en",

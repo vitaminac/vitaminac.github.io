@@ -2,10 +2,11 @@
   "pageProps": {
     "postData": {
       "title": "Complejidad Ciclomatica",
-      "date": "2019-05-01 09:27:05",
       "lang": "es",
       "slug": "Complejidad-Ciclomatica",
       "tags": ["Software Quality Metrics"],
+      "date": "2019-05-01 09:27:05",
+      "isLegacy": true,
       "path": "/Complejidad-Ciclomatica/index.html"
     },
     "lang": "es",

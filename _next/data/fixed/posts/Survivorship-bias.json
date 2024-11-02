@@ -2,10 +2,11 @@
   "pageProps": {
     "postData": {
       "title": "Survivorship bias",
-      "date": "2019-03-25 22:57:23",
       "lang": "en",
       "slug": "Survivorship-bias",
       "tags": ["Operation Research", "Survivorship bias", "Selection bias"],
+      "date": "2019-03-25 22:57:23",
+      "isLegacy": true,
       "path": "/Survivorship-bias/index.html"
     },
     "lang": "en",

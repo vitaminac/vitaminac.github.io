@@ -2,10 +2,11 @@
   "pageProps": {
     "postData": {
       "title": "Minimalist Linux Workspace",
-      "date": "2021-01-31 18:25:16",
       "lang": "en",
       "slug": "Minimalist-Linux-Workspace",
       "tags": ["Linux", "Debian"],
+      "date": "2021-01-31 18:25:16",
+      "isLegacy": true,
       "path": "/Minimalist-Linux-Workspace/index.html"
     },
     "lang": "en",

@@ -2,10 +2,11 @@
   "pageProps": {
     "postData": {
       "title": "Evaluación de interfaces",
-      "date": "2019-05-09 16:11:07",
       "lang": "es",
       "slug": "Evaluacion-De-Interfaces",
       "tags": ["Interación Persona-Ordenador", "Evaluación heurística"],
+      "date": "2019-05-09 16:11:07",
+      "isLegacy": true,
       "path": "/Evaluacion-De-Interfaces/index.html"
     },
     "lang": "es",

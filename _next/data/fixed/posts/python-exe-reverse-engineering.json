@@ -2,10 +2,11 @@
   "pageProps": {
     "postData": {
       "title": "Python打包的可执行文件的逆向工程",
-      "date": "2024-03-28 20:39:24",
       "lang": "zh",
       "slug": "python-exe-reverse-engineering",
       "tags": ["python", "PyInstaller"],
+      "date": "2024-03-28 20:39:24",
+      "isLegacy": true,
       "path": "/python-exe-reverse-engineering/index.html"
     },
     "lang": "zh",

@@ -3,12 +3,6 @@
     "lang": "en",
     "previews": [
       {
-        "slug": "Information-Security",
-        "title": "Information Security",
-        "date": "2021-03-28 11:11:17",
-        "content": "Information Security  Information security(infosec), is the practice of protecting information by mitigating information risks like ..."
-      },
-      {
         "slug": "Minimalist-Linux-Workspace",
         "title": "Minimalist Linux Workspace",
         "date": "2021-01-31 18:25:16",
@@ -61,6 +55,12 @@
         "title": "Tree Diameter",
         "date": "2020-03-07 10:00:44",
         "content": "Definition  The diameter of a tree is the distance of the longest path between two end nodes $\\arg\\max_{(u, v) \\in G}d(u, v)$, where $d(u, v)$ is the..."
+      },
+      {
+        "slug": "Google-Foobar-Decrypt-Message",
+        "title": "Google Foobar Decrypt Final Message",
+        "date": "2019-12-26 21:43:50",
+        "content": "After i have finished Google Foobar challenge I get a encrypted message. The ciphertext was xored with my username and then encode with base64, just..."
       }
     ],
     "prevPageUrl": "/posts/langs/en/pagination/2",

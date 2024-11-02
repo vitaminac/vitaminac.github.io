@@ -2,7 +2,6 @@
   "pageProps": {
     "postData": {
       "title": "Cracking Simpler Cipher",
-      "date": "2019-03-25 15:43:58",
       "lang": "es",
       "slug": "Cracking-Simpler-Cipher",
       "tags": [
@@ -14,6 +13,8 @@
         "Transposition Cipher",
         "Cifrado por transposición"
       ],
+      "date": "2019-03-25 15:43:58",
+      "isLegacy": true,
       "path": "/Cracking-Simpler-Cipher/index.html"
     },
     "lang": "es",

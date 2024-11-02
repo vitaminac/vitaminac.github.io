@@ -2,10 +2,11 @@
   "pageProps": {
     "postData": {
       "title": "魔域2.4小游戏分析",
-      "date": "2024-02-17 15:02:08",
       "lang": "zh",
       "slug": "moyu24",
       "tags": ["Game", "魔域2.4"],
+      "date": "2024-02-17 15:02:08",
+      "isLegacy": true,
       "path": "/moyu24/index.html"
     },
     "lang": "zh",

@@ -3,68 +3,25 @@
     "lang": "en",
     "previews": [
       {
-        "slug": "Google-Foobar-Escape-Pods",
-        "title": "Google Foobar Escape Pods",
-        "date": "2019-11-22 22:35:28",
-        "content": "This problem involves solving the equivalent maximum flow problem. We can use Ford–Fulkerson algorithm with BFS to calculate the total flow.  Maximum..."
-      },
-      {
-        "slug": "Install-Windows-Sandbox-Win10Home",
-        "title": "Install Windows Sandbox in Windoes 10 Home Edition",
-        "date": "2019-11-16 15:07:28",
-        "content": "save the following command as bat file and then execute  @echo off  echo Checking for permissions >nul 2>&1 \"%SYSTEMROOT%\\system32\\cacls.exe\"..."
-      },
-      {
-        "slug": "Google-Foobar-Free-the-Bunny-Prisoners",
-        "title": "Google Foobar Free the Bunny Prisoners",
-        "date": "2019-11-09 09:28:42",
-        "content": "Free the Bunny Prisoners Analysys  The problem can be rearrange as follow:  If you have N bunnies, and M locks, distribute M distinct keys among the..."
-      },
-      {
-        "slug": "Google-Kickstart-2019-Round-F-Flattening",
-        "title": "Google Kickstart 2019 Round F Flattening",
-        "date": "2019-11-03 17:51:53",
-        "content": "Google Kickstart 2019 Round F Flattening  First, we find the major height $H_k$ from each position $i$ to each position $j$. The change is not more..."
-      },
-      {
-        "slug": "Google-Kickstart-2019-Round-G-Shifts",
-        "title": "Google Kickstart 2019 Round G Shifts",
-        "date": "2019-11-03 01:47:31",
-        "content": "Google Kickstart 2019 Round G Shifts  We need to calculate the number of valid combinations that makes two guards happy. I first tried backtracking..."
-      },
-      {
-        "slug": "Google-Kickstart-2019-Round-G-The-Equation",
-        "title": "Google Kickstart 2019 Round G The Equation",
-        "date": "2019-11-02 22:11:00",
-        "content": "Google Kickstart 2019 Round G The Equation  The essential of the problem is to find the number $k$ that xor with each $A_i$ gives the largest number...."
-      },
-      {
-        "slug": "Install-DockerDesktop-Win10Home",
-        "title": "Install Docker Desktop in Windows10 Home Edition",
-        "date": "2019-11-02 21:11:31",
-        "content": "Install Docker Desktop in Windows10 Home Edition  Most laptop are now pre-installed with Windows 10 Home Edition, while the Home Edition does not..."
-      },
-      {
-        "slug": "Google-Kickstart-2019-Round-G-Book-Reading",
-        "title": "Google Kickstart 2019 Round G Book Reading",
-        "date": "2019-11-02 19:24:59",
-        "content": "Google Kickstart 2019 Round G Book Reading  The most challenge part of this problem is that Q and N is a very larger number. So making a nested for..."
-      },
-      {
-        "slug": "Neo4j-Graph-Database",
-        "title": "Neo4j Graph Database",
-        "date": "2019-10-11 23:37:29",
-        "content": "Neo4j  Neo4j is an open source, NoSQL, native graph databases. In Neo4j, the data are persisted for long term durability. Neo4j can be used with both..."
-      },
-      {
         "slug": "Lehman-laws",
         "title": "Lehman Laws",
         "date": "2019-05-12 21:53:33",
         "content": "The Lehman laws describe a balance between forces driving new developments on one hand, and forces that slow down progress on the other hand.  Lehman..."
+      },
+      {
+        "slug": "Survivorship-bias",
+        "title": "Survivorship bias",
+        "date": "2019-03-25 22:57:23",
+        "content": "Introduction  Survivorship bias or survival bias is the logical error of concentrating on the people or things that made it past some selection..."
+      },
+      {
+        "slug": "Microeconomics",
+        "title": "Microeconomics",
+        "date": "2019-01-31 22:53:35",
+        "content": "Supply, demand, and market equilibrium Introduction to economics  He being an economic actor, neither intends to promote the public interest, nor..."
       }
     ],
     "prevPageUrl": "/posts/langs/en/pagination/4",
-    "nextPageUrl": "/posts/langs/en/pagination/6",
     "_nextI18Next": {
       "initialI18nStore": {
         "en": {
