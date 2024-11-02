@@ -4868,7 +4868,7 @@
       var S = (0, i.Jc)(function (e) {
         let { Component: t, pageProps: n } = e,
           {
-            serverRuntimeConfig: { siteConfig: i },
+            publicRuntimeConfig: { siteConfig: i },
           } = o()(),
           s = n.lang || i.defaultLocale;
         return (0, r.jsxs)(r.Fragment, {
