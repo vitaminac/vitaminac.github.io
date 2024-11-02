@@ -14,7 +14,7 @@
       e.r(t),
         e.d(t, {
           __N_SSG: function () {
-            return o;
+            return r;
           },
           default: function () {
             return c;
@@ -22,19 +22,19 @@
         });
       var u = e(5893),
         i = e(9008),
-        r = e.n(i),
-        o = !0;
+        o = e.n(i),
+        r = !0;
       function c(n) {
         let t = [
           n.domain,
           n.basePath,
           "posts",
           "langs",
-          n.siteConfig.defaultLanguage,
+          n.siteConfig.defaultLocale,
         ]
           .filter((n) => n)
           .join("/");
-        return (0, u.jsxs)(r(), {
+        return (0, u.jsxs)(o(), {
           children: [
             (0, u.jsx)("meta", {
               httpEquiv: "refresh",

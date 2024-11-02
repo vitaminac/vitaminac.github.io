@@ -217,7 +217,7 @@
         (S = "string" == typeof S ? [S] : S || ["translation"]),
           p.reportNamespaces.addUsedNamespaces &&
             p.reportNamespaces.addUsedNamespaces(S);
-        let w =
+        let j =
             (p.isInitialized || p.initializedStoreOnce) &&
             S.every((e) =>
               (function (e, t) {
@@ -275,11 +275,11 @@
                     !0);
               })(e, p, b),
             ),
-          j =
+          w =
             ((t = s.lng || null),
             (n = "fallback" === b.nsMode ? S : S[0]),
             (0, i.useCallback)(y(p, t, n, x), [p, t, n, x])),
-          k = () => j,
+          k = () => w,
           O = () => y(p, s.lng || null, "fallback" === b.nsMode ? S : S[0], x),
           [N, L] = (0, i.useState)(k),
           P = S.join();
@@ -293,7 +293,7 @@
           }
           return (
             (R.current = !0),
-            w ||
+            j ||
               v ||
               (s.lng
                 ? u(p, s.lng, S, () => {
@@ -302,7 +302,7 @@
                 : l(p, S, () => {
                     R.current && L(O);
                   })),
-            w && C && C !== P && R.current && L(O),
+            j && C && C !== P && R.current && L(O),
             e && p && p.on(e, n),
             t && p && p.store.on(t, n),
             () => {
@@ -316,8 +316,8 @@
         (0, i.useEffect)(() => {
           R.current && !E.current && L(k), (E.current = !1);
         }, [p, x]);
-        let $ = [N, p, w];
-        if ((($.t = N), ($.i18n = p), ($.ready = w), w || (!w && !v))) return $;
+        let $ = [N, p, j];
+        if ((($.t = N), ($.i18n = p), ($.ready = j), j || (!j && !v))) return $;
         throw new Promise((e) => {
           s.lng ? u(p, s.lng, S, () => e()) : l(p, S, () => e());
         });
@@ -354,7 +354,7 @@
                   : typeof e;
               })(e);
       }
-      function w(e, t, n) {
+      function j(e, t, n) {
         var r;
         return (
           (r = (function (e, t) {
@@ -378,8 +378,8 @@
           e
         );
       }
-      var j = n(8679),
-        k = n.n(j);
+      var w = n(8679),
+        k = n.n(w);
       function O(e, t) {
         (null == t || t > e.length) && (t = e.length);
         for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
@@ -517,7 +517,7 @@
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
             ? A(Object(n), !0).forEach(function (t) {
-                w(e, t, n[t]);
+                j(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
@@ -578,7 +578,7 @@
           var v = a.fallbackLng,
             x = a.localeStructure;
           if (p) {
-            var w = function (e, t) {
+            var j = function (e, t) {
               var n = L(t.split("-"), 1)[0];
               return (e[t] = [n]), e;
             };
@@ -587,13 +587,13 @@
                 .filter(function (e) {
                   return e.includes("-");
                 })
-                .reduce(w, { default: [v] });
+                .reduce(j, { default: [v] });
             else if (Array.isArray(v))
               a.fallbackLng = a.locales
                 .filter(function (e) {
                   return e.includes("-");
                 })
-                .reduce(w, { default: v });
+                .reduce(j, { default: v });
             else if ("object" === S(v))
               a.fallbackLng = Object.entries(a.fallbackLng).reduce(function (
                 e,
@@ -827,7 +827,7 @@
       function q(e) {
         return e.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
       }
-      var G = {
+      var W = {
         "&": "&amp;",
         "<": "&lt;",
         ">": "&gt;",
@@ -835,8 +835,8 @@
         "'": "&#39;",
         "/": "&#x2F;",
       };
-      function W(e) {
-        return "string" == typeof e ? e.replace(/[&<>"'\/]/g, (e) => G[e]) : e;
+      function G(e) {
+        return "string" == typeof e ? e.replace(/[&<>"'\/]/g, (e) => W[e]) : e;
       }
       class Y {
         constructor(e) {
@@ -2149,7 +2149,7 @@
             arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
           e.interpolation || (e.interpolation = { escapeValue: !0 });
           let t = e.interpolation;
-          (this.escape = void 0 !== t.escape ? t.escape : W),
+          (this.escape = void 0 !== t.escape ? t.escape : G),
             (this.escapeValue = void 0 === t.escapeValue || t.escapeValue),
             (this.useRawValueToEscape =
               void 0 !== t.useRawValueToEscape && t.useRawValueToEscape),
@@ -3363,30 +3363,30 @@
           };
         }
       }
-      let ew = eS.createInstance();
-      (ew.createInstance = eS.createInstance),
-        ew.createInstance,
-        ew.dir,
-        ew.init,
-        ew.loadResources,
-        ew.reloadResources,
-        ew.use,
-        ew.changeLanguage,
-        ew.getFixedT,
-        ew.t,
-        ew.exists,
-        ew.setDefaultNamespace,
-        ew.hasLoadedNamespace,
-        ew.loadNamespaces,
-        ew.loadLanguages;
-      var ej = function (e) {
+      let ej = eS.createInstance();
+      (ej.createInstance = eS.createInstance),
+        ej.createInstance,
+        ej.dir,
+        ej.init,
+        ej.loadResources,
+        ej.reloadResources,
+        ej.use,
+        ej.changeLanguage,
+        ej.getFixedT,
+        ej.t,
+        ej.exists,
+        ej.setDefaultNamespace,
+        ej.hasLoadedNamespace,
+        ej.loadNamespaces,
+        ej.loadLanguages;
+      var ew = function (e) {
           void 0 === e.ns && (e.ns = []);
           var t,
             n,
-            r = ew.createInstance(e);
+            r = ej.createInstance(e);
           return (
             r.isInitialized
-              ? (t = Promise.resolve(ew.t))
+              ? (t = Promise.resolve(ej.t))
               : (null == e ||
                   null === (n = e.use) ||
                   void 0 === n ||
@@ -3417,7 +3417,7 @@
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
             ? eO(Object(n), !0).forEach(function (t) {
-                w(e, t, n[t]);
+                j(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
@@ -3500,7 +3500,7 @@
                     s
                       ? eL(s, i)
                       : (eL(
-                          (s = ej(
+                          (s = ew(
                             eN(
                               eN({}, T(eN(eN({}, n), {}, { lng: a }))),
                               {},
@@ -3529,11 +3529,14 @@
           }, e);
         };
     },
+    1752: function (e, t, n) {
+      e.exports = n(7500);
+    },
     6840: function (e, t, n) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/_app",
         function () {
-          return n(6679);
+          return n(8261);
         },
       ]);
     },
@@ -3566,12 +3569,6 @@
           ...u,
         });
       }
-    },
-    4421: function (e) {
-      "use strict";
-      e.exports = {
-        i18n: { defaultLocale: "en", locales: ["en", "es", "zh"] },
-      };
     },
     8199: function (e, t) {
       "use strict";
@@ -3747,8 +3744,8 @@
           onLoadRef: v,
           onLoadingCompleteRef: x,
           setBlurComplete: S,
-          setShowAltText: w,
-          sizesInput: j,
+          setShowAltText: j,
+          sizesInput: w,
           onLoad: k,
           onError: O,
           ...N
@@ -3773,15 +3770,15 @@
                   ? t(e)
                   : "object" == typeof t && (t.current = e)),
                 e &&
-                  (O && (e.src = e.src), e.complete && h(e, d, v, x, S, y, j));
+                  (O && (e.src = e.src), e.complete && h(e, d, v, x, S, y, w));
             },
-            [n, d, v, x, S, O, y, j, t],
+            [n, d, v, x, S, O, y, w, t],
           ),
           onLoad: (e) => {
-            h(e.currentTarget, d, v, x, S, y, j);
+            h(e.currentTarget, d, v, x, S, y, w);
           },
           onError: (e) => {
-            w(!0), "empty" !== d && S(!0), O && O(e);
+            j(!0), "empty" !== d && S(!0), O && O(e);
           },
         });
       });
@@ -3824,8 +3821,8 @@
           m.current = l;
         }, [l]);
         let [v, x] = (0, o.useState)(!1),
-          [S, w] = (0, o.useState)(!1),
-          { props: j, meta: k } = (0, u.getImgProps)(e, {
+          [S, j] = (0, o.useState)(!1),
+          { props: w, meta: k } = (0, u.getImgProps)(e, {
             defaultLoader: d.default,
             imgConf: i,
             blurComplete: v,
@@ -3834,19 +3831,19 @@
         return (0, s.jsxs)(s.Fragment, {
           children: [
             (0, s.jsx)(y, {
-              ...j,
+              ...w,
               unoptimized: k.unoptimized,
               placeholder: k.placeholder,
               fill: k.fill,
               onLoadRef: h,
               onLoadingCompleteRef: m,
               setBlurComplete: x,
-              setShowAltText: w,
+              setShowAltText: j,
               sizesInput: e.sizes,
               ref: t,
             }),
             k.priority
-              ? (0, s.jsx)(b, { isAppRouter: !n, imgAttributes: j })
+              ? (0, s.jsx)(b, { isAppRouter: !n, imgAttributes: w })
               : null,
           ],
         });
@@ -3913,8 +3910,8 @@
           as: y,
           children: x,
           prefetch: S = null,
-          passHref: w,
-          replace: j,
+          passHref: j,
+          replace: w,
           shallow: k,
           scroll: O,
           locale: N,
@@ -4002,7 +3999,7 @@
                       : t[i ? "replace" : "push"](r || n, { scroll: e });
                   };
                   c ? s.default.startTransition(p) : p();
-                })(e, I, M, D, j, k, O, N, _);
+                })(e, I, M, D, w, k, O, N, _);
           },
           onMouseEnter(e) {
             R || "function" != typeof P || P(e),
@@ -4040,7 +4037,7 @@
           },
         };
         if ((0, u.isAbsoluteUrl)(D)) q.href = D;
-        else if (!R || w || ("a" === r.type && !("href" in r.props))) {
+        else if (!R || j || ("a" === r.type && !("href" in r.props))) {
           let e = void 0 !== N ? N : null == $ ? void 0 : $.locale,
             t =
               (null == $ ? void 0 : $.isLocaleDomain) &&
@@ -4210,8 +4207,8 @@
             fill: v = !1,
             style: x,
             overrideSrc: S,
-            onLoad: w,
-            onLoadingComplete: j,
+            onLoad: j,
+            onLoadingComplete: w,
             placeholder: k = "empty",
             blurDataURL: O,
             fetchPriority: N,
@@ -4336,7 +4333,7 @@
                   }) +
                   '")'
                 : 'url("' + k + '")',
-          G = q
+          W = q
             ? {
                 backgroundSize: J.objectFit || "cover",
                 backgroundPosition: J.objectPosition || "50% 50%",
@@ -4344,7 +4341,7 @@
                 backgroundImage: q,
               }
             : {},
-          W = (function (e) {
+          G = (function (e) {
             let {
               config: t,
               src: n,
@@ -4415,10 +4412,10 @@
             height: K,
             decoding: L,
             className: h,
-            style: { ...J, ...G },
-            sizes: W.sizes,
-            srcSet: W.srcSet,
-            src: S || W.src,
+            style: { ...J, ...W },
+            sizes: G.sizes,
+            srcSet: G.srcSet,
+            src: S || G.src,
           },
           meta: { unoptimized: p, priority: d, placeholder: k, fill: v },
         };
@@ -4521,12 +4518,12 @@
         (n.__next_img_default = !0);
       let r = n;
     },
-    6679: function (e, t, n) {
+    8261: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
           default: function () {
-            return w;
+            return S;
           },
         });
       var r = n(5893),
@@ -4865,27 +4862,23 @@
           }),
         });
       }
-      var v = JSON.parse(
-          '{"siteAuthor":"Gao","siteTitle":"Gao\'s blog","siteDescription":"Gao\'s blog","siteAuthorDescription":"It is the time you have wasted for your rose that makes your rose so important.","email":"dalao1002@gmail.com","linkedin":"shuxig","github":"vitaminac","gitlab":"vitaminac","kaggle":"dalao1002","leetcode":"dalao1002","stackoverflow":"9980245","disqusUsername":"blog-vnwybnwkiz"}',
-        ),
-        x = n(4421),
-        S = n.n(x);
+      var v = n(1752),
+        x = n.n(v);
       n(3434);
-      var w = (0, i.Jc)(function (e) {
+      var S = (0, i.Jc)(function (e) {
         let { Component: t, pageProps: n } = e,
-          i = {
-            ...v,
-            defaultLanguage: S().i18n.defaultLocale,
-            supportedLanguages: S().i18n.locales,
-          },
-          s = n.lang || i.defaultLanguage;
+          i = (function () {
+            let { publicRuntimeConfig: e } = x()();
+            return e;
+          })(),
+          s = n.lang || i.defaultLocale;
         return (0, r.jsxs)(r.Fragment, {
           children: [
             (0, r.jsx)(a, {}),
             (0, r.jsx)(b, {
               siteTitle: i.siteTitle,
               lang: s,
-              supportedLanguages: i.supportedLanguages,
+              supportedLanguages: i.locales,
             }),
             (0, r.jsx)(t, { ...n, lang: s, siteConfig: i }),
             (0, r.jsx)(d, { ...i }),
@@ -4957,7 +4950,7 @@
           }
         }
       }
-      function w(e) {
+      function j(e) {
         return S(e) === f;
       }
       (t.AsyncMode = c),
@@ -4974,9 +4967,9 @@
         (t.StrictMode = o),
         (t.Suspense = d),
         (t.isAsyncMode = function (e) {
-          return w(e) || S(e) === c;
+          return j(e) || S(e) === c;
         }),
-        (t.isConcurrentMode = w),
+        (t.isConcurrentMode = j),
         (t.isContextConsumer = function (e) {
           return S(e) === u;
         }),
