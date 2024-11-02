@@ -2,9 +2,9 @@
   "pageProps": {
     "postData": {
       "title": "Lehman Laws",
+      "date": "2019-05-12 21:53:33",
       "lang": "en",
       "slug": "Lehman-laws",
-      "date": "2019-05-12 21:53:33",
       "tags": [
         "Lehman laws",
         "Software Evolution",

@@ -2,9 +2,9 @@
   "pageProps": {
     "postData": {
       "title": "Virtualización, Contenedores y Cloud Computing",
+      "date": "2019-02-26 23:19:07",
       "lang": "es",
       "slug": "Virtualization",
-      "date": "2019-02-26 23:19:07",
       "tags": [
         "Virtualización",
         "DevOps",

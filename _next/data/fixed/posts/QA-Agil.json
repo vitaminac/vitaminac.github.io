@@ -2,9 +2,9 @@
   "pageProps": {
     "postData": {
       "title": "Quality Ágil",
+      "date": "2019-04-28 19:39:23",
       "lang": "es",
       "slug": "QA-Agil",
-      "date": "2019-04-28 19:39:23",
       "tags": ["Software Quality Metrics"],
       "path": "/QA-Agil/index.html"
     },

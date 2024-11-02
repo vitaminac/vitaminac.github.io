@@ -3,6 +3,12 @@
     "lang": "en",
     "previews": [
       {
+        "slug": "Remote-Access-Via-TightVNC-To-Windows-Machine",
+        "title": "Remote Access Via TightVNC To Windows Machine",
+        "date": "2022-08-13 11:35:55",
+        "content": "Install VNC Server on Windows Machine  Download TightVNC which is free VNC server that support Windows 11 and then install TightVNC on Windows..."
+      },
+      {
         "slug": "RaspberryPi4B-Setup",
         "title": "Raspberry Pi 4B Setup",
         "date": "2022-07-10 13:00:17",
@@ -55,12 +61,6 @@
         "title": "Authenticated Encryption",
         "date": "2021-03-28 11:21:16",
         "content": "Glossary Cryptographic Hash Function  It is a one-way function that maps data of arbitrary size (often called the message) to a bit array of a fixed..."
-      },
-      {
-        "slug": "Information-Security",
-        "title": "Information Security",
-        "date": "2021-03-28 11:11:17",
-        "content": "Information Security  Information security(infosec), is the practice of protecting information by mitigating information risks like ..."
       }
     ],
     "prevPageUrl": "/posts/langs/en/pagination/1",

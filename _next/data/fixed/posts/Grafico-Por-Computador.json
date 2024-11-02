@@ -2,9 +2,9 @@
   "pageProps": {
     "postData": {
       "title": "Grafico Por Computador",
+      "date": "2020-05-31 11:18:28",
       "lang": "es",
       "slug": "Grafico-Por-Computador",
-      "date": "2020-05-31 11:18:28",
       "tags": ["Computer Graphics"],
       "path": "/Grafico-Por-Computador/index.html"
     },

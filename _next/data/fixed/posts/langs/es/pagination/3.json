@@ -3,6 +3,12 @@
     "lang": "es",
     "previews": [
       {
+        "slug": "QA-Agil",
+        "title": "Quality Ágil",
+        "date": "2019-04-28 19:39:23",
+        "content": "En aquellos tiempos en que los equipos no eran multifuncionales y QA era un departamento marginal y la calidad era papel. Para abaratar el proyecto..."
+      },
+      {
         "slug": "Mock-Fake-Testing",
         "title": "Mock Fake Testing",
         "date": "2019-04-28 18:51:51",
@@ -55,12 +61,6 @@
         "title": "Docker",
         "date": "2019-02-26 22:31:02",
         "content": "Introducción  La idea detrás de Docker es crear contenedores ligeros y portables para las aplicaciones software que puedan ejecutarse en cualquier..."
-      },
-      {
-        "slug": "Desarrollo-de-Aplicaciones-Web",
-        "title": "Desarrollo de aplicaciones Web",
-        "date": "2019-02-25 11:29:55",
-        "content": "Introducción  El navegador hace la petición mediante URL a un servidor, suele ser servidor remoto y ese servidor devuelve la información. Todo esto..."
       }
     ],
     "prevPageUrl": "/posts/langs/es/pagination/2",

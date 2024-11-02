@@ -2,9 +2,9 @@
   "pageProps": {
     "postData": {
       "title": "Client-Centric Consistency Models",
+      "date": "2021-07-03 15:06:02",
       "lang": "en",
       "slug": "Client-Centric-Consistency-Models",
-      "date": "2021-07-03 15:06:02",
       "tags": [
         "Client-Centric Consistency Models",
         "Monotonic Reads",

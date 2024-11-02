@@ -2,9 +2,9 @@
   "pageProps": {
     "postData": {
       "title": "Smoke Test",
+      "date": "2019-04-27 23:50:38",
       "lang": "es",
       "slug": "Smoke-Test",
-      "date": "2019-04-27 23:50:38",
       "tags": [
         "Testing",
         "Agile Software Development",

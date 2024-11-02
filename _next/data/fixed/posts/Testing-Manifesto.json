@@ -2,9 +2,9 @@
   "pageProps": {
     "postData": {
       "title": "Testing Manifesto",
+      "date": "2019-05-01 10:30:55",
       "lang": "es",
       "slug": "Testing-Manifesto",
-      "date": "2019-05-01 10:30:55",
       "tags": ["Testing Manifesto", "Testing"],
       "path": "/Testing-Manifesto/index.html"
     },

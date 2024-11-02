@@ -2,9 +2,9 @@
   "pageProps": {
     "postData": {
       "title": "Raspberry Pi 4B Setup",
+      "date": "2022-07-10 13:00:17",
       "lang": "en",
       "slug": "RaspberryPi4B-Setup",
-      "date": "2022-07-10 13:00:17",
       "tags": ["Linux", "Debian", "Raspberry", "Raspberry Pi 4", "Prestashop"],
       "path": "/RaspberryPi4B-Setup/index.html"
     },

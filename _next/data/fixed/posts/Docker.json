@@ -2,9 +2,9 @@
   "pageProps": {
     "postData": {
       "title": "Docker",
+      "date": "2019-02-26 22:31:02",
       "lang": "es",
       "slug": "Docker",
-      "date": "2019-02-26 22:31:02",
       "tags": ["Docker", "Contenedor", "Container", "Virtualización", "DevOps"],
       "path": "/Docker/index.html"
     },

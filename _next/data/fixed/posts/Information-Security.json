@@ -2,9 +2,9 @@
   "pageProps": {
     "postData": {
       "title": "Information Security",
+      "date": "2021-03-28 11:11:17",
       "lang": "en",
       "slug": "Information-Security",
-      "date": "2021-03-28 11:11:17",
       "tags": [
         "InfoSec",
         "CIA",

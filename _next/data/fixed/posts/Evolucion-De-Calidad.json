@@ -2,9 +2,9 @@
   "pageProps": {
     "postData": {
       "title": "Evolución de la calidad",
+      "date": "2019-04-28 09:24:43",
       "lang": "es",
       "slug": "Evolucion-De-Calidad",
-      "date": "2019-04-28 09:24:43",
       "tags": ["Software Evolution"],
       "path": "/Evolucion-De-Calidad/index.html"
     },
