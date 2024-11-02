@@ -1,6 +1,6 @@
 {
   "pageProps": {
-    "markdownContentSource": "\r\nHola Mundo\r\n",
+    "articleHtml": "<p>Hola Mundo</p>",
     "tocHtml": "",
     "_nextI18Next": {
       "initialI18nStore": {

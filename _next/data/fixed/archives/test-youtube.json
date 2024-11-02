@@ -1,6 +1,6 @@
 {
   "pageProps": {
-    "markdownContentSource": "\r\n::youtube[CS329P]{vid=rvy3EggGH7w}\r\n",
+    "articleHtml": "<iframe src=\"https://www.youtube.com/embed/rvy3EggGH7w\" title=\"CS329P\" width=\"560\" height=\"315\" frameBorder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen=\"\"></iframe>",
     "tocHtml": "",
     "_nextI18Next": {
       "initialI18nStore": {

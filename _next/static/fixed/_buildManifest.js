@@ -4,12 +4,7 @@
     "/": ["static/chunks/pages/index.js"],
     "/404": ["static/chunks/pages/404.js"],
     "/_error": ["static/chunks/pages/_error.js"],
-    "/archives/[slug]": [
-      "static/chunks/5423ad26.js",
-      "static/chunks/175675d1.js",
-      "static/chunks/893.js",
-      "static/chunks/pages/archives/[slug].js",
-    ],
+    "/archives/[slug]": ["static/chunks/pages/archives/[slug].js"],
     "/posts/langs/[lang]": ["static/chunks/pages/posts/langs/[lang].js"],
     "/posts/langs/[lang]/pagination/[pagination]": [
       s,

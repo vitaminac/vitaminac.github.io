@@ -12,7 +12,7 @@
     var r = (u[e] = { exports: {} }),
       t = !0;
     try {
-      o[e].call(r.exports, r, r.exports, i), (t = !1);
+      o[e](r, r.exports, i), (t = !1);
     } finally {
       t && delete u[e];
     }

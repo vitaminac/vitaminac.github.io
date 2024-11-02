@@ -1,6 +1,6 @@
 {
   "pageProps": {
-    "markdownContentSource": "\r\nEmojis in this text will be replaced: :dog: :+1:\r\n",
+    "articleHtml": "<p>Emojis in this text will be replaced: <!-- -->🐶<!-- --> <!-- -->👍</p>",
     "tocHtml": "",
     "_nextI18Next": {
       "initialI18nStore": {

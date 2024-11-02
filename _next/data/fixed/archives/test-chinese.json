@@ -1,6 +1,6 @@
 {
   "pageProps": {
-    "markdownContentSource": "\n你好\n",
+    "articleHtml": "<p>你好</p>",
     "tocHtml": "",
     "_nextI18Next": {
       "initialI18nStore": {
