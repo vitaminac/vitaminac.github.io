@@ -3536,7 +3536,7 @@
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/_app",
         function () {
-          return n(8261);
+          return n(742);
         },
       ]);
     },
@@ -4518,7 +4518,7 @@
         (n.__next_img_default = !0);
       let r = n;
     },
-    8261: function (e, t, n) {
+    742: function (e, t, n) {
       "use strict";
       n.r(t),
         n.d(t, {
@@ -4528,9 +4528,11 @@
         });
       var r = n(5893),
         i = n(1798),
-        s = n(4298),
-        o = n.n(s);
-      function a() {
+        s = n(1752),
+        o = n.n(s),
+        a = n(4298),
+        l = n.n(a);
+      function u() {
         return (0, r.jsxs)(r.Fragment, {
           children: [
             (0, r.jsx)("link", {
@@ -4540,14 +4542,14 @@
                 "sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH",
               crossOrigin: "anonymous",
             }),
-            (0, r.jsx)(o(), {
+            (0, r.jsx)(l(), {
               id: "bootstrap-popper-js-cdn",
               src: "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js",
               integrity:
                 "sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r",
               crossOrigin: "anonymous",
             }),
-            (0, r.jsx)(o(), {
+            (0, r.jsx)(l(), {
               id: "bootstrap-js-cdn",
               src: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js",
               integrity:
@@ -4558,9 +4560,9 @@
         });
       }
       n(7294);
-      var l = n(1664),
-        u = n.n(l);
-      function c(e) {
+      var c = n(1664),
+        f = n.n(c);
+      function p(e) {
         return (0, r.jsx)("div", {
           className: "row justify-content-center",
           children: (0, r.jsxs)("ul", {
@@ -4568,7 +4570,7 @@
             children: [
               (0, r.jsx)("li", {
                 className: "list-inline-item ",
-                children: (0, r.jsx)(u(), {
+                children: (0, r.jsx)(f(), {
                   className: "tw-text-stone-700",
                   target: "_blank",
                   href: "https://www.linkedin.com/in/".concat(e.linkedin),
@@ -4587,7 +4589,7 @@
               }),
               (0, r.jsx)("li", {
                 className: "list-inline-item",
-                children: (0, r.jsx)(u(), {
+                children: (0, r.jsx)(f(), {
                   className: "tw-text-stone-700",
                   target: "_blank",
                   href: "mailto:".concat(
@@ -4609,7 +4611,7 @@
               }),
               (0, r.jsx)("li", {
                 className: "list-inline-item",
-                children: (0, r.jsx)(u(), {
+                children: (0, r.jsx)(f(), {
                   className: "tw-text-stone-700",
                   target: "_blank",
                   href: "https://github.com/".concat(e.github),
@@ -4628,7 +4630,7 @@
               }),
               (0, r.jsx)("li", {
                 className: "list-inline-item",
-                children: (0, r.jsx)(u(), {
+                children: (0, r.jsx)(f(), {
                   className: "tw-text-stone-700",
                   target: "_blank",
                   href: "https://gist.github.com/".concat(e.github),
@@ -4648,7 +4650,7 @@
               }),
               (0, r.jsx)("li", {
                 className: "list-inline-item",
-                children: (0, r.jsx)(u(), {
+                children: (0, r.jsx)(f(), {
                   className: "tw-text-stone-700",
                   target: "_blank",
                   href: "https://gitlab.com/".concat(e.gitlab),
@@ -4667,7 +4669,7 @@
               }),
               (0, r.jsx)("li", {
                 className: "list-inline-item",
-                children: (0, r.jsx)(u(), {
+                children: (0, r.jsx)(f(), {
                   className: "tw-text-stone-700",
                   target: "_blank",
                   href: "https://www.kaggle.com/".concat(e.kaggle),
@@ -4686,7 +4688,7 @@
               }),
               (0, r.jsx)("li", {
                 className: "list-inline-item",
-                children: (0, r.jsx)(u(), {
+                children: (0, r.jsx)(f(), {
                   className: "tw-text-stone-700",
                   target: "_blank",
                   href: "https://leetcode.com/".concat(e.leetcode),
@@ -4705,7 +4707,7 @@
               }),
               (0, r.jsx)("li", {
                 className: "list-inline-item",
-                children: (0, r.jsx)(u(), {
+                children: (0, r.jsx)(f(), {
                   className: "tw-text-stone-700",
                   target: "_blank",
                   href: "https://stackoverflow.com/users/".concat(
@@ -4729,8 +4731,8 @@
           }),
         });
       }
-      var f = n(261),
-        p = {
+      var d = n(261),
+        g = {
           src: "/_next/static/media/QR.b48259ea.png",
           height: 624,
           width: 1710,
@@ -4739,13 +4741,13 @@
           blurWidth: 8,
           blurHeight: 3,
         };
-      function d(e) {
+      function h(e) {
         return (0, r.jsxs)("footer", {
           className: "tw-text-center tw-text-gray-400",
           children: [
-            (0, r.jsx)(c, { ...e }),
-            (0, r.jsx)(f.t, {
-              src: p,
+            (0, r.jsx)(p, { ...e }),
+            (0, r.jsx)(d.t, {
+              src: g,
               alt: "QR",
               className:
                 "tw-mx-auto tw-max-w-full lg:tw-max-w-xl tw-object-contain tw-object-center",
@@ -4758,14 +4760,14 @@
           ],
         });
       }
-      var g = n(3967),
-        h = n.n(g),
-        m = n(6985),
-        y = n.n(m);
-      function b(e) {
+      var m = n(3967),
+        y = n.n(m),
+        b = n(6985),
+        v = n.n(b);
+      function x(e) {
         let { t } = (0, i.$G)("navbar");
         return (0, r.jsx)("nav", {
-          className: h()(
+          className: y()(
             "navbar",
             "navbar-expand-md",
             "navbar-light",
@@ -4773,13 +4775,13 @@
             "tw-bg-white/95",
             "tw-shadow",
             "tw-shadow-black/25",
-            y().navBar,
+            v().navBar,
           ),
           children: (0, r.jsxs)("div", {
             className: "container-fluid px-md-5",
             children: [
               (0, r.jsx)("div", {
-                className: h()(
+                className: y()(
                   "navbar-brand",
                   "animate__animated",
                   "animate__pulse",
@@ -4810,7 +4812,7 @@
                   children: [
                     (0, r.jsx)("li", {
                       className: "nav-item",
-                      children: (0, r.jsx)(u(), {
+                      children: (0, r.jsx)(f(), {
                         className: "nav-link active",
                         "aria-current": "page",
                         href: "/posts/langs/".concat(e.lang, "/pagination/1"),
@@ -4819,7 +4821,7 @@
                     }),
                     (0, r.jsx)("li", {
                       className: "nav-item",
-                      children: (0, r.jsx)(u(), {
+                      children: (0, r.jsx)(f(), {
                         className: "nav-link",
                         "aria-current": "page",
                         href: "/posts/langs/".concat(e.lang, "/tags"),
@@ -4843,7 +4845,7 @@
                             (0, r.jsx)(
                               "li",
                               {
-                                children: (0, r.jsx)(u(), {
+                                children: (0, r.jsx)(f(), {
                                   className: "dropdown-item",
                                   href: "/posts/langs/".concat(e),
                                   children: t(e),
@@ -4862,26 +4864,23 @@
           }),
         });
       }
-      var v = n(1752),
-        x = n.n(v);
       n(3434);
       var S = (0, i.Jc)(function (e) {
         let { Component: t, pageProps: n } = e,
-          i = (function () {
-            let { publicRuntimeConfig: e } = x()();
-            return e;
-          })(),
+          {
+            serverRuntimeConfig: { siteConfig: i },
+          } = o()(),
           s = n.lang || i.defaultLocale;
         return (0, r.jsxs)(r.Fragment, {
           children: [
-            (0, r.jsx)(a, {}),
-            (0, r.jsx)(b, {
+            (0, r.jsx)(u, {}),
+            (0, r.jsx)(x, {
               siteTitle: i.siteTitle,
               lang: s,
               supportedLanguages: i.locales,
             }),
             (0, r.jsx)(t, { ...n, lang: s, siteConfig: i }),
-            (0, r.jsx)(d, { ...i }),
+            (0, r.jsx)(h, { ...i }),
           ],
         });
       });
