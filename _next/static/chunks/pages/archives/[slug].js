@@ -1,7 +1,7 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [874],
   {
-    4384: function (n, t, u) {
+    5115: function (n, t, u) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/archives/[slug]",
         function () {
@@ -39,7 +39,7 @@
   },
   function (n) {
     n.O(0, [888, 774, 179], function () {
-      return n((n.s = 4384));
+      return n((n.s = 5115));
     }),
       (_N_E = n.O());
   },

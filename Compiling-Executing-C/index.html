@@ -365,46 +365,46 @@ int main(int argc, char *argv[])
               The output after compilation stage in my machine look like
               following
             </p>
-            <pre><code>    .file    &quot;test.c&quot;
+            <pre><code>    .file	&quot;test.c&quot;
     .text
-    .section    .rodata
+    .section	.rodata
 .LC0:
-    .string    &quot;Hello World #%i!\n&quot;
+    .string	&quot;Hello World #%i!\n&quot;
     .text
-    .globl    main
-    .type    main, @function
+    .globl	main
+    .type	main, @function
 main:
 .LFB0:
     .cfi_startproc
-    pushq    %rbp
+    pushq	%rbp
     .cfi_def_cfa_offset 16
     .cfi_offset 6, -16
-    movq    %rsp, %rbp
+    movq	%rsp, %rbp
     .cfi_def_cfa_register 6
-    subq    $32, %rsp
-    movl    %edi, -20(%rbp)
-    movq    %rsi, -32(%rbp)
-    movl    $0, -4(%rbp)
-    jmp    .L2
+    subq	$32, %rsp
+    movl	%edi, -20(%rbp)
+    movq	%rsi, -32(%rbp)
+    movl	$0, -4(%rbp)
+    jmp	.L2
 .L3:
-    movl    -4(%rbp), %eax
-    movl    %eax, %esi
-    leaq    .LC0(%rip), %rdi
-    movl    $0, %eax
-    call    printf@PLT
-    addl    $1, -4(%rbp)
+    movl	-4(%rbp), %eax
+    movl	%eax, %esi
+    leaq	.LC0(%rip), %rdi
+    movl	$0, %eax
+    call	printf@PLT
+    addl	$1, -4(%rbp)
 .L2:
-    cmpl    $9, -4(%rbp)
-    jle    .L3
-    movl    $0, %eax
+    cmpl	$9, -4(%rbp)
+    jle	.L3
+    movl	$0, %eax
     leave
     .cfi_def_cfa 7, 8
     ret
     .cfi_endproc
 .LFE0:
-    .size    main, .-main
-    .ident    &quot;GCC: (Debian 10.2.1-6) 10.2.1 20210110&quot;
-    .section    .note.GNU-stack,&quot;&quot;,@progbits
+    .size	main, .-main
+    .ident	&quot;GCC: (Debian 10.2.1-6) 10.2.1 20210110&quot;
+    .section	.note.GNU-stack,&quot;&quot;,@progbits
 </code></pre>
             <h2 id="Assembly">
               <a href="#Assembly" class="headerlink" title="Assembly"></a
@@ -775,18 +775,18 @@ ld -o test.elf -dynamic-linker /lib64/ld-linux-x86-64.so.2 $STARTFILES test.o $G
               <code>objdump --disassemble=_start test.elf</code>:
             </p>
             <pre><code>0000000000401040 &lt;_start&gt;:
-          401040:          31 ed                    xor    %ebp,%ebp
-          401042:          49 89 d1                 mov    %rdx,%r9
-          401045:          5e                       pop    %rsi
-          401046:          48 89 e2                 mov    %rsp,%rdx
-          401049:          48 83 e4 f0              and    $0xfffffffffffffff0,%rsp
-          40104d:          50                       push   %rax
-          40104e:          54                       push   %rsp
-          40104f:          49 c7 c0 10 11 40 00     mov    $0x401110,%r8        # __libc_csu_fini
-          401056:          48 c7 c1 b0 10 40 00     mov    $0x4010b0,%rcx       # __libc_csu_init
-          40105d:          48 c7 c7 71 10 40 00     mov    $0x401071,%rdi       # our main function
-          401064:          ff 15 86 2f 00 00        callq  *0x2f86(%rip)        # 403ff0 &lt;__libc_start_main@GLIBC_2.2.5&gt;
-          40106a:          f4                       hlt    
+          401040:	      31 ed                	xor    %ebp,%ebp
+          401042:	      49 89 d1             	mov    %rdx,%r9
+          401045:	      5e                   	pop    %rsi
+          401046:	      48 89 e2             	mov    %rsp,%rdx
+          401049:	      48 83 e4 f0          	and    $0xfffffffffffffff0,%rsp
+          40104d:	      50                   	push   %rax
+          40104e:	      54                   	push   %rsp
+          40104f:	      49 c7 c0 10 11 40 00 	mov    $0x401110,%r8        # __libc_csu_fini
+          401056:	      48 c7 c1 b0 10 40 00 	mov    $0x4010b0,%rcx       # __libc_csu_init
+          40105d:	      48 c7 c7 71 10 40 00 	mov    $0x401071,%rdi       # our main function
+          401064:	      ff 15 86 2f 00 00    	callq  *0x2f86(%rip)        # 403ff0 &lt;__libc_start_main@GLIBC_2.2.5&gt;
+          40106a:	      f4                   	hlt    
 </code></pre>
             <p>
               On glibc 2.31, <code>_start</code>
