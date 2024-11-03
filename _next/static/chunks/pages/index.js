@@ -20,9 +20,9 @@
             return c;
           },
         });
-      var u = e(5893),
-        i = e(9008),
-        o = e.n(i),
+      var i = e(5893),
+        u = e(9008),
+        o = e.n(u),
         r = !0;
       function c(n) {
         let t = [
@@ -30,17 +30,17 @@
           n.basePath,
           "posts",
           "langs",
-          n.siteConfig.defaultLocale,
+          n.siteConfig.i18n.defaultLocale,
         ]
           .filter((n) => n)
           .join("/");
-        return (0, u.jsxs)(o(), {
+        return (0, i.jsxs)(o(), {
           children: [
-            (0, u.jsx)("meta", {
+            (0, i.jsx)("meta", {
               httpEquiv: "refresh",
               content: "0; URL='".concat(t, "'"),
             }),
-            (0, u.jsx)("link", { rel: "canonical", href: t }),
+            (0, i.jsx)("link", { rel: "canonical", href: t }),
           ],
         });
       }

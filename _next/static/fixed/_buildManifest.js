@@ -1,4 +1,4 @@
-(self.__BUILD_MANIFEST = (function (s, a) {
+(self.__BUILD_MANIFEST = (function (s, a, t, g) {
   return {
     __rewrites: { afterFiles: [], beforeFiles: [], fallback: [] },
     "/": ["static/chunks/pages/index.js"],
@@ -9,20 +9,28 @@
     "/posts/langs/[lang]/pagination/[pagination]": [
       s,
       a,
+      t,
+      g,
       "static/chunks/pages/posts/langs/[lang]/pagination/[pagination].js",
     ],
     "/posts/langs/[lang]/tags": [
-      a,
+      s,
+      t,
+      g,
       "static/chunks/pages/posts/langs/[lang]/tags.js",
     ],
     "/posts/langs/[lang]/tags/[tag]": [
       s,
       a,
+      t,
+      g,
       "static/chunks/pages/posts/langs/[lang]/tags/[tag].js",
     ],
     "/posts/[slug]": [
       s,
+      a,
       "static/chunks/287.js",
+      "static/css/ef1dc90026d69db2.css",
       "static/chunks/pages/posts/[slug].js",
     ],
     sortedPages: [
@@ -38,5 +46,10 @@
       "/posts/[slug]",
     ],
   };
-})("static/chunks/470.js", "static/css/ef9f9e2030bad8a8.css")),
+})(
+  "static/chunks/367.js",
+  "static/chunks/503.js",
+  "static/chunks/409.js",
+  "static/css/b6ae49f768350e65.css",
+)),
   self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB();

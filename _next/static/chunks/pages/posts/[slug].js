@@ -1,128 +1,515 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [922],
   {
-    592: function (t, e, n) {
+    592: function (e, t, a) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/posts/[slug]",
         function () {
-          return n(1475);
+          return a(1475);
         },
       ]);
     },
-    3045: function (t, e, n) {
+    3045: function (e, t, a) {
       "use strict";
-      n.d(e, {
+      a.d(t, {
         E: function () {
-          return a;
+          return c;
         },
       });
-      var r = n(5893);
-      n(7294);
-      var i = n(197),
-        s = n(949);
-      function a(t) {
-        let { dateString: e } = t,
-          n = (0, i.D)(e);
-        return (0, r.jsxs)("span", {
+      var s = a(5893);
+      a(7294);
+      var n = a(197),
+        i = a(949);
+      function c(e) {
+        let { dateString: t } = e,
+          a = (0, n.D)(t);
+        return (0, s.jsxs)("span", {
           children: [
-            (0, r.jsx)("i", { className: "fa-regular fa-calendar" }),
-            (0, r.jsx)("time", {
+            (0, s.jsx)("i", { className: "fa-regular fa-calendar" }),
+            (0, s.jsx)("time", {
               className: "tw-pl-1.5",
-              dateTime: e,
-              children: (0, s.WU)(n, "LLLL d, yyyy"),
+              dateTime: t,
+              children: (0, i.WU)(a, "LLLL d, yyyy"),
             }),
           ],
         });
       }
     },
-    1734: function (t, e, n) {
+    2967: function (e, t, a) {
       "use strict";
-      n.d(e, {
-        w: function () {
-          return a;
+      a.d(t, {
+        X: function () {
+          return w;
         },
       });
-      var r = n(5893),
-        i = n(1664),
-        s = n.n(i);
-      function a(t) {
-        let { lang: e, tags: n } = t,
-          i = n.map((t) =>
-            (0, r.jsx)(
+      var s = a(5893),
+        n = a(4298),
+        i = a.n(n);
+      function c() {
+        return (0, s.jsxs)(s.Fragment, {
+          children: [
+            (0, s.jsx)("link", {
+              rel: "stylesheet",
+              href: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css",
+              integrity:
+                "sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH",
+              crossOrigin: "anonymous",
+            }),
+            (0, s.jsx)(i(), {
+              id: "bootstrap-popper-js-cdn",
+              src: "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js",
+              integrity:
+                "sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r",
+              crossOrigin: "anonymous",
+            }),
+            (0, s.jsx)(i(), {
+              id: "bootstrap-js-cdn",
+              src: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js",
+              integrity:
+                "sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy",
+              crossOrigin: "anonymous",
+            }),
+          ],
+        });
+      }
+      a(7294);
+      var l = a(1664),
+        r = a.n(l);
+      function o(e) {
+        return (0, s.jsx)("div", {
+          className: "row justify-content-center",
+          children: (0, s.jsxs)("ul", {
+            className: "list-inline text-center tw-text-stone-700",
+            children: [
+              (0, s.jsx)("li", {
+                className: "list-inline-item ",
+                children: (0, s.jsx)(r(), {
+                  className: "tw-text-stone-700",
+                  target: "_blank",
+                  href: "https://www.linkedin.com/in/".concat(e.linkedin),
+                  children: (0, s.jsxs)("span", {
+                    className: "fa-stack fa-lg",
+                    children: [
+                      (0, s.jsx)("i", {
+                        className: "fa fa-circle fa-stack-2x",
+                      }),
+                      (0, s.jsx)("i", {
+                        className: "fab fa-linkedin-in fa-stack-1x fa-inverse",
+                      }),
+                    ],
+                  }),
+                }),
+              }),
+              (0, s.jsx)("li", {
+                className: "list-inline-item",
+                children: (0, s.jsx)(r(), {
+                  className: "tw-text-stone-700",
+                  target: "_blank",
+                  href: "mailto:".concat(
+                    e.email,
+                    "?subject=From my blog&body=Hi,I found this website very useful",
+                  ),
+                  children: (0, s.jsxs)("span", {
+                    className: "fa-stack fa-lg",
+                    children: [
+                      (0, s.jsx)("i", {
+                        className: "fa fa-circle fa-stack-2x",
+                      }),
+                      (0, s.jsx)("i", {
+                        className: "fas fa-envelope fa-stack-1x fa-inverse",
+                      }),
+                    ],
+                  }),
+                }),
+              }),
+              (0, s.jsx)("li", {
+                className: "list-inline-item",
+                children: (0, s.jsx)(r(), {
+                  className: "tw-text-stone-700",
+                  target: "_blank",
+                  href: "https://github.com/".concat(e.github),
+                  children: (0, s.jsxs)("span", {
+                    className: "fa-stack fa-lg",
+                    children: [
+                      (0, s.jsx)("i", {
+                        className: "fa fa-circle fa-stack-2x",
+                      }),
+                      (0, s.jsx)("i", {
+                        className: "fab fa-github fa-stack-1x fa-inverse",
+                      }),
+                    ],
+                  }),
+                }),
+              }),
+              (0, s.jsx)("li", {
+                className: "list-inline-item",
+                children: (0, s.jsx)(r(), {
+                  className: "tw-text-stone-700",
+                  target: "_blank",
+                  href: "https://gist.github.com/".concat(e.github),
+                  children: (0, s.jsxs)("span", {
+                    className: "fa-stack fa-lg",
+                    children: [
+                      (0, s.jsx)("i", {
+                        className: "fa fa-circle fa-stack-2x",
+                      }),
+                      (0, s.jsx)("i", {
+                        className:
+                          "fab fa-github-square fa-stack-1x fa-inverse",
+                      }),
+                    ],
+                  }),
+                }),
+              }),
+              (0, s.jsx)("li", {
+                className: "list-inline-item",
+                children: (0, s.jsx)(r(), {
+                  className: "tw-text-stone-700",
+                  target: "_blank",
+                  href: "https://gitlab.com/".concat(e.gitlab),
+                  children: (0, s.jsxs)("span", {
+                    className: "fa-stack fa-lg",
+                    children: [
+                      (0, s.jsx)("i", {
+                        className: "fa fa-circle fa-stack-2x",
+                      }),
+                      (0, s.jsx)("i", {
+                        className: "fab fa-gitlab fa-stack-1x fa-inverse",
+                      }),
+                    ],
+                  }),
+                }),
+              }),
+              (0, s.jsx)("li", {
+                className: "list-inline-item",
+                children: (0, s.jsx)(r(), {
+                  className: "tw-text-stone-700",
+                  target: "_blank",
+                  href: "https://www.kaggle.com/".concat(e.kaggle),
+                  children: (0, s.jsxs)("span", {
+                    className: "fa-stack fa-lg",
+                    children: [
+                      (0, s.jsx)("i", {
+                        className: "fa fa-circle fa-stack-2x",
+                      }),
+                      (0, s.jsx)("i", {
+                        className: "fab fa-kaggle fa-stack-1x fa-inverse",
+                      }),
+                    ],
+                  }),
+                }),
+              }),
+              (0, s.jsx)("li", {
+                className: "list-inline-item",
+                children: (0, s.jsx)(r(), {
+                  className: "tw-text-stone-700",
+                  target: "_blank",
+                  href: "https://leetcode.com/".concat(e.leetcode),
+                  children: (0, s.jsxs)("span", {
+                    className: "fa-stack fa-lg",
+                    children: [
+                      (0, s.jsx)("i", {
+                        className: "fa fa-circle fa-stack-2x",
+                      }),
+                      (0, s.jsx)("i", {
+                        className: "fas fa-code fa-stack-1x fa-inverse",
+                      }),
+                    ],
+                  }),
+                }),
+              }),
+              (0, s.jsx)("li", {
+                className: "list-inline-item",
+                children: (0, s.jsx)(r(), {
+                  className: "tw-text-stone-700",
+                  target: "_blank",
+                  href: "https://stackoverflow.com/users/".concat(
+                    e.stackoverflow,
+                  ),
+                  children: (0, s.jsxs)("span", {
+                    className: "fa-stack fa-lg",
+                    children: [
+                      (0, s.jsx)("i", {
+                        className: "fa fa-circle fa-stack-2x",
+                      }),
+                      (0, s.jsx)("i", {
+                        className:
+                          "fab fa-stack-overflow fa-stack-1x fa-inverse",
+                      }),
+                    ],
+                  }),
+                }),
+              }),
+            ],
+          }),
+        });
+      }
+      var d = a(261),
+        m = {
+          src: "/_next/static/media/QR.b48259ea.png",
+          height: 624,
+          width: 1710,
+          blurDataURL:
+            "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAADCAIAAAAhqtkfAAAAVklEQVR42gFLALT/AKrStMHRxZXRpW3NilHIekDGcw/CYyjCZwC/z8LTwcan0LKu37rI48+228C838WZ16oApdSxvdPCi86doNmvx+LNu9vDx+LOn9muCIkyTVum2sgAAAAASUVORK5CYII=",
+          blurWidth: 8,
+          blurHeight: 3,
+        };
+      function x(e) {
+        let { siteConfig: t } = e;
+        return (0, s.jsxs)("footer", {
+          className: "tw-text-center tw-text-gray-400",
+          children: [
+            (0, s.jsx)(o, { ...t }),
+            (0, s.jsx)(d.t, {
+              src: m,
+              alt: "QR",
+              className:
+                "tw-mx-auto tw-max-w-full tw-object-contain tw-object-center lg:tw-max-w-xl",
+            }),
+            (0, s.jsx)("p", {
+              children: "Copyright \xa9 "
+                .concat(t.siteTitle, " ")
+                .concat(new Date().getFullYear()),
+            }),
+          ],
+        });
+      }
+      var f = a(3967),
+        u = a.n(f),
+        h = a(1798),
+        g = a(6985),
+        j = a.n(g);
+      function p(e) {
+        let { lang: t, siteConfig: a } = e,
+          { t: n } = (0, h.$G)("navbar");
+        return (0, s.jsx)("nav", {
+          className: u()(
+            "navbar",
+            "navbar-expand-md",
+            "navbar-light",
+            "sticky-top",
+            "tw-bg-white/95",
+            "tw-shadow",
+            "tw-shadow-black/25",
+            j().navBar,
+          ),
+          children: (0, s.jsxs)("div", {
+            className: "container-fluid px-md-5",
+            children: [
+              (0, s.jsx)("div", {
+                className: u()(
+                  "navbar-brand",
+                  "animate__animated",
+                  "animate__pulse",
+                ),
+                children: (0, s.jsx)("span", {
+                  className:
+                    "tw-rounded tw-bg-black tw-p-1 tw-text-xl tw-font-medium tw-text-white",
+                  children: a.siteTitle,
+                }),
+              }),
+              (0, s.jsx)("button", {
+                className: "navbar-toggler",
+                type: "button",
+                "data-bs-toggle": "collapse",
+                "data-bs-target": "#navbarSupportedContent",
+                "aria-controls": "navbarSupportedContent",
+                "aria-expanded": "false",
+                "aria-label": "Toggle navigation",
+                children: (0, s.jsx)("span", {
+                  className: "navbar-toggler-icon",
+                }),
+              }),
+              (0, s.jsx)("div", {
+                className: "navbar-collapse collapse",
+                id: "navbarSupportedContent",
+                children: (0, s.jsxs)("ul", {
+                  className: "navbar-nav mb-2 mb-lg-0 ms-auto",
+                  children: [
+                    (0, s.jsx)("li", {
+                      className: "nav-item",
+                      children: (0, s.jsx)(r(), {
+                        className: "nav-link active",
+                        "aria-current": "page",
+                        href: "/posts/langs/".concat(t, "/pagination/1"),
+                        children: n("Home"),
+                      }),
+                    }),
+                    (0, s.jsx)("li", {
+                      className: "nav-item",
+                      children: (0, s.jsx)(r(), {
+                        className: "nav-link",
+                        "aria-current": "page",
+                        href: "/posts/langs/".concat(t, "/tags"),
+                        children: n("Tags"),
+                      }),
+                    }),
+                    (0, s.jsxs)("li", {
+                      className: "nav-item dropdown",
+                      children: [
+                        (0, s.jsx)("a", {
+                          className: "nav-link dropdown-toggle",
+                          href: "#",
+                          role: "button",
+                          "data-bs-toggle": "dropdown",
+                          "aria-expanded": "false",
+                          children: n("Language"),
+                        }),
+                        (0, s.jsx)("ul", {
+                          className: "dropdown-menu dropdown-menu-end",
+                          children: a.i18n.locales.map((e) =>
+                            (0, s.jsx)(
+                              "li",
+                              {
+                                children: (0, s.jsx)(r(), {
+                                  className: "dropdown-item",
+                                  href: "/posts/langs/".concat(e),
+                                  children: n(e),
+                                }),
+                              },
+                              e,
+                            ),
+                          ),
+                        }),
+                      ],
+                    }),
+                  ],
+                }),
+              }),
+            ],
+          }),
+        });
+      }
+      function w(e) {
+        let { children: t, lang: a, siteConfig: n } = e;
+        return (0, s.jsxs)(s.Fragment, {
+          children: [
+            (0, s.jsx)(c, {}),
+            (0, s.jsx)(p, { siteConfig: n, lang: a }),
+            t,
+            (0, s.jsx)(x, { siteConfig: n }),
+          ],
+        });
+      }
+    },
+    1734: function (e, t, a) {
+      "use strict";
+      a.d(t, {
+        w: function () {
+          return c;
+        },
+      });
+      var s = a(5893),
+        n = a(1664),
+        i = a.n(n);
+      function c(e) {
+        let { lang: t, tags: a } = e,
+          n = a.map((e) =>
+            (0, s.jsx)(
               "li",
               {
                 className: "tw-inline tw-px-1",
-                children: (0, r.jsx)(
-                  s(),
+                children: (0, s.jsx)(
+                  i(),
                   {
                     className:
                       "tw-m-0.5 tw-inline-block tw-rounded tw-border tw-border-solid tw-border-white tw-bg-neutral-300 tw-px-2 tw-text-sm tw-leading-6 tw-text-white tw-no-underline hover:tw-bg-sky-300",
-                    href: "/posts/langs/".concat(e, "/tags/").concat(t),
-                    children: t,
+                    href: "/posts/langs/".concat(t, "/tags/").concat(e),
+                    children: e,
                   },
-                  t,
+                  e,
                 ),
               },
-              t,
+              e,
             ),
           );
-        return (0, r.jsx)("ul", { className: "tw-p-0", children: i });
+        return (0, s.jsx)("ul", { className: "tw-p-0", children: n });
       }
     },
-    5853: function (t, e, n) {
+    261: function (e, t, a) {
       "use strict";
-      n.d(e, {
-        K: function () {
-          return a;
+      a.d(t, {
+        t: function () {
+          return l;
         },
       });
-      var r = n(5893),
-        i = n(9008),
-        s = n.n(i);
-      function a(t) {
-        return (0, r.jsxs)(s(), {
+      var s = a(5893),
+        n = a(5675),
+        i = a.n(n);
+      let c = (e) => {
+        let { src: t } = e;
+        return t;
+      };
+      function l(e) {
+        let { alt: t, src: a, width: n, height: l, className: r, ...o } = e;
+        return (0, s.jsx)(i(), {
+          src: a,
+          loader: c,
+          alt: t || "image",
+          placeholder: "blur",
+          sizes: "responsive",
+          unoptimized: !0,
+          width: n,
+          height: l,
+          className: r,
+          ...o,
+        });
+      }
+    },
+    5853: function (e, t, a) {
+      "use strict";
+      a.d(t, {
+        K: function () {
+          return c;
+        },
+      });
+      var s = a(5893),
+        n = a(9008),
+        i = a.n(n);
+      function c(e) {
+        return (0, s.jsxs)(i(), {
           children: [
-            (0, r.jsx)("meta", { charSet: "utf-8" }),
-            (0, r.jsx)("meta", {
+            (0, s.jsx)("meta", { charSet: "utf-8" }),
+            (0, s.jsx)("meta", {
               httpEquiv: "X-UA-Compatible",
               content: "IE=edge",
             }),
-            (0, r.jsx)("meta", {
+            (0, s.jsx)("meta", {
               name: "viewport",
               content: "width=device-width, initial-scale=1.0",
             }),
-            (0, r.jsx)("meta", {
+            (0, s.jsx)("meta", {
               httpEquiv: "content-language",
-              content: t.lang,
+              content: e.lang,
             }),
-            (0, r.jsx)("link", { rel: "icon", href: "/favicon.ico" }),
-            (0, r.jsx)("title", { children: t.title }),
-            (0, r.jsx)("meta", { name: "og:title", content: t.title }),
-            (0, r.jsx)("meta", { name: "author", content: t.author }),
-            t.description &&
-              (0, r.jsxs)(r.Fragment, {
+            (0, s.jsx)("link", { rel: "icon", href: "/favicon.ico" }),
+            (0, s.jsx)("title", { children: e.title }),
+            (0, s.jsx)("meta", { name: "og:title", content: e.title }),
+            (0, s.jsx)("meta", { name: "author", content: e.author }),
+            e.description &&
+              (0, s.jsxs)(s.Fragment, {
                 children: [
-                  (0, r.jsx)("meta", {
+                  (0, s.jsx)("meta", {
                     name: "description",
-                    content: t.description,
+                    content: e.description,
                   }),
-                  (0, r.jsx)("meta", {
+                  (0, s.jsx)("meta", {
                     name: "og:description",
-                    content: t.description,
+                    content: e.description,
                   }),
                 ],
               }),
-            t.previewImage &&
-              (0, r.jsx)("meta", {
+            e.previewImage &&
+              (0, s.jsx)("meta", {
                 property: "og:image",
-                content: t.previewImage,
+                content: e.previewImage,
               }),
-            t.keywords &&
-              (0, r.jsx)("meta", {
+            e.keywords &&
+              (0, s.jsx)("meta", {
                 name: "keywords",
-                content: t.keywords.join(","),
+                content: e.keywords.join(","),
               }),
-            (0, r.jsx)("meta", {
+            (0, s.jsx)("meta", {
               name: "twitter:card",
               content: "summary_large_image",
             }),
@@ -130,85 +517,88 @@
         });
       }
     },
-    1475: function (t, e, n) {
+    1475: function (e, t, a) {
       "use strict";
-      n.r(e),
-        n.d(e, {
+      a.r(t),
+        a.d(t, {
           __N_SSG: function () {
-            return h;
+            return j;
           },
           default: function () {
-            return f;
+            return p;
           },
         });
-      var r = n(5893),
-        i = n(7294);
-      function s(t) {
-        let e = (0, i.useRef)(null),
-          [n, s] = (0, i.useState)(),
-          [a, c] = (0, i.useState)(0),
-          l = (0, i.useCallback)(() => {
-            s(e.current.contentWindow.document.body);
-          }, [s]),
-          o = (0, i.useCallback)(() => {
-            c(n.scrollHeight);
-          }, [n, c]);
+      var s = a(5893),
+        n = a(7294);
+      function i(e) {
+        let t = (0, n.useRef)(null),
+          [a, i] = (0, n.useState)(),
+          [c, l] = (0, n.useState)(0),
+          r = (0, n.useCallback)(() => {
+            i(t.current.contentWindow.document.body);
+          }, [i]),
+          o = (0, n.useCallback)(() => {
+            l(a.scrollHeight);
+          }, [a, l]);
         return (
-          (0, i.useEffect)(() => {
-            if (n) {
-              let t = new ResizeObserver(o);
+          (0, n.useEffect)(() => {
+            if (a) {
+              let e = new ResizeObserver(o);
               return (
-                t.observe(n),
+                e.observe(a),
                 () => {
-                  t.unobserve(n);
+                  e.unobserve(a);
                 }
               );
             }
-          }, [n, o]),
-          (0, r.jsx)("iframe", {
-            title: t.title,
-            src: t.src,
+          }, [a, o]),
+          (0, s.jsx)("iframe", {
+            title: e.title,
+            src: e.src,
             width: "100%",
-            height: "".concat(a, "px"),
-            ref: e,
-            onLoad: l,
+            height: "".concat(c, "px"),
+            ref: t,
+            onLoad: r,
           })
         );
       }
-      var a = n(1798),
-        c = n(1734),
-        l = n(5853),
-        o = n(3045),
-        u = n(5152),
-        d = n.n(u),
-        w = n(3944);
-      function m(t) {
-        return (0, r.jsx)(w.qw, {
-          shortname: t.username,
+      var c = a(1798),
+        l = a(3045),
+        r = a(5152),
+        o = a.n(r),
+        d = a(3944);
+      function m(e) {
+        return (0, s.jsx)(d.qw, {
+          shortname: e.username,
           config: {
             url: window.location.href,
-            identifier: t.id,
-            title: t.title,
-            language: t.lang,
+            identifier: e.id,
+            title: e.title,
+            language: e.lang,
           },
         });
       }
-      let x = d()(() => Promise.resolve(m), { ssr: !1 });
-      function g(t) {
-        let { children: e, postData: n, siteConfig: i } = t,
-          { t: s } = (0, a.$G)("post-layout"),
-          { siteAuthor: u, disqusUsername: d } = i;
-        return (0, r.jsxs)(r.Fragment, {
+      let x = o()(() => Promise.resolve(m), { ssr: !1 });
+      var f = a(2967),
+        u = a(1734),
+        h = a(5853);
+      function g(e) {
+        let { children: t, postData: a, siteConfig: n } = e,
+          { t: i } = (0, c.$G)("post-layout"),
+          { siteAuthor: r, disqusUsername: o } = n;
+        return (0, s.jsxs)(f.X, {
+          lang: a.lang,
+          siteConfig: n,
           children: [
-            (0, r.jsx)(l.K, {
-              title: n.title,
-              author: u,
-              lang: n.lang,
-              description: n.description,
-              keywords: n.tags,
-              previewImage: n.previewImageUrl,
+            (0, s.jsx)(h.K, {
+              title: a.title,
+              author: r,
+              lang: a.lang,
+              description: a.description,
+              keywords: a.tags,
+              previewImage: a.previewImageUrl,
             }),
-            (0, r.jsxs)("header", {
+            (0, s.jsxs)("header", {
               className:
                 "tw-flex tw-h-96 tw-w-screen tw-flex-col tw-content-center tw-justify-center tw-bg-cover tw-bg-center tw-bg-no-repeat tw-text-center tw-text-white",
               style: {
@@ -218,30 +608,30 @@
                 ),
               },
               children: [
-                (0, r.jsx)("h1", { children: n.title }),
-                (0, r.jsx)("p", { children: s("Author", { author: u }) }),
-                (0, r.jsx)(o.E, { dateString: n.date }),
-                (0, r.jsxs)("section", {
+                (0, s.jsx)("h1", { children: a.title }),
+                (0, s.jsx)("p", { children: i("Author", { author: r }) }),
+                (0, s.jsx)(l.E, { dateString: a.date }),
+                (0, s.jsxs)("section", {
                   className: "tw-mt-3 tw-text-center",
                   children: [
-                    (0, r.jsxs)("p", { children: [s("Tags"), ":"] }),
-                    (0, r.jsx)(c.w, { lang: n.lang, tags: n.tags }),
+                    (0, s.jsxs)("p", { children: [i("Tags"), ":"] }),
+                    (0, s.jsx)(u.w, { lang: a.lang, tags: a.tags }),
                   ],
                 }),
               ],
             }),
-            (0, r.jsxs)("div", {
+            (0, s.jsxs)("div", {
               className: "tw-mx-auto tw-w-11/12",
               children: [
-                (0, r.jsx)("main", {
-                  children: (0, r.jsx)("article", { children: e }),
+                (0, s.jsx)("main", {
+                  children: (0, s.jsx)("article", { children: t }),
                 }),
-                (0, r.jsx)("aside", {
-                  children: (0, r.jsx)(x, {
-                    username: d,
-                    id: n.slug,
-                    title: n.title,
-                    lang: n.lang,
+                (0, s.jsx)("aside", {
+                  children: (0, s.jsx)(x, {
+                    username: o,
+                    id: a.slug,
+                    title: a.title,
+                    lang: a.lang,
                   }),
                 }),
               ],
@@ -249,21 +639,24 @@
           ],
         });
       }
-      var h = !0,
-        f = function (t) {
-          let { postData: e, siteConfig: n } = t;
-          return (0, r.jsx)(g, {
-            postData: e,
-            siteConfig: n,
-            children: (0, r.jsx)(s, { title: e.slug, src: e.path }),
+      var j = !0,
+        p = function (e) {
+          let { postData: t, siteConfig: a } = e;
+          return (0, s.jsx)(g, {
+            postData: t,
+            siteConfig: a,
+            children: (0, s.jsx)(i, { title: t.slug, src: t.path }),
           });
         };
     },
+    6985: function (e) {
+      e.exports = { navBar: "NavigationBar_navBar__fSiIq" };
+    },
   },
-  function (t) {
-    t.O(0, [470, 287, 888, 774, 179], function () {
-      return t((t.s = 592));
+  function (e) {
+    e.O(0, [367, 503, 287, 888, 774, 179], function () {
+      return e((e.s = 592));
     }),
-      (_N_E = t.O());
+      (_N_E = e.O());
   },
 ]);

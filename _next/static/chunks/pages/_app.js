@@ -48,22 +48,22 @@
         (a[r.Memo] = o);
       var u = Object.defineProperty,
         c = Object.getOwnPropertyNames,
-        f = Object.getOwnPropertySymbols,
-        p = Object.getOwnPropertyDescriptor,
-        d = Object.getPrototypeOf,
-        g = Object.prototype;
+        p = Object.getOwnPropertySymbols,
+        g = Object.getOwnPropertyDescriptor,
+        h = Object.getPrototypeOf,
+        f = Object.prototype;
       e.exports = function e(t, n, r) {
         if ("string" != typeof n) {
-          if (g) {
-            var i = d(n);
-            i && i !== g && e(t, i, r);
+          if (f) {
+            var i = h(n);
+            i && i !== f && e(t, i, r);
           }
           var o = c(n);
-          f && (o = o.concat(f(n)));
-          for (var a = l(t), h = l(n), m = 0; m < o.length; ++m) {
+          p && (o = o.concat(p(n)));
+          for (var a = l(t), d = l(n), m = 0; m < o.length; ++m) {
             var y = o[m];
-            if (!s[y] && !(r && r[y]) && !(h && h[y]) && !(a && a[y])) {
-              var b = p(n, y);
+            if (!s[y] && !(r && r[y]) && !(d && d[y]) && !(a && a[y])) {
+              var b = g(n, y);
               try {
                 u(t, y, b);
               } catch (e) {}
@@ -78,7 +78,7 @@
       let r;
       n.d(t, {
         Jc: function () {
-          return eP;
+          return eN;
         },
         $G: function () {
           return b;
@@ -125,7 +125,7 @@
       }
       let c =
           /&(?:amp|#38|lt|#60|gt|#62|apos|#39|quot|#34|nbsp|#160|copy|#169|reg|#174|hellip|#8230|#x2F|#47);/g,
-        f = {
+        p = {
           "&amp;": "&",
           "&#38;": "&",
           "&lt;": "<",
@@ -147,8 +147,8 @@
           "&#x2F;": "/",
           "&#47;": "/",
         },
-        p = (e) => f[e],
-        d = {
+        g = (e) => p[e],
+        h = {
           bindI18n: "languageChanged",
           bindI18nStore: "",
           transEmptyNodeValue: "",
@@ -156,10 +156,10 @@
           transWrapTextNodes: "",
           transKeepBasicHtmlNodesFor: ["br", "strong", "i", "p"],
           useSuspense: !0,
-          unescape: (e) => e.replace(c, p),
+          unescape: (e) => e.replace(c, g),
         },
-        g = (0, i.createContext)();
-      class h {
+        f = (0, i.createContext)();
+      class d {
         constructor() {
           this.usedNamespaces = {};
         }
@@ -189,9 +189,9 @@
         let s =
             arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
           { i18n: a } = s,
-          { i18n: c, defaultNS: f } = (0, i.useContext)(g) || {},
-          p = a || c || r;
-        if ((p && !p.reportNamespaces && (p.reportNamespaces = new h()), !p)) {
+          { i18n: c, defaultNS: p } = (0, i.useContext)(f) || {},
+          g = a || c || r;
+        if ((g && !g.reportNamespaces && (g.reportNamespaces = new d()), !g)) {
           o(
             "You will need to pass in an i18next instance by using initReactI18next",
           );
@@ -206,19 +206,19 @@
             t = [e, {}, !1];
           return (t.t = e), (t.i18n = {}), (t.ready = !1), t;
         }
-        p.options.react &&
-          void 0 !== p.options.react.wait &&
+        g.options.react &&
+          void 0 !== g.options.react.wait &&
           o(
             "It seems you are still using the old wait option, you may migrate to the new useSuspense behaviour.",
           );
-        let b = { ...d, ...p.options.react, ...s },
+        let b = { ...h, ...g.options.react, ...s },
           { useSuspense: v, keyPrefix: x } = b,
-          S = e || f || (p.options && p.options.defaultNS);
+          S = e || p || (g.options && g.options.defaultNS);
         (S = "string" == typeof S ? [S] : S || ["translation"]),
-          p.reportNamespaces.addUsedNamespaces &&
-            p.reportNamespaces.addUsedNamespaces(S);
-        let j =
-            (p.isInitialized || p.initializedStoreOnce) &&
+          g.reportNamespaces.addUsedNamespaces &&
+            g.reportNamespaces.addUsedNamespaces(S);
+        let O =
+            (g.isInitialized || g.initializedStoreOnce) &&
             S.every((e) =>
               (function (e, t) {
                 let n =
@@ -273,59 +273,59 @@
                       })(e, t, n)
                   : (o("i18n.languages were undefined or empty", t.languages),
                     !0);
-              })(e, p, b),
+              })(e, g, b),
             ),
-          w =
+          k =
             ((t = s.lng || null),
             (n = "fallback" === b.nsMode ? S : S[0]),
-            (0, i.useCallback)(y(p, t, n, x), [p, t, n, x])),
-          k = () => w,
-          O = () => y(p, s.lng || null, "fallback" === b.nsMode ? S : S[0], x),
-          [N, L] = (0, i.useState)(k),
-          P = S.join();
-        s.lng && (P = `${s.lng}${P}`);
-        let C = m(P),
-          R = (0, i.useRef)(!0);
+            (0, i.useCallback)(y(g, t, n, x), [g, t, n, x])),
+          w = () => k,
+          L = () => y(g, s.lng || null, "fallback" === b.nsMode ? S : S[0], x),
+          [P, $] = (0, i.useState)(w),
+          N = S.join();
+        s.lng && (N = `${s.lng}${N}`);
+        let j = m(N),
+          C = (0, i.useRef)(!0);
         (0, i.useEffect)(() => {
           let { bindI18n: e, bindI18nStore: t } = b;
           function n() {
-            R.current && L(O);
+            C.current && $(L);
           }
           return (
-            (R.current = !0),
-            j ||
+            (C.current = !0),
+            O ||
               v ||
               (s.lng
-                ? u(p, s.lng, S, () => {
-                    R.current && L(O);
+                ? u(g, s.lng, S, () => {
+                    C.current && $(L);
                   })
-                : l(p, S, () => {
-                    R.current && L(O);
+                : l(g, S, () => {
+                    C.current && $(L);
                   })),
-            j && C && C !== P && R.current && L(O),
-            e && p && p.on(e, n),
-            t && p && p.store.on(t, n),
+            O && j && j !== N && C.current && $(L),
+            e && g && g.on(e, n),
+            t && g && g.store.on(t, n),
             () => {
-              (R.current = !1),
-                e && p && e.split(" ").forEach((e) => p.off(e, n)),
-                t && p && t.split(" ").forEach((e) => p.store.off(e, n));
+              (C.current = !1),
+                e && g && e.split(" ").forEach((e) => g.off(e, n)),
+                t && g && t.split(" ").forEach((e) => g.store.off(e, n));
             }
           );
-        }, [p, P]);
-        let E = (0, i.useRef)(!0);
+        }, [g, N]);
+        let R = (0, i.useRef)(!0);
         (0, i.useEffect)(() => {
-          R.current && !E.current && L(k), (E.current = !1);
-        }, [p, x]);
-        let $ = [N, p, j];
-        if ((($.t = N), ($.i18n = p), ($.ready = j), j || (!j && !v))) return $;
+          C.current && !R.current && $(w), (R.current = !1);
+        }, [g, x]);
+        let E = [P, g, O];
+        if (((E.t = P), (E.i18n = g), (E.ready = O), O || (!O && !v))) return E;
         throw new Promise((e) => {
-          s.lng ? u(p, s.lng, S, () => e()) : l(p, S, () => e());
+          s.lng ? u(g, s.lng, S, () => e()) : l(g, S, () => e());
         });
       }
       function v(e) {
         let { i18n: t, defaultNS: n, children: r } = e,
           s = (0, i.useMemo)(() => ({ i18n: t, defaultNS: n }), [t, n]);
-        return (0, i.createElement)(g.Provider, { value: s }, r);
+        return (0, i.createElement)(f.Provider, { value: s }, r);
       }
       function x() {
         return (x = Object.assign
@@ -354,7 +354,7 @@
                   : typeof e;
               })(e);
       }
-      function j(e, t, n) {
+      function O(e, t, n) {
         var r;
         return (
           (r = (function (e, t) {
@@ -378,16 +378,16 @@
           e
         );
       }
-      var w = n(8679),
-        k = n.n(w);
-      function O(e, t) {
+      var k = n(8679),
+        w = n.n(k);
+      function L(e, t) {
         (null == t || t > e.length) && (t = e.length);
         for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
         return r;
       }
-      function N(e, t) {
+      function P(e, t) {
         if (e) {
-          if ("string" == typeof e) return O(e, t);
+          if ("string" == typeof e) return L(e, t);
           var n = Object.prototype.toString.call(e).slice(8, -1);
           if (
             ("Object" === n && e.constructor && (n = e.constructor.name),
@@ -398,10 +398,10 @@
             "Arguments" === n ||
             /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)
           )
-            return O(e, t);
+            return L(e, t);
         }
       }
-      function L(e, t) {
+      function $(e, t) {
         return (
           (function (e) {
             if (Array.isArray(e)) return e;
@@ -448,7 +448,7 @@
               return a;
             }
           })(e, t) ||
-          N(e, t) ||
+          P(e, t) ||
           (function () {
             throw TypeError(
               "Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
@@ -456,7 +456,7 @@
           })()
         );
       }
-      function P(e, t) {
+      function N(e, t) {
         if (null == e) return {};
         var n,
           r,
@@ -480,7 +480,7 @@
         }
         return i;
       }
-      var C = {
+      var j = {
           defaultNS: "common",
           errorStackTraceLimit: 0,
           i18n: { defaultLocale: "en", locales: ["en"] },
@@ -497,10 +497,10 @@
           serializeConfig: !0,
           use: [],
         },
-        R = "undefined" != typeof window ? i.useLayoutEffect : i.useEffect,
-        E = ["i18n"],
-        $ = ["i18n"];
-      function A(e, t) {
+        C = "undefined" != typeof window ? i.useLayoutEffect : i.useEffect,
+        R = ["i18n"],
+        E = ["i18n"];
+      function I(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var r = Object.getOwnPropertySymbols(e);
@@ -512,16 +512,16 @@
         }
         return n;
       }
-      function I(e) {
+      function A(e) {
         for (var t = 1; t < arguments.length; t++) {
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? A(Object(n), !0).forEach(function (t) {
-                j(e, t, n[t]);
+            ? I(Object(n), !0).forEach(function (t) {
+                O(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : A(Object(n)).forEach(function (t) {
+              : I(Object(n)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -531,7 +531,7 @@
         }
         return e;
       }
-      var _ = ["backend", "detection"],
+      var F = ["backend", "detection"],
         T = function (e) {
           if ("string" != typeof (null == e ? void 0 : e.lng))
             throw Error("config.lng was not passed into createConfig");
@@ -539,15 +539,15 @@
             n,
             r,
             i = e.i18n,
-            s = P(e, E),
-            o = C.i18n,
-            a = I(I(I(I({}, P(C, $)), s), o), i),
+            s = N(e, R),
+            o = j.i18n,
+            a = A(A(A(A({}, N(j, E)), s), o), i),
             l = a.defaultNS,
             u = a.lng,
             c = a.localeExtension,
-            f = a.localePath,
-            p = a.nonExplicitSupportedLngs,
-            d = a.locales.filter(function (e) {
+            p = a.localePath,
+            g = a.nonExplicitSupportedLngs,
+            h = a.locales.filter(function (e) {
               return "default" !== e;
             });
           if ("cimode" === u) return a;
@@ -555,10 +555,10 @@
             void 0 === a.fallbackLng &&
             ((a.fallbackLng = a.defaultLocale), "default" === a.fallbackLng)
           ) {
-            var g = L(d, 1);
-            a.fallbackLng = g[0];
+            var f = $(h, 1);
+            a.fallbackLng = f[0];
           }
-          var h =
+          var d =
               null == e || null === (t = e.interpolation) || void 0 === t
                 ? void 0
                 : t.prefix,
@@ -566,10 +566,10 @@
               null == e || null === (n = e.interpolation) || void 0 === n
                 ? void 0
                 : n.suffix,
-            y = null != h ? h : "{{",
+            y = null != d ? d : "{{",
             b = null != m ? m : "}}";
           "string" != typeof (null == e ? void 0 : e.localeStructure) &&
-            (h || m) &&
+            (d || m) &&
             (a.localeStructure = ""
               .concat(y, "lng")
               .concat(b, "/")
@@ -577,9 +577,9 @@
               .concat(b));
           var v = a.fallbackLng,
             x = a.localeStructure;
-          if (p) {
-            var j = function (e, t) {
-              var n = L(t.split("-"), 1)[0];
+          if (g) {
+            var O = function (e, t) {
+              var n = $(t.split("-"), 1)[0];
               return (e[t] = [n]), e;
             };
             if ("string" == typeof v)
@@ -587,19 +587,19 @@
                 .filter(function (e) {
                   return e.includes("-");
                 })
-                .reduce(j, { default: [v] });
+                .reduce(O, { default: [v] });
             else if (Array.isArray(v))
               a.fallbackLng = a.locales
                 .filter(function (e) {
                   return e.includes("-");
                 })
-                .reduce(j, { default: v });
+                .reduce(O, { default: v });
             else if ("object" === S(v))
               a.fallbackLng = Object.entries(a.fallbackLng).reduce(function (
                 e,
                 t,
               ) {
-                var n = L(t, 2),
+                var n = $(t, 2),
                   r = n[0],
                   i = n[1];
                 return (
@@ -608,7 +608,7 @@
                         new Set(
                           [r.split("-")[0]].concat(
                             (function (e) {
-                              if (Array.isArray(e)) return O(e);
+                              if (Array.isArray(e)) return L(e);
                             })(i) ||
                               (function (e) {
                                 if (
@@ -618,7 +618,7 @@
                                 )
                                   return Array.from(e);
                               })(i) ||
-                              N(i) ||
+                              P(i) ||
                               (function () {
                                 throw TypeError(
                                   "Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
@@ -642,28 +642,28 @@
               : r.some(function (e) {
                   return "backend" === e.type;
                 })) ||
-              ("string" == typeof f
+              ("string" == typeof p
                 ? (a.backend = {
-                    addPath: "".concat(f, "/").concat(x, ".missing.").concat(c),
-                    loadPath: "".concat(f, "/").concat(x, ".").concat(c),
+                    addPath: "".concat(p, "/").concat(x, ".missing.").concat(c),
+                    loadPath: "".concat(p, "/").concat(x, ".").concat(c),
                   })
-                : "function" != typeof f ||
+                : "function" != typeof p ||
                   (a.backend = {
                     addPath: function (e, t) {
-                      return f(e, t, !0);
+                      return p(e, t, !0);
                     },
                     loadPath: function (e, t) {
-                      return f(e, t, !1);
+                      return p(e, t, !1);
                     },
                   })),
             "string" == typeof a.ns || Array.isArray(a.ns) || (a.ns = [l]),
-            _.forEach(function (t) {
-              e[t] && (a[t] = I(I({}, a[t]), e[t]));
+            F.forEach(function (t) {
+              e[t] && (a[t] = A(A({}, a[t]), e[t]));
             }),
             a
           );
         };
-      let F = {
+      let D = {
         type: "logger",
         log(e) {
           this.output("log", e);
@@ -678,7 +678,7 @@
           console && console[e] && console[e].apply(console, t);
         },
       };
-      class M {
+      class V {
         constructor(e) {
           let t =
             arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
@@ -688,7 +688,7 @@
           let t =
             arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
           (this.prefix = t.prefix || "i18next:"),
-            (this.logger = e || F),
+            (this.logger = e || D),
             (this.options = t),
             (this.debug = t.debug);
         }
@@ -719,7 +719,7 @@
               this.logger[t](e));
         }
         create(e) {
-          return new M(this.logger, {
+          return new V(this.logger, {
             prefix: `${this.prefix}:${e}:`,
             ...this.options,
           });
@@ -727,12 +727,12 @@
         clone(e) {
           return (
             ((e = e || this.options).prefix = e.prefix || this.prefix),
-            new M(this.logger, e)
+            new V(this.logger, e)
           );
         }
       }
-      var D = new M();
-      class V {
+      var U = new V();
+      class M {
         constructor() {
           this.observers = {};
         }
@@ -781,13 +781,13 @@
         });
         return (n.resolve = e), (n.reject = t), n;
       }
-      function U(e) {
+      function K(e) {
         return null == e ? "" : "" + e;
       }
-      let K = /###/g;
+      let _ = /###/g;
       function B(e, t, n) {
         function r(e) {
-          return e && e.indexOf("###") > -1 ? e.replace(K, ".") : e;
+          return e && e.indexOf("###") > -1 ? e.replace(_, ".") : e;
         }
         function i() {
           return !e || "string" == typeof e;
@@ -835,10 +835,10 @@
         "'": "&#39;",
         "/": "&#x2F;",
       };
-      function G(e) {
+      function Y(e) {
         return "string" == typeof e ? e.replace(/[&<>"'\/]/g, (e) => W[e]) : e;
       }
-      class Y {
+      class G {
         constructor(e) {
           (this.capacity = e),
             (this.regExpMap = new Map()),
@@ -858,7 +858,7 @@
         }
       }
       let Q = [" ", ",", "?", "!", ";"],
-        X = new Y(20);
+        X = new G(20);
       function Z(e, t) {
         let n =
           arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : ".";
@@ -887,7 +887,7 @@
       function ee(e) {
         return e && e.indexOf("_") > 0 ? e.replace("_", "-") : e;
       }
-      class et extends V {
+      class et extends M {
         constructor(e) {
           let t =
             arguments.length > 1 && void 0 !== arguments[1]
@@ -1040,7 +1040,7 @@
         },
       };
       let er = {};
-      class ei extends V {
+      class ei extends M {
         constructor(e) {
           let t =
             arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
@@ -1065,7 +1065,7 @@
             (this.options = t),
             void 0 === this.options.keySeparator &&
               (this.options.keySeparator = "."),
-            (this.logger = D.create("translator"));
+            (this.logger = U.create("translator"));
         }
         changeLanguage(e) {
           e && (this.language = e);
@@ -1168,28 +1168,28 @@
               : s;
           }
           let c = this.resolve(e, t),
-            f = c && c.res,
-            p = (c && c.usedKey) || s,
-            d = (c && c.exactUsedKey) || s,
-            g = Object.prototype.toString.apply(f),
-            h =
+            p = c && c.res,
+            g = (c && c.usedKey) || s,
+            h = (c && c.exactUsedKey) || s,
+            f = Object.prototype.toString.apply(p),
+            d =
               void 0 !== t.joinArrays ? t.joinArrays : this.options.joinArrays,
             m = !this.i18nFormat || this.i18nFormat.handleAsObject,
             y =
-              "string" != typeof f &&
-              "boolean" != typeof f &&
-              "number" != typeof f;
+              "string" != typeof p &&
+              "boolean" != typeof p &&
+              "number" != typeof p;
           if (
             m &&
-            f &&
+            p &&
             y &&
             0 >
               [
                 "[object Number]",
                 "[object Function]",
                 "[object RegExp]",
-              ].indexOf(g) &&
-            !("string" == typeof h && "[object Array]" === g)
+              ].indexOf(f) &&
+            !("string" == typeof d && "[object Array]" === f)
           ) {
             if (!t.returnObjects && !this.options.returnObjects) {
               this.options.returnedObjectHandler ||
@@ -1197,7 +1197,7 @@
                   "accessing an object - but returnObjects options is not enabled!",
                 );
               let e = this.options.returnedObjectHandler
-                ? this.options.returnedObjectHandler(p, f, { ...t, ns: o })
+                ? this.options.returnedObjectHandler(g, p, { ...t, ns: o })
                 : `key '${s} (${this.language})' returned an object instead of string.`;
               return r
                 ? ((c.res = e),
@@ -1206,48 +1206,48 @@
                 : e;
             }
             if (i) {
-              let e = "[object Array]" === g,
+              let e = "[object Array]" === f,
                 n = e ? [] : {},
-                r = e ? d : p;
-              for (let e in f)
-                if (Object.prototype.hasOwnProperty.call(f, e)) {
+                r = e ? h : g;
+              for (let e in p)
+                if (Object.prototype.hasOwnProperty.call(p, e)) {
                   let s = `${r}${i}${e}`;
                   (n[e] = this.translate(s, { ...t, joinArrays: !1, ns: o })),
-                    n[e] === s && (n[e] = f[e]);
+                    n[e] === s && (n[e] = p[e]);
                 }
-              f = n;
+              p = n;
             }
-          } else if (m && "string" == typeof h && "[object Array]" === g)
-            (f = f.join(h)) && (f = this.extendTranslation(f, e, t, n));
+          } else if (m && "string" == typeof d && "[object Array]" === f)
+            (p = p.join(d)) && (p = this.extendTranslation(p, e, t, n));
           else {
             let r = !1,
               o = !1,
               u = void 0 !== t.count && "string" != typeof t.count,
-              p = ei.hasDefaultValue(t),
-              d = u ? this.pluralResolver.getSuffix(l, t.count, t) : "",
-              g =
+              g = ei.hasDefaultValue(t),
+              h = u ? this.pluralResolver.getSuffix(l, t.count, t) : "",
+              f =
                 t.ordinal && u
                   ? this.pluralResolver.getSuffix(l, t.count, { ordinal: !1 })
                   : "",
-              h =
+              d =
                 u &&
                 !t.ordinal &&
                 0 === t.count &&
                 this.pluralResolver.shouldUseIntlApi(),
               m =
-                (h && t[`defaultValue${this.options.pluralSeparator}zero`]) ||
-                t[`defaultValue${d}`] ||
-                t[`defaultValue${g}`] ||
+                (d && t[`defaultValue${this.options.pluralSeparator}zero`]) ||
+                t[`defaultValue${h}`] ||
+                t[`defaultValue${f}`] ||
                 t.defaultValue;
-            !this.isValidLookup(f) && p && ((r = !0), (f = m)),
-              this.isValidLookup(f) || ((o = !0), (f = s));
+            !this.isValidLookup(p) && g && ((r = !0), (p = m)),
+              this.isValidLookup(p) || ((o = !0), (p = s));
             let y =
                 (t.missingKeyNoValueFallbackToKey ||
                   this.options.missingKeyNoValueFallbackToKey) &&
                 o
                   ? void 0
-                  : f,
-              b = p && m !== f && this.options.updateMissing;
+                  : p,
+              b = g && m !== p && this.options.updateMissing;
             if (o || r || b) {
               if (
                 (this.logger.log(
@@ -1255,7 +1255,7 @@
                   l,
                   a,
                   s,
-                  b ? m : f,
+                  b ? m : p,
                 ),
                 i)
               ) {
@@ -1280,19 +1280,19 @@
                     ))
                   : e.push(t.lng || this.language);
               let r = (e, n, r) => {
-                let i = p && r !== f ? r : y;
+                let i = g && r !== p ? r : y;
                 this.options.missingKeyHandler
                   ? this.options.missingKeyHandler(e, a, n, i, b, t)
                   : this.backendConnector &&
                     this.backendConnector.saveMissing &&
                     this.backendConnector.saveMissing(e, a, n, i, b, t),
-                  this.emit("missingKey", e, a, n, f);
+                  this.emit("missingKey", e, a, n, p);
               };
               this.options.saveMissing &&
                 (this.options.saveMissingPlurals && u
                   ? e.forEach((e) => {
                       let n = this.pluralResolver.getSuffixes(e, t);
-                      h &&
+                      d &&
                         t[`defaultValue${this.options.pluralSeparator}zero`] &&
                         0 > n.indexOf(`${this.options.pluralSeparator}zero`) &&
                         n.push(`${this.options.pluralSeparator}zero`),
@@ -1302,26 +1302,26 @@
                     })
                   : r(e, s, m));
             }
-            (f = this.extendTranslation(f, e, t, c, n)),
+            (p = this.extendTranslation(p, e, t, c, n)),
               o &&
-                f === s &&
+                p === s &&
                 this.options.appendNamespaceToMissingKey &&
-                (f = `${a}:${s}`),
+                (p = `${a}:${s}`),
               (o || r) &&
                 this.options.parseMissingKeyHandler &&
-                (f =
+                (p =
                   "v1" !== this.options.compatibilityAPI
                     ? this.options.parseMissingKeyHandler(
                         this.options.appendNamespaceToMissingKey
                           ? `${a}:${s}`
                           : s,
-                        r ? f : void 0,
+                        r ? p : void 0,
                       )
-                    : this.options.parseMissingKeyHandler(f));
+                    : this.options.parseMissingKeyHandler(p));
           }
           return r
-            ? ((c.res = f), (c.usedParams = this.getUsedParamsDetails(t)), c)
-            : f;
+            ? ((c.res = p), (c.usedParams = this.getUsedParamsDetails(t)), c)
+            : p;
         }
         extendTranslation(e, t, n, r, i) {
           var s = this;
@@ -1442,17 +1442,17 @@
               this.options.fallbackNS &&
                 (u = u.concat(this.options.fallbackNS));
               let c = void 0 !== o.count && "string" != typeof o.count,
-                f =
+                p =
                   c &&
                   !o.ordinal &&
                   0 === o.count &&
                   this.pluralResolver.shouldUseIntlApi(),
-                p =
+                g =
                   void 0 !== o.context &&
                   ("string" == typeof o.context ||
                     "number" == typeof o.context) &&
                   "" !== o.context,
-                d = o.lngs
+                h = o.lngs
                   ? o.lngs
                   : this.languageUtils.toResolveHierarchy(
                       o.lng || this.language,
@@ -1461,16 +1461,16 @@
               u.forEach((e) => {
                 this.isValidLookup(t) ||
                   ((s = e),
-                  !er[`${d[0]}-${e}`] &&
+                  !er[`${h[0]}-${e}`] &&
                     this.utils &&
                     this.utils.hasLoadedNamespace &&
                     !this.utils.hasLoadedNamespace(s) &&
-                    ((er[`${d[0]}-${e}`] = !0),
+                    ((er[`${h[0]}-${e}`] = !0),
                     this.logger.warn(
-                      `key "${n}" for languages "${d.join(", ")}" won't get resolved as namespace "${s}" was not yet loaded`,
+                      `key "${n}" for languages "${h.join(", ")}" won't get resolved as namespace "${s}" was not yet loaded`,
                       "This means something IS WRONG in your setup. You access the t function before i18next.init / i18next.loadNamespace / i18next.changeLanguage was done. Wait for the callback or Promise to resolve before accessing it!!!",
                     )),
-                  d.forEach((n) => {
+                  h.forEach((n) => {
                     let s;
                     if (this.isValidLookup(t)) return;
                     i = n;
@@ -1490,8 +1490,8 @@
                             a.push(
                               l + e.replace(r, this.options.pluralSeparator),
                             ),
-                          f && a.push(l + t)),
-                        p)
+                          p && a.push(l + t)),
+                        g)
                       ) {
                         let n = `${l}${this.options.contextSeparator}${o.context}`;
                         a.push(n),
@@ -1502,7 +1502,7 @@
                               a.push(
                                 n + e.replace(r, this.options.pluralSeparator),
                               ),
-                            f && a.push(n + t));
+                            p && a.push(n + t));
                       }
                     }
                     for (; (s = a.pop()); )
@@ -1581,7 +1581,7 @@
         constructor(e) {
           (this.options = e),
             (this.supportedLngs = this.options.supportedLngs || !1),
-            (this.logger = D.create("languageUtils"));
+            (this.logger = U.create("languageUtils"));
         }
         getScriptPartFromCode(e) {
           if (!(e = ee(e)) || 0 > e.indexOf("-")) return null;
@@ -1993,14 +1993,14 @@
         },
         eu = ["v1", "v2", "v3"],
         ec = ["v4"],
-        ef = { zero: 0, one: 1, two: 2, few: 3, many: 4, other: 5 };
-      class ep {
+        ep = { zero: 0, one: 1, two: 2, few: 3, many: 4, other: 5 };
+      class eg {
         constructor(e) {
           let t =
             arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
           (this.languageUtils = e),
             (this.options = t),
-            (this.logger = D.create("pluralResolver")),
+            (this.logger = U.create("pluralResolver")),
             (!this.options.compatibilityJSON ||
               ec.includes(this.options.compatibilityJSON)) &&
               ("undefined" == typeof Intl || !Intl.PluralRules) &&
@@ -2064,7 +2064,7 @@
             ? this.shouldUseIntlApi()
               ? n
                   .resolvedOptions()
-                  .pluralCategories.sort((e, t) => ef[e] - ef[t])
+                  .pluralCategories.sort((e, t) => ep[e] - ep[t])
                   .map(
                     (e) =>
                       `${this.options.prepend}${t.ordinal ? `ordinal${this.options.prepend}` : ""}${e}`,
@@ -2114,7 +2114,7 @@
           return !eu.includes(this.options.compatibilityJSON);
         }
       }
-      function ed(e, t, n) {
+      function eh(e, t, n) {
         let r =
             arguments.length > 3 && void 0 !== arguments[3]
               ? arguments[3]
@@ -2134,11 +2134,11 @@
           s
         );
       }
-      class eg {
+      class ef {
         constructor() {
           let e =
             arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          (this.logger = D.create("interpolator")),
+          (this.logger = U.create("interpolator")),
             (this.options = e),
             (this.format =
               (e.interpolation && e.interpolation.format) || ((e) => e)),
@@ -2149,7 +2149,7 @@
             arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
           e.interpolation || (e.interpolation = { escapeValue: !0 });
           let t = e.interpolation;
-          (this.escape = void 0 !== t.escape ? t.escape : G),
+          (this.escape = void 0 !== t.escape ? t.escape : Y),
             (this.escapeValue = void 0 === t.escapeValue || t.escapeValue),
             (this.useRawValueToEscape =
               void 0 !== t.useRawValueToEscape && t.useRawValueToEscape),
@@ -2205,7 +2205,7 @@
           }
           let u = (e) => {
             if (0 > e.indexOf(this.formatSeparator)) {
-              let i = ed(
+              let i = eh(
                 t,
                 a,
                 e,
@@ -2220,7 +2220,7 @@
               s = i.shift().trim(),
               o = i.join(this.formatSeparator).trim();
             return this.format(
-              ed(
+              eh(
                 t,
                 a,
                 s,
@@ -2236,7 +2236,7 @@
           let c =
               (r && r.missingInterpolationHandler) ||
               this.options.missingInterpolationHandler,
-            f =
+            p =
               r && r.interpolation && void 0 !== r.interpolation.skipOnVariables
                 ? r.interpolation.skipOnVariables
                 : this.options.interpolation.skipOnVariables;
@@ -2256,7 +2256,7 @@
                     s = "string" == typeof t ? t : "";
                   } else if (r && Object.prototype.hasOwnProperty.call(r, n))
                     s = "";
-                  else if (f) {
+                  else if (p) {
                     s = i[0];
                     continue;
                   } else
@@ -2267,11 +2267,11 @@
                 } else
                   "string" == typeof s ||
                     this.useRawValueToEscape ||
-                    (s = U(s));
+                    (s = K(s));
                 let a = t.safeValue(s);
                 if (
                   ((e = e.replace(i[0], a)),
-                  f
+                  p
                     ? ((t.regex.lastIndex += s.length),
                       (t.regex.lastIndex -= i[0].length))
                     : (t.regex.lastIndex = 0),
@@ -2335,7 +2335,7 @@
               "string" != typeof r
             )
               return r;
-            "string" != typeof r && (r = U(r)),
+            "string" != typeof r && (r = K(r)),
               r ||
                 (this.logger.warn(`missed to resolve ${n[1]} for nesting ${e}`),
                 (r = "")),
@@ -2354,7 +2354,7 @@
           return e;
         }
       }
-      function eh(e) {
+      function ed(e) {
         let t = {};
         return function (n, r, i) {
           let s = r + JSON.stringify(i),
@@ -2366,26 +2366,26 @@
         constructor() {
           let e =
             arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          (this.logger = D.create("formatter")),
+          (this.logger = U.create("formatter")),
             (this.options = e),
             (this.formats = {
-              number: eh((e, t) => {
+              number: ed((e, t) => {
                 let n = new Intl.NumberFormat(e, { ...t });
                 return (e) => n.format(e);
               }),
-              currency: eh((e, t) => {
+              currency: ed((e, t) => {
                 let n = new Intl.NumberFormat(e, { ...t, style: "currency" });
                 return (e) => n.format(e);
               }),
-              datetime: eh((e, t) => {
+              datetime: ed((e, t) => {
                 let n = new Intl.DateTimeFormat(e, { ...t });
                 return (e) => n.format(e);
               }),
-              relativetime: eh((e, t) => {
+              relativetime: ed((e, t) => {
                 let n = new Intl.RelativeTimeFormat(e, { ...t });
                 return (e) => n.format(e, t.range || "day");
               }),
-              list: eh((e, t) => {
+              list: ed((e, t) => {
                 let n = new Intl.ListFormat(e, { ...t });
                 return (e) => n.format(e);
               }),
@@ -2406,7 +2406,7 @@
           this.formats[e.toLowerCase().trim()] = t;
         }
         addCached(e, t) {
-          this.formats[e.toLowerCase().trim()] = eh(t);
+          this.formats[e.toLowerCase().trim()] = ed(t);
         }
         format(e, t, n) {
           let r =
@@ -2457,7 +2457,7 @@
           }, e);
         }
       }
-      class ey extends V {
+      class ey extends M {
         constructor(e, t, n) {
           let r =
             arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
@@ -2467,7 +2467,7 @@
             (this.services = n),
             (this.languageUtils = n.languageUtils),
             (this.options = r),
-            (this.logger = D.create("backendConnector")),
+            (this.logger = U.create("backendConnector")),
             (this.waitingReads = []),
             (this.maxParallelReads = r.maxParallelReads || 10),
             (this.readingCalls = 0),
@@ -2767,7 +2767,7 @@
         );
       }
       function ex() {}
-      class eS extends V {
+      class eS extends M {
         constructor() {
           let e =
               arguments.length > 0 && void 0 !== arguments[0]
@@ -2778,7 +2778,7 @@
             (super(),
             (this.options = ev(e)),
             (this.services = {}),
-            (this.logger = D),
+            (this.logger = U),
             (this.modules = { external: [] }),
             !(function (e) {
               Object.getOwnPropertyNames(Object.getPrototypeOf(e)).forEach(
@@ -2828,18 +2828,18 @@
           ) {
             let t;
             this.modules.logger
-              ? D.init(i(this.modules.logger), this.options)
-              : D.init(null, this.options),
+              ? U.init(i(this.modules.logger), this.options)
+              : U.init(null, this.options),
               this.modules.formatter
                 ? (t = this.modules.formatter)
                 : "undefined" != typeof Intl && (t = em);
             let n = new eo(this.options);
             this.store = new et(this.options.resources, this.options);
             let s = this.services;
-            (s.logger = D),
+            (s.logger = U),
               (s.resourceStore = this.store),
               (s.languageUtils = n),
-              (s.pluralResolver = new ep(n, {
+              (s.pluralResolver = new eg(n, {
                 prepend: this.options.pluralSeparator,
                 compatibilityJSON: this.options.compatibilityJSON,
                 simplifyPluralSuffix: this.options.simplifyPluralSuffix,
@@ -2853,7 +2853,7 @@
                 (this.options.interpolation.format = s.formatter.format.bind(
                   s.formatter,
                 ))),
-              (s.interpolator = new eg(this.options)),
+              (s.interpolator = new ef(this.options)),
               (s.utils = {
                 hasLoadedNamespace: this.hasLoadedNamespace.bind(this),
               }),
@@ -3363,30 +3363,30 @@
           };
         }
       }
-      let ej = eS.createInstance();
-      (ej.createInstance = eS.createInstance),
-        ej.createInstance,
-        ej.dir,
-        ej.init,
-        ej.loadResources,
-        ej.reloadResources,
-        ej.use,
-        ej.changeLanguage,
-        ej.getFixedT,
-        ej.t,
-        ej.exists,
-        ej.setDefaultNamespace,
-        ej.hasLoadedNamespace,
-        ej.loadNamespaces,
-        ej.loadLanguages;
-      var ew = function (e) {
+      let eO = eS.createInstance();
+      (eO.createInstance = eS.createInstance),
+        eO.createInstance,
+        eO.dir,
+        eO.init,
+        eO.loadResources,
+        eO.reloadResources,
+        eO.use,
+        eO.changeLanguage,
+        eO.getFixedT,
+        eO.t,
+        eO.exists,
+        eO.setDefaultNamespace,
+        eO.hasLoadedNamespace,
+        eO.loadNamespaces,
+        eO.loadLanguages;
+      var ek = function (e) {
           void 0 === e.ns && (e.ns = []);
           var t,
             n,
-            r = ej.createInstance(e);
+            r = eO.createInstance(e);
           return (
             r.isInitialized
-              ? (t = Promise.resolve(ej.t))
+              ? (t = Promise.resolve(eO.t))
               : (null == e ||
                   null === (n = e.use) ||
                   void 0 === n ||
@@ -3399,8 +3399,8 @@
             { i18n: r, initPromise: t }
           );
         },
-        ek = i.createElement;
-      function eO(e, t) {
+        ew = i.createElement;
+      function eL(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var r = Object.getOwnPropertySymbols(e);
@@ -3412,16 +3412,16 @@
         }
         return n;
       }
-      function eN(e) {
+      function eP(e) {
         for (var t = 1; t < arguments.length; t++) {
           var n = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? eO(Object(n), !0).forEach(function (t) {
-                j(e, t, n[t]);
+            ? eL(Object(n), !0).forEach(function (t) {
+                O(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : eO(Object(n)).forEach(function (t) {
+              : eL(Object(n)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -3431,7 +3431,7 @@
         }
         return e;
       }
-      var eL = function (e, t) {
+      var e$ = function (e, t) {
           if (t && e.isInitialized)
             for (var n = 0, r = Object.keys(t); n < r.length; n++)
               for (
@@ -3450,12 +3450,12 @@
                   e.addResourceBundle(i, l, t[i][l], !0, !0);
               }
         },
-        eP = function (e) {
+        eN = function (e) {
           var t =
             arguments.length > 1 && void 0 !== arguments[1]
               ? arguments[1]
               : null;
-          return k()(function (n) {
+          return w()(function (n) {
             var r,
               s,
               o = (n.pageProps || {})._nextI18Next,
@@ -3498,11 +3498,11 @@
                   var s = u.current;
                   return (
                     s
-                      ? eL(s, i)
-                      : (eL(
-                          (s = ew(
-                            eN(
-                              eN({}, T(eN(eN({}, n), {}, { lng: a }))),
+                      ? e$(s, i)
+                      : (e$(
+                          (s = ek(
+                            eP(
+                              eP({}, T(eP(eP({}, n), {}, { lng: a }))),
                               {},
                               { lng: a, ns: l, resources: i },
                             ),
@@ -3516,15 +3516,15 @@
                 [o, a, l],
               );
             return (
-              R(
+              C(
                 function () {
                   c && a && c.changeLanguage(a);
                 },
                 [c, a],
               ),
               null !== c
-                ? ek(v, { i18n: c }, ek(e, n))
-                : ek(e, x({ key: a }, n))
+                ? ew(v, { i18n: c }, ew(e, n))
+                : ew(e, x({ key: a }, n))
             );
           }, e);
         };
@@ -3536,1368 +3536,28 @@
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/_app",
         function () {
-          return n(742);
+          return n(9645);
         },
       ]);
     },
-    261: function (e, t, n) {
+    9645: function (e, t, n) {
       "use strict";
-      n.d(t, {
-        t: function () {
-          return a;
-        },
-      });
+      n.r(t);
       var r = n(5893),
-        i = n(5675),
-        s = n.n(i);
-      let o = (e) => {
-        let { src: t } = e;
-        return t;
-      };
-      function a(e) {
-        let { alt: t, src: n, width: i, height: a, className: l, ...u } = e;
-        return (0, r.jsx)(s(), {
-          src: n,
-          loader: o,
-          alt: t || "image",
-          placeholder: "blur",
-          sizes: "responsive",
-          unoptimized: !0,
-          width: i,
-          height: a,
-          className: l,
-          ...u,
-        });
-      }
-    },
-    8199: function (e, t) {
-      "use strict";
-      var n, r, i, s;
-      Object.defineProperty(t, "__esModule", { value: !0 }),
-        (function (e, t) {
-          for (var n in t)
-            Object.defineProperty(e, n, { enumerable: !0, get: t[n] });
-        })(t, {
-          ACTION_FAST_REFRESH: function () {
-            return f;
-          },
-          ACTION_NAVIGATE: function () {
-            return a;
-          },
-          ACTION_PREFETCH: function () {
-            return c;
-          },
-          ACTION_REFRESH: function () {
-            return o;
-          },
-          ACTION_RESTORE: function () {
-            return l;
-          },
-          ACTION_SERVER_ACTION: function () {
-            return p;
-          },
-          ACTION_SERVER_PATCH: function () {
-            return u;
-          },
-          PrefetchCacheEntryStatus: function () {
-            return r;
-          },
-          PrefetchKind: function () {
-            return n;
-          },
-          isThenable: function () {
-            return d;
-          },
-        });
-      let o = "refresh",
-        a = "navigate",
-        l = "restore",
-        u = "server-patch",
-        c = "prefetch",
-        f = "fast-refresh",
-        p = "server-action";
-      function d(e) {
-        return (
-          e &&
-          ("object" == typeof e || "function" == typeof e) &&
-          "function" == typeof e.then
-        );
-      }
-      ((i = n || (n = {})).AUTO = "auto"),
-        (i.FULL = "full"),
-        (i.TEMPORARY = "temporary"),
-        ((s = r || (r = {})).fresh = "fresh"),
-        (s.reusable = "reusable"),
-        (s.expired = "expired"),
-        (s.stale = "stale"),
-        ("function" == typeof t.default ||
-          ("object" == typeof t.default && null !== t.default)) &&
-          void 0 === t.default.__esModule &&
-          (Object.defineProperty(t.default, "__esModule", { value: !0 }),
-          Object.assign(t.default, t),
-          (e.exports = t.default));
-    },
-    7195: function (e, t, n) {
-      "use strict";
-      function r(e, t, n, r) {
-        return !1;
-      }
-      Object.defineProperty(t, "__esModule", { value: !0 }),
-        Object.defineProperty(t, "getDomainLocale", {
-          enumerable: !0,
-          get: function () {
-            return r;
-          },
-        }),
-        n(8337),
-        ("function" == typeof t.default ||
-          ("object" == typeof t.default && null !== t.default)) &&
-          void 0 === t.default.__esModule &&
-          (Object.defineProperty(t.default, "__esModule", { value: !0 }),
-          Object.assign(t.default, t),
-          (e.exports = t.default));
-    },
-    4080: function (e, t, n) {
-      "use strict";
-      Object.defineProperty(t, "__esModule", { value: !0 }),
-        Object.defineProperty(t, "Image", {
-          enumerable: !0,
-          get: function () {
-            return v;
-          },
-        });
-      let r = n(8754),
-        i = n(1757),
-        s = n(5893),
-        o = i._(n(7294)),
-        a = r._(n(3935)),
-        l = r._(n(3867)),
-        u = n(5283),
-        c = n(6594),
-        f = n(3945);
-      n(3179);
-      let p = n(1928),
-        d = r._(n(3872)),
-        g = {
-          deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-          imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-          path: "/_next/image/",
-          loader: "custom",
-          dangerouslyAllowSVG: !1,
-          unoptimized: !1,
-        };
-      function h(e, t, n, r, i, s, o) {
-        let a = null == e ? void 0 : e.src;
-        e &&
-          e["data-loaded-src"] !== a &&
-          ((e["data-loaded-src"] = a),
-          ("decode" in e ? e.decode() : Promise.resolve())
-            .catch(() => {})
-            .then(() => {
-              if (e.parentElement && e.isConnected) {
-                if (("empty" !== t && i(!0), null == n ? void 0 : n.current)) {
-                  let t = new Event("load");
-                  Object.defineProperty(t, "target", {
-                    writable: !1,
-                    value: e,
-                  });
-                  let r = !1,
-                    i = !1;
-                  n.current({
-                    ...t,
-                    nativeEvent: t,
-                    currentTarget: e,
-                    target: e,
-                    isDefaultPrevented: () => r,
-                    isPropagationStopped: () => i,
-                    persist: () => {},
-                    preventDefault: () => {
-                      (r = !0), t.preventDefault();
-                    },
-                    stopPropagation: () => {
-                      (i = !0), t.stopPropagation();
-                    },
-                  });
-                }
-                (null == r ? void 0 : r.current) && r.current(e);
-              }
-            }));
-      }
-      function m(e) {
-        return o.use ? { fetchPriority: e } : { fetchpriority: e };
-      }
-      let y = (0, o.forwardRef)((e, t) => {
-        let {
-          src: n,
-          srcSet: r,
-          sizes: i,
-          height: a,
-          width: l,
-          decoding: u,
-          className: c,
-          style: f,
-          fetchPriority: p,
-          placeholder: d,
-          loading: g,
-          unoptimized: y,
-          fill: b,
-          onLoadRef: v,
-          onLoadingCompleteRef: x,
-          setBlurComplete: S,
-          setShowAltText: j,
-          sizesInput: w,
-          onLoad: k,
-          onError: O,
-          ...N
-        } = e;
-        return (0, s.jsx)("img", {
-          ...N,
-          ...m(p),
-          loading: g,
-          width: l,
-          height: a,
-          decoding: u,
-          "data-nimg": b ? "fill" : "1",
-          className: c,
-          style: f,
-          sizes: i,
-          srcSet: r,
-          src: n,
-          ref: (0, o.useCallback)(
-            (e) => {
-              t &&
-                ("function" == typeof t
-                  ? t(e)
-                  : "object" == typeof t && (t.current = e)),
-                e &&
-                  (O && (e.src = e.src), e.complete && h(e, d, v, x, S, y, w));
-            },
-            [n, d, v, x, S, O, y, w, t],
-          ),
-          onLoad: (e) => {
-            h(e.currentTarget, d, v, x, S, y, w);
-          },
-          onError: (e) => {
-            j(!0), "empty" !== d && S(!0), O && O(e);
-          },
-        });
-      });
-      function b(e) {
-        let { isAppRouter: t, imgAttributes: n } = e,
-          r = {
-            as: "image",
-            imageSrcSet: n.srcSet,
-            imageSizes: n.sizes,
-            crossOrigin: n.crossOrigin,
-            referrerPolicy: n.referrerPolicy,
-            ...m(n.fetchPriority),
-          };
-        return t && a.default.preload
-          ? (a.default.preload(n.src, r), null)
-          : (0, s.jsx)(l.default, {
-              children: (0, s.jsx)(
-                "link",
-                { rel: "preload", href: n.srcSet ? void 0 : n.src, ...r },
-                "__nimg-" + n.src + n.srcSet + n.sizes,
-              ),
-            });
-      }
-      let v = (0, o.forwardRef)((e, t) => {
-        let n = (0, o.useContext)(p.RouterContext),
-          r = (0, o.useContext)(f.ImageConfigContext),
-          i = (0, o.useMemo)(() => {
-            let e = g || r || c.imageConfigDefault,
-              t = [...e.deviceSizes, ...e.imageSizes].sort((e, t) => e - t),
-              n = e.deviceSizes.sort((e, t) => e - t);
-            return { ...e, allSizes: t, deviceSizes: n };
-          }, [r]),
-          { onLoad: a, onLoadingComplete: l } = e,
-          h = (0, o.useRef)(a);
-        (0, o.useEffect)(() => {
-          h.current = a;
-        }, [a]);
-        let m = (0, o.useRef)(l);
-        (0, o.useEffect)(() => {
-          m.current = l;
-        }, [l]);
-        let [v, x] = (0, o.useState)(!1),
-          [S, j] = (0, o.useState)(!1),
-          { props: w, meta: k } = (0, u.getImgProps)(e, {
-            defaultLoader: d.default,
-            imgConf: i,
-            blurComplete: v,
-            showAltText: S,
-          });
-        return (0, s.jsxs)(s.Fragment, {
-          children: [
-            (0, s.jsx)(y, {
-              ...w,
-              unoptimized: k.unoptimized,
-              placeholder: k.placeholder,
-              fill: k.fill,
-              onLoadRef: h,
-              onLoadingCompleteRef: m,
-              setBlurComplete: x,
-              setShowAltText: j,
-              sizesInput: e.sizes,
-              ref: t,
-            }),
-            k.priority
-              ? (0, s.jsx)(b, { isAppRouter: !n, imgAttributes: w })
-              : null,
-          ],
-        });
-      });
-      ("function" == typeof t.default ||
-        ("object" == typeof t.default && null !== t.default)) &&
-        void 0 === t.default.__esModule &&
-        (Object.defineProperty(t.default, "__esModule", { value: !0 }),
-        Object.assign(t.default, t),
-        (e.exports = t.default));
-    },
-    8342: function (e, t, n) {
-      "use strict";
-      Object.defineProperty(t, "__esModule", { value: !0 }),
-        Object.defineProperty(t, "default", {
-          enumerable: !0,
-          get: function () {
-            return x;
-          },
-        });
-      let r = n(8754),
-        i = n(5893),
-        s = r._(n(7294)),
-        o = n(6075),
-        a = n(3955),
-        l = n(8041),
-        u = n(9903),
-        c = n(5490),
-        f = n(1928),
-        p = n(257),
-        d = n(4229),
-        g = n(7195),
-        h = n(9470),
-        m = n(8199),
-        y = new Set();
-      function b(e, t, n, r, i, s) {
-        if (s || (0, a.isLocalURL)(t)) {
-          if (!r.bypassPrefetchedCheck) {
-            let i =
-              t +
-              "%" +
-              n +
-              "%" +
-              (void 0 !== r.locale
-                ? r.locale
-                : "locale" in e
-                  ? e.locale
-                  : void 0);
-            if (y.has(i)) return;
-            y.add(i);
-          }
-          (async () => (s ? e.prefetch(t, i) : e.prefetch(t, n, r)))().catch(
-            (e) => {},
-          );
-        }
-      }
-      function v(e) {
-        return "string" == typeof e ? e : (0, l.formatUrl)(e);
-      }
-      let x = s.default.forwardRef(function (e, t) {
-        let n, r;
-        let {
-          href: l,
-          as: y,
-          children: x,
-          prefetch: S = null,
-          passHref: j,
-          replace: w,
-          shallow: k,
-          scroll: O,
-          locale: N,
-          onClick: L,
-          onMouseEnter: P,
-          onTouchStart: C,
-          legacyBehavior: R = !1,
-          ...E
-        } = e;
-        (n = x),
-          R &&
-            ("string" == typeof n || "number" == typeof n) &&
-            (n = (0, i.jsx)("a", { children: n }));
-        let $ = s.default.useContext(f.RouterContext),
-          A = s.default.useContext(p.AppRouterContext),
-          I = null != $ ? $ : A,
-          _ = !$,
-          T = !1 !== S,
-          F = null === S ? m.PrefetchKind.AUTO : m.PrefetchKind.FULL,
-          { href: M, as: D } = s.default.useMemo(() => {
-            if (!$) {
-              let e = v(l);
-              return { href: e, as: y ? v(y) : e };
-            }
-            let [e, t] = (0, o.resolveHref)($, l, !0);
-            return { href: e, as: y ? (0, o.resolveHref)($, y) : t || e };
-          }, [$, l, y]),
-          V = s.default.useRef(M),
-          z = s.default.useRef(D);
-        R && (r = s.default.Children.only(n));
-        let U = R ? r && "object" == typeof r && r.ref : t,
-          [K, B, H] = (0, d.useIntersection)({ rootMargin: "200px" }),
-          J = s.default.useCallback(
-            (e) => {
-              (z.current !== D || V.current !== M) &&
-                (H(), (z.current = D), (V.current = M)),
-                K(e),
-                U &&
-                  ("function" == typeof U
-                    ? U(e)
-                    : "object" == typeof U && (U.current = e));
-            },
-            [D, U, M, H, K],
-          );
-        s.default.useEffect(() => {
-          I && B && T && b(I, M, D, { locale: N }, { kind: F }, _);
-        }, [D, M, B, N, T, null == $ ? void 0 : $.locale, I, _, F]);
-        let q = {
-          ref: J,
-          onClick(e) {
-            R || "function" != typeof L || L(e),
-              R &&
-                r.props &&
-                "function" == typeof r.props.onClick &&
-                r.props.onClick(e),
-              I &&
-                !e.defaultPrevented &&
-                (function (e, t, n, r, i, o, l, u, c) {
-                  let { nodeName: f } = e.currentTarget;
-                  if (
-                    "A" === f.toUpperCase() &&
-                    ((function (e) {
-                      let t = e.currentTarget.getAttribute("target");
-                      return (
-                        (t && "_self" !== t) ||
-                        e.metaKey ||
-                        e.ctrlKey ||
-                        e.shiftKey ||
-                        e.altKey ||
-                        (e.nativeEvent && 2 === e.nativeEvent.which)
-                      );
-                    })(e) ||
-                      (!c && !(0, a.isLocalURL)(n)))
-                  )
-                    return;
-                  e.preventDefault();
-                  let p = () => {
-                    let e = null == l || l;
-                    "beforePopState" in t
-                      ? t[i ? "replace" : "push"](n, r, {
-                          shallow: o,
-                          locale: u,
-                          scroll: e,
-                        })
-                      : t[i ? "replace" : "push"](r || n, { scroll: e });
-                  };
-                  c ? s.default.startTransition(p) : p();
-                })(e, I, M, D, w, k, O, N, _);
-          },
-          onMouseEnter(e) {
-            R || "function" != typeof P || P(e),
-              R &&
-                r.props &&
-                "function" == typeof r.props.onMouseEnter &&
-                r.props.onMouseEnter(e),
-              I &&
-                (T || !_) &&
-                b(
-                  I,
-                  M,
-                  D,
-                  { locale: N, priority: !0, bypassPrefetchedCheck: !0 },
-                  { kind: F },
-                  _,
-                );
-          },
-          onTouchStart: function (e) {
-            R || "function" != typeof C || C(e),
-              R &&
-                r.props &&
-                "function" == typeof r.props.onTouchStart &&
-                r.props.onTouchStart(e),
-              I &&
-                (T || !_) &&
-                b(
-                  I,
-                  M,
-                  D,
-                  { locale: N, priority: !0, bypassPrefetchedCheck: !0 },
-                  { kind: F },
-                  _,
-                );
-          },
-        };
-        if ((0, u.isAbsoluteUrl)(D)) q.href = D;
-        else if (!R || j || ("a" === r.type && !("href" in r.props))) {
-          let e = void 0 !== N ? N : null == $ ? void 0 : $.locale,
-            t =
-              (null == $ ? void 0 : $.isLocaleDomain) &&
-              (0, g.getDomainLocale)(
-                D,
-                e,
-                null == $ ? void 0 : $.locales,
-                null == $ ? void 0 : $.domainLocales,
-              );
-          q.href =
-            t ||
-            (0, h.addBasePath)(
-              (0, c.addLocale)(D, e, null == $ ? void 0 : $.defaultLocale),
-            );
-        }
-        return R
-          ? s.default.cloneElement(r, q)
-          : (0, i.jsx)("a", { ...E, ...q, children: n });
-      });
-      ("function" == typeof t.default ||
-        ("object" == typeof t.default && null !== t.default)) &&
-        void 0 === t.default.__esModule &&
-        (Object.defineProperty(t.default, "__esModule", { value: !0 }),
-        Object.assign(t.default, t),
-        (e.exports = t.default));
-    },
-    4229: function (e, t, n) {
-      "use strict";
-      Object.defineProperty(t, "__esModule", { value: !0 }),
-        Object.defineProperty(t, "useIntersection", {
-          enumerable: !0,
-          get: function () {
-            return l;
-          },
-        });
-      let r = n(7294),
-        i = n(4474),
-        s = "function" == typeof IntersectionObserver,
-        o = new Map(),
-        a = [];
-      function l(e) {
-        let { rootRef: t, rootMargin: n, disabled: l } = e,
-          u = l || !s,
-          [c, f] = (0, r.useState)(!1),
-          p = (0, r.useRef)(null),
-          d = (0, r.useCallback)((e) => {
-            p.current = e;
-          }, []);
-        return (
-          (0, r.useEffect)(() => {
-            if (s) {
-              if (u || c) return;
-              let e = p.current;
-              if (e && e.tagName)
-                return (function (e, t, n) {
-                  let {
-                    id: r,
-                    observer: i,
-                    elements: s,
-                  } = (function (e) {
-                    let t;
-                    let n = {
-                        root: e.root || null,
-                        margin: e.rootMargin || "",
-                      },
-                      r = a.find(
-                        (e) => e.root === n.root && e.margin === n.margin,
-                      );
-                    if (r && (t = o.get(r))) return t;
-                    let i = new Map();
-                    return (
-                      (t = {
-                        id: n,
-                        observer: new IntersectionObserver((e) => {
-                          e.forEach((e) => {
-                            let t = i.get(e.target),
-                              n = e.isIntersecting || e.intersectionRatio > 0;
-                            t && n && t(n);
-                          });
-                        }, e),
-                        elements: i,
-                      }),
-                      a.push(n),
-                      o.set(n, t),
-                      t
-                    );
-                  })(n);
-                  return (
-                    s.set(e, t),
-                    i.observe(e),
-                    function () {
-                      if ((s.delete(e), i.unobserve(e), 0 === s.size)) {
-                        i.disconnect(), o.delete(r);
-                        let e = a.findIndex(
-                          (e) => e.root === r.root && e.margin === r.margin,
-                        );
-                        e > -1 && a.splice(e, 1);
-                      }
-                    }
-                  );
-                })(e, (e) => e && f(e), {
-                  root: null == t ? void 0 : t.current,
-                  rootMargin: n,
-                });
-            } else if (!c) {
-              let e = (0, i.requestIdleCallback)(() => f(!0));
-              return () => (0, i.cancelIdleCallback)(e);
-            }
-          }, [u, n, t, c, p.current]),
-          [
-            d,
-            c,
-            (0, r.useCallback)(() => {
-              f(!1);
-            }, []),
-          ]
-        );
-      }
-      ("function" == typeof t.default ||
-        ("object" == typeof t.default && null !== t.default)) &&
-        void 0 === t.default.__esModule &&
-        (Object.defineProperty(t.default, "__esModule", { value: !0 }),
-        Object.assign(t.default, t),
-        (e.exports = t.default));
-    },
-    5283: function (e, t, n) {
-      "use strict";
-      Object.defineProperty(t, "__esModule", { value: !0 }),
-        Object.defineProperty(t, "getImgProps", {
-          enumerable: !0,
-          get: function () {
-            return a;
-          },
-        }),
-        n(3179);
-      let r = n(6630),
-        i = n(6594);
-      function s(e) {
-        return void 0 !== e.default;
-      }
-      function o(e) {
-        return void 0 === e
-          ? e
-          : "number" == typeof e
-            ? Number.isFinite(e)
-              ? e
-              : NaN
-            : "string" == typeof e && /^[0-9]+$/.test(e)
-              ? parseInt(e, 10)
-              : NaN;
-      }
-      function a(e, t) {
-        var n;
-        let a,
-          l,
-          u,
-          {
-            src: c,
-            sizes: f,
-            unoptimized: p = !1,
-            priority: d = !1,
-            loading: g,
-            className: h,
-            quality: m,
-            width: y,
-            height: b,
-            fill: v = !1,
-            style: x,
-            overrideSrc: S,
-            onLoad: j,
-            onLoadingComplete: w,
-            placeholder: k = "empty",
-            blurDataURL: O,
-            fetchPriority: N,
-            decoding: L = "async",
-            layout: P,
-            objectFit: C,
-            objectPosition: R,
-            lazyBoundary: E,
-            lazyRoot: $,
-            ...A
-          } = e,
-          { imgConf: I, showAltText: _, blurComplete: T, defaultLoader: F } = t,
-          M = I || i.imageConfigDefault;
-        if ("allSizes" in M) a = M;
-        else {
-          let e = [...M.deviceSizes, ...M.imageSizes].sort((e, t) => e - t),
-            t = M.deviceSizes.sort((e, t) => e - t);
-          a = { ...M, allSizes: e, deviceSizes: t };
-        }
-        if (void 0 === F)
-          throw Error(
-            "images.loaderFile detected but the file is missing default export.\nRead more: https://nextjs.org/docs/messages/invalid-images-config",
-          );
-        let D = A.loader || F;
-        delete A.loader, delete A.srcSet;
-        let V = "__next_img_default" in D;
-        if (V) {
-          if ("custom" === a.loader)
-            throw Error(
-              'Image with src "' +
-                c +
-                '" is missing "loader" prop.\nRead more: https://nextjs.org/docs/messages/next-image-missing-loader',
-            );
-        } else {
-          let e = D;
-          D = (t) => {
-            let { config: n, ...r } = t;
-            return e(r);
-          };
-        }
-        if (P) {
-          "fill" === P && (v = !0);
-          let e = {
-            intrinsic: { maxWidth: "100%", height: "auto" },
-            responsive: { width: "100%", height: "auto" },
-          }[P];
-          e && (x = { ...x, ...e });
-          let t = { responsive: "100vw", fill: "100vw" }[P];
-          t && !f && (f = t);
-        }
-        let z = "",
-          U = o(y),
-          K = o(b);
-        if ("object" == typeof (n = c) && (s(n) || void 0 !== n.src)) {
-          let e = s(c) ? c.default : c;
-          if (!e.src)
-            throw Error(
-              "An object should only be passed to the image component src parameter if it comes from a static image import. It must include src. Received " +
-                JSON.stringify(e),
-            );
-          if (!e.height || !e.width)
-            throw Error(
-              "An object should only be passed to the image component src parameter if it comes from a static image import. It must include height and width. Received " +
-                JSON.stringify(e),
-            );
-          if (
-            ((l = e.blurWidth),
-            (u = e.blurHeight),
-            (O = O || e.blurDataURL),
-            (z = e.src),
-            !v)
-          ) {
-            if (U || K) {
-              if (U && !K) {
-                let t = U / e.width;
-                K = Math.round(e.height * t);
-              } else if (!U && K) {
-                let t = K / e.height;
-                U = Math.round(e.width * t);
-              }
-            } else (U = e.width), (K = e.height);
-          }
-        }
-        let B = !d && ("lazy" === g || void 0 === g);
-        (!(c = "string" == typeof c ? c : z) ||
-          c.startsWith("data:") ||
-          c.startsWith("blob:")) &&
-          ((p = !0), (B = !1)),
-          a.unoptimized && (p = !0),
-          V && c.endsWith(".svg") && !a.dangerouslyAllowSVG && (p = !0),
-          d && (N = "high");
-        let H = o(m),
-          J = Object.assign(
-            v
-              ? {
-                  position: "absolute",
-                  height: "100%",
-                  width: "100%",
-                  left: 0,
-                  top: 0,
-                  right: 0,
-                  bottom: 0,
-                  objectFit: C,
-                  objectPosition: R,
-                }
-              : {},
-            _ ? {} : { color: "transparent" },
-            x,
-          ),
-          q =
-            T || "empty" === k
-              ? null
-              : "blur" === k
-                ? 'url("data:image/svg+xml;charset=utf-8,' +
-                  (0, r.getImageBlurSvg)({
-                    widthInt: U,
-                    heightInt: K,
-                    blurWidth: l,
-                    blurHeight: u,
-                    blurDataURL: O || "",
-                    objectFit: J.objectFit,
-                  }) +
-                  '")'
-                : 'url("' + k + '")',
-          W = q
-            ? {
-                backgroundSize: J.objectFit || "cover",
-                backgroundPosition: J.objectPosition || "50% 50%",
-                backgroundRepeat: "no-repeat",
-                backgroundImage: q,
-              }
-            : {},
-          G = (function (e) {
-            let {
-              config: t,
-              src: n,
-              unoptimized: r,
-              width: i,
-              quality: s,
-              sizes: o,
-              loader: a,
-            } = e;
-            if (r) return { src: n, srcSet: void 0, sizes: void 0 };
-            let { widths: l, kind: u } = (function (e, t, n) {
-                let { deviceSizes: r, allSizes: i } = e;
-                if (n) {
-                  let e = /(^|\s)(1?\d?\d)vw/g,
-                    t = [];
-                  for (let r; (r = e.exec(n)); r) t.push(parseInt(r[2]));
-                  if (t.length) {
-                    let e = 0.01 * Math.min(...t);
-                    return {
-                      widths: i.filter((t) => t >= r[0] * e),
-                      kind: "w",
-                    };
-                  }
-                  return { widths: i, kind: "w" };
-                }
-                return "number" != typeof t
-                  ? { widths: r, kind: "w" }
-                  : {
-                      widths: [
-                        ...new Set(
-                          [t, 2 * t].map(
-                            (e) => i.find((t) => t >= e) || i[i.length - 1],
-                          ),
-                        ),
-                      ],
-                      kind: "x",
-                    };
-              })(t, i, o),
-              c = l.length - 1;
-            return {
-              sizes: o || "w" !== u ? o : "100vw",
-              srcSet: l
-                .map(
-                  (e, r) =>
-                    a({ config: t, src: n, quality: s, width: e }) +
-                    " " +
-                    ("w" === u ? e : r + 1) +
-                    u,
-                )
-                .join(", "),
-              src: a({ config: t, src: n, quality: s, width: l[c] }),
-            };
-          })({
-            config: a,
-            src: c,
-            unoptimized: p,
-            width: U,
-            quality: H,
-            sizes: f,
-            loader: D,
-          });
-        return {
-          props: {
-            ...A,
-            loading: B ? "lazy" : g,
-            fetchPriority: N,
-            width: U,
-            height: K,
-            decoding: L,
-            className: h,
-            style: { ...J, ...W },
-            sizes: G.sizes,
-            srcSet: G.srcSet,
-            src: S || G.src,
-          },
-          meta: { unoptimized: p, priority: d, placeholder: k, fill: v },
-        };
-      }
-    },
-    6630: function (e, t) {
-      "use strict";
-      function n(e) {
-        let {
-            widthInt: t,
-            heightInt: n,
-            blurWidth: r,
-            blurHeight: i,
-            blurDataURL: s,
-            objectFit: o,
-          } = e,
-          a = r ? 40 * r : t,
-          l = i ? 40 * i : n,
-          u = a && l ? "viewBox='0 0 " + a + " " + l + "'" : "";
-        return (
-          "%3Csvg xmlns='http://www.w3.org/2000/svg' " +
-          u +
-          "%3E%3Cfilter id='b' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur stdDeviation='20'/%3E%3CfeColorMatrix values='1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 100 -1' result='s'/%3E%3CfeFlood x='0' y='0' width='100%25' height='100%25'/%3E%3CfeComposite operator='out' in='s'/%3E%3CfeComposite in2='SourceGraphic'/%3E%3CfeGaussianBlur stdDeviation='20'/%3E%3C/filter%3E%3Cimage width='100%25' height='100%25' x='0' y='0' preserveAspectRatio='" +
-          (u
-            ? "none"
-            : "contain" === o
-              ? "xMidYMid"
-              : "cover" === o
-                ? "xMidYMid slice"
-                : "none") +
-          "' style='filter: url(%23b);' href='" +
-          s +
-          "'/%3E%3C/svg%3E"
-        );
-      }
-      Object.defineProperty(t, "__esModule", { value: !0 }),
-        Object.defineProperty(t, "getImageBlurSvg", {
-          enumerable: !0,
-          get: function () {
-            return n;
-          },
-        });
-    },
-    6210: function (e, t, n) {
-      "use strict";
-      Object.defineProperty(t, "__esModule", { value: !0 }),
-        (function (e, t) {
-          for (var n in t)
-            Object.defineProperty(e, n, { enumerable: !0, get: t[n] });
-        })(t, {
-          default: function () {
-            return l;
-          },
-          getImageProps: function () {
-            return a;
-          },
-        });
-      let r = n(8754),
-        i = n(5283),
-        s = n(4080),
-        o = r._(n(3872));
-      function a(e) {
-        let { props: t } = (0, i.getImgProps)(e, {
-          defaultLoader: o.default,
-          imgConf: {
-            deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-            imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-            path: "/_next/image/",
-            loader: "custom",
-            dangerouslyAllowSVG: !1,
-            unoptimized: !1,
-          },
-        });
-        for (let [e, n] of Object.entries(t)) void 0 === n && delete t[e];
-        return { props: t };
-      }
-      let l = s.Image;
-    },
-    3872: function (e, t) {
-      "use strict";
-      function n(e) {
-        let { config: t, src: n, width: r, quality: i } = e;
-        return (
-          t.path +
-          "?url=" +
-          encodeURIComponent(n) +
-          "&w=" +
-          r +
-          "&q=" +
-          (i || 75)
-        );
-      }
-      Object.defineProperty(t, "__esModule", { value: !0 }),
-        Object.defineProperty(t, "default", {
-          enumerable: !0,
-          get: function () {
-            return r;
-          },
-        }),
-        (n.__next_img_default = !0);
-      let r = n;
-    },
-    742: function (e, t, n) {
-      "use strict";
-      n.r(t),
-        n.d(t, {
-          default: function () {
-            return S;
-          },
-        });
-      var r = n(5893),
-        i = n(1798),
-        s = n(1752),
-        o = n.n(s),
-        a = n(4298),
-        l = n.n(a);
-      function u() {
-        return (0, r.jsxs)(r.Fragment, {
-          children: [
-            (0, r.jsx)("link", {
-              rel: "stylesheet",
-              href: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css",
-              integrity:
-                "sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH",
-              crossOrigin: "anonymous",
-            }),
-            (0, r.jsx)(l(), {
-              id: "bootstrap-popper-js-cdn",
-              src: "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js",
-              integrity:
-                "sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r",
-              crossOrigin: "anonymous",
-            }),
-            (0, r.jsx)(l(), {
-              id: "bootstrap-js-cdn",
-              src: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js",
-              integrity:
-                "sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy",
-              crossOrigin: "anonymous",
-            }),
-          ],
-        });
-      }
-      n(7294);
-      var c = n(1664),
-        f = n.n(c);
-      function p(e) {
-        return (0, r.jsx)("div", {
-          className: "row justify-content-center",
-          children: (0, r.jsxs)("ul", {
-            className: "list-inline text-center tw-text-stone-700",
-            children: [
-              (0, r.jsx)("li", {
-                className: "list-inline-item ",
-                children: (0, r.jsx)(f(), {
-                  className: "tw-text-stone-700",
-                  target: "_blank",
-                  href: "https://www.linkedin.com/in/".concat(e.linkedin),
-                  children: (0, r.jsxs)("span", {
-                    className: "fa-stack fa-lg",
-                    children: [
-                      (0, r.jsx)("i", {
-                        className: "fa fa-circle fa-stack-2x",
-                      }),
-                      (0, r.jsx)("i", {
-                        className: "fab fa-linkedin-in fa-stack-1x fa-inverse",
-                      }),
-                    ],
-                  }),
-                }),
-              }),
-              (0, r.jsx)("li", {
-                className: "list-inline-item",
-                children: (0, r.jsx)(f(), {
-                  className: "tw-text-stone-700",
-                  target: "_blank",
-                  href: "mailto:".concat(
-                    e.email,
-                    "?subject=From my blog&body=Hi,I found this website very useful",
-                  ),
-                  children: (0, r.jsxs)("span", {
-                    className: "fa-stack fa-lg",
-                    children: [
-                      (0, r.jsx)("i", {
-                        className: "fa fa-circle fa-stack-2x",
-                      }),
-                      (0, r.jsx)("i", {
-                        className: "fas fa-envelope fa-stack-1x fa-inverse",
-                      }),
-                    ],
-                  }),
-                }),
-              }),
-              (0, r.jsx)("li", {
-                className: "list-inline-item",
-                children: (0, r.jsx)(f(), {
-                  className: "tw-text-stone-700",
-                  target: "_blank",
-                  href: "https://github.com/".concat(e.github),
-                  children: (0, r.jsxs)("span", {
-                    className: "fa-stack fa-lg",
-                    children: [
-                      (0, r.jsx)("i", {
-                        className: "fa fa-circle fa-stack-2x",
-                      }),
-                      (0, r.jsx)("i", {
-                        className: "fab fa-github fa-stack-1x fa-inverse",
-                      }),
-                    ],
-                  }),
-                }),
-              }),
-              (0, r.jsx)("li", {
-                className: "list-inline-item",
-                children: (0, r.jsx)(f(), {
-                  className: "tw-text-stone-700",
-                  target: "_blank",
-                  href: "https://gist.github.com/".concat(e.github),
-                  children: (0, r.jsxs)("span", {
-                    className: "fa-stack fa-lg",
-                    children: [
-                      (0, r.jsx)("i", {
-                        className: "fa fa-circle fa-stack-2x",
-                      }),
-                      (0, r.jsx)("i", {
-                        className:
-                          "fab fa-github-square fa-stack-1x fa-inverse",
-                      }),
-                    ],
-                  }),
-                }),
-              }),
-              (0, r.jsx)("li", {
-                className: "list-inline-item",
-                children: (0, r.jsx)(f(), {
-                  className: "tw-text-stone-700",
-                  target: "_blank",
-                  href: "https://gitlab.com/".concat(e.gitlab),
-                  children: (0, r.jsxs)("span", {
-                    className: "fa-stack fa-lg",
-                    children: [
-                      (0, r.jsx)("i", {
-                        className: "fa fa-circle fa-stack-2x",
-                      }),
-                      (0, r.jsx)("i", {
-                        className: "fab fa-gitlab fa-stack-1x fa-inverse",
-                      }),
-                    ],
-                  }),
-                }),
-              }),
-              (0, r.jsx)("li", {
-                className: "list-inline-item",
-                children: (0, r.jsx)(f(), {
-                  className: "tw-text-stone-700",
-                  target: "_blank",
-                  href: "https://www.kaggle.com/".concat(e.kaggle),
-                  children: (0, r.jsxs)("span", {
-                    className: "fa-stack fa-lg",
-                    children: [
-                      (0, r.jsx)("i", {
-                        className: "fa fa-circle fa-stack-2x",
-                      }),
-                      (0, r.jsx)("i", {
-                        className: "fab fa-kaggle fa-stack-1x fa-inverse",
-                      }),
-                    ],
-                  }),
-                }),
-              }),
-              (0, r.jsx)("li", {
-                className: "list-inline-item",
-                children: (0, r.jsx)(f(), {
-                  className: "tw-text-stone-700",
-                  target: "_blank",
-                  href: "https://leetcode.com/".concat(e.leetcode),
-                  children: (0, r.jsxs)("span", {
-                    className: "fa-stack fa-lg",
-                    children: [
-                      (0, r.jsx)("i", {
-                        className: "fa fa-circle fa-stack-2x",
-                      }),
-                      (0, r.jsx)("i", {
-                        className: "fas fa-code fa-stack-1x fa-inverse",
-                      }),
-                    ],
-                  }),
-                }),
-              }),
-              (0, r.jsx)("li", {
-                className: "list-inline-item",
-                children: (0, r.jsx)(f(), {
-                  className: "tw-text-stone-700",
-                  target: "_blank",
-                  href: "https://stackoverflow.com/users/".concat(
-                    e.stackoverflow,
-                  ),
-                  children: (0, r.jsxs)("span", {
-                    className: "fa-stack fa-lg",
-                    children: [
-                      (0, r.jsx)("i", {
-                        className: "fa fa-circle fa-stack-2x",
-                      }),
-                      (0, r.jsx)("i", {
-                        className:
-                          "fab fa-stack-overflow fa-stack-1x fa-inverse",
-                      }),
-                    ],
-                  }),
-                }),
-              }),
-            ],
-          }),
-        });
-      }
-      var d = n(261),
-        g = {
-          src: "/_next/static/media/QR.b48259ea.png",
-          height: 624,
-          width: 1710,
-          blurDataURL:
-            "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAADCAIAAAAhqtkfAAAAVklEQVR42gFLALT/AKrStMHRxZXRpW3NilHIekDGcw/CYyjCZwC/z8LTwcan0LKu37rI48+228C838WZ16oApdSxvdPCi86doNmvx+LNu9vDx+LOn9muCIkyTVum2sgAAAAASUVORK5CYII=",
-          blurWidth: 8,
-          blurHeight: 3,
-        };
-      function h(e) {
-        return (0, r.jsxs)("footer", {
-          className: "tw-text-center tw-text-gray-400",
-          children: [
-            (0, r.jsx)(p, { ...e }),
-            (0, r.jsx)(d.t, {
-              src: g,
-              alt: "QR",
-              className:
-                "tw-mx-auto tw-max-w-full lg:tw-max-w-xl tw-object-contain tw-object-center",
-            }),
-            (0, r.jsx)("p", {
-              children: "Copyright \xa9 "
-                .concat(e.siteTitle, " ")
-                .concat(new Date().getFullYear()),
-            }),
-          ],
-        });
-      }
-      var m = n(3967),
-        y = n.n(m),
-        b = n(6985),
-        v = n.n(b);
-      function x(e) {
-        let { t } = (0, i.$G)("navbar");
-        return (0, r.jsx)("nav", {
-          className: y()(
-            "navbar",
-            "navbar-expand-md",
-            "navbar-light",
-            "sticky-top",
-            "tw-bg-white/95",
-            "tw-shadow",
-            "tw-shadow-black/25",
-            v().navBar,
-          ),
-          children: (0, r.jsxs)("div", {
-            className: "container-fluid px-md-5",
-            children: [
-              (0, r.jsx)("div", {
-                className: y()(
-                  "navbar-brand",
-                  "animate__animated",
-                  "animate__pulse",
-                ),
-                children: (0, r.jsx)("span", {
-                  className:
-                    "tw-rounded tw-bg-black tw-p-1 tw-text-xl tw-font-medium tw-text-white",
-                  children: e.siteTitle,
-                }),
-              }),
-              (0, r.jsx)("button", {
-                className: "navbar-toggler",
-                type: "button",
-                "data-bs-toggle": "collapse",
-                "data-bs-target": "#navbarSupportedContent",
-                "aria-controls": "navbarSupportedContent",
-                "aria-expanded": "false",
-                "aria-label": "Toggle navigation",
-                children: (0, r.jsx)("span", {
-                  className: "navbar-toggler-icon",
-                }),
-              }),
-              (0, r.jsx)("div", {
-                className: "navbar-collapse collapse",
-                id: "navbarSupportedContent",
-                children: (0, r.jsxs)("ul", {
-                  className: "navbar-nav mb-2 mb-lg-0 ms-auto",
-                  children: [
-                    (0, r.jsx)("li", {
-                      className: "nav-item",
-                      children: (0, r.jsx)(f(), {
-                        className: "nav-link active",
-                        "aria-current": "page",
-                        href: "/posts/langs/".concat(e.lang, "/pagination/1"),
-                        children: t("Home"),
-                      }),
-                    }),
-                    (0, r.jsx)("li", {
-                      className: "nav-item",
-                      children: (0, r.jsx)(f(), {
-                        className: "nav-link",
-                        "aria-current": "page",
-                        href: "/posts/langs/".concat(e.lang, "/tags"),
-                        children: t("Tags"),
-                      }),
-                    }),
-                    (0, r.jsxs)("li", {
-                      className: "nav-item dropdown",
-                      children: [
-                        (0, r.jsx)("a", {
-                          className: "nav-link dropdown-toggle",
-                          href: "#",
-                          role: "button",
-                          "data-bs-toggle": "dropdown",
-                          "aria-expanded": "false",
-                          children: t("Language"),
-                        }),
-                        (0, r.jsx)("ul", {
-                          className: "dropdown-menu dropdown-menu-end",
-                          children: e.supportedLanguages.map((e) =>
-                            (0, r.jsx)(
-                              "li",
-                              {
-                                children: (0, r.jsx)(f(), {
-                                  className: "dropdown-item",
-                                  href: "/posts/langs/".concat(e),
-                                  children: t(e),
-                                }),
-                              },
-                              e,
-                            ),
-                          ),
-                        }),
-                      ],
-                    }),
-                  ],
-                }),
-              }),
-            ],
-          }),
-        });
-      }
-      n(3434);
-      var S = (0, i.Jc)(function (e) {
-        let { Component: t, pageProps: n } = e,
-          {
-            publicRuntimeConfig: { siteConfig: i },
-          } = o()(),
-          s = n.lang || i.defaultLocale;
-        return (0, r.jsxs)(r.Fragment, {
-          children: [
-            (0, r.jsx)(u, {}),
-            (0, r.jsx)(x, {
-              siteTitle: i.siteTitle,
-              lang: s,
-              supportedLanguages: i.locales,
-            }),
-            (0, r.jsx)(t, { ...n, lang: s, siteConfig: i }),
-            (0, r.jsx)(h, { ...i }),
-          ],
-        });
-      });
-    },
-    6985: function (e) {
-      e.exports = { navBar: "NavigationBar_navBar__fSiIq" };
+        i = n(1752),
+        s = n.n(i),
+        o = n(1798);
+      n(3434),
+        (t.default = (0, o.Jc)(function (e) {
+          let { Component: t, pageProps: n } = e,
+            {
+              publicRuntimeConfig: { siteConfig: i },
+            } = s()(),
+            o = n.lang || i.i18n.defaultLocale;
+          return (0, r.jsx)(t, { ...n, lang: o, siteConfig: i });
+        }));
     },
     3434: function () {},
-    5675: function (e, t, n) {
-      e.exports = n(6210);
-    },
-    1664: function (e, t, n) {
-      e.exports = n(8342);
-    },
-    4298: function (e, t, n) {
-      e.exports = n(3381);
-    },
     9921: function (e, t) {
       "use strict";
       var n = "function" == typeof Symbol && Symbol.for,
@@ -4909,11 +3569,11 @@
         l = n ? Symbol.for("react.provider") : 60109,
         u = n ? Symbol.for("react.context") : 60110,
         c = n ? Symbol.for("react.async_mode") : 60111,
-        f = n ? Symbol.for("react.concurrent_mode") : 60111,
-        p = n ? Symbol.for("react.forward_ref") : 60112,
-        d = n ? Symbol.for("react.suspense") : 60113,
-        g = n ? Symbol.for("react.suspense_list") : 60120,
-        h = n ? Symbol.for("react.memo") : 60115,
+        p = n ? Symbol.for("react.concurrent_mode") : 60111,
+        g = n ? Symbol.for("react.forward_ref") : 60112,
+        h = n ? Symbol.for("react.suspense") : 60113,
+        f = n ? Symbol.for("react.suspense_list") : 60120,
+        d = n ? Symbol.for("react.memo") : 60115,
         m = n ? Symbol.for("react.lazy") : 60116,
         y = n ? Symbol.for("react.block") : 60121,
         b = n ? Symbol.for("react.fundamental") : 60117,
@@ -4926,18 +3586,18 @@
             case r:
               switch ((e = e.type)) {
                 case c:
-                case f:
+                case p:
                 case s:
                 case a:
                 case o:
-                case d:
+                case h:
                   return e;
                 default:
                   switch ((e = e && e.$$typeof)) {
                     case u:
-                    case p:
+                    case g:
                     case m:
-                    case h:
+                    case d:
                     case l:
                       return e;
                     default:
@@ -4949,26 +3609,26 @@
           }
         }
       }
-      function j(e) {
-        return S(e) === f;
+      function O(e) {
+        return S(e) === p;
       }
       (t.AsyncMode = c),
-        (t.ConcurrentMode = f),
+        (t.ConcurrentMode = p),
         (t.ContextConsumer = u),
         (t.ContextProvider = l),
         (t.Element = r),
-        (t.ForwardRef = p),
+        (t.ForwardRef = g),
         (t.Fragment = s),
         (t.Lazy = m),
-        (t.Memo = h),
+        (t.Memo = d),
         (t.Portal = i),
         (t.Profiler = a),
         (t.StrictMode = o),
-        (t.Suspense = d),
+        (t.Suspense = h),
         (t.isAsyncMode = function (e) {
-          return j(e) || S(e) === c;
+          return O(e) || S(e) === c;
         }),
-        (t.isConcurrentMode = j),
+        (t.isConcurrentMode = O),
         (t.isContextConsumer = function (e) {
           return S(e) === u;
         }),
@@ -4979,7 +3639,7 @@
           return "object" == typeof e && null !== e && e.$$typeof === r;
         }),
         (t.isForwardRef = function (e) {
-          return S(e) === p;
+          return S(e) === g;
         }),
         (t.isFragment = function (e) {
           return S(e) === s;
@@ -4988,7 +3648,7 @@
           return S(e) === m;
         }),
         (t.isMemo = function (e) {
-          return S(e) === h;
+          return S(e) === d;
         }),
         (t.isPortal = function (e) {
           return S(e) === i;
@@ -5000,25 +3660,25 @@
           return S(e) === o;
         }),
         (t.isSuspense = function (e) {
-          return S(e) === d;
+          return S(e) === h;
         }),
         (t.isValidElementType = function (e) {
           return (
             "string" == typeof e ||
             "function" == typeof e ||
             e === s ||
-            e === f ||
+            e === p ||
             e === a ||
             e === o ||
-            e === d ||
-            e === g ||
+            e === h ||
+            e === f ||
             ("object" == typeof e &&
               null !== e &&
               (e.$$typeof === m ||
-                e.$$typeof === h ||
+                e.$$typeof === d ||
                 e.$$typeof === l ||
                 e.$$typeof === u ||
-                e.$$typeof === p ||
+                e.$$typeof === g ||
                 e.$$typeof === b ||
                 e.$$typeof === v ||
                 e.$$typeof === x ||
@@ -5048,45 +3708,6 @@
         track: !0,
         wbr: !0,
       };
-    },
-    3967: function (e, t) {
-      var n;
-      !(function () {
-        "use strict";
-        var r = {}.hasOwnProperty;
-        function i() {
-          for (var e = "", t = 0; t < arguments.length; t++) {
-            var n = arguments[t];
-            n &&
-              (e = s(
-                e,
-                (function (e) {
-                  if ("string" == typeof e || "number" == typeof e) return e;
-                  if ("object" != typeof e) return "";
-                  if (Array.isArray(e)) return i.apply(null, e);
-                  if (
-                    e.toString !== Object.prototype.toString &&
-                    !e.toString.toString().includes("[native code]")
-                  )
-                    return e.toString();
-                  var t = "";
-                  for (var n in e) r.call(e, n) && e[n] && (t = s(t, n));
-                  return t;
-                })(n),
-              ));
-          }
-          return e;
-        }
-        function s(e, t) {
-          return t ? (e ? e + " " + t : e + t) : e;
-        }
-        e.exports
-          ? ((i.default = i), (e.exports = i))
-          : void 0 !==
-              (n = function () {
-                return i;
-              }.apply(t, [])) && (e.exports = n);
-      })();
     },
   },
   function (e) {

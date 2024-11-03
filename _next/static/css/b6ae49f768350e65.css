@@ -11,3 +11,12 @@
 .AboutMe_about__UiMOu .AboutMe_list-inline__ldLZ_ > li {
   padding-left: 0;
 }
+.NavigationBar_navBar__fSiIq:before {
+  content: " ";
+  display: block;
+  height: 2px;
+  position: absolute;
+  width: 100%;
+  background: red;
+  top: 0;
+}
