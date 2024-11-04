@@ -144,7 +144,7 @@
             (0, i.jsx)(r, { height: 108, width: 108, className: "tw-m-auto" }),
             (0, i.jsx)("h5", { children: a.siteAuthor }),
             (0, i.jsx)(x, {}),
-            (0, i.jsx)("p", { children: a.siteAuthorDescription }),
+            (0, i.jsx)("p", { children: a.aboutMe }),
           ],
         });
       }
