@@ -3,12 +3,6 @@
     "lang": "en",
     "previews": [
       {
-        "slug": "Google-Foobar-Dodge-The-Lasers",
-        "title": "Google Foobar Dodge The Lasers",
-        "date": "2019-12-17 22:50:54",
-        "content": "Beatty sequence  This problem require to calculate $\\sum_{i=1}^{n} \\lfloor i\\sqrt{2} \\rfloor$. We must take into consideration the precision and the..."
-      },
-      {
         "slug": "Google-Foobar-Escape-Pods",
         "title": "Google Foobar Escape Pods",
         "date": "2019-11-22 22:35:28",
@@ -61,6 +55,12 @@
         "title": "Neo4j Graph Database",
         "date": "2019-10-11 23:37:29",
         "content": "Neo4j  Neo4j is an open source, NoSQL, native graph databases. In Neo4j, the data are persisted for long term durability. Neo4j can be used with both..."
+      },
+      {
+        "slug": "Lehman-laws",
+        "title": "Lehman Laws",
+        "date": "2019-05-12 21:53:33",
+        "content": "The Lehman laws describe a balance between forces driving new developments on one hand, and forces that slow down progress on the other hand.  Lehman..."
       }
     ],
     "prevPageUrl": "/posts/langs/en/pagination/3",

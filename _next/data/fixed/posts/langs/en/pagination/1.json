@@ -27,12 +27,6 @@
         "content": "A vector database indexes and stores vector embeddings for fast retrieval and similarity search, with capabilities like CRUD operations. Vector..."
       },
       {
-        "slug": "roadmap-ai",
-        "title": "Roadmap Toward AI",
-        "date": "2024-09-15 00:20:21",
-        "content": "Deep Learning Tutorials [ ] Neural Networks and Deep Learning [ ] UFLDL Tutorial [ ] Stanford CS 230 Cheatsheets Courses [x] Coursera: Deep Learning..."
-      },
-      {
         "slug": "dll-hijacking-via-zlib-dll-proxy",
         "title": "DLL Hijacking via zlib DLL Proxy",
         "date": "2024-07-21 11:59:24",
@@ -61,6 +55,12 @@
         "title": "Remote Access Via TightVNC To Windows Machine",
         "date": "2022-08-13 11:35:55",
         "content": "Install VNC Server on Windows Machine  Download TightVNC which is free VNC server that support Windows 11 and then install TightVNC on Windows..."
+      },
+      {
+        "slug": "RaspberryPi4B-Setup",
+        "title": "Raspberry Pi 4B Setup",
+        "date": "2022-07-10 13:00:17",
+        "content": "Buy a Raspberry Pi 4B  You can buy the Raspberry Pi 4B board on Amazon, the recommended version is 4 GB. You may also need to buy a SD card, and..."
       }
     ],
     "nextPageUrl": "/posts/langs/en/pagination/2",

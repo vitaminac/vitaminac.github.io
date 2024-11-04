@@ -3,12 +3,6 @@
     "lang": "en",
     "previews": [
       {
-        "slug": "Minimalist-Linux-Workspace",
-        "title": "Minimalist Linux Workspace",
-        "date": "2021-01-31 18:25:16",
-        "content": "Download Image  Download Debian image, let we choose the net-install ISO since we don't need any heavy desktop enviroment e.g. KDE, GNOME, etc... . ..."
-      },
-      {
         "slug": "Testable-Design",
         "title": "Testable Design",
         "date": "2021-01-24 20:30:40",
@@ -61,6 +55,12 @@
         "title": "Google Foobar Decrypt Final Message",
         "date": "2019-12-26 21:43:50",
         "content": "After i have finished Google Foobar challenge I get a encrypted message. The ciphertext was xored with my username and then encode with base64, just..."
+      },
+      {
+        "slug": "Google-Foobar-Dodge-The-Lasers",
+        "title": "Google Foobar Dodge The Lasers",
+        "date": "2019-12-17 22:50:54",
+        "content": "Beatty sequence  This problem require to calculate $\\sum_{i=1}^{n} \\lfloor i\\sqrt{2} \\rfloor$. We must take into consideration the precision and the..."
       }
     ],
     "prevPageUrl": "/posts/langs/en/pagination/2",
