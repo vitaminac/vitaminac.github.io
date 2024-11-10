@@ -5,7 +5,7 @@
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/posts/[slug]",
         function () {
-          return a(1475);
+          return a(5911);
         },
       ]);
     },
@@ -274,8 +274,8 @@
           ],
         });
       }
-      var f = a(3967),
-        u = a.n(f),
+      var u = a(3967),
+        f = a.n(u),
         h = a(1798),
         g = a(6985),
         j = a.n(g);
@@ -283,7 +283,7 @@
         let { lang: t, siteConfig: a } = e,
           { t: n } = (0, h.$G)("navbar");
         return (0, s.jsx)("nav", {
-          className: u()(
+          className: f()(
             "navbar",
             "navbar-expand-md",
             "navbar-light",
@@ -297,7 +297,7 @@
             className: "container-fluid px-md-5",
             children: [
               (0, s.jsx)("div", {
-                className: u()(
+                className: f()(
                   "navbar-brand",
                   "animate__animated",
                   "animate__pulse",
@@ -517,31 +517,32 @@
         });
       }
     },
-    1475: function (e, t, a) {
+    5911: function (e, t, a) {
       "use strict";
       a.r(t),
         a.d(t, {
           __N_SSG: function () {
-            return j;
+            return g;
           },
           default: function () {
-            return p;
+            return j;
           },
         });
       var s = a(5893),
-        n = a(7294);
-      function i(e) {
-        let t = (0, n.useRef)(null),
-          [a, i] = (0, n.useState)(),
-          [l, c] = (0, n.useState)(0),
-          r = (0, n.useCallback)(() => {
-            i(t.current.contentWindow.document.body);
-          }, [i]),
-          o = (0, n.useCallback)(() => {
+        n = a(1798),
+        i = a(7294);
+      function l(e) {
+        let t = (0, i.useRef)(null),
+          [a, n] = (0, i.useState)(),
+          [l, c] = (0, i.useState)(0),
+          r = (0, i.useCallback)(() => {
+            n(t.current.contentWindow.document.body);
+          }, [n]),
+          o = (0, i.useCallback)(() => {
             c(a.scrollHeight);
           }, [a, c]);
         return (
-          (0, n.useEffect)(() => {
+          (0, i.useEffect)(() => {
             if (a) {
               let e = new ResizeObserver(o);
               return (
@@ -562,8 +563,7 @@
           })
         );
       }
-      var l = a(1798),
-        c = a(3045),
+      var c = a(3045),
         r = a(5152),
         o = a.n(r),
         d = a(3944);
@@ -579,84 +579,76 @@
         });
       }
       let x = o()(() => Promise.resolve(m), { ssr: !1 });
-      var f = a(2967),
-        u = a(1734),
-        h = a(5853);
-      function g(e) {
-        let { children: t, postData: a, siteConfig: n } = e,
-          { t: i } = (0, l.$G)("post-layout"),
-          { siteAuthor: r, disqusUsername: o } = n;
-        return (0, s.jsxs)(f.X, {
-          lang: a.lang,
-          siteConfig: n,
-          children: [
-            (0, s.jsx)(h.K, {
-              title: a.title,
-              author: r,
-              lang: a.lang,
-              description: a.description,
-              keywords: a.tags,
-              previewImage: a.previewImageUrl,
-            }),
-            (0, s.jsxs)("header", {
-              className:
-                "tw-flex tw-h-96 tw-w-screen tw-flex-col tw-content-center tw-justify-center tw-bg-cover tw-bg-center tw-bg-no-repeat tw-text-center tw-text-white",
-              style: {
-                backgroundImage: "url(".concat(
-                  "/_next/static/media/default-post-preview.c96b099a.jpeg",
-                  ")",
-                ),
-              },
-              children: [
-                (0, s.jsx)("h1", { children: a.title }),
-                (0, s.jsx)("p", { children: i("Author", { author: r }) }),
-                (0, s.jsx)(c.E, { dateString: a.date }),
-                (0, s.jsxs)("section", {
-                  className: "tw-mt-3 tw-text-center",
-                  children: [
-                    (0, s.jsxs)("p", { children: [i("Tags"), ":"] }),
-                    (0, s.jsx)(u.w, { lang: a.lang, tags: a.tags }),
-                  ],
-                }),
-              ],
-            }),
-            (0, s.jsxs)("div", {
-              className: "tw-mx-auto tw-w-11/12",
-              children: [
-                (0, s.jsx)("main", {
-                  children: (0, s.jsx)("article", { children: t }),
-                }),
-                (0, s.jsx)("aside", {
-                  children: (0, s.jsx)(x, {
-                    username: o,
-                    id: a.slug,
-                    title: a.title,
-                    lang: a.lang,
-                  }),
-                }),
-              ],
-            }),
-          ],
-        });
-      }
-      var j = !0,
-        p = function (e) {
-          let { postData: t, siteConfig: a } = e;
-          return (0, s.jsx)(g, {
-            postData: t,
+      var u = a(2967),
+        f = a(1734),
+        h = a(5853),
+        g = !0,
+        j = function (e) {
+          let { postData: t, siteConfig: a } = e,
+            { t: i } = (0, n.$G)("post-layout");
+          return (0, s.jsxs)(u.X, {
+            lang: t.lang,
             siteConfig: a,
-            children: t.isLegacy
-              ? (0, s.jsx)(i, { title: t.slug, src: t.path })
-              : (0, s.jsxs)("main", {
-                  children: [
-                    (0, s.jsx)("nav", {
-                      dangerouslySetInnerHTML: { __html: t.tocHtml },
+            children: [
+              (0, s.jsx)(h.K, {
+                title: t.title,
+                author: a.siteAuthor,
+                lang: t.lang,
+                description: t.description,
+                keywords: t.tags,
+                previewImage: t.previewImageUrl,
+              }),
+              (0, s.jsxs)("main", {
+                className: "container",
+                children: [
+                  (0, s.jsxs)("header", {
+                    className:
+                      "tw-relative tw-flex tw-h-96 tw-w-screen tw-flex-col tw-content-center tw-justify-center tw-bg-cover tw-bg-center tw-bg-no-repeat tw-text-center tw-text-white",
+                    style: {
+                      backgroundImage: "url(".concat(
+                        "/_next/static/media/default-post-preview.c96b099a.jpeg",
+                        ")",
+                      ),
+                      left: "calc(50% - 50vw)",
+                    },
+                    children: [
+                      (0, s.jsx)("h1", { children: t.title }),
+                      (0, s.jsx)("p", {
+                        children: i("Author", { author: a.siteAuthor }),
+                      }),
+                      (0, s.jsx)(c.E, { dateString: t.date }),
+                      (0, s.jsxs)("section", {
+                        className: "tw-mt-3 tw-text-center",
+                        children: [
+                          (0, s.jsxs)("p", { children: [i("Tags"), ":"] }),
+                          (0, s.jsx)(f.w, { lang: t.lang, tags: t.tags }),
+                        ],
+                      }),
+                    ],
+                  }),
+                  t.isLegacy
+                    ? (0, s.jsx)(l, { title: t.slug, src: t.path })
+                    : (0, s.jsxs)(s.Fragment, {
+                        children: [
+                          (0, s.jsx)("nav", {
+                            dangerouslySetInnerHTML: { __html: t.tocHtml },
+                          }),
+                          (0, s.jsx)("article", {
+                            dangerouslySetInnerHTML: { __html: t.articleHtml },
+                          }),
+                        ],
+                      }),
+                  (0, s.jsx)("aside", {
+                    children: (0, s.jsx)(x, {
+                      username: a.disqusUsername,
+                      id: t.slug,
+                      title: t.title,
+                      lang: t.lang,
                     }),
-                    (0, s.jsx)("article", {
-                      dangerouslySetInnerHTML: { __html: t.articleHtml },
-                    }),
-                  ],
-                }),
+                  }),
+                ],
+              }),
+            ],
           });
         };
     },
