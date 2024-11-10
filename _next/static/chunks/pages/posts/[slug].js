@@ -522,10 +522,10 @@
       a.r(t),
         a.d(t, {
           __N_SSG: function () {
-            return g;
+            return b;
           },
           default: function () {
-            return j;
+            return v;
           },
         });
       var s = a(5893),
@@ -582,8 +582,12 @@
       var u = a(2967),
         f = a(1734),
         h = a(5853),
-        g = !0,
-        j = function (e) {
+        g = a(3260),
+        j = a.n(g),
+        p = a(3967),
+        w = a.n(p),
+        b = !0,
+        v = function (e) {
           let { postData: t, siteConfig: a } = e,
             { t: i } = (0, n.$G)("post-layout");
           return (0, s.jsxs)(u.X, {
@@ -628,15 +632,25 @@
                   }),
                   t.isLegacy
                     ? (0, s.jsx)(l, { title: t.slug, src: t.path })
-                    : (0, s.jsxs)(s.Fragment, {
-                        children: [
-                          (0, s.jsx)("nav", {
-                            dangerouslySetInnerHTML: { __html: t.tocHtml },
-                          }),
-                          (0, s.jsx)("article", {
-                            dangerouslySetInnerHTML: { __html: t.articleHtml },
-                          }),
-                        ],
+                    : (0, s.jsx)(s.Fragment, {
+                        children: (0, s.jsxs)("div", {
+                          className: "row",
+                          children: [
+                            (0, s.jsx)("nav", {
+                              className: w()(
+                                j().toc,
+                                "col-12 col-lg-3 order-lg-2",
+                              ),
+                              dangerouslySetInnerHTML: { __html: t.tocHtml },
+                            }),
+                            (0, s.jsx)("article", {
+                              className: "col-12 col-lg-9 order-lg-1",
+                              dangerouslySetInnerHTML: {
+                                __html: t.articleHtml,
+                              },
+                            }),
+                          ],
+                        }),
                       }),
                   (0, s.jsx)("aside", {
                     children: (0, s.jsx)(x, {
@@ -654,6 +668,9 @@
     },
     6985: function (e) {
       e.exports = { navBar: "NavigationBar_navBar__fSiIq" };
+    },
+    3260: function (e) {
+      e.exports = { toc: "Post_toc__TAzIW" };
     },
   },
   function (e) {
