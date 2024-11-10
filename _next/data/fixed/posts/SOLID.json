@@ -3,7 +3,6 @@
     "postData": {
       "title": "SOLID Design Principles",
       "date": "2021-01-10 17:14:33",
-      "lang": "en",
       "slug": "SOLID",
       "tags": [
         "SOLID",
@@ -13,6 +12,7 @@
         "Software Evolution"
       ],
       "isLegacy": true,
+      "lang": "en",
       "path": "/SOLID/index.html"
     },
     "lang": "en",

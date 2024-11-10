@@ -3,7 +3,6 @@
     "postData": {
       "title": "Desarrollo de aplicaciones Web",
       "date": "2019-02-25 11:29:55",
-      "lang": "es",
       "slug": "Desarrollo-de-Aplicaciones-Web",
       "tags": [
         "Aplicación Web",
@@ -15,6 +14,7 @@
         "Tomcat"
       ],
       "isLegacy": true,
+      "lang": "es",
       "path": "/Desarrollo-de-Aplicaciones-Web/index.html"
     },
     "lang": "es",

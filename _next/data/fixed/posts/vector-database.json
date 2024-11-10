@@ -3,10 +3,10 @@
     "postData": {
       "title": "Vector Database",
       "date": "2024-09-29 19:19:40",
-      "lang": "en",
       "slug": "vector-database",
       "tags": ["vector database"],
       "isLegacy": true,
+      "lang": "en",
       "path": "/vector-database/index.html"
     },
     "lang": "en",

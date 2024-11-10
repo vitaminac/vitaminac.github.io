@@ -3,10 +3,10 @@
     "postData": {
       "title": "Raspberry Pi 4B Setup",
       "date": "2022-07-10 13:00:17",
-      "lang": "en",
       "slug": "RaspberryPi4B-Setup",
       "tags": ["Linux", "Debian", "Raspberry", "Raspberry Pi 4", "Prestashop"],
       "isLegacy": true,
+      "lang": "en",
       "path": "/RaspberryPi4B-Setup/index.html"
     },
     "lang": "en",

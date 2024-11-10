@@ -1,0 +1,39 @@
+{
+  "pageProps": {
+    "postData": {
+      "title": "Test Youtube",
+      "date": "2020-01-02",
+      "slug": "test-youtube",
+      "tags": [],
+      "isLegacy": false,
+      "lang": "en",
+      "articleHtml": "<iframe src=\"https://www.youtube.com/embed/rvy3EggGH7w\" title=\"CS329P\" width=\"560\" height=\"315\" frameBorder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen=\"\"></iframe>",
+      "tocHtml": ""
+    },
+    "lang": "en",
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          },
+          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
+        }
+      },
+      "initialLocale": "en",
+      "ns": ["navbar", "post-layout"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

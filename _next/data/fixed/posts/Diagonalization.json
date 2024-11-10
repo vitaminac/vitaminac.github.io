@@ -3,10 +3,10 @@
     "postData": {
       "title": "Diagonalization",
       "date": "2022-01-09 11:36:05",
-      "lang": "en",
       "slug": "Diagonalization",
       "tags": ["Math", "Diagonalization", "Matrix", "Linear Algebra"],
       "isLegacy": true,
+      "lang": "en",
       "path": "/Diagonalization/index.html"
     },
     "lang": "en",

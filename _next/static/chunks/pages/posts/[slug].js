@@ -13,14 +13,14 @@
       "use strict";
       a.d(t, {
         E: function () {
-          return c;
+          return l;
         },
       });
       var s = a(5893);
       a(7294);
       var n = a(197),
         i = a(949);
-      function c(e) {
+      function l(e) {
         let { dateString: t } = e,
           a = (0, n.D)(t);
         return (0, s.jsxs)("span", {
@@ -45,7 +45,7 @@
       var s = a(5893),
         n = a(4298),
         i = a.n(n);
-      function c() {
+      function l() {
         return (0, s.jsxs)(s.Fragment, {
           children: [
             (0, s.jsx)("link", {
@@ -73,8 +73,8 @@
         });
       }
       a(7294);
-      var l = a(1664),
-        r = a.n(l);
+      var c = a(1664),
+        r = a.n(c);
       function o(e) {
         return (0, s.jsx)("div", {
           className: "row justify-content-center",
@@ -384,7 +384,7 @@
         let { children: t, lang: a, siteConfig: n } = e;
         return (0, s.jsxs)(s.Fragment, {
           children: [
-            (0, s.jsx)(c, {}),
+            (0, s.jsx)(l, {}),
             (0, s.jsx)(p, { siteConfig: n, lang: a }),
             t,
             (0, s.jsx)(x, { siteConfig: n }),
@@ -396,13 +396,13 @@
       "use strict";
       a.d(t, {
         w: function () {
-          return c;
+          return l;
         },
       });
       var s = a(5893),
         n = a(1664),
         i = a.n(n);
-      function c(e) {
+      function l(e) {
         let { lang: t, tags: a } = e,
           n = a.map((e) =>
             (0, s.jsx)(
@@ -430,27 +430,27 @@
       "use strict";
       a.d(t, {
         t: function () {
-          return l;
+          return c;
         },
       });
       var s = a(5893),
         n = a(5675),
         i = a.n(n);
-      let c = (e) => {
+      let l = (e) => {
         let { src: t } = e;
         return t;
       };
-      function l(e) {
-        let { alt: t, src: a, width: n, height: l, className: r, ...o } = e;
+      function c(e) {
+        let { alt: t, src: a, width: n, height: c, className: r, ...o } = e;
         return (0, s.jsx)(i(), {
           src: a,
-          loader: c,
+          loader: l,
           alt: t || "image",
           placeholder: "blur",
           sizes: "responsive",
           unoptimized: !0,
           width: n,
-          height: l,
+          height: c,
           className: r,
           ...o,
         });
@@ -460,13 +460,13 @@
       "use strict";
       a.d(t, {
         K: function () {
-          return c;
+          return l;
         },
       });
       var s = a(5893),
         n = a(9008),
         i = a.n(n);
-      function c(e) {
+      function l(e) {
         return (0, s.jsxs)(i(), {
           children: [
             (0, s.jsx)("meta", { charSet: "utf-8" }),
@@ -533,13 +533,13 @@
       function i(e) {
         let t = (0, n.useRef)(null),
           [a, i] = (0, n.useState)(),
-          [c, l] = (0, n.useState)(0),
+          [l, c] = (0, n.useState)(0),
           r = (0, n.useCallback)(() => {
             i(t.current.contentWindow.document.body);
           }, [i]),
           o = (0, n.useCallback)(() => {
-            l(a.scrollHeight);
-          }, [a, l]);
+            c(a.scrollHeight);
+          }, [a, c]);
         return (
           (0, n.useEffect)(() => {
             if (a) {
@@ -556,14 +556,14 @@
             title: e.title,
             src: e.src,
             width: "100%",
-            height: "".concat(c, "px"),
+            height: "".concat(l, "px"),
             ref: t,
             onLoad: r,
           })
         );
       }
-      var c = a(1798),
-        l = a(3045),
+      var l = a(1798),
+        c = a(3045),
         r = a(5152),
         o = a.n(r),
         d = a(3944);
@@ -584,7 +584,7 @@
         h = a(5853);
       function g(e) {
         let { children: t, postData: a, siteConfig: n } = e,
-          { t: i } = (0, c.$G)("post-layout"),
+          { t: i } = (0, l.$G)("post-layout"),
           { siteAuthor: r, disqusUsername: o } = n;
         return (0, s.jsxs)(f.X, {
           lang: a.lang,
@@ -610,7 +610,7 @@
               children: [
                 (0, s.jsx)("h1", { children: a.title }),
                 (0, s.jsx)("p", { children: i("Author", { author: r }) }),
-                (0, s.jsx)(l.E, { dateString: a.date }),
+                (0, s.jsx)(c.E, { dateString: a.date }),
                 (0, s.jsxs)("section", {
                   className: "tw-mt-3 tw-text-center",
                   children: [
@@ -645,7 +645,18 @@
           return (0, s.jsx)(g, {
             postData: t,
             siteConfig: a,
-            children: (0, s.jsx)(i, { title: t.slug, src: t.path }),
+            children: t.isLegacy
+              ? (0, s.jsx)(i, { title: t.slug, src: t.path })
+              : (0, s.jsxs)("main", {
+                  children: [
+                    (0, s.jsx)("nav", {
+                      dangerouslySetInnerHTML: { __html: t.tocHtml },
+                    }),
+                    (0, s.jsx)("article", {
+                      dangerouslySetInnerHTML: { __html: t.articleHtml },
+                    }),
+                  ],
+                }),
           });
         };
     },

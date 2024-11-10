@@ -3,10 +3,10 @@
     "postData": {
       "title": "Java Concurrent Programming",
       "date": "2021-10-06 23:09:55",
-      "lang": "en",
       "slug": "Java-Concurrent-Programming",
       "tags": ["Java", "Concurrent Programming", "Parallelism", "Java Stream"],
       "isLegacy": true,
+      "lang": "en",
       "path": "/Java-Concurrent-Programming/index.html"
     },
     "lang": "en",

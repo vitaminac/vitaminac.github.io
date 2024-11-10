@@ -1,29 +1,28 @@
-(self.__BUILD_MANIFEST = (function (s, a, t, g) {
+(self.__BUILD_MANIFEST = (function (s, a, t, n) {
   return {
     __rewrites: { afterFiles: [], beforeFiles: [], fallback: [] },
     "/": ["static/chunks/pages/index.js"],
     "/404": ["static/chunks/pages/404.js"],
     "/_error": ["static/chunks/pages/_error.js"],
-    "/archives/[slug]": ["static/chunks/pages/archives/[slug].js"],
     "/posts/langs/[lang]": ["static/chunks/pages/posts/langs/[lang].js"],
     "/posts/langs/[lang]/pagination/[pagination]": [
       s,
       a,
       t,
-      g,
+      n,
       "static/chunks/pages/posts/langs/[lang]/pagination/[pagination].js",
     ],
     "/posts/langs/[lang]/tags": [
       s,
       t,
-      g,
+      n,
       "static/chunks/pages/posts/langs/[lang]/tags.js",
     ],
     "/posts/langs/[lang]/tags/[tag]": [
       s,
       a,
       t,
-      g,
+      n,
       "static/chunks/pages/posts/langs/[lang]/tags/[tag].js",
     ],
     "/posts/[slug]": [
@@ -38,7 +37,6 @@
       "/404",
       "/_app",
       "/_error",
-      "/archives/[slug]",
       "/posts/langs/[lang]",
       "/posts/langs/[lang]/pagination/[pagination]",
       "/posts/langs/[lang]/tags",

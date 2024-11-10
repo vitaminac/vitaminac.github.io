@@ -3,7 +3,6 @@
     "postData": {
       "title": "Information Security",
       "date": "2021-03-28 11:11:17",
-      "lang": "en",
       "slug": "Information-Security",
       "tags": [
         "InfoSec",
@@ -19,6 +18,7 @@
         "Accounting"
       ],
       "isLegacy": true,
+      "lang": "en",
       "path": "/Information-Security/index.html"
     },
     "lang": "en",

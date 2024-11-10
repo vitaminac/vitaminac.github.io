@@ -3,7 +3,6 @@
     "postData": {
       "title": "Estructura Algebraica",
       "date": "2019-01-26 10:45:44",
-      "lang": "es",
       "slug": "Estructura-Algebraica",
       "tags": [
         "Estructura Algebraica",
@@ -15,6 +14,7 @@
         "Módulo"
       ],
       "isLegacy": true,
+      "lang": "es",
       "path": "/Estructura-Algebraica/index.html"
     },
     "lang": "es",

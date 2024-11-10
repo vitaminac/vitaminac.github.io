@@ -1,0 +1,39 @@
+{
+  "pageProps": {
+    "postData": {
+      "title": "Test GFM",
+      "date": "2020-01-02",
+      "slug": "test-gfm",
+      "tags": [],
+      "isLegacy": false,
+      "lang": "en",
+      "articleHtml": "<ul class=\"contains-task-list\">\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled=\"\"/> <!-- -->foo</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled=\"\" checked=\"\"/> <!-- -->bar</li>\n</ul>",
+      "tocHtml": "<ul>\n<li>[ ] foo</li>\n<li>[x] bar</li>\n</ul>\n"
+    },
+    "lang": "en",
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          },
+          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
+        }
+      },
+      "initialLocale": "en",
+      "ns": ["navbar", "post-layout"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

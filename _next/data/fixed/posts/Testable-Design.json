@@ -3,10 +3,10 @@
     "postData": {
       "title": "Testable Design",
       "date": "2021-01-24 20:30:40",
-      "lang": "en",
       "slug": "Testable-Design",
       "tags": ["Testable Design"],
       "isLegacy": true,
+      "lang": "en",
       "path": "/Testable-Design/index.html"
     },
     "lang": "en",

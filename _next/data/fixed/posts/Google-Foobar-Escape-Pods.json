@@ -3,10 +3,10 @@
     "postData": {
       "title": "Google Foobar Escape Pods",
       "date": "2019-11-22 22:35:28",
-      "lang": "en",
       "slug": "Google-Foobar-Escape-Pods",
       "tags": ["algorithms"],
       "isLegacy": true,
+      "lang": "en",
       "path": "/Google-Foobar-Escape-Pods/index.html"
     },
     "lang": "en",

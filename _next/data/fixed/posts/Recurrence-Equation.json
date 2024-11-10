@@ -3,7 +3,6 @@
     "postData": {
       "title": "Recurrence Equation",
       "date": "2024-10-27",
-      "lang": "en",
       "slug": "Recurrence-Equation",
       "tags": [
         "algorithms",
@@ -12,6 +11,7 @@
         "Generating Function"
       ],
       "isLegacy": true,
+      "lang": "en",
       "path": "/Recurrence-Equation/index.html"
     },
     "lang": "en",

@@ -3,7 +3,6 @@
     "postData": {
       "title": "Code Smell",
       "date": "2019-04-28 10:01:41",
-      "lang": "es",
       "slug": "Code-Smell",
       "tags": [
         "Software Quality Metrics",
@@ -11,6 +10,7 @@
         "Agile Software Development"
       ],
       "isLegacy": true,
+      "lang": "es",
       "path": "/Code-Smell/index.html"
     },
     "lang": "es",

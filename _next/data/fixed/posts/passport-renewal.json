@@ -3,10 +3,10 @@
     "postData": {
       "title": "护照更换",
       "date": "2024-10-10 23:54:23",
-      "lang": "zh",
       "slug": "passport-renewal",
       "tags": ["护照"],
       "isLegacy": true,
+      "lang": "zh",
       "path": "/passport-renewal/index.html"
     },
     "lang": "zh",

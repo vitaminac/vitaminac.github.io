@@ -3,7 +3,6 @@
     "postData": {
       "title": "Virtualización, Contenedores y Cloud Computing",
       "date": "2019-02-26 23:19:07",
-      "lang": "es",
       "slug": "Virtualization",
       "tags": [
         "Virtualización",
@@ -14,6 +13,7 @@
         "Vagrant"
       ],
       "isLegacy": true,
+      "lang": "es",
       "path": "/Virtualization/index.html"
     },
     "lang": "es",

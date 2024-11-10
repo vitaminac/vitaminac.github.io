@@ -3,10 +3,10 @@
     "postData": {
       "title": "Como calcular un préstamo",
       "date": "2021-10-23 12:09:41",
-      "lang": "es",
       "slug": "Prestamo",
       "tags": ["TAE", "TIN", "prestamo", "Economy"],
       "isLegacy": true,
+      "lang": "es",
       "path": "/Prestamo/index.html"
     },
     "lang": "es",

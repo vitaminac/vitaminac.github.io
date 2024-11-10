@@ -3,7 +3,6 @@
     "postData": {
       "title": "Cracking Simpler Cipher",
       "date": "2019-03-25 15:43:58",
-      "lang": "es",
       "slug": "Cracking-Simpler-Cipher",
       "tags": [
         "Caesar Cipher",
@@ -15,6 +14,7 @@
         "Cifrado por transposición"
       ],
       "isLegacy": true,
+      "lang": "es",
       "path": "/Cracking-Simpler-Cipher/index.html"
     },
     "lang": "es",

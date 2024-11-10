@@ -1,0 +1,39 @@
+{
+  "pageProps": {
+    "postData": {
+      "title": "Test AutoLink",
+      "date": "2020-01-01",
+      "slug": "test-auto-link",
+      "tags": [],
+      "isLegacy": false,
+      "lang": "en",
+      "articleHtml": "<h1 id=\"heading-1\"><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#heading-1\"><i class=\"fa-solid fa-link\"></i></a>Heading 1</h1>\n<h2 id=\"heading-2\"><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#heading-2\"><i class=\"fa-solid fa-link\"></i></a>Heading 2</h2>\n<h3 id=\"heading-3\"><a aria-hidden=\"true\" tabindex=\"-1\" href=\"#heading-3\"><i class=\"fa-solid fa-link\"></i></a>Heading 3</h3>\n<p>paragraph</p>",
+      "tocHtml": "<ul>\n<li><a href=\"#heading-1\">Heading 1</a>\n<ul>\n<li><a href=\"#heading-2\">Heading 2</a>\n<ul>\n<li><a href=\"#heading-3\">Heading 3</a></li>\n</ul>\n</li>\n</ul>\n</li>\n</ul>\n"
+    },
+    "lang": "en",
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          },
+          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
+        }
+      },
+      "initialLocale": "en",
+      "ns": ["navbar", "post-layout"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}
