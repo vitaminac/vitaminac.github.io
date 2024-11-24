@@ -144,385 +144,315 @@
     />
 
     <!-- Post Content -->
-    <article>
-      <div class="container">
-        <div class="row">
-          <!-- Post Container -->
-          <div class="order-lg-2 col-lg-3 col-12 toc-col" style="z-index: 1">
-            <ol class="toc">
-              <li class="toc-item toc-level-1">
-                <a class="toc-link" href="#Maximum-flow-problem"
-                  ><span class="toc-text">Maximum flow problem</span></a
-                >
-                <ol class="toc-child">
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Definition"
-                      ><span class="toc-text">Definition</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Transformation"
-                      ><span class="toc-text">Transformation</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Residual-Network"
-                      ><span class="toc-text">Residual Network</span></a
-                    >
-                    <ol class="toc-child">
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Augmenting-Paths"
-                          ><span class="toc-text">Augmenting Paths</span></a
-                        >
-                      </li>
-                    </ol>
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#The-Ford-Fulkerson-Method"
-                      ><span class="toc-text"
-                        >The Ford Fulkerson Method</span
-                      ></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Reference"
-                      ><span class="toc-text">Reference</span></a
-                    >
-                  </li>
-                </ol>
-              </li>
-            </ol>
-          </div>
-
-          <div class="order-lg-1 col-lg-9 col-12 post-container">
-            <p>
-              This problem involves solving the equivalent maximum flow problem.
-              We can use Ford–Fulkerson algorithm with BFS to calculate the
-              total flow.
-            </p>
-            <h1 id="Maximum-flow-problem">
-              <a
-                href="#Maximum-flow-problem"
-                class="headerlink"
-                title="Maximum flow problem"
-              ></a
-              >Maximum flow problem
-            </h1>
-            <p>
-              We can use a directed graph as a flow network where the source
-              produces the elements at some rate and the sink consumes the
-              material at the same rate.
-            </p>
-            <h2 id="Definition">
-              <a href="#Definition" class="headerlink" title="Definition"></a
-              >Definition
-            </h2>
-            <p>
-              We define a flow network $G &#x3D; (V, E)$ as a directed graph in
-              which each edge $(u, y) \in E$ has a nonnegative capacity $c(u, v)
-              \ge 0$ and there is not an edge $(v, u)$ in the reverse direction.
-              We distinguish two vertices in a flow network: a
-              <strong>source s</strong> and a <strong>sink t</strong>, thus for
-              each vertex $v \in V$, the flow network contains a path $ s
-              \rightsquigarrow v \rightsquigarrow t$. A <strong>flow</strong> in
-              $G$ is a real-valued function $f: V \times V \to R$ that satisfies
-              $0 \le f(u, v) \le c(u, v)$ and
-              <strong>flow conservation</strong> implies for all $u \in V -
-              \\\\{s, t\\\\}$, $\sum_{v \in V} f(v, u) &#x3D; \sum_{v \in V}
-              f(u, v)$.
-            </p>
-            <p>
-              We call the nonegative quantity $f(u, v)$ the flow from vertex $u$
-              to vertex $v$. When $(u, v) \notin E$, there can be no flow from
-              $u$ to $v$, and $f(u, v) &#x3D; 0$. The
-              <strong>value</strong> $|f|$ of a flow $f$ is defined as $|f|
-              &#x3D; \sum_{v \in V} f(s, v) - \sum_{v \in V} f(v, s)$. In the
-              <strong>maximum-flow problem</strong>, we are given a flow network
-              $G$ with source $s$ and sink $t$, and we wish to find a flow of
-              maximum value.
-            </p>
-            <h2 id="Transformation">
-              <a
-                href="#Transformation"
-                class="headerlink"
-                title="Transformation"
-              ></a
-              >Transformation
-            </h2>
-            <p>
-              We call the two edges $(v_1, v_2)$ and $(v_2, v_1)$ antiparallel.
-              And if we wish model a flow problem with
-              <strong>antiparallel edges</strong>, we must transform the network
-              into an equivalent one containing without antiparallel edges by
-              adding a new vertex $v^\prime$ and replacing edege $(v_1, v_2)$
-              with the pair of edges $(v_1, v^\prime)$ and $(v^\prime, v_2)$.
-            </p>
-            <p>
-              <img
-                src="equivalent-antiparallel-flow.png"
-                alt="Equivalent Antiparallel Flow"
-              />
-            </p>
-            <p>
-              When there are several sources and sinks, we can reduce the
-              problem to an ordinary maximum flow problem by adding a
-              <strong>supersource</strong> $s$ and a directed edge $(s, s_i)$
-              with capacity $c(s, s_i) &#x3D; \infty$ for each $i&#x3D;1, 2, …,
-              n$ and a new <strong>supersink</strong> $t$ and a directed edge
-              $(t_i, t)$ with capacity $c(t_i, t) &#x3D; \infty$ for each $i
-              &#x3D; 1, 2, .., n$.
-            </p>
-            <p>
-              <img
-                src="equivalent-multiple-sources-sinks-flow.png"
-                alt="Equivalent Multiple Sources Sinks Flow"
-              />
-            </p>
-            <h2 id="Residual-Network">
-              <a
-                href="#Residual-Network"
-                class="headerlink"
-                title="Residual Network"
-              ></a
-              >Residual Network
-            </h2>
-            <p>
-              Given a flow network $G &#x3D; (V, E)$ with source $s$ and sink
-              $t$ and a flow $f$, the <strong>residual network</strong> $G_{f}$
-              consists of <strong>residual edges</strong> with capacities
-              $c_{f}(u, v)$
-            </p>
-            <p>
-              $$<br />c_{f}(u, v) &#x3D;<br />\begin{cases}<br />
-              c(u, v) - f(u, v) &amp; \text{ if } (u, v) \in E\\\\<br />
-              f(v, u) &amp; \text{ if } (v, u) \in E\\\\<br />
-              0 &amp; \text{otherwise}\\\\<br />\end{cases}<br />$$
-            </p>
-            <p><img src="residual-network.png" alt="Residual Network" /></p>
-            <h3 id="Augmenting-Paths">
-              <a
-                href="#Augmenting-Paths"
-                class="headerlink"
-                title="Augmenting Paths"
-              ></a
-              >Augmenting Paths
-            </h3>
-            <p>
-              Given a flow network $G &#x3D; (V, E)$ and a flow $f$, an
-              <strong>augmenting path</strong> $p$ is a simple path from $s$ to
-              $t$ in the residual network $G_{f}$. We call the maximum amount by
-              which we can increase the flow on each edge in an augmenting path
-              $p$ the <strong>residual capacity</strong> of $p$, given by
-              $c_f(p) &#x3D; \min{ \\\\{ c_f(u, v) : (u, v) \text{ is on } p
-              \\\\} }$.
-            </p>
-            <h2 id="The-Ford-Fulkerson-Method">
-              <a
-                href="#The-Ford-Fulkerson-Method"
-                class="headerlink"
-                title="The Ford Fulkerson Method"
-              ></a
-              >The Ford Fulkerson Method
-            </h2>
-            <p>
-              The Ford-Fulkerson method is a
-              <strong>greedy algorithm</strong> that iteratively increases the
-              value of the flow. At each iteration.
-            </p>
-            <p>
-              Given a network $G &#x3D; (V, E)$ with flow capacity $c$, a source
-              node $s$ and a sink node $t$
-            </p>
+    <article class="container" style="width: 100%; max-width: 100%">
+      <!-- Post Container -->
+      <div class="post-container">
+        <p>
+          This problem involves solving the equivalent maximum flow problem. We
+          can use Ford–Fulkerson algorithm with BFS to calculate the total flow.
+        </p>
+        <h1 id="Maximum-flow-problem">
+          <a
+            href="#Maximum-flow-problem"
+            class="headerlink"
+            title="Maximum flow problem"
+          ></a
+          >Maximum flow problem
+        </h1>
+        <p>
+          We can use a directed graph as a flow network where the source
+          produces the elements at some rate and the sink consumes the material
+          at the same rate.
+        </p>
+        <h2 id="Definition">
+          <a href="#Definition" class="headerlink" title="Definition"></a
+          >Definition
+        </h2>
+        <p>
+          We define a flow network $G &#x3D; (V, E)$ as a directed graph in
+          which each edge $(u, y) \in E$ has a nonnegative capacity $c(u, v) \ge
+          0$ and there is not an edge $(v, u)$ in the reverse direction. We
+          distinguish two vertices in a flow network: a
+          <strong>source s</strong> and a <strong>sink t</strong>, thus for each
+          vertex $v \in V$, the flow network contains a path $ s
+          \rightsquigarrow v \rightsquigarrow t$. A <strong>flow</strong> in $G$
+          is a real-valued function $f: V \times V \to R$ that satisfies $0 \le
+          f(u, v) \le c(u, v)$ and <strong>flow conservation</strong> implies
+          for all $u \in V - \\\\{s, t\\\\}$, $\sum_{v \in V} f(v, u) &#x3D;
+          \sum_{v \in V} f(u, v)$.
+        </p>
+        <p>
+          We call the nonegative quantity $f(u, v)$ the flow from vertex $u$ to
+          vertex $v$. When $(u, v) \notin E$, there can be no flow from $u$ to
+          $v$, and $f(u, v) &#x3D; 0$. The <strong>value</strong> $|f|$ of a
+          flow $f$ is defined as $|f| &#x3D; \sum_{v \in V} f(s, v) - \sum_{v
+          \in V} f(v, s)$. In the <strong>maximum-flow problem</strong>, we are
+          given a flow network $G$ with source $s$ and sink $t$, and we wish to
+          find a flow of maximum value.
+        </p>
+        <h2 id="Transformation">
+          <a
+            href="#Transformation"
+            class="headerlink"
+            title="Transformation"
+          ></a
+          >Transformation
+        </h2>
+        <p>
+          We call the two edges $(v_1, v_2)$ and $(v_2, v_1)$ antiparallel. And
+          if we wish model a flow problem with
+          <strong>antiparallel edges</strong>, we must transform the network
+          into an equivalent one containing without antiparallel edges by adding
+          a new vertex $v^\prime$ and replacing edege $(v_1, v_2)$ with the pair
+          of edges $(v_1, v^\prime)$ and $(v^\prime, v_2)$.
+        </p>
+        <p>
+          <img
+            src="equivalent-antiparallel-flow.png"
+            alt="Equivalent Antiparallel Flow"
+          />
+        </p>
+        <p>
+          When there are several sources and sinks, we can reduce the problem to
+          an ordinary maximum flow problem by adding a
+          <strong>supersource</strong> $s$ and a directed edge $(s, s_i)$ with
+          capacity $c(s, s_i) &#x3D; \infty$ for each $i&#x3D;1, 2, …, n$ and a
+          new <strong>supersink</strong> $t$ and a directed edge $(t_i, t)$ with
+          capacity $c(t_i, t) &#x3D; \infty$ for each $i &#x3D; 1, 2, .., n$.
+        </p>
+        <p>
+          <img
+            src="equivalent-multiple-sources-sinks-flow.png"
+            alt="Equivalent Multiple Sources Sinks Flow"
+          />
+        </p>
+        <h2 id="Residual-Network">
+          <a
+            href="#Residual-Network"
+            class="headerlink"
+            title="Residual Network"
+          ></a
+          >Residual Network
+        </h2>
+        <p>
+          Given a flow network $G &#x3D; (V, E)$ with source $s$ and sink $t$
+          and a flow $f$, the <strong>residual network</strong> $G_{f}$ consists
+          of <strong>residual edges</strong> with capacities $c_{f}(u, v)$
+        </p>
+        <p>
+          $$<br />c_{f}(u, v) &#x3D;<br />\begin{cases}<br />
+          c(u, v) - f(u, v) &amp; \text{ if } (u, v) \in E\\\\<br />
+          f(v, u) &amp; \text{ if } (v, u) \in E\\\\<br />
+          0 &amp; \text{otherwise}\\\\<br />\end{cases}<br />$$
+        </p>
+        <p><img src="residual-network.png" alt="Residual Network" /></p>
+        <h3 id="Augmenting-Paths">
+          <a
+            href="#Augmenting-Paths"
+            class="headerlink"
+            title="Augmenting Paths"
+          ></a
+          >Augmenting Paths
+        </h3>
+        <p>
+          Given a flow network $G &#x3D; (V, E)$ and a flow $f$, an
+          <strong>augmenting path</strong> $p$ is a simple path from $s$ to $t$
+          in the residual network $G_{f}$. We call the maximum amount by which
+          we can increase the flow on each edge in an augmenting path $p$ the
+          <strong>residual capacity</strong> of $p$, given by $c_f(p) &#x3D;
+          \min{ \\\\{ c_f(u, v) : (u, v) \text{ is on } p \\\\} }$.
+        </p>
+        <h2 id="The-Ford-Fulkerson-Method">
+          <a
+            href="#The-Ford-Fulkerson-Method"
+            class="headerlink"
+            title="The Ford Fulkerson Method"
+          ></a
+          >The Ford Fulkerson Method
+        </h2>
+        <p>
+          The Ford-Fulkerson method is a <strong>greedy algorithm</strong> that
+          iteratively increases the value of the flow. At each iteration.
+        </p>
+        <p>
+          Given a network $G &#x3D; (V, E)$ with flow capacity $c$, a source
+          node $s$ and a sink node $t$
+        </p>
+        <ol>
+          <li>$f \leftarrow 0$</li>
+          <li>$f(u, v) \leftarrow 0$ for all edges $(u, v) \in E$</li>
+          <li>
+            <strong>while</strong> there exists an
+            <strong>augmenting path</strong> $p$
             <ol>
-              <li>$f \leftarrow 0$</li>
-              <li>$f(u, v) \leftarrow 0$ for all edges $(u, v) \in E$</li>
+              <li>Find $c_f(p)$</li>
+              <li>$f \leftarrow f + c_f(p)$</li>
               <li>
-                <strong>while</strong> there exists an
-                <strong>augmenting path</strong> $p$
+                for each edge $(u, v) \in p$
                 <ol>
-                  <li>Find $c_f(p)$</li>
-                  <li>$f \leftarrow f + c_f(p)$</li>
                   <li>
-                    for each edge $(u, v) \in p$
+                    if $(u, v) \in E$
                     <ol>
-                      <li>
-                        if $(u, v) \in E$
-                        <ol>
-                          <li>$f(u, v) \leftarrow f(u, v) + c_f(p)$</li>
-                        </ol>
-                      </li>
-                      <li>
-                        else
-                        <ol>
-                          <li>$f(v, u) \leftarrow f(v, u) - c_f(p)$</li>
-                        </ol>
-                      </li>
+                      <li>$f(u, v) \leftarrow f(u, v) + c_f(p)$</li>
+                    </ol>
+                  </li>
+                  <li>
+                    else
+                    <ol>
+                      <li>$f(v, u) \leftarrow f(v, u) - c_f(p)$</li>
                     </ol>
                   </li>
                 </ol>
               </li>
-              <li><strong>return</strong> $f$</li>
             </ol>
-            <p>
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://github.com/vitaminac/code/blob/2c9df93333/judge/src/main/java/foobar/l4/EscapePods.java"
-                >Escape Pods</a
-              >
-            </p>
-            <h2 id="Reference">
-              <a href="#Reference" class="headerlink" title="Reference"></a
-              >Reference
-            </h2>
-            <ul>
-              <li>Introduction to Algorithms, pages 708~730</li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://en.wikipedia.org/wiki/Ford%E2%80%93Fulkerson_algorithm#Algorithm"
-                  >Ford–Fulkerson algorithm</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://www.geeksforgeeks.org/ford-fulkerson-algorithm-for-maximum-flow-problem/"
-                  >GeeksforGeeks: Ford-Fulkerson Algorithm for Maximum Flow
-                  Problem</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://www.youtube.com/watch?v=SqGeM3FYkfo"
-                  >Edmonds Karp Algorithm for Max-Flow</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://surajshetiya.github.io/Google-foobar/#round-4"
-                  >Google Foobar Round 4</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://github.com/nkapliev/google-foo.bar/blob/master/problems/4.2_escape_pods.py"
-                  >4.2_escape_pods.py</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="http://xiaohanyu.me/posts/2017-04-30-google-foobar-interview/#cb8"
-                  >Google foo.bar 面试记</a
-                >
-              </li>
-            </ul>
+          </li>
+          <li><strong>return</strong> $f$</li>
+        </ol>
+        <p>
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://github.com/vitaminac/code/blob/2c9df93333/judge/src/main/java/foobar/l4/EscapePods.java"
+            >Escape Pods</a
+          >
+        </p>
+        <h2 id="Reference">
+          <a href="#Reference" class="headerlink" title="Reference"></a
+          >Reference
+        </h2>
+        <ul>
+          <li>Introduction to Algorithms, pages 708~730</li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://en.wikipedia.org/wiki/Ford%E2%80%93Fulkerson_algorithm#Algorithm"
+              >Ford–Fulkerson algorithm</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://www.geeksforgeeks.org/ford-fulkerson-algorithm-for-maximum-flow-problem/"
+              >GeeksforGeeks: Ford-Fulkerson Algorithm for Maximum Flow
+              Problem</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://www.youtube.com/watch?v=SqGeM3FYkfo"
+              >Edmonds Karp Algorithm for Max-Flow</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://surajshetiya.github.io/Google-foobar/#round-4"
+              >Google Foobar Round 4</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://github.com/nkapliev/google-foo.bar/blob/master/problems/4.2_escape_pods.py"
+              >4.2_escape_pods.py</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="http://xiaohanyu.me/posts/2017-04-30-google-foobar-interview/#cb8"
+              >Google foo.bar 面试记</a
+            >
+          </li>
+        </ul>
 
-            <hr />
+        <hr />
 
-            <ul class="list-group">
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a
-                  target="_parent"
-                  href="/posts/Google-Foobar-Dodge-The-Lasers/"
-                >
-                  Google Foobar Dodge The Lasers
-                </a>
-              </li>
+        <ul class="list-group">
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Google-Foobar-Dodge-The-Lasers/">
+              Google Foobar Dodge The Lasers
+            </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a
-                  target="_parent"
-                  href="/posts/Google-Foobar-Free-the-Bunny-Prisoners/"
-                >
-                  Google Foobar Free the Bunny Prisoners
-                </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a
+              target="_parent"
+              href="/posts/Google-Foobar-Free-the-Bunny-Prisoners/"
+            >
+              Google Foobar Free the Bunny Prisoners
+            </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a
-                  target="_parent"
-                  href="/posts/Google-Kickstart-2019-Round-F-Flattening/"
-                >
-                  Google Kickstart 2019 Round F Flattening
-                </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a
+              target="_parent"
+              href="/posts/Google-Kickstart-2019-Round-F-Flattening/"
+            >
+              Google Kickstart 2019 Round F Flattening
+            </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a
-                  target="_parent"
-                  href="/posts/Google-Kickstart-2019-Round-G-Book-Reading/"
-                >
-                  Google Kickstart 2019 Round G Book Reading
-                </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a
+              target="_parent"
+              href="/posts/Google-Kickstart-2019-Round-G-Book-Reading/"
+            >
+              Google Kickstart 2019 Round G Book Reading
+            </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a
-                  target="_parent"
-                  href="/posts/Google-Kickstart-2019-Round-G-Shifts/"
-                >
-                  Google Kickstart 2019 Round G Shifts
-                </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a
+              target="_parent"
+              href="/posts/Google-Kickstart-2019-Round-G-Shifts/"
+            >
+              Google Kickstart 2019 Round G Shifts
+            </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a
-                  target="_parent"
-                  href="/posts/Google-Kickstart-2019-Round-G-The-Equation/"
-                >
-                  Google Kickstart 2019 Round G The Equation
-                </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a
+              target="_parent"
+              href="/posts/Google-Kickstart-2019-Round-G-The-Equation/"
+            >
+              Google Kickstart 2019 Round G The Equation
+            </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/Recurrence-Equation/">
-                  Recurrence Equation
-                </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Recurrence-Equation/">
+              Recurrence Equation
+            </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/Tree-Diameter/">
-                  Tree Diameter
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row justify-content-center">
-          <!-- Sidebar Container -->
-
-          <div class="col-lg-8` col-md-10 sidebar-container">
-            <!-- Friends Blog -->
-          </div>
-        </div>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Tree-Diameter/"> Tree Diameter </a>
+          </li>
+        </ul>
       </div>
     </article>
     <!-- Custom Theme JavaScript -->

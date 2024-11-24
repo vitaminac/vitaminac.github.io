@@ -146,76 +146,37 @@
     />
 
     <!-- Post Content -->
-    <article>
-      <div class="container">
-        <div class="row">
-          <!-- Post Container -->
-          <div class="order-lg-2 col-lg-3 col-12 toc-col" style="z-index: 1">
-            <ol class="toc">
-              <li class="toc-item toc-level-1">
-                <a
-                  class="toc-link"
-                  href="#Install-Docker-Desktop-in-Windows10-Home-Edition"
-                  ><span class="toc-text"
-                    >Install Docker Desktop in Windows10 Home Edition</span
-                  ></a
-                >
-                <ol class="toc-child">
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Activate-Hyper-V"
-                      ><span class="toc-text">Activate Hyper-V</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a
-                      class="toc-link"
-                      href="#Fake-as-a-professional-version-to-bypass-installation-detection"
-                      ><span class="toc-text"
-                        >Fake as a professional version to bypass installation
-                        detection</span
-                      ></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Other-issues"
-                      ><span class="toc-text">Other issues</span></a
-                    >
-                  </li>
-                </ol>
-              </li>
-            </ol>
-          </div>
-
-          <div class="order-lg-1 col-lg-9 col-12 post-container">
-            <h1 id="Install-Docker-Desktop-in-Windows10-Home-Edition">
-              <a
-                href="#Install-Docker-Desktop-in-Windows10-Home-Edition"
-                class="headerlink"
-                title="Install Docker Desktop in Windows10 Home Edition"
-              ></a
-              >Install Docker Desktop in Windows10 Home Edition
-            </h1>
-            <p>
-              Most laptop are now pre-installed with Windows 10 Home Edition,
-              while the Home Edition does not support Hyper-V. Docker Desktop
-              cannot be installed directly. But in fact, the home version can
-              activate Hyper-V by script to install Docker Desktop. Here’s how
-              to do it.
-            </p>
-            <h2 id="Activate-Hyper-V">
-              <a
-                href="#Activate-Hyper-V"
-                class="headerlink"
-                title="Activate Hyper-V"
-              ></a
-              >Activate Hyper-V
-            </h2>
-            <p>
-              The method is very simple, save the following as a .cmd file, then
-              open the file as an administrator. Prompt to restart, and then you
-              can use the full-featured Hyper-V after the restart.
-            </p>
-            <pre><code>pushd &quot;%~dp0&quot;
+    <article class="container" style="width: 100%; max-width: 100%">
+      <!-- Post Container -->
+      <div class="post-container">
+        <h1 id="Install-Docker-Desktop-in-Windows10-Home-Edition">
+          <a
+            href="#Install-Docker-Desktop-in-Windows10-Home-Edition"
+            class="headerlink"
+            title="Install Docker Desktop in Windows10 Home Edition"
+          ></a
+          >Install Docker Desktop in Windows10 Home Edition
+        </h1>
+        <p>
+          Most laptop are now pre-installed with Windows 10 Home Edition, while
+          the Home Edition does not support Hyper-V. Docker Desktop cannot be
+          installed directly. But in fact, the home version can activate Hyper-V
+          by script to install Docker Desktop. Here’s how to do it.
+        </p>
+        <h2 id="Activate-Hyper-V">
+          <a
+            href="#Activate-Hyper-V"
+            class="headerlink"
+            title="Activate Hyper-V"
+          ></a
+          >Activate Hyper-V
+        </h2>
+        <p>
+          The method is very simple, save the following as a .cmd file, then
+          open the file as an administrator. Prompt to restart, and then you can
+          use the full-featured Hyper-V after the restart.
+        </p>
+        <pre><code>pushd &quot;%~dp0&quot;
 
 dir /b %SystemRoot%\servicing\Packages\*Hyper-V*.mum &gt;hyper-v.txt
 
@@ -225,93 +186,79 @@ del hyper-v.txt
 
 Dism /online /enable-feature /featurename:Microsoft-Hyper-V-All /LimitAccess /ALL
 </code></pre>
-            <h2
-              id="Fake-as-a-professional-version-to-bypass-installation-detection"
-            >
-              <a
-                href="#Fake-as-a-professional-version-to-bypass-installation-detection"
-                class="headerlink"
-                title="Fake as a professional version to bypass installation detection"
-              ></a
-              >Fake as a professional version to bypass installation detection
-            </h2>
-            <p>
-              Since Docker Desktop will detect the system version at the time of
-              installation, direct installation will show that the installation
-              failed. So you need to change the registry to bypass the
-              installation detection. Execute the following command.
-            </p>
-            <pre><code>REG ADD &quot;HKEY_LOCAL_MACHINE\software\Microsoft\Windows NT\CurrentVersion&quot; /v EditionId /T REG_EXPAND_SZ /d Professional /F
+        <h2
+          id="Fake-as-a-professional-version-to-bypass-installation-detection"
+        >
+          <a
+            href="#Fake-as-a-professional-version-to-bypass-installation-detection"
+            class="headerlink"
+            title="Fake as a professional version to bypass installation detection"
+          ></a
+          >Fake as a professional version to bypass installation detection
+        </h2>
+        <p>
+          Since Docker Desktop will detect the system version at the time of
+          installation, direct installation will show that the installation
+          failed. So you need to change the registry to bypass the installation
+          detection. Execute the following command.
+        </p>
+        <pre><code>REG ADD &quot;HKEY_LOCAL_MACHINE\software\Microsoft\Windows NT\CurrentVersion&quot; /v EditionId /T REG_EXPAND_SZ /d Professional /F
 </code></pre>
-            <h2 id="Other-issues">
-              <a
-                href="#Other-issues"
-                class="headerlink"
-                title="Other issues"
-              ></a
-              >Other issues
-            </h2>
-            <p>
-              Install the
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://docs.docker.com/docker-for-windows/install/"
-                >docker-ce-desktop-windows</a
-              >
-              directly on the official website, and uncheck the window container
-              during installation. After testing, the linux container is running
-              normally. Switching to the windows container will detect the
-              windows version and will not start. However, the windows container
-              is generally not used.
-            </p>
+        <h2 id="Other-issues">
+          <a href="#Other-issues" class="headerlink" title="Other issues"></a
+          >Other issues
+        </h2>
+        <p>
+          Install the
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://docs.docker.com/docker-for-windows/install/"
+            >docker-ce-desktop-windows</a
+          >
+          directly on the official website, and uncheck the window container
+          during installation. After testing, the linux container is running
+          normally. Switching to the windows container will detect the windows
+          version and will not start. However, the windows container is
+          generally not used.
+        </p>
 
-            <hr />
+        <hr />
 
-            <ul class="list-group">
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/Docker/"> Docker </a>
-              </li>
+        <ul class="list-group">
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Docker/"> Docker </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/RaspberryPi-Odoo/">
-                  RaspberryPi Odoo
-                </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/RaspberryPi-Odoo/">
+              RaspberryPi Odoo
+            </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/Virtualization/">
-                  Virtualización, Contenedores y Cloud Computing
-                </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Virtualization/">
+              Virtualización, Contenedores y Cloud Computing
+            </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a
-                  target="_parent"
-                  href="/posts/Install-Windows-Sandbox-Win10Home/"
-                >
-                  Install Windows Sandbox in Windoes 10 Home Edition
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row justify-content-center">
-          <!-- Sidebar Container -->
-
-          <div class="col-lg-8` col-md-10 sidebar-container">
-            <!-- Friends Blog -->
-          </div>
-        </div>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a
+              target="_parent"
+              href="/posts/Install-Windows-Sandbox-Win10Home/"
+            >
+              Install Windows Sandbox in Windoes 10 Home Edition
+            </a>
+          </li>
+        </ul>
       </div>
     </article>
     <!-- Custom Theme JavaScript -->

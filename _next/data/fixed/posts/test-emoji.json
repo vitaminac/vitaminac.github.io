@@ -7,8 +7,8 @@
       "tags": [],
       "isLegacy": false,
       "lang": "en",
-      "articleHtml": "<p>Emojis in this text will be replaced: <!-- -->🐶<!-- --> <!-- -->👍</p>",
-      "tocHtml": ""
+      "tocHtml": "<p>Emojis in this text will be replaced: :dog: :+1:</p>",
+      "articleHtml": "<p>Emojis in this text will be replaced: <!-- -->🐶<!-- --> <!-- -->👍</p>"
     },
     "lang": "en",
     "_nextI18Next": {

@@ -138,308 +138,245 @@
     />
 
     <!-- Post Content -->
-    <article>
-      <div class="container">
-        <div class="row">
-          <!-- Post Container -->
-          <div class="order-lg-2 col-lg-3 col-12 toc-col" style="z-index: 1">
-            <ol class="toc">
-              <li class="toc-item toc-level-1">
-                <a class="toc-link" href="#Testing-In-The-Toilet"
-                  ><span class="toc-text">Testing In The Toilet</span></a
-                >
-              </li>
-              <li class="toc-item toc-level-1">
-                <a class="toc-link" href="#Change-detector-Tests"
-                  ><span class="toc-text">Change detector Tests</span></a
-                >
-              </li>
-              <li class="toc-item toc-level-1">
-                <a class="toc-link" href="#Don-t-Put-Logic-in-Tests"
-                  ><span class="toc-text">Don t Put Logic in Tests</span></a
-                >
-              </li>
-              <li class="toc-item toc-level-1">
-                <a class="toc-link" href="#Effective-testing"
-                  ><span class="toc-text">Effective testing</span></a
-                >
-              </li>
-              <li class="toc-item toc-level-1">
-                <a
-                  class="toc-link"
-                  href="#Prefer-Testing-Public-APIs-Over-Implementation"
-                  ><span class="toc-text"
-                    >Prefer Testing Public APIs Over Implementation</span
-                  ></a
-                >
-              </li>
-              <li class="toc-item toc-level-1">
-                <a class="toc-link" href="#Printer-Friendly"
-                  ><span class="toc-text">Printer Friendly</span></a
-                >
-              </li>
-              <li class="toc-item toc-level-1">
-                <a class="toc-link" href="#Descriptive-Test-Names"
-                  ><span class="toc-text">Descriptive Test Names</span></a
-                >
-              </li>
-              <li class="toc-item toc-level-1">
-                <a class="toc-link" href="#Risk-Driven-Testing"
-                  ><span class="toc-text">Risk-Driven Testing</span></a
-                >
-              </li>
-            </ol>
-          </div>
+    <article class="container" style="width: 100%; max-width: 100%">
+      <!-- Post Container -->
+      <div class="post-container">
+        <h1 id="Testing-In-The-Toilet">
+          <a
+            href="#Testing-In-The-Toilet"
+            class="headerlink"
+            title="Testing In The Toilet"
+          ></a
+          >Testing In The Toilet
+        </h1>
+        <p>
+          Una buena prueba unitaria debería exhibir otra serie de propiedades a
+          parte de la de comprobar nuestro código para considerarse leíble y
+          mantenible.
+        </p>
+        <p>
+          El código debe ser legible como documentación, que describa el código
+          que se está testeando. Un test completo y breve contiene toda la
+          información necesaria para entenderlo. Y otra propiedad es la
+          resistencia y adaptabilidad, una vez escrito, un test resistente no
+          necesita cambiar a no ser que el propósito de la clase que es testeada
+          cambie.
+        </p>
+        <h1 id="Change-detector-Tests">
+          <a
+            href="#Change-detector-Tests"
+            class="headerlink"
+            title="Change detector Tests"
+          ></a
+          >Change detector Tests
+        </h1>
+        <p>
+          Las pruebas no detectan ningún defecto y el costo de mantenimiento
+          agregado ralentiza el desarrollo.
+        </p>
+        <h1 id="Don-t-Put-Logic-in-Tests">
+          <a
+            href="#Don-t-Put-Logic-in-Tests"
+            class="headerlink"
+            title="Don t Put Logic in Tests"
+          ></a
+          >Don t Put Logic in Tests
+        </h1>
+        <p>
+          Añadir lógica a un test, es aumentar la probabilidad de crear algún
+          tipo de bug en el test, ya se hace que el test no funcione.
+        </p>
+        <p>
+          Cuando las pruebas necesitan su propia lógica, dicha lógica a menudo
+          debe moverse fuera de los cuerpos de prueba hacia las utilidades y
+          funciones auxiliares.
+        </p>
+        <p>
+          Dado que estos ayudantes pueden ser bastante complejos, generalmente
+          es una buena idea que cualquier utilidad de prueba no trivial, a su
+          vez tenga sus propias pruebas.
+        </p>
+        <h1 id="Effective-testing">
+          <a
+            href="#Effective-testing"
+            class="headerlink"
+            title="Effective testing"
+          ></a
+          >Effective testing
+        </h1>
+        <p>
+          Existen 3 cualidades que hay que tratar de maximizar a la hora de
+          diseñar pruebas para nuestro código.
+        </p>
+        <p>
+          Fidelidad: una prueba de alta fidelidad ayuda a evitar que los errores
+          se introduzcan en el código. Se debe cubrir todos las posibles rutas y
+          esperar el estado final.
+        </p>
+        <p>
+          Resistencia: una prueba resistente es aquella que solo falla cuando
+          hay un cambio de ruptura en el código. Se puede realizar
+          refactorización y otros cambios sin que afecte a la prueba y sin
+          necesidad de modificarla.
+        </p>
+        <p>
+          Precisión: cuando una prueba de alta precisión falla, se indica
+          exactamente dónde está el fallo. Se maximiza la precisión manteniendo
+          pruebas pequeñas y bien enfocadas. Para las pruebas de integración,
+          hay que validar el estado en cada límite.
+        </p>
+        <h1 id="Prefer-Testing-Public-APIs-Over-Implementation">
+          <a
+            href="#Prefer-Testing-Public-APIs-Over-Implementation"
+            class="headerlink"
+            title="Prefer Testing Public APIs Over Implementation"
+          ></a
+          >Prefer Testing Public APIs Over Implementation
+        </h1>
+        <p>
+          Todos los caminos se pueden probar a través de interface. Una API que
+          puede pasar cualquier combinación posible a los métodos.
+        </p>
+        <p>
+          Probar con frecuencia implementation-detail class lleva a dos fallos:
+        </p>
+        <ol>
+          <li>
+            El código es más difícil de mantener, ya que necesita actualizar las
+            pruebas con mayor frecuencia.
+          </li>
+          <li>
+            Si prueba un comportamiento solo a través de ella, puede resultar en
+            falsa confianza en el código, ya que la ruta de acceso puede no
+            funcionar de manera correcta cuando accede a través de la API
+            pública.
+          </li>
+        </ol>
+        <h1 id="Printer-Friendly">
+          <a
+            href="#Printer-Friendly"
+            class="headerlink"
+            title="Printer Friendly"
+          ></a
+          >Printer Friendly
+        </h1>
+        <p>
+          <strong>CLARIDAD</strong>: esto significa que el código sea legible
+          como documentación, que describa el código que se está testeando.
+        </p>
+        <p>
+          <strong>COMPLETITUD</strong>: Un test completo contiene toda la
+          información necesaria para entenderlo, pero nada extra que pueda
+          distraer.
+        </p>
+        <p>
+          <strong>RESISTENCIA</strong>: Una vez escrito, un test resistente no
+          necesita cambiar a no ser que el propósito&#x2F;comportamiento de la
+          clase que es testeada cambie
+        </p>
+        <h1 id="Descriptive-Test-Names">
+          <a
+            href="#Descriptive-Test-Names"
+            class="headerlink"
+            title="Descriptive Test Names"
+          ></a
+          >Descriptive Test Names
+        </h1>
+        <p>
+          Nos permite comprender que se está testeando solo con leer el nombre,
+          sin tener la necesidad de pasar por el cuerpo del método. También, dar
+          nombres específicos te fuerza a dividir los tests sobre diferentes
+          comportamientos.
+        </p>
+        <h1 id="Risk-Driven-Testing">
+          <a
+            href="#Risk-Driven-Testing"
+            class="headerlink"
+            title="Risk-Driven Testing"
+          ></a
+          >Risk-Driven Testing
+        </h1>
+        <p>
+          Hacer al principio del proyecto una brainstorm de los riesgos clave y
+          de las mejores opciones para reducirlos nos ayudará a no malgastar
+          esfuerzo y a adaptar el diseño.
+        </p>
 
-          <div class="order-lg-1 col-lg-9 col-12 post-container">
-            <h1 id="Testing-In-The-Toilet">
-              <a
-                href="#Testing-In-The-Toilet"
-                class="headerlink"
-                title="Testing In The Toilet"
-              ></a
-              >Testing In The Toilet
-            </h1>
-            <p>
-              Una buena prueba unitaria debería exhibir otra serie de
-              propiedades a parte de la de comprobar nuestro código para
-              considerarse leíble y mantenible.
-            </p>
-            <p>
-              El código debe ser legible como documentación, que describa el
-              código que se está testeando. Un test completo y breve contiene
-              toda la información necesaria para entenderlo. Y otra propiedad es
-              la resistencia y adaptabilidad, una vez escrito, un test
-              resistente no necesita cambiar a no ser que el propósito de la
-              clase que es testeada cambie.
-            </p>
-            <h1 id="Change-detector-Tests">
-              <a
-                href="#Change-detector-Tests"
-                class="headerlink"
-                title="Change detector Tests"
-              ></a
-              >Change detector Tests
-            </h1>
-            <p>
-              Las pruebas no detectan ningún defecto y el costo de mantenimiento
-              agregado ralentiza el desarrollo.
-            </p>
-            <h1 id="Don-t-Put-Logic-in-Tests">
-              <a
-                href="#Don-t-Put-Logic-in-Tests"
-                class="headerlink"
-                title="Don t Put Logic in Tests"
-              ></a
-              >Don t Put Logic in Tests
-            </h1>
-            <p>
-              Añadir lógica a un test, es aumentar la probabilidad de crear
-              algún tipo de bug en el test, ya se hace que el test no funcione.
-            </p>
-            <p>
-              Cuando las pruebas necesitan su propia lógica, dicha lógica a
-              menudo debe moverse fuera de los cuerpos de prueba hacia las
-              utilidades y funciones auxiliares.
-            </p>
-            <p>
-              Dado que estos ayudantes pueden ser bastante complejos,
-              generalmente es una buena idea que cualquier utilidad de prueba no
-              trivial, a su vez tenga sus propias pruebas.
-            </p>
-            <h1 id="Effective-testing">
-              <a
-                href="#Effective-testing"
-                class="headerlink"
-                title="Effective testing"
-              ></a
-              >Effective testing
-            </h1>
-            <p>
-              Existen 3 cualidades que hay que tratar de maximizar a la hora de
-              diseñar pruebas para nuestro código.
-            </p>
-            <p>
-              Fidelidad: una prueba de alta fidelidad ayuda a evitar que los
-              errores se introduzcan en el código. Se debe cubrir todos las
-              posibles rutas y esperar el estado final.
-            </p>
-            <p>
-              Resistencia: una prueba resistente es aquella que solo falla
-              cuando hay un cambio de ruptura en el código. Se puede realizar
-              refactorización y otros cambios sin que afecte a la prueba y sin
-              necesidad de modificarla.
-            </p>
-            <p>
-              Precisión: cuando una prueba de alta precisión falla, se indica
-              exactamente dónde está el fallo. Se maximiza la precisión
-              manteniendo pruebas pequeñas y bien enfocadas. Para las pruebas de
-              integración, hay que validar el estado en cada límite.
-            </p>
-            <h1 id="Prefer-Testing-Public-APIs-Over-Implementation">
-              <a
-                href="#Prefer-Testing-Public-APIs-Over-Implementation"
-                class="headerlink"
-                title="Prefer Testing Public APIs Over Implementation"
-              ></a
-              >Prefer Testing Public APIs Over Implementation
-            </h1>
-            <p>
-              Todos los caminos se pueden probar a través de interface. Una API
-              que puede pasar cualquier combinación posible a los métodos.
-            </p>
-            <p>
-              Probar con frecuencia implementation-detail class lleva a dos
-              fallos:
-            </p>
-            <ol>
-              <li>
-                El código es más difícil de mantener, ya que necesita actualizar
-                las pruebas con mayor frecuencia.
-              </li>
-              <li>
-                Si prueba un comportamiento solo a través de ella, puede
-                resultar en falsa confianza en el código, ya que la ruta de
-                acceso puede no funcionar de manera correcta cuando accede a
-                través de la API pública.
-              </li>
-            </ol>
-            <h1 id="Printer-Friendly">
-              <a
-                href="#Printer-Friendly"
-                class="headerlink"
-                title="Printer Friendly"
-              ></a
-              >Printer Friendly
-            </h1>
-            <p>
-              <strong>CLARIDAD</strong>: esto significa que el código sea
-              legible como documentación, que describa el código que se está
-              testeando.
-            </p>
-            <p>
-              <strong>COMPLETITUD</strong>: Un test completo contiene toda la
-              información necesaria para entenderlo, pero nada extra que pueda
-              distraer.
-            </p>
-            <p>
-              <strong>RESISTENCIA</strong>: Una vez escrito, un test resistente
-              no necesita cambiar a no ser que el propósito&#x2F;comportamiento
-              de la clase que es testeada cambie
-            </p>
-            <h1 id="Descriptive-Test-Names">
-              <a
-                href="#Descriptive-Test-Names"
-                class="headerlink"
-                title="Descriptive Test Names"
-              ></a
-              >Descriptive Test Names
-            </h1>
-            <p>
-              Nos permite comprender que se está testeando solo con leer el
-              nombre, sin tener la necesidad de pasar por el cuerpo del método.
-              También, dar nombres específicos te fuerza a dividir los tests
-              sobre diferentes comportamientos.
-            </p>
-            <h1 id="Risk-Driven-Testing">
-              <a
-                href="#Risk-Driven-Testing"
-                class="headerlink"
-                title="Risk-Driven Testing"
-              ></a
-              >Risk-Driven Testing
-            </h1>
-            <p>
-              Hacer al principio del proyecto una brainstorm de los riesgos
-              clave y de las mejores opciones para reducirlos nos ayudará a no
-              malgastar esfuerzo y a adaptar el diseño.
-            </p>
+        <hr />
 
-            <hr />
+        <ul class="list-group">
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Agile-Testing-Quadrants/">
+              Agile Testing Quadrants
+            </a>
+          </li>
 
-            <ul class="list-group">
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/Agile-Testing-Quadrants/">
-                  Agile Testing Quadrants
-                </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Escuelas-del-Testing/">
+              Escuelas del Testing
+            </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/Escuelas-del-Testing/">
-                  Escuelas del Testing
-                </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Mock-Fake-Testing/">
+              Mock Fake Testing
+            </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/Mock-Fake-Testing/">
-                  Mock Fake Testing
-                </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Smoke-Test/"> Smoke Test </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/Smoke-Test/"> Smoke Test </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/TDD-BDD-ATDD/">
+              Testing TDD BDD y ATDD
+            </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/TDD-BDD-ATDD/">
-                  Testing TDD BDD y ATDD
-                </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Testing-Manifesto/">
+              Testing Manifesto
+            </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/Testing-Manifesto/">
-                  Testing Manifesto
-                </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Code-Smell/"> Code Smell </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/Code-Smell/"> Code Smell </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Complejidad-Ciclomatica/">
+              Complejidad Ciclomatica
+            </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/Complejidad-Ciclomatica/">
-                  Complejidad Ciclomatica
-                </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/QA-Agil/"> Quality Ágil </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/QA-Agil/"> Quality Ágil </a>
-              </li>
-
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/SonarQube/"> SonarQube </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row justify-content-center">
-          <!-- Sidebar Container -->
-
-          <div class="col-lg-8` col-md-10 sidebar-container">
-            <!-- Friends Blog -->
-          </div>
-        </div>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/SonarQube/"> SonarQube </a>
+          </li>
+        </ul>
       </div>
     </article>
     <!-- Custom Theme JavaScript -->

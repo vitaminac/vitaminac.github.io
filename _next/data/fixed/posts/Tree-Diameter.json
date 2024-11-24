@@ -7,6 +7,7 @@
       "tags": ["algorithms"],
       "isLegacy": true,
       "lang": "en",
+      "tocHtml": "<ol>\n<li><a href=\"/Tree-Diameter/index.html#Definition\" target=\"Tree-Diameter\">Definition</a></li>\n<li><a href=\"/Tree-Diameter/index.html#Finding-The-Diameter-of-N-Ary-Tree\" target=\"Tree-Diameter\">Finding The Diameter of N-Ary Tree</a>\n<ol>\n<li><a href=\"/Tree-Diameter/index.html#Greedy-Algorithm\" target=\"Tree-Diameter\">Greedy Algorithm</a></li>\n<li><a href=\"/Tree-Diameter/index.html#Implementation\" target=\"Tree-Diameter\">Implementation</a></li>\n</ol>\n</li>\n<li><a href=\"/Tree-Diameter/index.html#Proof\" target=\"Tree-Diameter\">Proof</a>\n<ol>\n<li><a href=\"/Tree-Diameter/index.html#Properties-of-Trees\" target=\"Tree-Diameter\">Properties of Trees</a></li>\n<li><a href=\"/Tree-Diameter/index.html#Proof-by-Contradiction\" target=\"Tree-Diameter\">Proof by Contradiction</a></li>\n</ol>\n</li>\n<li><a href=\"/Tree-Diameter/index.html#Reference\" target=\"Tree-Diameter\">Reference</a></li>\n</ol>",
       "path": "/Tree-Diameter/index.html"
     },
     "lang": "en",

@@ -141,188 +141,70 @@
     />
 
     <!-- Post Content -->
-    <article>
-      <div class="container">
-        <div class="row">
-          <!-- Post Container -->
-          <div class="order-lg-2 col-lg-3 col-12 toc-col" style="z-index: 1">
-            <ol class="toc">
-              <li class="toc-item toc-level-1">
-                <a
-                  class="toc-link"
-                  href="#La-Implementacion-de-interprete-de-mandatos-en-Linux"
-                  ><span class="toc-text"
-                    >La Implementación de intérprete de mandatos en Linux</span
-                  ></a
-                >
-                <ol class="toc-child">
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Introduccion"
-                      ><span class="toc-text">Introducción</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Objectivo"
-                      ><span class="toc-text">Objectivo</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Libreria-de-apoyo"
-                      ><span class="toc-text">Librería de apoyo</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Estructuras-de-datos-utilizadas"
-                      ><span class="toc-text"
-                        >Estructuras de datos utilizadas</span
-                      ></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Funcionamiento-general"
-                      ><span class="toc-text">Funcionamiento general</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Implementacion"
-                      ><span class="toc-text">Implementación</span></a
-                    >
-                    <ol class="toc-child">
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Comando-basico"
-                          ><span class="toc-text">Comando básico</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Redirecionamiento"
-                          ><span class="toc-text">Redirecionamiento</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Comandos-encadenados"
-                          ><span class="toc-text">Comandos encadenados</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Background"
-                          ><span class="toc-text">Background</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Debug"
-                          ><span class="toc-text">Debug</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Comando-interno"
-                          ><span class="toc-text">Comando interno</span></a
-                        >
-                        <ol class="toc-child">
-                          <li class="toc-item toc-level-4">
-                            <a class="toc-link" href="#cd"
-                              ><span class="toc-text">cd</span></a
-                            >
-                          </li>
-                          <li class="toc-item toc-level-4">
-                            <a class="toc-link" href="#jobs"
-                              ><span class="toc-text">jobs</span></a
-                            >
-                          </li>
-                          <li class="toc-item toc-level-4">
-                            <a class="toc-link" href="#fg"
-                              ><span class="toc-text">fg</span></a
-                            >
-                          </li>
-                          <li class="toc-item toc-level-4">
-                            <a class="toc-link" href="#Gestion-de-senal"
-                              ><span class="toc-text">Gestión de señal</span></a
-                            >
-                          </li>
-                          <li class="toc-item toc-level-4">
-                            <a class="toc-link" href="#Mas-detalle"
-                              ><span class="toc-text">Más detalle</span></a
-                            >
-                          </li>
-                        </ol>
-                      </li>
-                    </ol>
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Conclusion"
-                      ><span class="toc-text">Conclusión</span></a
-                    >
-                  </li>
-                </ol>
-              </li>
-            </ol>
-          </div>
-
-          <div class="order-lg-1 col-lg-9 col-12 post-container">
-            <h1 id="La-Implementacion-de-interprete-de-mandatos-en-Linux">
-              <a
-                href="#La-Implementacion-de-interprete-de-mandatos-en-Linux"
-                class="headerlink"
-                title="La Implementación de intérprete de mandatos en Linux"
-              ></a
-              >La Implementación de intérprete de mandatos en Linux
-            </h1>
-            <h2 id="Introduccion">
-              <a
-                href="#Introduccion"
-                class="headerlink"
-                title="Introducción"
-              ></a
-              >Introducción
-            </h2>
-            <p>
-              ¿Qué es un intérprete de mandatos? Es un programa que hace la
-              interfaz en modo texto entre el usuario y el sistema operativo.
-            </p>
-            <p>
-              En diferentes distribuciones de GNU&#x2F;Linux vienen instalado ya
-              por defecto Bash. Un programa informático de interpréte de mandato
-              desarrollado por el proyecto GNU.
-            </p>
-            <p>
-              Muchas veces en el contexto de empresa y no tenemos el entorno
-              gráfico para gestión y administración de recursos, la única
-              posibilidad es mediante el comando en modo texto.
-            </p>
-            <h2 id="Objectivo">
-              <a href="#Objectivo" class="headerlink" title="Objectivo"></a
-              >Objectivo
-            </h2>
-            <p>
-              Nuestro objetivo principal de esta implementación es manajer el
-              concepto del proceso. Su creación, su ciclo de vida, y la
-              intercomunicación necesaria entre proceso.
-            </p>
-            <h2 id="Libreria-de-apoyo">
-              <a
-                href="#Libreria-de-apoyo"
-                class="headerlink"
-                title="Librería de apoyo"
-              ></a
-              >Librería de apoyo
-            </h2>
-            <p>
-              Para facilitar la implementación y también para centrar en nuestro
-              objetivo principal. Hemos usado la librería
-              <strong>libparser</strong> que su función primordial es convertir
-              una cadena de caracteres en un struct <strong>tline</strong> que
-              encapsula los comandos que va ejecutar, los argumentos, los
-              redireccionamientos, etc…
-            </p>
-            <h2 id="Estructuras-de-datos-utilizadas">
-              <a
-                href="#Estructuras-de-datos-utilizadas"
-                class="headerlink"
-                title="Estructuras de datos utilizadas"
-              ></a
-              >Estructuras de datos utilizadas
-            </h2>
-            <p>Estructuras de datos que vienen con la libraría:</p>
-            <pre><code>typedef struct &#123;
+    <article class="container" style="width: 100%; max-width: 100%">
+      <!-- Post Container -->
+      <div class="post-container">
+        <h1 id="La-Implementacion-de-interprete-de-mandatos-en-Linux">
+          <a
+            href="#La-Implementacion-de-interprete-de-mandatos-en-Linux"
+            class="headerlink"
+            title="La Implementación de intérprete de mandatos en Linux"
+          ></a
+          >La Implementación de intérprete de mandatos en Linux
+        </h1>
+        <h2 id="Introduccion">
+          <a href="#Introduccion" class="headerlink" title="Introducción"></a
+          >Introducción
+        </h2>
+        <p>
+          ¿Qué es un intérprete de mandatos? Es un programa que hace la interfaz
+          en modo texto entre el usuario y el sistema operativo.
+        </p>
+        <p>
+          En diferentes distribuciones de GNU&#x2F;Linux vienen instalado ya por
+          defecto Bash. Un programa informático de interpréte de mandato
+          desarrollado por el proyecto GNU.
+        </p>
+        <p>
+          Muchas veces en el contexto de empresa y no tenemos el entorno gráfico
+          para gestión y administración de recursos, la única posibilidad es
+          mediante el comando en modo texto.
+        </p>
+        <h2 id="Objectivo">
+          <a href="#Objectivo" class="headerlink" title="Objectivo"></a
+          >Objectivo
+        </h2>
+        <p>
+          Nuestro objetivo principal de esta implementación es manajer el
+          concepto del proceso. Su creación, su ciclo de vida, y la
+          intercomunicación necesaria entre proceso.
+        </p>
+        <h2 id="Libreria-de-apoyo">
+          <a
+            href="#Libreria-de-apoyo"
+            class="headerlink"
+            title="Librería de apoyo"
+          ></a
+          >Librería de apoyo
+        </h2>
+        <p>
+          Para facilitar la implementación y también para centrar en nuestro
+          objetivo principal. Hemos usado la librería
+          <strong>libparser</strong> que su función primordial es convertir una
+          cadena de caracteres en un struct <strong>tline</strong> que encapsula
+          los comandos que va ejecutar, los argumentos, los redireccionamientos,
+          etc…
+        </p>
+        <h2 id="Estructuras-de-datos-utilizadas">
+          <a
+            href="#Estructuras-de-datos-utilizadas"
+            class="headerlink"
+            title="Estructuras de datos utilizadas"
+          ></a
+          >Estructuras de datos utilizadas
+        </h2>
+        <p>Estructuras de datos que vienen con la libraría:</p>
+        <pre><code>typedef struct &#123;
     char * filename;
     int argc;
     char ** argv;
@@ -337,8 +219,8 @@ typedef struct &#123;
     int background;
 &#125; tline;
 </code></pre>
-            <p>Nuestro:</p>
-            <pre><code>/* almacenamos las informaciones asociados a los procesos creados por sistema  */
+        <p>Nuestro:</p>
+        <pre><code>/* almacenamos las informaciones asociados a los procesos creados por sistema  */
 typedef struct JobInfo &#123;
     int id;
     pid_t pgid;
@@ -346,55 +228,54 @@ typedef struct JobInfo &#123;
     struct JobInfo * next;
 &#125; JobInfo;
 </code></pre>
-            <p>
-              El tipo JobInfo contien información sobre un trabajo que son un
-              serie de trabajo connectado con pipes.
-            </p>
-            <h2 id="Funcionamiento-general">
-              <a
-                href="#Funcionamiento-general"
-                class="headerlink"
-                title="Funcionamiento general"
-              ></a
-              >Funcionamiento general
-            </h2>
-            <p>
-              El shell debe ser capaz de reconocer y lanzar el programa
-              correspondiente al comando que introduzca el usuario, que es un
-              archivo binario que reside en uno de los directorio que lista en
-              la variable PATH y ejecutarlo con los paramteros que vienen
-              acompañados.
-            </p>
-            <p>
-              O tambiém una secuencia de comandos conectados enre sí mediante el
-              mecanismo proporcionado por sistema Linux - <strong>pipe</strong>.
-              Y también establecer los redireccionamientos de entrada y de
-              salida si fuera preciso. Y vamos a tener unos cuantos comando
-              interno que se usa para alterar los valores propio del shell.
-            </p>
-            <h2 id="Implementacion">
-              <a
-                href="#Implementacion"
-                class="headerlink"
-                title="Implementación"
-              ></a
-              >Implementación
-            </h2>
-            <h3 id="Comando-basico">
-              <a
-                href="#Comando-basico"
-                class="headerlink"
-                title="Comando básico"
-              ></a
-              >Comando básico
-            </h3>
-            <p>
-              La funcionalidad básica de shell se hace dentro de un while donde
-              lee un línea de texto que introduzca el usuario y parseamos con la
-              librería llamando a la función <strong>tokenize</strong> y
-              procesamos la línea de comandos.
-            </p>
-            <pre><code>char buf[BUFFER_SIZE];
+        <p>
+          El tipo JobInfo contien información sobre un trabajo que son un serie
+          de trabajo connectado con pipes.
+        </p>
+        <h2 id="Funcionamiento-general">
+          <a
+            href="#Funcionamiento-general"
+            class="headerlink"
+            title="Funcionamiento general"
+          ></a
+          >Funcionamiento general
+        </h2>
+        <p>
+          El shell debe ser capaz de reconocer y lanzar el programa
+          correspondiente al comando que introduzca el usuario, que es un
+          archivo binario que reside en uno de los directorio que lista en la
+          variable PATH y ejecutarlo con los paramteros que vienen acompañados.
+        </p>
+        <p>
+          O tambiém una secuencia de comandos conectados enre sí mediante el
+          mecanismo proporcionado por sistema Linux - <strong>pipe</strong>. Y
+          también establecer los redireccionamientos de entrada y de salida si
+          fuera preciso. Y vamos a tener unos cuantos comando interno que se usa
+          para alterar los valores propio del shell.
+        </p>
+        <h2 id="Implementacion">
+          <a
+            href="#Implementacion"
+            class="headerlink"
+            title="Implementación"
+          ></a
+          >Implementación
+        </h2>
+        <h3 id="Comando-basico">
+          <a
+            href="#Comando-basico"
+            class="headerlink"
+            title="Comando básico"
+          ></a
+          >Comando básico
+        </h3>
+        <p>
+          La funcionalidad básica de shell se hace dentro de un while donde lee
+          un línea de texto que introduzca el usuario y parseamos con la
+          librería llamando a la función <strong>tokenize</strong> y procesamos
+          la línea de comandos.
+        </p>
+        <pre><code>char buf[BUFFER_SIZE];
 tline * line;
 
 do &#123;
@@ -409,73 +290,73 @@ do &#123;
     &#125;
 &#125; while (true);
 </code></pre>
-            <p>
-              Para hacerlo mas interactivo y también para que el usuario
-              identifique que está detro del shell o en el commando en
-              ejecución. Mostramos una cabecera de shell
-              <strong>msh&gt;</strong> con la función <strong>printf</strong>.
-            </p>
-            <pre><code>void prompt() &#123;
+        <p>
+          Para hacerlo mas interactivo y también para que el usuario identifique
+          que está detro del shell o en el commando en ejecución. Mostramos una
+          cabecera de shell <strong>msh&gt;</strong> con la función
+          <strong>printf</strong>.
+        </p>
+        <pre><code>void prompt() &#123;
     printf(&quot;msh:&gt;&quot;);
 &#125;
 </code></pre>
-            <p>
-              Cuando tenemos el struct <strong>tline</strong> pasamos a execline
-              donde ejecutamos los comandos correspondientes. La operación más
-              simple sería ejecutar un comando sin redirrecionamiento.
-            </p>
-            <pre><code>execvp(command-&gt;argv[0], command-&gt;argv);
+        <p>
+          Cuando tenemos el struct <strong>tline</strong> pasamos a execline
+          donde ejecutamos los comandos correspondientes. La operación más
+          simple sería ejecutar un comando sin redirrecionamiento.
+        </p>
+        <pre><code>execvp(command-&gt;argv[0], command-&gt;argv);
 </code></pre>
-            <h3 id="Redirecionamiento">
-              <a
-                href="#Redirecionamiento"
-                class="headerlink"
-                title="Redirecionamiento"
-              ></a
-              >Redirecionamiento
-            </h3>
-            <p>
-              A veces el usuario pretende que la entra o la salida de programa
-              sea diferente, por ejemplo, un archivo.
-            </p>
-            <p>
-              Tenemos que abrir un archivo que especifica la entra o la salida
-              con la función <strong>open</strong> y luego también redirigirla
-              con la llamada a <strong>dup2</strong>.
-            </p>
-            <pre><code>input = open(line-&gt;redirect_input, O_RDONLY);
+        <h3 id="Redirecionamiento">
+          <a
+            href="#Redirecionamiento"
+            class="headerlink"
+            title="Redirecionamiento"
+          ></a
+          >Redirecionamiento
+        </h3>
+        <p>
+          A veces el usuario pretende que la entra o la salida de programa sea
+          diferente, por ejemplo, un archivo.
+        </p>
+        <p>
+          Tenemos que abrir un archivo que especifica la entra o la salida con
+          la función <strong>open</strong> y luego también redirigirla con la
+          llamada a <strong>dup2</strong>.
+        </p>
+        <pre><code>input = open(line-&gt;redirect_input, O_RDONLY);
 
 output = open(line-&gt;redirect_output, O_WRONLY | O_CREAT | O_TRUNC, DEFAULT_FILE_CREATE_MODE);
 </code></pre>
-            <h3 id="Comandos-encadenados">
-              <a
-                href="#Comandos-encadenados"
-                class="headerlink"
-                title="Comandos encadenados"
-              ></a
-              >Comandos encadenados
-            </h3>
-            <p>
-              También tenemos la necesidad de realizar varios comandos a la vez
-              y comunicando unos con otraos. Con la llamada
-              <strong>pipe</strong> creamos una tubería que sirve luego en
-              establecer la comunicación entre procesos, y con la llamada
-              <strong>dup2</strong> redireccionamos la salida del comando
-              anterior a la entrada de tubería y desde la salida de la tubería a
-              la entrada estandar para el siguiente comando.
-            </p>
-            <pre><code>pipe(pipeline);
+        <h3 id="Comandos-encadenados">
+          <a
+            href="#Comandos-encadenados"
+            class="headerlink"
+            title="Comandos encadenados"
+          ></a
+          >Comandos encadenados
+        </h3>
+        <p>
+          También tenemos la necesidad de realizar varios comandos a la vez y
+          comunicando unos con otraos. Con la llamada
+          <strong>pipe</strong> creamos una tubería que sirve luego en
+          establecer la comunicación entre procesos, y con la llamada
+          <strong>dup2</strong> redireccionamos la salida del comando anterior a
+          la entrada de tubería y desde la salida de la tubería a la entrada
+          estandar para el siguiente comando.
+        </p>
+        <pre><code>pipe(pipeline);
 
 dup2(pipeline[0], STDIN_FILENO);
 execvp(command-&gt;argv[0], command-&gt;argv);
 </code></pre>
-            <p>
-              Y para el siguiente comando cogemos el flujo de entrada y crear
-              otra tubería para si tenemos más comando. Todos estos se puede
-              meter dentro un <strong>for</strong> que iteramos para crear la
-              comunicación entre ellos.
-            </p>
-            <pre><code>for (i = 0; i &lt; line-&gt;ncommands; i++) &#123;
+        <p>
+          Y para el siguiente comando cogemos el flujo de entrada y crear otra
+          tubería para si tenemos más comando. Todos estos se puede meter dentro
+          un <strong>for</strong> que iteramos para crear la comunicación entre
+          ellos.
+        </p>
+        <pre><code>for (i = 0; i &lt; line-&gt;ncommands; i++) &#123;
     pipe(pipeline)
     output = pipeline[1];
     
@@ -485,211 +366,193 @@ execvp(command-&gt;argv[0], command-&gt;argv);
     input = pipeline[0];
 &#125;
 </code></pre>
-            <p>
-              Eso sería la idea inicial de la secuencia de operaciones que hay
-              que hacer, en la implemención real habría que tener en cuenta más
-              cosa, pj. los redireccionamientos.
-            </p>
-            <h3 id="Background">
-              <a href="#Background" class="headerlink" title="Background"></a
-              >Background
-            </h3>
-            <p>
-              Tenemos también la necesidad de distinguir entre los procesos
-              background y los procesos foreground. Lo que hacemos es asginar un
-              id de grupo a los commandos de la misma linea con la función
-              <strong>setpgid</strong>. Y llamamos a
-              <strong>tcsetpgrp</strong> con el valor de grupo si debe ejecutar
-              en el foreground y al terminar volvemos a llamar
-              <strong>tcsetpgrp</strong> y ponemos el shell en foreground. Este
-              procemiento es la forma más estandar de hacer y evitar problema de
-              interferencia con el shell y otros procesos. Evitamos la situación
-              de proceso zombie y también nos permite separar la señal que se
-              envia.
-            </p>
-            <h3 id="Debug">
-              <a href="#Debug" class="headerlink" title="Debug"></a>Debug
-            </h3>
-            <p>
-              Para mejorar la experiencia de la depuración hemos usado el Macro
-              <strong>#ifndef DEBUG</strong>. Siendo la difultad que depurar en
-              el contexto de multiproceso y la posible inferencia entre ellos.
-              Hemos puesto sentencia
-            </p>
-            <pre><code>**fprintf(stderr, mensaje de seguimiento);**
+        <p>
+          Eso sería la idea inicial de la secuencia de operaciones que hay que
+          hacer, en la implemención real habría que tener en cuenta más cosa,
+          pj. los redireccionamientos.
+        </p>
+        <h3 id="Background">
+          <a href="#Background" class="headerlink" title="Background"></a
+          >Background
+        </h3>
+        <p>
+          Tenemos también la necesidad de distinguir entre los procesos
+          background y los procesos foreground. Lo que hacemos es asginar un id
+          de grupo a los commandos de la misma linea con la función
+          <strong>setpgid</strong>. Y llamamos a <strong>tcsetpgrp</strong> con
+          el valor de grupo si debe ejecutar en el foreground y al terminar
+          volvemos a llamar <strong>tcsetpgrp</strong> y ponemos el shell en
+          foreground. Este procemiento es la forma más estandar de hacer y
+          evitar problema de interferencia con el shell y otros procesos.
+          Evitamos la situación de proceso zombie y también nos permite separar
+          la señal que se envia.
+        </p>
+        <h3 id="Debug">
+          <a href="#Debug" class="headerlink" title="Debug"></a>Debug
+        </h3>
+        <p>
+          Para mejorar la experiencia de la depuración hemos usado el Macro
+          <strong>#ifndef DEBUG</strong>. Siendo la difultad que depurar en el
+          contexto de multiproceso y la posible inferencia entre ellos. Hemos
+          puesto sentencia
+        </p>
+        <pre><code>**fprintf(stderr, mensaje de seguimiento);**
 </code></pre>
-            <p>
-              Con eso conseguimos tener presente las ultimas operaciones que ha
-              tomado nuestro minishell.
-            </p>
-            <p>
-              Sobre todo nos ayudaría mucho si podemos conseguir obtener el
-              estado de proceso. Hemos creado uana función
-              <strong>debug_wait</strong> que delega la llamada a waitpid pero
-              podemos imprimir informaciones necesarios que queremeos.
-            </p>
-            <h3 id="Comando-interno">
-              <a
-                href="#Comando-interno"
-                class="headerlink"
-                title="Comando interno"
-              ></a
-              >Comando interno
-            </h3>
-            <h4 id="cd"><a href="#cd" class="headerlink" title="cd"></a>cd</h4>
-            <p>
-              Aparte de ejecutar los archivos binarios que hay en el sistema.
-              Shell tiene una serie de estado perdeneciente a shell asimismo una
-              serie comando para poder modificar cuyos estados, se conoce como
-              comando interno. <strong>cd</strong> es uno de ello que modifica
-              la ruta actual del programa. <strong>chdir</strong> es una
-              interfaz proporcionada por sistema que permite cumplir dicho
-              deber.
-            </p>
-            <pre><code>chdir(line-&gt;commands[0].argv[1]);
+        <p>
+          Con eso conseguimos tener presente las ultimas operaciones que ha
+          tomado nuestro minishell.
+        </p>
+        <p>
+          Sobre todo nos ayudaría mucho si podemos conseguir obtener el estado
+          de proceso. Hemos creado uana función <strong>debug_wait</strong> que
+          delega la llamada a waitpid pero podemos imprimir informaciones
+          necesarios que queremeos.
+        </p>
+        <h3 id="Comando-interno">
+          <a
+            href="#Comando-interno"
+            class="headerlink"
+            title="Comando interno"
+          ></a
+          >Comando interno
+        </h3>
+        <h4 id="cd"><a href="#cd" class="headerlink" title="cd"></a>cd</h4>
+        <p>
+          Aparte de ejecutar los archivos binarios que hay en el sistema. Shell
+          tiene una serie de estado perdeneciente a shell asimismo una serie
+          comando para poder modificar cuyos estados, se conoce como comando
+          interno. <strong>cd</strong> es uno de ello que modifica la ruta
+          actual del programa. <strong>chdir</strong> es una interfaz
+          proporcionada por sistema que permite cumplir dicho deber.
+        </p>
+        <pre><code>chdir(line-&gt;commands[0].argv[1]);
 </code></pre>
-            <p>
-              Si el usuario no especifica con los parametros usamos la variable
-              HOME como directorio de llegada.
-            </p>
-            <pre><code>chdir(getenv(&quot;HOME&quot;));
+        <p>
+          Si el usuario no especifica con los parametros usamos la variable HOME
+          como directorio de llegada.
+        </p>
+        <pre><code>chdir(getenv(&quot;HOME&quot;));
 </code></pre>
-            <h4 id="jobs">
-              <a href="#jobs" class="headerlink" title="jobs"></a>jobs
-            </h4>
-            <p>
-              Acerca de la gestión de proceso background y foreground. Tenemos
-              que ser capaz de mostrar por pantalla lista de tareas que se está
-              ejecutando en el backgrounp y también.
-            </p>
-            <p>
-              Tenemos definido <strong>struct JobInfo</strong> previamente
-              mencionado, que es una linkedlist que sirve para guardar la lista
-              de procesos que están en ejecución. Cada vez que ejecutamos una
-              línea de comando almacenmos también su informaciones relativas en
-              la lista.
-            </p>
-            <pre><code>insert_job(&amp;job_list, new_job(current, strdup(command)));
+        <h4 id="jobs">
+          <a href="#jobs" class="headerlink" title="jobs"></a>jobs
+        </h4>
+        <p>
+          Acerca de la gestión de proceso background y foreground. Tenemos que
+          ser capaz de mostrar por pantalla lista de tareas que se está
+          ejecutando en el backgrounp y también.
+        </p>
+        <p>
+          Tenemos definido <strong>struct JobInfo</strong> previamente
+          mencionado, que es una linkedlist que sirve para guardar la lista de
+          procesos que están en ejecución. Cada vez que ejecutamos una línea de
+          comando almacenmos también su informaciones relativas en la lista.
+        </p>
+        <pre><code>insert_job(&amp;job_list, new_job(current, strdup(command)));
 </code></pre>
-            <p>
-              Al recibir el comando <strong>jobs</strong> lo que hacemos es
-              recorrer la lista siguiendo el puntero de next hasta que acabe la
-              lista.
-            </p>
-            <pre><code>current = job_list;
+        <p>
+          Al recibir el comando <strong>jobs</strong> lo que hacemos es recorrer
+          la lista siguiendo el puntero de next hasta que acabe la lista.
+        </p>
+        <pre><code>current = job_list;
 while (current != NULL) &#123;
     print_job(current, i);
     current = current-&gt;next;;
 &#125;
 </code></pre>
-            <h4 id="fg"><a href="#fg" class="headerlink" title="fg"></a>fg</h4>
-            <p>
-              Cuando el usuario necesitará traer un proceso en background
-              ejecutará <strong>fg</strong> + <strong>id</strong>. El id sería
-              el numero de aparece cuando muestra con jobs.
-            </p>
-            <pre><code>if (current != NULL &amp;&amp; current-&gt;id == id) &#123;
+        <h4 id="fg"><a href="#fg" class="headerlink" title="fg"></a>fg</h4>
+        <p>
+          Cuando el usuario necesitará traer un proceso en background ejecutará
+          <strong>fg</strong> + <strong>id</strong>. El id sería el numero de
+          aparece cuando muestra con jobs.
+        </p>
+        <pre><code>if (current != NULL &amp;&amp; current-&gt;id == id) &#123;
     pgid = current-&gt;pgid;
     tcsetpgrp(STDIN_FILENO, pgid);
     debug_wait(pgid, 0);
     tcsetpgrp(STDIN_FILENO, shell_pgid);
 &#125;
 </code></pre>
-            <p>
-              Por brevedad no hemos concluido cómo gestionamos la memoria
-              dinámica del shell. Basicamente lo que hacemos es cuando un
-              proceso pasa a foreground o bién que ha terminado libreramos la
-              memeria asosiada a él.
-            </p>
-            <h4 id="Gestion-de-senal">
-              <a
-                href="#Gestion-de-senal"
-                class="headerlink"
-                title="Gestión de señal"
-              ></a
-              >Gestión de señal
-            </h4>
-            <p>
-              El shell es capaz de ejecutar más de un comando en el background.
-              El shell mismo no debe morir ni los procesos background ni el
-              shell. Tenemos que ignoramos tanto SIGINT como SIGQUIT. Lo
-              conseguiremos con <strong>signal</strong>.
-            </p>
-            <pre><code>signal(SIGINT, SIG_IGN);
+        <p>
+          Por brevedad no hemos concluido cómo gestionamos la memoria dinámica
+          del shell. Basicamente lo que hacemos es cuando un proceso pasa a
+          foreground o bién que ha terminado libreramos la memeria asosiada a
+          él.
+        </p>
+        <h4 id="Gestion-de-senal">
+          <a
+            href="#Gestion-de-senal"
+            class="headerlink"
+            title="Gestión de señal"
+          ></a
+          >Gestión de señal
+        </h4>
+        <p>
+          El shell es capaz de ejecutar más de un comando en el background. El
+          shell mismo no debe morir ni los procesos background ni el shell.
+          Tenemos que ignoramos tanto SIGINT como SIGQUIT. Lo conseguiremos con
+          <strong>signal</strong>.
+        </p>
+        <pre><code>signal(SIGINT, SIG_IGN);
 signal(SIGQUIT, SIG_IGN);
 </code></pre>
-            <p>Hemos puesto ese en la inicialización de shell.</p>
-            <h4 id="Mas-detalle">
-              <a href="#Mas-detalle" class="headerlink" title="Más detalle"></a
-              >Más detalle
-            </h4>
-            <p>
-              Aquí arriba solo hemos comentado las ideas y la implementación
-              basica de cómo va cada cosa. La gestión real también tenemos que
-              tratar a los posibles errores que sucede mientras ejecutamos la
-              función, la gestión de memoria dinámica, y el control sobre las
-              señales, etc…
-            </p>
-            <h2 id="Conclusion">
-              <a href="#Conclusion" class="headerlink" title="Conclusión"></a
-              >Conclusión
-            </h2>
-            <p>
-              Este trabajo centramos prinpicalmente en el tema de proceso y
-              mecanismo de gestión entre ellos. El problema principal que
-              tuvimos fue gestión la tubería que olvidemos cerrar la tubería en
-              el proceso padre. Que muchas veces no sabemos qué está ocurriendo
-              siendo la dificultad de la depuración es muy alta.
-            </p>
+        <p>Hemos puesto ese en la inicialización de shell.</p>
+        <h4 id="Mas-detalle">
+          <a href="#Mas-detalle" class="headerlink" title="Más detalle"></a>Más
+          detalle
+        </h4>
+        <p>
+          Aquí arriba solo hemos comentado las ideas y la implementación basica
+          de cómo va cada cosa. La gestión real también tenemos que tratar a los
+          posibles errores que sucede mientras ejecutamos la función, la gestión
+          de memoria dinámica, y el control sobre las señales, etc…
+        </p>
+        <h2 id="Conclusion">
+          <a href="#Conclusion" class="headerlink" title="Conclusión"></a
+          >Conclusión
+        </h2>
+        <p>
+          Este trabajo centramos prinpicalmente en el tema de proceso y
+          mecanismo de gestión entre ellos. El problema principal que tuvimos
+          fue gestión la tubería que olvidemos cerrar la tubería en el proceso
+          padre. Que muchas veces no sabemos qué está ocurriendo siendo la
+          dificultad de la depuración es muy alta.
+        </p>
 
-            <hr />
+        <hr />
 
-            <ul class="list-group">
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/Minimalist-Linux-Workspace/">
-                  Minimalist Linux Workspace
-                </a>
-              </li>
+        <ul class="list-group">
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Minimalist-Linux-Workspace/">
+              Minimalist Linux Workspace
+            </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/RaspberryPi-Odoo/">
-                  RaspberryPi Odoo
-                </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/RaspberryPi-Odoo/">
+              RaspberryPi Odoo
+            </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/RaspberryPi4B-Setup/">
-                  Raspberry Pi 4B Setup
-                </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/RaspberryPi4B-Setup/">
+              Raspberry Pi 4B Setup
+            </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a
-                  target="_parent"
-                  href="/posts/Simple-Bootstrap-Linux-System/"
-                >
-                  Build Simple Bootstrap Linux System Image
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row justify-content-center">
-          <!-- Sidebar Container -->
-
-          <div class="col-lg-8` col-md-10 sidebar-container">
-            <!-- Friends Blog -->
-          </div>
-        </div>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Simple-Bootstrap-Linux-System/">
+              Build Simple Bootstrap Linux System Image
+            </a>
+          </li>
+        </ul>
       </div>
     </article>
     <!-- Custom Theme JavaScript -->

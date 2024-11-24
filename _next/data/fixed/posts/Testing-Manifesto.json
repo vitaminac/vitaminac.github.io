@@ -7,6 +7,7 @@
       "tags": ["Testing Manifesto", "Testing"],
       "isLegacy": true,
       "lang": "es",
+      "tocHtml": "<ol>\n<li><a href=\"/Testing-Manifesto/index.html#Pruebas-a-lo-largo-de-OVER-pruebas-al-final\" target=\"Testing-Manifesto\">Pruebas a lo largo de OVER pruebas al final</a></li>\n<li><a href=\"/Testing-Manifesto/index.html#Prevenci%C3%B3n-de-errores-OVER-encontrando-errores\" target=\"Testing-Manifesto\">Prevención de errores OVER encontrando errores</a></li>\n<li><a href=\"/Testing-Manifesto/index.html#Prueba-de-comprensi%C3%B3n-sobre-la-funcionalidad-de-verificaci%C3%B3n\" target=\"Testing-Manifesto\">Prueba de comprensión sobre la funcionalidad de verificación</a></li>\n<li><a href=\"/Testing-Manifesto/index.html#Construyendo-el-sistema-OVER-rompiendo-el-sistema\" target=\"Testing-Manifesto\">Construyendo el sistema OVER rompiendo el sistema</a></li>\n<li><a href=\"/Testing-Manifesto/index.html#Responsabilidad-del-equipo-por-la-calidad-OVER-responsabilidad-del-probador\" target=\"Testing-Manifesto\">Responsabilidad del equipo por la calidad OVER responsabilidad del probador</a></li>\n</ol>",
       "path": "/Testing-Manifesto/index.html"
     },
     "lang": "es",

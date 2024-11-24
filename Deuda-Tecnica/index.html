@@ -132,91 +132,65 @@
     />
 
     <!-- Post Content -->
-    <article>
-      <div class="container">
-        <div class="row">
-          <!-- Post Container -->
-          <div class="order-lg-2 col-lg-3 col-12 toc-col" style="z-index: 1">
-            <ol class="toc">
-              <li class="toc-item toc-level-1">
-                <a class="toc-link" href="#Recomendaciones-para-evitarlo"
-                  ><span class="toc-text"
-                    >Recomendaciones para evitarlo</span
-                  ></a
-                >
-              </li>
-            </ol>
-          </div>
+    <article class="container" style="width: 100%; max-width: 100%">
+      <!-- Post Container -->
+      <div class="post-container">
+        <p>
+          La deuda técnica surge de un desarrollo con mala calidad, obtiene
+          beneficios a corto plazo. Pero puede generar deudas cuyos intereses
+          sean imposibles a posteriori. Hce que seamos más lentos añadiendo
+          funcionalidades. Poca deuda técnica acelera el desarrollo, siempre que
+          se pague con prontitud.
+        </p>
+        <p>
+          Según Kruchten, se podría decir que la deuda técnica es la parte
+          negativa e invisible de un código.
+        </p>
+        <ul>
+          <li>Complejidad Ciclomática elevada</li>
+          <li>Problemas de eficiencia en tiempo de ejecución</li>
+          <li>Problemas de mantenimiento y evaluación</li>
+          <li>Problemas de rendimiento</li>
+          <li>Problemas para comprender el código</li>
+          <li>Pérdida de tiempo en la refactorización</li>
+        </ul>
+        <h1 id="Recomendaciones-para-evitarlo">
+          <a
+            href="#Recomendaciones-para-evitarlo"
+            class="headerlink"
+            title="Recomendaciones para evitarlo"
+          ></a
+          >Recomendaciones para evitarlo
+        </h1>
+        <ul>
+          <li>Integración continua</li>
+          <li>Refactorización y modularización</li>
+          <li>Testing de regresión o unitario</li>
+        </ul>
+        <p>Metódo de cálculo</p>
+        <p>
+          SQALE (Software Quality Assessment based on Life-cicle Expectations)
+        </p>
+        <ul>
+          <li>
+            Medir la calidad del software equivale a medir su deuda técnica.
+          </li>
+          <li>
+            Define 8 características en base a la ISO 9126 (añade la
+            reutilización):<br />Reusabilidad, Portabilidad, Mantenibilidad,
+            Seguridad, Eficiencia, Cambiabilidad, Fiabilidad, Capacidad de ser
+            probado.
+          </li>
+        </ul>
+        <p>
+          Se podrá calcular la deuda técnica del proyecto, realizando un
+          análisis de código y sumando cada requisito no funcional incumplido
+          que encuentre por su coste de asociado, herramienta SonarQube.
+        </p>
 
-          <div class="order-lg-1 col-lg-9 col-12 post-container">
-            <p>
-              La deuda técnica surge de un desarrollo con mala calidad, obtiene
-              beneficios a corto plazo. Pero puede generar deudas cuyos
-              intereses sean imposibles a posteriori. Hce que seamos más lentos
-              añadiendo funcionalidades. Poca deuda técnica acelera el
-              desarrollo, siempre que se pague con prontitud.
-            </p>
-            <p>
-              Según Kruchten, se podría decir que la deuda técnica es la parte
-              negativa e invisible de un código.
-            </p>
-            <ul>
-              <li>Complejidad Ciclomática elevada</li>
-              <li>Problemas de eficiencia en tiempo de ejecución</li>
-              <li>Problemas de mantenimiento y evaluación</li>
-              <li>Problemas de rendimiento</li>
-              <li>Problemas para comprender el código</li>
-              <li>Pérdida de tiempo en la refactorización</li>
-            </ul>
-            <h1 id="Recomendaciones-para-evitarlo">
-              <a
-                href="#Recomendaciones-para-evitarlo"
-                class="headerlink"
-                title="Recomendaciones para evitarlo"
-              ></a
-              >Recomendaciones para evitarlo
-            </h1>
-            <ul>
-              <li>Integración continua</li>
-              <li>Refactorización y modularización</li>
-              <li>Testing de regresión o unitario</li>
-            </ul>
-            <p>Metódo de cálculo</p>
-            <p>
-              SQALE (Software Quality Assessment based on Life-cicle
-              Expectations)
-            </p>
-            <ul>
-              <li>
-                Medir la calidad del software equivale a medir su deuda técnica.
-              </li>
-              <li>
-                Define 8 características en base a la ISO 9126 (añade la
-                reutilización):<br />Reusabilidad, Portabilidad, Mantenibilidad,
-                Seguridad, Eficiencia, Cambiabilidad, Fiabilidad, Capacidad de
-                ser probado.
-              </li>
-            </ul>
-            <p>
-              Se podrá calcular la deuda técnica del proyecto, realizando un
-              análisis de código y sumando cada requisito no funcional
-              incumplido que encuentre por su coste de asociado, herramienta
-              SonarQube.
-            </p>
+        <hr />
 
-            <hr />
-
-            <ul class="list-group"></ul>
-          </div>
-        </div>
-
-        <div class="row justify-content-center">
-          <!-- Sidebar Container -->
-
-          <div class="col-lg-8` col-md-10 sidebar-container">
-            <!-- Friends Blog -->
-          </div>
-        </div>
+        <ul class="list-group"></ul>
       </div>
     </article>
     <!-- Custom Theme JavaScript -->

@@ -144,571 +144,463 @@
     />
 
     <!-- Post Content -->
-    <article>
-      <div class="container">
-        <div class="row">
-          <!-- Post Container -->
-          <div class="order-lg-2 col-lg-3 col-12 toc-col" style="z-index: 1">
-            <ol class="toc">
-              <li class="toc-item toc-level-1">
-                <a
-                  class="toc-link"
-                  href="#How-to-Create-a-Windows-7-Vagrant-Base-Box"
-                  ><span class="toc-text"
-                    >How to Create a Windows 7 Vagrant Base Box?</span
-                  ></a
-                >
-                <ol class="toc-child">
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Introduction"
-                      ><span class="toc-text">Introduction</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Pre-requisites"
-                      ><span class="toc-text">Pre-requisites</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Create-New-Virtual-Machine"
-                      ><span class="toc-text"
-                        >Create New Virtual Machine</span
-                      ></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Install-Windows-7"
-                      ><span class="toc-text">Install Windows 7</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Prepare-Windows-For-Vagrant"
-                      ><span class="toc-text"
-                        >Prepare Windows For Vagrant</span
-                      ></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a
-                      class="toc-link"
-                      href="#Exporting-Your-VirtualBox-Virtual-Machine-as-Base-Box"
-                      ><span class="toc-text"
-                        >Exporting Your VirtualBox Virtual Machine as Base
-                        Box</span
-                      ></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a
-                      class="toc-link"
-                      href="#Exporting-Your-VMWare-Virtual-Machine-as-Base-Box"
-                      ><span class="toc-text"
-                        >Exporting Your VMWare Virtual Machine as Base Box</span
-                      ></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Test-Your-Base-Box-Locally"
-                      ><span class="toc-text"
-                        >Test Your Base Box Locally</span
-                      ></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Publish-Your-Base-Box"
-                      ><span class="toc-text">Publish Your Base Box</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Use-Your-Base-Box"
-                      ><span class="toc-text">Use Your Base Box</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Reference"
-                      ><span class="toc-text">Reference</span></a
-                    >
-                  </li>
-                </ol>
-              </li>
-            </ol>
-          </div>
-
-          <div class="order-lg-1 col-lg-9 col-12 post-container">
-            <h1 id="How-to-Create-a-Windows-7-Vagrant-Base-Box">
-              <a
-                href="#How-to-Create-a-Windows-7-Vagrant-Base-Box"
-                class="headerlink"
-                title="How to Create a Windows 7 Vagrant Base Box?"
-              ></a
-              >How to Create a Windows 7 Vagrant Base Box?
-            </h1>
-            <h2 id="Introduction">
-              <a
-                href="#Introduction"
-                class="headerlink"
-                title="Introduction"
-              ></a
-              >Introduction
-            </h2>
-            <p>
-              Since Vagrant 1.6 release, Vagrant add support for Windows VMs. We
-              will go through the steps to follow to create a Windows 7 Vagrant
-              base box.
-            </p>
-            <h2 id="Pre-requisites">
-              <a
-                href="#Pre-requisites"
-                class="headerlink"
-                title="Pre-requisites"
-              ></a
-              >Pre-requisites
-            </h2>
-            <ul>
-              <li>VirtualBox&#x2F;VMWare</li>
-              <li>Vagrant 1.6 or above</li>
-              <li>Windows 7 ISO file</li>
-              <li>VirtualBox Guest Additions</li>
-              <li>
-                A valid license key for the version of Windows 7 to be installed
-              </li>
-            </ul>
-            <h2 id="Create-New-Virtual-Machine">
-              <a
-                href="#Create-New-Virtual-Machine"
-                class="headerlink"
-                title="Create New Virtual Machine"
-              ></a
-              >Create New Virtual Machine
-            </h2>
-            <p>
-              Start VirtualBox and create a new Windows 7 virtual machine. Name
-              it whatever you like, though keep it simple as we will override
-              this name later in Vagrantfile. We will follow most of the advice
-              given in the Vagrant documentation regarding base boxes.
-            </p>
-            <ul>
-              <li>
-                Disk Space: Choose a virtual hard disk (VDI) dynamically
-                allocated and choose a high upper limit for the size. The
-                default max-size is pretty low (32 GB).
-              </li>
-              <li>
-                Memory: Choose a low value here e.g. 1 GB, the reason is users
-                that use the base box can always increase the memory in their
-                Vagrantfile. I chose 2048 MB, but 1024 MB would do as well.
-              </li>
-              <li>
-                CPU: Leave this at the default of 1. Again this is something
-                users can override in the Vagrantfile, so try not to require a
-                higher number to start with.
-              </li>
-              <li>
-                Disable any unnecessary hardware like audio. Leave 2D&#x2F;3D
-                acceleration disabled.
-              </li>
-            </ul>
-            <p>
-              The idea behind these choices is to create your base box as light
-              on resources as possible with as much room as possible for later
-              customization. When creating a new machine in VirtualBox in the
-              wizard a lot of options are auto-configured, so we may need to
-              edit the machine after it is created, going into Settings, to
-              change some options.
-            </p>
-            <ul>
-              <li>
-                Settings &gt; General &gt; Advanced: Enable Host-to-Guest shared
-                clipboard.
-              </li>
-              <li>
-                Settings &gt; General &gt; System &gt; Motherboard: Disable
-                Floppy boot.
-              </li>
-              <li>Settings &gt; General &gt; Audio: Disable audio.</li>
-            </ul>
-            <p>
-              You can follow the New Virtual Machine Wizard with Custom
-              (advanced) configuration to create the Windows 7 virtual machine.
-              Select similar options as VirtualBox, although some options might
-              be different.
-            </p>
-            <ul>
-              <li>Select the version of Windows to install</li>
-              <li>Full name: vagrant</li>
-              <li>Password: vagrant</li>
-              <li>Firmware type: BIOS</li>
-              <li>Network connection: NAT</li>
-              <li>Disk: Store virtual disk as a single file</li>
-            </ul>
-            <p>
-              Users of your base box can always modify these options in their
-              Vagrantfile, using the
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://www.vagrantup.com/docs/providers/virtualbox/configuration"
-                >VirtualBox specific configuration</a
-              >
-              or
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://www.vagrantup.com/docs/providers/vmware/configuration"
-                >VMWare specific configuration</a
-              >.
-            </p>
-            <h2 id="Install-Windows-7">
-              <a
-                href="#Install-Windows-7"
-                class="headerlink"
-                title="Install Windows 7"
-              ></a
-              >Install Windows 7
-            </h2>
-            <p>
-              You should have your Windows 10 ISO ready at hand, then configure
-              the ISO file to boot from in VirtualBox, skip prompts to enter a
-              license key and this can always be entered later through Control
-              Panel or command line, after this, installation is straight
-              forward.
-            </p>
-            <p>
-              Towards the end of the installation you will be prompted to sign
-              in your Microsoft account, again skip this. You want to create a
-              local admin account on your clean install named vagrant with
-              password also vagrant. This is required if you want Vagrant to
-              automatically connect to and provision machines on your base box.
-            </p>
-            <p>
-              Let the Windows setup complete, you will be presented with a login
-              prompt for your user vagrant. Go ahead and login to the Windows 10
-              desktop. When connecting to the network windows will ask you if
-              the network you are connected to is public or private. Choose
-              private, otherwise you will get issues with
-              <strong>WinRM</strong> in the next step.
-            </p>
-            <h2 id="Prepare-Windows-For-Vagrant">
-              <a
-                href="#Prepare-Windows-For-Vagrant"
-                class="headerlink"
-                title="Prepare Windows For Vagrant"
-              ></a
-              >Prepare Windows For Vagrant
-            </h2>
-            <ul>
-              <li>
-                Install VirtualBox Guest Additions&#x2F;VMware Tools on your
-                base box from the menu.
-              </li>
-              <li>
-                Control Panel &gt; Programs and Features &gt; Turn Windows
-                features on or off.
-              </li>
-              <li>
-                Disable UAC: Control Panel &gt; User Accounts &gt; Change user
-                account control settings, drop the slider to the bottom - Never
-                notify.
-              </li>
-              <li>
-                Turn off System Protection： Control Panel &gt; System &gt;
-                Advanced System Settings &gt; System Protection &gt; Turn off
-                protection.
-              </li>
-              <li>
-                Enable <strong>WinRM</strong> service：Open command prompt as
-                Administrator and paste each line and press enter. The last line
-                configures <strong>WinRM</strong> services to start
-                automatically. This will allow Vagrant to connect to the box and
-                control it. <strong>WinRM</strong> is the alternative to ssh for
-                windows boxes.
-              </li>
-            </ul>
-            <hr />
-            <pre><code>winrm quickconfig -q
+    <article class="container" style="width: 100%; max-width: 100%">
+      <!-- Post Container -->
+      <div class="post-container">
+        <h1 id="How-to-Create-a-Windows-7-Vagrant-Base-Box">
+          <a
+            href="#How-to-Create-a-Windows-7-Vagrant-Base-Box"
+            class="headerlink"
+            title="How to Create a Windows 7 Vagrant Base Box?"
+          ></a
+          >How to Create a Windows 7 Vagrant Base Box?
+        </h1>
+        <h2 id="Introduction">
+          <a href="#Introduction" class="headerlink" title="Introduction"></a
+          >Introduction
+        </h2>
+        <p>
+          Since Vagrant 1.6 release, Vagrant add support for Windows VMs. We
+          will go through the steps to follow to create a Windows 7 Vagrant base
+          box.
+        </p>
+        <h2 id="Pre-requisites">
+          <a
+            href="#Pre-requisites"
+            class="headerlink"
+            title="Pre-requisites"
+          ></a
+          >Pre-requisites
+        </h2>
+        <ul>
+          <li>VirtualBox&#x2F;VMWare</li>
+          <li>Vagrant 1.6 or above</li>
+          <li>Windows 7 ISO file</li>
+          <li>VirtualBox Guest Additions</li>
+          <li>
+            A valid license key for the version of Windows 7 to be installed
+          </li>
+        </ul>
+        <h2 id="Create-New-Virtual-Machine">
+          <a
+            href="#Create-New-Virtual-Machine"
+            class="headerlink"
+            title="Create New Virtual Machine"
+          ></a
+          >Create New Virtual Machine
+        </h2>
+        <p>
+          Start VirtualBox and create a new Windows 7 virtual machine. Name it
+          whatever you like, though keep it simple as we will override this name
+          later in Vagrantfile. We will follow most of the advice given in the
+          Vagrant documentation regarding base boxes.
+        </p>
+        <ul>
+          <li>
+            Disk Space: Choose a virtual hard disk (VDI) dynamically allocated
+            and choose a high upper limit for the size. The default max-size is
+            pretty low (32 GB).
+          </li>
+          <li>
+            Memory: Choose a low value here e.g. 1 GB, the reason is users that
+            use the base box can always increase the memory in their
+            Vagrantfile. I chose 2048 MB, but 1024 MB would do as well.
+          </li>
+          <li>
+            CPU: Leave this at the default of 1. Again this is something users
+            can override in the Vagrantfile, so try not to require a higher
+            number to start with.
+          </li>
+          <li>
+            Disable any unnecessary hardware like audio. Leave 2D&#x2F;3D
+            acceleration disabled.
+          </li>
+        </ul>
+        <p>
+          The idea behind these choices is to create your base box as light on
+          resources as possible with as much room as possible for later
+          customization. When creating a new machine in VirtualBox in the wizard
+          a lot of options are auto-configured, so we may need to edit the
+          machine after it is created, going into Settings, to change some
+          options.
+        </p>
+        <ul>
+          <li>
+            Settings &gt; General &gt; Advanced: Enable Host-to-Guest shared
+            clipboard.
+          </li>
+          <li>
+            Settings &gt; General &gt; System &gt; Motherboard: Disable Floppy
+            boot.
+          </li>
+          <li>Settings &gt; General &gt; Audio: Disable audio.</li>
+        </ul>
+        <p>
+          You can follow the New Virtual Machine Wizard with Custom (advanced)
+          configuration to create the Windows 7 virtual machine. Select similar
+          options as VirtualBox, although some options might be different.
+        </p>
+        <ul>
+          <li>Select the version of Windows to install</li>
+          <li>Full name: vagrant</li>
+          <li>Password: vagrant</li>
+          <li>Firmware type: BIOS</li>
+          <li>Network connection: NAT</li>
+          <li>Disk: Store virtual disk as a single file</li>
+        </ul>
+        <p>
+          Users of your base box can always modify these options in their
+          Vagrantfile, using the
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://www.vagrantup.com/docs/providers/virtualbox/configuration"
+            >VirtualBox specific configuration</a
+          >
+          or
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://www.vagrantup.com/docs/providers/vmware/configuration"
+            >VMWare specific configuration</a
+          >.
+        </p>
+        <h2 id="Install-Windows-7">
+          <a
+            href="#Install-Windows-7"
+            class="headerlink"
+            title="Install Windows 7"
+          ></a
+          >Install Windows 7
+        </h2>
+        <p>
+          You should have your Windows 10 ISO ready at hand, then configure the
+          ISO file to boot from in VirtualBox, skip prompts to enter a license
+          key and this can always be entered later through Control Panel or
+          command line, after this, installation is straight forward.
+        </p>
+        <p>
+          Towards the end of the installation you will be prompted to sign in
+          your Microsoft account, again skip this. You want to create a local
+          admin account on your clean install named vagrant with password also
+          vagrant. This is required if you want Vagrant to automatically connect
+          to and provision machines on your base box.
+        </p>
+        <p>
+          Let the Windows setup complete, you will be presented with a login
+          prompt for your user vagrant. Go ahead and login to the Windows 10
+          desktop. When connecting to the network windows will ask you if the
+          network you are connected to is public or private. Choose private,
+          otherwise you will get issues with <strong>WinRM</strong> in the next
+          step.
+        </p>
+        <h2 id="Prepare-Windows-For-Vagrant">
+          <a
+            href="#Prepare-Windows-For-Vagrant"
+            class="headerlink"
+            title="Prepare Windows For Vagrant"
+          ></a
+          >Prepare Windows For Vagrant
+        </h2>
+        <ul>
+          <li>
+            Install VirtualBox Guest Additions&#x2F;VMware Tools on your base
+            box from the menu.
+          </li>
+          <li>
+            Control Panel &gt; Programs and Features &gt; Turn Windows features
+            on or off.
+          </li>
+          <li>
+            Disable UAC: Control Panel &gt; User Accounts &gt; Change user
+            account control settings, drop the slider to the bottom - Never
+            notify.
+          </li>
+          <li>
+            Turn off System Protection： Control Panel &gt; System &gt; Advanced
+            System Settings &gt; System Protection &gt; Turn off protection.
+          </li>
+          <li>
+            Enable <strong>WinRM</strong> service：Open command prompt as
+            Administrator and paste each line and press enter. The last line
+            configures <strong>WinRM</strong> services to start automatically.
+            This will allow Vagrant to connect to the box and control it.
+            <strong>WinRM</strong> is the alternative to ssh for windows boxes.
+          </li>
+        </ul>
+        <hr />
+        <pre><code>winrm quickconfig -q
 winrm set winrm/config/winrs @&#123;MaxMemoryPerShellMB=&quot;512&quot;&#125;
 winrm set winrm/config @&#123;MaxTimeoutms=&quot;1800000&quot;&#125;
 winrm set winrm/config/service @&#123;AllowUnencrypted=&quot;true&quot;&#125;
 winrm set winrm/config/service/auth @&#123;Basic=&quot;true&quot;&#125;
 sc config WinRM start= auto
 </code></pre>
-            <ul>
-              <li>
-                Relax the Powershell execution policy: Run Powershell as
-                Administrator and execute this command:
-                <code>Set-ExecutionPolicy -ExecutionPolicy Unrestricted</code>,
-                choose Yes to any prompts. This will allow Powershell scripts to
-                provision your base box without annoying restrictions.
-              </li>
-              <li>
-                Enable remote connection to your box: Control Panel &gt; System
-                &gt; Advanced System Settings &gt; Remote &gt; Allow remote
-                connections to this computer.
-              </li>
-              <li>
-                Turn off Windows Update: Control Panel &gt; System &gt; Turn
-                automatic updating on or off &gt; Never check for updates
-              </li>
-              <li>
-                The Advanced tab &gt; Performance Settings, tweak visual effects
-                to performance, then further on the Advanced tab limit the
-                maximum virtual memory paging file size to 1024 MB. Restart if
-                prompted.
-              </li>
-              <li>Finally, use disk clean to reduce the box size</li>
-            </ul>
-            <h2 id="Exporting-Your-VirtualBox-Virtual-Machine-as-Base-Box">
-              <a
-                href="#Exporting-Your-VirtualBox-Virtual-Machine-as-Base-Box"
-                class="headerlink"
-                title="Exporting Your VirtualBox Virtual Machine as Base Box"
-              ></a
-              >Exporting Your VirtualBox Virtual Machine as Base Box
-            </h2>
-            <pre><code>vagrant package --base &lt;Name of the VM in the Virtualbox GUI&gt; --output /path/to/output/Windows7.box
+        <ul>
+          <li>
+            Relax the Powershell execution policy: Run Powershell as
+            Administrator and execute this command:
+            <code>Set-ExecutionPolicy -ExecutionPolicy Unrestricted</code>,
+            choose Yes to any prompts. This will allow Powershell scripts to
+            provision your base box without annoying restrictions.
+          </li>
+          <li>
+            Enable remote connection to your box: Control Panel &gt; System &gt;
+            Advanced System Settings &gt; Remote &gt; Allow remote connections
+            to this computer.
+          </li>
+          <li>
+            Turn off Windows Update: Control Panel &gt; System &gt; Turn
+            automatic updating on or off &gt; Never check for updates
+          </li>
+          <li>
+            The Advanced tab &gt; Performance Settings, tweak visual effects to
+            performance, then further on the Advanced tab limit the maximum
+            virtual memory paging file size to 1024 MB. Restart if prompted.
+          </li>
+          <li>Finally, use disk clean to reduce the box size</li>
+        </ul>
+        <h2 id="Exporting-Your-VirtualBox-Virtual-Machine-as-Base-Box">
+          <a
+            href="#Exporting-Your-VirtualBox-Virtual-Machine-as-Base-Box"
+            class="headerlink"
+            title="Exporting Your VirtualBox Virtual Machine as Base Box"
+          ></a
+          >Exporting Your VirtualBox Virtual Machine as Base Box
+        </h2>
+        <pre><code>vagrant package --base &lt;Name of the VM in the Virtualbox GUI&gt; --output /path/to/output/Windows7.box
 </code></pre>
-            <h2 id="Exporting-Your-VMWare-Virtual-Machine-as-Base-Box">
-              <a
-                href="#Exporting-Your-VMWare-Virtual-Machine-as-Base-Box"
-                class="headerlink"
-                title="Exporting Your VMWare Virtual Machine as Base Box"
-              ></a
-              >Exporting Your VMWare Virtual Machine as Base Box
-            </h2>
-            <p>
-              Vagrant also support to create boxes for VMware provider. You will
-              need to first install the Vagrant VMware support following this
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://www.vagrantup.com/docs/providers/vmware/installation"
-                >guide</a
-              >. Create a <code>metadata.json</code> file inside
-              <strong>vmwarevm</strong> folder with following content.
-            </p>
-            <pre><code>&#123;
+        <h2 id="Exporting-Your-VMWare-Virtual-Machine-as-Base-Box">
+          <a
+            href="#Exporting-Your-VMWare-Virtual-Machine-as-Base-Box"
+            class="headerlink"
+            title="Exporting Your VMWare Virtual Machine as Base Box"
+          ></a
+          >Exporting Your VMWare Virtual Machine as Base Box
+        </h2>
+        <p>
+          Vagrant also support to create boxes for VMware provider. You will
+          need to first install the Vagrant VMware support following this
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://www.vagrantup.com/docs/providers/vmware/installation"
+            >guide</a
+          >. Create a <code>metadata.json</code> file inside
+          <strong>vmwarevm</strong> folder with following content.
+        </p>
+        <pre><code>&#123;
     &quot;provider&quot;: &quot;vmware_desktop&quot;
 &#125;
 </code></pre>
-            <p>
-              Remove any extraneous files from the
-              <strong>vmwarevm</strong> folder and package it. Prior to
-              packaging up a box, we should shrink the hard drives as much as
-              possible. This can be done with
-            </p>
-            <pre><code>vmware-vdiskmanager -d /path/to/vmwarevm/main.vmdk
+        <p>
+          Remove any extraneous files from the <strong>vmwarevm</strong> folder
+          and package it. Prior to packaging up a box, we should shrink the hard
+          drives as much as possible. This can be done with
+        </p>
+        <pre><code>vmware-vdiskmanager -d /path/to/vmwarevm/main.vmdk
 vmware-vdiskmanager -k /path/to/vmwarevm/main.vmdk
 cd /path/to/vmwarevm
 tar cvzf /path/to/output/Windows7.box ./*
 </code></pre>
-            <h2 id="Test-Your-Base-Box-Locally">
-              <a
-                href="#Test-Your-Base-Box-Locally"
-                class="headerlink"
-                title="Test Your Base Box Locally"
-              ></a
-              >Test Your Base Box Locally
-            </h2>
-            <pre><code>vagrant box add /path/to/output/Windows7.box --name Windows7
+        <h2 id="Test-Your-Base-Box-Locally">
+          <a
+            href="#Test-Your-Base-Box-Locally"
+            class="headerlink"
+            title="Test Your Base Box Locally"
+          ></a
+          >Test Your Base Box Locally
+        </h2>
+        <pre><code>vagrant box add /path/to/output/Windows7.box --name Windows7
 vagrant init Windows7
 vagrant up --provider=vmware_desktop
 </code></pre>
-            <h2 id="Publish-Your-Base-Box">
-              <a
-                href="#Publish-Your-Base-Box"
-                class="headerlink"
-                title="Publish Your Base Box"
-              ></a
-              >Publish Your Base Box
-            </h2>
-            <p>
-              Open
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://app.vagrantup.com/boxes/new"
-                >https://app.vagrantup.com/boxes/new</a
-              >
-              and follow the instruction to create a Box. Once the Box is
-              created, select <code>Add a provider</code>, and then choose
-              corresponding provider and upload the box file. You can also use
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://app.vagrantup.com/vitamina/boxes/Windows7"
-                >my box distribution</a
-              >.
-            </p>
-            <h2 id="Use-Your-Base-Box">
-              <a
-                href="#Use-Your-Base-Box"
-                class="headerlink"
-                title="Use Your Base Box"
-              ></a
-              >Use Your Base Box
-            </h2>
-            <p>
-              You can use <code>vagrant up</code> command with the
-              <code>--provider</code> flag to specify the provider you want to
-              use and then specify the base box distribution with
-              <code>config.vm.box = &quot;vitamina/Windows7&quot;</code>.
-            </p>
-            <h2 id="Reference">
-              <a href="#Reference" class="headerlink" title="Reference"></a
-              >Reference
-            </h2>
-            <ul>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://huestones.co.uk/2015/08/creating-a-windows-10-base-box-for-vagrant-with-virtualbox/"
-                  >Creating a Windows 10 Base Box for Vagrant with VirtualBox</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://www.vagrantup.com/docs/providers/virtualbox/boxes"
-                  >Vagrant: Creating a Base Box</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://www.vagrantup.com/docs/cli/package"
-                  >Vagrant: CLI package command</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://www.vagrantup.com/vagrant-cloud/boxes/create"
-                  >Vagrant: Creating a New Vagrant Box</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://github.com/fabiohbarbosa/vagrant-windows7"
-                  >Vagrant Windows Machine</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="http://www.hurryupandwait.io/blog/in-search-of-a-light-weight-windows-vagrant-box"
-                  >In search of a lightweight windows vagrant box</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://github.com/jeffskinnerbox/Windows-10-Vagrant-Box"
-                  >Vagrant Box for Windows 10</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://github.com/fabiohbarbosa/vagrant-windows7"
-                  >Vagrant Windows 7 Machine</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://www.vagrantup.com/docs/providers/basic_usage#default-provider"
-                  >Vagrant: Basic Provider Usage</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://www.vagrantup.com/docs/providers/vmware"
-                  >Vagrant: VMware Provider</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://www.vagrantup.com/docs/providers/default"
-                  >Vagrant: Default Provider</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://www.vagrantup.com/docs/boxes/format"
-                  >Vagrant: Box File Format</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://mesd.ag/windows-10-vagrant-box/"
-                  >CREATE A WINDOWS 10 VAGRANT BOX</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://softwaretester.info/create-windows-10-vagrant-base-box/"
-                  >Create Windows 10 Vagrant Base Box</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://dev.to/jeikabu/reusable-windows-vms-with-vagrant-2h5c"
-                  >Reusable Windows VMs with Vagrant</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://dennypc.wordpress.com/2014/06/09/creating-a-windows-box-with-vagrant-1-6/"
-                  >Creating a Windows Box with Vagrant 1.6</a
-                >
-              </li>
-            </ul>
+        <h2 id="Publish-Your-Base-Box">
+          <a
+            href="#Publish-Your-Base-Box"
+            class="headerlink"
+            title="Publish Your Base Box"
+          ></a
+          >Publish Your Base Box
+        </h2>
+        <p>
+          Open
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://app.vagrantup.com/boxes/new"
+            >https://app.vagrantup.com/boxes/new</a
+          >
+          and follow the instruction to create a Box. Once the Box is created,
+          select <code>Add a provider</code>, and then choose corresponding
+          provider and upload the box file. You can also use
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://app.vagrantup.com/vitamina/boxes/Windows7"
+            >my box distribution</a
+          >.
+        </p>
+        <h2 id="Use-Your-Base-Box">
+          <a
+            href="#Use-Your-Base-Box"
+            class="headerlink"
+            title="Use Your Base Box"
+          ></a
+          >Use Your Base Box
+        </h2>
+        <p>
+          You can use <code>vagrant up</code> command with the
+          <code>--provider</code> flag to specify the provider you want to use
+          and then specify the base box distribution with
+          <code>config.vm.box = &quot;vitamina/Windows7&quot;</code>.
+        </p>
+        <h2 id="Reference">
+          <a href="#Reference" class="headerlink" title="Reference"></a
+          >Reference
+        </h2>
+        <ul>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://huestones.co.uk/2015/08/creating-a-windows-10-base-box-for-vagrant-with-virtualbox/"
+              >Creating a Windows 10 Base Box for Vagrant with VirtualBox</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://www.vagrantup.com/docs/providers/virtualbox/boxes"
+              >Vagrant: Creating a Base Box</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://www.vagrantup.com/docs/cli/package"
+              >Vagrant: CLI package command</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://www.vagrantup.com/vagrant-cloud/boxes/create"
+              >Vagrant: Creating a New Vagrant Box</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://github.com/fabiohbarbosa/vagrant-windows7"
+              >Vagrant Windows Machine</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="http://www.hurryupandwait.io/blog/in-search-of-a-light-weight-windows-vagrant-box"
+              >In search of a lightweight windows vagrant box</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://github.com/jeffskinnerbox/Windows-10-Vagrant-Box"
+              >Vagrant Box for Windows 10</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://github.com/fabiohbarbosa/vagrant-windows7"
+              >Vagrant Windows 7 Machine</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://www.vagrantup.com/docs/providers/basic_usage#default-provider"
+              >Vagrant: Basic Provider Usage</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://www.vagrantup.com/docs/providers/vmware"
+              >Vagrant: VMware Provider</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://www.vagrantup.com/docs/providers/default"
+              >Vagrant: Default Provider</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://www.vagrantup.com/docs/boxes/format"
+              >Vagrant: Box File Format</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://mesd.ag/windows-10-vagrant-box/"
+              >CREATE A WINDOWS 10 VAGRANT BOX</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://softwaretester.info/create-windows-10-vagrant-base-box/"
+              >Create Windows 10 Vagrant Base Box</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://dev.to/jeikabu/reusable-windows-vms-with-vagrant-2h5c"
+              >Reusable Windows VMs with Vagrant</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://dennypc.wordpress.com/2014/06/09/creating-a-windows-box-with-vagrant-1-6/"
+              >Creating a Windows Box with Vagrant 1.6</a
+            >
+          </li>
+        </ul>
 
-            <hr />
+        <hr />
 
-            <ul class="list-group">
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/Virtualization/">
-                  Virtualización, Contenedores y Cloud Computing
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row justify-content-center">
-          <!-- Sidebar Container -->
-
-          <div class="col-lg-8` col-md-10 sidebar-container">
-            <!-- Friends Blog -->
-          </div>
-        </div>
+        <ul class="list-group">
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Virtualization/">
+              Virtualización, Contenedores y Cloud Computing
+            </a>
+          </li>
+        </ul>
       </div>
     </article>
     <!-- Custom Theme JavaScript -->

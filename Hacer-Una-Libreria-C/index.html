@@ -138,192 +138,144 @@
     />
 
     <!-- Post Content -->
-    <article>
-      <div class="container">
-        <div class="row">
-          <!-- Post Container -->
-          <div class="order-lg-2 col-lg-3 col-12 toc-col" style="z-index: 1">
-            <ol class="toc">
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#Interfaz-de-Usuario"
-                  ><span class="toc-text">Interfaz de Usuario</span></a
-                >
-              </li>
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#Descripcion-de-codigo"
-                  ><span class="toc-text">Descripción de código</span></a
-                >
-                <ol class="toc-child">
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Head"
-                      ><span class="toc-text">Head</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Tail"
-                      ><span class="toc-text">Tail</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Longlines"
-                      ><span class="toc-text">Longlines</span></a
-                    >
-                  </li>
-                </ol>
-              </li>
-            </ol>
-          </div>
+    <article class="container" style="width: 100%; max-width: 100%">
+      <!-- Post Container -->
+      <div class="post-container">
+        <p>
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://github.com/vitaminac/code/blob/master/competition/so/libreria.h"
+            >Libraría.h</a
+          >
+        </p>
+        <h2 id="Interfaz-de-Usuario">
+          <a
+            href="#Interfaz-de-Usuario"
+            class="headerlink"
+            title="Interfaz de Usuario"
+          ></a
+          >Interfaz de Usuario
+        </h2>
+        <p>
+          Esta práctica consiste en implementar una librería en el lenguaje de
+          programación C. con tres funciones, head, tail y longline, que
+          muestran las N líneas por la salida estándar. Existe las diferentes
+          opciones. La siguiente pantalla muestra la ayuda cuando el usuario no
+          haya pasado ningún argumento.
+        </p>
+        <p><img src="menu.png" alt="Menu" /></p>
+        <p>
+          El valor de N es opcional, si no especificamos el valor N, por defecto
+          es 5.
+        </p>
+        <p>Luego nos pedirá que introduzcamos algunas líneas con el teclado.</p>
+        <p><img src="head.png" alt="Head" /></p>
+        <p>Para simplificar el testeo del programa hemos usado pipe.</p>
+        <p>
+          Esta pantalla es un ejemplo en el que le damos la entrada y le pedimos
+          que muestre las 10 líneas por la salida estándar. La entrada que le
+          pasamos es el resultado del comando ps aux mediante pipe, que es la
+          lista de los procesos en ejecución.
+        </p>
+        <p><img src="tail1.png" alt="Tail" /></p>
+        <p>
+          Este ejemplo es lo mismo que antes solo que le pedimos que muestre más
+          líneas.
+        </p>
+        <p><img src="tail2.png" alt="Tail" /></p>
+        <p>
+          Si la entrada que le pasamos no tiene suficientes líneas, es decir,
+          menos que N. Muestra todos sus contenidos.
+        </p>
+        <p>
+          Si los argumentos que haya pasado son ilegales muestra un mensaje de
+          error.
+        </p>
+        <p><img src="long.png" alt="Long" /></p>
+        <h2 id="Descripcion-de-codigo">
+          <a
+            href="#Descripcion-de-codigo"
+            class="headerlink"
+            title="Descripción de código"
+          ></a
+          >Descripción de código
+        </h2>
+        <h3 id="Head">
+          <a href="#Head" class="headerlink" title="Head"></a>Head
+        </h3>
+        <p>
+          La función head muestra las N primeras líneas en la salida estándar
+          recibidas por la entrada.<br />Necesitamos una estructura de dato que
+          nos permite guardar los caracteres leídos de una línea. Utilizamos un
+          puntero a una cadena de caracteres, char * line.<br />Reservamos
+          malloc un tamaño mínimo del buffer, capacity y lo multiplicamos por
+          tamaño de cada caracter sizeof(char) para establecer el tamaño de la
+          línea, si la línea que tenemos que leer supera la capacidad actual,
+          duplicamos realloc la capacidad del buffer.<br />También necesitamos
+          una variable entera length que se utiliza como longitud actual de la
+          línea e ir incrementando length++ cuando leemos más caracteres
+          getchar, si supera el tamaño de buffer duplicamos. También hemos hecho
+          la comprobación de que si existe suficiente memoria para leer dichas
+          líneas.<br />Es posible que la entrada que nos pase no contiene menos
+          de N líneas. Por eso tenemos que dividir en casos y hacer el
+          control.<br />Cuando llega al final de una línea, guardamos un null
+          char ‘\0’ en la última posición, reiniciar las variables de control
+          length&#x3D;0, ponemos el resultado de la línea leído en la salida y
+          seguir leyendo hasta N líneas. Al final de la función necesitamos
+          liberar el puntero.
+        </p>
+        <h3 id="Tail">
+          <a href="#Tail" class="headerlink" title="Tail"></a>Tail
+        </h3>
+        <p>
+          La función tail muestra las N últimas líneas en la salida estándar
+          recibida por la entrada.<br />Es similar a la función head la
+          estructura de dato que utilizamos es una lista de cadena de caracteres
+          char **, entendemos a cadena de caracteres como una cadena de
+          caracteres char *. La capacidad de la lista es N y la capacidad de
+          cada cadena está limitado por una variable capacities. Duplicamos
+          automáticamente el tamaño si es necesario.
+        </p>
+        <p>
+          Además de una variable para indicar la longitud de la línea actual
+          characterNumber. También tenemos que añadir un índice para llevar la
+          cuenta de líneas leidos lineNumber.
+        </p>
+        <p>
+          Primero inicializamos la lista de N cadena, vamos leyendo carácter a
+          carácter, cada vez que leemos un carácter aumentamos la variable
+          characterNumber. Si llega al carácter de cambio de línea ‘\n’ añadimos
+          null char al final, reiniciamos el valor carácterNumber a 0,
+          aumentamos lineNumber, y guardamos la línea en la position lineNumber
+          módulo N, así conseguimos reemplazar la última línea laida. Cuando lea
+          la N+1 líneas puedan sustituir la primera línea. Y así cuando llegue
+          al final EOF, envía los N últimos línea leídas al.
+        </p>
+        <h3 id="Longlines">
+          <a href="#Longlines" class="headerlink" title="Longlines"></a
+          >Longlines
+        </h3>
+        <p>
+          La función longlines muestra las N líneas más largas recibidas de
+          forma orden de mayor a menor, o todas ellas si hay menos de N líneas,
+          por la entrada de forma ordenada en la salida estándar. Empleamos un
+          procedimiento similar como hacemos en tail. Y cuando el usuario
+          introduzca más de N líneas comprobamos que es más larga que la línea
+          más corta y reordenamos en caso necesario.
+        </p>
+        <p>
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://github.com/vitaminac/code/blob/master/competition/so/libreria.c"
+            >Libraría.c</a
+          >
+        </p>
 
-          <div class="order-lg-1 col-lg-9 col-12 post-container">
-            <p>
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://github.com/vitaminac/code/blob/master/competition/so/libreria.h"
-                >Libraría.h</a
-              >
-            </p>
-            <h2 id="Interfaz-de-Usuario">
-              <a
-                href="#Interfaz-de-Usuario"
-                class="headerlink"
-                title="Interfaz de Usuario"
-              ></a
-              >Interfaz de Usuario
-            </h2>
-            <p>
-              Esta práctica consiste en implementar una librería en el lenguaje
-              de programación C. con tres funciones, head, tail y longline, que
-              muestran las N líneas por la salida estándar. Existe las
-              diferentes opciones. La siguiente pantalla muestra la ayuda cuando
-              el usuario no haya pasado ningún argumento.
-            </p>
-            <p><img src="menu.png" alt="Menu" /></p>
-            <p>
-              El valor de N es opcional, si no especificamos el valor N, por
-              defecto es 5.
-            </p>
-            <p>
-              Luego nos pedirá que introduzcamos algunas líneas con el teclado.
-            </p>
-            <p><img src="head.png" alt="Head" /></p>
-            <p>Para simplificar el testeo del programa hemos usado pipe.</p>
-            <p>
-              Esta pantalla es un ejemplo en el que le damos la entrada y le
-              pedimos que muestre las 10 líneas por la salida estándar. La
-              entrada que le pasamos es el resultado del comando ps aux mediante
-              pipe, que es la lista de los procesos en ejecución.
-            </p>
-            <p><img src="tail1.png" alt="Tail" /></p>
-            <p>
-              Este ejemplo es lo mismo que antes solo que le pedimos que muestre
-              más líneas.
-            </p>
-            <p><img src="tail2.png" alt="Tail" /></p>
-            <p>
-              Si la entrada que le pasamos no tiene suficientes líneas, es
-              decir, menos que N. Muestra todos sus contenidos.
-            </p>
-            <p>
-              Si los argumentos que haya pasado son ilegales muestra un mensaje
-              de error.
-            </p>
-            <p><img src="long.png" alt="Long" /></p>
-            <h2 id="Descripcion-de-codigo">
-              <a
-                href="#Descripcion-de-codigo"
-                class="headerlink"
-                title="Descripción de código"
-              ></a
-              >Descripción de código
-            </h2>
-            <h3 id="Head">
-              <a href="#Head" class="headerlink" title="Head"></a>Head
-            </h3>
-            <p>
-              La función head muestra las N primeras líneas en la salida
-              estándar recibidas por la entrada.<br />Necesitamos una estructura
-              de dato que nos permite guardar los caracteres leídos de una
-              línea. Utilizamos un puntero a una cadena de caracteres, char *
-              line.<br />Reservamos malloc un tamaño mínimo del buffer, capacity
-              y lo multiplicamos por tamaño de cada caracter sizeof(char) para
-              establecer el tamaño de la línea, si la línea que tenemos que leer
-              supera la capacidad actual, duplicamos realloc la capacidad del
-              buffer.<br />También necesitamos una variable entera length que se
-              utiliza como longitud actual de la línea e ir incrementando
-              length++ cuando leemos más caracteres getchar, si supera el tamaño
-              de buffer duplicamos. También hemos hecho la comprobación de que
-              si existe suficiente memoria para leer dichas líneas.<br />Es
-              posible que la entrada que nos pase no contiene menos de N líneas.
-              Por eso tenemos que dividir en casos y hacer el control.<br />Cuando
-              llega al final de una línea, guardamos un null char ‘\0’ en la
-              última posición, reiniciar las variables de control length&#x3D;0,
-              ponemos el resultado de la línea leído en la salida y seguir
-              leyendo hasta N líneas. Al final de la función necesitamos liberar
-              el puntero.
-            </p>
-            <h3 id="Tail">
-              <a href="#Tail" class="headerlink" title="Tail"></a>Tail
-            </h3>
-            <p>
-              La función tail muestra las N últimas líneas en la salida estándar
-              recibida por la entrada.<br />Es similar a la función head la
-              estructura de dato que utilizamos es una lista de cadena de
-              caracteres char **, entendemos a cadena de caracteres como una
-              cadena de caracteres char *. La capacidad de la lista es N y la
-              capacidad de cada cadena está limitado por una variable
-              capacities. Duplicamos automáticamente el tamaño si es necesario.
-            </p>
-            <p>
-              Además de una variable para indicar la longitud de la línea actual
-              characterNumber. También tenemos que añadir un índice para llevar
-              la cuenta de líneas leidos lineNumber.
-            </p>
-            <p>
-              Primero inicializamos la lista de N cadena, vamos leyendo carácter
-              a carácter, cada vez que leemos un carácter aumentamos la variable
-              characterNumber. Si llega al carácter de cambio de línea ‘\n’
-              añadimos null char al final, reiniciamos el valor carácterNumber a
-              0, aumentamos lineNumber, y guardamos la línea en la position
-              lineNumber módulo N, así conseguimos reemplazar la última línea
-              laida. Cuando lea la N+1 líneas puedan sustituir la primera línea.
-              Y así cuando llegue al final EOF, envía los N últimos línea leídas
-              al.
-            </p>
-            <h3 id="Longlines">
-              <a href="#Longlines" class="headerlink" title="Longlines"></a
-              >Longlines
-            </h3>
-            <p>
-              La función longlines muestra las N líneas más largas recibidas de
-              forma orden de mayor a menor, o todas ellas si hay menos de N
-              líneas, por la entrada de forma ordenada en la salida estándar.
-              Empleamos un procedimiento similar como hacemos en tail. Y cuando
-              el usuario introduzca más de N líneas comprobamos que es más larga
-              que la línea más corta y reordenamos en caso necesario.
-            </p>
-            <p>
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://github.com/vitaminac/code/blob/master/competition/so/libreria.c"
-                >Libraría.c</a
-              >
-            </p>
+        <hr />
 
-            <hr />
-
-            <ul class="list-group"></ul>
-          </div>
-        </div>
-
-        <div class="row justify-content-center">
-          <!-- Sidebar Container -->
-
-          <div class="col-lg-8` col-md-10 sidebar-container">
-            <!-- Friends Blog -->
-          </div>
-        </div>
+        <ul class="list-group"></ul>
       </div>
     </article>
     <!-- Custom Theme JavaScript -->

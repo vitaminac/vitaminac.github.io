@@ -7,6 +7,7 @@
       "tags": ["Game", "魔域2.4"],
       "isLegacy": true,
       "lang": "zh",
+      "tocHtml": "<p>{% flash moyu2_4.swf 800 %}</p>",
       "path": "/moyu24/index.html"
     },
     "lang": "zh",

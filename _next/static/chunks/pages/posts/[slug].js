@@ -554,6 +554,7 @@
             }
           }, [a, o]),
           (0, s.jsx)("iframe", {
+            name: e.title,
             title: e.title,
             src: e.src,
             width: "100%",
@@ -630,28 +631,27 @@
                       }),
                     ],
                   }),
-                  t.isLegacy
-                    ? (0, s.jsx)(l, { title: t.slug, src: t.path })
-                    : (0, s.jsx)(s.Fragment, {
-                        children: (0, s.jsxs)("div", {
-                          className: "row",
-                          children: [
-                            (0, s.jsx)("nav", {
-                              className: w()(
-                                j().toc,
-                                "col-12 col-lg-3 order-lg-2",
-                              ),
-                              dangerouslySetInnerHTML: { __html: t.tocHtml },
-                            }),
-                            (0, s.jsx)("article", {
-                              className: "col-12 col-lg-9 order-lg-1",
-                              dangerouslySetInnerHTML: {
-                                __html: t.articleHtml,
-                              },
-                            }),
-                          ],
-                        }),
+                  (0, s.jsxs)("div", {
+                    className: "row",
+                    children: [
+                      (0, s.jsx)("nav", {
+                        className: w()(j().toc, "col-12 col-lg-3 order-lg-2"),
+                        dangerouslySetInnerHTML: { __html: t.tocHtml },
                       }),
+                      t.isLegacy
+                        ? (0, s.jsx)("article", {
+                            className: "col-12 col-lg-9 order-lg-1",
+                            children: (0, s.jsx)(l, {
+                              title: t.slug,
+                              src: t.path,
+                            }),
+                          })
+                        : (0, s.jsx)("article", {
+                            className: "col-12 col-lg-9 order-lg-1",
+                            dangerouslySetInnerHTML: { __html: t.articleHtml },
+                          }),
+                    ],
+                  }),
                   (0, s.jsx)("aside", {
                     children: (0, s.jsx)(x, {
                       username: a.disqusUsername,

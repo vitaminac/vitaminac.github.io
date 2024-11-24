@@ -7,6 +7,7 @@
       "tags": ["Testing", "Mock", "Fake"],
       "isLegacy": true,
       "lang": "es",
+      "tocHtml": "<p>Mock se refiere al término Mock Object, los cuales son objetos que imitan el comportamiento de objetos reales de una forma controlada. Se usan para probar a otros objetos en pruebas unitarias que esperan mensajes de una clase.</p>\n<p>Un fake es un tipo de test unitario automatizado que puede contener comportamientos de negocio. Los fakes encajan con una interfaz, el mayor beneficio que nos aportan los fakes es que reducen el acoplamiento en el código.</p>\n<p>El mocking introduce suposiciones que introduce riesgo.</p>\n<p>Escribiendo fakes sencillos que se adhieren a las interfaces, podemos ver que no necesitamos los mocks.</p>",
       "path": "/Mock-Fake-Testing/index.html"
     },
     "lang": "es",

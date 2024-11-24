@@ -144,173 +144,144 @@
     />
 
     <!-- Post Content -->
-    <article>
-      <div class="container">
-        <div class="row">
-          <!-- Post Container -->
-          <div class="order-lg-2 col-lg-3 col-12 toc-col" style="z-index: 1">
-            <ol class="toc">
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#Reference"
-                  ><span class="toc-text">Reference</span></a
-                >
+    <article class="container" style="width: 100%; max-width: 100%">
+      <!-- Post Container -->
+      <div class="post-container">
+        <ol>
+          <li>
+            You need to have a Xiaomi account that has been given permission for
+            unlocking device.
+          </li>
+          <li>
+            Download MiFlash from
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://www.miui.com/unlock/index.html"
+              >https://www.miui.com/unlock/index.html</a
+            >
+          </li>
+          <li>
+            Download the crDroid ROM for Redmi Note 7
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://crdroid.net/lavender/9"
+              >https://crdroid.net/lavender/9</a
+            >
+          </li>
+          <li>Download firmware update from [1]</li>
+          <li>
+            Download NikGapps from
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://sourceforge.net/projects/nikgapps/files/Releases/NikGapps-T/"
+              >https://sourceforge.net/projects/nikgapps/files/Releases/NikGapps-T/</a
+            >. Core variant is enough.
+          </li>
+          <li>
+            Download OrangeFox recovery for Redmi Note 7
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://orangefox.download/en/device/lavender"
+              >https://orangefox.download/en/device/lavender</a
+            >
+            <ul>
+              <li>
+                crDroid version 9.8 introduce dynamic partition. We need to use
+                OrangeFox because is the one that support dynamic partition
+                since
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://orangefox.download/release/64e67545531cf4e269b8aaa3"
+                  >https://orangefox.download/release/64e67545531cf4e269b8aaa3</a
+                >.
               </li>
-            </ol>
-          </div>
+            </ul>
+          </li>
+          <li>
+            Download Magisk from
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://github.com/topjohnwu/Magisk/releases"
+              >https://github.com/topjohnwu/Magisk/releases</a
+            >
+          </li>
+          <li>
+            Connect the phone to your laptop and open MiFlash to unlock your
+            device following the instruction.
+          </li>
+          <li>Reboot into bootloader mode</li>
+          <li>
+            Execute the command to detect your device
+            <code>fastboot.exe devices</code>
+          </li>
+          <li>
+            Flash OrangeFox recovery from bootloader with
+            <code>fastboot.exe flash recovery recovery.img</code>
+          </li>
+          <li>Reboot into recovery mode <code>fastboot.exe reboot</code></li>
+          <li>Wipe Dalvik, cache, system, vendor from recovery</li>
+          <li>Copy the downloaded files to your phone in recovery mode</li>
+          <li>Flash firmware update from recovery</li>
+          <li>Flash <code>crDroid</code> from recovery</li>
+          <li>Reboot into system once and reboot again into recovery</li>
+          <li>Flash <code>NikGapps</code> from recovery</li>
+          <li>Boot into system</li>
+          <li>Install <code>Magisk-XX.apk</code></li>
+          <li>
+            Follow this instruction to complete <code>Magisk</code> installation
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://topjohnwu.github.io/Magisk/install.html"
+              >https://topjohnwu.github.io/Magisk/install.html</a
+            >
+          </li>
+          <li>Install <code>F-Droid</code></li>
+          <li>Install <code>Aurora Store</code> from <code>F-Droid</code></li>
+          <li>Install <code>Gboard</code></li>
+          <li>Install <code>Chrome</code> from <code>Aurora Store</code></li>
+          <li>Install 腾讯应用宝 from <code>Chrome</code></li>
+        </ol>
+        <h2 id="Reference">
+          <a href="#Reference" class="headerlink" title="Reference"></a
+          >Reference
+        </h2>
+        <ol>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://xdaforums.com/t/rom-13-0-official-lavender-crdroid-v9-10-28-10-2023.4638733/"
+              >https://xdaforums.com/t/rom-13-0-official-lavender-crdroid-v9-10-28-10-2023.4638733/</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://xdaforums.com/t/closed-rom-13-0-official-lavender-crdroid-v9-8-14-08-2023.4523341/"
+              >https://xdaforums.com/t/closed-rom-13-0-official-lavender-crdroid-v9-8-14-08-2023.4523341/</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://xdaforums.com/t/closed-rom-13-0-official-lavender-crdroid-v9-8-14-08-2023.4523341/page-4#post-88874307"
+              >https://xdaforums.com/t/closed-rom-13-0-official-lavender-crdroid-v9-8-14-08-2023.4523341/page-4#post-88874307</a
+            >
+          </li>
+        </ol>
 
-          <div class="order-lg-1 col-lg-9 col-12 post-container">
-            <ol>
-              <li>
-                You need to have a Xiaomi account that has been given permission
-                for unlocking device.
-              </li>
-              <li>
-                Download MiFlash from
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://www.miui.com/unlock/index.html"
-                  >https://www.miui.com/unlock/index.html</a
-                >
-              </li>
-              <li>
-                Download the crDroid ROM for Redmi Note 7
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://crdroid.net/lavender/9"
-                  >https://crdroid.net/lavender/9</a
-                >
-              </li>
-              <li>Download firmware update from [1]</li>
-              <li>
-                Download NikGapps from
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://sourceforge.net/projects/nikgapps/files/Releases/NikGapps-T/"
-                  >https://sourceforge.net/projects/nikgapps/files/Releases/NikGapps-T/</a
-                >. Core variant is enough.
-              </li>
-              <li>
-                Download OrangeFox recovery for Redmi Note 7
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://orangefox.download/en/device/lavender"
-                  >https://orangefox.download/en/device/lavender</a
-                >
-                <ul>
-                  <li>
-                    crDroid version 9.8 introduce dynamic partition. We need to
-                    use OrangeFox because is the one that support dynamic
-                    partition since
-                    <a
-                      target="_blank"
-                      rel="noopener"
-                      href="https://orangefox.download/release/64e67545531cf4e269b8aaa3"
-                      >https://orangefox.download/release/64e67545531cf4e269b8aaa3</a
-                    >.
-                  </li>
-                </ul>
-              </li>
-              <li>
-                Download Magisk from
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://github.com/topjohnwu/Magisk/releases"
-                  >https://github.com/topjohnwu/Magisk/releases</a
-                >
-              </li>
-              <li>
-                Connect the phone to your laptop and open MiFlash to unlock your
-                device following the instruction.
-              </li>
-              <li>Reboot into bootloader mode</li>
-              <li>
-                Execute the command to detect your device
-                <code>fastboot.exe devices</code>
-              </li>
-              <li>
-                Flash OrangeFox recovery from bootloader with
-                <code>fastboot.exe flash recovery recovery.img</code>
-              </li>
-              <li>
-                Reboot into recovery mode <code>fastboot.exe reboot</code>
-              </li>
-              <li>Wipe Dalvik, cache, system, vendor from recovery</li>
-              <li>Copy the downloaded files to your phone in recovery mode</li>
-              <li>Flash firmware update from recovery</li>
-              <li>Flash <code>crDroid</code> from recovery</li>
-              <li>Reboot into system once and reboot again into recovery</li>
-              <li>Flash <code>NikGapps</code> from recovery</li>
-              <li>Boot into system</li>
-              <li>Install <code>Magisk-XX.apk</code></li>
-              <li>
-                Follow this instruction to complete
-                <code>Magisk</code> installation
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://topjohnwu.github.io/Magisk/install.html"
-                  >https://topjohnwu.github.io/Magisk/install.html</a
-                >
-              </li>
-              <li>Install <code>F-Droid</code></li>
-              <li>
-                Install <code>Aurora Store</code> from <code>F-Droid</code>
-              </li>
-              <li>Install <code>Gboard</code></li>
-              <li>
-                Install <code>Chrome</code> from <code>Aurora Store</code>
-              </li>
-              <li>Install 腾讯应用宝 from <code>Chrome</code></li>
-            </ol>
-            <h2 id="Reference">
-              <a href="#Reference" class="headerlink" title="Reference"></a
-              >Reference
-            </h2>
-            <ol>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://xdaforums.com/t/rom-13-0-official-lavender-crdroid-v9-10-28-10-2023.4638733/"
-                  >https://xdaforums.com/t/rom-13-0-official-lavender-crdroid-v9-10-28-10-2023.4638733/</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://xdaforums.com/t/closed-rom-13-0-official-lavender-crdroid-v9-8-14-08-2023.4523341/"
-                  >https://xdaforums.com/t/closed-rom-13-0-official-lavender-crdroid-v9-8-14-08-2023.4523341/</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://xdaforums.com/t/closed-rom-13-0-official-lavender-crdroid-v9-8-14-08-2023.4523341/page-4#post-88874307"
-                  >https://xdaforums.com/t/closed-rom-13-0-official-lavender-crdroid-v9-8-14-08-2023.4523341/page-4#post-88874307</a
-                >
-              </li>
-            </ol>
+        <hr />
 
-            <hr />
-
-            <ul class="list-group"></ul>
-          </div>
-        </div>
-
-        <div class="row justify-content-center">
-          <!-- Sidebar Container -->
-
-          <div class="col-lg-8` col-md-10 sidebar-container">
-            <!-- Friends Blog -->
-          </div>
-        </div>
+        <ul class="list-group"></ul>
       </div>
     </article>
     <!-- Custom Theme JavaScript -->

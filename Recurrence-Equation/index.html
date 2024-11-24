@@ -141,404 +141,328 @@
     />
 
     <!-- Post Content -->
-    <article>
-      <div class="container">
-        <div class="row">
-          <!-- Post Container -->
-          <div class="order-lg-2 col-lg-3 col-12 toc-col" style="z-index: 1">
-            <ol class="toc">
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#Introduction"
-                  ><span class="toc-text">Introduction</span></a
-                >
-              </li>
-              <li class="toc-item toc-level-2">
-                <a
-                  class="toc-link"
-                  href="#Solving-Recurrence-Relations-for-Fibonacci-Numbers"
-                  ><span class="toc-text"
-                    >Solving Recurrence Relations for Fibonacci Numbers</span
-                  ></a
-                >
-                <ol class="toc-child">
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Define-Generating-Functions"
-                      ><span class="toc-text"
-                        >Define Generating Functions</span
-                      ></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Find-The-Relationship"
-                      ><span class="toc-text">Find The Relationship</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Solve-the-equation"
-                      ><span class="toc-text">Solve the equation</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Obtain-closed-form-expression"
-                      ><span class="toc-text"
-                        >Obtain closed-form expression</span
-                      ></a
-                    >
-                  </li>
-                </ol>
-              </li>
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#Reference"
-                  ><span class="toc-text">Reference</span></a
-                >
-              </li>
-            </ol>
-          </div>
+    <article class="container" style="width: 100%; max-width: 100%">
+      <!-- Post Container -->
+      <div class="post-container">
+        <h2 id="Introduction">
+          <a href="#Introduction" class="headerlink" title="Introduction"></a
+          >Introduction
+        </h2>
+        <p>
+          Sometimes we need to know the complexity of a recursive function, we
+          usually use induction method (or sometimes is called substitution
+          method), recursion-tree method and
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://en.wikipedia.org/wiki/Master_theorem_(analysis_of_algorithms)"
+            >master theorem</a
+          >. However all these methods only give a big $\mathcal{O}$ uppper
+          bound approximation. If we want to find a closed-form expression of
+          recursive algorithm’s complexity we can solve recurrence equation
+          using <strong>generating functions</strong>.
+        </p>
+        <p>
+          A famous example for the recurrence equation is for the Fibonacci
+          numbers
+        </p>
+        <p>
+          $$<br />\begin{split}<br />f_0 &amp;&#x3D; 0\\\\<br />f_1 &amp;&#x3D;
+          1\\\\<br />f_n &amp;&#x3D; f_{n - 1} + f_{n - 2} \quad n \ge 2<br />\end{split}<br />$$
+        </p>
+        <p>
+          By using the generating functions one can obtained the closed-form
+          expression for the complexity of a recursive algorithm by following
+          these steps
+        </p>
+        <ol>
+          <li>Define some proper <strong>generating functions</strong></li>
+          <li>Find the <strong>relationship</strong> between them</li>
+          <li>Solve the equations in terms of other generating functions</li>
+          <li>
+            Find the coefficients using <strong>partial fractions</strong> and
+            <strong>differentiation</strong> and obtain the closed-form
+            expression
+          </li>
+        </ol>
+        <h2 id="Solving-Recurrence-Relations-for-Fibonacci-Numbers">
+          <a
+            href="#Solving-Recurrence-Relations-for-Fibonacci-Numbers"
+            class="headerlink"
+            title="Solving Recurrence Relations for Fibonacci Numbers"
+          ></a
+          >Solving Recurrence Relations for Fibonacci Numbers
+        </h2>
+        <h3 id="Define-Generating-Functions">
+          <a
+            href="#Define-Generating-Functions"
+            class="headerlink"
+            title="Define Generating Functions"
+          ></a
+          >Define Generating Functions
+        </h3>
+        <p>
+          $$<br />G(x) \longleftrightarrow \langle f_0, f_1, f_2, f_3, \dots
+          \rangle \longleftrightarrow \langle 0, 1, f_1 + f_0, f_2 + f_1, f_3 +
+          f_2, \dots \rangle\\\\<br />$$
+        </p>
+        <h3 id="Find-The-Relationship">
+          <a
+            href="#Find-The-Relationship"
+            class="headerlink"
+            title="Find The Relationship"
+          ></a
+          >Find The Relationship
+        </h3>
+        <p>
+          $$<br />\begin{split}<br />\langle 0, 1, 0, 0, 0, \dots \rangle &amp;
+          \longleftrightarrow x\\\\<br />\langle 0, f_0, f_1, f_2, f_3, \dots
+          \rangle &amp; \longleftrightarrow x \cdot G(x)\\\\<br />\langle 0, 0,
+          f_0, f_1, f_2, \dots \rangle &amp; \longleftrightarrow x^2 \cdot
+          G(x)\\\\<br />\langle 0, 1 + f_0, f_1 + f_2, f_2 + f_1, f_3 + f_2,
+          \dots \rangle &amp; \longleftrightarrow x + x \cdot G(x) + x^2 \cdot
+          G(x)\\\\<br />\end{split}<br />$$
+        </p>
+        <h3 id="Solve-the-equation">
+          <a
+            href="#Solve-the-equation"
+            class="headerlink"
+            title="Solve the equation"
+          ></a
+          >Solve the equation
+        </h3>
+        <p>
+          $$<br />\begin{split}<br />G(x) &amp;&#x3D; x + x \cdot G(x) + x^2
+          \cdot G(x)\\\\<br />G(x) &amp;&#x3D; \frac{x}{1 - x - x^2}<br />\end{split}<br />$$
+        </p>
+        <h3 id="Obtain-closed-form-expression">
+          <a
+            href="#Obtain-closed-form-expression"
+            class="headerlink"
+            title="Obtain closed-form expression"
+          ></a
+          >Obtain closed-form expression
+        </h3>
+        <p>We can factor the denominator</p>
+        <p>$$<br />1 - x - x^2 &#x3D; (1 - a_1 x) (1 - a_2 x)<br />$$</p>
+        <p>so we can calculate that</p>
+        <p>
+          $$<br />\begin{split}<br />a_1 &amp;&#x3D; \frac{1 +
+          \sqrt{5}}{2}\\\\<br />a_2 &amp;&#x3D; \frac{1 - \sqrt{5}}{2}\\\\<br />\end{split}<br />$$
+        </p>
+        <p>then we can find $c_1$ and $c_2$ that satisfies</p>
+        <p>
+          $$<br />\frac{x}{1 - x - x^2} &#x3D; \frac{c_1}{1 - a_1 x} +
+          \frac{c_2}{1 - a_2 x}<br />$$
+        </p>
+        <p>after some calculates (see reference #1) we can know</p>
+        <p>
+          $$<br />\begin{split}<br />c_1 + c_2 &amp;&#x3D; 0\\\\<br />-(c_1 a_2
+          + c_2 a_1) &amp;&#x3D; 1\\\\<br />\end{split}<br />$$
+        </p>
+        <p>so we get</p>
+        <p>
+          $$<br />\begin{split}<br />c_1 &#x3D; \frac{1}{a_1 - a_2}\\\\<br />c_2
+          &#x3D; \frac{-1}{a_1 - a_2}\\\\<br />\end{split}<br />$$
+        </p>
+        <p>using partial fractions we know</p>
+        <p>
+          $$<br />f_n &#x3D; \frac{a_1^n}{\sqrt{5}} - \frac{a_2^n}{\sqrt{5}}
+          &#x3D; \frac{1}{\sqrt{5}} \Bigg( \Big( \frac{1 + \sqrt{5}}{2} \Big)^n
+          - \Big( \frac{1 - \sqrt{5}}{2} \Big)^n \Bigg)<br />$$
+        </p>
+        <h2 id="Reference">
+          <a href="#Reference" class="headerlink" title="Reference"></a
+          >Reference
+        </h2>
+        <ol>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/aadb9105d1139c866272ca0425fc6440_MIT6_042JF10_chap12.pdf"
+              >MIT 6.042j 2010 Readings Chapter 12 - Generating Functions</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/18b5495f7408055f9679e3afebb108ab_MIT6_042JF10_chap10.pdf"
+              >MIT 6.042j 2010 Readings Chapter 10 - Recurrences</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://en.wikipedia.org/wiki/Recurrence_relation"
+              >Wikipedia: Recurrence relation</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://en.wikipedia.org/wiki/Linear_recurrence_with_constant_coefficients"
+              >Wikipedia: Linear recurrence with constant coefficients</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://mathworld.wolfram.com/RecurrenceEquation.html"
+              >Wolfram MathWorld: Recurrence Equation</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://mathworld.wolfram.com/LinearRecurrenceEquation.html"
+              >Wolfram MathWorld: Linear Recurrence Equation</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://courses.csail.mit.edu/6.042/spring18/mcs.pdf"
+              >MIT 6.042j 2018 Book</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="http://discrete.openmathbooks.org/dmoi2/section-27.html"
+              >Discrete Mathematics - An Open Introduction: 5.1 Generating
+              Functions</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://math.stackexchange.com/questions/206158"
+              >Solving recurrence relation in 2 variables</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://cs.stackexchange.com/questions/102667"
+              >Solving recurrence relations with two variables</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://www.enjoyalgorithms.com/blog/time-complexity-analysis-of-recursion-in-programming"
+              >Time Complexity Analysis of Recursive Algorithms</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://www.geeksforgeeks.org/how-to-analyse-complexity-of-recurrence-relation/"
+              >How to analyse Complexity of Recurrence Relation</a
+            >
+          </li>
+        </ol>
 
-          <div class="order-lg-1 col-lg-9 col-12 post-container">
-            <h2 id="Introduction">
-              <a
-                href="#Introduction"
-                class="headerlink"
-                title="Introduction"
-              ></a
-              >Introduction
-            </h2>
-            <p>
-              Sometimes we need to know the complexity of a recursive function,
-              we usually use induction method (or sometimes is called
-              substitution method), recursion-tree method and
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://en.wikipedia.org/wiki/Master_theorem_(analysis_of_algorithms)"
-                >master theorem</a
-              >. However all these methods only give a big $\mathcal{O}$ uppper
-              bound approximation. If we want to find a closed-form expression
-              of recursive algorithm’s complexity we can solve recurrence
-              equation using <strong>generating functions</strong>.
-            </p>
-            <p>
-              A famous example for the recurrence equation is for the Fibonacci
-              numbers
-            </p>
-            <p>
-              $$<br />\begin{split}<br />f_0 &amp;&#x3D; 0\\\\<br />f_1
-              &amp;&#x3D; 1\\\\<br />f_n &amp;&#x3D; f_{n - 1} + f_{n - 2} \quad
-              n \ge 2<br />\end{split}<br />$$
-            </p>
-            <p>
-              By using the generating functions one can obtained the closed-form
-              expression for the complexity of a recursive algorithm by
-              following these steps
-            </p>
-            <ol>
-              <li>Define some proper <strong>generating functions</strong></li>
-              <li>Find the <strong>relationship</strong> between them</li>
-              <li>
-                Solve the equations in terms of other generating functions
-              </li>
-              <li>
-                Find the coefficients using
-                <strong>partial fractions</strong> and
-                <strong>differentiation</strong> and obtain the closed-form
-                expression
-              </li>
-            </ol>
-            <h2 id="Solving-Recurrence-Relations-for-Fibonacci-Numbers">
-              <a
-                href="#Solving-Recurrence-Relations-for-Fibonacci-Numbers"
-                class="headerlink"
-                title="Solving Recurrence Relations for Fibonacci Numbers"
-              ></a
-              >Solving Recurrence Relations for Fibonacci Numbers
-            </h2>
-            <h3 id="Define-Generating-Functions">
-              <a
-                href="#Define-Generating-Functions"
-                class="headerlink"
-                title="Define Generating Functions"
-              ></a
-              >Define Generating Functions
-            </h3>
-            <p>
-              $$<br />G(x) \longleftrightarrow \langle f_0, f_1, f_2, f_3, \dots
-              \rangle \longleftrightarrow \langle 0, 1, f_1 + f_0, f_2 + f_1,
-              f_3 + f_2, \dots \rangle\\\\<br />$$
-            </p>
-            <h3 id="Find-The-Relationship">
-              <a
-                href="#Find-The-Relationship"
-                class="headerlink"
-                title="Find The Relationship"
-              ></a
-              >Find The Relationship
-            </h3>
-            <p>
-              $$<br />\begin{split}<br />\langle 0, 1, 0, 0, 0, \dots \rangle
-              &amp; \longleftrightarrow x\\\\<br />\langle 0, f_0, f_1, f_2,
-              f_3, \dots \rangle &amp; \longleftrightarrow x \cdot G(x)\\\\<br />\langle
-              0, 0, f_0, f_1, f_2, \dots \rangle &amp; \longleftrightarrow x^2
-              \cdot G(x)\\\\<br />\langle 0, 1 + f_0, f_1 + f_2, f_2 + f_1, f_3
-              + f_2, \dots \rangle &amp; \longleftrightarrow x + x \cdot G(x) +
-              x^2 \cdot G(x)\\\\<br />\end{split}<br />$$
-            </p>
-            <h3 id="Solve-the-equation">
-              <a
-                href="#Solve-the-equation"
-                class="headerlink"
-                title="Solve the equation"
-              ></a
-              >Solve the equation
-            </h3>
-            <p>
-              $$<br />\begin{split}<br />G(x) &amp;&#x3D; x + x \cdot G(x) + x^2
-              \cdot G(x)\\\\<br />G(x) &amp;&#x3D; \frac{x}{1 - x - x^2}<br />\end{split}<br />$$
-            </p>
-            <h3 id="Obtain-closed-form-expression">
-              <a
-                href="#Obtain-closed-form-expression"
-                class="headerlink"
-                title="Obtain closed-form expression"
-              ></a
-              >Obtain closed-form expression
-            </h3>
-            <p>We can factor the denominator</p>
-            <p>$$<br />1 - x - x^2 &#x3D; (1 - a_1 x) (1 - a_2 x)<br />$$</p>
-            <p>so we can calculate that</p>
-            <p>
-              $$<br />\begin{split}<br />a_1 &amp;&#x3D; \frac{1 +
-              \sqrt{5}}{2}\\\\<br />a_2 &amp;&#x3D; \frac{1 -
-              \sqrt{5}}{2}\\\\<br />\end{split}<br />$$
-            </p>
-            <p>then we can find $c_1$ and $c_2$ that satisfies</p>
-            <p>
-              $$<br />\frac{x}{1 - x - x^2} &#x3D; \frac{c_1}{1 - a_1 x} +
-              \frac{c_2}{1 - a_2 x}<br />$$
-            </p>
-            <p>after some calculates (see reference #1) we can know</p>
-            <p>
-              $$<br />\begin{split}<br />c_1 + c_2 &amp;&#x3D; 0\\\\<br />-(c_1
-              a_2 + c_2 a_1) &amp;&#x3D; 1\\\\<br />\end{split}<br />$$
-            </p>
-            <p>so we get</p>
-            <p>
-              $$<br />\begin{split}<br />c_1 &#x3D; \frac{1}{a_1 - a_2}\\\\<br />c_2
-              &#x3D; \frac{-1}{a_1 - a_2}\\\\<br />\end{split}<br />$$
-            </p>
-            <p>using partial fractions we know</p>
-            <p>
-              $$<br />f_n &#x3D; \frac{a_1^n}{\sqrt{5}} - \frac{a_2^n}{\sqrt{5}}
-              &#x3D; \frac{1}{\sqrt{5}} \Bigg( \Big( \frac{1 + \sqrt{5}}{2}
-              \Big)^n - \Big( \frac{1 - \sqrt{5}}{2} \Big)^n \Bigg)<br />$$
-            </p>
-            <h2 id="Reference">
-              <a href="#Reference" class="headerlink" title="Reference"></a
-              >Reference
-            </h2>
-            <ol>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/aadb9105d1139c866272ca0425fc6440_MIT6_042JF10_chap12.pdf"
-                  >MIT 6.042j 2010 Readings Chapter 12 - Generating Functions</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/18b5495f7408055f9679e3afebb108ab_MIT6_042JF10_chap10.pdf"
-                  >MIT 6.042j 2010 Readings Chapter 10 - Recurrences</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://en.wikipedia.org/wiki/Recurrence_relation"
-                  >Wikipedia: Recurrence relation</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://en.wikipedia.org/wiki/Linear_recurrence_with_constant_coefficients"
-                  >Wikipedia: Linear recurrence with constant coefficients</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://mathworld.wolfram.com/RecurrenceEquation.html"
-                  >Wolfram MathWorld: Recurrence Equation</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://mathworld.wolfram.com/LinearRecurrenceEquation.html"
-                  >Wolfram MathWorld: Linear Recurrence Equation</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://courses.csail.mit.edu/6.042/spring18/mcs.pdf"
-                  >MIT 6.042j 2018 Book</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="http://discrete.openmathbooks.org/dmoi2/section-27.html"
-                  >Discrete Mathematics - An Open Introduction: 5.1 Generating
-                  Functions</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://math.stackexchange.com/questions/206158"
-                  >Solving recurrence relation in 2 variables</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://cs.stackexchange.com/questions/102667"
-                  >Solving recurrence relations with two variables</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://www.enjoyalgorithms.com/blog/time-complexity-analysis-of-recursion-in-programming"
-                  >Time Complexity Analysis of Recursive Algorithms</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://www.geeksforgeeks.org/how-to-analyse-complexity-of-recurrence-relation/"
-                  >How to analyse Complexity of Recurrence Relation</a
-                >
-              </li>
-            </ol>
+        <hr />
 
-            <hr />
+        <ul class="list-group">
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Google-Foobar-Dodge-The-Lasers/">
+              Google Foobar Dodge The Lasers
+            </a>
+          </li>
 
-            <ul class="list-group">
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a
-                  target="_parent"
-                  href="/posts/Google-Foobar-Dodge-The-Lasers/"
-                >
-                  Google Foobar Dodge The Lasers
-                </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Google-Foobar-Escape-Pods/">
+              Google Foobar Escape Pods
+            </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/Google-Foobar-Escape-Pods/">
-                  Google Foobar Escape Pods
-                </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a
+              target="_parent"
+              href="/posts/Google-Foobar-Free-the-Bunny-Prisoners/"
+            >
+              Google Foobar Free the Bunny Prisoners
+            </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a
-                  target="_parent"
-                  href="/posts/Google-Foobar-Free-the-Bunny-Prisoners/"
-                >
-                  Google Foobar Free the Bunny Prisoners
-                </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a
+              target="_parent"
+              href="/posts/Google-Kickstart-2019-Round-F-Flattening/"
+            >
+              Google Kickstart 2019 Round F Flattening
+            </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a
-                  target="_parent"
-                  href="/posts/Google-Kickstart-2019-Round-F-Flattening/"
-                >
-                  Google Kickstart 2019 Round F Flattening
-                </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a
+              target="_parent"
+              href="/posts/Google-Kickstart-2019-Round-G-Book-Reading/"
+            >
+              Google Kickstart 2019 Round G Book Reading
+            </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a
-                  target="_parent"
-                  href="/posts/Google-Kickstart-2019-Round-G-Book-Reading/"
-                >
-                  Google Kickstart 2019 Round G Book Reading
-                </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a
+              target="_parent"
+              href="/posts/Google-Kickstart-2019-Round-G-Shifts/"
+            >
+              Google Kickstart 2019 Round G Shifts
+            </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a
-                  target="_parent"
-                  href="/posts/Google-Kickstart-2019-Round-G-Shifts/"
-                >
-                  Google Kickstart 2019 Round G Shifts
-                </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a
+              target="_parent"
+              href="/posts/Google-Kickstart-2019-Round-G-The-Equation/"
+            >
+              Google Kickstart 2019 Round G The Equation
+            </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a
-                  target="_parent"
-                  href="/posts/Google-Kickstart-2019-Round-G-The-Equation/"
-                >
-                  Google Kickstart 2019 Round G The Equation
-                </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Tree-Diameter/"> Tree Diameter </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/Tree-Diameter/">
-                  Tree Diameter
-                </a>
-              </li>
-
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/Generating-Function/">
-                  Generating Function
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row justify-content-center">
-          <!-- Sidebar Container -->
-
-          <div class="col-lg-8` col-md-10 sidebar-container">
-            <!-- Friends Blog -->
-          </div>
-        </div>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Generating-Function/">
+              Generating Function
+            </a>
+          </li>
+        </ul>
       </div>
     </article>
     <!-- Custom Theme JavaScript -->

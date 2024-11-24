@@ -135,332 +135,216 @@
     />
 
     <!-- Post Content -->
-    <article>
-      <div class="container">
-        <div class="row">
-          <!-- Post Container -->
-          <div class="order-lg-2 col-lg-3 col-12 toc-col" style="z-index: 1">
-            <ol class="toc">
-              <li class="toc-item toc-level-1">
-                <a class="toc-link" href="#Introduccion"
-                  ><span class="toc-text">Introducción</span></a
-                >
-                <ol class="toc-child">
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Imagen-Docker"
-                      ><span class="toc-text">Imagen Docker</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Docker-Hub"
-                      ><span class="toc-text">Docker Hub</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Contenedor-Docker"
-                      ><span class="toc-text">Contenedor Docker</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Docker-Engine"
-                      ><span class="toc-text">Docker Engine</span></a
-                    >
-                  </li>
-                </ol>
-              </li>
-              <li class="toc-item toc-level-1">
-                <a class="toc-link" href="#Ejemplo"
-                  ><span class="toc-text">Ejemplo</span></a
-                >
-                <ol class="toc-child">
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#DockerFile"
-                      ><span class="toc-text">DockerFile</span></a
-                    >
-                    <ol class="toc-child">
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Crear-Imagen"
-                          ><span class="toc-text">Crear Imagen</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Macro"
-                          ><span class="toc-text">Macro</span></a
-                        >
-                      </li>
-                    </ol>
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#publicar-nuestro-imagen"
-                      ><span class="toc-text">publicar nuestro imagen</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Volumenes-de-datos"
-                      ><span class="toc-text">Volúmenes de datos</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Aplicaciones-multicontenedor"
-                      ><span class="toc-text"
-                        >Aplicaciones multicontenedor</span
-                      ></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Docker-Swarm"
-                      ><span class="toc-text">Docker Swarm</span></a
-                    >
-                  </li>
-                </ol>
-              </li>
-            </ol>
-          </div>
+    <article class="container" style="width: 100%; max-width: 100%">
+      <!-- Post Container -->
+      <div class="post-container">
+        <h1 id="Introduccion">
+          <a href="#Introduccion" class="headerlink" title="Introducción"></a
+          >Introducción
+        </h1>
+        <p>
+          La idea detrás de Docker es crear contenedores ligeros y portables
+          para las aplicaciones software que puedan ejecutarse en cualquier
+          máquina con Docker instalado, independientemente del sistema operativo
+          que la máquina tenga por debajo, facilitando así también los
+          despliegues y la integración continua.
+        </p>
+        <h2 id="Imagen-Docker">
+          <a href="#Imagen-Docker" class="headerlink" title="Imagen Docker"></a
+          >Imagen Docker
+        </h2>
+        <p>
+          Es una plantilla para un contenedor. Tiene So como Ubuntu, Debian,
+          librería como Java y app .jar.
+        </p>
+        <h2 id="Docker-Hub">
+          <a href="#Docker-Hub" class="headerlink" title="Docker Hub"></a>Docker
+          Hub
+        </h2>
+        <p>Servicio remoto que se usa para almacenar y traer imagenes.</p>
+        <h2 id="Contenedor-Docker">
+          <a
+            href="#Contenedor-Docker"
+            class="headerlink"
+            title="Contenedor Docker"
+          ></a
+          >Contenedor Docker
+        </h2>
+        <p>
+          un contener se crea a partir de un imagen docker, es equivalente a una
+          máquina virtual. Cuando se modifica el contenido, se modifica el
+          contenedor y la imagen no, se puede ejecutar, pausar o parar.
+        </p>
+        <h2 id="Docker-Engine">
+          <a href="#Docker-Engine" class="headerlink" title="Docker Engine"></a
+          >Docker Engine
+        </h2>
+        <p><img src="docker.png" alt="Docker" /></p>
+        <p>
+          La virtualización y los contendores facilitan la gestión del entorno
+          de CI (Continuous Integration) porque son los propios desarrolladores.
+        </p>
+        <h1 id="Ejemplo">
+          <a href="#Ejemplo" class="headerlink" title="Ejemplo"></a>Ejemplo
+        </h1>
+        <pre><code>docker run alpine ls -l
+</code></pre>
+        <p>
+          Crea un nuevo contenedor y lanzarlo, cuyo imagen se llama alpine, el
+          imagen es descargado si no está almacenado en la máquina local,
+          pasamos el comando <strong>ls -l</strong> que va a ejecutar en dicho
+          contenedor.
+        </p>
+        <pre><code>docker run alpine seqvence/static-site
+</code></pre>
+        <p>Ejecutamos el contenedor en background.</p>
+        <pre><code>docker ps
+</code></pre>
+        <p>Listar conjunto de contenedores que están ejecutando.</p>
+        <pre><code>docker stop a7a0e504ca3e
+</code></pre>
+        <p>Parar un contenedor identificado por a7a0e504ca3e</p>
+        <pre><code>docker rm a7a0e504ca3e
+</code></pre>
+        <p>Eliminar un contenedor identificado por a7a0e504ca3e</p>
+        <pre><code>docker run --name static-site -e AUTHOR=&quot;Your Name&quot; -d -p 9000:80 seqvence/static-site
+</code></pre>
+        <p>
+          Especificamos explicitamente el nombre de contenedor, ejecutarlo como
+          daemon, y mapear el puerto local 9000 al puerto 80 del contenedor.
+        </p>
+        <pre><code>docker stop static-site
+</code></pre>
+        <p>Parar un contenedor</p>
+        <pre><code>docker pull ubuntu:12.04
+</code></pre>
+        <p>Descargar la imagen de cierta versión.</p>
+        <h2 id="DockerFile">
+          <a href="#DockerFile" class="headerlink" title="DockerFile"></a
+          >DockerFile
+        </h2>
+        <p>Archivo que usa para descripbir un nuevo imagen.</p>
+        <p>
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://github.com/docker/labs/blob/master/beginner/flask-app/Dockerfile"
+            >Dockerfile</a
+          >
+        </p>
+        <h3 id="Crear-Imagen">
+          <a href="#Crear-Imagen" class="headerlink" title="Crear Imagen"></a
+          >Crear Imagen
+        </h3>
+        <p>En la carpteta de Dockerfile ejecutamos</p>
+        <pre><code>docker build -t myfirstimage .
+</code></pre>
+        <p>Genera el imagen correspondiente</p>
+        <h3 id="Macro">
+          <a href="#Macro" class="headerlink" title="Macro"></a>Macro
+        </h3>
+        <ul>
+          <li>FROM: Imagen base</li>
+          <li>COPY: Copiar archivos desde la carpeta de Dockerfile</li>
+          <li>RUN ejecutar los comandos</li>
+          <li>EXPOSE: puertos publicos</li>
+          <li>CMD: comandos a ejecutar al crear la imagen</li>
+        </ul>
+        <h2 id="publicar-nuestro-imagen">
+          <a
+            href="#publicar-nuestro-imagen"
+            class="headerlink"
+            title="publicar nuestro imagen"
+          ></a
+          >publicar nuestro imagen
+        </h2>
+        <pre><code>docker build ­t &lt;YOUR_USERNAME&gt;/myfirstapp .
+</code></pre>
+        <h2 id="Volumenes-de-datos">
+          <a
+            href="#Volumenes-de-datos"
+            class="headerlink"
+            title="Volúmenes de datos"
+          ></a
+          >Volúmenes de datos
+        </h2>
+        <p>
+          Desde un contenedor se puede acceder al contenido de una o varias
+          carpetas del host. ● Eso permite que el contenedor pueda leer su
+          contenido y también pueda generar nuevos ficheros que guarda en el
+          host. Los volúmenes de datos se configuran con el comando
+          <strong>-v host_folder:cont_folder</strong>.
+        </p>
+        <pre><code>docker run ­d ­p 9000:80 ­v $PWD:/usr/share/nginx/html nginx
+</code></pre>
+        <p>
+          Servir por http un contenido estático que tengamos en el disco duro
+        </p>
+        <h2 id="Aplicaciones-multicontenedor">
+          <a
+            href="#Aplicaciones-multicontenedor"
+            class="headerlink"
+            title="Aplicaciones multicontenedor"
+          ></a
+          >Aplicaciones multicontenedor
+        </h2>
+        <p>
+          Es recomendable que cada contenedor se usa para un único proceso, pero
+          es habitual que las aplicaciones tengan varios procesos. Pero es
+          habitual que las aplicacaciones tengan varios procesos (web + bd).
+          Docker-compose nos permite definir un conjunto de contenedores que
+          colaboran entre si formando una aplicación. El fichero
+          docker-compose.yml define los contenedores y las relaciones entre
+          ellos.
+        </p>
+        <p>
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://github.com/dockersamples/example-voting-app/blob/master/docker-compose.yml"
+            >Docker-Compose</a
+          >
+        </p>
+        <p>Para ejecutar la aplicación</p>
+        <pre><code>docker­compose up ­d
+</code></pre>
+        <h2 id="Docker-Swarm">
+          <a href="#Docker-Swarm" class="headerlink" title="Docker Swarm"></a
+          >Docker Swarm
+        </h2>
+        <p>
+          Servicio Local que se usa para controlar docker, manejar imagenes,
+          manejar contenedores.
+        </p>
+        <p><img src="docker-swarm.png" alt="Docker Swarm" /></p>
 
-          <div class="order-lg-1 col-lg-9 col-12 post-container">
-            <h1 id="Introduccion">
-              <a
-                href="#Introduccion"
-                class="headerlink"
-                title="Introducción"
-              ></a
-              >Introducción
-            </h1>
-            <p>
-              La idea detrás de Docker es crear contenedores ligeros y portables
-              para las aplicaciones software que puedan ejecutarse en cualquier
-              máquina con Docker instalado, independientemente del sistema
-              operativo que la máquina tenga por debajo, facilitando así también
-              los despliegues y la integración continua.
-            </p>
-            <h2 id="Imagen-Docker">
-              <a
-                href="#Imagen-Docker"
-                class="headerlink"
-                title="Imagen Docker"
-              ></a
-              >Imagen Docker
-            </h2>
-            <p>
-              Es una plantilla para un contenedor. Tiene So como Ubuntu, Debian,
-              librería como Java y app .jar.
-            </p>
-            <h2 id="Docker-Hub">
-              <a href="#Docker-Hub" class="headerlink" title="Docker Hub"></a
-              >Docker Hub
-            </h2>
-            <p>Servicio remoto que se usa para almacenar y traer imagenes.</p>
-            <h2 id="Contenedor-Docker">
-              <a
-                href="#Contenedor-Docker"
-                class="headerlink"
-                title="Contenedor Docker"
-              ></a
-              >Contenedor Docker
-            </h2>
-            <p>
-              un contener se crea a partir de un imagen docker, es equivalente a
-              una máquina virtual. Cuando se modifica el contenido, se modifica
-              el contenedor y la imagen no, se puede ejecutar, pausar o parar.
-            </p>
-            <h2 id="Docker-Engine">
-              <a
-                href="#Docker-Engine"
-                class="headerlink"
-                title="Docker Engine"
-              ></a
-              >Docker Engine
-            </h2>
-            <p><img src="docker.png" alt="Docker" /></p>
-            <p>
-              La virtualización y los contendores facilitan la gestión del
-              entorno de CI (Continuous Integration) porque son los propios
-              desarrolladores.
-            </p>
-            <h1 id="Ejemplo">
-              <a href="#Ejemplo" class="headerlink" title="Ejemplo"></a>Ejemplo
-            </h1>
-            <pre><code>docker run alpine ls -l
-</code></pre>
-            <p>
-              Crea un nuevo contenedor y lanzarlo, cuyo imagen se llama alpine,
-              el imagen es descargado si no está almacenado en la máquina local,
-              pasamos el comando <strong>ls -l</strong> que va a ejecutar en
-              dicho contenedor.
-            </p>
-            <pre><code>docker run alpine seqvence/static-site
-</code></pre>
-            <p>Ejecutamos el contenedor en background.</p>
-            <pre><code>docker ps
-</code></pre>
-            <p>Listar conjunto de contenedores que están ejecutando.</p>
-            <pre><code>docker stop a7a0e504ca3e
-</code></pre>
-            <p>Parar un contenedor identificado por a7a0e504ca3e</p>
-            <pre><code>docker rm a7a0e504ca3e
-</code></pre>
-            <p>Eliminar un contenedor identificado por a7a0e504ca3e</p>
-            <pre><code>docker run --name static-site -e AUTHOR=&quot;Your Name&quot; -d -p 9000:80 seqvence/static-site
-</code></pre>
-            <p>
-              Especificamos explicitamente el nombre de contenedor, ejecutarlo
-              como daemon, y mapear el puerto local 9000 al puerto 80 del
-              contenedor.
-            </p>
-            <pre><code>docker stop static-site
-</code></pre>
-            <p>Parar un contenedor</p>
-            <pre><code>docker pull ubuntu:12.04
-</code></pre>
-            <p>Descargar la imagen de cierta versión.</p>
-            <h2 id="DockerFile">
-              <a href="#DockerFile" class="headerlink" title="DockerFile"></a
-              >DockerFile
-            </h2>
-            <p>Archivo que usa para descripbir un nuevo imagen.</p>
-            <p>
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://github.com/docker/labs/blob/master/beginner/flask-app/Dockerfile"
-                >Dockerfile</a
-              >
-            </p>
-            <h3 id="Crear-Imagen">
-              <a
-                href="#Crear-Imagen"
-                class="headerlink"
-                title="Crear Imagen"
-              ></a
-              >Crear Imagen
-            </h3>
-            <p>En la carpteta de Dockerfile ejecutamos</p>
-            <pre><code>docker build -t myfirstimage .
-</code></pre>
-            <p>Genera el imagen correspondiente</p>
-            <h3 id="Macro">
-              <a href="#Macro" class="headerlink" title="Macro"></a>Macro
-            </h3>
-            <ul>
-              <li>FROM: Imagen base</li>
-              <li>COPY: Copiar archivos desde la carpeta de Dockerfile</li>
-              <li>RUN ejecutar los comandos</li>
-              <li>EXPOSE: puertos publicos</li>
-              <li>CMD: comandos a ejecutar al crear la imagen</li>
-            </ul>
-            <h2 id="publicar-nuestro-imagen">
-              <a
-                href="#publicar-nuestro-imagen"
-                class="headerlink"
-                title="publicar nuestro imagen"
-              ></a
-              >publicar nuestro imagen
-            </h2>
-            <pre><code>docker build ­t &lt;YOUR_USERNAME&gt;/myfirstapp .
-</code></pre>
-            <h2 id="Volumenes-de-datos">
-              <a
-                href="#Volumenes-de-datos"
-                class="headerlink"
-                title="Volúmenes de datos"
-              ></a
-              >Volúmenes de datos
-            </h2>
-            <p>
-              Desde un contenedor se puede acceder al contenido de una o varias
-              carpetas del host. ● Eso permite que el contenedor pueda leer su
-              contenido y también pueda generar nuevos ficheros que guarda en el
-              host. Los volúmenes de datos se configuran con el comando
-              <strong>-v host_folder:cont_folder</strong>.
-            </p>
-            <pre><code>docker run ­d ­p 9000:80 ­v $PWD:/usr/share/nginx/html nginx
-</code></pre>
-            <p>
-              Servir por http un contenido estático que tengamos en el disco
-              duro
-            </p>
-            <h2 id="Aplicaciones-multicontenedor">
-              <a
-                href="#Aplicaciones-multicontenedor"
-                class="headerlink"
-                title="Aplicaciones multicontenedor"
-              ></a
-              >Aplicaciones multicontenedor
-            </h2>
-            <p>
-              Es recomendable que cada contenedor se usa para un único proceso,
-              pero es habitual que las aplicaciones tengan varios procesos. Pero
-              es habitual que las aplicacaciones tengan varios procesos (web +
-              bd). Docker-compose nos permite definir un conjunto de
-              contenedores que colaboran entre si formando una aplicación. El
-              fichero docker-compose.yml define los contenedores y las
-              relaciones entre ellos.
-            </p>
-            <p>
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://github.com/dockersamples/example-voting-app/blob/master/docker-compose.yml"
-                >Docker-Compose</a
-              >
-            </p>
-            <p>Para ejecutar la aplicación</p>
-            <pre><code>docker­compose up ­d
-</code></pre>
-            <h2 id="Docker-Swarm">
-              <a
-                href="#Docker-Swarm"
-                class="headerlink"
-                title="Docker Swarm"
-              ></a
-              >Docker Swarm
-            </h2>
-            <p>
-              Servicio Local que se usa para controlar docker, manejar imagenes,
-              manejar contenedores.
-            </p>
-            <p><img src="docker-swarm.png" alt="Docker Swarm" /></p>
+        <hr />
 
-            <hr />
+        <ul class="list-group">
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Install-DockerDesktop-Win10Home/">
+              Install Docker Desktop in Windows10 Home Edition
+            </a>
+          </li>
 
-            <ul class="list-group">
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a
-                  target="_parent"
-                  href="/posts/Install-DockerDesktop-Win10Home/"
-                >
-                  Install Docker Desktop in Windows10 Home Edition
-                </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/RaspberryPi-Odoo/">
+              RaspberryPi Odoo
+            </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/RaspberryPi-Odoo/">
-                  RaspberryPi Odoo
-                </a>
-              </li>
-
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/Virtualization/">
-                  Virtualización, Contenedores y Cloud Computing
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row justify-content-center">
-          <!-- Sidebar Container -->
-
-          <div class="col-lg-8` col-md-10 sidebar-container">
-            <!-- Friends Blog -->
-          </div>
-        </div>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Virtualization/">
+              Virtualización, Contenedores y Cloud Computing
+            </a>
+          </li>
+        </ul>
       </div>
     </article>
     <!-- Custom Theme JavaScript -->

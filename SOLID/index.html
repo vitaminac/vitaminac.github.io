@@ -144,282 +144,220 @@
     />
 
     <!-- Post Content -->
-    <article>
-      <div class="container">
-        <div class="row">
-          <!-- Post Container -->
-          <div class="order-lg-2 col-lg-3 col-12 toc-col" style="z-index: 1">
-            <ol class="toc">
-              <li class="toc-item toc-level-1">
-                <a class="toc-link" href="#SOLID-Design-Principles"
-                  ><span class="toc-text">SOLID Design Principles</span></a
-                >
-                <ol class="toc-child">
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Single-Responsibility-Principle"
-                      ><span class="toc-text"
-                        >Single Responsibility Principle</span
-                      ></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Open%E2%80%93Closed-Principle"
-                      ><span class="toc-text">Open–Closed Principle</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Liskov-Substitution-Principle"
-                      ><span class="toc-text"
-                        >Liskov Substitution Principle</span
-                      ></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Interface-Segregation-Principle"
-                      ><span class="toc-text"
-                        >Interface Segregation Principle</span
-                      ></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Dependency-inversion-principle"
-                      ><span class="toc-text"
-                        >Dependency inversion principle</span
-                      ></a
-                    >
-                  </li>
-                </ol>
-              </li>
-            </ol>
-          </div>
+    <article class="container" style="width: 100%; max-width: 100%">
+      <!-- Post Container -->
+      <div class="post-container">
+        <h1 id="SOLID-Design-Principles">
+          <a
+            href="#SOLID-Design-Principles"
+            class="headerlink"
+            title="SOLID Design Principles"
+          ></a
+          >SOLID Design Principles
+        </h1>
+        <p>
+          In object-oriented computer programming, SOLID is acronym and stands
+          for a set of five design principles documented by Robert C. Martin.
+          Keep your code in line with SOLID make software designs more clear,
+          and you’re much more likely to end up with a modular flexible and
+          maintainable. SOLID also mesh well with testability.
+        </p>
+        <h2 id="Single-Responsibility-Principle">
+          <a
+            href="#Single-Responsibility-Principle"
+            class="headerlink"
+            title="Single Responsibility Principle"
+          ></a
+          >Single Responsibility Principle
+        </h2>
+        <p>
+          It states that there should never be more than one<br />reason for a
+          class to change. Every module, class, or function should have
+          responsibility over a single part of the functionality provided by the
+          software, and will have only one reason for modification. Writing test
+          for code that follows the SRP is essentially expressing our
+          understanding of the problem and specifying the expected behavior. We
+          can test the class independently. When we add some more functionality,
+          the old tests shouldn’t fail.
+        </p>
+        <h2 id="Open–Closed-Principle">
+          <a
+            href="#Open–Closed-Principle"
+            class="headerlink"
+            title="Open–Closed Principle"
+          ></a
+          >Open–Closed Principle
+        </h2>
+        <p>
+          The open&#x2F;closed principle states software entities (classes,
+          modules, functions, etc.) should be open for extension, but closed for
+          modification. This can be achieved by abstraction, polymorphism and
+          several design patterns e.g. strategy, composite, decorator, factory
+          method. Classes that delegate specific responsibilities to other
+          objects allow tests to substitute a test double when needed to
+          simulate a specific scenario.
+        </p>
+        <p><img src="strategy.png" alt="Strategy Pattern" /></p>
+        <h2 id="Liskov-Substitution-Principle">
+          <a
+            href="#Liskov-Substitution-Principle"
+            class="headerlink"
+            title="Liskov Substitution Principle"
+          ></a
+          >Liskov Substitution Principle
+        </h2>
+        <p>
+          It states that if S is a subtype of T, then objects of type T may be
+          replaced with objects of type S without altering any of the desirable
+          properties of the program. LSP emphasize the hierarchies should exist
+          for the right reason, embodying a valid abstraction. Class hierarchies
+          that follow the LSP enable the use of contract tests, tests written
+          for parent class&#x2F;interface can be executed against all
+          derived&#x2F;implementation.
+        </p>
+        <p><img src="liskov-substitution.png" alt="Liskov Substitution" /></p>
+        <h2 id="Interface-Segregation-Principle">
+          <a
+            href="#Interface-Segregation-Principle"
+            class="headerlink"
+            title="Interface Segregation Principle"
+          ></a
+          >Interface Segregation Principle
+        </h2>
+        <p>
+          It states that no client should be forced to depend on methods it does
+          not use, we should split interfaces that are very large into smaller
+          and more specific ones so that clients will only have to know about
+          the methods that are of interest to them. Small interfaces keep test
+          simple for each interface, it also improve testability by making it
+          easier to write and use test doubles.
+        </p>
+        <h2 id="Dependency-inversion-principle">
+          <a
+            href="#Dependency-inversion-principle"
+            class="headerlink"
+            title="Dependency inversion principle"
+          ></a
+          >Dependency inversion principle
+        </h2>
+        <p>
+          The dependency inversion principle says code should depend on
+          abstractions not on concretions, it suggests that a class shouldn’t
+          instantiate its own collaborators but rather have their interfaces
+          passed in. The dependency inversion principle is a specific form of
+          decoupling software modules. When following this principle, the
+          conventional dependency relationships from high-level module to
+          low-level module are reversed, thus rendering high-level modules
+          independent of the low-level module implementation details. The
+          principle states:
+        </p>
+        <ol>
+          <li>
+            High-level modules should not depend on low-level modules. Both
+            should depend on abstractions(interfaces).
+          </li>
+          <li>
+            Abstractions should not depend on details. Details (classes) should
+            depend on abstractions.
+          </li>
+        </ol>
+        <p>
+          The both high-level and low-level objects must depend on the same
+          abstraction. The interaction between a high level module and a
+          low-level one, the interaction should be thought of as an abstract
+          interaction between them.
+        </p>
+        <p>
+          The high-level class defines its own adapter interface which is the
+          abstraction that the other high-level classes depend on. The adaptee
+          implementation also depends on the adapter interface abstraction while
+          it can be implemented by using code from within its own low-level
+          module. The high-level has no dependency on the low-level module since
+          it only uses the low-level indirectly through the adapter interface by
+          invoking polymorphic methods to the interface which are implemented by
+          the adaptee and its low-level module, for example
+          <strong>plugin</strong>.
+        </p>
+        <p>
+          For writing tests. the ability to pass collaborators in make possible
+          the injection of test double fairly easy.
+        </p>
 
-          <div class="order-lg-1 col-lg-9 col-12 post-container">
-            <h1 id="SOLID-Design-Principles">
-              <a
-                href="#SOLID-Design-Principles"
-                class="headerlink"
-                title="SOLID Design Principles"
-              ></a
-              >SOLID Design Principles
-            </h1>
-            <p>
-              In object-oriented computer programming, SOLID is acronym and
-              stands for a set of five design principles documented by Robert C.
-              Martin. Keep your code in line with SOLID make software designs
-              more clear, and you’re much more likely to end up with a modular
-              flexible and maintainable. SOLID also mesh well with testability.
-            </p>
-            <h2 id="Single-Responsibility-Principle">
-              <a
-                href="#Single-Responsibility-Principle"
-                class="headerlink"
-                title="Single Responsibility Principle"
-              ></a
-              >Single Responsibility Principle
-            </h2>
-            <p>
-              It states that there should never be more than one<br />reason for
-              a class to change. Every module, class, or function should have
-              responsibility over a single part of the functionality provided by
-              the software, and will have only one reason for modification.
-              Writing test for code that follows the SRP is essentially
-              expressing our understanding of the problem and specifying the
-              expected behavior. We can test the class independently. When we
-              add some more functionality, the old tests shouldn’t fail.
-            </p>
-            <h2 id="Open–Closed-Principle">
-              <a
-                href="#Open–Closed-Principle"
-                class="headerlink"
-                title="Open–Closed Principle"
-              ></a
-              >Open–Closed Principle
-            </h2>
-            <p>
-              The open&#x2F;closed principle states software entities (classes,
-              modules, functions, etc.) should be open for extension, but closed
-              for modification. This can be achieved by abstraction,
-              polymorphism and several design patterns e.g. strategy, composite,
-              decorator, factory method. Classes that delegate specific
-              responsibilities to other objects allow tests to substitute a test
-              double when needed to simulate a specific scenario.
-            </p>
-            <p><img src="strategy.png" alt="Strategy Pattern" /></p>
-            <h2 id="Liskov-Substitution-Principle">
-              <a
-                href="#Liskov-Substitution-Principle"
-                class="headerlink"
-                title="Liskov Substitution Principle"
-              ></a
-              >Liskov Substitution Principle
-            </h2>
-            <p>
-              It states that if S is a subtype of T, then objects of type T may
-              be replaced with objects of type S without altering any of the
-              desirable properties of the program. LSP emphasize the hierarchies
-              should exist for the right reason, embodying a valid abstraction.
-              Class hierarchies that follow the LSP enable the use of contract
-              tests, tests written for parent class&#x2F;interface can be
-              executed against all derived&#x2F;implementation.
-            </p>
-            <p>
-              <img src="liskov-substitution.png" alt="Liskov Substitution" />
-            </p>
-            <h2 id="Interface-Segregation-Principle">
-              <a
-                href="#Interface-Segregation-Principle"
-                class="headerlink"
-                title="Interface Segregation Principle"
-              ></a
-              >Interface Segregation Principle
-            </h2>
-            <p>
-              It states that no client should be forced to depend on methods it
-              does not use, we should split interfaces that are very large into
-              smaller and more specific ones so that clients will only have to
-              know about the methods that are of interest to them. Small
-              interfaces keep test simple for each interface, it also improve
-              testability by making it easier to write and use test doubles.
-            </p>
-            <h2 id="Dependency-inversion-principle">
-              <a
-                href="#Dependency-inversion-principle"
-                class="headerlink"
-                title="Dependency inversion principle"
-              ></a
-              >Dependency inversion principle
-            </h2>
-            <p>
-              The dependency inversion principle says code should depend on
-              abstractions not on concretions, it suggests that a class
-              shouldn’t instantiate its own collaborators but rather have their
-              interfaces passed in. The dependency inversion principle is a
-              specific form of decoupling software modules. When following this
-              principle, the conventional dependency relationships from
-              high-level module to low-level module are reversed, thus rendering
-              high-level modules independent of the low-level module
-              implementation details. The principle states:
-            </p>
-            <ol>
-              <li>
-                High-level modules should not depend on low-level modules. Both
-                should depend on abstractions(interfaces).
-              </li>
-              <li>
-                Abstractions should not depend on details. Details (classes)
-                should depend on abstractions.
-              </li>
-            </ol>
-            <p>
-              The both high-level and low-level objects must depend on the same
-              abstraction. The interaction between a high level module and a
-              low-level one, the interaction should be thought of as an abstract
-              interaction between them.
-            </p>
-            <p>
-              The high-level class defines its own adapter interface which is
-              the abstraction that the other high-level classes depend on. The
-              adaptee implementation also depends on the adapter interface
-              abstraction while it can be implemented by using code from within
-              its own low-level module. The high-level has no dependency on the
-              low-level module since it only uses the low-level indirectly
-              through the adapter interface by invoking polymorphic methods to
-              the interface which are implemented by the adaptee and its
-              low-level module, for example <strong>plugin</strong>.
-            </p>
-            <p>
-              For writing tests. the ability to pass collaborators in make
-              possible the injection of test double fairly easy.
-            </p>
+        <hr />
 
-            <hr />
+        <ul class="list-group">
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Agile-Testing-Quadrants/">
+              Agile Testing Quadrants
+            </a>
+          </li>
 
-            <ul class="list-group">
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/Agile-Testing-Quadrants/">
-                  Agile Testing Quadrants
-                </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Code-Smell/"> Code Smell </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/Code-Smell/"> Code Smell </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Escuelas-del-Testing/">
+              Escuelas del Testing
+            </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/Escuelas-del-Testing/">
-                  Escuelas del Testing
-                </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Lehman-laws/"> Lehman Laws </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/Lehman-laws/"> Lehman Laws </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Pair-Review/"> Pair Review </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/Pair-Review/"> Pair Review </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Smoke-Test/"> Smoke Test </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/Smoke-Test/"> Smoke Test </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/TDD-BDD-ATDD/">
+              Testing TDD BDD y ATDD
+            </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/TDD-BDD-ATDD/">
-                  Testing TDD BDD y ATDD
-                </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Evolucion-Adaptacion-Software/">
+              Evolución Adaptacion Software
+            </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a
-                  target="_parent"
-                  href="/posts/Evolucion-Adaptacion-Software/"
-                >
-                  Evolución Adaptacion Software
-                </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Evolucion-De-Calidad/">
+              Evolución de la calidad
+            </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/Evolucion-De-Calidad/">
-                  Evolución de la calidad
-                </a>
-              </li>
-
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/Gestion-Configuracion/">
-                  Gestion de Configuración
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row justify-content-center">
-          <!-- Sidebar Container -->
-
-          <div class="col-lg-8` col-md-10 sidebar-container">
-            <!-- Friends Blog -->
-          </div>
-        </div>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Gestion-Configuracion/">
+              Gestion de Configuración
+            </a>
+          </li>
+        </ul>
       </div>
     </article>
     <!-- Custom Theme JavaScript -->

@@ -141,2265 +141,1516 @@
     />
 
     <!-- Post Content -->
-    <article>
-      <div class="container">
-        <div class="row">
-          <!-- Post Container -->
-          <div class="order-lg-2 col-lg-3 col-12 toc-col" style="z-index: 1">
-            <ol class="toc">
-              <li class="toc-item toc-level-1">
-                <a class="toc-link" href="#Grafico-por-computador"
-                  ><span class="toc-text">Gráfico por computador</span></a
-                >
-                <ol class="toc-child">
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Definicion"
-                      ><span class="toc-text">Definición</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Cause-grafico"
-                      ><span class="toc-text">Cause gráfico</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Tecnica-de-modelado"
-                      ><span class="toc-text">Técnica de modelado</span></a
-                    >
-                    <ol class="toc-child">
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#Propiedades-deseables-en-un-modelo"
-                          ><span class="toc-text"
-                            >Propiedades deseables en un modelo</span
-                          ></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Modelos-de-alambre"
-                          ><span class="toc-text">Modelos de alambre</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Modelos-de-mallas"
-                          ><span class="toc-text">Modelos de mallas</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#Representaciones-de-fronteras-no-poliedricas"
-                          ><span class="toc-text"
-                            >Representaciones de fronteras no poliédricas</span
-                          ></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Modelos-multiresolucion"
-                          ><span class="toc-text"
-                            >Modelos multiresolución</span
-                          ></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Otros"
-                          ><span class="toc-text">Otros</span></a
-                        >
-                      </li>
-                    </ol>
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Visibilidad"
-                      ><span class="toc-text">Visibilidad</span></a
-                    >
-                    <ol class="toc-child">
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Etapa-de-aplicacion"
-                          ><span class="toc-text">Etapa de aplicacion</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#En-el-cause-grafico"
-                          ><span class="toc-text">En el cause gráfico</span></a
-                        >
-                        <ol class="toc-child">
-                          <li class="toc-item toc-level-4">
-                            <a class="toc-link" href="#A-nivel-de-primitiva"
-                              ><span class="toc-text"
-                                >A nivel de primitiva</span
-                              ></a
-                            >
-                            <ol class="toc-child">
-                              <li class="toc-item toc-level-5">
-                                <a class="toc-link" href="#Clipping"
-                                  ><span class="toc-text">Clipping</span></a
-                                >
-                              </li>
-                              <li class="toc-item toc-level-5">
-                                <a class="toc-link" href="#Culling"
-                                  ><span class="toc-text">Culling</span></a
-                                >
-                              </li>
-                            </ol>
-                          </li>
-                          <li class="toc-item toc-level-4">
-                            <a
-                              class="toc-link"
-                              href="#A-nivel-de-primitiva-o-pixel"
-                              ><span class="toc-text"
-                                >A nivel de primitiva o píxel</span
-                              ></a
-                            >
-                            <ol class="toc-child">
-                              <li class="toc-item toc-level-5">
-                                <a class="toc-link" href="#Algoritmo-del-pintor"
-                                  ><span class="toc-text"
-                                    >Algoritmo del pintor</span
-                                  ></a
-                                >
-                              </li>
-                              <li class="toc-item toc-level-5">
-                                <a
-                                  class="toc-link"
-                                  href="#Buffer-de-profundidad-z-buffer"
-                                  ><span class="toc-text"
-                                    >Buffer de profundidad (z-buffer)</span
-                                  ></a
-                                >
-                              </li>
-                              <li class="toc-item toc-level-5">
-                                <a class="toc-link" href="#Ray-Tracing"
-                                  ><span class="toc-text">Ray Tracing</span></a
-                                >
-                              </li>
-                            </ol>
-                          </li>
-                        </ol>
-                      </li>
-                    </ol>
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Iluminacion"
-                      ><span class="toc-text">Iluminación</span></a
-                    >
-                    <ol class="toc-child">
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Luces"
-                          ><span class="toc-text">Luces</span></a
-                        >
-                        <ol class="toc-child">
-                          <li class="toc-item toc-level-4">
-                            <a class="toc-link" href="#Luces-direccionales"
-                              ><span class="toc-text"
-                                >Luces direccionales</span
-                              ></a
-                            >
-                          </li>
-                          <li class="toc-item toc-level-4">
-                            <a class="toc-link" href="#Luces-puntuales"
-                              ><span class="toc-text">Luces puntuales</span></a
-                            >
-                          </li>
-                          <li class="toc-item toc-level-4">
-                            <a class="toc-link" href="#Luz-focal"
-                              ><span class="toc-text">Luz focal</span></a
-                            >
-                          </li>
-                          <li class="toc-item toc-level-4">
-                            <a class="toc-link" href="#Luces-de-area"
-                              ><span class="toc-text">Luces de área</span></a
-                            >
-                          </li>
-                        </ol>
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Modelos-de-iluminacion"
-                          ><span class="toc-text"
-                            >Modelos de iluminación</span
-                          ></a
-                        >
-                        <ol class="toc-child">
-                          <li class="toc-item toc-level-4">
-                            <a class="toc-link" href="#Modelos-locales"
-                              ><span class="toc-text">Modelos locales</span></a
-                            >
-                            <ol class="toc-child">
-                              <li class="toc-item toc-level-5">
-                                <a
-                                  class="toc-link"
-                                  href="#Modelo-de-iluminacion-de-Phong"
-                                  ><span class="toc-text"
-                                    >Modelo de iluminación de Phong</span
-                                  ></a
-                                >
-                                <ol class="toc-child">
-                                  <li class="toc-item toc-level-6">
-                                    <a
-                                      class="toc-link"
-                                      href="#Componente-ambiental"
-                                      ><span class="toc-text"
-                                        >Componente ambiental</span
-                                      ></a
-                                    >
-                                  </li>
-                                  <li class="toc-item toc-level-6">
-                                    <a
-                                      class="toc-link"
-                                      href="#Componente-difusa"
-                                      ><span class="toc-text"
-                                        >Componente difusa</span
-                                      ></a
-                                    >
-                                  </li>
-                                  <li class="toc-item toc-level-6">
-                                    <a
-                                      class="toc-link"
-                                      href="#Componente-especular"
-                                      ><span class="toc-text"
-                                        >Componente especular</span
-                                      ></a
-                                    >
-                                  </li>
-                                  <li class="toc-item toc-level-6">
-                                    <a
-                                      class="toc-link"
-                                      href="#Factor-de-atenuacion"
-                                      ><span class="toc-text"
-                                        >Factor de atenuación</span
-                                      ></a
-                                    >
-                                  </li>
-                                  <li class="toc-item toc-level-6">
-                                    <a
-                                      class="toc-link"
-                                      href="#Iluminacion-emisiva"
-                                      ><span class="toc-text"
-                                        >Iluminación emisiva</span
-                                      ></a
-                                    >
-                                  </li>
-                                </ol>
-                              </li>
-                              <li class="toc-item toc-level-5">
-                                <a class="toc-link" href="#Modelo-de-sombreado"
-                                  ><span class="toc-text"
-                                    >Modelo de sombreado</span
-                                  ></a
-                                >
-                                <ol class="toc-child">
-                                  <li class="toc-item toc-level-6">
-                                    <a class="toc-link" href="#Sombreado-plano"
-                                      ><span class="toc-text"
-                                        >Sombreado plano</span
-                                      ></a
-                                    >
-                                  </li>
-                                  <li class="toc-item toc-level-6">
-                                    <a
-                                      class="toc-link"
-                                      href="#Sombreado-de-Gouraud"
-                                      ><span class="toc-text"
-                                        >Sombreado de Gouraud</span
-                                      ></a
-                                    >
-                                  </li>
-                                  <li class="toc-item toc-level-6">
-                                    <a
-                                      class="toc-link"
-                                      href="#Sombreado-de-Phong"
-                                      ><span class="toc-text"
-                                        >Sombreado de Phong</span
-                                      ></a
-                                    >
-                                  </li>
-                                </ol>
-                              </li>
-                            </ol>
-                          </li>
-                          <li class="toc-item toc-level-4">
-                            <a class="toc-link" href="#Modelos-globales"
-                              ><span class="toc-text">Modelos globales</span></a
-                            >
-                            <ol class="toc-child">
-                              <li class="toc-item toc-level-5">
-                                <a class="toc-link" href="#Ray-trazing"
-                                  ><span class="toc-text">Ray trazing</span></a
-                                >
-                              </li>
-                              <li class="toc-item toc-level-5">
-                                <a class="toc-link" href="#Radiosity"
-                                  ><span class="toc-text">Radiosity</span></a
-                                >
-                              </li>
-                              <li class="toc-item toc-level-5">
-                                <a class="toc-link" href="#Radiancia"
-                                  ><span class="toc-text">Radiancia</span></a
-                                >
-                              </li>
-                              <li class="toc-item toc-level-5">
-                                <a class="toc-link" href="#Photon-Mapping"
-                                  ><span class="toc-text"
-                                    >Photon Mapping</span
-                                  ></a
-                                >
-                              </li>
-                            </ol>
-                          </li>
-                        </ol>
-                      </li>
-                    </ol>
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Buffer-de-Stencil"
-                      ><span class="toc-text">Buffer de Stencil</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Buffer-de-Acumulacion"
-                      ><span class="toc-text">Buffer de Acumulación</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Texturas"
-                      ><span class="toc-text">Texturas</span></a
-                    >
-                    <ol class="toc-child">
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Unidimensionales"
-                          ><span class="toc-text">Unidimensionales</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Bidimensionales"
-                          ><span class="toc-text">Bidimensionales</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Texturas-cubicas"
-                          ><span class="toc-text">Texturas cúbicas</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Tridimensionales"
-                          ><span class="toc-text">Tridimensionales</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Diffuse-Map"
-                          ><span class="toc-text">Diffuse Map</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Specular-Map"
-                          ><span class="toc-text">Specular Map</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Emissive-Map"
-                          ><span class="toc-text">Emissive Map</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Lighting-Map"
-                          ><span class="toc-text">Lighting Map</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Alpha-Blending"
-                          ><span class="toc-text">Alpha Blending</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Bump-Map"
-                          ><span class="toc-text">Bump Map</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Normal-Map"
-                          ><span class="toc-text">Normal Map</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Height-Map"
-                          ><span class="toc-text">Height Map</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Displacement-Map"
-                          ><span class="toc-text">Displacement Map</span></a
-                        >
-                      </li>
-                    </ol>
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Coordenadas-de-Textura"
-                      ><span class="toc-text">Coordenadas de Textura</span></a
-                    >
-                    <ol class="toc-child">
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Mapeado-Plano"
-                          ><span class="toc-text">Mapeado Plano</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Mapeado-Cilindrico"
-                          ><span class="toc-text">Mapeado Cilíndrico</span></a
-                        >
-                      </li>
-                    </ol>
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Aliasing-en-Texturas"
-                      ><span class="toc-text">Aliasing en Texturas</span></a
-                    >
-                    <ol class="toc-child">
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Minificacion"
-                          ><span class="toc-text">Minificación</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Magnificacion"
-                          ><span class="toc-text">Magnificación</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Box-filter"
-                          ><span class="toc-text">Box filter</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Bilinear-filter"
-                          ><span class="toc-text">Bilinear filter</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Mipmapping"
-                          ><span class="toc-text">Mipmapping</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Supersampling"
-                          ><span class="toc-text">Supersampling</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Pre-filtering"
-                          ><span class="toc-text">Pre-filtering</span></a
-                        >
-                      </li>
-                    </ol>
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Alpha-Blending-1"
-                      ><span class="toc-text">Alpha Blending</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Reflejos"
-                      ><span class="toc-text">Reflejos</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Sombras"
-                      ><span class="toc-text">Sombras</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#OpenGL"
-                      ><span class="toc-text">OpenGL</span></a
-                    >
-                    <ol class="toc-child">
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Modelo-de-programacion"
-                          ><span class="toc-text"
-                            >Modelo de programación</span
-                          ></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Framebuffer"
-                          ><span class="toc-text">Framebuffer</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#GLUT"
-                          ><span class="toc-text">GLUT</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Etapas-del-cauce"
-                          ><span class="toc-text">Etapas del cauce</span></a
-                        >
-                        <ol class="toc-child">
-                          <li class="toc-item toc-level-4">
-                            <a
-                              class="toc-link"
-                              href="#Etapa-de-vertices-programable"
-                              ><span class="toc-text"
-                                >Etapa de vértices (programable)</span
-                              ></a
-                            >
-                          </li>
-                          <li class="toc-item toc-level-4">
-                            <a class="toc-link" href="#Ensamblado"
-                              ><span class="toc-text">Ensamblado</span></a
-                            >
-                          </li>
-                          <li class="toc-item toc-level-4">
-                            <a
-                              class="toc-link"
-                              href="#Etapa-geometrica-programable-opcional"
-                              ><span class="toc-text"
-                                >Etapa geométrica (programable, opcional):</span
-                              ></a
-                            >
-                          </li>
-                          <li class="toc-item toc-level-4">
-                            <a class="toc-link" href="#Clipping-y-culling"
-                              ><span class="toc-text"
-                                >Clipping y culling</span
-                              ></a
-                            >
-                          </li>
-                          <li class="toc-item toc-level-4">
-                            <a class="toc-link" href="#Rasterizado"
-                              ><span class="toc-text">Rasterizado</span></a
-                            >
-                          </li>
-                          <li class="toc-item toc-level-4">
-                            <a
-                              class="toc-link"
-                              href="#Etapa-de-fragmentos-programable"
-                              ><span class="toc-text"
-                                >Etapa de fragmentos (programable)</span
-                              ></a
-                            >
-                          </li>
-                          <li class="toc-item toc-level-4">
-                            <a
-                              class="toc-link"
-                              href="#Operaciones-por-fragmento-Z-buffer-blending%E2%80%A6"
-                              ><span class="toc-text"
-                                >Operaciones por fragmento: Z-buffer,
-                                blending…</span
-                              ></a
-                            >
-                          </li>
-                          <li class="toc-item toc-level-4">
-                            <a
-                              class="toc-link"
-                              href="#Operaciones-con-el-frame-buffer"
-                              ><span class="toc-text"
-                                >Operaciones con el frame buffer</span
-                              ></a
-                            >
-                          </li>
-                        </ol>
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Shaders"
-                          ><span class="toc-text">Shaders</span></a
-                        >
-                        <ol class="toc-child">
-                          <li class="toc-item toc-level-4">
-                            <a class="toc-link" href="#Variables"
-                              ><span class="toc-text">Variables</span></a
-                            >
-                          </li>
-                          <li class="toc-item toc-level-4">
-                            <a class="toc-link" href="#Shader-de-vertices"
-                              ><span class="toc-text"
-                                >Shader de vértices</span
-                              ></a
-                            >
-                          </li>
-                          <li class="toc-item toc-level-4">
-                            <a class="toc-link" href="#Shader-de-fragementos"
-                              ><span class="toc-text"
-                                >Shader de fragementos</span
-                              ></a
-                            >
-                          </li>
-                          <li class="toc-item toc-level-4">
-                            <a class="toc-link" href="#Configuracion"
-                              ><span class="toc-text">Configuración</span></a
-                            >
-                          </li>
-                        </ol>
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#GLSL"
-                          ><span class="toc-text">GLSL</span></a
-                        >
-                        <ol class="toc-child">
-                          <li class="toc-item toc-level-4">
-                            <a class="toc-link" href="#Acceso"
-                              ><span class="toc-text">Acceso</span></a
-                            >
-                          </li>
-                          <li class="toc-item toc-level-4">
-                            <a class="toc-link" href="#Vertex-Buffer-Object"
-                              ><span class="toc-text"
-                                >Vertex Buffer Object</span
-                              ></a
-                            >
-                            <ol class="toc-child">
-                              <li class="toc-item toc-level-5">
-                                <a
-                                  class="toc-link"
-                                  href="#Index-Vertex-Buffer-Object"
-                                  ><span class="toc-text"
-                                    >Index Vertex Buffer Object</span
-                                  ></a
-                                >
-                              </li>
-                            </ol>
-                          </li>
-                          <li class="toc-item toc-level-4">
-                            <a class="toc-link" href="#Vertex-array-object"
-                              ><span class="toc-text"
-                                >Vertex array object</span
-                              ></a
-                            >
-                          </li>
-                        </ol>
-                      </li>
-                    </ol>
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Textura"
-                      ><span class="toc-text">Textura</span></a
-                    >
-                    <ol class="toc-child">
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Parametros"
-                          ><span class="toc-text">Parámetros</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Pasos"
-                          ><span class="toc-text">Pasos</span></a
-                        >
-                      </li>
-                    </ol>
-                  </li>
-                </ol>
-              </li>
-            </ol>
-          </div>
-
-          <div class="order-lg-1 col-lg-9 col-12 post-container">
-            <h1 id="Grafico-por-computador">
-              <a
-                href="#Grafico-por-computador"
-                class="headerlink"
-                title="Gráfico por computador"
-              ></a
-              >Gráfico por computador
-            </h1>
-            <h2 id="Definicion">
-              <a href="#Definicion" class="headerlink" title="Definición"></a
-              >Definición
-            </h2>
-            <p>
-              Las técnicas relacionadas con la
-              <strong>generación de imágenes</strong> en un computado, su
-              proceso consiste en un conjunto de operaciones sobre un
-              <strong>modelo informático e datos(Modelado)</strong> para obtener
-              una <strong>representación gráfica(Renderizado)</strong>.
-            </p>
-            <p>
-              <strong
-                >La imagen puede describirse como una representación de la
-                variación de una magnitud o un parámetro sobre una
-                superficie</strong
-              >, casi siempre será la <strong>intensidad de la luz</strong>. Una
-              imagen está compuesta de <strong>pixeles</strong> y se almacenan
-              de forma digital con una <strong>precisión</strong> y
-              <strong>número de bits</strong>.
-            </p>
-            <p>
-              La imagen que percibimos depende de geometría, características de
-              la luz, características de los materiales.
-            </p>
-            <h2 id="Cause-grafico">
-              <a
-                href="#Cause-grafico"
-                class="headerlink"
-                title="Cause gráfico"
-              ></a
-              >Cause gráfico
-            </h2>
-            <ul>
-              <li>
-                Se <strong>divide</strong> el proceso de generación en etapas
-              </li>
-              <li>
-                <strong
-                  >Las salidas de una etapa son las entradas de la
-                  siguiente</strong
-                >
-              </li>
-              <li>Cada etapa debe tener sus propios recursos</li>
-              <li><strong>Permite paralelizar etapas</strong></li>
-            </ul>
-            <ol start="0">
-              <li>
-                Aplicación: Selecciona las primitivas a pintar y configura el
-                cause
-              </li>
-              <li>
-                <strong>Transformaciones</strong>
-                <ol>
-                  <li>
-                    Se transforma de <strong>coordenadas del modelo</strong> a
-                    <strong>coordenadas del mundo</strong>, el
-                    <strong>orden</strong> en el que se aplican las coordenadas
-                    influye en el resultado final.
-                  </li>
-                  <li>
-                    Se transforma de <strong>coordenadas del mundo</strong> a
-                    <strong>coordenadas de la cámara</strong>.
-                  </li>
-                </ol>
-              </li>
-              <li>
-                <strong>Proyección</strong>: Transformación las coordenadas
-                sobre el plano de vista (2D), ademas hay que pasar de
-                coordenadas normalizadas a coordenadas del frame buffer.
-                <ol>
-                  <li><strong>Ortográfica</strong></li>
-                  <li><strong>Perspectiva</strong></li>
-                  <li>
-                    <strong>Viewport</strong>: Definir en que parte de la imagen
-                    se va a pintar
-                  </li>
-                </ol>
-              </li>
-              <li>
-                <strong>Iluminación</strong>: Calcular los colores
-                <ul>
-                  <li>A nivel de vertice</li>
-                  <li>A nivel de fragmento</li>
-                </ul>
-              </li>
-              <li>
-                <strong>Ensamblado</strong>: Agrupa vertices en primitivas
-              </li>
-              <li>
-                Visibilidad I
-                <ol>
-                  <li><strong>Culling</strong></li>
-                  <li><strong>Clipping</strong></li>
-                </ol>
-              </li>
-              <li>
-                <strong>Rasterizado</strong>: Transforma las primitivas en
-                <strong>fragmentos (píxel + datos asociados)</strong>, el valor
-                de los parámetros del fragmento <strong>se interpola</strong>
-              </li>
-              <li><strong>Sombreado</strong>: Colorea los fragmentos</li>
-              <li>
-                Visibilidad II: <strong>Z-buffer</strong> para determinar pixel
-                ocultado por otro
-              </li>
-              <li>
-                Operaciones con la imagen: blending, motion blur, cartoon
-                filter, gaussian blur, <strong>antialiasing</strong>
-              </li>
-            </ol>
-            <h2 id="Tecnica-de-modelado">
-              <a
-                href="#Tecnica-de-modelado"
-                class="headerlink"
-                title="Técnica de modelado"
-              ></a
-              >Técnica de modelado
-            </h2>
-            <p>Un modelo suele tener</p>
-            <ul>
-              <li>
-                <strong>Distribución espacial</strong> y de la forma de los
-                componentes
-              </li>
-              <li>La <strong>conectividad</strong></li>
-              <li>Información adicional para su uso</li>
-            </ul>
-            <h3 id="Propiedades-deseables-en-un-modelo">
-              <a
-                href="#Propiedades-deseables-en-un-modelo"
-                class="headerlink"
-                title="Propiedades deseables en un modelo"
-              ></a
-              >Propiedades deseables en un modelo
-            </h3>
-            <ul>
-              <li><strong>Precisión</strong></li>
-              <li><strong>Dominio</strong></li>
-              <li><strong>Ausencia de ambigüedad</strong></li>
-              <li><strong>Unicidad</strong></li>
-              <li><strong>Cierre</strong></li>
-              <li><strong>Compacta</strong></li>
-              <li><strong>Eficiencia</strong></li>
-            </ul>
-            <h3 id="Modelos-de-alambre">
-              <a
-                href="#Modelos-de-alambre"
-                class="headerlink"
-                title="Modelos de alambre"
-              ></a
-              >Modelos de alambre
-            </h3>
-            <p>
-              La información que se tiene sobre el objeto es un
-              <strong>conjunto de líneas</strong>
-            </p>
-            <h3 id="Modelos-de-mallas">
-              <a
-                href="#Modelos-de-mallas"
-                class="headerlink"
-                title="Modelos de mallas"
-              ></a
-              >Modelos de mallas
-            </h3>
-            <p>
-              Es conocida como <strong>representación por fronteras</strong>, es
-              necesario definir sus <strong>vértices</strong>,
-              <strong>aristas</strong> y <strong>caras</strong>. Para distinguir
-              fuera y dentro, se usa la <strong>dirección de la normal</strong>.
-              Las caras planas son la forma de representación más extendida y
-              aproxima superficies curvas con precisión dependiente de la
-              resolución. La norma de un vértice a partir de las normales de las
-              caras adyacentes.
-            </p>
+    <article class="container" style="width: 100%; max-width: 100%">
+      <!-- Post Container -->
+      <div class="post-container">
+        <h1 id="Grafico-por-computador">
+          <a
+            href="#Grafico-por-computador"
+            class="headerlink"
+            title="Gráfico por computador"
+          ></a
+          >Gráfico por computador
+        </h1>
+        <h2 id="Definicion">
+          <a href="#Definicion" class="headerlink" title="Definición"></a
+          >Definición
+        </h2>
+        <p>
+          Las técnicas relacionadas con la
+          <strong>generación de imágenes</strong> en un computado, su proceso
+          consiste en un conjunto de operaciones sobre un
+          <strong>modelo informático e datos(Modelado)</strong> para obtener una
+          <strong>representación gráfica(Renderizado)</strong>.
+        </p>
+        <p>
+          <strong
+            >La imagen puede describirse como una representación de la variación
+            de una magnitud o un parámetro sobre una superficie</strong
+          >, casi siempre será la <strong>intensidad de la luz</strong>. Una
+          imagen está compuesta de <strong>pixeles</strong> y se almacenan de
+          forma digital con una <strong>precisión</strong> y
+          <strong>número de bits</strong>.
+        </p>
+        <p>
+          La imagen que percibimos depende de geometría, características de la
+          luz, características de los materiales.
+        </p>
+        <h2 id="Cause-grafico">
+          <a href="#Cause-grafico" class="headerlink" title="Cause gráfico"></a
+          >Cause gráfico
+        </h2>
+        <ul>
+          <li>Se <strong>divide</strong> el proceso de generación en etapas</li>
+          <li>
+            <strong
+              >Las salidas de una etapa son las entradas de la siguiente</strong
+            >
+          </li>
+          <li>Cada etapa debe tener sus propios recursos</li>
+          <li><strong>Permite paralelizar etapas</strong></li>
+        </ul>
+        <ol start="0">
+          <li>
+            Aplicación: Selecciona las primitivas a pintar y configura el cause
+          </li>
+          <li>
+            <strong>Transformaciones</strong>
             <ol>
-              <li><strong>Listas no indexadas</strong></li>
               <li>
-                <strong>Listas indexadas</strong>: cada vértice se representa
-                con un índice sobre una lista de coordenadas
+                Se transforma de <strong>coordenadas del modelo</strong> a
+                <strong>coordenadas del mundo</strong>, el
+                <strong>orden</strong> en el que se aplican las coordenadas
+                influye en el resultado final.
+              </li>
+              <li>
+                Se transforma de <strong>coordenadas del mundo</strong> a
+                <strong>coordenadas de la cámara</strong>.
               </li>
             </ol>
-            <p><img src="vertices-list.png" alt="Vertices List" /></p>
-            <p>Y además:</p>
+          </li>
+          <li>
+            <strong>Proyección</strong>: Transformación las coordenadas sobre el
+            plano de vista (2D), ademas hay que pasar de coordenadas
+            normalizadas a coordenadas del frame buffer.
+            <ol>
+              <li><strong>Ortográfica</strong></li>
+              <li><strong>Perspectiva</strong></li>
+              <li>
+                <strong>Viewport</strong>: Definir en que parte de la imagen se
+                va a pintar
+              </li>
+            </ol>
+          </li>
+          <li>
+            <strong>Iluminación</strong>: Calcular los colores
             <ul>
-              <li>
-                Atributos para el renderizado: normales corlo, coordenadas de
-                textura
-              </li>
-              <li>Atributos para la simulación: masa, elasticidad</li>
-              <li>
-                Atributos para la animación: peso del vértice para un
-                determinado hueso
-              </li>
+              <li>A nivel de vertice</li>
+              <li>A nivel de fragmento</li>
             </ul>
-            <h3 id="Representaciones-de-fronteras-no-poliedricas">
-              <a
-                href="#Representaciones-de-fronteras-no-poliedricas"
-                class="headerlink"
-                title="Representaciones de fronteras no poliédricas"
-              ></a
-              >Representaciones de fronteras no poliédricas
-            </h3>
-            <ul>
-              <li>Parches bicúbicos de Bézier</li>
-              <li>Parches de Catmull-Rom</li>
-              <li>Splines uniformes</li>
-            </ul>
-            <h3 id="Modelos-multiresolucion">
-              <a
-                href="#Modelos-multiresolucion"
-                class="headerlink"
-                title="Modelos multiresolución"
-              ></a
-              >Modelos multiresolución
-            </h3>
-            <p>
-              Se basan en el concepto de <strong>LOD (Level of detail)</strong>
-            </p>
-            <ul>
-              <li>Distancia a la cámara</li>
-              <li>La orientación respecto a la cámara</li>
-              <li>Posición de las luces</li>
-            </ul>
-            <h3 id="Otros">
-              <a href="#Otros" class="headerlink" title="Otros"></a>Otros
-            </h3>
-            <ul>
-              <li>
-                Modelos de alambre: Se representa por un conjunto de líneas
-              </li>
-              <li>Primitivas parametrizables</li>
-              <li>Representaciones de desplazamiento o barrido</li>
-              <li>
-                Volúmenes contenedores: Facilita la
-                <strong>detección de colisiones</strong> y los objetos complejos
-                pueden ser aproximados mediante una
-                <strong>jerarquía de objetos</strong> más simples.
-              </li>
-              <li>Representaciones de partición espacial</li>
-              <li>
-                Geometría sólida constructiva: Un objeto se almacena como un
-                árbol binario
-              </li>
-              <li>
-                Modelos basados en campos escalares: Superficies definidas por
-                un <strong>conjunto de ecuaciones</strong>, Las superficies se
-                deforman en la proximidad de otras, dando lugar a transiciones
-                suaves y permitiendo obtener formas complejas utilizando un
-                número pequeño de dichas primitivas.
-              </li>
-            </ul>
-            <h2 id="Visibilidad">
-              <a href="#Visibilidad" class="headerlink" title="Visibilidad"></a
-              >Visibilidad
-            </h2>
-            <p>
-              <strong>Determinar qué elementos son visibles</strong> desde un
-              punto de vista dado y cuales no.
-              <strong
-                >Debemos eliminar del cause aquellos elementos que no son
-                visibles en eapas tempranas</strong
-              >.
-            </p>
-            <h3 id="Etapa-de-aplicacion">
-              <a
-                href="#Etapa-de-aplicacion"
-                class="headerlink"
-                title="Etapa de aplicacion"
-              ></a
-              >Etapa de aplicacion
-            </h3>
-            <p>
-              La CPU indica a la GPU que objetos debe de mostrar. Si sabemos que
-              algo no se va a ver, pues <strong>no se le pasa</strong>. p.j.
-              basados en técnicas de subdivisión del espacio.
-            </p>
-            <ul>
-              <li>
-                BSP (Binary Space Partition): navegación por edificios y
-                ciudades
-              </li>
-              <li>
-                KD-Trees, se utilizan para acelerar algoritmos basados en Ray
-                Tracing
-              </li>
-            </ul>
-            <h3 id="En-el-cause-grafico">
-              <a
-                href="#En-el-cause-grafico"
-                class="headerlink"
-                title="En el cause gráfico"
-              ></a
-              >En el cause gráfico
-            </h3>
-            <h4 id="A-nivel-de-primitiva">
-              <a
-                href="#A-nivel-de-primitiva"
-                class="headerlink"
-                title="A nivel de primitiva"
-              ></a
-              >A nivel de primitiva
-            </h4>
-            <h5 id="Clipping">
-              <a href="#Clipping" class="headerlink" title="Clipping"></a
-              >Clipping
-            </h5>
-            <ul>
-              <li>Eliminar partes fuera del volumen de frustum.</li>
-            </ul>
-            <p>
-              <img src="clipping-frustum.png" alt="Clipping" /><br /><img
-                src="clipping.png"
-                alt="Clipping"
-              />
-            </p>
-            <p>
-              Divide los vértices en dos listas, parte visible y parte invisible
-            </p>
-            <p>
-              <img src="clipping-group.png" alt="Clipping Group" /><br /><img
-                src="clipping-intersect.png"
-                alt="Clipping Intersect"
-              />
-            </p>
-            <p>
-              <strong
-                >OpenGL proyecta todo antes de hacer clipping, culling, se hace
-                despues y es más facil ver sus coordenadas están o no en -1 y
-                1</strong
-              >. Puede originar apariciones&#x2F;desapariciones repentinas
-              (utilización de niebla para aminorarlo).
-            </p>
-            <p>
-              <img src="visible-volume.png" alt="Visible Volume" /><br /><img
-                src="normalized-volume.png"
-                alt="Normalized Volume"
-              /><br /><img src="clipping-cut.png" alt="Clipping Cut" />
-            </p>
-            <p>Recorte en el plano normal al eje “Y”</p>
-            <p><img src="clipping-formula.png" alt="Clipping Formula" /></p>
-            <ul>
-              <li>
-                La proyección en perspectiva al volumen auxiliar es no lineal en
-                la coordenada Z
-              </li>
-              <li>
-                Esto provoca que se pierda resolución para los objetos situados
-                cerca del plano “far” cuando el plano “near” está próximo al
-                origen.
-              </li>
-            </ul>
-            <h5 id="Culling">
-              <a href="#Culling" class="headerlink" title="Culling"></a>Culling
-            </h5>
-            <p>
-              Eliminación de caras ocultas que
-              <strong>no sean visibles por la cámara dada su orientación</strong
-              >. Se analiza el <strong>signo del producto escalar</strong> del
-              vector de visualización con la normal a la superficie.
-            </p>
-            <h4 id="A-nivel-de-primitiva-o-pixel">
-              <a
-                href="#A-nivel-de-primitiva-o-pixel"
-                class="headerlink"
-                title="A nivel de primitiva o píxel"
-              ></a
-              >A nivel de primitiva o píxel
-            </h4>
-            <h5 id="Algoritmo-del-pintor">
-              <a
-                href="#Algoritmo-del-pintor"
-                class="headerlink"
-                title="Algoritmo del pintor"
-              ></a
-              >Algoritmo del pintor
-            </h5>
-            <p>
-              Se dibujan todos los polígonos que aparecen en la escena
-              <strong>empezando por los más alejados</strong>, de manera que los
-              polígonos situados en primer plano se dibujan sobre los polígonos
-              situados en el fondo.
-            </p>
-            <h5 id="Buffer-de-profundidad-z-buffer">
-              <a
-                href="#Buffer-de-profundidad-z-buffer"
-                class="headerlink"
-                title="Buffer de profundidad (z-buffer)"
-              ></a
-              >Buffer de profundidad (<strong>z-buffer</strong>)
-            </h5>
-            <p>
-              <strong
-                >Determinar la profundidad (coordenada z) de cada
-                fragmento</strong
-              >. El Z-buffer está <strong>inicialmente vacío</strong>. Cada vez
-              que un fragmento se dibuje, la coordenada z del fragmento es
-              comparada con el valor actual de dicha posición en el buffer.
-            </p>
-            <ul>
-              <li>
-                Si es menor, se sobrescribe el buffer de color y se actualiza
-                buffer de profundidad con su z.
-              </li>
-              <li>Si es mayor, éste se descarta.</li>
-            </ul>
-            <p><img src="z-buffer.png" alt="Z Buffer" /></p>
-            <h5 id="Ray-Tracing">
-              <a href="#Ray-Tracing" class="headerlink" title="Ray Tracing"></a
-              >Ray Tracing
-            </h5>
-            <h2 id="Iluminacion">
-              <a href="#Iluminacion" class="headerlink" title="Iluminación"></a
-              >Iluminación
-            </h2>
-            <p><img src="illumination.png" alt="Illumination" /></p>
-            <p>
-              Entendemos por modelo de iluminación el
-              <strong>cálculo de la intensidad de cada color</strong> (RGB por
-              ejemplo) para cada punto de la escena, que puede intervenir
-            </p>
-            <p>Se ilumina un punto teniendo en cuenta exclusivamente</p>
-            <ul>
-              <li>Las <strong>luces activas</strong></li>
-              <li>El <strong>material del objeto</strong></li>
-              <li>
-                La <strong>orientación del objeto</strong> con respecto a la
-                luz.
-              </li>
-              <li>
-                La <strong>orientación y posición de la cámara</strong> respecto
-                a la superficie y a las fuentes de luz
-              </li>
-              <li>El modelo de iluminación</li>
-            </ul>
-            <p><img src="illumination-light.png" alt="Illumination" /></p>
-            <h3 id="Luces">
-              <a href="#Luces" class="headerlink" title="Luces"></a>Luces
-            </h3>
-            <p><img src="light.png" alt="Light" /></p>
-            <h4 id="Luces-direccionales">
-              <a
-                href="#Luces-direccionales"
-                class="headerlink"
-                title="Luces direccionales"
-              ></a
-              ><strong>Luces direccionales</strong>
-            </h4>
-            <ul>
-              <li>Luces <strong>situadas en el infinito</strong></li>
-              <li><strong>Paralelos</strong></li>
-            </ul>
-            <h4 id="Luces-puntuales">
-              <a
-                href="#Luces-puntuales"
-                class="headerlink"
-                title="Luces puntuales"
-              ></a
-              ><strong>Luces puntuales</strong>
-            </h4>
-            <ul>
-              <li>Luces <strong>sin dimensión</strong></li>
-              <li>Emiten luz <strong>radial</strong></li>
-            </ul>
-            <h4 id="Luz-focal">
-              <a href="#Luz-focal" class="headerlink" title="Luz focal"></a
-              ><strong>Luz focal</strong>
-            </h4>
-            <ul>
-              <li>
-                Luz situada en el espacio con una
-                <strong>dirección principal</strong>
-              </li>
-              <li>Puede definirse una zona de penumbra</li>
-            </ul>
-            <h4 id="Luces-de-area">
-              <a
-                href="#Luces-de-area"
-                class="headerlink"
-                title="Luces de área"
-              ></a
-              ><strong>Luces de área</strong>
-            </h4>
-            <ul>
-              <li>Luces con 1 o más dimensiones.</li>
-              <li>
-                <strong>NO utilizadas en modelos de iluminación local</strong>
-              </li>
-            </ul>
-            <h3 id="Modelos-de-iluminacion">
-              <a
-                href="#Modelos-de-iluminacion"
-                class="headerlink"
-                title="Modelos de iluminación"
-              ></a
-              >Modelos de iluminación
-            </h3>
-            <h4 id="Modelos-locales">
-              <a
-                href="#Modelos-locales"
-                class="headerlink"
-                title="Modelos locales"
-              ></a
-              >Modelos locales
-            </h4>
-            <p>
-              Sólo se considera la interacción fuentes de
-              <strong>luz-objetos</strong>.
-            </p>
-            <ul>
-              <li>
-                Forward rendering: proyectar los objetos sobre el plano de vista
-              </li>
-              <li>
-                Ray casting (backward rendering): trazar rayos desde la cámara a
-                los objetos
-              </li>
-              <li>
-                Deferred rendering: a se pre-procesan los datos y en la
-                siguiente se calcula el color de cada píxel
-              </li>
-            </ul>
-            <h5 id="Modelo-de-iluminacion-de-Phong">
-              <a
-                href="#Modelo-de-iluminacion-de-Phong"
-                class="headerlink"
-                title="Modelo de iluminación de Phong"
-              ></a
-              >Modelo de iluminación de Phong
-            </h5>
-            <p>
-              El modelo de <strong>iluminación</strong> define la
-              <strong>ecuacion para calcular las intensidades</strong> dado los
-              componentes necesarios
-            </p>
-            <p>
-              $$<br />\lambda &#x3D; k_{(emissive, \lambda)} + I_{(A, \lambda)}
-              k_{(a, \lambda)} + \sum_{I \in lights} f_{att}^I \Big( I_{(a,
-              \lambda)} k_{(a, \lambda)} + I_{(d, \lambda)} k_{(d, \lambda)}
-              \cos{\theta} + I_{(e, \lambda)} k_{(e, \lambda)} \cos^{n}{\alpha}
-              \Big)<br />$$
-            </p>
-            <p>$\lambda$ suele reducirse a 3 colores básicos (R, G, B).</p>
-            <p><img src="light-components.png" alt="Light Components" /></p>
-            <h6 id="Componente-ambiental">
-              <a
-                href="#Componente-ambiental"
-                class="headerlink"
-                title="Componente ambiental"
-              ></a
-              >Componente <strong>ambiental</strong>
-            </h6>
-            <p>
-              Proviene de <strong>todas las direcciones</strong> e ilumina todas
-              las caras del objeto por <strong>igual</strong>.
-            </p>
-            <p>Se modela con</p>
-            <ul>
-              <li>
-                Intensidad ambiental: aporte de una determinada luz a la
-                intensidad ambiental ($0 \le I_a \le 1$)
-              </li>
-              <li>Coeficiente de reflexión ambiental: ($0 \le k_a \le 1$)</li>
-              <li>No depende a la distancia a la fuente ni la orientación</li>
-            </ul>
-            <p>$$<br />I_a k_a<br />$$</p>
-            <h6 id="Componente-difusa">
-              <a
-                href="#Componente-difusa"
-                class="headerlink"
-                title="Componente difusa"
-              ></a
-              >Componente <strong>difusa</strong>
-            </h6>
-            <p>
-              <strong>Proviene de una dirección</strong> y
-              <strong>se refleja en todas direcciones</strong>.
-            </p>
-            <p>Se modela con</p>
-            <ul>
-              <li>Intensidad de la fuente ($0 \le I_d \le 1$)</li>
-              <li>Coeficiente de reflexión difusa: ($0 \le k_d \le 1$)</li>
-              <li>$N$: normal de la superficie en el punto P.</li>
-              <li>$L$: vector de incidencia de la luz.</li>
-            </ul>
-            <p>
-              $$<br />I_d k_d \cos{\theta} &#x3D; I_d k_d (L \cdot N)<br />$$
-            </p>
-            <h6 id="Componente-especular">
-              <a
-                href="#Componente-especular"
-                class="headerlink"
-                title="Componente especular"
-              ></a
-              >Componente <strong>especular</strong>
-            </h6>
-            <p>
-              <strong>Proviene de una dirección</strong> y
-              <strong>se refleja en una dirección</strong>. La mayor parte de
-              los rayos de luz que proceden de una fuente se reflejan en su
-              superficie en una dirección determinada. Si la cámara se sitúa en
-              la trayectoria de dichos rayos, captará una mayor intensidad en
-              dicho punto.
-            </p>
-            <p>Se modela con</p>
-            <ul>
-              <li>
-                Intensidad del componente especular de la fuente de luz $I_e$
-              </li>
-              <li>coeficiente de reflexión especular ($0 \le k_e \le 1$)</li>
-              <li>vector de posición del observador $V$</li>
-              <li>vector de incidencia de la luz $L$</li>
-              <li>coeficiente de la rugosidad de la superficie $n$</li>
-            </ul>
-            <p>
-              $$<br />I_e k_e \cos^{n}{\alpha} &#x3D; I_e k_e (R \cdot
-              V)^n\\\\<br />R &#x3D; 2 (L \cdot N)N - L<br />$$
-            </p>
-            <p>
-              <img src="specular-component.png" alt="Specular" /><br /><img
-                src="specular-parameter.png"
-                alt="Specular N"
-              />
-            </p>
-            <h6 id="Factor-de-atenuacion">
-              <a
-                href="#Factor-de-atenuacion"
-                class="headerlink"
-                title="Factor de atenuación"
-              ></a
-              >Factor de atenuación
-            </h6>
-            <p>Se puede atenuar la luz en función de la distancia</p>
-            <p>
-              $$<br />f_{att} &#x3D; \frac{1}{c_1 + c_2 d + c_3 d^2}<br />$$
-            </p>
-            <h6 id="Iluminacion-emisiva">
-              <a
-                href="#Iluminacion-emisiva"
-                class="headerlink"
-                title="Iluminación emisiva"
-              ></a
-              >Iluminación emisiva
-            </h6>
-            <p>
-              Se ocupa de simular objetos que emiten luz, se simula con un valor
-              fijo independiente de la luz $k_{emissive}$
-            </p>
-            <h5 id="Modelo-de-sombreado">
-              <a
-                href="#Modelo-de-sombreado"
-                class="headerlink"
-                title="Modelo de sombreado"
-              ></a
-              >Modelo de sombreado
-            </h5>
-            <p>
-              Define cuando cuando y donde aplica la ecuacion para obtener la
-              intensidad de cada puntos.
-            </p>
-            <p><img src="shading-model.png" alt="Shading Model" /></p>
-            <h6 id="Sombreado-plano">
-              <a
-                href="#Sombreado-plano"
-                class="headerlink"
-                title="Sombreado plano"
-              ></a
-              >Sombreado plano
-            </h6>
-            <p>
-              Todos los puntos de un polígono se sombrean con el
-              <strong>mismo color</strong>
-            </p>
-            <pre><code>gl.glShadeModel(GL2.GL_FLAT);
+          </li>
+          <li><strong>Ensamblado</strong>: Agrupa vertices en primitivas</li>
+          <li>
+            Visibilidad I
+            <ol>
+              <li><strong>Culling</strong></li>
+              <li><strong>Clipping</strong></li>
+            </ol>
+          </li>
+          <li>
+            <strong>Rasterizado</strong>: Transforma las primitivas en
+            <strong>fragmentos (píxel + datos asociados)</strong>, el valor de
+            los parámetros del fragmento <strong>se interpola</strong>
+          </li>
+          <li><strong>Sombreado</strong>: Colorea los fragmentos</li>
+          <li>
+            Visibilidad II: <strong>Z-buffer</strong> para determinar pixel
+            ocultado por otro
+          </li>
+          <li>
+            Operaciones con la imagen: blending, motion blur, cartoon filter,
+            gaussian blur, <strong>antialiasing</strong>
+          </li>
+        </ol>
+        <h2 id="Tecnica-de-modelado">
+          <a
+            href="#Tecnica-de-modelado"
+            class="headerlink"
+            title="Técnica de modelado"
+          ></a
+          >Técnica de modelado
+        </h2>
+        <p>Un modelo suele tener</p>
+        <ul>
+          <li>
+            <strong>Distribución espacial</strong> y de la forma de los
+            componentes
+          </li>
+          <li>La <strong>conectividad</strong></li>
+          <li>Información adicional para su uso</li>
+        </ul>
+        <h3 id="Propiedades-deseables-en-un-modelo">
+          <a
+            href="#Propiedades-deseables-en-un-modelo"
+            class="headerlink"
+            title="Propiedades deseables en un modelo"
+          ></a
+          >Propiedades deseables en un modelo
+        </h3>
+        <ul>
+          <li><strong>Precisión</strong></li>
+          <li><strong>Dominio</strong></li>
+          <li><strong>Ausencia de ambigüedad</strong></li>
+          <li><strong>Unicidad</strong></li>
+          <li><strong>Cierre</strong></li>
+          <li><strong>Compacta</strong></li>
+          <li><strong>Eficiencia</strong></li>
+        </ul>
+        <h3 id="Modelos-de-alambre">
+          <a
+            href="#Modelos-de-alambre"
+            class="headerlink"
+            title="Modelos de alambre"
+          ></a
+          >Modelos de alambre
+        </h3>
+        <p>
+          La información que se tiene sobre el objeto es un
+          <strong>conjunto de líneas</strong>
+        </p>
+        <h3 id="Modelos-de-mallas">
+          <a
+            href="#Modelos-de-mallas"
+            class="headerlink"
+            title="Modelos de mallas"
+          ></a
+          >Modelos de mallas
+        </h3>
+        <p>
+          Es conocida como <strong>representación por fronteras</strong>, es
+          necesario definir sus <strong>vértices</strong>,
+          <strong>aristas</strong> y <strong>caras</strong>. Para distinguir
+          fuera y dentro, se usa la <strong>dirección de la normal</strong>. Las
+          caras planas son la forma de representación más extendida y aproxima
+          superficies curvas con precisión dependiente de la resolución. La
+          norma de un vértice a partir de las normales de las caras adyacentes.
+        </p>
+        <ol>
+          <li><strong>Listas no indexadas</strong></li>
+          <li>
+            <strong>Listas indexadas</strong>: cada vértice se representa con un
+            índice sobre una lista de coordenadas
+          </li>
+        </ol>
+        <p><img src="vertices-list.png" alt="Vertices List" /></p>
+        <p>Y además:</p>
+        <ul>
+          <li>
+            Atributos para el renderizado: normales corlo, coordenadas de
+            textura
+          </li>
+          <li>Atributos para la simulación: masa, elasticidad</li>
+          <li>
+            Atributos para la animación: peso del vértice para un determinado
+            hueso
+          </li>
+        </ul>
+        <h3 id="Representaciones-de-fronteras-no-poliedricas">
+          <a
+            href="#Representaciones-de-fronteras-no-poliedricas"
+            class="headerlink"
+            title="Representaciones de fronteras no poliédricas"
+          ></a
+          >Representaciones de fronteras no poliédricas
+        </h3>
+        <ul>
+          <li>Parches bicúbicos de Bézier</li>
+          <li>Parches de Catmull-Rom</li>
+          <li>Splines uniformes</li>
+        </ul>
+        <h3 id="Modelos-multiresolucion">
+          <a
+            href="#Modelos-multiresolucion"
+            class="headerlink"
+            title="Modelos multiresolución"
+          ></a
+          >Modelos multiresolución
+        </h3>
+        <p>Se basan en el concepto de <strong>LOD (Level of detail)</strong></p>
+        <ul>
+          <li>Distancia a la cámara</li>
+          <li>La orientación respecto a la cámara</li>
+          <li>Posición de las luces</li>
+        </ul>
+        <h3 id="Otros">
+          <a href="#Otros" class="headerlink" title="Otros"></a>Otros
+        </h3>
+        <ul>
+          <li>Modelos de alambre: Se representa por un conjunto de líneas</li>
+          <li>Primitivas parametrizables</li>
+          <li>Representaciones de desplazamiento o barrido</li>
+          <li>
+            Volúmenes contenedores: Facilita la
+            <strong>detección de colisiones</strong> y los objetos complejos
+            pueden ser aproximados mediante una
+            <strong>jerarquía de objetos</strong> más simples.
+          </li>
+          <li>Representaciones de partición espacial</li>
+          <li>
+            Geometría sólida constructiva: Un objeto se almacena como un árbol
+            binario
+          </li>
+          <li>
+            Modelos basados en campos escalares: Superficies definidas por un
+            <strong>conjunto de ecuaciones</strong>, Las superficies se deforman
+            en la proximidad de otras, dando lugar a transiciones suaves y
+            permitiendo obtener formas complejas utilizando un número pequeño de
+            dichas primitivas.
+          </li>
+        </ul>
+        <h2 id="Visibilidad">
+          <a href="#Visibilidad" class="headerlink" title="Visibilidad"></a
+          >Visibilidad
+        </h2>
+        <p>
+          <strong>Determinar qué elementos son visibles</strong> desde un punto
+          de vista dado y cuales no.
+          <strong
+            >Debemos eliminar del cause aquellos elementos que no son visibles
+            en eapas tempranas</strong
+          >.
+        </p>
+        <h3 id="Etapa-de-aplicacion">
+          <a
+            href="#Etapa-de-aplicacion"
+            class="headerlink"
+            title="Etapa de aplicacion"
+          ></a
+          >Etapa de aplicacion
+        </h3>
+        <p>
+          La CPU indica a la GPU que objetos debe de mostrar. Si sabemos que
+          algo no se va a ver, pues <strong>no se le pasa</strong>. p.j. basados
+          en técnicas de subdivisión del espacio.
+        </p>
+        <ul>
+          <li>
+            BSP (Binary Space Partition): navegación por edificios y ciudades
+          </li>
+          <li>
+            KD-Trees, se utilizan para acelerar algoritmos basados en Ray
+            Tracing
+          </li>
+        </ul>
+        <h3 id="En-el-cause-grafico">
+          <a
+            href="#En-el-cause-grafico"
+            class="headerlink"
+            title="En el cause gráfico"
+          ></a
+          >En el cause gráfico
+        </h3>
+        <h4 id="A-nivel-de-primitiva">
+          <a
+            href="#A-nivel-de-primitiva"
+            class="headerlink"
+            title="A nivel de primitiva"
+          ></a
+          >A nivel de primitiva
+        </h4>
+        <h5 id="Clipping">
+          <a href="#Clipping" class="headerlink" title="Clipping"></a>Clipping
+        </h5>
+        <ul>
+          <li>Eliminar partes fuera del volumen de frustum.</li>
+        </ul>
+        <p>
+          <img src="clipping-frustum.png" alt="Clipping" /><br /><img
+            src="clipping.png"
+            alt="Clipping"
+          />
+        </p>
+        <p>
+          Divide los vértices en dos listas, parte visible y parte invisible
+        </p>
+        <p>
+          <img src="clipping-group.png" alt="Clipping Group" /><br /><img
+            src="clipping-intersect.png"
+            alt="Clipping Intersect"
+          />
+        </p>
+        <p>
+          <strong
+            >OpenGL proyecta todo antes de hacer clipping, culling, se hace
+            despues y es más facil ver sus coordenadas están o no en -1 y
+            1</strong
+          >. Puede originar apariciones&#x2F;desapariciones repentinas
+          (utilización de niebla para aminorarlo).
+        </p>
+        <p>
+          <img src="visible-volume.png" alt="Visible Volume" /><br /><img
+            src="normalized-volume.png"
+            alt="Normalized Volume"
+          /><br /><img src="clipping-cut.png" alt="Clipping Cut" />
+        </p>
+        <p>Recorte en el plano normal al eje “Y”</p>
+        <p><img src="clipping-formula.png" alt="Clipping Formula" /></p>
+        <ul>
+          <li>
+            La proyección en perspectiva al volumen auxiliar es no lineal en la
+            coordenada Z
+          </li>
+          <li>
+            Esto provoca que se pierda resolución para los objetos situados
+            cerca del plano “far” cuando el plano “near” está próximo al origen.
+          </li>
+        </ul>
+        <h5 id="Culling">
+          <a href="#Culling" class="headerlink" title="Culling"></a>Culling
+        </h5>
+        <p>
+          Eliminación de caras ocultas que
+          <strong>no sean visibles por la cámara dada su orientación</strong>.
+          Se analiza el <strong>signo del producto escalar</strong> del vector
+          de visualización con la normal a la superficie.
+        </p>
+        <h4 id="A-nivel-de-primitiva-o-pixel">
+          <a
+            href="#A-nivel-de-primitiva-o-pixel"
+            class="headerlink"
+            title="A nivel de primitiva o píxel"
+          ></a
+          >A nivel de primitiva o píxel
+        </h4>
+        <h5 id="Algoritmo-del-pintor">
+          <a
+            href="#Algoritmo-del-pintor"
+            class="headerlink"
+            title="Algoritmo del pintor"
+          ></a
+          >Algoritmo del pintor
+        </h5>
+        <p>
+          Se dibujan todos los polígonos que aparecen en la escena
+          <strong>empezando por los más alejados</strong>, de manera que los
+          polígonos situados en primer plano se dibujan sobre los polígonos
+          situados en el fondo.
+        </p>
+        <h5 id="Buffer-de-profundidad-z-buffer">
+          <a
+            href="#Buffer-de-profundidad-z-buffer"
+            class="headerlink"
+            title="Buffer de profundidad (z-buffer)"
+          ></a
+          >Buffer de profundidad (<strong>z-buffer</strong>)
+        </h5>
+        <p>
+          <strong
+            >Determinar la profundidad (coordenada z) de cada fragmento</strong
+          >. El Z-buffer está <strong>inicialmente vacío</strong>. Cada vez que
+          un fragmento se dibuje, la coordenada z del fragmento es comparada con
+          el valor actual de dicha posición en el buffer.
+        </p>
+        <ul>
+          <li>
+            Si es menor, se sobrescribe el buffer de color y se actualiza buffer
+            de profundidad con su z.
+          </li>
+          <li>Si es mayor, éste se descarta.</li>
+        </ul>
+        <p><img src="z-buffer.png" alt="Z Buffer" /></p>
+        <h5 id="Ray-Tracing">
+          <a href="#Ray-Tracing" class="headerlink" title="Ray Tracing"></a>Ray
+          Tracing
+        </h5>
+        <h2 id="Iluminacion">
+          <a href="#Iluminacion" class="headerlink" title="Iluminación"></a
+          >Iluminación
+        </h2>
+        <p><img src="illumination.png" alt="Illumination" /></p>
+        <p>
+          Entendemos por modelo de iluminación el
+          <strong>cálculo de la intensidad de cada color</strong> (RGB por
+          ejemplo) para cada punto de la escena, que puede intervenir
+        </p>
+        <p>Se ilumina un punto teniendo en cuenta exclusivamente</p>
+        <ul>
+          <li>Las <strong>luces activas</strong></li>
+          <li>El <strong>material del objeto</strong></li>
+          <li>
+            La <strong>orientación del objeto</strong> con respecto a la luz.
+          </li>
+          <li>
+            La <strong>orientación y posición de la cámara</strong> respecto a
+            la superficie y a las fuentes de luz
+          </li>
+          <li>El modelo de iluminación</li>
+        </ul>
+        <p><img src="illumination-light.png" alt="Illumination" /></p>
+        <h3 id="Luces">
+          <a href="#Luces" class="headerlink" title="Luces"></a>Luces
+        </h3>
+        <p><img src="light.png" alt="Light" /></p>
+        <h4 id="Luces-direccionales">
+          <a
+            href="#Luces-direccionales"
+            class="headerlink"
+            title="Luces direccionales"
+          ></a
+          ><strong>Luces direccionales</strong>
+        </h4>
+        <ul>
+          <li>Luces <strong>situadas en el infinito</strong></li>
+          <li><strong>Paralelos</strong></li>
+        </ul>
+        <h4 id="Luces-puntuales">
+          <a
+            href="#Luces-puntuales"
+            class="headerlink"
+            title="Luces puntuales"
+          ></a
+          ><strong>Luces puntuales</strong>
+        </h4>
+        <ul>
+          <li>Luces <strong>sin dimensión</strong></li>
+          <li>Emiten luz <strong>radial</strong></li>
+        </ul>
+        <h4 id="Luz-focal">
+          <a href="#Luz-focal" class="headerlink" title="Luz focal"></a
+          ><strong>Luz focal</strong>
+        </h4>
+        <ul>
+          <li>
+            Luz situada en el espacio con una
+            <strong>dirección principal</strong>
+          </li>
+          <li>Puede definirse una zona de penumbra</li>
+        </ul>
+        <h4 id="Luces-de-area">
+          <a href="#Luces-de-area" class="headerlink" title="Luces de área"></a
+          ><strong>Luces de área</strong>
+        </h4>
+        <ul>
+          <li>Luces con 1 o más dimensiones.</li>
+          <li>
+            <strong>NO utilizadas en modelos de iluminación local</strong>
+          </li>
+        </ul>
+        <h3 id="Modelos-de-iluminacion">
+          <a
+            href="#Modelos-de-iluminacion"
+            class="headerlink"
+            title="Modelos de iluminación"
+          ></a
+          >Modelos de iluminación
+        </h3>
+        <h4 id="Modelos-locales">
+          <a
+            href="#Modelos-locales"
+            class="headerlink"
+            title="Modelos locales"
+          ></a
+          >Modelos locales
+        </h4>
+        <p>
+          Sólo se considera la interacción fuentes de
+          <strong>luz-objetos</strong>.
+        </p>
+        <ul>
+          <li>
+            Forward rendering: proyectar los objetos sobre el plano de vista
+          </li>
+          <li>
+            Ray casting (backward rendering): trazar rayos desde la cámara a los
+            objetos
+          </li>
+          <li>
+            Deferred rendering: a se pre-procesan los datos y en la siguiente se
+            calcula el color de cada píxel
+          </li>
+        </ul>
+        <h5 id="Modelo-de-iluminacion-de-Phong">
+          <a
+            href="#Modelo-de-iluminacion-de-Phong"
+            class="headerlink"
+            title="Modelo de iluminación de Phong"
+          ></a
+          >Modelo de iluminación de Phong
+        </h5>
+        <p>
+          El modelo de <strong>iluminación</strong> define la
+          <strong>ecuacion para calcular las intensidades</strong> dado los
+          componentes necesarios
+        </p>
+        <p>
+          $$<br />\lambda &#x3D; k_{(emissive, \lambda)} + I_{(A, \lambda)}
+          k_{(a, \lambda)} + \sum_{I \in lights} f_{att}^I \Big( I_{(a,
+          \lambda)} k_{(a, \lambda)} + I_{(d, \lambda)} k_{(d, \lambda)}
+          \cos{\theta} + I_{(e, \lambda)} k_{(e, \lambda)} \cos^{n}{\alpha}
+          \Big)<br />$$
+        </p>
+        <p>$\lambda$ suele reducirse a 3 colores básicos (R, G, B).</p>
+        <p><img src="light-components.png" alt="Light Components" /></p>
+        <h6 id="Componente-ambiental">
+          <a
+            href="#Componente-ambiental"
+            class="headerlink"
+            title="Componente ambiental"
+          ></a
+          >Componente <strong>ambiental</strong>
+        </h6>
+        <p>
+          Proviene de <strong>todas las direcciones</strong> e ilumina todas las
+          caras del objeto por <strong>igual</strong>.
+        </p>
+        <p>Se modela con</p>
+        <ul>
+          <li>
+            Intensidad ambiental: aporte de una determinada luz a la intensidad
+            ambiental ($0 \le I_a \le 1$)
+          </li>
+          <li>Coeficiente de reflexión ambiental: ($0 \le k_a \le 1$)</li>
+          <li>No depende a la distancia a la fuente ni la orientación</li>
+        </ul>
+        <p>$$<br />I_a k_a<br />$$</p>
+        <h6 id="Componente-difusa">
+          <a
+            href="#Componente-difusa"
+            class="headerlink"
+            title="Componente difusa"
+          ></a
+          >Componente <strong>difusa</strong>
+        </h6>
+        <p>
+          <strong>Proviene de una dirección</strong> y
+          <strong>se refleja en todas direcciones</strong>.
+        </p>
+        <p>Se modela con</p>
+        <ul>
+          <li>Intensidad de la fuente ($0 \le I_d \le 1$)</li>
+          <li>Coeficiente de reflexión difusa: ($0 \le k_d \le 1$)</li>
+          <li>$N$: normal de la superficie en el punto P.</li>
+          <li>$L$: vector de incidencia de la luz.</li>
+        </ul>
+        <p>$$<br />I_d k_d \cos{\theta} &#x3D; I_d k_d (L \cdot N)<br />$$</p>
+        <h6 id="Componente-especular">
+          <a
+            href="#Componente-especular"
+            class="headerlink"
+            title="Componente especular"
+          ></a
+          >Componente <strong>especular</strong>
+        </h6>
+        <p>
+          <strong>Proviene de una dirección</strong> y
+          <strong>se refleja en una dirección</strong>. La mayor parte de los
+          rayos de luz que proceden de una fuente se reflejan en su superficie
+          en una dirección determinada. Si la cámara se sitúa en la trayectoria
+          de dichos rayos, captará una mayor intensidad en dicho punto.
+        </p>
+        <p>Se modela con</p>
+        <ul>
+          <li>Intensidad del componente especular de la fuente de luz $I_e$</li>
+          <li>coeficiente de reflexión especular ($0 \le k_e \le 1$)</li>
+          <li>vector de posición del observador $V$</li>
+          <li>vector de incidencia de la luz $L$</li>
+          <li>coeficiente de la rugosidad de la superficie $n$</li>
+        </ul>
+        <p>
+          $$<br />I_e k_e \cos^{n}{\alpha} &#x3D; I_e k_e (R \cdot V)^n\\\\<br />R
+          &#x3D; 2 (L \cdot N)N - L<br />$$
+        </p>
+        <p>
+          <img src="specular-component.png" alt="Specular" /><br /><img
+            src="specular-parameter.png"
+            alt="Specular N"
+          />
+        </p>
+        <h6 id="Factor-de-atenuacion">
+          <a
+            href="#Factor-de-atenuacion"
+            class="headerlink"
+            title="Factor de atenuación"
+          ></a
+          >Factor de atenuación
+        </h6>
+        <p>Se puede atenuar la luz en función de la distancia</p>
+        <p>$$<br />f_{att} &#x3D; \frac{1}{c_1 + c_2 d + c_3 d^2}<br />$$</p>
+        <h6 id="Iluminacion-emisiva">
+          <a
+            href="#Iluminacion-emisiva"
+            class="headerlink"
+            title="Iluminación emisiva"
+          ></a
+          >Iluminación emisiva
+        </h6>
+        <p>
+          Se ocupa de simular objetos que emiten luz, se simula con un valor
+          fijo independiente de la luz $k_{emissive}$
+        </p>
+        <h5 id="Modelo-de-sombreado">
+          <a
+            href="#Modelo-de-sombreado"
+            class="headerlink"
+            title="Modelo de sombreado"
+          ></a
+          >Modelo de sombreado
+        </h5>
+        <p>
+          Define cuando cuando y donde aplica la ecuacion para obtener la
+          intensidad de cada puntos.
+        </p>
+        <p><img src="shading-model.png" alt="Shading Model" /></p>
+        <h6 id="Sombreado-plano">
+          <a
+            href="#Sombreado-plano"
+            class="headerlink"
+            title="Sombreado plano"
+          ></a
+          >Sombreado plano
+        </h6>
+        <p>
+          Todos los puntos de un polígono se sombrean con el
+          <strong>mismo color</strong>
+        </p>
+        <pre><code>gl.glShadeModel(GL2.GL_FLAT);
 </code></pre>
-            <p>
-              Correcto si se verifica:<br />
-              * Fuente de luz en el infinito.<br />
-              * Observador en el infinito.<br />
-              * El polígono representa una superficie plana real del objeto que
-              se modela y no es una aproximación de un objeto curvo
-            </p>
-            <h6 id="Sombreado-de-Gouraud">
-              <a
-                href="#Sombreado-de-Gouraud"
-                class="headerlink"
-                title="Sombreado de Gouraud"
-              ></a
-              >Sombreado de <strong>Gouraud</strong>
-            </h6>
-            <p>
-              A partir de la normal en cada vértice, se evalúa la ecuación de
-              iluminación para <strong>cada vértice</strong>. Se realiza una
-              <strong>interpolación bilineal</strong> para obtener la intensidad
-              en cada punto interno.
-            </p>
-            <ul>
-              <li>Problemas con la reflexión especular</li>
-              <li>se realizan en la etapa de vértices</li>
-            </ul>
-            <p>
-              <img
-                src="bilinear-interpolation.png"
-                alt="Bilinear Interpolation"
-              />
-            </p>
-            <pre><code>gl.glShadeModel(GL2.GL_SMOOTH);
+        <p>
+          Correcto si se verifica:<br />
+          * Fuente de luz en el infinito.<br />
+          * Observador en el infinito.<br />
+          * El polígono representa una superficie plana real del objeto que se
+          modela y no es una aproximación de un objeto curvo
+        </p>
+        <h6 id="Sombreado-de-Gouraud">
+          <a
+            href="#Sombreado-de-Gouraud"
+            class="headerlink"
+            title="Sombreado de Gouraud"
+          ></a
+          >Sombreado de <strong>Gouraud</strong>
+        </h6>
+        <p>
+          A partir de la normal en cada vértice, se evalúa la ecuación de
+          iluminación para <strong>cada vértice</strong>. Se realiza una
+          <strong>interpolación bilineal</strong> para obtener la intensidad en
+          cada punto interno.
+        </p>
+        <ul>
+          <li>Problemas con la reflexión especular</li>
+          <li>se realizan en la etapa de vértices</li>
+        </ul>
+        <p>
+          <img src="bilinear-interpolation.png" alt="Bilinear Interpolation" />
+        </p>
+        <pre><code>gl.glShadeModel(GL2.GL_SMOOTH);
 </code></pre>
-            <h6 id="Sombreado-de-Phong">
-              <a
-                href="#Sombreado-de-Phong"
-                class="headerlink"
-                title="Sombreado de Phong"
-              ></a
-              >Sombreado de <strong>Phong</strong>
-            </h6>
-            <p>
-              Aplazando el cálculo de la iluminación hasta el paso de
-              <strong>sombreado del fragmento</strong>. Por lo tanto, se
-              interpolan las normales de los vértices y las propiedades de color
-              y se aplica la fórmula de Phong para calcular el color por píxel
-              en lugar de por vértice
-            </p>
-            <h4 id="Modelos-globales">
-              <a
-                href="#Modelos-globales"
-                class="headerlink"
-                title="Modelos globales"
-              ></a
-              >Modelos globales
-            </h4>
-            <p>
-              Se consideran también las
-              <strong>interacciones mutuas entre objetos</strong>. se tienen en
-              cuenta el resto de elementos de la escena. Suelen estar basados en
-              modelos físicos de la luz (óptica, radiación térmica, radiación
-              electromagnética, etc…)
-            </p>
-            <h5 id="Ray-trazing">
-              <a href="#Ray-trazing" class="headerlink" title="Ray trazing"></a
-              >Ray trazing
-            </h5>
+        <h6 id="Sombreado-de-Phong">
+          <a
+            href="#Sombreado-de-Phong"
+            class="headerlink"
+            title="Sombreado de Phong"
+          ></a
+          >Sombreado de <strong>Phong</strong>
+        </h6>
+        <p>
+          Aplazando el cálculo de la iluminación hasta el paso de
+          <strong>sombreado del fragmento</strong>. Por lo tanto, se interpolan
+          las normales de los vértices y las propiedades de color y se aplica la
+          fórmula de Phong para calcular el color por píxel en lugar de por
+          vértice
+        </p>
+        <h4 id="Modelos-globales">
+          <a
+            href="#Modelos-globales"
+            class="headerlink"
+            title="Modelos globales"
+          ></a
+          >Modelos globales
+        </h4>
+        <p>
+          Se consideran también las
+          <strong>interacciones mutuas entre objetos</strong>. se tienen en
+          cuenta el resto de elementos de la escena. Suelen estar basados en
+          modelos físicos de la luz (óptica, radiación térmica, radiación
+          electromagnética, etc…)
+        </p>
+        <h5 id="Ray-trazing">
+          <a href="#Ray-trazing" class="headerlink" title="Ray trazing"></a>Ray
+          trazing
+        </h5>
+        <ul>
+          <li>
+            Solo se tienen en cuenta los rayos que llegan al punto de vista.
+          </li>
+          <li>Se trazan rayos desde el centro de la proyección</li>
+          <li>
+            Al colisionar con un objeto se calcula
             <ul>
-              <li>
-                Solo se tienen en cuenta los rayos que llegan al punto de vista.
-              </li>
-              <li>Se trazan rayos desde el centro de la proyección</li>
-              <li>
-                Al colisionar con un objeto se calcula
-                <ul>
-                  <li>El aporte de todas las fuentes de luz</li>
-                  <li>El rayo reflejado</li>
-                  <li>El rayo refractado</li>
-                </ul>
-              </li>
-              <li>
-                Se continúa hasta que
-                <ul>
-                  <li>El rayo tiene poca energía</li>
-                  <li>Sale de la escena</li>
-                  <li>Choca con un objeto difuso</li>
-                </ul>
-              </li>
-              <li>
-                Resuelve bien
-                <ul>
-                  <li>Sombras, reflexiones y refracciones</li>
-                  <li>Luz difusa directa</li>
-                </ul>
-              </li>
-              <li>
-                Tiene problemas con
-                <ul>
-                  <li>La reflexión difusa</li>
-                  <li>Sombras suaves (luces con área)</li>
-                  <li>coste es elevado</li>
-                </ul>
-              </li>
+              <li>El aporte de todas las fuentes de luz</li>
+              <li>El rayo reflejado</li>
+              <li>El rayo refractado</li>
             </ul>
-            <h5 id="Radiosity">
-              <a href="#Radiosity" class="headerlink" title="Radiosity"></a
-              >Radiosity
-            </h5>
-            <h5 id="Radiancia">
-              <a href="#Radiancia" class="headerlink" title="Radiancia"></a
-              >Radiancia
-            </h5>
-            <h5 id="Photon-Mapping">
-              <a
-                href="#Photon-Mapping"
-                class="headerlink"
-                title="Photon Mapping"
-              ></a
-              >Photon Mapping
-            </h5>
-            <h2 id="Buffer-de-Stencil">
-              <a
-                href="#Buffer-de-Stencil"
-                class="headerlink"
-                title="Buffer de Stencil"
-              ></a
-              >Buffer de Stencil
-            </h2>
-            <pre><code>glEnable(GL_STENCIL_TEST);
+          </li>
+          <li>
+            Se continúa hasta que
+            <ul>
+              <li>El rayo tiene poca energía</li>
+              <li>Sale de la escena</li>
+              <li>Choca con un objeto difuso</li>
+            </ul>
+          </li>
+          <li>
+            Resuelve bien
+            <ul>
+              <li>Sombras, reflexiones y refracciones</li>
+              <li>Luz difusa directa</li>
+            </ul>
+          </li>
+          <li>
+            Tiene problemas con
+            <ul>
+              <li>La reflexión difusa</li>
+              <li>Sombras suaves (luces con área)</li>
+              <li>coste es elevado</li>
+            </ul>
+          </li>
+        </ul>
+        <h5 id="Radiosity">
+          <a href="#Radiosity" class="headerlink" title="Radiosity"></a
+          >Radiosity
+        </h5>
+        <h5 id="Radiancia">
+          <a href="#Radiancia" class="headerlink" title="Radiancia"></a
+          >Radiancia
+        </h5>
+        <h5 id="Photon-Mapping">
+          <a
+            href="#Photon-Mapping"
+            class="headerlink"
+            title="Photon Mapping"
+          ></a
+          >Photon Mapping
+        </h5>
+        <h2 id="Buffer-de-Stencil">
+          <a
+            href="#Buffer-de-Stencil"
+            class="headerlink"
+            title="Buffer de Stencil"
+          ></a
+          >Buffer de Stencil
+        </h2>
+        <pre><code>glEnable(GL_STENCIL_TEST);
 glStencilFunc(parameters);
 </code></pre>
-            <p>
-              El buffer de estarcido es muy útil para limitar zonas espaciales
-              donde poder dibujar
-            </p>
-            <h2 id="Buffer-de-Acumulacion">
-              <a
-                href="#Buffer-de-Acumulacion"
-                class="headerlink"
-                title="Buffer de Acumulación"
-              ></a
-              >Buffer de Acumulación
-            </h2>
-            <pre><code>glAccum(parameters)
+        <p>
+          El buffer de estarcido es muy útil para limitar zonas espaciales donde
+          poder dibujar
+        </p>
+        <h2 id="Buffer-de-Acumulacion">
+          <a
+            href="#Buffer-de-Acumulacion"
+            class="headerlink"
+            title="Buffer de Acumulación"
+          ></a
+          >Buffer de Acumulación
+        </h2>
+        <pre><code>glAccum(parameters)
 </code></pre>
+        <p>
+          El buffer de acumulación sirve para capturar el buffer de color en un
+          fotograma y aplicarle acumulaciones del color de otro
+          fotograma&#x2F;s. Una posible aplicación consiste en simular el efecto
+          de estela de un objeto en movimiento.
+        </p>
+        <h2 id="Texturas">
+          <a href="#Texturas" class="headerlink" title="Texturas"></a>Texturas
+        </h2>
+        <p>
+          La utilización de texturas aumenta el realismo visual de la imagen sin
+          aumentar número de polígonos.
+        </p>
+        <h3 id="Unidimensionales">
+          <a
+            href="#Unidimensionales"
+            class="headerlink"
+            title="Unidimensionales"
+          ></a
+          >Unidimensionales
+        </h3>
+        <p>Bandas que varían en una sola dirección, poco usadas</p>
+        <h3 id="Bidimensionales">
+          <a
+            href="#Bidimensionales"
+            class="headerlink"
+            title="Bidimensionales"
+          ></a
+          >Bidimensionales
+        </h3>
+        <p>Suelen ser cuadradas y potencias de 2.</p>
+        <h3 id="Texturas-cubicas">
+          <a
+            href="#Texturas-cubicas"
+            class="headerlink"
+            title="Texturas cúbicas"
+          ></a
+          >Texturas cúbicas
+        </h3>
+        <p>
+          Extensión de las texturas bidimensionales, muy usadas en mapeos de
+          entornos.
+        </p>
+        <h3 id="Tridimensionales">
+          <a
+            href="#Tridimensionales"
+            class="headerlink"
+            title="Tridimensionales"
+          ></a
+          >Tridimensionales
+        </h3>
+        <p>Datos volumétricos</p>
+        <h3 id="Diffuse-Map">
+          <a href="#Diffuse-Map" class="headerlink" title="Diffuse Map"></a
+          >Diffuse Map
+        </h3>
+        <p>Almacena coeficientes difusas que refleja la luz difusa</p>
+        <h3 id="Specular-Map">
+          <a href="#Specular-Map" class="headerlink" title="Specular Map"></a
+          >Specular Map
+        </h3>
+        <p>Almacena coeficientes especular que refleja la luz especular</p>
+        <h3 id="Emissive-Map">
+          <a href="#Emissive-Map" class="headerlink" title="Emissive Map"></a
+          >Emissive Map
+        </h3>
+        <p>Simulan objetos que emiten luz.</p>
+        <h3 id="Lighting-Map">
+          <a href="#Lighting-Map" class="headerlink" title="Lighting Map"></a
+          >Lighting Map
+        </h3>
+        <p>Las sombras y luces estáticas precalculada</p>
+        <h3 id="Alpha-Blending">
+          <a
+            href="#Alpha-Blending"
+            class="headerlink"
+            title="Alpha Blending"
+          ></a
+          >Alpha Blending
+        </h3>
+        <p>La información de transparencia en escala de grises</p>
+        <h3 id="Bump-Map">
+          <a href="#Bump-Map" class="headerlink" title="Bump Map"></a>Bump Map
+        </h3>
+        <p>Almacena la profundidad del fragmento, en escalas de grises.</p>
+        <h3 id="Normal-Map">
+          <a href="#Normal-Map" class="headerlink" title="Normal Map"></a>Normal
+          Map
+        </h3>
+        <p>Modificación de normales para dar sensación de relieve.</p>
+        <h3 id="Height-Map">
+          <a href="#Height-Map" class="headerlink" title="Height Map"></a>Height
+          Map
+        </h3>
+        <p>Almacenan las alturas en escalas de grises.</p>
+        <h3 id="Displacement-Map">
+          <a
+            href="#Displacement-Map"
+            class="headerlink"
+            title="Displacement Map"
+          ></a
+          >Displacement Map
+        </h3>
+        <p>
+          Se almacena el desplazamiento de fragmentos o vértices en escalas de
+          grises.
+        </p>
+        <h2 id="Coordenadas-de-Textura">
+          <a
+            href="#Coordenadas-de-Textura"
+            class="headerlink"
+            title="Coordenadas de Textura"
+          ></a
+          >Coordenadas de Textura
+        </h2>
+        <p>
+          El rango de coordenadas en el espacio de la textura es entre 0 y 1.
+          Las coordenadas de textura se proporcionan para cada vértice y son
+          interpoladas en el pipeline del procesador gráfico.
+        </p>
+        <h3 id="Mapeado-Plano">
+          <a href="#Mapeado-Plano" class="headerlink" title="Mapeado Plano"></a
+          >Mapeado Plano
+        </h3>
+        <ul>
+          <li>Se proyecta la figura sobre un plano.</li>
+          <li>Se debe definir la orientación del plano</li>
+        </ul>
+        <p><img src="flat-mapping.png" alt="Flat Mapping" /></p>
+        <h3 id="Mapeado-Cilindrico">
+          <a
+            href="#Mapeado-Cilindrico"
+            class="headerlink"
+            title="Mapeado Cilíndrico"
+          ></a
+          >Mapeado Cilíndrico
+        </h3>
+        <p>
+          El objeto se envuelve en un cilindro. Las coordenadas del objeto se
+          transforman a coordenadas cilíndricas (r, θ, y). A la hora de
+          proyectar la textura sólo se tiene en cuenta el ángulo y la altura.
+        </p>
+        <p><img src="cube-mapping.png" alt="Cube Mapping" /></p>
+        <h2 id="Aliasing-en-Texturas">
+          <a
+            href="#Aliasing-en-Texturas"
+            class="headerlink"
+            title="Aliasing en Texturas"
+          ></a
+          >Aliasing en Texturas
+        </h2>
+        <p>
+          En gráficos, el término aliasing (espacial) se refiere al escalonado
+          que se aprecia en la frontera de las primitivas debido a la limitada
+          resolución de la pantalla.
+        </p>
+        <p><img src="aliasing.png" alt="Aliasing" /></p>
+        <h3 id="Minificacion">
+          <a href="#Minificacion" class="headerlink" title="Minificación"></a
+          >Minificación
+        </h3>
+        <p>Un píxel se corresponde con muchos texels</p>
+        <h3 id="Magnificacion">
+          <a href="#Magnificacion" class="headerlink" title="Magnificación"></a
+          >Magnificación
+        </h3>
+        <p>Un téxel se corresponde con muchos pixels</p>
+        <h3 id="Box-filter">
+          <a href="#Box-filter" class="headerlink" title="Box filter"></a>Box
+          filter
+        </h3>
+        <p>Se utiliza el texel mas cercano.</p>
+        <p><img src="box-filter.png" alt="Box Filter" /></p>
+        <h3 id="Bilinear-filter">
+          <a
+            href="#Bilinear-filter"
+            class="headerlink"
+            title="Bilinear filter"
+          ></a
+          >Bilinear filter
+        </h3>
+        <p>Utiliza cuatro texeles e interpola linealmente los valores.</p>
+        <p><img src="biliear-filter.png" alt="Bilinear Filter" /></p>
+        <h3 id="Mipmapping">
+          <a href="#Mipmapping" class="headerlink" title="Mipmapping"></a
+          >Mipmapping
+        </h3>
+        <p>
+          Consiste en proporcionar además de la textura original un conjunto de
+          versiones más pequeñas de la textura, cada una un cuarto más pequeña
+          que la anterior.
+        </p>
+        <p><img src="mipmapping.png" alt="Mipmapping" /></p>
+        <h3 id="Supersampling">
+          <a href="#Supersampling" class="headerlink" title="Supersampling"></a
+          >Supersampling
+        </h3>
+        <p>
+          Se toman las 4 esquinas del píxel y se proyectan. Se ponderan los 4
+          valores segun las distancias.
+        </p>
+        <p><img src="supersampling.png" alt="Supersampling" /></p>
+        <h3 id="Pre-filtering">
+          <a href="#Pre-filtering" class="headerlink" title="Pre-filtering"></a
+          >Pre-filtering
+        </h3>
+        <p>
+          Se trata el píxel como una región en la textura. Se pondera en función
+          de la región ocupada.
+        </p>
+        <p><img src="prefiltering.png" alt="Pre-filtering" /></p>
+        <h2 id="Alpha-Blending-1">
+          <a
+            href="#Alpha-Blending-1"
+            class="headerlink"
+            title="Alpha Blending"
+          ></a
+          >Alpha Blending
+        </h2>
+        <p>La intensidad del nuevo pixel vendrá dada por</p>
+        <p>
+          $$<br />rgb &#x3D; \alpha \cdot rgb + (1 - \alpha) \cdot rgb<br />$$
+        </p>
+        <ol>
+          <li>
+            <p>Activar el cálculo de la transparencia</p>
+            <p>glEnable(GL_BLEND);</p>
+          </li>
+          <li>
+            <p>Especificar la función de cálculo.</p>
+            <p>glBlendFunc(GL_SRC_ALPHA , GL_ONE_MINUS_SRC_ALPHA);</p>
+          </li>
+          <li>
+            <p>Desactivar la actualización del buffer de profundidad.</p>
+            <p>glDepthMask(GL_FALSE);</p>
+          </li>
+          <li><p>Dibujar los objetos transparentes</p></li>
+          <li>
             <p>
-              El buffer de acumulación sirve para capturar el buffer de color en
-              un fotograma y aplicarle acumulaciones del color de otro
-              fotograma&#x2F;s. Una posible aplicación consiste en simular el
-              efecto de estela de un objeto en movimiento.
+              Deshabilitar las transparencias y volver a habilitar el buffer de
+              profundidad
             </p>
-            <h2 id="Texturas">
-              <a href="#Texturas" class="headerlink" title="Texturas"></a
-              >Texturas
-            </h2>
             <p>
-              La utilización de texturas aumenta el realismo visual de la imagen
-              sin aumentar número de polígonos.
+              glDisable(GL_BLEND);<br />
+              glDepthMask(GL_TRUE);
             </p>
-            <h3 id="Unidimensionales">
-              <a
-                href="#Unidimensionales"
-                class="headerlink"
-                title="Unidimensionales"
-              ></a
-              >Unidimensionales
-            </h3>
-            <p>Bandas que varían en una sola dirección, poco usadas</p>
-            <h3 id="Bidimensionales">
-              <a
-                href="#Bidimensionales"
-                class="headerlink"
-                title="Bidimensionales"
-              ></a
-              >Bidimensionales
-            </h3>
-            <p>Suelen ser cuadradas y potencias de 2.</p>
-            <h3 id="Texturas-cubicas">
-              <a
-                href="#Texturas-cubicas"
-                class="headerlink"
-                title="Texturas cúbicas"
-              ></a
-              >Texturas cúbicas
-            </h3>
-            <p>
-              Extensión de las texturas bidimensionales, muy usadas en mapeos de
-              entornos.
-            </p>
-            <h3 id="Tridimensionales">
-              <a
-                href="#Tridimensionales"
-                class="headerlink"
-                title="Tridimensionales"
-              ></a
-              >Tridimensionales
-            </h3>
-            <p>Datos volumétricos</p>
-            <h3 id="Diffuse-Map">
-              <a href="#Diffuse-Map" class="headerlink" title="Diffuse Map"></a
-              >Diffuse Map
-            </h3>
-            <p>Almacena coeficientes difusas que refleja la luz difusa</p>
-            <h3 id="Specular-Map">
-              <a
-                href="#Specular-Map"
-                class="headerlink"
-                title="Specular Map"
-              ></a
-              >Specular Map
-            </h3>
-            <p>Almacena coeficientes especular que refleja la luz especular</p>
-            <h3 id="Emissive-Map">
-              <a
-                href="#Emissive-Map"
-                class="headerlink"
-                title="Emissive Map"
-              ></a
-              >Emissive Map
-            </h3>
-            <p>Simulan objetos que emiten luz.</p>
-            <h3 id="Lighting-Map">
-              <a
-                href="#Lighting-Map"
-                class="headerlink"
-                title="Lighting Map"
-              ></a
-              >Lighting Map
-            </h3>
-            <p>Las sombras y luces estáticas precalculada</p>
-            <h3 id="Alpha-Blending">
-              <a
-                href="#Alpha-Blending"
-                class="headerlink"
-                title="Alpha Blending"
-              ></a
-              >Alpha Blending
-            </h3>
-            <p>La información de transparencia en escala de grises</p>
-            <h3 id="Bump-Map">
-              <a href="#Bump-Map" class="headerlink" title="Bump Map"></a>Bump
-              Map
-            </h3>
-            <p>Almacena la profundidad del fragmento, en escalas de grises.</p>
-            <h3 id="Normal-Map">
-              <a href="#Normal-Map" class="headerlink" title="Normal Map"></a
-              >Normal Map
-            </h3>
-            <p>Modificación de normales para dar sensación de relieve.</p>
-            <h3 id="Height-Map">
-              <a href="#Height-Map" class="headerlink" title="Height Map"></a
-              >Height Map
-            </h3>
-            <p>Almacenan las alturas en escalas de grises.</p>
-            <h3 id="Displacement-Map">
-              <a
-                href="#Displacement-Map"
-                class="headerlink"
-                title="Displacement Map"
-              ></a
-              >Displacement Map
-            </h3>
-            <p>
-              Se almacena el desplazamiento de fragmentos o vértices en escalas
-              de grises.
-            </p>
-            <h2 id="Coordenadas-de-Textura">
-              <a
-                href="#Coordenadas-de-Textura"
-                class="headerlink"
-                title="Coordenadas de Textura"
-              ></a
-              >Coordenadas de Textura
-            </h2>
-            <p>
-              El rango de coordenadas en el espacio de la textura es entre 0 y
-              1. Las coordenadas de textura se proporcionan para cada vértice y
-              son interpoladas en el pipeline del procesador gráfico.
-            </p>
-            <h3 id="Mapeado-Plano">
-              <a
-                href="#Mapeado-Plano"
-                class="headerlink"
-                title="Mapeado Plano"
-              ></a
-              >Mapeado Plano
-            </h3>
-            <ul>
-              <li>Se proyecta la figura sobre un plano.</li>
-              <li>Se debe definir la orientación del plano</li>
-            </ul>
-            <p><img src="flat-mapping.png" alt="Flat Mapping" /></p>
-            <h3 id="Mapeado-Cilindrico">
-              <a
-                href="#Mapeado-Cilindrico"
-                class="headerlink"
-                title="Mapeado Cilíndrico"
-              ></a
-              >Mapeado Cilíndrico
-            </h3>
-            <p>
-              El objeto se envuelve en un cilindro. Las coordenadas del objeto
-              se transforman a coordenadas cilíndricas (r, θ, y). A la hora de
-              proyectar la textura sólo se tiene en cuenta el ángulo y la
-              altura.
-            </p>
-            <p><img src="cube-mapping.png" alt="Cube Mapping" /></p>
-            <h2 id="Aliasing-en-Texturas">
-              <a
-                href="#Aliasing-en-Texturas"
-                class="headerlink"
-                title="Aliasing en Texturas"
-              ></a
-              >Aliasing en Texturas
-            </h2>
-            <p>
-              En gráficos, el término aliasing (espacial) se refiere al
-              escalonado que se aprecia en la frontera de las primitivas debido
-              a la limitada resolución de la pantalla.
-            </p>
-            <p><img src="aliasing.png" alt="Aliasing" /></p>
-            <h3 id="Minificacion">
-              <a
-                href="#Minificacion"
-                class="headerlink"
-                title="Minificación"
-              ></a
-              >Minificación
-            </h3>
-            <p>Un píxel se corresponde con muchos texels</p>
-            <h3 id="Magnificacion">
-              <a
-                href="#Magnificacion"
-                class="headerlink"
-                title="Magnificación"
-              ></a
-              >Magnificación
-            </h3>
-            <p>Un téxel se corresponde con muchos pixels</p>
-            <h3 id="Box-filter">
-              <a href="#Box-filter" class="headerlink" title="Box filter"></a
-              >Box filter
-            </h3>
-            <p>Se utiliza el texel mas cercano.</p>
-            <p><img src="box-filter.png" alt="Box Filter" /></p>
-            <h3 id="Bilinear-filter">
-              <a
-                href="#Bilinear-filter"
-                class="headerlink"
-                title="Bilinear filter"
-              ></a
-              >Bilinear filter
-            </h3>
-            <p>Utiliza cuatro texeles e interpola linealmente los valores.</p>
-            <p><img src="biliear-filter.png" alt="Bilinear Filter" /></p>
-            <h3 id="Mipmapping">
-              <a href="#Mipmapping" class="headerlink" title="Mipmapping"></a
-              >Mipmapping
-            </h3>
-            <p>
-              Consiste en proporcionar además de la textura original un conjunto
-              de versiones más pequeñas de la textura, cada una un cuarto más
-              pequeña que la anterior.
-            </p>
-            <p><img src="mipmapping.png" alt="Mipmapping" /></p>
-            <h3 id="Supersampling">
-              <a
-                href="#Supersampling"
-                class="headerlink"
-                title="Supersampling"
-              ></a
-              >Supersampling
-            </h3>
-            <p>
-              Se toman las 4 esquinas del píxel y se proyectan. Se ponderan los
-              4 valores segun las distancias.
-            </p>
-            <p><img src="supersampling.png" alt="Supersampling" /></p>
-            <h3 id="Pre-filtering">
-              <a
-                href="#Pre-filtering"
-                class="headerlink"
-                title="Pre-filtering"
-              ></a
-              >Pre-filtering
-            </h3>
-            <p>
-              Se trata el píxel como una región en la textura. Se pondera en
-              función de la región ocupada.
-            </p>
-            <p><img src="prefiltering.png" alt="Pre-filtering" /></p>
-            <h2 id="Alpha-Blending-1">
-              <a
-                href="#Alpha-Blending-1"
-                class="headerlink"
-                title="Alpha Blending"
-              ></a
-              >Alpha Blending
-            </h2>
-            <p>La intensidad del nuevo pixel vendrá dada por</p>
-            <p>
-              $$<br />rgb &#x3D; \alpha \cdot rgb + (1 - \alpha) \cdot rgb<br />$$
-            </p>
-            <ol>
-              <li>
-                <p>Activar el cálculo de la transparencia</p>
-                <p>glEnable(GL_BLEND);</p>
-              </li>
-              <li>
-                <p>Especificar la función de cálculo.</p>
-                <p>glBlendFunc(GL_SRC_ALPHA , GL_ONE_MINUS_SRC_ALPHA);</p>
-              </li>
-              <li>
-                <p>Desactivar la actualización del buffer de profundidad.</p>
-                <p>glDepthMask(GL_FALSE);</p>
-              </li>
-              <li><p>Dibujar los objetos transparentes</p></li>
-              <li>
-                <p>
-                  Deshabilitar las transparencias y volver a habilitar el buffer
-                  de profundidad
-                </p>
-                <p>
-                  glDisable(GL_BLEND);<br />
-                  glDepthMask(GL_TRUE);
-                </p>
-              </li>
-            </ol>
-            <h2 id="Reflejos">
-              <a href="#Reflejos" class="headerlink" title="Reflejos"></a
-              >Reflejos
-            </h2>
-            <p>
-              Se utiliza la posición de la cámara y la normal del objeto para
-              generar la coordenada de textura.
-            </p>
-            <h2 id="Sombras">
-              <a href="#Sombras" class="headerlink" title="Sombras"></a>Sombras
-            </h2>
-            <ol>
-              <li>Dividir los objetos en sombreadores</li>
-              <li>Crear un buffer de color en blanco y negro</li>
-              <li>Deshabilitar texturas, luces …</li>
-              <li>
-                Renderizar los objetos sombreadores desde el foco lumínico
-              </li>
-              <li>Almacenar el buffer de color en una textura.</li>
-              <li>
-                Renderizar la escena proyectando la textura sobre los objetos
-                sombreados, utilizando una matriz de proyección que se usó para
-                generar la textura.
-              </li>
-            </ol>
-            <p>Puede generar “z-fighting” con el plano.</p>
-            <pre><code>glEnable(GL_POLYGON_OFFSET_FILL)
+          </li>
+        </ol>
+        <h2 id="Reflejos">
+          <a href="#Reflejos" class="headerlink" title="Reflejos"></a>Reflejos
+        </h2>
+        <p>
+          Se utiliza la posición de la cámara y la normal del objeto para
+          generar la coordenada de textura.
+        </p>
+        <h2 id="Sombras">
+          <a href="#Sombras" class="headerlink" title="Sombras"></a>Sombras
+        </h2>
+        <ol>
+          <li>Dividir los objetos en sombreadores</li>
+          <li>Crear un buffer de color en blanco y negro</li>
+          <li>Deshabilitar texturas, luces …</li>
+          <li>Renderizar los objetos sombreadores desde el foco lumínico</li>
+          <li>Almacenar el buffer de color en una textura.</li>
+          <li>
+            Renderizar la escena proyectando la textura sobre los objetos
+            sombreados, utilizando una matriz de proyección que se usó para
+            generar la textura.
+          </li>
+        </ol>
+        <p>Puede generar “z-fighting” con el plano.</p>
+        <pre><code>glEnable(GL_POLYGON_OFFSET_FILL)
 glPolygonOffset
 </code></pre>
-            <h2 id="OpenGL">
-              <a href="#OpenGL" class="headerlink" title="OpenGL"></a>OpenGL
-            </h2>
-            <p>
-              Open GL es un <strong>estándar multiplataforma</strong> que define
-              un API para la creación de contenido 2D y 3D que permitan
-              aprovechar las capacidades de computo de dispositivos gráficos.
-              Los fabricantes deben
-              <strong>cumplir las especificaciones</strong>.
-            </p>
+        <h2 id="OpenGL">
+          <a href="#OpenGL" class="headerlink" title="OpenGL"></a>OpenGL
+        </h2>
+        <p>
+          Open GL es un <strong>estándar multiplataforma</strong> que define un
+          API para la creación de contenido 2D y 3D que permitan aprovechar las
+          capacidades de computo de dispositivos gráficos. Los fabricantes deben
+          <strong>cumplir las especificaciones</strong>.
+        </p>
+        <ul>
+          <li><strong>API de bajo nivel</strong></li>
+          <li><strong>Multiplataforma</strong></li>
+          <li><strong>Multilenguaje</strong></li>
+          <li><strong>Independiente del hardware</strong></li>
+          <li>
+            Define las <strong>etapas de un pipeline común</strong> para todos
+            los tipos hardware.
+          </li>
+          <li>
+            Es una <strong>máquina de estado</strong> que define un contexto
+          </li>
+          <li>
+            Parte de la información se almacena en el
+            <strong>cliente (CPU)</strong> y parte en el
+            <strong>servidor (GPU)</strong>.
+          </li>
+        </ul>
+        <h3 id="Modelo-de-programacion">
+          <a
+            href="#Modelo-de-programacion"
+            class="headerlink"
+            title="Modelo de programación"
+          ></a
+          >Modelo de programación
+        </h3>
+        <p>OpenGL se ejecuta de acuerdo a un <strong>estado</strong>.</p>
+        <p><img src="opengl-pipeline.png" alt="OpenGL Pipeline" /></p>
+        <ul>
+          <li>
+            Main:
             <ul>
-              <li><strong>API de bajo nivel</strong></li>
-              <li><strong>Multiplataforma</strong></li>
-              <li><strong>Multilenguaje</strong></li>
-              <li><strong>Independiente del hardware</strong></li>
-              <li>
-                Define las <strong>etapas de un pipeline común</strong> para
-                todos los tipos hardware.
-              </li>
-              <li>
-                Es una <strong>máquina de estado</strong> que define un contexto
-              </li>
-              <li>
-                Parte de la información se almacena en el
-                <strong>cliente (CPU)</strong> y parte en el
-                <strong>servidor (GPU)</strong>.
-              </li>
+              <li>Inicialización del contexto y Framebuffer.</li>
+              <li>Creación de la ventana.</li>
+              <li>Loop principal.</li>
             </ul>
-            <h3 id="Modelo-de-programacion">
-              <a
-                href="#Modelo-de-programacion"
-                class="headerlink"
-                title="Modelo de programación"
-              ></a
-              >Modelo de programación
-            </h3>
-            <p>OpenGL se ejecuta de acuerdo a un <strong>estado</strong>.</p>
-            <p><img src="opengl-pipeline.png" alt="OpenGL Pipeline" /></p>
+          </li>
+          <li>
+            Loop principal:
             <ul>
-              <li>
-                Main:
-                <ul>
-                  <li>Inicialización del contexto y Framebuffer.</li>
-                  <li>Creación de la ventana.</li>
-                  <li>Loop principal.</li>
-                </ul>
-              </li>
-              <li>
-                Loop principal:
-                <ul>
-                  <li>Chequear eventos y tomar decisiones.</li>
-                  <li>Actualizar el sistema.</li>
-                  <li>Redibujar.</li>
-                  <li>Redibujar:</li>
-                </ul>
-              </li>
-              <li>
-                Limpiar el Framebuffer.
-                <ul>
-                  <li>Cambiar estado de dibujado y dibujar.</li>
-                </ul>
-              </li>
+              <li>Chequear eventos y tomar decisiones.</li>
+              <li>Actualizar el sistema.</li>
+              <li>Redibujar.</li>
+              <li>Redibujar:</li>
             </ul>
-            <h3 id="Framebuffer">
-              <a href="#Framebuffer" class="headerlink" title="Framebuffer"></a
-              >Framebuffer
-            </h3>
-            <p>
-              Está compuesto por la información de color de cada pixel que
-              conforma la imagen. Es común que las aplicaciones gráficas
-              utilicen más de un buffer de color,
-              <strong>“DoubleBuffer”</strong>, un buffer se muestra en pantalla
-              (front buffer) se dibuja sobre otro (back buffer). Cuando el back
-              buffer está listo para ser mostrado, se hace un
-              <strong>glutSwapBuffers</strong> entre las referencias a donde
-              comienza el front y el back buffer.
-            </p>
+          </li>
+          <li>
+            Limpiar el Framebuffer.
             <ul>
-              <li>buffers de color</li>
-              <li>buffer de profundidad (Z-buffer)</li>
-              <li>stencil buffer</li>
-              <li>multisampling</li>
+              <li>Cambiar estado de dibujado y dibujar.</li>
             </ul>
-            <h3 id="GLUT">
-              <a href="#GLUT" class="headerlink" title="GLUT"></a>GLUT
-            </h3>
-            <p>
-              La gestión de ventanas, periféricos de entrada
-              (ratón&#x2F;teclado) y el pintado.
-            </p>
-            <h3 id="Etapas-del-cauce">
-              <a
-                href="#Etapas-del-cauce"
-                class="headerlink"
-                title="Etapas del cauce"
-              ></a
-              >Etapas del cauce
-            </h3>
-            <p><img src="opengl-pipelines.png" alt="OpenGL Pipeline" /></p>
-            <h4 id="Etapa-de-vertices-programable">
-              <a
-                href="#Etapa-de-vertices-programable"
-                class="headerlink"
-                title="Etapa de vértices (programable)"
-              ></a
-              ><strong>Etapa de vértices</strong> (programable)
-            </h4>
-            <ul>
-              <li>
-                Entrada: atributos (color, posición, coordenadas de textura,
-                normales…) + …
-              </li>
-              <li>
-                Salida: posición proyectada (variable especial) + variables
-                variantes (propiedades de los vértices transformadas o creadas)
-                + …
-              </li>
-            </ul>
-            <h4 id="Ensamblado">
-              <a href="#Ensamblado" class="headerlink" title="Ensamblado"></a
-              >Ensamblado
-            </h4>
-            <p>
-              Cambio en el tipo de datos procesado. Agrupa vértices en puntos,
-              líneas, triángulos…
-            </p>
-            <h4 id="Etapa-geometrica-programable-opcional">
-              <a
-                href="#Etapa-geometrica-programable-opcional"
-                class="headerlink"
-                title="Etapa geométrica (programable, opcional):"
-              ></a
-              >Etapa geométrica (programable, opcional):
-            </h4>
-            <ul>
-              <li>
-                Entrada: primitivas + variables variantes de la etapa de
-                vértices + información de adyacencia + …
-              </li>
-              <li>
-                Salida: nuevas primitivas -&gt; posición proyectada de todos los
-                vértices de las nuevas primitivas (variable especial) +
-                variables variantes de los vértices de dichas primitivas + …
-              </li>
-            </ul>
-            <h4 id="Clipping-y-culling">
-              <a
-                href="#Clipping-y-culling"
-                class="headerlink"
-                title="Clipping y culling"
-              ></a
-              >Clipping y culling
-            </h4>
-            <pre><code>glEnable(GL_CULL_FACE)
+          </li>
+        </ul>
+        <h3 id="Framebuffer">
+          <a href="#Framebuffer" class="headerlink" title="Framebuffer"></a
+          >Framebuffer
+        </h3>
+        <p>
+          Está compuesto por la información de color de cada pixel que conforma
+          la imagen. Es común que las aplicaciones gráficas utilicen más de un
+          buffer de color, <strong>“DoubleBuffer”</strong>, un buffer se muestra
+          en pantalla (front buffer) se dibuja sobre otro (back buffer). Cuando
+          el back buffer está listo para ser mostrado, se hace un
+          <strong>glutSwapBuffers</strong> entre las referencias a donde
+          comienza el front y el back buffer.
+        </p>
+        <ul>
+          <li>buffers de color</li>
+          <li>buffer de profundidad (Z-buffer)</li>
+          <li>stencil buffer</li>
+          <li>multisampling</li>
+        </ul>
+        <h3 id="GLUT">
+          <a href="#GLUT" class="headerlink" title="GLUT"></a>GLUT
+        </h3>
+        <p>
+          La gestión de ventanas, periféricos de entrada (ratón&#x2F;teclado) y
+          el pintado.
+        </p>
+        <h3 id="Etapas-del-cauce">
+          <a
+            href="#Etapas-del-cauce"
+            class="headerlink"
+            title="Etapas del cauce"
+          ></a
+          >Etapas del cauce
+        </h3>
+        <p><img src="opengl-pipelines.png" alt="OpenGL Pipeline" /></p>
+        <h4 id="Etapa-de-vertices-programable">
+          <a
+            href="#Etapa-de-vertices-programable"
+            class="headerlink"
+            title="Etapa de vértices (programable)"
+          ></a
+          ><strong>Etapa de vértices</strong> (programable)
+        </h4>
+        <ul>
+          <li>
+            Entrada: atributos (color, posición, coordenadas de textura,
+            normales…) + …
+          </li>
+          <li>
+            Salida: posición proyectada (variable especial) + variables
+            variantes (propiedades de los vértices transformadas o creadas) + …
+          </li>
+        </ul>
+        <h4 id="Ensamblado">
+          <a href="#Ensamblado" class="headerlink" title="Ensamblado"></a
+          >Ensamblado
+        </h4>
+        <p>
+          Cambio en el tipo de datos procesado. Agrupa vértices en puntos,
+          líneas, triángulos…
+        </p>
+        <h4 id="Etapa-geometrica-programable-opcional">
+          <a
+            href="#Etapa-geometrica-programable-opcional"
+            class="headerlink"
+            title="Etapa geométrica (programable, opcional):"
+          ></a
+          >Etapa geométrica (programable, opcional):
+        </h4>
+        <ul>
+          <li>
+            Entrada: primitivas + variables variantes de la etapa de vértices +
+            información de adyacencia + …
+          </li>
+          <li>
+            Salida: nuevas primitivas -&gt; posición proyectada de todos los
+            vértices de las nuevas primitivas (variable especial) + variables
+            variantes de los vértices de dichas primitivas + …
+          </li>
+        </ul>
+        <h4 id="Clipping-y-culling">
+          <a
+            href="#Clipping-y-culling"
+            class="headerlink"
+            title="Clipping y culling"
+          ></a
+          >Clipping y culling
+        </h4>
+        <pre><code>glEnable(GL_CULL_FACE)
 </code></pre>
-            <h4 id="Rasterizado">
-              <a href="#Rasterizado" class="headerlink" title="Rasterizado"></a
-              >Rasterizado
-            </h4>
+        <h4 id="Rasterizado">
+          <a href="#Rasterizado" class="headerlink" title="Rasterizado"></a
+          >Rasterizado
+        </h4>
+        <ul>
+          <li>Transforma la primitiva a espacio de pantalla.</li>
+          <li>Crea fragmentos.</li>
+          <li>Cambio de tipo de datos</li>
+        </ul>
+        <h4 id="Etapa-de-fragmentos-programable">
+          <a
+            href="#Etapa-de-fragmentos-programable"
+            class="headerlink"
+            title="Etapa de fragmentos (programable)"
+          ></a
+          >Etapa de fragmentos (programable)
+        </h4>
+        <ul>
+          <li>Entrada: variantes interpolados en la etapa de rasterizado</li>
+          <li>Salida: color y profundidad.</li>
+        </ul>
+        <h4 id="Operaciones-por-fragmento-Z-buffer-blending…">
+          <a
+            href="#Operaciones-por-fragmento-Z-buffer-blending…"
+            class="headerlink"
+            title="Operaciones por fragmento: Z-buffer, blending…"
+          ></a
+          >Operaciones por fragmento: Z-buffer, blending…
+        </h4>
+        <h4 id="Operaciones-con-el-frame-buffer">
+          <a
+            href="#Operaciones-con-el-frame-buffer"
+            class="headerlink"
+            title="Operaciones con el frame buffer"
+          ></a
+          >Operaciones con el frame buffer
+        </h4>
+        <h3 id="Shaders">
+          <a href="#Shaders" class="headerlink" title="Shaders"></a>Shaders
+        </h3>
+        <p>
+          Un shader define un programa concurrente para un conjunto de entradas.
+          Las instancias son <strong>independientes</strong> entre sí.
+        </p>
+        <h4 id="Variables">
+          <a href="#Variables" class="headerlink" title="Variables"></a
+          >Variables
+        </h4>
+        <ul>
+          <li>Atributos: Propiedades de los vértices.</li>
+          <li>
+            Variables uniformes: Parámetros de solo lectura que se mantienen
+            constantes para todos los hilos y en todas las etapas programables
+          </li>
+          <li>
+            Variables variantes: Variables de salida del shader de vértices
+            (propiedades de vértices) y entrada del shader de fragmentos
+            (propiedades de fragmentos).
+          </li>
+          <li>
+            Variables predefinidas: Variables propias de cada etapa con una
+            función especial.
+          </li>
+          <li>Variables locales</li>
+          <li>Valores de píxeles concretos del frame buffer</li>
+        </ul>
+        <h4 id="Shader-de-vertices">
+          <a
+            href="#Shader-de-vertices"
+            class="headerlink"
+            title="Shader de vértices"
+          ></a
+          >Shader de vértices
+        </h4>
+        <p><img src="vertex-shader.png" alt="Vertex Shader" /></p>
+        <h4 id="Shader-de-fragementos">
+          <a
+            href="#Shader-de-fragementos"
+            class="headerlink"
+            title="Shader de fragementos"
+          ></a
+          >Shader de fragementos
+        </h4>
+        <p><img src="fragment-shader.png" alt="Fragment Shader" /></p>
+        <h4 id="Configuracion">
+          <a href="#Configuracion" class="headerlink" title="Configuración"></a
+          >Configuración
+        </h4>
+        <ol>
+          <li>Crear y compilar los shaders</li>
+          <li>Asociar los shaders a un programa</li>
+          <li>Dibujar con los shaders</li>
+        </ol>
+        <h3 id="GLSL">
+          <a href="#GLSL" class="headerlink" title="GLSL"></a>GLSL
+        </h3>
+        <ul>
+          <li>
+            Atributos: Se declaran con el calificador <strong>in</strong>, p.j.
+            <strong>in vec3 myPosition</strong>
+          </li>
+          <li>
+            Variables uniformes: Se declaran con el calificador
+            <strong>uniform</strong>, p.j. <strong>uniform mat4 pvm</strong>
+          </li>
+          <li>
+            Variables para siguiente etapa: Se declaran con el calificador
+            <strong>out</strong>, p.j. <strong>out vec3 myNormal</strong>
+          </li>
+          <li>
+            Variables locales: No requieren modificador, p.j.
+            <strong>vec3 myTempVec</strong>
+          </li>
+          <li>
+            Variables predefinidas:
             <ul>
-              <li>Transforma la primitiva a espacio de pantalla.</li>
-              <li>Crea fragmentos.</li>
-              <li>Cambio de tipo de datos</li>
+              <li><strong>in int gl_VertexID</strong></li>
+              <li><strong>in int gl_InstanceID</strong></li>
+              <li><strong>in vec4 gl_FragCoord</strong></li>
+              <li><strong>in bool gl_FrontFacing</strong></li>
+              <li><strong>in float gl_ClipDistance</strong></li>
+              <li><strong>in vec2 gl_PointCoord</strong></li>
+              <li><strong>in int gl_PrimitiveID</strong></li>
             </ul>
-            <h4 id="Etapa-de-fragmentos-programable">
-              <a
-                href="#Etapa-de-fragmentos-programable"
-                class="headerlink"
-                title="Etapa de fragmentos (programable)"
-              ></a
-              >Etapa de fragmentos (programable)
-            </h4>
-            <ul>
-              <li>
-                Entrada: variantes interpolados en la etapa de rasterizado
-              </li>
-              <li>Salida: color y profundidad.</li>
-            </ul>
-            <h4 id="Operaciones-por-fragmento-Z-buffer-blending…">
-              <a
-                href="#Operaciones-por-fragmento-Z-buffer-blending…"
-                class="headerlink"
-                title="Operaciones por fragmento: Z-buffer, blending…"
-              ></a
-              >Operaciones por fragmento: Z-buffer, blending…
-            </h4>
-            <h4 id="Operaciones-con-el-frame-buffer">
-              <a
-                href="#Operaciones-con-el-frame-buffer"
-                class="headerlink"
-                title="Operaciones con el frame buffer"
-              ></a
-              >Operaciones con el frame buffer
-            </h4>
-            <h3 id="Shaders">
-              <a href="#Shaders" class="headerlink" title="Shaders"></a>Shaders
-            </h3>
-            <p>
-              Un shader define un programa concurrente para un conjunto de
-              entradas. Las instancias son <strong>independientes</strong> entre
-              sí.
-            </p>
-            <h4 id="Variables">
-              <a href="#Variables" class="headerlink" title="Variables"></a
-              >Variables
-            </h4>
-            <ul>
-              <li>Atributos: Propiedades de los vértices.</li>
-              <li>
-                Variables uniformes: Parámetros de solo lectura que se mantienen
-                constantes para todos los hilos y en todas las etapas
-                programables
-              </li>
-              <li>
-                Variables variantes: Variables de salida del shader de vértices
-                (propiedades de vértices) y entrada del shader de fragmentos
-                (propiedades de fragmentos).
-              </li>
-              <li>
-                Variables predefinidas: Variables propias de cada etapa con una
-                función especial.
-              </li>
-              <li>Variables locales</li>
-              <li>Valores de píxeles concretos del frame buffer</li>
-            </ul>
-            <h4 id="Shader-de-vertices">
-              <a
-                href="#Shader-de-vertices"
-                class="headerlink"
-                title="Shader de vértices"
-              ></a
-              >Shader de vértices
-            </h4>
-            <p><img src="vertex-shader.png" alt="Vertex Shader" /></p>
-            <h4 id="Shader-de-fragementos">
-              <a
-                href="#Shader-de-fragementos"
-                class="headerlink"
-                title="Shader de fragementos"
-              ></a
-              >Shader de fragementos
-            </h4>
-            <p><img src="fragment-shader.png" alt="Fragment Shader" /></p>
-            <h4 id="Configuracion">
-              <a
-                href="#Configuracion"
-                class="headerlink"
-                title="Configuración"
-              ></a
-              >Configuración
-            </h4>
-            <ol>
-              <li>Crear y compilar los shaders</li>
-              <li>Asociar los shaders a un programa</li>
-              <li>Dibujar con los shaders</li>
-            </ol>
-            <h3 id="GLSL">
-              <a href="#GLSL" class="headerlink" title="GLSL"></a>GLSL
-            </h3>
-            <ul>
-              <li>
-                Atributos: Se declaran con el calificador <strong>in</strong>,
-                p.j. <strong>in vec3 myPosition</strong>
-              </li>
-              <li>
-                Variables uniformes: Se declaran con el calificador
-                <strong>uniform</strong>, p.j. <strong>uniform mat4 pvm</strong>
-              </li>
-              <li>
-                Variables para siguiente etapa: Se declaran con el calificador
-                <strong>out</strong>, p.j. <strong>out vec3 myNormal</strong>
-              </li>
-              <li>
-                Variables locales: No requieren modificador, p.j.
-                <strong>vec3 myTempVec</strong>
-              </li>
-              <li>
-                Variables predefinidas:
-                <ul>
-                  <li><strong>in int gl_VertexID</strong></li>
-                  <li><strong>in int gl_InstanceID</strong></li>
-                  <li><strong>in vec4 gl_FragCoord</strong></li>
-                  <li><strong>in bool gl_FrontFacing</strong></li>
-                  <li><strong>in float gl_ClipDistance</strong></li>
-                  <li><strong>in vec2 gl_PointCoord</strong></li>
-                  <li><strong>in int gl_PrimitiveID</strong></li>
-                </ul>
-              </li>
-            </ul>
-            <h4 id="Acceso">
-              <a href="#Acceso" class="headerlink" title="Acceso"></a>Acceso
-            </h4>
-            <pre><code>.x, .y, .z, .w posición o dirección
+          </li>
+        </ul>
+        <h4 id="Acceso">
+          <a href="#Acceso" class="headerlink" title="Acceso"></a>Acceso
+        </h4>
+        <pre><code>.x, .y, .z, .w posición o dirección
 .r, .g, .b, .a color
 .s, .t, .p, .q coordenadas de textura
 </code></pre>
-            <ul>
-              <li>myColor.xyz</li>
-              <li>myColor.rgb</li>
-            </ul>
-            <h4 id="Vertex-Buffer-Object">
-              <a
-                href="#Vertex-Buffer-Object"
-                class="headerlink"
-                title="Vertex Buffer Object"
-              ></a
-              >Vertex Buffer Object
-            </h4>
-            <p>
-              Un VBO es un buffer que se crea en el espacio de memoria del
-              servidor. Puede ser dos tipo <strong>GL_ARRAY_BUFFER</strong> o
-              <strong>GL_ELEMENT_ARRAY_BUFFER</strong>
-            </p>
-            <ul>
-              <li>Geometría.</li>
-              <li>Color.</li>
-              <li>Normales.</li>
-              <li>Coordenadas de textura.</li>
-              <li>Índices</li>
-            </ul>
-            <hr />
-            <ol>
-              <li>
-                Se crea un identificador para el buffer:
-                <strong>glGenBuffers</strong>
-              </li>
-              <li>
-                Se enlaza el buffer para poder usarlo:
-                <strong>glBindBuffer</strong>
-              </li>
-              <li>Se suben los datos: <strong>glBufferData</strong></li>
-              <li>
-                Se asigna al atributo: <strong>glVertexAttribPointer</strong>
-              </li>
-              <li>
-                Se activa el atributo:
-                <strong>glEnableVertexAttribArray</strong>
-              </li>
-              <li>Se liberan recursos: <strong>glDeleteBuffers</strong></li>
-            </ol>
-            <p>
-              Cuando se asigna un atributo <strong>location</strong> se puede
-              sacar con <strong>glGetAttribLocation</strong>, o viendo
-              <strong>layout (location &#x3D; 1) in vec3 inColor</strong>
-            </p>
-            <h5 id="Index-Vertex-Buffer-Object">
-              <a
-                href="#Index-Vertex-Buffer-Object"
-                class="headerlink"
-                title="Index Vertex Buffer Object"
-              ></a
-              >Index Vertex Buffer Object
-            </h5>
-            <p><img src="ivbo.png" alt="Index Vertex Buffer Object" /></p>
-            <h4 id="Vertex-array-object">
-              <a
-                href="#Vertex-array-object"
-                class="headerlink"
-                title="Vertex array object"
-              ></a
-              >Vertex array object
-            </h4>
-            <p>
-              Agrupa los vbos y cuando activa vao activa todos los vbo con sus
-              configuraciones.
-            </p>
-            <ol>
-              <li>Creación: <strong>glGenVertexArrays</strong></li>
-              <li>Activar: <strong>glBindVertexArrays</strong></li>
-              <li>Asocia con vao: <strong>glBindBuffer</strong></li>
-              <li>Configra vbo: <strong>glVertexAttribPointer</strong></li>
-              <li>
-                Acitva vao y todos sus vbos:
-                <strong>glEnableVertexAttribArray</strong>
-              </li>
-              <li>
-                Pintar
-                <ul>
-                  <li>
-                    Pintado con un modelo indexado
-                    <ol>
-                      <li>Se activa: <strong>glBindBuffer</strong></li>
-                      <li>Pintado: <strong>glDrawElements</strong></li>
-                    </ol>
-                  </li>
-                  <li>
-                    Pintado con un modelo no indexado
-                    <ol>
-                      <li>Pintado: <strong>glDrawArrays</strong></li>
-                    </ol>
-                  </li>
-                </ul>
-              </li>
-              <li>Destrucción: <strong>glDeleteVertexArrays</strong></li>
-            </ol>
-            <h2 id="Textura">
-              <a href="#Textura" class="headerlink" title="Textura"></a>Textura
-            </h2>
-            <p>
-              Cualquier etapa puede acceder a textura a través de un “sampler”
-              con <strong>texture</strong>
-            </p>
-            <ul>
-              <li>Entrada: accesibles desde los shaders.</li>
-              <li>Salida: bufferes para el renderizado</li>
-            </ul>
-            <h3 id="Parametros">
-              <a href="#Parametros" class="headerlink" title="Parámetros"></a
-              >Parámetros
-            </h3>
+        <ul>
+          <li>myColor.xyz</li>
+          <li>myColor.rgb</li>
+        </ul>
+        <h4 id="Vertex-Buffer-Object">
+          <a
+            href="#Vertex-Buffer-Object"
+            class="headerlink"
+            title="Vertex Buffer Object"
+          ></a
+          >Vertex Buffer Object
+        </h4>
+        <p>
+          Un VBO es un buffer que se crea en el espacio de memoria del servidor.
+          Puede ser dos tipo <strong>GL_ARRAY_BUFFER</strong> o
+          <strong>GL_ELEMENT_ARRAY_BUFFER</strong>
+        </p>
+        <ul>
+          <li>Geometría.</li>
+          <li>Color.</li>
+          <li>Normales.</li>
+          <li>Coordenadas de textura.</li>
+          <li>Índices</li>
+        </ul>
+        <hr />
+        <ol>
+          <li>
+            Se crea un identificador para el buffer:
+            <strong>glGenBuffers</strong>
+          </li>
+          <li>
+            Se enlaza el buffer para poder usarlo: <strong>glBindBuffer</strong>
+          </li>
+          <li>Se suben los datos: <strong>glBufferData</strong></li>
+          <li>Se asigna al atributo: <strong>glVertexAttribPointer</strong></li>
+          <li>
+            Se activa el atributo: <strong>glEnableVertexAttribArray</strong>
+          </li>
+          <li>Se liberan recursos: <strong>glDeleteBuffers</strong></li>
+        </ol>
+        <p>
+          Cuando se asigna un atributo <strong>location</strong> se puede sacar
+          con <strong>glGetAttribLocation</strong>, o viendo
+          <strong>layout (location &#x3D; 1) in vec3 inColor</strong>
+        </p>
+        <h5 id="Index-Vertex-Buffer-Object">
+          <a
+            href="#Index-Vertex-Buffer-Object"
+            class="headerlink"
+            title="Index Vertex Buffer Object"
+          ></a
+          >Index Vertex Buffer Object
+        </h5>
+        <p><img src="ivbo.png" alt="Index Vertex Buffer Object" /></p>
+        <h4 id="Vertex-array-object">
+          <a
+            href="#Vertex-array-object"
+            class="headerlink"
+            title="Vertex array object"
+          ></a
+          >Vertex array object
+        </h4>
+        <p>
+          Agrupa los vbos y cuando activa vao activa todos los vbo con sus
+          configuraciones.
+        </p>
+        <ol>
+          <li>Creación: <strong>glGenVertexArrays</strong></li>
+          <li>Activar: <strong>glBindVertexArrays</strong></li>
+          <li>Asocia con vao: <strong>glBindBuffer</strong></li>
+          <li>Configra vbo: <strong>glVertexAttribPointer</strong></li>
+          <li>
+            Acitva vao y todos sus vbos:
+            <strong>glEnableVertexAttribArray</strong>
+          </li>
+          <li>
+            Pintar
             <ul>
               <li>
-                El tipo: define la disposición de las imágenes que forma la
-                textura.
-              </li>
-              <li>El tamaño: limitado por la versión.</li>
-              <li>
-                El formato de la imagen: igual para todas las imágenes que
-                forman la textura.
-              </li>
-              <li>Parámetros de muestreo.</li>
-            </ul>
-            <h3 id="Pasos">
-              <a href="#Pasos" class="headerlink" title="Pasos"></a>Pasos
-            </h3>
-            <ol>
-              <li>Creación: <strong>glGenTextures</strong></li>
-              <li>Activación: <strong>glBindTexture</strong></li>
-              <li>
-                Se define el tamaño, el formato interno y el contenido:
-                <strong>glTexStorage2D</strong>, <strong>glTexImage2D</strong>,
-                <strong>glTexSubImage2D</strong>
+                Pintado con un modelo indexado
+                <ol>
+                  <li>Se activa: <strong>glBindBuffer</strong></li>
+                  <li>Pintado: <strong>glDrawElements</strong></li>
+                </ol>
               </li>
               <li>
-                Generar midmaps y utiliza automáticamente:
-                <strong>glGenerateMipmap</strong>
-              </li>
-              <li>Configurar: <strong>glTexParameteri</strong></li>
-              <li>
-                Enlazar con texture unit: <strong>glActiveTexture</strong>,
-                <strong>glBindTexture</strong>
-              </li>
-              <li>Borrado: <strong>glDeleteTexture</strong></li>
-            </ol>
-
-            <hr />
-
-            <ul class="list-group">
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a
-                  target="_parent"
-                  href="/posts/Matrices-in-Computer-Graphics/"
-                >
-                  Matrices in Computer Graphics
-                </a>
+                Pintado con un modelo no indexado
+                <ol>
+                  <li>Pintado: <strong>glDrawArrays</strong></li>
+                </ol>
               </li>
             </ul>
-          </div>
-        </div>
+          </li>
+          <li>Destrucción: <strong>glDeleteVertexArrays</strong></li>
+        </ol>
+        <h2 id="Textura">
+          <a href="#Textura" class="headerlink" title="Textura"></a>Textura
+        </h2>
+        <p>
+          Cualquier etapa puede acceder a textura a través de un “sampler” con
+          <strong>texture</strong>
+        </p>
+        <ul>
+          <li>Entrada: accesibles desde los shaders.</li>
+          <li>Salida: bufferes para el renderizado</li>
+        </ul>
+        <h3 id="Parametros">
+          <a href="#Parametros" class="headerlink" title="Parámetros"></a
+          >Parámetros
+        </h3>
+        <ul>
+          <li>
+            El tipo: define la disposición de las imágenes que forma la textura.
+          </li>
+          <li>El tamaño: limitado por la versión.</li>
+          <li>
+            El formato de la imagen: igual para todas las imágenes que forman la
+            textura.
+          </li>
+          <li>Parámetros de muestreo.</li>
+        </ul>
+        <h3 id="Pasos">
+          <a href="#Pasos" class="headerlink" title="Pasos"></a>Pasos
+        </h3>
+        <ol>
+          <li>Creación: <strong>glGenTextures</strong></li>
+          <li>Activación: <strong>glBindTexture</strong></li>
+          <li>
+            Se define el tamaño, el formato interno y el contenido:
+            <strong>glTexStorage2D</strong>, <strong>glTexImage2D</strong>,
+            <strong>glTexSubImage2D</strong>
+          </li>
+          <li>
+            Generar midmaps y utiliza automáticamente:
+            <strong>glGenerateMipmap</strong>
+          </li>
+          <li>Configurar: <strong>glTexParameteri</strong></li>
+          <li>
+            Enlazar con texture unit: <strong>glActiveTexture</strong>,
+            <strong>glBindTexture</strong>
+          </li>
+          <li>Borrado: <strong>glDeleteTexture</strong></li>
+        </ol>
 
-        <div class="row justify-content-center">
-          <!-- Sidebar Container -->
+        <hr />
 
-          <div class="col-lg-8` col-md-10 sidebar-container">
-            <!-- Friends Blog -->
-          </div>
-        </div>
+        <ul class="list-group">
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Matrices-in-Computer-Graphics/">
+              Matrices in Computer Graphics
+            </a>
+          </li>
+        </ul>
       </div>
     </article>
     <!-- Custom Theme JavaScript -->

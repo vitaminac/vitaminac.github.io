@@ -7,6 +7,7 @@
       "tags": ["Hacker"],
       "isLegacy": true,
       "lang": "en",
+      "tocHtml": "<p>save the following command as bat file and then execute</p>\n<pre><code>@echo off\n\necho Checking for permissions\n>nul 2>&#x26;1 \"%SYSTEMROOT%\\system32\\cacls.exe\" \"%SYSTEMROOT%\\system32\\config\\system\"\n\necho Permission check result: %errorlevel%\n\nREM --> If error flag set, we do not have admin.\nif '%errorlevel%' NEQ '0' (\necho Requesting administrative privileges...\ngoto UACPrompt\n) else ( goto gotAdmin )\n\n:UACPrompt\necho Set UAC = CreateObject^(\"Shell.Application\"^) > \"%temp%\\getadmin.vbs\"\necho UAC.ShellExecute \"%~s0\", \"\", \"\", \"runas\", 1 >> \"%temp%\\getadmin.vbs\"\n\necho Running created temporary \"%temp%\\getadmin.vbs\"\ntimeout /T 2\n\"%temp%\\getadmin.vbs\"\nexit /B\n\n:gotAdmin\nif exist \"%temp%\\getadmin.vbs\" ( del \"%temp%\\getadmin.vbs\" )\npushd \"%CD%\"\nCD /D \"%~dp0\" \n\necho Batch was successfully started with admin privileges\necho .\ncls\nTitle Sandbox Installer\n\npushd \"%~dp0\"\n\ndir /b %SystemRoot%\\servicing\\Packages\\*Containers*.mum >sandbox.txt\n\nfor /f %%i in ('findstr /i . sandbox.txt 2^>nul') do dism /online /norestart /add-package:\"%SystemRoot%\\servicing\\Packages\\%%i\"\n\ndel sandbox.txt\n\nDism /online /enable-feature /featurename:Containers-DisposableClientVM /LimitAccess /ALL\n\npause\n</code></pre>",
       "path": "/Install-Windows-Sandbox-Win10Home/index.html"
     },
     "lang": "en",

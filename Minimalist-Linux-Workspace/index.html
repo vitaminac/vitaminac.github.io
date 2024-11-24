@@ -144,272 +144,198 @@
     />
 
     <!-- Post Content -->
-    <article>
-      <div class="container">
-        <div class="row">
-          <!-- Post Container -->
-          <div class="order-lg-2 col-lg-3 col-12 toc-col" style="z-index: 1">
-            <ol class="toc">
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#Download-Image"
-                  ><span class="toc-text">Download Image</span></a
-                >
-              </li>
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#Create-Boot-Device"
-                  ><span class="toc-text">Create Boot Device</span></a
-                >
-              </li>
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#Installation"
-                  ><span class="toc-text">Installation</span></a
-                >
-              </li>
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#Update-Sources-List"
-                  ><span class="toc-text">Update Sources List</span></a
-                >
-              </li>
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#Configure-Openbox"
-                  ><span class="toc-text">Configure Openbox</span></a
-                >
-              </li>
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#Install-Asian-Fonts"
-                  ><span class="toc-text">Install Asian Fonts</span></a
-                >
-              </li>
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#Enable-Sound"
-                  ><span class="toc-text">Enable Sound</span></a
-                >
-              </li>
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#Configure-Dev-Tools"
-                  ><span class="toc-text">Configure Dev Tools</span></a
-                >
-              </li>
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#References"
-                  ><span class="toc-text">References</span></a
-                >
-              </li>
-            </ol>
-          </div>
-
-          <div class="order-lg-1 col-lg-9 col-12 post-container">
-            <h2 id="Download-Image">
-              <a
-                href="#Download-Image"
-                class="headerlink"
-                title="Download Image"
-              ></a
-              >Download Image
-            </h2>
-            <p>
-              Download
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/"
-                >Debian image</a
-              >, let we choose the net-install ISO since we don’t need any heavy
-              desktop enviroment e.g. KDE, GNOME, etc… .
-            </p>
-            <h2 id="Create-Boot-Device">
-              <a
-                href="#Create-Boot-Device"
-                class="headerlink"
-                title="Create Boot Device"
-              ></a
-              >Create Boot Device
-            </h2>
-            <p>
-              There are a ton of tools which can burn ISO to a USB or CD, e.g.
-              <a target="_blank" rel="noopener" href="https://rufus.ie/"
-                >Rufus</a
-              >, simply follow the instruction and create the boot device.
-            </p>
-            <h2 id="Installation">
-              <a
-                href="#Installation"
-                class="headerlink"
-                title="Installation"
-              ></a
-              >Installation
-            </h2>
-            <p>
-              Plug the USB into your computer reboot and following the
-              instruction to complete the installation. Remember to use a
-              different partition for <strong>&#x2F;home</strong> which is
-              helpful for reinstallation in the future.
-            </p>
-            <h2 id="Update-Sources-List">
-              <a
-                href="#Update-Sources-List"
-                class="headerlink"
-                title="Update Sources List"
-              ></a
-              >Update Sources List
-            </h2>
-            <ul>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://wiki.debian.org/SourcesList"
-                  >https://wiki.debian.org/SourcesList</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://backports.debian.org/Instructions/"
-                  >https://backports.debian.org/Instructions/</a
-                >
-              </li>
-            </ul>
-            <h2 id="Configure-Openbox">
-              <a
-                href="#Configure-Openbox"
-                class="headerlink"
-                title="Configure Openbox"
-              ></a
-              >Configure Openbox
-            </h2>
-            <pre><code>sudo apt install xinit openbox menu xfce4-terminal
+    <article class="container" style="width: 100%; max-width: 100%">
+      <!-- Post Container -->
+      <div class="post-container">
+        <h2 id="Download-Image">
+          <a
+            href="#Download-Image"
+            class="headerlink"
+            title="Download Image"
+          ></a
+          >Download Image
+        </h2>
+        <p>
+          Download
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/"
+            >Debian image</a
+          >, let we choose the net-install ISO since we don’t need any heavy
+          desktop enviroment e.g. KDE, GNOME, etc… .
+        </p>
+        <h2 id="Create-Boot-Device">
+          <a
+            href="#Create-Boot-Device"
+            class="headerlink"
+            title="Create Boot Device"
+          ></a
+          >Create Boot Device
+        </h2>
+        <p>
+          There are a ton of tools which can burn ISO to a USB or CD, e.g.
+          <a target="_blank" rel="noopener" href="https://rufus.ie/">Rufus</a>,
+          simply follow the instruction and create the boot device.
+        </p>
+        <h2 id="Installation">
+          <a href="#Installation" class="headerlink" title="Installation"></a
+          >Installation
+        </h2>
+        <p>
+          Plug the USB into your computer reboot and following the instruction
+          to complete the installation. Remember to use a different partition
+          for <strong>&#x2F;home</strong> which is helpful for reinstallation in
+          the future.
+        </p>
+        <h2 id="Update-Sources-List">
+          <a
+            href="#Update-Sources-List"
+            class="headerlink"
+            title="Update Sources List"
+          ></a
+          >Update Sources List
+        </h2>
+        <ul>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://wiki.debian.org/SourcesList"
+              >https://wiki.debian.org/SourcesList</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://backports.debian.org/Instructions/"
+              >https://backports.debian.org/Instructions/</a
+            >
+          </li>
+        </ul>
+        <h2 id="Configure-Openbox">
+          <a
+            href="#Configure-Openbox"
+            class="headerlink"
+            title="Configure Openbox"
+          ></a
+          >Configure Openbox
+        </h2>
+        <pre><code>sudo apt install xinit openbox menu xfce4-terminal
 ehoc &quot;exec openbox-session&quot; &gt;&gt; ~/.xinitrc
 echo &quot;startx&quot; &gt;&gt; ~/.bash_profile
 </code></pre>
-            <h2 id="Install-Asian-Fonts">
-              <a
-                href="#Install-Asian-Fonts"
-                class="headerlink"
-                title="Install Asian Fonts"
-              ></a
-              >Install Asian Fonts
-            </h2>
-            <pre><code>sudo apt install fonts-arphic-ukai fonts-arphic-uming fonts-ipafont-mincho fonts-ipafont-gothic fonts-unfonts-core
+        <h2 id="Install-Asian-Fonts">
+          <a
+            href="#Install-Asian-Fonts"
+            class="headerlink"
+            title="Install Asian Fonts"
+          ></a
+          >Install Asian Fonts
+        </h2>
+        <pre><code>sudo apt install fonts-arphic-ukai fonts-arphic-uming fonts-ipafont-mincho fonts-ipafont-gothic fonts-unfonts-core
 sudo fc-cache -fv
 </code></pre>
-            <h2 id="Enable-Sound">
-              <a
-                href="#Enable-Sound"
-                class="headerlink"
-                title="Enable Sound"
-              ></a
-              >Enable Sound
-            </h2>
-            <pre><code>sudo install alsa-utils
+        <h2 id="Enable-Sound">
+          <a href="#Enable-Sound" class="headerlink" title="Enable Sound"></a
+          >Enable Sound
+        </h2>
+        <pre><code>sudo install alsa-utils
 amixer set Master 100% unmute
 </code></pre>
-            <h2 id="Configure-Dev-Tools">
-              <a
-                href="#Configure-Dev-Tools"
-                class="headerlink"
-                title="Configure Dev Tools"
-              ></a
-              >Configure Dev Tools
-            </h2>
-            <ul>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://wiki.debian.org/Java"
-                  >https://wiki.debian.org/Java</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://wiki.debian.org/VisualStudioCode"
-                  >https://wiki.debian.org/VisualStudioCode</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://wiki.debian.org/Chromium"
-                  >https://wiki.debian.org/Chromium</a
-                >
-              </li>
-            </ul>
-            <h2 id="References">
-              <a href="#References" class="headerlink" title="References"></a
-              >References
-            </h2>
-            <ul>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://wiki.debian.org/Openbox"
-                  >https://wiki.debian.org/Openbox</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://unix.stackexchange.com/a/149368"
-                  >https://unix.stackexchange.com/a/149368</a
-                >
-              </li>
-            </ul>
+        <h2 id="Configure-Dev-Tools">
+          <a
+            href="#Configure-Dev-Tools"
+            class="headerlink"
+            title="Configure Dev Tools"
+          ></a
+          >Configure Dev Tools
+        </h2>
+        <ul>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://wiki.debian.org/Java"
+              >https://wiki.debian.org/Java</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://wiki.debian.org/VisualStudioCode"
+              >https://wiki.debian.org/VisualStudioCode</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://wiki.debian.org/Chromium"
+              >https://wiki.debian.org/Chromium</a
+            >
+          </li>
+        </ul>
+        <h2 id="References">
+          <a href="#References" class="headerlink" title="References"></a
+          >References
+        </h2>
+        <ul>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://wiki.debian.org/Openbox"
+              >https://wiki.debian.org/Openbox</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://unix.stackexchange.com/a/149368"
+              >https://unix.stackexchange.com/a/149368</a
+            >
+          </li>
+        </ul>
 
-            <hr />
+        <hr />
 
-            <ul class="list-group">
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/RaspberryPi-Odoo/">
-                  RaspberryPi Odoo
-                </a>
-              </li>
+        <ul class="list-group">
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/RaspberryPi-Odoo/">
+              RaspberryPi Odoo
+            </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/RaspberryPi4B-Setup/">
-                  Raspberry Pi 4B Setup
-                </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/RaspberryPi4B-Setup/">
+              Raspberry Pi 4B Setup
+            </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a
-                  target="_parent"
-                  href="/posts/Simple-Bootstrap-Linux-System/"
-                >
-                  Build Simple Bootstrap Linux System Image
-                </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Simple-Bootstrap-Linux-System/">
+              Build Simple Bootstrap Linux System Image
+            </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/minishell/">
-                  La implementación de minishell en Linux
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row justify-content-center">
-          <!-- Sidebar Container -->
-
-          <div class="col-lg-8` col-md-10 sidebar-container">
-            <!-- Friends Blog -->
-          </div>
-        </div>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/minishell/">
+              La implementación de minishell en Linux
+            </a>
+          </li>
+        </ul>
       </div>
     </article>
     <!-- Custom Theme JavaScript -->

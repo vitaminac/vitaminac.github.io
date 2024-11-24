@@ -144,118 +144,88 @@
     />
 
     <!-- Post Content -->
-    <article>
-      <div class="container">
-        <div class="row">
-          <!-- Post Container -->
-          <div class="order-lg-2 col-lg-3 col-12 toc-col" style="z-index: 1">
-            <ol class="toc">
-              <li class="toc-item toc-level-1">
-                <a class="toc-link" href="#La-calidad-de-un-software"
-                  ><span class="toc-text">La calidad de un software</span></a
-                >
-              </li>
-              <li class="toc-item toc-level-1">
-                <a class="toc-link" href="#Que-refactorizamos"
-                  ><span class="toc-text">Qué refactorizamos</span></a
-                >
-              </li>
-            </ol>
-          </div>
+    <article class="container" style="width: 100%; max-width: 100%">
+      <!-- Post Container -->
+      <div class="post-container">
+        <h1 id="La-calidad-de-un-software">
+          <a
+            href="#La-calidad-de-un-software"
+            class="headerlink"
+            title="La calidad de un software"
+          ></a
+          >La calidad de un software
+        </h1>
+        <p>
+          Un software funcione no significa que esté bien hecho. No gestiona la
+          calidad del producto genera deuda técnica. Gestionar sólo procesos no
+          es suficiente, es sólo parte de la solución. Hay que fijarse en cómo
+          está el producto además del proceso.
+        </p>
+        <p>
+          Cuando externalizamos, la certificación del proceso no es garantía
+          suficiente:
+        </p>
+        <ol>
+          <li>Se basa en un muestreo</li>
+          <li>Sello concedido en el pasado</li>
+        </ol>
+        <h1 id="Que-refactorizamos">
+          <a
+            href="#Que-refactorizamos"
+            class="headerlink"
+            title="Qué refactorizamos"
+          ></a
+          >Qué refactorizamos
+        </h1>
+        <p>
+          Tengo 3 Millones de LOC y 500 clases. Las tengo ordenadas por
+          Complejidad Ciclomática. ¿Cómo selecciono cuales modificar?
+        </p>
+        <p>
+          Lo primero que hay que tener en cuenta es que la complejidad
+          ciclomática mide la <strong>mantenibilidad</strong>. Y el segundo es
+          comprobar la probabilidad de que una clase cambie, y evitar realizar
+          un esfuerzo inútil intentando mejorar algo que nunca va a cambiar. Una
+          manera de comprobar si una clase va a cambiar es fijarnos en la
+          evolución que ha tenido en el pasado. La media de cambios por mes de
+          cada una de las clases se le multiplica su complejidad ciclomática.
+          Nos da una lista que tiene en cuenta el valor de la métrica de calidad
+          y su probabilidad de cambio.
+        </p>
 
-          <div class="order-lg-1 col-lg-9 col-12 post-container">
-            <h1 id="La-calidad-de-un-software">
-              <a
-                href="#La-calidad-de-un-software"
-                class="headerlink"
-                title="La calidad de un software"
-              ></a
-              >La calidad de un software
-            </h1>
-            <p>
-              Un software funcione no significa que esté bien hecho. No gestiona
-              la calidad del producto genera deuda técnica. Gestionar sólo
-              procesos no es suficiente, es sólo parte de la solución. Hay que
-              fijarse en cómo está el producto además del proceso.
-            </p>
-            <p>
-              Cuando externalizamos, la certificación del proceso no es garantía
-              suficiente:
-            </p>
-            <ol>
-              <li>Se basa en un muestreo</li>
-              <li>Sello concedido en el pasado</li>
-            </ol>
-            <h1 id="Que-refactorizamos">
-              <a
-                href="#Que-refactorizamos"
-                class="headerlink"
-                title="Qué refactorizamos"
-              ></a
-              >Qué refactorizamos
-            </h1>
-            <p>
-              Tengo 3 Millones de LOC y 500 clases. Las tengo ordenadas por
-              Complejidad Ciclomática. ¿Cómo selecciono cuales modificar?
-            </p>
-            <p>
-              Lo primero que hay que tener en cuenta es que la complejidad
-              ciclomática mide la <strong>mantenibilidad</strong>. Y el segundo
-              es comprobar la probabilidad de que una clase cambie, y evitar
-              realizar un esfuerzo inútil intentando mejorar algo que nunca va a
-              cambiar. Una manera de comprobar si una clase va a cambiar es
-              fijarnos en la evolución que ha tenido en el pasado. La media de
-              cambios por mes de cada una de las clases se le multiplica su
-              complejidad ciclomática. Nos da una lista que tiene en cuenta el
-              valor de la métrica de calidad y su probabilidad de cambio.
-            </p>
+        <hr />
 
-            <hr />
+        <ul class="list-group">
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Evolucion-Adaptacion-Software/">
+              Evolución Adaptacion Software
+            </a>
+          </li>
 
-            <ul class="list-group">
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a
-                  target="_parent"
-                  href="/posts/Evolucion-Adaptacion-Software/"
-                >
-                  Evolución Adaptacion Software
-                </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Gestion-Configuracion/">
+              Gestion de Configuración
+            </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/Gestion-Configuracion/">
-                  Gestion de Configuración
-                </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Lehman-laws/"> Lehman Laws </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/Lehman-laws/"> Lehman Laws </a>
-              </li>
-
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/SOLID/">
-                  SOLID Design Principles
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row justify-content-center">
-          <!-- Sidebar Container -->
-
-          <div class="col-lg-8` col-md-10 sidebar-container">
-            <!-- Friends Blog -->
-          </div>
-        </div>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/SOLID/">
+              SOLID Design Principles
+            </a>
+          </li>
+        </ul>
       </div>
     </article>
     <!-- Custom Theme JavaScript -->

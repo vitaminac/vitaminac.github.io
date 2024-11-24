@@ -141,957 +141,602 @@
     />
 
     <!-- Post Content -->
-    <article>
-      <div class="container">
-        <div class="row">
-          <!-- Post Container -->
-          <div class="order-lg-2 col-lg-3 col-12 toc-col" style="z-index: 1">
-            <ol class="toc">
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#Buy-a-Raspberry-Pi-4B"
-                  ><span class="toc-text">Buy a Raspberry Pi 4B</span></a
-                >
-                <ol class="toc-child">
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Choose-SD-Card"
-                      ><span class="toc-text">Choose SD Card</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Overclock-SD-Card"
-                      ><span class="toc-text">Overclock SD Card</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#SD-Card-Speed-Test"
-                      ><span class="toc-text">SD Card Speed Test</span></a
-                    >
-                  </li>
-                </ol>
-              </li>
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#Download-Raspberry-Pi-OS-image"
-                  ><span class="toc-text"
-                    >Download Raspberry Pi OS image</span
-                  ></a
-                >
-              </li>
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#Burn-the-image-to-SD-card"
-                  ><span class="toc-text">Burn the image to SD card</span></a
-                >
-              </li>
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#CLI-Enviroment-Configuration"
-                  ><span class="toc-text">CLI Enviroment Configuration</span></a
-                >
-                <ol class="toc-child">
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Boot-Raspberry-Pi-OS-Lite"
-                      ><span class="toc-text"
-                        >Boot Raspberry Pi OS Lite</span
-                      ></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Switch-to-TTY"
-                      ><span class="toc-text">Switch to TTY</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Set-Language"
-                      ><span class="toc-text">Set Language</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Set-Keyboard-Layout"
-                      ><span class="toc-text">Set Keyboard Layout</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Rotate-the-TTY-Screen"
-                      ><span class="toc-text">Rotate the TTY Screen</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Connect-to-Wi-Fi"
-                      ><span class="toc-text">Connect to Wi-Fi</span></a
-                    >
-                    <ol class="toc-child">
-                      <li class="toc-item toc-level-4">
-                        <a class="toc-link" href="#Configure-Wi-Fi-country-code"
-                          ><span class="toc-text"
-                            >Configure Wi-Fi country code</span
-                          ></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-4">
-                        <a class="toc-link" href="#Find-SSID"
-                          ><span class="toc-text">Find SSID</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-4">
-                        <a
-                          class="toc-link"
-                          href="#Enter-Wi-Fi-Credentials-Interactively"
-                          ><span class="toc-text"
-                            >Enter Wi-Fi Credentials Interactively</span
-                          ></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-4">
-                        <a
-                          class="toc-link"
-                          href="#Enter-Wi-Fi-Credentials-Manually"
-                          ><span class="toc-text"
-                            >Enter Wi-Fi Credentials Manually</span
-                          ></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-4">
-                        <a class="toc-link" href="#Verify-the-network"
-                          ><span class="toc-text">Verify the network</span></a
-                        >
-                      </li>
-                    </ol>
-                  </li>
-                </ol>
-              </li>
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#Configure-Static-IP-Address"
-                  ><span class="toc-text">Configure Static IP Address</span></a
-                >
-              </li>
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#Setting-up-SSH-Server"
-                  ><span class="toc-text">Setting up SSH Server</span></a
-                >
-                <ol class="toc-child">
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Enable-SSH-Server"
-                      ><span class="toc-text">Enable SSH Server</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a
-                      class="toc-link"
-                      href="#Configure-Passwordless-SSH-Access"
-                      ><span class="toc-text"
-                        >Configure Passwordless SSH Access</span
-                      ></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Disable-Password-Authentication"
-                      ><span class="toc-text"
-                        >Disable Password Authentication</span
-                      ></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Change-SSH-Server-Port"
-                      ><span class="toc-text">Change SSH Server Port</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Disable-IPv6-SSH-Access"
-                      ><span class="toc-text">Disable IPv6 SSH Access</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Listen-To-Local-Network-Only"
-                      ><span class="toc-text"
-                        >Listen To Local Network Only</span
-                      ></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Apply-Latest-SSH-Configuration"
-                      ><span class="toc-text"
-                        >Apply Latest SSH Configuration</span
-                      ></a
-                    >
-                  </li>
-                </ol>
-              </li>
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#Firewall-Configuration"
-                  ><span class="toc-text">Firewall Configuration</span></a
-                >
-              </li>
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#Disable-Wi-Fi-amp-Bluetooth"
-                  ><span class="toc-text"
-                    >Disable Wi-Fi &amp; Bluetooth</span
-                  ></a
-                >
-              </li>
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#Configure-Fan"
-                  ><span class="toc-text">Configure Fan</span></a
-                >
-              </li>
-              <li class="toc-item toc-level-2">
-                <a
-                  class="toc-link"
-                  href="#NAS-with-Samba-and-External-Disk-through-USB-3-0"
-                  ><span class="toc-text"
-                    >NAS with Samba and External Disk through USB 3.0</span
-                  ></a
-                >
-                <ol class="toc-child">
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Mount-External-Disk"
-                      ><span class="toc-text">Mount External Disk</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Setup-Shared-Folder-on-Raspberry"
-                      ><span class="toc-text"
-                        >Setup Shared Folder on Raspberry</span
-                      ></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Mount-Samba-Shared-Folder"
-                      ><span class="toc-text"
-                        >Mount Samba Shared Folder</span
-                      ></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Remove-Samba-Shared-Folder"
-                      ><span class="toc-text"
-                        >Remove Samba Shared Folder</span
-                      ></a
-                    >
-                  </li>
-                </ol>
-              </li>
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#NAS-Backup-with-Dropbox-and-Rclone"
-                  ><span class="toc-text"
-                    >NAS Backup with Dropbox and Rclone</span
-                  ></a
-                >
-                <ol class="toc-child">
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Get-your-own-Dropbox-App-ID"
-                      ><span class="toc-text"
-                        >Get your own Dropbox App ID</span
-                      ></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Install-Rclone"
-                      ><span class="toc-text">Install Rclone</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Configure-Rclone"
-                      ><span class="toc-text">Configure Rclone</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Backup-with-Dropbox"
-                      ><span class="toc-text">Backup with Dropbox</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Keep-Dropbox-Synced-With-Local"
-                      ><span class="toc-text"
-                        >Keep Dropbox Synced With Local</span
-                      ></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Keep-Local-Synced-With-Dropbox"
-                      ><span class="toc-text"
-                        >Keep Local Synced With Dropbox</span
-                      ></a
-                    >
-                  </li>
-                </ol>
-              </li>
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#Upgrade-Raspberry-Pi-OS"
-                  ><span class="toc-text">Upgrade Raspberry Pi OS</span></a
-                >
-                <ol class="toc-child">
-                  <li class="toc-item toc-level-3">
-                    <a
-                      class="toc-link"
-                      href="#Remove-Unused-Software-After-Upgrade"
-                      ><span class="toc-text"
-                        >Remove Unused Software After Upgrade</span
-                      ></a
-                    >
-                  </li>
-                </ol>
-              </li>
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#Desktop-Environment-Configuration"
-                  ><span class="toc-text"
-                    >Desktop Environment Configuration</span
-                  ></a
-                >
-                <ol class="toc-child">
-                  <li class="toc-item toc-level-3">
-                    <a
-                      class="toc-link"
-                      href="#Install-Desktop-Environment-from-Lite-Version"
-                      ><span class="toc-text"
-                        >Install Desktop Environment from Lite Version</span
-                      ></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a
-                      class="toc-link"
-                      href="#Boot-Raspberry-Pi-OS-with-desktop"
-                      ><span class="toc-text"
-                        >Boot Raspberry Pi OS with desktop</span
-                      ></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Configure-Display-Setting"
-                      ><span class="toc-text"
-                        >Configure Display Setting</span
-                      ></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Rotate-your-Display-in-GUI"
-                      ><span class="toc-text"
-                        >Rotate your Display in GUI</span
-                      ></a
-                    >
-                  </li>
-                </ol>
-              </li>
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#Reference"
-                  ><span class="toc-text">Reference</span></a
-                >
-              </li>
-            </ol>
-          </div>
-
-          <div class="order-lg-1 col-lg-9 col-12 post-container">
-            <h2 id="Buy-a-Raspberry-Pi-4B">
-              <a
-                href="#Buy-a-Raspberry-Pi-4B"
-                class="headerlink"
-                title="Buy a Raspberry Pi 4B"
-              ></a
-              >Buy a Raspberry Pi 4B
-            </h2>
-            <p>
-              You can buy the Raspberry Pi 4B board on Amazon, the recommended
-              version is 4 GB. You may also need to buy a SD card, and optional
-              case with fan.
-            </p>
-            <h3 id="Choose-SD-Card">
-              <a
-                href="#Choose-SD-Card"
-                class="headerlink"
-                title="Choose SD Card"
-              ></a
-              >Choose SD Card
-            </h3>
-            <p>
-              Raspberry Pi has no internal storage, relying instead on a
-              removable micro SD card as his primary boot drives.
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://www.reddit.com/r/raspberry_pi/comments/4aoc3r/how_to_overclock_the_microsd_card_reader_on_a/d125ced/"
-                >Raspberry Pi 3 doesn’t support UHS mode because it requires
-                1.8v signaling while Raspberry Pi 3 is fixed at 3.3v</a
-              >. This is technically the upper bound of write speed
-              (25MB&#x2F;sec) for
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://www.sdcard.org/developers/sd-standard-overview/speed-class/"
-                >non-UHS SD cards</a
-              >. Now Raspberry Pi 4B provides a
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://datasheets.raspberrypi.org/rpi4/raspberry-pi-4-datasheet.pdf"
-                >SD card socket runs on DDR50 bus speed mode</a
-              >
-              and a legacy
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://www.sdcard.org/developers/sd-standard-overview/sdio-isdio/"
-                >SDIO</a
-              >
-              interface is available on the GPIO pins.
-            </p>
-            <p>
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://www.raspberrypi.org/forums/viewtopic.php?t=271632"
-                ><img
-                  src="raspberry-pi-4B-block-diagram.png"
-                  alt="Raspberry Pi 4B"
-              /></a>
-            </p>
-            <p>
-              There is a micro-SD performance improvements with
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://www.jeffgeerling.com/blog/2019/raspberry-pi-microsd-card-performance-comparison-2019"
-                >Raspberry Pi 4</a
-              >. Raspberry Pi 4 still doesn’t provide good support for
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://www.sdcard.org/developers/sd-standard-overview/application-performance-class/"
-                >A2</a
-              >
-              SD card, because A2 cards rely on specialized hardware in the host
-              device to work well. The
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://www.pidramble.com/wiki/benchmarks/microsd-cards#4-model-b"
-                >benchmark</a
-              >
-              showed that A1 is the best card to use with Rapsberry Pi 4B and
-              got better result than A2.
-            </p>
-            <h3 id="Overclock-SD-Card">
-              <a
-                href="#Overclock-SD-Card"
-                class="headerlink"
-                title="Overclock SD Card"
-              ></a
-              ><a
-                target="_blank"
-                rel="noopener"
-                href="https://www.jeffgeerling.com/blog/2016/how-overclock-microsd-card-reader-on-raspberry-pi-3"
-                >Overclock SD Card</a
-              >
-            </h3>
-            <p>
-              DDR50 requires 1.8V signaling, supports frequency up to 50 MHz,
-              sampled on both clock edges and bus speed up to 50 MB&#x2F;sec per
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://www.sdcard.org/downloads/pls/"
-                >Physical Layer Simplified Specification</a
-              >. However,
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://www.sdcard.org/developers/sd-standard-overview/bus-speed-default-speed-high-speed-uhs-sd-express/"
-                >UHS-I</a
-              >
-              SD card
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://en.wikipedia.org/wiki/SD_card#UHS-I"
-                >supports a clock frequency of 50 MHz (DDR50), 100 MHz (SDR50)
-                and 208MHz (SDR104)</a
-              >
-              per
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://www.sdcard.org/downloads/pls/"
-                >Physical Layer Simplified Specification</a
-              >. So in theory we can overclock SD card frequency to a higher
-              value, e.g. 100 MHz. However, overclocking
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://www.raspberrypi.org/forums/viewtopic.php?t=266682#p1620747"
-                >only works for Raspberry Pi 3</a
-              >.
-            </p>
-            <h3 id="SD-Card-Speed-Test">
-              <a
-                href="#SD-Card-Speed-Test"
-                class="headerlink"
-                title="SD Card Speed Test"
-              ></a
-              ><a
-                target="_blank"
-                rel="noopener"
-                href="https://www.raspberrypi.org/blog/sd-card-speed-test/"
-                >SD Card Speed Test</a
-              >
-            </h3>
-            <p>Install the tool to test your SD card speed</p>
-            <pre><code>sudo apt update
+    <article class="container" style="width: 100%; max-width: 100%">
+      <!-- Post Container -->
+      <div class="post-container">
+        <h2 id="Buy-a-Raspberry-Pi-4B">
+          <a
+            href="#Buy-a-Raspberry-Pi-4B"
+            class="headerlink"
+            title="Buy a Raspberry Pi 4B"
+          ></a
+          >Buy a Raspberry Pi 4B
+        </h2>
+        <p>
+          You can buy the Raspberry Pi 4B board on Amazon, the recommended
+          version is 4 GB. You may also need to buy a SD card, and optional case
+          with fan.
+        </p>
+        <h3 id="Choose-SD-Card">
+          <a
+            href="#Choose-SD-Card"
+            class="headerlink"
+            title="Choose SD Card"
+          ></a
+          >Choose SD Card
+        </h3>
+        <p>
+          Raspberry Pi has no internal storage, relying instead on a removable
+          micro SD card as his primary boot drives.
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://www.reddit.com/r/raspberry_pi/comments/4aoc3r/how_to_overclock_the_microsd_card_reader_on_a/d125ced/"
+            >Raspberry Pi 3 doesn’t support UHS mode because it requires 1.8v
+            signaling while Raspberry Pi 3 is fixed at 3.3v</a
+          >. This is technically the upper bound of write speed (25MB&#x2F;sec)
+          for
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://www.sdcard.org/developers/sd-standard-overview/speed-class/"
+            >non-UHS SD cards</a
+          >. Now Raspberry Pi 4B provides a
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://datasheets.raspberrypi.org/rpi4/raspberry-pi-4-datasheet.pdf"
+            >SD card socket runs on DDR50 bus speed mode</a
+          >
+          and a legacy
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://www.sdcard.org/developers/sd-standard-overview/sdio-isdio/"
+            >SDIO</a
+          >
+          interface is available on the GPIO pins.
+        </p>
+        <p>
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://www.raspberrypi.org/forums/viewtopic.php?t=271632"
+            ><img src="raspberry-pi-4B-block-diagram.png" alt="Raspberry Pi 4B"
+          /></a>
+        </p>
+        <p>
+          There is a micro-SD performance improvements with
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://www.jeffgeerling.com/blog/2019/raspberry-pi-microsd-card-performance-comparison-2019"
+            >Raspberry Pi 4</a
+          >. Raspberry Pi 4 still doesn’t provide good support for
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://www.sdcard.org/developers/sd-standard-overview/application-performance-class/"
+            >A2</a
+          >
+          SD card, because A2 cards rely on specialized hardware in the host
+          device to work well. The
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://www.pidramble.com/wiki/benchmarks/microsd-cards#4-model-b"
+            >benchmark</a
+          >
+          showed that A1 is the best card to use with Rapsberry Pi 4B and got
+          better result than A2.
+        </p>
+        <h3 id="Overclock-SD-Card">
+          <a
+            href="#Overclock-SD-Card"
+            class="headerlink"
+            title="Overclock SD Card"
+          ></a
+          ><a
+            target="_blank"
+            rel="noopener"
+            href="https://www.jeffgeerling.com/blog/2016/how-overclock-microsd-card-reader-on-raspberry-pi-3"
+            >Overclock SD Card</a
+          >
+        </h3>
+        <p>
+          DDR50 requires 1.8V signaling, supports frequency up to 50 MHz,
+          sampled on both clock edges and bus speed up to 50 MB&#x2F;sec per
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://www.sdcard.org/downloads/pls/"
+            >Physical Layer Simplified Specification</a
+          >. However,
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://www.sdcard.org/developers/sd-standard-overview/bus-speed-default-speed-high-speed-uhs-sd-express/"
+            >UHS-I</a
+          >
+          SD card
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://en.wikipedia.org/wiki/SD_card#UHS-I"
+            >supports a clock frequency of 50 MHz (DDR50), 100 MHz (SDR50) and
+            208MHz (SDR104)</a
+          >
+          per
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://www.sdcard.org/downloads/pls/"
+            >Physical Layer Simplified Specification</a
+          >. So in theory we can overclock SD card frequency to a higher value,
+          e.g. 100 MHz. However, overclocking
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://www.raspberrypi.org/forums/viewtopic.php?t=266682#p1620747"
+            >only works for Raspberry Pi 3</a
+          >.
+        </p>
+        <h3 id="SD-Card-Speed-Test">
+          <a
+            href="#SD-Card-Speed-Test"
+            class="headerlink"
+            title="SD Card Speed Test"
+          ></a
+          ><a
+            target="_blank"
+            rel="noopener"
+            href="https://www.raspberrypi.org/blog/sd-card-speed-test/"
+            >SD Card Speed Test</a
+          >
+        </h3>
+        <p>Install the tool to test your SD card speed</p>
+        <pre><code>sudo apt update
 sudo apt install agnostics
 </code></pre>
-            <p>my SanDisk Ultra A1 128 GB SD card has the following result</p>
-            <pre><code>Sequential write speed 25460 KB/sec
+        <p>my SanDisk Ultra A1 128 GB SD card has the following result</p>
+        <pre><code>Sequential write speed 25460 KB/sec
 Random write speed 1077 IOPS
 Random read speed 2642 IOPS
 </code></pre>
-            <h2 id="Download-Raspberry-Pi-OS-image">
-              <a
-                href="#Download-Raspberry-Pi-OS-image"
-                class="headerlink"
-                title="Download Raspberry Pi OS image"
-              ></a
-              >Download Raspberry Pi OS image
-            </h2>
-            <p>
-              Download <strong>Raspberry Pi OS Lite</strong> or
-              <strong>Raspberry Pi OS with desktop</strong> from
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://www.raspberrypi.com/software/operating-systems/#raspberry-pi-os-64-bit"
-                >Raspberry Pi official operating system images</a
-              >.
-            </p>
-            <h2 id="Burn-the-image-to-SD-card">
-              <a
-                href="#Burn-the-image-to-SD-card"
-                class="headerlink"
-                title="Burn the image to SD card"
-              ></a
-              >Burn the image to SD card
-            </h2>
-            <p>
-              Download
-              <a target="_blank" rel="noopener" href="https://rufus.ie/"
-                >Rufus</a
-              >
-              and unzip the image file you downloaded previously, you will see a
-              single <strong>.img</strong> file. Select SD card as device and
-              select <strong>.img</strong> file as
-              <strong>Disk or ISO image</strong> and then click
-              <strong>Start</strong>. You may need
-              <strong>SD Card Reader USB adapter</strong> if your computer
-              doesn’t have SD card slot.
-            </p>
-            <h2 id="CLI-Enviroment-Configuration">
-              <a
-                href="#CLI-Enviroment-Configuration"
-                class="headerlink"
-                title="CLI Enviroment Configuration"
-              ></a
-              >CLI Enviroment Configuration
-            </h2>
-            <h3 id="Boot-Raspberry-Pi-OS-Lite">
-              <a
-                href="#Boot-Raspberry-Pi-OS-Lite"
-                class="headerlink"
-                title="Boot Raspberry Pi OS Lite"
-              ></a
-              >Boot Raspberry Pi OS Lite
-            </h3>
-            <p>
-              Plug the SD card to your Raspberry Pi and power on the device,
-              follow the instructions to complete the basic setting. You will
-              see the TTY when the boot process finish.
-            </p>
-            <h3 id="Switch-to-TTY">
-              <a
-                href="#Switch-to-TTY"
-                class="headerlink"
-                title="Switch to TTY"
-              ></a
-              >Switch to TTY
-            </h3>
-            <p>
-              You can press Ctrl + Alt +
-              F1&#x2F;F2&#x2F;F3&#x2F;F4&#x2F;F5&#x2F;F6&#x2F;F8&#x2F;F10&#x2F;F11&#x2F;F12
-              to switch to different TTY console and press Ctrl + Alt + F7 you
-              can switch to desktop environment if you have it installed.
-            </p>
-            <h3 id="Set-Language">
-              <a
-                href="#Set-Language"
-                class="headerlink"
-                title="Set Language"
-              ></a
-              ><a
-                target="_blank"
-                rel="noopener"
-                href="https://www.raspberrypi.com/documentation/computers/configuration.html#localising-your-raspberry-pi"
-                >Set Language</a
-              >
-            </h3>
-            <p>
-              Execute <code>sudo raspi-config</code> and then select
-              Localization Options &gt; Locale. This option will execute
-              following
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://github.com/RPi-Distro/raspi-config/blob/2be7313596b228c349c829ca7258cbdbd4b5deb1/raspi-config#L532"
-                >commands</a
-              >.
-            </p>
-            <h3 id="Set-Keyboard-Layout">
-              <a
-                href="#Set-Keyboard-Layout"
-                class="headerlink"
-                title="Set Keyboard Layout"
-              ></a
-              ><a
-                target="_blank"
-                rel="noopener"
-                href="https://wiki.debian.org/Keyboard"
-                >Set Keyboard Layout</a
-              >
-            </h3>
-            <p>
-              Execute <code>sudo raspi-config</code> and then select
-              Localization Options &gt; Keyboard. This option will execute
-              following
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://github.com/RPi-Distro/raspi-config/blob/2be7313596b228c349c829ca7258cbdbd4b5deb1/raspi-config#L518"
-                >commands</a
-              >.
-            </p>
-            <p>
-              For standard US layout you can select
-              <code>Generic 105-key PC (intl.)</code> and then select
-              <code>English US</code> and <code>default layout</code>. We need
-              to <code>sudo reboot</code> to take effect.
-            </p>
-            <h3 id="Rotate-the-TTY-Screen">
-              <a
-                href="#Rotate-the-TTY-Screen"
-                class="headerlink"
-                title="Rotate the TTY Screen"
-              ></a
-              ><a
-                target="_blank"
-                rel="noopener"
-                href="https://github.com/pimoroni/hyperpixel4/issues/39#issuecomment-717248457"
-                >Rotate the TTY Screen</a
-              >
-            </h3>
-            <p>
-              In order to rotate the screen in TTY mode you can use following
-              command
-            </p>
-            <pre><code>echo &lt;rotation&gt; | sudo tee -a /sys/class/graphics/fbcon/rotate &gt; /dev/null
+        <h2 id="Download-Raspberry-Pi-OS-image">
+          <a
+            href="#Download-Raspberry-Pi-OS-image"
+            class="headerlink"
+            title="Download Raspberry Pi OS image"
+          ></a
+          >Download Raspberry Pi OS image
+        </h2>
+        <p>
+          Download <strong>Raspberry Pi OS Lite</strong> or
+          <strong>Raspberry Pi OS with desktop</strong> from
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://www.raspberrypi.com/software/operating-systems/#raspberry-pi-os-64-bit"
+            >Raspberry Pi official operating system images</a
+          >.
+        </p>
+        <h2 id="Burn-the-image-to-SD-card">
+          <a
+            href="#Burn-the-image-to-SD-card"
+            class="headerlink"
+            title="Burn the image to SD card"
+          ></a
+          >Burn the image to SD card
+        </h2>
+        <p>
+          Download
+          <a target="_blank" rel="noopener" href="https://rufus.ie/">Rufus</a>
+          and unzip the image file you downloaded previously, you will see a
+          single <strong>.img</strong> file. Select SD card as device and select
+          <strong>.img</strong> file as <strong>Disk or ISO image</strong> and
+          then click <strong>Start</strong>. You may need
+          <strong>SD Card Reader USB adapter</strong> if your computer doesn’t
+          have SD card slot.
+        </p>
+        <h2 id="CLI-Enviroment-Configuration">
+          <a
+            href="#CLI-Enviroment-Configuration"
+            class="headerlink"
+            title="CLI Enviroment Configuration"
+          ></a
+          >CLI Enviroment Configuration
+        </h2>
+        <h3 id="Boot-Raspberry-Pi-OS-Lite">
+          <a
+            href="#Boot-Raspberry-Pi-OS-Lite"
+            class="headerlink"
+            title="Boot Raspberry Pi OS Lite"
+          ></a
+          >Boot Raspberry Pi OS Lite
+        </h3>
+        <p>
+          Plug the SD card to your Raspberry Pi and power on the device, follow
+          the instructions to complete the basic setting. You will see the TTY
+          when the boot process finish.
+        </p>
+        <h3 id="Switch-to-TTY">
+          <a href="#Switch-to-TTY" class="headerlink" title="Switch to TTY"></a
+          >Switch to TTY
+        </h3>
+        <p>
+          You can press Ctrl + Alt +
+          F1&#x2F;F2&#x2F;F3&#x2F;F4&#x2F;F5&#x2F;F6&#x2F;F8&#x2F;F10&#x2F;F11&#x2F;F12
+          to switch to different TTY console and press Ctrl + Alt + F7 you can
+          switch to desktop environment if you have it installed.
+        </p>
+        <h3 id="Set-Language">
+          <a href="#Set-Language" class="headerlink" title="Set Language"></a
+          ><a
+            target="_blank"
+            rel="noopener"
+            href="https://www.raspberrypi.com/documentation/computers/configuration.html#localising-your-raspberry-pi"
+            >Set Language</a
+          >
+        </h3>
+        <p>
+          Execute <code>sudo raspi-config</code> and then select Localization
+          Options &gt; Locale. This option will execute following
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://github.com/RPi-Distro/raspi-config/blob/2be7313596b228c349c829ca7258cbdbd4b5deb1/raspi-config#L532"
+            >commands</a
+          >.
+        </p>
+        <h3 id="Set-Keyboard-Layout">
+          <a
+            href="#Set-Keyboard-Layout"
+            class="headerlink"
+            title="Set Keyboard Layout"
+          ></a
+          ><a
+            target="_blank"
+            rel="noopener"
+            href="https://wiki.debian.org/Keyboard"
+            >Set Keyboard Layout</a
+          >
+        </h3>
+        <p>
+          Execute <code>sudo raspi-config</code> and then select Localization
+          Options &gt; Keyboard. This option will execute following
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://github.com/RPi-Distro/raspi-config/blob/2be7313596b228c349c829ca7258cbdbd4b5deb1/raspi-config#L518"
+            >commands</a
+          >.
+        </p>
+        <p>
+          For standard US layout you can select
+          <code>Generic 105-key PC (intl.)</code> and then select
+          <code>English US</code> and <code>default layout</code>. We need to
+          <code>sudo reboot</code> to take effect.
+        </p>
+        <h3 id="Rotate-the-TTY-Screen">
+          <a
+            href="#Rotate-the-TTY-Screen"
+            class="headerlink"
+            title="Rotate the TTY Screen"
+          ></a
+          ><a
+            target="_blank"
+            rel="noopener"
+            href="https://github.com/pimoroni/hyperpixel4/issues/39#issuecomment-717248457"
+            >Rotate the TTY Screen</a
+          >
+        </h3>
+        <p>
+          In order to rotate the screen in TTY mode you can use following
+          command
+        </p>
+        <pre><code>echo &lt;rotation&gt; | sudo tee -a /sys/class/graphics/fbcon/rotate &gt; /dev/null
 </code></pre>
-            <p>
-              To always rotate the screen at startup you can add following
-              parameter to <code>/boot/cmdline.txt</code>
-            </p>
-            <pre><code>fbcon=rotate:&lt;rotation&gt;
+        <p>
+          To always rotate the screen at startup you can add following parameter
+          to <code>/boot/cmdline.txt</code>
+        </p>
+        <pre><code>fbcon=rotate:&lt;rotation&gt;
 </code></pre>
-            <p>
-              The <code>&lt;rotation&gt;</code> can be 0, 1, 2, 3 that
-              correspond to 0-degree, 90-degree, 180-degree, 270-degree
-              clockwise rotation.
-            </p>
-            <h3 id="Connect-to-Wi-Fi">
-              <a
-                href="#Connect-to-Wi-Fi"
-                class="headerlink"
-                title="Connect to Wi-Fi"
-              ></a
-              ><a
-                target="_blank"
-                rel="noopener"
-                href="https://www.raspberrypi.com/documentation/computers/configuration.html#wireless-networking-command-line"
-                >Connect to Wi-Fi</a
-              >
-            </h3>
-            <h4 id="Configure-Wi-Fi-country-code">
-              <a
-                href="#Configure-Wi-Fi-country-code"
-                class="headerlink"
-                title="Configure Wi-Fi country code"
-              ></a
-              >Configure Wi-Fi country code
-            </h4>
-            <p>
-              In the Raspberry Pi OS,
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://www.raspberrypi.org/documentation/computers/configuration.html#ensure-wireless-operation"
-                >5 GHz wireless networking is disabled until a Wi-Fi country
-                code has been configured by the user</a
-              >.
-            </p>
-            <p>
-              Execute <code>sudo raspi-config</code> and then select
-              Localization Options &gt; WLAN Country. This option will execute
-              following
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://github.com/RPi-Distro/raspi-config/blob/2be7313596b228c349c829ca7258cbdbd4b5deb1/raspi-config#L615-L630"
-                >commands</a
-              >.
-            </p>
-            <h4 id="Find-SSID">
-              <a href="#Find-SSID" class="headerlink" title="Find SSID"></a
-              ><a
-                target="_blank"
-                rel="noopener"
-                href="https://www.raspberrypi.com/documentation/computers/configuration.html#getting-wireless-lan-network-details"
-                >Find SSID</a
-              >
-            </h4>
-            <p>
-              If you don’t know the SSID scan the networks in the area to find
-              the SSID you want to connect to
-            </p>
-            <pre><code>sudo iwlist wlan0 scan | greo -i ssid
+        <p>
+          The <code>&lt;rotation&gt;</code> can be 0, 1, 2, 3 that correspond to
+          0-degree, 90-degree, 180-degree, 270-degree clockwise rotation.
+        </p>
+        <h3 id="Connect-to-Wi-Fi">
+          <a
+            href="#Connect-to-Wi-Fi"
+            class="headerlink"
+            title="Connect to Wi-Fi"
+          ></a
+          ><a
+            target="_blank"
+            rel="noopener"
+            href="https://www.raspberrypi.com/documentation/computers/configuration.html#wireless-networking-command-line"
+            >Connect to Wi-Fi</a
+          >
+        </h3>
+        <h4 id="Configure-Wi-Fi-country-code">
+          <a
+            href="#Configure-Wi-Fi-country-code"
+            class="headerlink"
+            title="Configure Wi-Fi country code"
+          ></a
+          >Configure Wi-Fi country code
+        </h4>
+        <p>
+          In the Raspberry Pi OS,
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://www.raspberrypi.org/documentation/computers/configuration.html#ensure-wireless-operation"
+            >5 GHz wireless networking is disabled until a Wi-Fi country code
+            has been configured by the user</a
+          >.
+        </p>
+        <p>
+          Execute <code>sudo raspi-config</code> and then select Localization
+          Options &gt; WLAN Country. This option will execute following
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://github.com/RPi-Distro/raspi-config/blob/2be7313596b228c349c829ca7258cbdbd4b5deb1/raspi-config#L615-L630"
+            >commands</a
+          >.
+        </p>
+        <h4 id="Find-SSID">
+          <a href="#Find-SSID" class="headerlink" title="Find SSID"></a
+          ><a
+            target="_blank"
+            rel="noopener"
+            href="https://www.raspberrypi.com/documentation/computers/configuration.html#getting-wireless-lan-network-details"
+            >Find SSID</a
+          >
+        </h4>
+        <p>
+          If you don’t know the SSID scan the networks in the area to find the
+          SSID you want to connect to
+        </p>
+        <pre><code>sudo iwlist wlan0 scan | greo -i ssid
 </code></pre>
-            <h4 id="Enter-Wi-Fi-Credentials-Interactively">
-              <a
-                href="#Enter-Wi-Fi-Credentials-Interactively"
-                class="headerlink"
-                title="Enter Wi-Fi Credentials Interactively"
-              ></a
-              >Enter Wi-Fi Credentials Interactively
-            </h4>
-            <p>
-              Execute <code>sudo raspi-config</code> and then select System
-              Options &gt; Wireless LAN. This option will execute following
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://github.com/RPi-Distro/raspi-config/blob/2be7313596b228c349c829ca7258cbdbd4b5deb1/raspi-config#L2308"
-                >commands</a
-              >.
-            </p>
-            <h4 id="Enter-Wi-Fi-Credentials-Manually">
-              <a
-                href="#Enter-Wi-Fi-Credentials-Manually"
-                class="headerlink"
-                title="Enter Wi-Fi Credentials Manually"
-              ></a
-              ><a
-                target="_blank"
-                rel="noopener"
-                href="https://www.raspberrypi.com/documentation/computers/configuration.html#adding-the-network-details-to-your-raspberry-pi"
-                >Enter Wi-Fi Credentials Manually</a
-              >
-            </h4>
-            <p>Create configuration for Wi-Fi</p>
-            <pre><code>wpa_passphrase &lt;ssid&gt; &lt;password&gt; | sudo tee -a /etc/wpa_supplicant/wpa_supplicant.conf
+        <h4 id="Enter-Wi-Fi-Credentials-Interactively">
+          <a
+            href="#Enter-Wi-Fi-Credentials-Interactively"
+            class="headerlink"
+            title="Enter Wi-Fi Credentials Interactively"
+          ></a
+          >Enter Wi-Fi Credentials Interactively
+        </h4>
+        <p>
+          Execute <code>sudo raspi-config</code> and then select System Options
+          &gt; Wireless LAN. This option will execute following
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://github.com/RPi-Distro/raspi-config/blob/2be7313596b228c349c829ca7258cbdbd4b5deb1/raspi-config#L2308"
+            >commands</a
+          >.
+        </p>
+        <h4 id="Enter-Wi-Fi-Credentials-Manually">
+          <a
+            href="#Enter-Wi-Fi-Credentials-Manually"
+            class="headerlink"
+            title="Enter Wi-Fi Credentials Manually"
+          ></a
+          ><a
+            target="_blank"
+            rel="noopener"
+            href="https://www.raspberrypi.com/documentation/computers/configuration.html#adding-the-network-details-to-your-raspberry-pi"
+            >Enter Wi-Fi Credentials Manually</a
+          >
+        </h4>
+        <p>Create configuration for Wi-Fi</p>
+        <pre><code>wpa_passphrase &lt;ssid&gt; &lt;password&gt; | sudo tee -a /etc/wpa_supplicant/wpa_supplicant.conf
 </code></pre>
-            <p>
-              If you are connecting to a hidden network, an extra option
-              <code>scan_ssid</code> in the
-              <code>wpa_supplicant.conf</code> file <code>network</code> section
-              need to be present. You should use tab instead of space when
-              indenting. By default, <code>wpa_passphrase</code> also include
-              the plain text version of your password, but commented out. You
-              should delete this line for extra security. The final network
-              section should look like
-            </p>
-            <pre><code>network=&#123;
+        <p>
+          If you are connecting to a hidden network, an extra option
+          <code>scan_ssid</code> in the <code>wpa_supplicant.conf</code> file
+          <code>network</code> section need to be present. You should use tab
+          instead of space when indenting. By default,
+          <code>wpa_passphrase</code> also include the plain text version of
+          your password, but commented out. You should delete this line for
+          extra security. The final network section should look like
+        </p>
+        <pre><code>network=&#123;
     ssid=&quot;&lt;your hidden SSID&gt;&quot;
     scan_ssid=1
     psk=&quot;&lt;your encrypted 32 byte hexadecimal PSK&gt;&quot;
 &#125;
 </code></pre>
-            <p>
-              and ensure the following lines are at the top of
-              <code>wpa_supplicant</code> file, you need to double check the
-              country is correct.
-            </p>
-            <pre><code>ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+        <p>
+          and ensure the following lines are at the top of
+          <code>wpa_supplicant</code> file, you need to double check the country
+          is correct.
+        </p>
+        <pre><code>ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 update_config=1
 country=&lt;2 letter ISO 3166-1 country code&gt;
 </code></pre>
-            <p>then reconfigure the interface with</p>
-            <pre><code>wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0 -d
+        <p>then reconfigure the interface with</p>
+        <pre><code>wpa_supplicant -c /etc/wpa_supplicant/wpa_supplicant.conf -i wlan0 -d
 </code></pre>
-            <h4 id="Verify-the-network">
-              <a
-                href="#Verify-the-network"
-                class="headerlink"
-                title="Verify the network"
-              ></a
-              >Verify the network
-            </h4>
-            <p>You can verify the connection by running following command</p>
-            <pre><code>ping 8.8.8.8
+        <h4 id="Verify-the-network">
+          <a
+            href="#Verify-the-network"
+            class="headerlink"
+            title="Verify the network"
+          ></a
+          >Verify the network
+        </h4>
+        <p>You can verify the connection by running following command</p>
+        <pre><code>ping 8.8.8.8
 </code></pre>
-            <p>
-              If you find the network is unavailable, try to wait 2 minutes or
-              reboot, them verify with <code>ping</code> again.
-            </p>
-            <h2 id="Configure-Static-IP-Address">
-              <a
-                href="#Configure-Static-IP-Address"
-                class="headerlink"
-                title="Configure Static IP Address"
-              ></a
-              ><a
-                target="_blank"
-                rel="noopener"
-                href="https://www.raspberrypi.com/documentation/computers/configuration.html#static-ip-addresses"
-                >Configure Static IP Address</a
-              >
-            </h2>
-            <p>
-              If you want a static IP address, so each time you restart your
-              Raspberry Pi device or disconnect and reconnect to the network you
-              can find your device with same IP address. You need to add the
-              following lines to <code>/etc/dhcpcd.conf</code>.
-            </p>
-            <pre><code>interface &lt;your-interface-name&gt;
+        <p>
+          If you find the network is unavailable, try to wait 2 minutes or
+          reboot, them verify with <code>ping</code> again.
+        </p>
+        <h2 id="Configure-Static-IP-Address">
+          <a
+            href="#Configure-Static-IP-Address"
+            class="headerlink"
+            title="Configure Static IP Address"
+          ></a
+          ><a
+            target="_blank"
+            rel="noopener"
+            href="https://www.raspberrypi.com/documentation/computers/configuration.html#static-ip-addresses"
+            >Configure Static IP Address</a
+          >
+        </h2>
+        <p>
+          If you want a static IP address, so each time you restart your
+          Raspberry Pi device or disconnect and reconnect to the network you can
+          find your device with same IP address. You need to add the following
+          lines to <code>/etc/dhcpcd.conf</code>.
+        </p>
+        <pre><code>interface &lt;your-interface-name&gt;
 static ip_address=192.168.0.10/24
 static routers=192.168.0.1
 static domain_name_servers=192.168.0.1 8.8.8.8
 </code></pre>
-            <p>
-              You can find your interface name with <code>ip link</code>, router
-              IP address with <code>ip route show default</code>. You need to
-              ensure the static IP address is outside of DHCP dynamically
-              assigned IP address range, you can verify this information in your
-              router. You can verify your IP address with
-              <code>ip -a address</code>.
-            </p>
-            <h2 id="Setting-up-SSH-Server">
-              <a
-                href="#Setting-up-SSH-Server"
-                class="headerlink"
-                title="Setting up SSH Server"
-              ></a
-              ><a
-                target="_blank"
-                rel="noopener"
-                href="https://www.raspberrypi.com/documentation/computers/remote-access.html#ssh"
-                >Setting up SSH Server</a
-              >
-            </h2>
-            <h3 id="Enable-SSH-Server">
-              <a
-                href="#Enable-SSH-Server"
-                class="headerlink"
-                title="Enable SSH Server"
-              ></a
-              ><a
-                target="_blank"
-                rel="noopener"
-                href="https://www.raspberrypi.com/documentation/computers/remote-access.html#enabling-the-server"
-                >Enable SSH Server</a
-              >
-            </h3>
-            <p>
-              Enter <code>sudo raspi-config</code> in a terminal window. Select
-              <code>Interfacing Options</code> and then <code>SSH</code>. This
-              option will execute following
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://github.com/RPi-Distro/raspi-config/blob/2be7313596b228c349c829ca7258cbdbd4b5deb1/raspi-config#L841"
-                >commands</a
-              >
-            </p>
-            <h3 id="Configure-Passwordless-SSH-Access">
-              <a
-                href="#Configure-Passwordless-SSH-Access"
-                class="headerlink"
-                title="Configure Passwordless SSH Access"
-              ></a
-              ><a
-                target="_blank"
-                rel="noopener"
-                href="https://www.raspberrypi.com/documentation/computers/remote-access.html#passwordless-ssh-access"
-                >Configure Passwordless SSH Access</a
-              >
-            </h3>
-            <p>
-              Generate new SSH keys using the <code>ssh-keygen</code> command on
-              the client. Copy your public key to your Raspberry Pi.
-              <code
-                >cat ~/.ssh/id_rsa.pub | ssh &lt;USERNAME&gt;@&lt;IP-ADDRESS&gt;
-                &#39;mkdir -p ~/.ssh &amp;&amp; cat &gt;&gt;
-                ~/.ssh/authorized_keys&#39;</code
-              >.
-            </p>
-            <h3 id="Disable-Password-Authentication">
-              <a
-                href="#Disable-Password-Authentication"
-                class="headerlink"
-                title="Disable Password Authentication"
-              ></a
-              ><a
-                target="_blank"
-                rel="noopener"
-                href="https://www.raspberrypi.com/documentation/computers/configuration.html#using-key-based-authentication"
-                >Disable Password Authentication</a
-              >
-            </h3>
-            <p>
-              Edit <code>/etc/ssh/sshd_config</code> and change these options to
-              <code>no</code>
-            </p>
-            <pre><code>ChallengeResponseAuthentication no
+        <p>
+          You can find your interface name with <code>ip link</code>, router IP
+          address with <code>ip route show default</code>. You need to ensure
+          the static IP address is outside of DHCP dynamically assigned IP
+          address range, you can verify this information in your router. You can
+          verify your IP address with <code>ip -a address</code>.
+        </p>
+        <h2 id="Setting-up-SSH-Server">
+          <a
+            href="#Setting-up-SSH-Server"
+            class="headerlink"
+            title="Setting up SSH Server"
+          ></a
+          ><a
+            target="_blank"
+            rel="noopener"
+            href="https://www.raspberrypi.com/documentation/computers/remote-access.html#ssh"
+            >Setting up SSH Server</a
+          >
+        </h2>
+        <h3 id="Enable-SSH-Server">
+          <a
+            href="#Enable-SSH-Server"
+            class="headerlink"
+            title="Enable SSH Server"
+          ></a
+          ><a
+            target="_blank"
+            rel="noopener"
+            href="https://www.raspberrypi.com/documentation/computers/remote-access.html#enabling-the-server"
+            >Enable SSH Server</a
+          >
+        </h3>
+        <p>
+          Enter <code>sudo raspi-config</code> in a terminal window. Select
+          <code>Interfacing Options</code> and then <code>SSH</code>. This
+          option will execute following
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://github.com/RPi-Distro/raspi-config/blob/2be7313596b228c349c829ca7258cbdbd4b5deb1/raspi-config#L841"
+            >commands</a
+          >
+        </p>
+        <h3 id="Configure-Passwordless-SSH-Access">
+          <a
+            href="#Configure-Passwordless-SSH-Access"
+            class="headerlink"
+            title="Configure Passwordless SSH Access"
+          ></a
+          ><a
+            target="_blank"
+            rel="noopener"
+            href="https://www.raspberrypi.com/documentation/computers/remote-access.html#passwordless-ssh-access"
+            >Configure Passwordless SSH Access</a
+          >
+        </h3>
+        <p>
+          Generate new SSH keys using the <code>ssh-keygen</code> command on the
+          client. Copy your public key to your Raspberry Pi.
+          <code
+            >cat ~/.ssh/id_rsa.pub | ssh &lt;USERNAME&gt;@&lt;IP-ADDRESS&gt;
+            &#39;mkdir -p ~/.ssh &amp;&amp; cat &gt;&gt;
+            ~/.ssh/authorized_keys&#39;</code
+          >.
+        </p>
+        <h3 id="Disable-Password-Authentication">
+          <a
+            href="#Disable-Password-Authentication"
+            class="headerlink"
+            title="Disable Password Authentication"
+          ></a
+          ><a
+            target="_blank"
+            rel="noopener"
+            href="https://www.raspberrypi.com/documentation/computers/configuration.html#using-key-based-authentication"
+            >Disable Password Authentication</a
+          >
+        </h3>
+        <p>
+          Edit <code>/etc/ssh/sshd_config</code> and change these options to
+          <code>no</code>
+        </p>
+        <pre><code>ChallengeResponseAuthentication no
 PasswordAuthentication no
 UsePAM no
 </code></pre>
-            <h3 id="Change-SSH-Server-Port">
-              <a
-                href="#Change-SSH-Server-Port"
-                class="headerlink"
-                title="Change SSH Server Port"
-              ></a
-              >Change SSH Server Port
-            </h3>
-            <p>
-              By default, SSH server listen to <code>22</code>. Edit
-              <code>/etc/ssh/sshd_config</code> and change <code>Port</code> to
-              other value e.g. <code>2222</code>
-            </p>
-            <h3 id="Disable-IPv6-SSH-Access">
-              <a
-                href="#Disable-IPv6-SSH-Access"
-                class="headerlink"
-                title="Disable IPv6 SSH Access"
-              ></a
-              >Disable IPv6 SSH Access
-            </h3>
-            <p>
-              Edit <code>/etc/ssh/sshd_config</code> and change
-              <code>AddressFamily</code> to <code>inet</code> which means IPv4
-              only.
-            </p>
-            <h3 id="Listen-To-Local-Network-Only">
-              <a
-                href="#Listen-To-Local-Network-Only"
-                class="headerlink"
-                title="Listen To Local Network Only"
-              ></a
-              >Listen To Local Network Only
-            </h3>
-            <p>
-              Edit <code>/etc/ssh/sshd_config</code> and change
-              <code>ListenAddress</code> to private network static address that
-              you have configured before. When you specify IP address explicitly
-              in sshd config file,
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://unix.stackexchange.com/a/499712"
-                >network interfaces must be prepared prior to sshd start</a
-              >. Execute <code>sudo systemctl edit sshd</code> and add following
-              content.
-            </p>
-            <pre><code>[Unit]
+        <h3 id="Change-SSH-Server-Port">
+          <a
+            href="#Change-SSH-Server-Port"
+            class="headerlink"
+            title="Change SSH Server Port"
+          ></a
+          >Change SSH Server Port
+        </h3>
+        <p>
+          By default, SSH server listen to <code>22</code>. Edit
+          <code>/etc/ssh/sshd_config</code> and change <code>Port</code> to
+          other value e.g. <code>2222</code>
+        </p>
+        <h3 id="Disable-IPv6-SSH-Access">
+          <a
+            href="#Disable-IPv6-SSH-Access"
+            class="headerlink"
+            title="Disable IPv6 SSH Access"
+          ></a
+          >Disable IPv6 SSH Access
+        </h3>
+        <p>
+          Edit <code>/etc/ssh/sshd_config</code> and change
+          <code>AddressFamily</code> to <code>inet</code> which means IPv4 only.
+        </p>
+        <h3 id="Listen-To-Local-Network-Only">
+          <a
+            href="#Listen-To-Local-Network-Only"
+            class="headerlink"
+            title="Listen To Local Network Only"
+          ></a
+          >Listen To Local Network Only
+        </h3>
+        <p>
+          Edit <code>/etc/ssh/sshd_config</code> and change
+          <code>ListenAddress</code> to private network static address that you
+          have configured before. When you specify IP address explicitly in sshd
+          config file,
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://unix.stackexchange.com/a/499712"
+            >network interfaces must be prepared prior to sshd start</a
+          >. Execute <code>sudo systemctl edit sshd</code> and add following
+          content.
+        </p>
+        <pre><code>[Unit]
 After=network-pre.target network.target network-online.target auditd.service dhcpcd.service
 
 [Service]
@@ -1099,179 +744,172 @@ Restart=on-failure
 RestartSec=5
 RestartPreventExitStatus=
 </code></pre>
-            <p>
-              Then execute
-              <code>sudo systemctl enable systemd-networkd-wait-online</code>.
-            </p>
-            <h3 id="Apply-Latest-SSH-Configuration">
-              <a
-                href="#Apply-Latest-SSH-Configuration"
-                class="headerlink"
-                title="Apply Latest SSH Configuration"
-              ></a
-              >Apply Latest SSH Configuration
-            </h3>
-            <p>
-              Restart the ssh system with <code>sudo service ssh reload</code>.
-            </p>
-            <h2 id="Firewall-Configuration">
-              <a
-                href="#Firewall-Configuration"
-                class="headerlink"
-                title="Firewall Configuration"
-              ></a
-              ><a
-                target="_blank"
-                rel="noopener"
-                href="https://www.raspberrypi.com/documentation/computers/configuration.html#install-a-firewall"
-                >Firewall Configuration</a
-              >
-            </h2>
-            <pre><code>sudo apt install ufw
+        <p>
+          Then execute
+          <code>sudo systemctl enable systemd-networkd-wait-online</code>.
+        </p>
+        <h3 id="Apply-Latest-SSH-Configuration">
+          <a
+            href="#Apply-Latest-SSH-Configuration"
+            class="headerlink"
+            title="Apply Latest SSH Configuration"
+          ></a
+          >Apply Latest SSH Configuration
+        </h3>
+        <p>Restart the ssh system with <code>sudo service ssh reload</code>.</p>
+        <h2 id="Firewall-Configuration">
+          <a
+            href="#Firewall-Configuration"
+            class="headerlink"
+            title="Firewall Configuration"
+          ></a
+          ><a
+            target="_blank"
+            rel="noopener"
+            href="https://www.raspberrypi.com/documentation/computers/configuration.html#install-a-firewall"
+            >Firewall Configuration</a
+          >
+        </h2>
+        <pre><code>sudo apt install ufw
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw allow in on eth0 from 192.168.0.0/24 to 192.168.0.10 port 2222 proto tcp
 sudo ufw enable
 sudo ufw status numbered verbose
 </code></pre>
-            <h2 id="Disable-Wi-Fi-amp-Bluetooth">
-              <a
-                href="#Disable-Wi-Fi-amp-Bluetooth"
-                class="headerlink"
-                title="Disable Wi-Fi &amp; Bluetooth"
-              ></a
-              >Disable Wi-Fi &amp; Bluetooth
-            </h2>
-            <p>Add these 2 lines to <code>/boot/config.txt</code></p>
-            <pre><code>dtoverlay=disable-wifi
+        <h2 id="Disable-Wi-Fi-amp-Bluetooth">
+          <a
+            href="#Disable-Wi-Fi-amp-Bluetooth"
+            class="headerlink"
+            title="Disable Wi-Fi &amp; Bluetooth"
+          ></a
+          >Disable Wi-Fi &amp; Bluetooth
+        </h2>
+        <p>Add these 2 lines to <code>/boot/config.txt</code></p>
+        <pre><code>dtoverlay=disable-wifi
 dtoverlay=disable-bt
 </code></pre>
-            <p>
-              Here you can find the documentations of
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://github.com/raspberrypi/firmware/blob/afc7631bc9a58f94a157503955881ab27a6287d0/boot/overlays/README#L736-L739"
-                ><code>disable-wifi</code></a
-              >
-              and
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://github.com/raspberrypi/firmware/blob/afc7631bc9a58f94a157503955881ab27a6287d0/boot/overlays/README#L727-L733"
-                ><code>disable-bt</code></a
-              >.
-            </p>
-            <h2 id="Configure-Fan">
-              <a
-                href="#Configure-Fan"
-                class="headerlink"
-                title="Configure Fan"
-              ></a
-              >Configure Fan
-            </h2>
-            <p>
-              When you buy a Raspberry Pi 4B you can also optionally buy a case
-              with fan e.g. the official
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://www.raspberrypi.org/products/raspberry-pi-4-case-fan/"
-                >Raspberry Pi 4 Case Fan</a
-              >. You can simply connect the fan wires to 5V and ground pin but
-              Raspberry Pi support advance fan control base on temperature. Run
-              <code>sudo raspi-config</code>, select
-              <code>Performance Options</code> then select <code>Fan</code>,
-              introduce the GPIO that will be enabled when temperature exceeds
-              the limit you introduced. You need to reboot after the
-              configuration change. Run the command
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://www.raspberrypi.org/documentation/computers/os.html#gpio-pinout"
-                ><code>pinout</code></a
-              >
-              to find the location of GPIO and connect it to base gate of a
-              transistor, connect negative wire of fan to ground. If you are
-              using NPN transistor then connect emitter gate to positive wire of
-              fan and 5V to collector gate of transistor. If you are using PNP
-              transistor then connect collector gate to positive wire of fan and
-              5V to emitter gate of transistor. You can use protoboard to
-              arrange the wires. You can verify current temperature using
-              command <code>vcgencmd measure_temp</code>.
-            </p>
-            <h2 id="NAS-with-Samba-and-External-Disk-through-USB-3-0">
-              <a
-                href="#NAS-with-Samba-and-External-Disk-through-USB-3-0"
-                class="headerlink"
-                title="NAS with Samba and External Disk through USB 3.0"
-              ></a
-              ><a
-                target="_blank"
-                rel="noopener"
-                href="https://www.raspberrypi.com/documentation/computers/remote-access.html#samba-smbcifs"
-                >NAS with Samba and External Disk through USB 3.0</a
-              >
-            </h2>
-            <h3 id="Mount-External-Disk">
-              <a
-                href="#Mount-External-Disk"
-                class="headerlink"
-                title="Mount External Disk"
-              ></a
-              >Mount External Disk
-            </h3>
-            <p>
-              Attach the external disk to the USB 3.0 port and run following to
-              ensure the device is recognized
-            </p>
-            <pre><code>sudo blkid
+        <p>
+          Here you can find the documentations of
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://github.com/raspberrypi/firmware/blob/afc7631bc9a58f94a157503955881ab27a6287d0/boot/overlays/README#L736-L739"
+            ><code>disable-wifi</code></a
+          >
+          and
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://github.com/raspberrypi/firmware/blob/afc7631bc9a58f94a157503955881ab27a6287d0/boot/overlays/README#L727-L733"
+            ><code>disable-bt</code></a
+          >.
+        </p>
+        <h2 id="Configure-Fan">
+          <a href="#Configure-Fan" class="headerlink" title="Configure Fan"></a
+          >Configure Fan
+        </h2>
+        <p>
+          When you buy a Raspberry Pi 4B you can also optionally buy a case with
+          fan e.g. the official
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://www.raspberrypi.org/products/raspberry-pi-4-case-fan/"
+            >Raspberry Pi 4 Case Fan</a
+          >. You can simply connect the fan wires to 5V and ground pin but
+          Raspberry Pi support advance fan control base on temperature. Run
+          <code>sudo raspi-config</code>, select
+          <code>Performance Options</code> then select <code>Fan</code>,
+          introduce the GPIO that will be enabled when temperature exceeds the
+          limit you introduced. You need to reboot after the configuration
+          change. Run the command
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://www.raspberrypi.org/documentation/computers/os.html#gpio-pinout"
+            ><code>pinout</code></a
+          >
+          to find the location of GPIO and connect it to base gate of a
+          transistor, connect negative wire of fan to ground. If you are using
+          NPN transistor then connect emitter gate to positive wire of fan and
+          5V to collector gate of transistor. If you are using PNP transistor
+          then connect collector gate to positive wire of fan and 5V to emitter
+          gate of transistor. You can use protoboard to arrange the wires. You
+          can verify current temperature using command
+          <code>vcgencmd measure_temp</code>.
+        </p>
+        <h2 id="NAS-with-Samba-and-External-Disk-through-USB-3-0">
+          <a
+            href="#NAS-with-Samba-and-External-Disk-through-USB-3-0"
+            class="headerlink"
+            title="NAS with Samba and External Disk through USB 3.0"
+          ></a
+          ><a
+            target="_blank"
+            rel="noopener"
+            href="https://www.raspberrypi.com/documentation/computers/remote-access.html#samba-smbcifs"
+            >NAS with Samba and External Disk through USB 3.0</a
+          >
+        </h2>
+        <h3 id="Mount-External-Disk">
+          <a
+            href="#Mount-External-Disk"
+            class="headerlink"
+            title="Mount External Disk"
+          ></a
+          >Mount External Disk
+        </h3>
+        <p>
+          Attach the external disk to the USB 3.0 port and run following to
+          ensure the device is recognized
+        </p>
+        <pre><code>sudo blkid
 sudo fdisk -l
 </code></pre>
-            <p>
-              If your disk is <code>NTFS</code> file system then we need to
-              install following package
-            </p>
-            <pre><code>sudo apt install ntfs-3g
+        <p>
+          If your disk is <code>NTFS</code> file system then we need to install
+          following package
+        </p>
+        <pre><code>sudo apt install ntfs-3g
 </code></pre>
-            <p>
-              Once you know where the drive is located, run following command,
-              the type argument might be different depending on your drive file
-              system
-            </p>
-            <pre><code>sudo mkdir -p /mnt/shared
+        <p>
+          Once you know where the drive is located, run following command, the
+          type argument might be different depending on your drive file system
+        </p>
+        <pre><code>sudo mkdir -p /mnt/shared
 sudo mount -t ntfs-3g /dev/&lt;what you have found in previous step e.g. sda1&gt; /mnt/shared
 </code></pre>
-            <p>
-              To permanently mount at startup, add the following line to
-              <code>/etc/fstab</code>
-            </p>
-            <pre><code>/dev/&lt;what you have found in previous step e.g. sda1&gt;    /mnt/shared   ntfs    default  0  0
+        <p>
+          To permanently mount at startup, add the following line to
+          <code>/etc/fstab</code>
+        </p>
+        <pre><code>/dev/&lt;what you have found in previous step e.g. sda1&gt;    /mnt/shared   ntfs    default  0  0
 </code></pre>
-            <h3 id="Setup-Shared-Folder-on-Raspberry">
-              <a
-                href="#Setup-Shared-Folder-on-Raspberry"
-                class="headerlink"
-                title="Setup Shared Folder on Raspberry"
-              ></a
-              >Setup Shared Folder on Raspberry
-            </h3>
-            <p>Installing Samba Support with following commands</p>
-            <pre><code>sudo apt update
+        <h3 id="Setup-Shared-Folder-on-Raspberry">
+          <a
+            href="#Setup-Shared-Folder-on-Raspberry"
+            class="headerlink"
+            title="Setup Shared Folder on Raspberry"
+          ></a
+          >Setup Shared Folder on Raspberry
+        </h3>
+        <p>Installing Samba Support with following commands</p>
+        <pre><code>sudo apt update
 sudo apt install samba samba-common-bin cifs-utils
 </code></pre>
-            <p>Sharing a folder is easy</p>
-            <pre><code>sudo useradd -M -s /sbin/nologin samba
+        <p>Sharing a folder is easy</p>
+        <pre><code>sudo useradd -M -s /sbin/nologin samba
 sudo passwd samba
 sudo chmod 700 /mnt/shared
 sudo chown samba /mnt/shared
 sudo smbpasswd -a samba
 </code></pre>
-            <p>
-              Edit the Samba configuration file
-              <code>/etc/samba/smb.conf</code> and add the following lines
-            </p>
-            <pre><code>[shared]
+        <p>
+          Edit the Samba configuration file <code>/etc/samba/smb.conf</code> and
+          add the following lines
+        </p>
+        <pre><code>[shared]
     path = /mnt/shared
     read only = no
     guest ok = no
@@ -1284,152 +922,149 @@ sudo smbpasswd -a samba
     recycle:keeptree = yes
     recycle:versions = yes
 </code></pre>
-            <p>In the same file change these two properties to</p>
-            <pre><code>interfaces = 192.168.0.10/24 eth0
+        <p>In the same file change these two properties to</p>
+        <pre><code>interfaces = 192.168.0.10/24 eth0
 workgroup = &lt;your workgroup name here - you find it in Windows client machine System Properties - Computer Name&gt;
 </code></pre>
-            <p>Apply the change</p>
-            <pre><code>sudo service smbd reload
+        <p>Apply the change</p>
+        <pre><code>sudo service smbd reload
 </code></pre>
-            <p>Allow the Samba traffic through firewall</p>
-            <pre><code>sudo ufw allow in on eth0 from 192.168.0.0/24 to 192.168.0.10 app Samba
+        <p>Allow the Samba traffic through firewall</p>
+        <pre><code>sudo ufw allow in on eth0 from 192.168.0.0/24 to 192.168.0.10 app Samba
 </code></pre>
-            <h3 id="Mount-Samba-Shared-Folder">
-              <a
-                href="#Mount-Samba-Shared-Folder"
-                class="headerlink"
-                title="Mount Samba Shared Folder"
-              ></a
-              >Mount Samba Shared Folder
-            </h3>
-            <pre><code>net use Z: \\192.168.0.10\shared /SAVECRED /PERSISTENT:YES
+        <h3 id="Mount-Samba-Shared-Folder">
+          <a
+            href="#Mount-Samba-Shared-Folder"
+            class="headerlink"
+            title="Mount Samba Shared Folder"
+          ></a
+          >Mount Samba Shared Folder
+        </h3>
+        <pre><code>net use Z: \\192.168.0.10\shared /SAVECRED /PERSISTENT:YES
 </code></pre>
-            <p>
-              It will ask for username and password, you should introduce
-              <code>samba</code> as username.
-            </p>
-            <h3 id="Remove-Samba-Shared-Folder">
-              <a
-                href="#Remove-Samba-Shared-Folder"
-                class="headerlink"
-                title="Remove Samba Shared Folder"
-              ></a
-              >Remove Samba Shared Folder
-            </h3>
-            <pre><code>net use  Z: /delete
+        <p>
+          It will ask for username and password, you should introduce
+          <code>samba</code> as username.
+        </p>
+        <h3 id="Remove-Samba-Shared-Folder">
+          <a
+            href="#Remove-Samba-Shared-Folder"
+            class="headerlink"
+            title="Remove Samba Shared Folder"
+          ></a
+          >Remove Samba Shared Folder
+        </h3>
+        <pre><code>net use  Z: /delete
 </code></pre>
-            <h2 id="NAS-Backup-with-Dropbox-and-Rclone">
-              <a
-                href="#NAS-Backup-with-Dropbox-and-Rclone"
-                class="headerlink"
-                title="NAS Backup with Dropbox and Rclone"
-              ></a
-              ><a
-                target="_blank"
-                rel="noopener"
-                href="https://rclone.org/dropbox/"
-                >NAS Backup with Dropbox and Rclone</a
-              >
-            </h2>
-            <h3 id="Get-your-own-Dropbox-App-ID">
-              <a
-                href="#Get-your-own-Dropbox-App-ID"
-                class="headerlink"
-                title="Get your own Dropbox App ID"
-              ></a
-              ><a
-                target="_blank"
-                rel="noopener"
-                href="https://rclone.org/dropbox/#get-your-own-dropbox-app-id"
-                >Get your own Dropbox App ID</a
-              >
-            </h3>
-            <h3 id="Install-Rclone">
-              <a
-                href="#Install-Rclone"
-                class="headerlink"
-                title="Install Rclone"
-              ></a
-              >Install Rclone
-            </h3>
-            <pre><code>sudo apt update
+        <h2 id="NAS-Backup-with-Dropbox-and-Rclone">
+          <a
+            href="#NAS-Backup-with-Dropbox-and-Rclone"
+            class="headerlink"
+            title="NAS Backup with Dropbox and Rclone"
+          ></a
+          ><a target="_blank" rel="noopener" href="https://rclone.org/dropbox/"
+            >NAS Backup with Dropbox and Rclone</a
+          >
+        </h2>
+        <h3 id="Get-your-own-Dropbox-App-ID">
+          <a
+            href="#Get-your-own-Dropbox-App-ID"
+            class="headerlink"
+            title="Get your own Dropbox App ID"
+          ></a
+          ><a
+            target="_blank"
+            rel="noopener"
+            href="https://rclone.org/dropbox/#get-your-own-dropbox-app-id"
+            >Get your own Dropbox App ID</a
+          >
+        </h3>
+        <h3 id="Install-Rclone">
+          <a
+            href="#Install-Rclone"
+            class="headerlink"
+            title="Install Rclone"
+          ></a
+          >Install Rclone
+        </h3>
+        <pre><code>sudo apt update
 sudo apt install rclone
 </code></pre>
-            <h3 id="Configure-Rclone">
-              <a
-                href="#Configure-Rclone"
-                class="headerlink"
-                title="Configure Rclone"
-              ></a
-              >Configure Rclone
-            </h3>
-            <pre><code>rclone config
+        <h3 id="Configure-Rclone">
+          <a
+            href="#Configure-Rclone"
+            class="headerlink"
+            title="Configure Rclone"
+          ></a
+          >Configure Rclone
+        </h3>
+        <pre><code>rclone config
 </code></pre>
-            <p>
-              Follow the instructions until you need to visit an URL, you will
-              need to use SSH local forward
-            </p>
-            <pre><code>sudo ufw default allow FORWARD
+        <p>
+          Follow the instructions until you need to visit an URL, you will need
+          to use SSH local forward
+        </p>
+        <pre><code>sudo ufw default allow FORWARD
 sudo service ufw restart
 ssh -p 2222 -N -L 127.0.0.1:53682:127.0.0.1:53682 sgao@192.168.0.10
 </code></pre>
-            <p>
-              Open the link that is mentioned in following
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://github.com/rclone/rclone/issues/4792#issuecomment-731758924"
-                >workaround</a
-              >
-              to avoid expiration issue. You can verify that refresh token is
-              present
-            </p>
-            <pre><code>cat ~/.config/rclone/rclone.conf
+        <p>
+          Open the link that is mentioned in following
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://github.com/rclone/rclone/issues/4792#issuecomment-731758924"
+            >workaround</a
+          >
+          to avoid expiration issue. You can verify that refresh token is
+          present
+        </p>
+        <pre><code>cat ~/.config/rclone/rclone.conf
 </code></pre>
-            <p>Rollback the <code>ufw</code> configuration</p>
-            <pre><code>sudo ufw default deny FORWARD
+        <p>Rollback the <code>ufw</code> configuration</p>
+        <pre><code>sudo ufw default deny FORWARD
 sudo service ufw restart
 </code></pre>
-            <h3 id="Backup-with-Dropbox">
-              <a
-                href="#Backup-with-Dropbox"
-                class="headerlink"
-                title="Backup with Dropbox"
-              ></a
-              ><a
-                target="_blank"
-                rel="noopener"
-                href="https://rclone.org/commands/rclone_sync/"
-                >Backup with Dropbox</a
-              >
-            </h3>
-            <p>We first verify the setup is correct</p>
-            <pre><code>rclone lsd dropbox:
+        <h3 id="Backup-with-Dropbox">
+          <a
+            href="#Backup-with-Dropbox"
+            class="headerlink"
+            title="Backup with Dropbox"
+          ></a
+          ><a
+            target="_blank"
+            rel="noopener"
+            href="https://rclone.org/commands/rclone_sync/"
+            >Backup with Dropbox</a
+          >
+        </h3>
+        <p>We first verify the setup is correct</p>
+        <pre><code>rclone lsd dropbox:
 </code></pre>
-            <p>Then sync from Dropbox to a local folder</p>
-            <pre><code>mkdir -p /mnt/shared/Dropbox
+        <p>Then sync from Dropbox to a local folder</p>
+        <pre><code>mkdir -p /mnt/shared/Dropbox
 rclone copy dropbox: /mnt/shared/Dropbox
 </code></pre>
-            <p>Finally, keep the folder synchronized with Dropbox</p>
-            <pre><code>rclone sync /mnt/shared/Dropbox dropbox:
+        <p>Finally, keep the folder synchronized with Dropbox</p>
+        <pre><code>rclone sync /mnt/shared/Dropbox dropbox:
 </code></pre>
-            <h3 id="Keep-Dropbox-Synced-With-Local">
-              <a
-                href="#Keep-Dropbox-Synced-With-Local"
-                class="headerlink"
-                title="Keep Dropbox Synced With Local"
-              ></a
-              >Keep Dropbox Synced With Local
-            </h3>
-            <p>Install the <code>inotify-tools</code></p>
-            <pre><code>sudo apt update
+        <h3 id="Keep-Dropbox-Synced-With-Local">
+          <a
+            href="#Keep-Dropbox-Synced-With-Local"
+            class="headerlink"
+            title="Keep Dropbox Synced With Local"
+          ></a
+          >Keep Dropbox Synced With Local
+        </h3>
+        <p>Install the <code>inotify-tools</code></p>
+        <pre><code>sudo apt update
 sudo apt install inotify-tools
 </code></pre>
-            <p>
-              Save following commands to
-              <code>~/dropbox-sync-from-local-to-remote.sh</code>
-            </p>
-            <pre><code>#!/bin/bash
+        <p>
+          Save following commands to
+          <code>~/dropbox-sync-from-local-to-remote.sh</code>
+        </p>
+        <pre><code>#!/bin/bash
 # Execute first time after the machine is boot
 rclone sync /mnt/shared/Dropbox dropbox:
 inotifywait -m -q -r -e create -e modify -e move -e delete --format &#39;%w%f:%e&#39; /mnt/shared/Dropbox | \
@@ -1441,274 +1076,256 @@ while read; do \
     rclone sync --delete-during /mnt/shared/Dropbox dropbox:; \
 done
 </code></pre>
-            <p>We need to add execute permission to the script file</p>
-            <pre><code>chmod +x ~/dropbox-sync-from-local-to-remote.sh
+        <p>We need to add execute permission to the script file</p>
+        <pre><code>chmod +x ~/dropbox-sync-from-local-to-remote.sh
 </code></pre>
-            <p>
-              Create a <code>Cron</code> job at boot time by executing
-              <code>crontab -e</code> and then add following line to the task
-              list
-            </p>
-            <pre><code>@reboot sleep 10 &amp;&amp; ~/dropbox-sync-from-local-to-remote.sh &gt;&gt; ~/dropbox-sync-from-local-to-remote.log 2&gt;&amp;1
+        <p>
+          Create a <code>Cron</code> job at boot time by executing
+          <code>crontab -e</code> and then add following line to the task list
+        </p>
+        <pre><code>@reboot sleep 10 &amp;&amp; ~/dropbox-sync-from-local-to-remote.sh &gt;&gt; ~/dropbox-sync-from-local-to-remote.log 2&gt;&amp;1
 </code></pre>
-            <h3 id="Keep-Local-Synced-With-Dropbox">
-              <a
-                href="#Keep-Local-Synced-With-Dropbox"
-                class="headerlink"
-                title="Keep Local Synced With Dropbox"
-              ></a
-              >Keep Local Synced With Dropbox
-            </h3>
-            <p>
-              Save following commands to
-              <code>~/dropbox-sync-from-remote-to-local.sh</code>
-            </p>
-            <pre><code>rclone sync dropbox: /mnt/shared/Dropbox --backup-dir /mnt/shared/Dropbox-Backup --suffix .$(date +&quot;%Y-%m-%d-%H-%M-%S&quot;)
+        <h3 id="Keep-Local-Synced-With-Dropbox">
+          <a
+            href="#Keep-Local-Synced-With-Dropbox"
+            class="headerlink"
+            title="Keep Local Synced With Dropbox"
+          ></a
+          >Keep Local Synced With Dropbox
+        </h3>
+        <p>
+          Save following commands to
+          <code>~/dropbox-sync-from-remote-to-local.sh</code>
+        </p>
+        <pre><code>rclone sync dropbox: /mnt/shared/Dropbox --backup-dir /mnt/shared/Dropbox-Backup --suffix .$(date +&quot;%Y-%m-%d-%H-%M-%S&quot;)
 </code></pre>
-            <p>
-              Create a <code>Cron</code> job by executing
-              <code>crontab -e</code> and then add following line to the task
-              list
-            </p>
-            <pre><code>*/5 * * * * ~/dropbox-sync-from-remote-to-local.sh &gt;&gt; ~/dropbox-sync-from-remote-to-local.log 2&gt;&amp;1
+        <p>
+          Create a <code>Cron</code> job by executing
+          <code>crontab -e</code> and then add following line to the task list
+        </p>
+        <pre><code>*/5 * * * * ~/dropbox-sync-from-remote-to-local.sh &gt;&gt; ~/dropbox-sync-from-remote-to-local.log 2&gt;&amp;1
 </code></pre>
-            <h2 id="Upgrade-Raspberry-Pi-OS">
-              <a
-                href="#Upgrade-Raspberry-Pi-OS"
-                class="headerlink"
-                title="Upgrade Raspberry Pi OS"
-              ></a
-              ><a
-                target="_blank"
-                rel="noopener"
-                href="https://www.raspberrypi.org/documentation/computers/os.html#upgrading-from-operating-system-versions"
-                >Upgrade Raspberry Pi OS</a
-              >
-            </h2>
-            <p>
-              Modify the file <code>/etc/apt/sources.list</code> and
-              <code>/etc/apt/sources.list.d/raspi.list</code> and replace every
-              occurrence of the word <code>buster</code> to
-              <code>bullseye</code>.
-            </p>
-            <pre><code>sudo apt update
+        <h2 id="Upgrade-Raspberry-Pi-OS">
+          <a
+            href="#Upgrade-Raspberry-Pi-OS"
+            class="headerlink"
+            title="Upgrade Raspberry Pi OS"
+          ></a
+          ><a
+            target="_blank"
+            rel="noopener"
+            href="https://www.raspberrypi.org/documentation/computers/os.html#upgrading-from-operating-system-versions"
+            >Upgrade Raspberry Pi OS</a
+          >
+        </h2>
+        <p>
+          Modify the file <code>/etc/apt/sources.list</code> and
+          <code>/etc/apt/sources.list.d/raspi.list</code> and replace every
+          occurrence of the word <code>buster</code> to <code>bullseye</code>.
+        </p>
+        <pre><code>sudo apt update
 sudo apt -y dist-upgrade
 sudo reboot
 </code></pre>
-            <h3 id="Remove-Unused-Software-After-Upgrade">
-              <a
-                href="#Remove-Unused-Software-After-Upgrade"
-                class="headerlink"
-                title="Remove Unused Software After Upgrade"
-              ></a
-              >Remove Unused Software After Upgrade
-            </h3>
-            <pre><code>sudo apt purge geany thonny
+        <h3 id="Remove-Unused-Software-After-Upgrade">
+          <a
+            href="#Remove-Unused-Software-After-Upgrade"
+            class="headerlink"
+            title="Remove Unused Software After Upgrade"
+          ></a
+          >Remove Unused Software After Upgrade
+        </h3>
+        <pre><code>sudo apt purge geany thonny
 sudo apt autoremove
 </code></pre>
-            <h2 id="Desktop-Environment-Configuration">
-              <a
-                href="#Desktop-Environment-Configuration"
-                class="headerlink"
-                title="Desktop Environment Configuration"
-              ></a
-              >Desktop Environment Configuration
-            </h2>
-            <p>
-              Raspberry Pi OS provides desktop environment, and we can also
-              upgrade from lite version to desktop version, but it is
-              recommended that if you need to use desktop environment, download
-              the desktop version directly.
-            </p>
-            <h3 id="Install-Desktop-Environment-from-Lite-Version">
-              <a
-                href="#Install-Desktop-Environment-from-Lite-Version"
-                class="headerlink"
-                title="Install Desktop Environment from Lite Version"
-              ></a
-              ><a
-                target="_blank"
-                rel="noopener"
-                href="https://gist.github.com/kmpm/8e535a12a45a32f6d36cf26c7c6cef51"
-                >Install Desktop Environment from Lite Version</a
-              >
-            </h3>
-            <pre><code>sudo apt install -y lightdm raspberrypi-ui-mods rpi-chromium-mods
+        <h2 id="Desktop-Environment-Configuration">
+          <a
+            href="#Desktop-Environment-Configuration"
+            class="headerlink"
+            title="Desktop Environment Configuration"
+          ></a
+          >Desktop Environment Configuration
+        </h2>
+        <p>
+          Raspberry Pi OS provides desktop environment, and we can also upgrade
+          from lite version to desktop version, but it is recommended that if
+          you need to use desktop environment, download the desktop version
+          directly.
+        </p>
+        <h3 id="Install-Desktop-Environment-from-Lite-Version">
+          <a
+            href="#Install-Desktop-Environment-from-Lite-Version"
+            class="headerlink"
+            title="Install Desktop Environment from Lite Version"
+          ></a
+          ><a
+            target="_blank"
+            rel="noopener"
+            href="https://gist.github.com/kmpm/8e535a12a45a32f6d36cf26c7c6cef51"
+            >Install Desktop Environment from Lite Version</a
+          >
+        </h3>
+        <pre><code>sudo apt install -y lightdm raspberrypi-ui-mods rpi-chromium-mods
 sudo apt install -y arandr # https://www.raspberrypi.org/forums/viewtopic.php?t=265472#p1613632
 sudo apt install --no-install-recommends xinit
 </code></pre>
-            <p>
-              After the installation you can enter the desktop environment using
-              <code>startx</code> from TTY console.
-            </p>
-            <h3 id="Boot-Raspberry-Pi-OS-with-desktop">
-              <a
-                href="#Boot-Raspberry-Pi-OS-with-desktop"
-                class="headerlink"
-                title="Boot Raspberry Pi OS with desktop"
-              ></a
-              >Boot Raspberry Pi OS with desktop
-            </h3>
-            <p>
-              If you boot with a desktop image, you will see a GUI windows that
-              guide you through the initial setup, e.g. configuring the country,
-              language, keyboard, Wi-Fi.
-            </p>
-            <h3 id="Configure-Display-Setting">
-              <a
-                href="#Configure-Display-Setting"
-                class="headerlink"
-                title="Configure Display Setting"
-              ></a
-              ><a
-                target="_blank"
-                rel="noopener"
-                href="https://www.raspberrypi.org/documentation/computers/configuration.html#hdmi-configuration"
-                >Configure Display Setting</a
-              >
-            </h3>
-            <p>
-              Edit <code>/boot/config.txt</code> and ensure following parameters
-              has the following values:
-            </p>
-            <pre><code>hdmi_drive=2 # https://www.raspberrypi.org/documentation/computers/configuration.html#troubleshooting-your-hdmi-2
+        <p>
+          After the installation you can enter the desktop environment using
+          <code>startx</code> from TTY console.
+        </p>
+        <h3 id="Boot-Raspberry-Pi-OS-with-desktop">
+          <a
+            href="#Boot-Raspberry-Pi-OS-with-desktop"
+            class="headerlink"
+            title="Boot Raspberry Pi OS with desktop"
+          ></a
+          >Boot Raspberry Pi OS with desktop
+        </h3>
+        <p>
+          If you boot with a desktop image, you will see a GUI windows that
+          guide you through the initial setup, e.g. configuring the country,
+          language, keyboard, Wi-Fi.
+        </p>
+        <h3 id="Configure-Display-Setting">
+          <a
+            href="#Configure-Display-Setting"
+            class="headerlink"
+            title="Configure Display Setting"
+          ></a
+          ><a
+            target="_blank"
+            rel="noopener"
+            href="https://www.raspberrypi.org/documentation/computers/configuration.html#hdmi-configuration"
+            >Configure Display Setting</a
+          >
+        </h3>
+        <p>
+          Edit <code>/boot/config.txt</code> and ensure following parameters has
+          the following values:
+        </p>
+        <pre><code>hdmi_drive=2 # https://www.raspberrypi.org/documentation/computers/configuration.html#troubleshooting-your-hdmi-2
 hdmi_group=2 # https://www.raspberrypi.org/documentation/computers/config_txt.html#hdmi_group
 hdmi_mode=82 # https://www.raspberrypi.org/documentation/computers/config_txt.html#hdmi_mode
 </code></pre>
-            <h3 id="Rotate-your-Display-in-GUI">
-              <a
-                href="#Rotate-your-Display-in-GUI"
-                class="headerlink"
-                title="Rotate your Display in GUI"
-              ></a
-              ><a
-                target="_blank"
-                rel="noopener"
-                href="https://www.raspberrypi.org/documentation/computers/configuration.html#rotating-your-display"
-                >Rotate your Display in GUI</a
-              >
-            </h3>
-            <p>You can check you available display with:</p>
-            <pre><code>xrandr -q
+        <h3 id="Rotate-your-Display-in-GUI">
+          <a
+            href="#Rotate-your-Display-in-GUI"
+            class="headerlink"
+            title="Rotate your Display in GUI"
+          ></a
+          ><a
+            target="_blank"
+            rel="noopener"
+            href="https://www.raspberrypi.org/documentation/computers/configuration.html#rotating-your-display"
+            >Rotate your Display in GUI</a
+          >
+        </h3>
+        <p>You can check you available display with:</p>
+        <pre><code>xrandr -q
 </code></pre>
-            <p>
-              Then use the name of display you get previously to rotate the
-              screen
-            </p>
-            <pre><code>xrandr --output [name of display e.g. HDMI-1] --rotate left
+        <p>
+          Then use the name of display you get previously to rotate the screen
+        </p>
+        <pre><code>xrandr --output [name of display e.g. HDMI-1] --rotate left
 </code></pre>
-            <h2 id="Reference">
-              <a href="#Reference" class="headerlink" title="Reference"></a
-              >Reference
-            </h2>
-            <ul>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://github.com/RPi-Distro/raspi-config/blob/master/raspi-config"
-                  >raspi-config</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://wiki.samba.org/index.php/Setting_up_Samba_as_a_Standalone_Server"
-                  >Samba Wiki: Setting up Samba as a Standalone Server</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://unix.stackexchange.com/a/112066"
-                  >How can I have a Trash&#x2F;Recycle Bin for my Samba
-                  shares?</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/gg651155(v=ws.11)"
-                  >Command-Line Reference: Net use</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://lonewolfonline.net/enabling-recycle-bin-functionality-samba/"
-                  >Enabling Recycle Bin like functionality in Samba</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://www.samba.org/samba/docs/current/man-html/vfs_recycle.8.html"
-                  >Samba VFS recycle bin</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://www.ralphminderhoud.com/blog/rclone-two-way-dropbox-sync/"
-                  >Rclone: Simple two-way dropbox sync</a
-                >
-              </li>
-            </ul>
+        <h2 id="Reference">
+          <a href="#Reference" class="headerlink" title="Reference"></a
+          >Reference
+        </h2>
+        <ul>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://github.com/RPi-Distro/raspi-config/blob/master/raspi-config"
+              >raspi-config</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://wiki.samba.org/index.php/Setting_up_Samba_as_a_Standalone_Server"
+              >Samba Wiki: Setting up Samba as a Standalone Server</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://unix.stackexchange.com/a/112066"
+              >How can I have a Trash&#x2F;Recycle Bin for my Samba shares?</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/gg651155(v=ws.11)"
+              >Command-Line Reference: Net use</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://lonewolfonline.net/enabling-recycle-bin-functionality-samba/"
+              >Enabling Recycle Bin like functionality in Samba</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://www.samba.org/samba/docs/current/man-html/vfs_recycle.8.html"
+              >Samba VFS recycle bin</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://www.ralphminderhoud.com/blog/rclone-two-way-dropbox-sync/"
+              >Rclone: Simple two-way dropbox sync</a
+            >
+          </li>
+        </ul>
 
-            <hr />
+        <hr />
 
-            <ul class="list-group">
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/Minimalist-Linux-Workspace/">
-                  Minimalist Linux Workspace
-                </a>
-              </li>
+        <ul class="list-group">
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Minimalist-Linux-Workspace/">
+              Minimalist Linux Workspace
+            </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/RaspberryPi-Odoo/">
-                  RaspberryPi Odoo
-                </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/RaspberryPi-Odoo/">
+              RaspberryPi Odoo
+            </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a
-                  target="_parent"
-                  href="/posts/Simple-Bootstrap-Linux-System/"
-                >
-                  Build Simple Bootstrap Linux System Image
-                </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Simple-Bootstrap-Linux-System/">
+              Build Simple Bootstrap Linux System Image
+            </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/minishell/">
-                  La implementación de minishell en Linux
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row justify-content-center">
-          <!-- Sidebar Container -->
-
-          <div class="col-lg-8` col-md-10 sidebar-container">
-            <!-- Friends Blog -->
-          </div>
-        </div>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/minishell/">
+              La implementación de minishell en Linux
+            </a>
+          </li>
+        </ul>
       </div>
     </article>
     <!-- Custom Theme JavaScript -->

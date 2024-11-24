@@ -7,6 +7,7 @@
       "tags": ["algorithms"],
       "isLegacy": true,
       "lang": "en",
+      "tocHtml": "<ol>\n<li><a href=\"/Google-Foobar-Escape-Pods/index.html#Maximum-flow-problem\" target=\"Google-Foobar-Escape-Pods\">Maximum flow problem</a>\n<ol>\n<li><a href=\"/Google-Foobar-Escape-Pods/index.html#Definition\" target=\"Google-Foobar-Escape-Pods\">Definition</a></li>\n<li><a href=\"/Google-Foobar-Escape-Pods/index.html#Transformation\" target=\"Google-Foobar-Escape-Pods\">Transformation</a></li>\n<li><a href=\"/Google-Foobar-Escape-Pods/index.html#Residual-Network\" target=\"Google-Foobar-Escape-Pods\">Residual Network</a>\n<ol>\n<li><a href=\"/Google-Foobar-Escape-Pods/index.html#Augmenting-Paths\" target=\"Google-Foobar-Escape-Pods\">Augmenting Paths</a></li>\n</ol>\n</li>\n<li><a href=\"/Google-Foobar-Escape-Pods/index.html#The-Ford-Fulkerson-Method\" target=\"Google-Foobar-Escape-Pods\">The Ford Fulkerson Method</a></li>\n<li><a href=\"/Google-Foobar-Escape-Pods/index.html#Reference\" target=\"Google-Foobar-Escape-Pods\">Reference</a></li>\n</ol>\n</li>\n</ol>",
       "path": "/Google-Foobar-Escape-Pods/index.html"
     },
     "lang": "en",

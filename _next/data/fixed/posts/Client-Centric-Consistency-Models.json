@@ -13,6 +13,7 @@
       ],
       "isLegacy": true,
       "lang": "en",
+      "tocHtml": "<ol>\n<li><a href=\"/Client-Centric-Consistency-Models/index.html#Eventual-consistency\" target=\"Client-Centric-Consistency-Models\">Eventual consistency</a></li>\n<li><a href=\"/Client-Centric-Consistency-Models/index.html#Client-centric-consistency-models\" target=\"Client-Centric-Consistency-Models\">Client-centric consistency models</a>\n<ol>\n<li><a href=\"/Client-Centric-Consistency-Models/index.html#Notation\" target=\"Client-Centric-Consistency-Models\">Notation</a></li>\n<li><a href=\"/Client-Centric-Consistency-Models/index.html#Monotonic-Reads\" target=\"Client-Centric-Consistency-Models\">Monotonic Reads</a></li>\n<li><a href=\"/Client-Centric-Consistency-Models/index.html#Monotonic-Writes\" target=\"Client-Centric-Consistency-Models\">Monotonic Writes</a></li>\n<li><a href=\"/Client-Centric-Consistency-Models/index.html#Read-Your-Writes\" target=\"Client-Centric-Consistency-Models\">Read Your Writes</a></li>\n<li><a href=\"/Client-Centric-Consistency-Models/index.html#Writes-Follow-Reads\" target=\"Client-Centric-Consistency-Models\">Writes Follow Reads</a></li>\n<li><a href=\"/Client-Centric-Consistency-Models/index.html#Reference\" target=\"Client-Centric-Consistency-Models\">Reference</a></li>\n</ol>\n</li>\n</ol>",
       "path": "/Client-Centric-Consistency-Models/index.html"
     },
     "lang": "en",

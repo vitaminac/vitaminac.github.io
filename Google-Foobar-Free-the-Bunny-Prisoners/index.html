@@ -144,262 +144,219 @@
     />
 
     <!-- Post Content -->
-    <article>
-      <div class="container">
-        <div class="row">
-          <!-- Post Container -->
-          <div class="order-lg-2 col-lg-3 col-12 toc-col" style="z-index: 1">
-            <ol class="toc">
-              <li class="toc-item toc-level-1">
-                <a class="toc-link" href="#Free-the-Bunny-Prisoners"
-                  ><span class="toc-text">Free the Bunny Prisoners</span></a
-                >
-                <ol class="toc-child">
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Analysys"
-                      ><span class="toc-text">Analysys</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Reference"
-                      ><span class="toc-text">Reference</span></a
-                    >
-                  </li>
-                </ol>
-              </li>
-            </ol>
-          </div>
+    <article class="container" style="width: 100%; max-width: 100%">
+      <!-- Post Container -->
+      <div class="post-container">
+        <h1 id="Free-the-Bunny-Prisoners">
+          <a
+            href="#Free-the-Bunny-Prisoners"
+            class="headerlink"
+            title="Free the Bunny Prisoners"
+          ></a
+          >Free the Bunny Prisoners
+        </h1>
+        <h2 id="Analysys">
+          <a href="#Analysys" class="headerlink" title="Analysys"></a>Analysys
+        </h2>
+        <p>The problem can be rearrange as follow:</p>
+        <p>
+          If you have N bunnies, and M locks, distribute M distinct keys among
+          the bunnies so that it will always require num_required bunnies to
+          open the locks, and no bunny should have the same key twice.
+        </p>
+        <p>
+          Let us now consider this simple situation, let us say we have chosen
+          $\text{num_required} - 1$ bunnies at random, and we were to choose 1
+          more bunny to get the complete set of keys to open the prison door. We
+          know that these $\text{num_required} - 1$ bunnies cannot open the door
+          by themselves and hence the remaining $\text{num_bunnies} -
+          \text{num_required} + 1$ bunnies must have a key that these
+          $\text{num_required} - 1$ bunnies don’t. We have total
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://en.wikipedia.org/wiki/Binomial_coefficient"
+            >$\binom{\text{num_buns}}{\text{num_required} - 1}$</a
+          >
+          combination of each $\text{num_required}- 1$ bunnies pair, so we have
+          also
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://en.wikipedia.org/wiki/Binomial_coefficient"
+            >$\binom{\text{num_buns}}{\text{num_required} - 1}$</a
+          >
+          distinct keys. And there should be $\text{num_buns} -
+          \text{num_required} + 1$ copies of each distinct key among the
+          bunnies.
+        </p>
+        <p>
+          Note that $\binom{\text{num_buns}}{\text{num_required} - 1} &#x3D;
+          \binom{\text{num_buns}}{\text{num_buns} - \text{num_required} + 1}$
+        </p>
+        <p>
+          Thus, for the example of N &#x3D; 5 and M &#x3D; 3, there are
+          $\binom{5}{3 - 1}$ distinct keys (10 keys).
+        </p>
+        <p>
+          We must distribute $5 - 3 + 1$ copies of all $10$ keys amongst the
+          bunnies in such a way that any 3 bunnies we pair together have,
+          amongst them, at least one copy of every key.
+        </p>
+        <ol>
+          <li>
+            we count number of distinct keys we have with formula
+            $\binom{\text{num_buns}}{\text{num_required} - 1}$.
+          </li>
+          <li>
+            Find the number of copies per key $\text{num_buns} -
+            \text{num_required} + 1$.
+          </li>
+          <li>
+            Yield combinations of keyholders one at a time, and we give key to
+            each keyholder.
+          </li>
+        </ol>
+        <p>
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://github.com/vitaminac/code/blob/master/competition/foobar/Free_The_Bunny_Prisoners.py"
+            >Free The Bunny Prisoners</a
+          >
+        </p>
+        <h2 id="Reference">
+          <a href="#Reference" class="headerlink" title="Reference"></a
+          >Reference
+        </h2>
+        <ul>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://en.wikipedia.org/wiki/Combination"
+              >Combination</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://en.wikipedia.org/wiki/Pigeonhole_principle"
+              >Pigeonhole principle</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://surajshetiya.github.io/Google-foobar/#round-4"
+              >Google Foobar Round 4</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://github.com/FoxHub/Google-FooBar/blob/master/Level-4/foobar_4-1_free_the_bunny_prisoners.py"
+              >foobar_4-1_free_the_bunny_prisoners.py</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://zhuanlan.zhihu.com/p/75478415"
+              >鸽笼原理</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://github.com/arinkverma/google-foobar/blob/master/4.1_bunny.py"
+              >4.1_bunny.py</a
+            >
+          </li>
+        </ul>
 
-          <div class="order-lg-1 col-lg-9 col-12 post-container">
-            <h1 id="Free-the-Bunny-Prisoners">
-              <a
-                href="#Free-the-Bunny-Prisoners"
-                class="headerlink"
-                title="Free the Bunny Prisoners"
-              ></a
-              >Free the Bunny Prisoners
-            </h1>
-            <h2 id="Analysys">
-              <a href="#Analysys" class="headerlink" title="Analysys"></a
-              >Analysys
-            </h2>
-            <p>The problem can be rearrange as follow:</p>
-            <p>
-              If you have N bunnies, and M locks, distribute M distinct keys
-              among the bunnies so that it will always require num_required
-              bunnies to open the locks, and no bunny should have the same key
-              twice.
-            </p>
-            <p>
-              Let us now consider this simple situation, let us say we have
-              chosen $\text{num_required} - 1$ bunnies at random, and we were to
-              choose 1 more bunny to get the complete set of keys to open the
-              prison door. We know that these $\text{num_required} - 1$ bunnies
-              cannot open the door by themselves and hence the remaining
-              $\text{num_bunnies} - \text{num_required} + 1$ bunnies must have a
-              key that these $\text{num_required} - 1$ bunnies don’t. We have
-              total
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://en.wikipedia.org/wiki/Binomial_coefficient"
-                >$\binom{\text{num_buns}}{\text{num_required} - 1}$</a
-              >
-              combination of each $\text{num_required}- 1$ bunnies pair, so we
-              have also
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://en.wikipedia.org/wiki/Binomial_coefficient"
-                >$\binom{\text{num_buns}}{\text{num_required} - 1}$</a
-              >
-              distinct keys. And there should be $\text{num_buns} -
-              \text{num_required} + 1$ copies of each distinct key among the
-              bunnies.
-            </p>
-            <p>
-              Note that $\binom{\text{num_buns}}{\text{num_required} - 1} &#x3D;
-              \binom{\text{num_buns}}{\text{num_buns} - \text{num_required} +
-              1}$
-            </p>
-            <p>
-              Thus, for the example of N &#x3D; 5 and M &#x3D; 3, there are
-              $\binom{5}{3 - 1}$ distinct keys (10 keys).
-            </p>
-            <p>
-              We must distribute $5 - 3 + 1$ copies of all $10$ keys amongst the
-              bunnies in such a way that any 3 bunnies we pair together have,
-              amongst them, at least one copy of every key.
-            </p>
-            <ol>
-              <li>
-                we count number of distinct keys we have with formula
-                $\binom{\text{num_buns}}{\text{num_required} - 1}$.
-              </li>
-              <li>
-                Find the number of copies per key $\text{num_buns} -
-                \text{num_required} + 1$.
-              </li>
-              <li>
-                Yield combinations of keyholders one at a time, and we give key
-                to each keyholder.
-              </li>
-            </ol>
-            <p>
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://github.com/vitaminac/code/blob/master/competition/foobar/Free_The_Bunny_Prisoners.py"
-                >Free The Bunny Prisoners</a
-              >
-            </p>
-            <h2 id="Reference">
-              <a href="#Reference" class="headerlink" title="Reference"></a
-              >Reference
-            </h2>
-            <ul>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://en.wikipedia.org/wiki/Combination"
-                  >Combination</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://en.wikipedia.org/wiki/Pigeonhole_principle"
-                  >Pigeonhole principle</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://surajshetiya.github.io/Google-foobar/#round-4"
-                  >Google Foobar Round 4</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://github.com/FoxHub/Google-FooBar/blob/master/Level-4/foobar_4-1_free_the_bunny_prisoners.py"
-                  >foobar_4-1_free_the_bunny_prisoners.py</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://zhuanlan.zhihu.com/p/75478415"
-                  >鸽笼原理</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://github.com/arinkverma/google-foobar/blob/master/4.1_bunny.py"
-                  >4.1_bunny.py</a
-                >
-              </li>
-            </ul>
+        <hr />
 
-            <hr />
+        <ul class="list-group">
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Google-Foobar-Dodge-The-Lasers/">
+              Google Foobar Dodge The Lasers
+            </a>
+          </li>
 
-            <ul class="list-group">
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a
-                  target="_parent"
-                  href="/posts/Google-Foobar-Dodge-The-Lasers/"
-                >
-                  Google Foobar Dodge The Lasers
-                </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Google-Foobar-Escape-Pods/">
+              Google Foobar Escape Pods
+            </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/Google-Foobar-Escape-Pods/">
-                  Google Foobar Escape Pods
-                </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a
+              target="_parent"
+              href="/posts/Google-Kickstart-2019-Round-F-Flattening/"
+            >
+              Google Kickstart 2019 Round F Flattening
+            </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a
-                  target="_parent"
-                  href="/posts/Google-Kickstart-2019-Round-F-Flattening/"
-                >
-                  Google Kickstart 2019 Round F Flattening
-                </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a
+              target="_parent"
+              href="/posts/Google-Kickstart-2019-Round-G-Book-Reading/"
+            >
+              Google Kickstart 2019 Round G Book Reading
+            </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a
-                  target="_parent"
-                  href="/posts/Google-Kickstart-2019-Round-G-Book-Reading/"
-                >
-                  Google Kickstart 2019 Round G Book Reading
-                </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a
+              target="_parent"
+              href="/posts/Google-Kickstart-2019-Round-G-Shifts/"
+            >
+              Google Kickstart 2019 Round G Shifts
+            </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a
-                  target="_parent"
-                  href="/posts/Google-Kickstart-2019-Round-G-Shifts/"
-                >
-                  Google Kickstart 2019 Round G Shifts
-                </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a
+              target="_parent"
+              href="/posts/Google-Kickstart-2019-Round-G-The-Equation/"
+            >
+              Google Kickstart 2019 Round G The Equation
+            </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a
-                  target="_parent"
-                  href="/posts/Google-Kickstart-2019-Round-G-The-Equation/"
-                >
-                  Google Kickstart 2019 Round G The Equation
-                </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Recurrence-Equation/">
+              Recurrence Equation
+            </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/Recurrence-Equation/">
-                  Recurrence Equation
-                </a>
-              </li>
-
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/Tree-Diameter/">
-                  Tree Diameter
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row justify-content-center">
-          <!-- Sidebar Container -->
-
-          <div class="col-lg-8` col-md-10 sidebar-container">
-            <!-- Friends Blog -->
-          </div>
-        </div>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Tree-Diameter/"> Tree Diameter </a>
+          </li>
+        </ul>
       </div>
     </article>
     <!-- Custom Theme JavaScript -->

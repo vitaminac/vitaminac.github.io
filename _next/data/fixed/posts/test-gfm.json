@@ -7,8 +7,8 @@
       "tags": [],
       "isLegacy": false,
       "lang": "en",
-      "articleHtml": "<ul class=\"contains-task-list\">\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled=\"\"/> <!-- -->foo</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled=\"\" checked=\"\"/> <!-- -->bar</li>\n</ul>",
-      "tocHtml": "<ul>\n<li>[ ] foo</li>\n<li>[x] bar</li>\n</ul>\n"
+      "tocHtml": "<ul>\n<li>[ ] foo</li>\n<li>[x] bar</li>\n</ul>",
+      "articleHtml": "<ul class=\"contains-task-list\">\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled=\"\"/> <!-- -->foo</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled=\"\" checked=\"\"/> <!-- -->bar</li>\n</ul>"
     },
     "lang": "en",
     "_nextI18Next": {

@@ -7,6 +7,7 @@
       "tags": ["dll injection", "dll hijacking", "zlib", "外挂"],
       "isLegacy": true,
       "lang": "en",
+      "tocHtml": "<ol>\n<li><a href=\"/dll-hijacking-via-zlib-dll-proxy/index.html#Reference\" target=\"dll-hijacking-via-zlib-dll-proxy\">Reference</a></li>\n</ol>",
       "path": "/dll-hijacking-via-zlib-dll-proxy/index.html"
     },
     "lang": "en",

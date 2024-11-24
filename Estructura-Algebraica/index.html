@@ -141,910 +141,621 @@
     />
 
     <!-- Post Content -->
-    <article>
-      <div class="container">
-        <div class="row">
-          <!-- Post Container -->
-          <div class="order-lg-2 col-lg-3 col-12 toc-col" style="z-index: 1">
-            <ol class="toc">
-              <li class="toc-item toc-level-1">
-                <a class="toc-link" href="#Intruduccion"
-                  ><span class="toc-text">Intruducción</span></a
-                >
-              </li>
-              <li class="toc-item toc-level-1">
-                <a class="toc-link" href="#Ley-de-composicion"
-                  ><span class="toc-text">Ley de composicion</span></a
-                >
-                <ol class="toc-child">
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Ley-de-composicion-interna"
-                      ><span class="toc-text"
-                        >Ley de composición interna</span
-                      ></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Ley-de-composicion-externa"
-                      ><span class="toc-text"
-                        >Ley de composición externa</span
-                      ></a
-                    >
-                    <ol class="toc-child">
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#Ley-de-composicion-externa-por-la-derecha"
-                          ><span class="toc-text"
-                            >Ley de composición externa por la derecha</span
-                          ></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#Ley-de-composicion-externa-por-la-izquierda"
-                          ><span class="toc-text"
-                            >Ley de composición externa por la izquierda</span
-                          ></a
-                        >
-                      </li>
-                    </ol>
-                  </li>
-                </ol>
-              </li>
-              <li class="toc-item toc-level-1">
-                <a class="toc-link" href="#Principales-estructuras-algebraicas"
-                  ><span class="toc-text"
-                    >Principales estructuras algebraicas</span
-                  ></a
-                >
-                <ol class="toc-child">
-                  <li class="toc-item toc-level-2">
-                    <a
-                      class="toc-link"
-                      href="#Con-una-ley-de-composicion-interna"
-                      ><span class="toc-text"
-                        >Con una ley de composición interna</span
-                      ></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a
-                      class="toc-link"
-                      href="#Con-dos-leyes-de-composicion-interna"
-                      ><span class="toc-text"
-                        >Con dos leyes de composición interna</span
-                      ></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a
-                      class="toc-link"
-                      href="#Con-leyes-de-composicion-interna-y-externa"
-                      ><span class="toc-text"
-                        >Con leyes de composición interna y externa</span
-                      ></a
-                    >
-                  </li>
-                </ol>
-              </li>
-              <li class="toc-item toc-level-1">
-                <a class="toc-link" href="#Grupo-Group"
-                  ><span class="toc-text">Grupo - Group</span></a
-                >
-                <ol class="toc-child">
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Grupo-abeliano"
-                      ><span class="toc-text">Grupo abeliano</span></a
-                    >
-                  </li>
-                </ol>
-              </li>
-              <li class="toc-item toc-level-1">
-                <a class="toc-link" href="#Anillo-Ring"
-                  ><span class="toc-text">Anillo - Ring</span></a
-                >
-              </li>
-              <li class="toc-item toc-level-1">
-                <a class="toc-link" href="#Cuerpo-Field"
-                  ><span class="toc-text">Cuerpo - Field</span></a
-                >
-              </li>
-              <li class="toc-item toc-level-1">
-                <a class="toc-link" href="#Espacio-vectorial-Vector-space"
-                  ><span class="toc-text"
-                    >Espacio vectorial - Vector space</span
-                  ></a
-                >
-                <ol class="toc-child">
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Suma-entre-vectores"
-                      ><span class="toc-text">Suma entre vectores</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Producto-por-un-escalar"
-                      ><span class="toc-text">Producto por un escalar</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Propiedad"
-                      ><span class="toc-text">Propiedad</span></a
-                    >
-                    <ol class="toc-child">
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Unicidad-del-vector-neutro"
-                          ><span class="toc-text"
-                            >Unicidad del vector neutro</span
-                          ></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Unicidad-del-vector-opuesto"
-                          ><span class="toc-text"
-                            >Unicidad del vector opuesto</span
-                          ></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#Unicidad-del-elemento-unitario-en-el-cuerpo-K"
-                          ><span class="toc-text"
-                            >Unicidad del elemento unitario en el cuerpo
-                            $K$</span
-                          ></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#Unicidad-del-elemento-inverso-en-el-cuerpo-K"
-                          ><span class="toc-text"
-                            >Unicidad del elemento inverso en el cuerpo
-                            $K$</span
-                          ></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#Producto-de-un-escalar-por-el-vector-cero"
-                          ><span class="toc-text"
-                            >Producto de un escalar por el vector cero</span
-                          ></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#Producto-del-escalar-cero-por-un-vector-es-vector-cero"
-                          ><span class="toc-text"
-                            >Producto del escalar cero por un vector es vector
-                            cero</span
-                          ></a
-                        >
-                      </li>
-                    </ol>
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Subespacio-vectorial"
-                      ><span class="toc-text">Subespacio vectorial</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Combinacion-lineal"
-                      ><span class="toc-text">Combinación lineal</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Independencia-lineal"
-                      ><span class="toc-text">Independencia lineal</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Base-de-un-espacio-vectorial"
-                      ><span class="toc-text"
-                        >Base de un espacio vectorial</span
-                      ></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Dimesion"
-                      ><span class="toc-text">Dimesión</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a
-                      class="toc-link"
-                      href="#Interseccion-de-subespacios-vectoriales"
-                      ><span class="toc-text"
-                        >Intersección de subespacios vectoriales</span
-                      ></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Suma-de-subespacios-vectoriales"
-                      ><span class="toc-text"
-                        >Suma de subespacios vectoriales</span
-                      ></a
-                    >
-                    <ol class="toc-child">
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#Suma-directa-de-subespacios-vectoriales"
-                          ><span class="toc-text"
-                            >Suma directa de subespacios vectoriales</span
-                          ></a
-                        >
-                      </li>
-                    </ol>
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Aplicaciones-lineales"
-                      ><span class="toc-text">Aplicaciones lineales</span></a
-                    >
-                  </li>
-                </ol>
-              </li>
-              <li class="toc-item toc-level-1">
-                <a class="toc-link" href="#Modulo-Module"
-                  ><span class="toc-text">Módulo - Module</span></a
-                >
-              </li>
-            </ol>
-          </div>
+    <article class="container" style="width: 100%; max-width: 100%">
+      <!-- Post Container -->
+      <div class="post-container">
+        <h1 id="Intruduccion">
+          <a href="#Intruduccion" class="headerlink" title="Intruducción"></a
+          >Intruducción
+        </h1>
+        <p>
+          Una estructura algebraica es una n-tuple $(a_1,a_2,a_3,…,a_n)$ donde
+          $a_1$ es un conjunto no vacío, y $(a_2,…,a_n)$ un conjunto de
+          operaciones aplicables a los elementos de dicho conjunto.
+        </p>
+        <p>
+          Las estructras algebraicas se clasifican según las propiedades que
+          cumplen las operaciones sobre el conjunto dado.
+        </p>
+        <h1 id="Ley-de-composicion">
+          <a
+            href="#Ley-de-composicion"
+            class="headerlink"
+            title="Ley de composicion"
+          ></a
+          >Ley de composicion
+        </h1>
+        <p>
+          La ley de composición es un tipo de
+          <strong>operación binaria</strong> que toma dos elementos de dos
+          conjuntos dados y los asigna a otro elemento perteneciente a uno de
+          los dos conjuntos.
+        </p>
+        <h2 id="Ley-de-composicion-interna">
+          <a
+            href="#Ley-de-composicion-interna"
+            class="headerlink"
+            title="Ley de composición interna"
+          ></a
+          >Ley de composición interna
+        </h2>
+        <p>
+          Dado un conjunto $A$ y una operación $\odot$, que representaremos como
+          el par $(A, \odot)$, se dice que $\odot$ es una ley de
+          <strong>composición interna</strong> en $A$ cuando
+        </p>
+        <p>
+          $$<br />\forall a,b \in A \quad \exists! c \in A : c &#x3D; a \odot
+          b<br />$$
+        </p>
+        <h2 id="Ley-de-composicion-externa">
+          <a
+            href="#Ley-de-composicion-externa"
+            class="headerlink"
+            title="Ley de composición externa"
+          ></a
+          >Ley de composición externa
+        </h2>
+        <p>
+          Si los dos elementos operados no pertenecen al mismo conjunto la ley
+          de composición es externa.
+        </p>
+        <h3 id="Ley-de-composicion-externa-por-la-derecha">
+          <a
+            href="#Ley-de-composicion-externa-por-la-derecha"
+            class="headerlink"
+            title="Ley de composición externa por la derecha"
+          ></a
+          >Ley de composición externa por la derecha
+        </h3>
+        <p>
+          $$<br />\forall a \in A, \forall b \in B \quad \exists! c \in A : c
+          &#x3D; a \odot b<br />$$
+        </p>
+        <h3 id="Ley-de-composicion-externa-por-la-izquierda">
+          <a
+            href="#Ley-de-composicion-externa-por-la-izquierda"
+            class="headerlink"
+            title="Ley de composición externa por la izquierda"
+          ></a
+          >Ley de composición externa por la izquierda
+        </h3>
+        <p>
+          $$<br />\forall a \in A, \forall b \in B \quad \exists! c \in B : c
+          &#x3D; a \odot b<br />$$
+        </p>
+        <h1 id="Principales-estructuras-algebraicas">
+          <a
+            href="#Principales-estructuras-algebraicas"
+            class="headerlink"
+            title="Principales estructuras algebraicas"
+          ></a
+          >Principales estructuras algebraicas
+        </h1>
+        <h2 id="Con-una-ley-de-composicion-interna">
+          <a
+            href="#Con-una-ley-de-composicion-interna"
+            class="headerlink"
+            title="Con una ley de composición interna"
+          ></a
+          >Con una ley de composición interna
+        </h2>
+        <ul>
+          <li>Magma</li>
+          <li>Semigrupo</li>
+          <li>Monoide</li>
+          <li><strong>Grupo</strong></li>
+          <li>Bucle</li>
+          <li>Cuasigrupo</li>
+        </ul>
+        <h2 id="Con-dos-leyes-de-composicion-interna">
+          <a
+            href="#Con-dos-leyes-de-composicion-interna"
+            class="headerlink"
+            title="Con dos leyes de composición interna"
+          ></a
+          >Con dos leyes de composición interna
+        </h2>
+        <ul>
+          <li>Semianillo</li>
+          <li><strong>Anillo</strong></li>
+          <li>Pseudoanillo</li>
+          <li>Dominio de integridad</li>
+          <li><strong>Cuerpo</strong></li>
+          <li>Retículo (orden)</li>
+          <li>Álgebra booleana</li>
+        </ul>
+        <h2 id="Con-leyes-de-composicion-interna-y-externa">
+          <a
+            href="#Con-leyes-de-composicion-interna-y-externa"
+            class="headerlink"
+            title="Con leyes de composición interna y externa"
+          ></a
+          >Con leyes de composición interna y externa
+        </h2>
+        <ul>
+          <li><strong>Módulo</strong></li>
+          <li><strong>Espacio vectorial</strong></li>
+          <li>Álgebra sobre un cuerpo</li>
+        </ul>
+        <h1 id="Grupo-Group">
+          <a href="#Grupo-Group" class="headerlink" title="Grupo - Group"></a
+          >Grupo - Group
+        </h1>
+        <p>
+          Un grupo es una estructura algebraica formada por un conjunto no vacío
+          $G$ dotado de una operación interna $\odot$ que combina cualquier par
+          de elementos para componer un tercero dentro del mismo conjunto y que
+          satisface las propiedades <strong>asociativas</strong>, existencia de
+          <strong>elemento neutro</strong> y <strong>simétrico</strong>.
+        </p>
+        <ol>
+          <li>
+            $G$ es cerrado bajo la operación. $\forall a,b \in G, a \odot b \in
+            G$. (<strong>Magma</strong>)
+          </li>
+          <li>
+            Es asociativa. $\forall a,b,c \in G, (a \odot b) \odot c &#x3D; a
+            \odot (b \odot c)$. (<strong>Semigrupo</strong>)
+          </li>
+          <li>
+            Tiene a $n$ como elemento neutro. $\forall a \in G, a \odot n &#x3D;
+            n \odot a &#x3D; a$. (<strong>Monoide</strong>)
+          </li>
+          <li>
+            Existe elemento simétrico. $\forall a \in G, \exists b \in G, a
+            \odot b &#x3D; b \odot a &#x3D; n$. (<strong>Grupo</strong>)
+          </li>
+        </ol>
+        <h2 id="Grupo-abeliano">
+          <a
+            href="#Grupo-abeliano"
+            class="headerlink"
+            title="Grupo abeliano"
+          ></a
+          >Grupo abeliano
+        </h2>
+        <p>
+          Si la operación también tiene la propiedad conmutativa $\forall a,b
+          \in A, a \odot b &#x3D; b \odot a$ se dice que es un
+          <strong>grupo abeliano</strong>.
+        </p>
+        <p>
+          Hay dos notaciones principales para los grupos abelianos: aditiva y
+          multiplicativa
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th>Notación</th>
+              <th>Operación</th>
+              <th>Elemento neutro</th>
+              <th>Potencias</th>
+              <th>Elementos inversos</th>
+              <th>Suma directa &#x2F; Producto directo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Adición</td>
+              <td>$a + b$</td>
+              <td><strong>cero</strong> 0</td>
+              <td>$na$</td>
+              <td>$-a$</td>
+              <td>a $\oplus$ b</td>
+            </tr>
+            <tr>
+              <td>Multiplicación</td>
+              <td>$a * b$</td>
+              <td><strong>identidad</strong> 1</td>
+              <td>$a^n$</td>
+              <td>$a^{-1}$</td>
+              <td>a $\times$ b</td>
+            </tr>
+          </tbody>
+        </table>
+        <h1 id="Anillo-Ring">
+          <a href="#Anillo-Ring" class="headerlink" title="Anillo - Ring"></a
+          >Anillo - Ring
+        </h1>
+        <p>
+          Un <strong>anillo</strong> es un sistema algebraico dotado con dos
+          operaciones internas llamadas <strong>suma</strong> y
+          <strong>producto</strong>.
+        </p>
+        <p>
+          Sea $A$ un conjunto no vacío, y sean $+$ y $*$ dos operaciones
+          binarias en $A$. Se dice que el conjunto $(A, +, *)$ es un anillo si
+          se cumplen cinco propiedades de grupo abeliano para la suma, y tres
+          condiciones adicionales acerca de la multiplicación
+        </p>
+        <ol>
+          <li>
+            $A$ es cerrado bajo la multiplicación. $\forall a,b \in A, a * b \in
+            A$.
+          </li>
+          <li>
+            La multiplicación asociativa. $\forall a,b,c \in A, (a * b) * c
+            &#x3D; a * (b * c)$.
+          </li>
+          <li>
+            La multiplicación es distributiva respecto de la suma. $\forall
+            a,b,c \in A \quad a * (b + c) &#x3D; (a * b) + (a * c) \land (a + b)
+            * c &#x3D; (a * c) + (b * c)$
+          </li>
+        </ol>
+        <p>
+          Si la multiplicación es conmutativa $\forall a,b \in A, a * b &#x3D; b
+          * a$. se llama un <strong>anillo conmutativo</strong>.
+        </p>
+        <p>
+          Si un anillo cuenta con <strong>identidad</strong> se llama
+          <strong>anillo unitario</strong>.
+        </p>
+        <h1 id="Cuerpo-Field">
+          <a href="#Cuerpo-Field" class="headerlink" title="Cuerpo - Field"></a
+          >Cuerpo - Field
+        </h1>
+        <p>
+          Un <strong>cuerpo</strong> es un
+          <strong>anillo de división conmutativo</strong>, un
+          <strong>anillo conmutativo y unitario</strong> en el que todo elemento
+          distinto de <strong>cero</strong> es
+          <strong>invertible respecto de la multiplicación</strong>, es decir,
+          que permiten efectuar las operaciones de
+          <strong>sustracción</strong> y <strong>división</strong>. Los cuerpos
+          eran llamados <strong>dominios racionales</strong>.
+        </p>
+        <ul>
+          <li>$K$ es cerrado para la adición y la multiplicación</li>
+          <li>
+            <strong>Asociatividad</strong> de la adición y la multiplicación
+          </li>
+          <li>
+            <strong>Conmutatividad</strong> de la adición y la multiplicación
+          </li>
+          <li>
+            Existencia de un <strong>elemento neutro</strong> para la adición y
+            la multiplicación
+          </li>
+          <li>
+            Existencia de <strong>inverso aditivo</strong>, de
+            <strong>inverso multiplicativo</strong>
+          </li>
+          <li>
+            <strong>Distributividad</strong> de la multiplicación respecto de la
+            adición
+          </li>
+        </ul>
+        <h1 id="Espacio-vectorial-Vector-space">
+          <a
+            href="#Espacio-vectorial-Vector-space"
+            class="headerlink"
+            title="Espacio vectorial - Vector space"
+          ></a
+          >Espacio vectorial - Vector space
+        </h1>
+        <p>
+          Un <strong>espacio vectorial</strong> es una estructura algebraica
+          creada a partir de un conjunto no vacío, una operación interna llamada
+          <strong>suma</strong> y una operación externa llamanda
+          <strong>producto por un escalar</strong>.
+        </p>
+        <p>
+          A los elementos de un espacio vectorial se les llama
+          <strong>vectores</strong> y a los elementos del cuerpo
+          <strong>escalares</strong>.
+        </p>
+        <h2 id="Suma-entre-vectores">
+          <a
+            href="#Suma-entre-vectores"
+            class="headerlink"
+            title="Suma entre vectores"
+          ></a
+          >Suma entre vectores
+        </h2>
+        <p>$$<br />V \times V \mapsto V<br />$$</p>
+        <ol>
+          <li><strong>Propiedad conmutativa</strong>.</li>
+          <li><strong>Propiedad asociativa</strong>.</li>
+          <li><strong>Elemento neutro</strong>.</li>
+          <li><strong>Elemento opuesto</strong>.</li>
+        </ol>
+        <h2 id="Producto-por-un-escalar">
+          <a
+            href="#Producto-por-un-escalar"
+            class="headerlink"
+            title="Producto por un escalar"
+          ></a
+          >Producto por un escalar
+        </h2>
+        <p>$$<br />K \times V \mapsto V<br />$$</p>
+        <ol start="5">
+          <li>
+            <strong>Propiedad asociativa</strong>. $\forall a,b \in K, \forall
+            \textbf{u} \in V : (a * b) * \textbf{u} &#x3D; a * (b * \textbf{u})$
+          </li>
+          <li>
+            <strong>Elemento neutro multiplicactiva</strong> $n$. $\exists n \in
+            K, \forall \textbf{u} \in V: n * \textbf{u} &#x3D; \textbf{u}$
+          </li>
+          <li>
+            <strong
+              >Propiedad distributiva del producto respecto la suma de
+              vectores</strong
+            >. $\forall k \in K, \forall \textbf{u},\textbf{v} \in V : k *
+            (\textbf{u} + \textbf{v}) &#x3D; k * \textbf{u} + k * \textbf{v}$
+          </li>
+          <li>
+            <strong
+              >Propiedad distributiva del producto respecto la suma de
+              escalares</strong
+            >. $\forall a,b \in K, \forall \textbf{u} \in V : (a + b) *
+            \textbf{u} &#x3D; a * \textbf{u} + b * \textbf{u}$
+          </li>
+        </ol>
+        <h2 id="Propiedad">
+          <a href="#Propiedad" class="headerlink" title="Propiedad"></a
+          >Propiedad
+        </h2>
+        <h3 id="Unicidad-del-vector-neutro">
+          <a
+            href="#Unicidad-del-vector-neutro"
+            class="headerlink"
+            title="Unicidad del vector neutro"
+          ></a
+          >Unicidad del vector neutro
+        </h3>
+        <p>
+          $$<br />
+          \mathbf{u} + \mathbf{0_1} &#x3D; \mathbf{u} + \mathbf{0_2}<br />
+          \Rightarrow \mathbf{0_1} &#x3D; \mathbf{0_2}<br />
+          \Rightarrow \exists ! ; \mathbf{0} \in V<br />$$
+        </p>
+        <h3 id="Unicidad-del-vector-opuesto">
+          <a
+            href="#Unicidad-del-vector-opuesto"
+            class="headerlink"
+            title="Unicidad del vector opuesto"
+          ></a
+          >Unicidad del vector opuesto
+        </h3>
+        <p>
+          $$<br />
+          \mathbf{u} - \mathbf{u_1} &#x3D; \mathbf{u} - \mathbf{u_2}<br />
+          \Rightarrow - \mathbf{u_1} &#x3D; - \mathbf{u_2}<br />
+          \Rightarrow \exists ! - \mathbf{u} \in V<br />$$
+        </p>
+        <h3 id="Unicidad-del-elemento-unitario-en-el-cuerpo-K">
+          <a
+            href="#Unicidad-del-elemento-unitario-en-el-cuerpo-K"
+            class="headerlink"
+            title="Unicidad del elemento unitario en el cuerpo $K$"
+          ></a
+          >Unicidad del elemento unitario en el cuerpo $K$
+        </h3>
+        <p>
+          $$<br />
+          \mathit{a} * \mathit{1_1} &#x3D; \mathit{a} * \mathit{1_2}<br />
+          \Rightarrow \mathit{1_1} &#x3D; \mathit{1_2}<br />
+          \Rightarrow \exists ! ; \mathit{1} \in K<br />$$
+        </p>
+        <h3 id="Unicidad-del-elemento-inverso-en-el-cuerpo-K">
+          <a
+            href="#Unicidad-del-elemento-inverso-en-el-cuerpo-K"
+            class="headerlink"
+            title="Unicidad del elemento inverso en el cuerpo $K$"
+          ></a
+          >Unicidad del elemento inverso en el cuerpo $K$
+        </h3>
+        <p>
+          $$<br />
+          \mathit{a} * \mathit{a_1^{-1}} &#x3D; \mathit{a} *
+          \mathit{a_2^{-1}}<br />
+          \Rightarrow \mathit{a_1^{-1}} &#x3D; \mathit{a_2^{-1}}<br />
+          \Rightarrow \exists ! \mathit{a^{-1}} \in K<br />$$
+        </p>
+        <h3 id="Producto-de-un-escalar-por-el-vector-cero">
+          <a
+            href="#Producto-de-un-escalar-por-el-vector-cero"
+            class="headerlink"
+            title="Producto de un escalar por el vector cero"
+          ></a
+          >Producto de un escalar por el vector cero
+        </h3>
+        <p>
+          $$<br />
+          \mathit{a} * \mathbf{u} &#x3D;<br />
+          \mathit{a} * (\mathbf{u} + \mathbf{0}) &#x3D;<br />
+          \mathit{a} * \mathbf{u} + \mathit{a} * \mathbf{0}<br />
+          \Rightarrow<br />
+          \mathit{a} * \mathbf{0} &#x3D; \mathbf{0}<br />$$
+        </p>
+        <h3 id="Producto-del-escalar-cero-por-un-vector-es-vector-cero">
+          <a
+            href="#Producto-del-escalar-cero-por-un-vector-es-vector-cero"
+            class="headerlink"
+            title="Producto del escalar cero por un vector es vector cero"
+          ></a
+          >Producto del escalar cero por un vector es vector cero
+        </h3>
+        <p>
+          $$<br />
+          \mathbf{u} &#x3D;<br />
+          \mathit{1} * \mathbf{u} &#x3D;<br />
+          (\mathit{1} + \mathit{0}) * \mathbf{u} &#x3D;<br />
+          \mathit{1} * \mathbf{u} + \mathit{0} * \mathbf{u} &#x3D;<br />
+          \mathbf{u} + \mathit{0} * \mathbf{u}<br />
+          \Rightarrow<br />
+          \mathit{0} * \mathbf{u} &#x3D; \mathbf{0}<br />$$
+        </p>
+        <h2 id="Subespacio-vectorial">
+          <a
+            href="#Subespacio-vectorial"
+            class="headerlink"
+            title="Subespacio vectorial"
+          ></a
+          >Subespacio vectorial
+        </h2>
+        <p>
+          Sea $V$ un espacio vectorial sobre $K$, y $U \subset V$ no vacío, $U$
+          es un <strong>subespacio vectorial</strong> de $V$ si:
+        </p>
+        <p>
+          i. $\forall \textbf{u}, \textbf{v} \in U, \textbf{u} + \textbf{v} \in
+          U$<br />ii. $\forall \textbf{u} \in U, \forall k \in K, k \textbf{u}
+          \in U$
+        </p>
+        <h2 id="Combinacion-lineal">
+          <a
+            href="#Combinacion-lineal"
+            class="headerlink"
+            title="Combinación lineal"
+          ></a
+          >Combinación lineal
+        </h2>
+        <p>
+          Dadoo un espacio vectorial $S$, diremos que un vector $\textbf{v}$ es
+          combinación de los vectores de $B &#x3D; {e_1, …, e_n} \subset S$ si
+          existen escalares $k_1, …, k_n$ tales que
+        </p>
+        <p>$$\textbf{v} &#x3D; k_1e_1 + … + k_ne_n$$</p>
+        <p>
+          Notamos como $\langle B \rangle_S$ el subespacio vectorial formado por
+          el conjunto de todas las combinaciones lineales de los vectores de
+          $B$.
+        </p>
+        <h2 id="Independencia-lineal">
+          <a
+            href="#Independencia-lineal"
+            class="headerlink"
+            title="Independencia lineal"
+          ></a
+          >Independencia lineal
+        </h2>
+        <p>
+          Diremos que un conjunto $B&#x3D;{e_1, …, e_n}$ es linealmente
+          independiente si el vector cero no se puede expresar como combinación
+          lineal no nula de los vectores de $B$.
+        </p>
+        <h2 id="Base-de-un-espacio-vectorial">
+          <a
+            href="#Base-de-un-espacio-vectorial"
+            class="headerlink"
+            title="Base de un espacio vectorial"
+          ></a
+          >Base de un espacio vectorial
+        </h2>
+        <p>
+          Una base es el menor conjunto $B$ de vectores que generan todo el
+          espacio. Y cualquier vector $v$ puede ser expresado unívocamente como
+          una suma de elementos de la base.
+        </p>
+        <h2 id="Dimesion">
+          <a href="#Dimesion" class="headerlink" title="Dimesión"></a>Dimesión
+        </h2>
+        <p>Dado un espacio vectorial sobre $K$.</p>
+        <ul>
+          <li>
+            Si tiene base finita diremos dimensión al número de elementos de
+            dicha base.
+          </li>
+          <li>Si tiene base no finita diremos que es de dimensión infinita.</li>
+        </ul>
+        <h2 id="Interseccion-de-subespacios-vectoriales">
+          <a
+            href="#Interseccion-de-subespacios-vectoriales"
+            class="headerlink"
+            title="Intersección de subespacios vectoriales"
+          ></a
+          >Intersección de subespacios vectoriales
+        </h2>
+        <p>
+          $$<br />F \cap G :&#x3D; {\textbf{u} : \textbf{u} \in F, \textbf{u}
+          \in G}<br />$$
+        </p>
+        <h2 id="Suma-de-subespacios-vectoriales">
+          <a
+            href="#Suma-de-subespacios-vectoriales"
+            class="headerlink"
+            title="Suma de subespacios vectoriales"
+          ></a
+          >Suma de subespacios vectoriales
+        </h2>
+        <p>
+          $$<br />F + G :&#x3D; {\textbf{u} &#x3D; \textbf{v}_1 + \textbf{v}_2 :
+          \textbf{v}_1 \in F, \textbf{v}_2 \in G}<br />$$
+        </p>
+        <h3 id="Suma-directa-de-subespacios-vectoriales">
+          <a
+            href="#Suma-directa-de-subespacios-vectoriales"
+            class="headerlink"
+            title="Suma directa de subespacios vectoriales"
+          ></a
+          >Suma directa de subespacios vectoriales
+        </h3>
+        <p>
+          $F + G$ es una suma directa $F \oplus G$ si $S \cap G &#x3D;
+          \emptyset$
+        </p>
+        <h2 id="Aplicaciones-lineales">
+          <a
+            href="#Aplicaciones-lineales"
+            class="headerlink"
+            title="Aplicaciones lineales"
+          ></a
+          >Aplicaciones lineales
+        </h2>
+        <p>
+          Son aplicaciones entre espacios vectoriales que mantienen la
+          estructura de los espacios vectoriales, es decir, conservan las dos
+          operaciones y las propiedades de estas de uno a otro de dichos
+          espacios
+        </p>
+        <p>
+          Dado dos espacios vectoriales $E$ y $F$ sobre un mismo cuerpo diremos
+          que un aplicación $f: E \mapsto F$ es <strong>lineal</strong> si:
+        </p>
+        <p>
+          $$<br />f(\textbf{u} +_E \textbf{v}) &#x3D; f(u) +_F f(v)\\\\<br />f(k
+          *_E \textbf{v}) &#x3D; k *_F f(v)\\\\<br />$$
+        </p>
+        <h1 id="Modulo-Module">
+          <a
+            href="#Modulo-Module"
+            class="headerlink"
+            title="Módulo - Module"
+          ></a
+          >Módulo - Module
+        </h1>
+        <p>
+          Un módulo sobre un anillo es una generalización de la noción de
+          espacio vectorial sobre un cuerpo, donde los correspondientes
+          escalares son los elementos un anillo (con identidad) arbitrario y
+          donde está definida una multiplicación (a la izquierda y&#x2F;o a la
+          derecha) entre elementos del anillo y elementos del módulo.
+        </p>
+        <p>
+          Sea $A$ un anillo con identidad y sea $1_{A}$ su identidad
+          multiplicativa. Un $A$-módulo izquierdo de $M$ o simplemente $A_M$ es
+          un grupo abeliano $(M,+)$ y una operación $A \times M \mapsto M$ tal
+          que para cualesquiera $r,s \in A$, $x,y \in M$, se tiene
+        </p>
+        <ol>
+          <li>$(r * s) *x &#x3D; r * (s * x)$</li>
+          <li>$(r + s) * x &#x3D; r * x + s * x$</li>
+          <li>$r * (x + y) &#x3D; r * x + r * y$</li>
+          <li>$1 * x &#x3D; x$</li>
+        </ol>
+        <p>
+          Un $A$-módulo derecho de $M$ o $M_A$ se define de forma semejante,
+          sólo que el anillo actúa por la derecha. $M \times A \mapsto M$. Si
+          $A$ es conmutativa, entonces $M_A$ es lo mismo que $A_M$.
+        </p>
 
-          <div class="order-lg-1 col-lg-9 col-12 post-container">
-            <h1 id="Intruduccion">
-              <a
-                href="#Intruduccion"
-                class="headerlink"
-                title="Intruducción"
-              ></a
-              >Intruducción
-            </h1>
-            <p>
-              Una estructura algebraica es una n-tuple $(a_1,a_2,a_3,…,a_n)$
-              donde $a_1$ es un conjunto no vacío, y $(a_2,…,a_n)$ un conjunto
-              de operaciones aplicables a los elementos de dicho conjunto.
-            </p>
-            <p>
-              Las estructras algebraicas se clasifican según las propiedades que
-              cumplen las operaciones sobre el conjunto dado.
-            </p>
-            <h1 id="Ley-de-composicion">
-              <a
-                href="#Ley-de-composicion"
-                class="headerlink"
-                title="Ley de composicion"
-              ></a
-              >Ley de composicion
-            </h1>
-            <p>
-              La ley de composición es un tipo de
-              <strong>operación binaria</strong> que toma dos elementos de dos
-              conjuntos dados y los asigna a otro elemento perteneciente a uno
-              de los dos conjuntos.
-            </p>
-            <h2 id="Ley-de-composicion-interna">
-              <a
-                href="#Ley-de-composicion-interna"
-                class="headerlink"
-                title="Ley de composición interna"
-              ></a
-              >Ley de composición interna
-            </h2>
-            <p>
-              Dado un conjunto $A$ y una operación $\odot$, que representaremos
-              como el par $(A, \odot)$, se dice que $\odot$ es una ley de
-              <strong>composición interna</strong> en $A$ cuando
-            </p>
-            <p>
-              $$<br />\forall a,b \in A \quad \exists! c \in A : c &#x3D; a
-              \odot b<br />$$
-            </p>
-            <h2 id="Ley-de-composicion-externa">
-              <a
-                href="#Ley-de-composicion-externa"
-                class="headerlink"
-                title="Ley de composición externa"
-              ></a
-              >Ley de composición externa
-            </h2>
-            <p>
-              Si los dos elementos operados no pertenecen al mismo conjunto la
-              ley de composición es externa.
-            </p>
-            <h3 id="Ley-de-composicion-externa-por-la-derecha">
-              <a
-                href="#Ley-de-composicion-externa-por-la-derecha"
-                class="headerlink"
-                title="Ley de composición externa por la derecha"
-              ></a
-              >Ley de composición externa por la derecha
-            </h3>
-            <p>
-              $$<br />\forall a \in A, \forall b \in B \quad \exists! c \in A :
-              c &#x3D; a \odot b<br />$$
-            </p>
-            <h3 id="Ley-de-composicion-externa-por-la-izquierda">
-              <a
-                href="#Ley-de-composicion-externa-por-la-izquierda"
-                class="headerlink"
-                title="Ley de composición externa por la izquierda"
-              ></a
-              >Ley de composición externa por la izquierda
-            </h3>
-            <p>
-              $$<br />\forall a \in A, \forall b \in B \quad \exists! c \in B :
-              c &#x3D; a \odot b<br />$$
-            </p>
-            <h1 id="Principales-estructuras-algebraicas">
-              <a
-                href="#Principales-estructuras-algebraicas"
-                class="headerlink"
-                title="Principales estructuras algebraicas"
-              ></a
-              >Principales estructuras algebraicas
-            </h1>
-            <h2 id="Con-una-ley-de-composicion-interna">
-              <a
-                href="#Con-una-ley-de-composicion-interna"
-                class="headerlink"
-                title="Con una ley de composición interna"
-              ></a
-              >Con una ley de composición interna
-            </h2>
-            <ul>
-              <li>Magma</li>
-              <li>Semigrupo</li>
-              <li>Monoide</li>
-              <li><strong>Grupo</strong></li>
-              <li>Bucle</li>
-              <li>Cuasigrupo</li>
-            </ul>
-            <h2 id="Con-dos-leyes-de-composicion-interna">
-              <a
-                href="#Con-dos-leyes-de-composicion-interna"
-                class="headerlink"
-                title="Con dos leyes de composición interna"
-              ></a
-              >Con dos leyes de composición interna
-            </h2>
-            <ul>
-              <li>Semianillo</li>
-              <li><strong>Anillo</strong></li>
-              <li>Pseudoanillo</li>
-              <li>Dominio de integridad</li>
-              <li><strong>Cuerpo</strong></li>
-              <li>Retículo (orden)</li>
-              <li>Álgebra booleana</li>
-            </ul>
-            <h2 id="Con-leyes-de-composicion-interna-y-externa">
-              <a
-                href="#Con-leyes-de-composicion-interna-y-externa"
-                class="headerlink"
-                title="Con leyes de composición interna y externa"
-              ></a
-              >Con leyes de composición interna y externa
-            </h2>
-            <ul>
-              <li><strong>Módulo</strong></li>
-              <li><strong>Espacio vectorial</strong></li>
-              <li>Álgebra sobre un cuerpo</li>
-            </ul>
-            <h1 id="Grupo-Group">
-              <a
-                href="#Grupo-Group"
-                class="headerlink"
-                title="Grupo - Group"
-              ></a
-              >Grupo - Group
-            </h1>
-            <p>
-              Un grupo es una estructura algebraica formada por un conjunto no
-              vacío $G$ dotado de una operación interna $\odot$ que combina
-              cualquier par de elementos para componer un tercero dentro del
-              mismo conjunto y que satisface las propiedades
-              <strong>asociativas</strong>, existencia de
-              <strong>elemento neutro</strong> y <strong>simétrico</strong>.
-            </p>
-            <ol>
-              <li>
-                $G$ es cerrado bajo la operación. $\forall a,b \in G, a \odot b
-                \in G$. (<strong>Magma</strong>)
-              </li>
-              <li>
-                Es asociativa. $\forall a,b,c \in G, (a \odot b) \odot c &#x3D;
-                a \odot (b \odot c)$. (<strong>Semigrupo</strong>)
-              </li>
-              <li>
-                Tiene a $n$ como elemento neutro. $\forall a \in G, a \odot n
-                &#x3D; n \odot a &#x3D; a$. (<strong>Monoide</strong>)
-              </li>
-              <li>
-                Existe elemento simétrico. $\forall a \in G, \exists b \in G, a
-                \odot b &#x3D; b \odot a &#x3D; n$. (<strong>Grupo</strong>)
-              </li>
-            </ol>
-            <h2 id="Grupo-abeliano">
-              <a
-                href="#Grupo-abeliano"
-                class="headerlink"
-                title="Grupo abeliano"
-              ></a
-              >Grupo abeliano
-            </h2>
-            <p>
-              Si la operación también tiene la propiedad conmutativa $\forall
-              a,b \in A, a \odot b &#x3D; b \odot a$ se dice que es un
-              <strong>grupo abeliano</strong>.
-            </p>
-            <p>
-              Hay dos notaciones principales para los grupos abelianos: aditiva
-              y multiplicativa
-            </p>
-            <table>
-              <thead>
-                <tr>
-                  <th>Notación</th>
-                  <th>Operación</th>
-                  <th>Elemento neutro</th>
-                  <th>Potencias</th>
-                  <th>Elementos inversos</th>
-                  <th>Suma directa &#x2F; Producto directo</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Adición</td>
-                  <td>$a + b$</td>
-                  <td><strong>cero</strong> 0</td>
-                  <td>$na$</td>
-                  <td>$-a$</td>
-                  <td>a $\oplus$ b</td>
-                </tr>
-                <tr>
-                  <td>Multiplicación</td>
-                  <td>$a * b$</td>
-                  <td><strong>identidad</strong> 1</td>
-                  <td>$a^n$</td>
-                  <td>$a^{-1}$</td>
-                  <td>a $\times$ b</td>
-                </tr>
-              </tbody>
-            </table>
-            <h1 id="Anillo-Ring">
-              <a
-                href="#Anillo-Ring"
-                class="headerlink"
-                title="Anillo - Ring"
-              ></a
-              >Anillo - Ring
-            </h1>
-            <p>
-              Un <strong>anillo</strong> es un sistema algebraico dotado con dos
-              operaciones internas llamadas <strong>suma</strong> y
-              <strong>producto</strong>.
-            </p>
-            <p>
-              Sea $A$ un conjunto no vacío, y sean $+$ y $*$ dos operaciones
-              binarias en $A$. Se dice que el conjunto $(A, +, *)$ es un anillo
-              si se cumplen cinco propiedades de grupo abeliano para la suma, y
-              tres condiciones adicionales acerca de la multiplicación
-            </p>
-            <ol>
-              <li>
-                $A$ es cerrado bajo la multiplicación. $\forall a,b \in A, a * b
-                \in A$.
-              </li>
-              <li>
-                La multiplicación asociativa. $\forall a,b,c \in A, (a * b) * c
-                &#x3D; a * (b * c)$.
-              </li>
-              <li>
-                La multiplicación es distributiva respecto de la suma. $\forall
-                a,b,c \in A \quad a * (b + c) &#x3D; (a * b) + (a * c) \land (a
-                + b) * c &#x3D; (a * c) + (b * c)$
-              </li>
-            </ol>
-            <p>
-              Si la multiplicación es conmutativa $\forall a,b \in A, a * b
-              &#x3D; b * a$. se llama un <strong>anillo conmutativo</strong>.
-            </p>
-            <p>
-              Si un anillo cuenta con <strong>identidad</strong> se llama
-              <strong>anillo unitario</strong>.
-            </p>
-            <h1 id="Cuerpo-Field">
-              <a
-                href="#Cuerpo-Field"
-                class="headerlink"
-                title="Cuerpo - Field"
-              ></a
-              >Cuerpo - Field
-            </h1>
-            <p>
-              Un <strong>cuerpo</strong> es un
-              <strong>anillo de división conmutativo</strong>, un
-              <strong>anillo conmutativo y unitario</strong> en el que todo
-              elemento distinto de <strong>cero</strong> es
-              <strong>invertible respecto de la multiplicación</strong>, es
-              decir, que permiten efectuar las operaciones de
-              <strong>sustracción</strong> y <strong>división</strong>. Los
-              cuerpos eran llamados <strong>dominios racionales</strong>.
-            </p>
-            <ul>
-              <li>$K$ es cerrado para la adición y la multiplicación</li>
-              <li>
-                <strong>Asociatividad</strong> de la adición y la multiplicación
-              </li>
-              <li>
-                <strong>Conmutatividad</strong> de la adición y la
-                multiplicación
-              </li>
-              <li>
-                Existencia de un <strong>elemento neutro</strong> para la
-                adición y la multiplicación
-              </li>
-              <li>
-                Existencia de <strong>inverso aditivo</strong>, de
-                <strong>inverso multiplicativo</strong>
-              </li>
-              <li>
-                <strong>Distributividad</strong> de la multiplicación respecto
-                de la adición
-              </li>
-            </ul>
-            <h1 id="Espacio-vectorial-Vector-space">
-              <a
-                href="#Espacio-vectorial-Vector-space"
-                class="headerlink"
-                title="Espacio vectorial - Vector space"
-              ></a
-              >Espacio vectorial - Vector space
-            </h1>
-            <p>
-              Un <strong>espacio vectorial</strong> es una estructura algebraica
-              creada a partir de un conjunto no vacío, una operación interna
-              llamada <strong>suma</strong> y una operación externa llamanda
-              <strong>producto por un escalar</strong>.
-            </p>
-            <p>
-              A los elementos de un espacio vectorial se les llama
-              <strong>vectores</strong> y a los elementos del cuerpo
-              <strong>escalares</strong>.
-            </p>
-            <h2 id="Suma-entre-vectores">
-              <a
-                href="#Suma-entre-vectores"
-                class="headerlink"
-                title="Suma entre vectores"
-              ></a
-              >Suma entre vectores
-            </h2>
-            <p>$$<br />V \times V \mapsto V<br />$$</p>
-            <ol>
-              <li><strong>Propiedad conmutativa</strong>.</li>
-              <li><strong>Propiedad asociativa</strong>.</li>
-              <li><strong>Elemento neutro</strong>.</li>
-              <li><strong>Elemento opuesto</strong>.</li>
-            </ol>
-            <h2 id="Producto-por-un-escalar">
-              <a
-                href="#Producto-por-un-escalar"
-                class="headerlink"
-                title="Producto por un escalar"
-              ></a
-              >Producto por un escalar
-            </h2>
-            <p>$$<br />K \times V \mapsto V<br />$$</p>
-            <ol start="5">
-              <li>
-                <strong>Propiedad asociativa</strong>. $\forall a,b \in K,
-                \forall \textbf{u} \in V : (a * b) * \textbf{u} &#x3D; a * (b *
-                \textbf{u})$
-              </li>
-              <li>
-                <strong>Elemento neutro multiplicactiva</strong> $n$. $\exists n
-                \in K, \forall \textbf{u} \in V: n * \textbf{u} &#x3D;
-                \textbf{u}$
-              </li>
-              <li>
-                <strong
-                  >Propiedad distributiva del producto respecto la suma de
-                  vectores</strong
-                >. $\forall k \in K, \forall \textbf{u},\textbf{v} \in V : k *
-                (\textbf{u} + \textbf{v}) &#x3D; k * \textbf{u} + k *
-                \textbf{v}$
-              </li>
-              <li>
-                <strong
-                  >Propiedad distributiva del producto respecto la suma de
-                  escalares</strong
-                >. $\forall a,b \in K, \forall \textbf{u} \in V : (a + b) *
-                \textbf{u} &#x3D; a * \textbf{u} + b * \textbf{u}$
-              </li>
-            </ol>
-            <h2 id="Propiedad">
-              <a href="#Propiedad" class="headerlink" title="Propiedad"></a
-              >Propiedad
-            </h2>
-            <h3 id="Unicidad-del-vector-neutro">
-              <a
-                href="#Unicidad-del-vector-neutro"
-                class="headerlink"
-                title="Unicidad del vector neutro"
-              ></a
-              >Unicidad del vector neutro
-            </h3>
-            <p>
-              $$<br />
-              \mathbf{u} + \mathbf{0_1} &#x3D; \mathbf{u} + \mathbf{0_2}<br />
-              \Rightarrow \mathbf{0_1} &#x3D; \mathbf{0_2}<br />
-              \Rightarrow \exists ! ; \mathbf{0} \in V<br />$$
-            </p>
-            <h3 id="Unicidad-del-vector-opuesto">
-              <a
-                href="#Unicidad-del-vector-opuesto"
-                class="headerlink"
-                title="Unicidad del vector opuesto"
-              ></a
-              >Unicidad del vector opuesto
-            </h3>
-            <p>
-              $$<br />
-              \mathbf{u} - \mathbf{u_1} &#x3D; \mathbf{u} - \mathbf{u_2}<br />
-              \Rightarrow - \mathbf{u_1} &#x3D; - \mathbf{u_2}<br />
-              \Rightarrow \exists ! - \mathbf{u} \in V<br />$$
-            </p>
-            <h3 id="Unicidad-del-elemento-unitario-en-el-cuerpo-K">
-              <a
-                href="#Unicidad-del-elemento-unitario-en-el-cuerpo-K"
-                class="headerlink"
-                title="Unicidad del elemento unitario en el cuerpo $K$"
-              ></a
-              >Unicidad del elemento unitario en el cuerpo $K$
-            </h3>
-            <p>
-              $$<br />
-              \mathit{a} * \mathit{1_1} &#x3D; \mathit{a} * \mathit{1_2}<br />
-              \Rightarrow \mathit{1_1} &#x3D; \mathit{1_2}<br />
-              \Rightarrow \exists ! ; \mathit{1} \in K<br />$$
-            </p>
-            <h3 id="Unicidad-del-elemento-inverso-en-el-cuerpo-K">
-              <a
-                href="#Unicidad-del-elemento-inverso-en-el-cuerpo-K"
-                class="headerlink"
-                title="Unicidad del elemento inverso en el cuerpo $K$"
-              ></a
-              >Unicidad del elemento inverso en el cuerpo $K$
-            </h3>
-            <p>
-              $$<br />
-              \mathit{a} * \mathit{a_1^{-1}} &#x3D; \mathit{a} *
-              \mathit{a_2^{-1}}<br />
-              \Rightarrow \mathit{a_1^{-1}} &#x3D; \mathit{a_2^{-1}}<br />
-              \Rightarrow \exists ! \mathit{a^{-1}} \in K<br />$$
-            </p>
-            <h3 id="Producto-de-un-escalar-por-el-vector-cero">
-              <a
-                href="#Producto-de-un-escalar-por-el-vector-cero"
-                class="headerlink"
-                title="Producto de un escalar por el vector cero"
-              ></a
-              >Producto de un escalar por el vector cero
-            </h3>
-            <p>
-              $$<br />
-              \mathit{a} * \mathbf{u} &#x3D;<br />
-              \mathit{a} * (\mathbf{u} + \mathbf{0}) &#x3D;<br />
-              \mathit{a} * \mathbf{u} + \mathit{a} * \mathbf{0}<br />
-              \Rightarrow<br />
-              \mathit{a} * \mathbf{0} &#x3D; \mathbf{0}<br />$$
-            </p>
-            <h3 id="Producto-del-escalar-cero-por-un-vector-es-vector-cero">
-              <a
-                href="#Producto-del-escalar-cero-por-un-vector-es-vector-cero"
-                class="headerlink"
-                title="Producto del escalar cero por un vector es vector cero"
-              ></a
-              >Producto del escalar cero por un vector es vector cero
-            </h3>
-            <p>
-              $$<br />
-              \mathbf{u} &#x3D;<br />
-              \mathit{1} * \mathbf{u} &#x3D;<br />
-              (\mathit{1} + \mathit{0}) * \mathbf{u} &#x3D;<br />
-              \mathit{1} * \mathbf{u} + \mathit{0} * \mathbf{u} &#x3D;<br />
-              \mathbf{u} + \mathit{0} * \mathbf{u}<br />
-              \Rightarrow<br />
-              \mathit{0} * \mathbf{u} &#x3D; \mathbf{0}<br />$$
-            </p>
-            <h2 id="Subespacio-vectorial">
-              <a
-                href="#Subespacio-vectorial"
-                class="headerlink"
-                title="Subespacio vectorial"
-              ></a
-              >Subespacio vectorial
-            </h2>
-            <p>
-              Sea $V$ un espacio vectorial sobre $K$, y $U \subset V$ no vacío,
-              $U$ es un <strong>subespacio vectorial</strong> de $V$ si:
-            </p>
-            <p>
-              i. $\forall \textbf{u}, \textbf{v} \in U, \textbf{u} + \textbf{v}
-              \in U$<br />ii. $\forall \textbf{u} \in U, \forall k \in K, k
-              \textbf{u} \in U$
-            </p>
-            <h2 id="Combinacion-lineal">
-              <a
-                href="#Combinacion-lineal"
-                class="headerlink"
-                title="Combinación lineal"
-              ></a
-              >Combinación lineal
-            </h2>
-            <p>
-              Dadoo un espacio vectorial $S$, diremos que un vector $\textbf{v}$
-              es combinación de los vectores de $B &#x3D; {e_1, …, e_n} \subset
-              S$ si existen escalares $k_1, …, k_n$ tales que
-            </p>
-            <p>$$\textbf{v} &#x3D; k_1e_1 + … + k_ne_n$$</p>
-            <p>
-              Notamos como $\langle B \rangle_S$ el subespacio vectorial formado
-              por el conjunto de todas las combinaciones lineales de los
-              vectores de $B$.
-            </p>
-            <h2 id="Independencia-lineal">
-              <a
-                href="#Independencia-lineal"
-                class="headerlink"
-                title="Independencia lineal"
-              ></a
-              >Independencia lineal
-            </h2>
-            <p>
-              Diremos que un conjunto $B&#x3D;{e_1, …, e_n}$ es linealmente
-              independiente si el vector cero no se puede expresar como
-              combinación lineal no nula de los vectores de $B$.
-            </p>
-            <h2 id="Base-de-un-espacio-vectorial">
-              <a
-                href="#Base-de-un-espacio-vectorial"
-                class="headerlink"
-                title="Base de un espacio vectorial"
-              ></a
-              >Base de un espacio vectorial
-            </h2>
-            <p>
-              Una base es el menor conjunto $B$ de vectores que generan todo el
-              espacio. Y cualquier vector $v$ puede ser expresado unívocamente
-              como una suma de elementos de la base.
-            </p>
-            <h2 id="Dimesion">
-              <a href="#Dimesion" class="headerlink" title="Dimesión"></a
-              >Dimesión
-            </h2>
-            <p>Dado un espacio vectorial sobre $K$.</p>
-            <ul>
-              <li>
-                Si tiene base finita diremos dimensión al número de elementos de
-                dicha base.
-              </li>
-              <li>
-                Si tiene base no finita diremos que es de dimensión infinita.
-              </li>
-            </ul>
-            <h2 id="Interseccion-de-subespacios-vectoriales">
-              <a
-                href="#Interseccion-de-subespacios-vectoriales"
-                class="headerlink"
-                title="Intersección de subespacios vectoriales"
-              ></a
-              >Intersección de subespacios vectoriales
-            </h2>
-            <p>
-              $$<br />F \cap G :&#x3D; {\textbf{u} : \textbf{u} \in F,
-              \textbf{u} \in G}<br />$$
-            </p>
-            <h2 id="Suma-de-subespacios-vectoriales">
-              <a
-                href="#Suma-de-subespacios-vectoriales"
-                class="headerlink"
-                title="Suma de subespacios vectoriales"
-              ></a
-              >Suma de subespacios vectoriales
-            </h2>
-            <p>
-              $$<br />F + G :&#x3D; {\textbf{u} &#x3D; \textbf{v}_1 +
-              \textbf{v}_2 : \textbf{v}_1 \in F, \textbf{v}_2 \in G}<br />$$
-            </p>
-            <h3 id="Suma-directa-de-subespacios-vectoriales">
-              <a
-                href="#Suma-directa-de-subespacios-vectoriales"
-                class="headerlink"
-                title="Suma directa de subespacios vectoriales"
-              ></a
-              >Suma directa de subespacios vectoriales
-            </h3>
-            <p>
-              $F + G$ es una suma directa $F \oplus G$ si $S \cap G &#x3D;
-              \emptyset$
-            </p>
-            <h2 id="Aplicaciones-lineales">
-              <a
-                href="#Aplicaciones-lineales"
-                class="headerlink"
-                title="Aplicaciones lineales"
-              ></a
-              >Aplicaciones lineales
-            </h2>
-            <p>
-              Son aplicaciones entre espacios vectoriales que mantienen la
-              estructura de los espacios vectoriales, es decir, conservan las
-              dos operaciones y las propiedades de estas de uno a otro de dichos
-              espacios
-            </p>
-            <p>
-              Dado dos espacios vectoriales $E$ y $F$ sobre un mismo cuerpo
-              diremos que un aplicación $f: E \mapsto F$ es
-              <strong>lineal</strong> si:
-            </p>
-            <p>
-              $$<br />f(\textbf{u} +_E \textbf{v}) &#x3D; f(u) +_F f(v)\\\\<br />f(k
-              *_E \textbf{v}) &#x3D; k *_F f(v)\\\\<br />$$
-            </p>
-            <h1 id="Modulo-Module">
-              <a
-                href="#Modulo-Module"
-                class="headerlink"
-                title="Módulo - Module"
-              ></a
-              >Módulo - Module
-            </h1>
-            <p>
-              Un módulo sobre un anillo es una generalización de la noción de
-              espacio vectorial sobre un cuerpo, donde los correspondientes
-              escalares son los elementos un anillo (con identidad) arbitrario y
-              donde está definida una multiplicación (a la izquierda y&#x2F;o a
-              la derecha) entre elementos del anillo y elementos del módulo.
-            </p>
-            <p>
-              Sea $A$ un anillo con identidad y sea $1_{A}$ su identidad
-              multiplicativa. Un $A$-módulo izquierdo de $M$ o simplemente $A_M$
-              es un grupo abeliano $(M,+)$ y una operación $A \times M \mapsto
-              M$ tal que para cualesquiera $r,s \in A$, $x,y \in M$, se tiene
-            </p>
-            <ol>
-              <li>$(r * s) *x &#x3D; r * (s * x)$</li>
-              <li>$(r + s) * x &#x3D; r * x + s * x$</li>
-              <li>$r * (x + y) &#x3D; r * x + r * y$</li>
-              <li>$1 * x &#x3D; x$</li>
-            </ol>
-            <p>
-              Un $A$-módulo derecho de $M$ o $M_A$ se define de forma semejante,
-              sólo que el anillo actúa por la derecha. $M \times A \mapsto M$.
-              Si $A$ es conmutativa, entonces $M_A$ es lo mismo que $A_M$.
-            </p>
+        <hr />
 
-            <hr />
-
-            <ul class="list-group"></ul>
-          </div>
-        </div>
-
-        <div class="row justify-content-center">
-          <!-- Sidebar Container -->
-
-          <div class="col-lg-8` col-md-10 sidebar-container">
-            <!-- Friends Blog -->
-          </div>
-        </div>
+        <ul class="list-group"></ul>
       </div>
     </article>
     <!-- Custom Theme JavaScript -->

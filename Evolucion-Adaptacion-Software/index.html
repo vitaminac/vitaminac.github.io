@@ -144,592 +144,359 @@
     />
 
     <!-- Post Content -->
-    <article>
-      <div class="container">
-        <div class="row">
-          <!-- Post Container -->
-          <div class="order-lg-2 col-lg-3 col-12 toc-col" style="z-index: 1">
-            <ol class="toc">
-              <li class="toc-item toc-level-1">
-                <a
-                  class="toc-link"
-                  href="#Evolucion-y-Mantenimiento-del-Software"
-                  ><span class="toc-text"
-                    >Evolución y Mantenimiento del Software</span
-                  ></a
-                >
-                <ol class="toc-child">
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Que-es-la-evolucion-del-software"
-                      ><span class="toc-text"
-                        >Qué es la evolución del software</span
-                      ></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Importancia-del-mantenimiento"
-                      ><span class="toc-text"
-                        >Importancia del mantenimiento</span
-                      ></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Cuestiones-asociadas-al-coste"
-                      ><span class="toc-text"
-                        >Cuestiones asociadas al coste</span
-                      ></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Prediccion-del-mantenimiento"
-                      ><span class="toc-text"
-                        >Predicción del mantenimiento</span
-                      ></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Proceso-Evolutivo"
-                      ><span class="toc-text">Proceso Evolutivo</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Procesos-de-evolucion"
-                      ><span class="toc-text">Procesos de evolución</span></a
-                    >
-                    <ol class="toc-child">
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Gestion-de-Configuraciones"
-                          ><span class="toc-text"
-                            >Gestión de Configuraciones</span
-                          ></a
-                        >
-                      </li>
-                    </ol>
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Mantenimiento-y-su-clasificacion"
-                      ><span class="toc-text"
-                        >Mantenimiento y su clasificación</span
-                      ></a
-                    >
-                    <ol class="toc-child">
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Actuaciones-comunes"
-                          ><span class="toc-text">Actuaciones comunes</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#Tipos-de-mantenimiento"
-                          ><span class="toc-text"
-                            >Tipos de mantenimiento</span
-                          ></a
-                        >
-                        <ol class="toc-child">
-                          <li class="toc-item toc-level-4">
-                            <a class="toc-link" href="#Mantenimiento-perfectivo"
-                              ><span class="toc-text"
-                                >Mantenimiento perfectivo</span
-                              ></a
-                            >
-                          </li>
-                          <li class="toc-item toc-level-4">
-                            <a class="toc-link" href="#Mantenimiento-adaptativo"
-                              ><span class="toc-text"
-                                >Mantenimiento adaptativo</span
-                              ></a
-                            >
-                          </li>
-                          <li class="toc-item toc-level-4">
-                            <a class="toc-link" href="#Mantenimiento-correctivo"
-                              ><span class="toc-text"
-                                >Mantenimiento correctivo</span
-                              ></a
-                            >
-                          </li>
-                          <li class="toc-item toc-level-4">
-                            <a class="toc-link" href="#Mantenimiento-preventivo"
-                              ><span class="toc-text"
-                                >Mantenimiento preventivo</span
-                              ></a
-                            >
-                          </li>
-                        </ol>
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#Metricas-de-prediccion-del-mantenimiento"
-                          ><span class="toc-text"
-                            >Métricas de predicción del mantenimiento</span
-                          ></a
-                        >
-                      </li>
-                    </ol>
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#Sistemas-socio-tecnicos"
-                      ><span class="toc-text">Sistemas socio-técnicos</span></a
-                    >
-                    <ol class="toc-child">
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#Caracteristicas-de-los-sistemas-socio"
-                          ><span class="toc-text"
-                            >Características de los sistemas socio</span
-                          ></a
-                        >
-                      </li>
-                    </ol>
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a
-                      class="toc-link"
-                      href="#Estrategias-de-evolucion-de-un-sistema-heredado"
-                      ><span class="toc-text"
-                        >Estrategias de evolución de un sistema heredado</span
-                      ></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a
-                      class="toc-link"
-                      href="#Evaluacion-de-los-sistemas-heredados"
-                      ><span class="toc-text"
-                        >Evaluación de los sistemas heredados</span
-                      ></a
-                    >
-                    <ol class="toc-child">
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#Perspectiva-tecnica-y-de-negocio"
-                          ><span class="toc-text"
-                            >Perspectiva técnica y de negocio</span
-                          ></a
-                        >
-                        <ol class="toc-child">
-                          <li class="toc-item toc-level-4">
-                            <a
-                              class="toc-link"
-                              href="#Evaluar-el-valor-de-negocio"
-                              ><span class="toc-text"
-                                >Evaluar el valor de negocio</span
-                              ></a
-                            >
-                          </li>
-                          <li class="toc-item toc-level-4">
-                            <a
-                              class="toc-link"
-                              href="#Evaluar-la-perspectiva-tecnica"
-                              ><span class="toc-text"
-                                >Evaluar la perspectiva técnica</span
-                              ></a
-                            >
-                            <ol class="toc-child">
-                              <li class="toc-item toc-level-5">
-                                <a
-                                  class="toc-link"
-                                  href="#Factores-utilizados-en-la-evaluacion-de-la-Aplicacion"
-                                  ><span class="toc-text"
-                                    >Factores utilizados en la evaluación de la
-                                    Aplicación</span
-                                  ></a
-                                >
-                              </li>
-                              <li class="toc-item toc-level-5">
-                                <a
-                                  class="toc-link"
-                                  href="#Factores-utilizados-en-la-evaluacion-del-Entorno"
-                                  ><span class="toc-text"
-                                    >Factores utilizados en la evaluación del
-                                    Entorno</span
-                                  ></a
-                                >
-                              </li>
-                            </ol>
-                          </li>
-                        </ol>
-                      </li>
-                    </ol>
-                  </li>
-                </ol>
-              </li>
-            </ol>
-          </div>
+    <article class="container" style="width: 100%; max-width: 100%">
+      <!-- Post Container -->
+      <div class="post-container">
+        <h1 id="Evolucion-y-Mantenimiento-del-Software">
+          <a
+            href="#Evolucion-y-Mantenimiento-del-Software"
+            class="headerlink"
+            title="Evolución y Mantenimiento del Software"
+          ></a
+          >Evolución y Mantenimiento del Software
+        </h1>
+        <h2 id="Que-es-la-evolucion-del-software">
+          <a
+            href="#Que-es-la-evolucion-del-software"
+            class="headerlink"
+            title="Qué es la evolución del software"
+          ></a
+          >Qué es la evolución del software
+        </h2>
+        <p>
+          Todas las actividades de programación que se orientan a generar una
+          nueva versión de un software a partir de una versión anterior
+          operativa. <strong>M.Lehman</strong>
+        </p>
+        <p>
+          La aplicación de las actividades y procesos de mantenimiento del
+          software que generan una nueva versión operativa de un software, con
+          una funcionalidad de usuario o propiedades cambiadas, a partir de una
+          versión anterior junto con los procesos y actividades de garantía de
+          calidad y con la gestión de esos procesos. <strong>Chapin</strong>
+        </p>
+        <ul>
+          <li>
+            Mantenimiento: <strong>mejora</strong>,
+            <strong>optimización</strong>, <strong>corrección</strong> y
+            <strong>prevención</strong>
+          </li>
+          <li>Evolución: <strong>generación de una nueva versión</strong></li>
+          <li>
+            Conservación: <strong>mantener operativo un sistema viejo</strong>
+          </li>
+        </ul>
+        <h2 id="Importancia-del-mantenimiento">
+          <a
+            href="#Importancia-del-mantenimiento"
+            class="headerlink"
+            title="Importancia del mantenimiento"
+          ></a
+          >Importancia del mantenimiento
+        </h2>
+        <p>
+          En empresas <strong>95%</strong> de los recursos está dedicados al
+          mantenimiento, los sistemas granders y complejos tienen un largo
+          período de vida. Hay que realizar cambios en el software para corregir
+          errores y para implementar nuevos requisitos que surgen. Se conoce
+          como <strong>Barrera de Mantenimiento</strong>.
+        </p>
+        <h2 id="Cuestiones-asociadas-al-coste">
+          <a
+            href="#Cuestiones-asociadas-al-coste"
+            class="headerlink"
+            title="Cuestiones asociadas al coste"
+          ></a
+          >Cuestiones asociadas al coste
+        </h2>
+        <ul>
+          <li>
+            Analizar los cambios desde la perspectiva técnica y de negocio
+          </li>
+          <li>Los subsistemas no son independientes</li>
+          <li>No se registran las decisiones de diseño original</li>
+          <li>La estructura original se va corrimpiendo por el cambio.</li>
+        </ul>
+        <h2 id="Prediccion-del-mantenimiento">
+          <a
+            href="#Prediccion-del-mantenimiento"
+            class="headerlink"
+            title="Predicción del mantenimiento"
+          ></a
+          >Predicción del mantenimiento
+        </h2>
+        <ul>
+          <li>La relación entre el sistema y su entorno</li>
+          <li>El número y la complejidad de las interfaces del sistema</li>
+        </ul>
+        <h2 id="Proceso-Evolutivo">
+          <a
+            href="#Proceso-Evolutivo"
+            class="headerlink"
+            title="Proceso Evolutivo"
+          ></a
+          >Proceso Evolutivo
+        </h2>
+        <p>
+          En la actualidad, la diferencia entre desarrollo y mantenimiento es
+          irrelevante. La tendencia actual es ver el desarrollo y el
+          mantenimiento dentro de un proceso único continuo y evolutivo. Se
+          conoce al ciclo de vida del software de forma completa y continua.
+        </p>
+        <h2 id="Procesos-de-evolucion">
+          <a
+            href="#Procesos-de-evolucion"
+            class="headerlink"
+            title="Procesos de evolución"
+          ></a
+          >Procesos de evolución
+        </h2>
+        <p>Procesos de volución surge de distintas peticiones de cambio:</p>
+        <ul>
+          <li>Requisitos ya existentes no integrados aún</li>
+          <li>Peticiones de nuevos requisitos</li>
+          <li>Reparaciones de errores</li>
+          <li>Ideas nuevas y mejoras indicadas por el equipo de desarrollo</li>
+        </ul>
+        <p>
+          Los procesos de identificación de cambios y evolución del sistema son
+          cíclicos y continúan durante toda la vida del sistema.
+        </p>
+        <h3 id="Gestion-de-Configuraciones">
+          <a
+            href="#Gestion-de-Configuraciones"
+            class="headerlink"
+            title="Gestión de Configuraciones"
+          ></a
+          >Gestión de Configuraciones
+        </h3>
+        <p>Seguimiento para asegurar de versinoes correctas en cada entrega</p>
+        <h2 id="Mantenimiento-y-su-clasificacion">
+          <a
+            href="#Mantenimiento-y-su-clasificacion"
+            class="headerlink"
+            title="Mantenimiento y su clasificación"
+          ></a
+          >Mantenimiento y su clasificación
+        </h2>
+        <h3 id="Actuaciones-comunes">
+          <a
+            href="#Actuaciones-comunes"
+            class="headerlink"
+            title="Actuaciones comunes"
+          ></a
+          >Actuaciones comunes
+        </h3>
+        <ul>
+          <li>Corrección de defectos</li>
+          <li>Creación de nuevas funcinoalidades</li>
+          <li>Mejora de la funcinoalidad y del rendimiento</li>
+        </ul>
+        <h3 id="Tipos-de-mantenimiento">
+          <a
+            href="#Tipos-de-mantenimiento"
+            class="headerlink"
+            title="Tipos de mantenimiento"
+          ></a
+          >Tipos de mantenimiento
+        </h3>
+        <h4 id="Mantenimiento-perfectivo">
+          <a
+            href="#Mantenimiento-perfectivo"
+            class="headerlink"
+            title="Mantenimiento perfectivo"
+          ></a
+          >Mantenimiento perfectivo
+        </h4>
+        <p>mejorar o añadir nuevas funcinoalidades</p>
+        <h4 id="Mantenimiento-adaptativo">
+          <a
+            href="#Mantenimiento-adaptativo"
+            class="headerlink"
+            title="Mantenimiento adaptativo"
+          ></a
+          >Mantenimiento adaptativo
+        </h4>
+        <p>
+          mejorar o añadir nuevas funcinoalidadesadaptar el sistema a los
+          cambios
+        </p>
+        <h4 id="Mantenimiento-correctivo">
+          <a
+            href="#Mantenimiento-correctivo"
+            class="headerlink"
+            title="Mantenimiento correctivo"
+          ></a
+          >Mantenimiento correctivo
+        </h4>
+        <p>corregir defectos en el hardware o en el software</p>
+        <h4 id="Mantenimiento-preventivo">
+          <a
+            href="#Mantenimiento-preventivo"
+            class="headerlink"
+            title="Mantenimiento preventivo"
+          ></a
+          >Mantenimiento preventivo
+        </h4>
+        <p>facilitar el mantenimiento futuro</p>
+        <h3 id="Metricas-de-prediccion-del-mantenimiento">
+          <a
+            href="#Metricas-de-prediccion-del-mantenimiento"
+            class="headerlink"
+            title="Métricas de predicción del mantenimiento"
+          ></a
+          >Métricas de predicción del mantenimiento
+        </h3>
+        <ul>
+          <li>El número de peticiones de mantenimiento correctivo</li>
+          <li>Tiempo medio requerido para el análisis de impacto</li>
+          <li>Tiempo medio empleado en implementar una petición de cambio</li>
+          <li>El número de peticiones de cambio pendientes</li>
+        </ul>
+        <h2 id="Sistemas-socio-tecnicos">
+          <a
+            href="#Sistemas-socio-tecnicos"
+            class="headerlink"
+            title="Sistemas socio-técnicos"
+          ></a
+          >Sistemas socio-técnicos
+        </h2>
+        <p>Las sistemas que incluyen software son de dos tipos:</p>
+        <ul>
+          <li>Sistemas técnico-informáticos</li>
+          <li><strong>Sistemas socio-técnicos</strong></li>
+        </ul>
+        <h3 id="Caracteristicas-de-los-sistemas-socio">
+          <a
+            href="#Caracteristicas-de-los-sistemas-socio"
+            class="headerlink"
+            title="Características de los sistemas socio"
+          ></a
+          >Características de los sistemas socio
+        </h3>
+        <ul>
+          <li>Propiedades emergentes</li>
+          <li>No deterministas</li>
+          <li>Grado de apoyo a los objetivos organizacionales</li>
+        </ul>
+        <h2 id="Estrategias-de-evolucion-de-un-sistema-heredado">
+          <a
+            href="#Estrategias-de-evolucion-de-un-sistema-heredado"
+            class="headerlink"
+            title="Estrategias de evolución de un sistema heredado"
+          ></a
+          >Estrategias de evolución de un sistema heredado
+        </h2>
+        <ul>
+          <li>Desechar completamente el sistema</li>
+          <li>
+            Dejar el sistema sin cambios y continuar con un mantenimiento
+            regular
+          </li>
+          <li>Reemplazar todo o parte del sistema con un nuevo sistema</li>
+          <li>
+            Hacer <strong>reingeniería</strong> del sistema para mejorar su
+            mantenibilidad
+          </li>
+        </ul>
+        <h2 id="Evaluacion-de-los-sistemas-heredados">
+          <a
+            href="#Evaluacion-de-los-sistemas-heredados"
+            class="headerlink"
+            title="Evaluación de los sistemas heredados"
+          ></a
+          >Evaluación de los sistemas heredados
+        </h2>
+        <h3 id="Perspectiva-tecnica-y-de-negocio">
+          <a
+            href="#Perspectiva-tecnica-y-de-negocio"
+            class="headerlink"
+            title="Perspectiva técnica y de negocio"
+          ></a
+          >Perspectiva técnica y de negocio
+        </h3>
+        <p>Según la calildad y el valor decidimos la acción que hacemos</p>
+        <h4 id="Evaluar-el-valor-de-negocio">
+          <a
+            href="#Evaluar-el-valor-de-negocio"
+            class="headerlink"
+            title="Evaluar el valor de negocio"
+          ></a
+          >Evaluar el valor de negocio
+        </h4>
+        <ul>
+          <li>Uso del sistema</li>
+          <li>Proocesos de negocio soportados</li>
+          <li>Confiabilidad del sistema</li>
+          <li>Salidas del sistema</li>
+        </ul>
+        <h4 id="Evaluar-la-perspectiva-tecnica">
+          <a
+            href="#Evaluar-la-perspectiva-tecnica"
+            class="headerlink"
+            title="Evaluar la perspectiva técnica"
+          ></a
+          >Evaluar la perspectiva técnica
+        </h4>
+        <p>Tanto la aplicación en si mismo y el entorno del mismo</p>
+        <h5 id="Factores-utilizados-en-la-evaluacion-de-la-Aplicacion">
+          <a
+            href="#Factores-utilizados-en-la-evaluacion-de-la-Aplicacion"
+            class="headerlink"
+            title="Factores utilizados en la evaluación de la Aplicación"
+          ></a
+          >Factores utilizados en la evaluación de la Aplicación
+        </h5>
+        <p>
+          Compresión, Documentación, Rendimiento, Lenguaje de programación,
+          Gestión de configuración, Datos de prueba, Habilidades del personal
+        </p>
+        <h5 id="Factores-utilizados-en-la-evaluacion-del-Entorno">
+          <a
+            href="#Factores-utilizados-en-la-evaluacion-del-Entorno"
+            class="headerlink"
+            title="Factores utilizados en la evaluación del Entorno"
+          ></a
+          >Factores utilizados en la evaluación del Entorno
+        </h5>
+        <p>
+          Estabilidad de proveedor, Tasas de fallos de ejecución, Edad,
+          Rendimiento de sistema, Coste de mantenimiento, Interporabilidad
+        </p>
 
-          <div class="order-lg-1 col-lg-9 col-12 post-container">
-            <h1 id="Evolucion-y-Mantenimiento-del-Software">
-              <a
-                href="#Evolucion-y-Mantenimiento-del-Software"
-                class="headerlink"
-                title="Evolución y Mantenimiento del Software"
-              ></a
-              >Evolución y Mantenimiento del Software
-            </h1>
-            <h2 id="Que-es-la-evolucion-del-software">
-              <a
-                href="#Que-es-la-evolucion-del-software"
-                class="headerlink"
-                title="Qué es la evolución del software"
-              ></a
-              >Qué es la evolución del software
-            </h2>
-            <p>
-              Todas las actividades de programación que se orientan a generar
-              una nueva versión de un software a partir de una versión anterior
-              operativa. <strong>M.Lehman</strong>
-            </p>
-            <p>
-              La aplicación de las actividades y procesos de mantenimiento del
-              software que generan una nueva versión operativa de un software,
-              con una funcionalidad de usuario o propiedades cambiadas, a partir
-              de una versión anterior junto con los procesos y actividades de
-              garantía de calidad y con la gestión de esos procesos.
-              <strong>Chapin</strong>
-            </p>
-            <ul>
-              <li>
-                Mantenimiento: <strong>mejora</strong>,
-                <strong>optimización</strong>, <strong>corrección</strong> y
-                <strong>prevención</strong>
-              </li>
-              <li>
-                Evolución: <strong>generación de una nueva versión</strong>
-              </li>
-              <li>
-                Conservación:
-                <strong>mantener operativo un sistema viejo</strong>
-              </li>
-            </ul>
-            <h2 id="Importancia-del-mantenimiento">
-              <a
-                href="#Importancia-del-mantenimiento"
-                class="headerlink"
-                title="Importancia del mantenimiento"
-              ></a
-              >Importancia del mantenimiento
-            </h2>
-            <p>
-              En empresas <strong>95%</strong> de los recursos está dedicados al
-              mantenimiento, los sistemas granders y complejos tienen un largo
-              período de vida. Hay que realizar cambios en el software para
-              corregir errores y para implementar nuevos requisitos que surgen.
-              Se conoce como <strong>Barrera de Mantenimiento</strong>.
-            </p>
-            <h2 id="Cuestiones-asociadas-al-coste">
-              <a
-                href="#Cuestiones-asociadas-al-coste"
-                class="headerlink"
-                title="Cuestiones asociadas al coste"
-              ></a
-              >Cuestiones asociadas al coste
-            </h2>
-            <ul>
-              <li>
-                Analizar los cambios desde la perspectiva técnica y de negocio
-              </li>
-              <li>Los subsistemas no son independientes</li>
-              <li>No se registran las decisiones de diseño original</li>
-              <li>La estructura original se va corrimpiendo por el cambio.</li>
-            </ul>
-            <h2 id="Prediccion-del-mantenimiento">
-              <a
-                href="#Prediccion-del-mantenimiento"
-                class="headerlink"
-                title="Predicción del mantenimiento"
-              ></a
-              >Predicción del mantenimiento
-            </h2>
-            <ul>
-              <li>La relación entre el sistema y su entorno</li>
-              <li>El número y la complejidad de las interfaces del sistema</li>
-            </ul>
-            <h2 id="Proceso-Evolutivo">
-              <a
-                href="#Proceso-Evolutivo"
-                class="headerlink"
-                title="Proceso Evolutivo"
-              ></a
-              >Proceso Evolutivo
-            </h2>
-            <p>
-              En la actualidad, la diferencia entre desarrollo y mantenimiento
-              es irrelevante. La tendencia actual es ver el desarrollo y el
-              mantenimiento dentro de un proceso único continuo y evolutivo. Se
-              conoce al ciclo de vida del software de forma completa y continua.
-            </p>
-            <h2 id="Procesos-de-evolucion">
-              <a
-                href="#Procesos-de-evolucion"
-                class="headerlink"
-                title="Procesos de evolución"
-              ></a
-              >Procesos de evolución
-            </h2>
-            <p>Procesos de volución surge de distintas peticiones de cambio:</p>
-            <ul>
-              <li>Requisitos ya existentes no integrados aún</li>
-              <li>Peticiones de nuevos requisitos</li>
-              <li>Reparaciones de errores</li>
-              <li>
-                Ideas nuevas y mejoras indicadas por el equipo de desarrollo
-              </li>
-            </ul>
-            <p>
-              Los procesos de identificación de cambios y evolución del sistema
-              son cíclicos y continúan durante toda la vida del sistema.
-            </p>
-            <h3 id="Gestion-de-Configuraciones">
-              <a
-                href="#Gestion-de-Configuraciones"
-                class="headerlink"
-                title="Gestión de Configuraciones"
-              ></a
-              >Gestión de Configuraciones
-            </h3>
-            <p>
-              Seguimiento para asegurar de versinoes correctas en cada entrega
-            </p>
-            <h2 id="Mantenimiento-y-su-clasificacion">
-              <a
-                href="#Mantenimiento-y-su-clasificacion"
-                class="headerlink"
-                title="Mantenimiento y su clasificación"
-              ></a
-              >Mantenimiento y su clasificación
-            </h2>
-            <h3 id="Actuaciones-comunes">
-              <a
-                href="#Actuaciones-comunes"
-                class="headerlink"
-                title="Actuaciones comunes"
-              ></a
-              >Actuaciones comunes
-            </h3>
-            <ul>
-              <li>Corrección de defectos</li>
-              <li>Creación de nuevas funcinoalidades</li>
-              <li>Mejora de la funcinoalidad y del rendimiento</li>
-            </ul>
-            <h3 id="Tipos-de-mantenimiento">
-              <a
-                href="#Tipos-de-mantenimiento"
-                class="headerlink"
-                title="Tipos de mantenimiento"
-              ></a
-              >Tipos de mantenimiento
-            </h3>
-            <h4 id="Mantenimiento-perfectivo">
-              <a
-                href="#Mantenimiento-perfectivo"
-                class="headerlink"
-                title="Mantenimiento perfectivo"
-              ></a
-              >Mantenimiento perfectivo
-            </h4>
-            <p>mejorar o añadir nuevas funcinoalidades</p>
-            <h4 id="Mantenimiento-adaptativo">
-              <a
-                href="#Mantenimiento-adaptativo"
-                class="headerlink"
-                title="Mantenimiento adaptativo"
-              ></a
-              >Mantenimiento adaptativo
-            </h4>
-            <p>
-              mejorar o añadir nuevas funcinoalidadesadaptar el sistema a los
-              cambios
-            </p>
-            <h4 id="Mantenimiento-correctivo">
-              <a
-                href="#Mantenimiento-correctivo"
-                class="headerlink"
-                title="Mantenimiento correctivo"
-              ></a
-              >Mantenimiento correctivo
-            </h4>
-            <p>corregir defectos en el hardware o en el software</p>
-            <h4 id="Mantenimiento-preventivo">
-              <a
-                href="#Mantenimiento-preventivo"
-                class="headerlink"
-                title="Mantenimiento preventivo"
-              ></a
-              >Mantenimiento preventivo
-            </h4>
-            <p>facilitar el mantenimiento futuro</p>
-            <h3 id="Metricas-de-prediccion-del-mantenimiento">
-              <a
-                href="#Metricas-de-prediccion-del-mantenimiento"
-                class="headerlink"
-                title="Métricas de predicción del mantenimiento"
-              ></a
-              >Métricas de predicción del mantenimiento
-            </h3>
-            <ul>
-              <li>El número de peticiones de mantenimiento correctivo</li>
-              <li>Tiempo medio requerido para el análisis de impacto</li>
-              <li>
-                Tiempo medio empleado en implementar una petición de cambio
-              </li>
-              <li>El número de peticiones de cambio pendientes</li>
-            </ul>
-            <h2 id="Sistemas-socio-tecnicos">
-              <a
-                href="#Sistemas-socio-tecnicos"
-                class="headerlink"
-                title="Sistemas socio-técnicos"
-              ></a
-              >Sistemas socio-técnicos
-            </h2>
-            <p>Las sistemas que incluyen software son de dos tipos:</p>
-            <ul>
-              <li>Sistemas técnico-informáticos</li>
-              <li><strong>Sistemas socio-técnicos</strong></li>
-            </ul>
-            <h3 id="Caracteristicas-de-los-sistemas-socio">
-              <a
-                href="#Caracteristicas-de-los-sistemas-socio"
-                class="headerlink"
-                title="Características de los sistemas socio"
-              ></a
-              >Características de los sistemas socio
-            </h3>
-            <ul>
-              <li>Propiedades emergentes</li>
-              <li>No deterministas</li>
-              <li>Grado de apoyo a los objetivos organizacionales</li>
-            </ul>
-            <h2 id="Estrategias-de-evolucion-de-un-sistema-heredado">
-              <a
-                href="#Estrategias-de-evolucion-de-un-sistema-heredado"
-                class="headerlink"
-                title="Estrategias de evolución de un sistema heredado"
-              ></a
-              >Estrategias de evolución de un sistema heredado
-            </h2>
-            <ul>
-              <li>Desechar completamente el sistema</li>
-              <li>
-                Dejar el sistema sin cambios y continuar con un mantenimiento
-                regular
-              </li>
-              <li>Reemplazar todo o parte del sistema con un nuevo sistema</li>
-              <li>
-                Hacer <strong>reingeniería</strong> del sistema para mejorar su
-                mantenibilidad
-              </li>
-            </ul>
-            <h2 id="Evaluacion-de-los-sistemas-heredados">
-              <a
-                href="#Evaluacion-de-los-sistemas-heredados"
-                class="headerlink"
-                title="Evaluación de los sistemas heredados"
-              ></a
-              >Evaluación de los sistemas heredados
-            </h2>
-            <h3 id="Perspectiva-tecnica-y-de-negocio">
-              <a
-                href="#Perspectiva-tecnica-y-de-negocio"
-                class="headerlink"
-                title="Perspectiva técnica y de negocio"
-              ></a
-              >Perspectiva técnica y de negocio
-            </h3>
-            <p>Según la calildad y el valor decidimos la acción que hacemos</p>
-            <h4 id="Evaluar-el-valor-de-negocio">
-              <a
-                href="#Evaluar-el-valor-de-negocio"
-                class="headerlink"
-                title="Evaluar el valor de negocio"
-              ></a
-              >Evaluar el valor de negocio
-            </h4>
-            <ul>
-              <li>Uso del sistema</li>
-              <li>Proocesos de negocio soportados</li>
-              <li>Confiabilidad del sistema</li>
-              <li>Salidas del sistema</li>
-            </ul>
-            <h4 id="Evaluar-la-perspectiva-tecnica">
-              <a
-                href="#Evaluar-la-perspectiva-tecnica"
-                class="headerlink"
-                title="Evaluar la perspectiva técnica"
-              ></a
-              >Evaluar la perspectiva técnica
-            </h4>
-            <p>Tanto la aplicación en si mismo y el entorno del mismo</p>
-            <h5 id="Factores-utilizados-en-la-evaluacion-de-la-Aplicacion">
-              <a
-                href="#Factores-utilizados-en-la-evaluacion-de-la-Aplicacion"
-                class="headerlink"
-                title="Factores utilizados en la evaluación de la Aplicación"
-              ></a
-              >Factores utilizados en la evaluación de la Aplicación
-            </h5>
-            <p>
-              Compresión, Documentación, Rendimiento, Lenguaje de programación,
-              Gestión de configuración, Datos de prueba, Habilidades del
-              personal
-            </p>
-            <h5 id="Factores-utilizados-en-la-evaluacion-del-Entorno">
-              <a
-                href="#Factores-utilizados-en-la-evaluacion-del-Entorno"
-                class="headerlink"
-                title="Factores utilizados en la evaluación del Entorno"
-              ></a
-              >Factores utilizados en la evaluación del Entorno
-            </h5>
-            <p>
-              Estabilidad de proveedor, Tasas de fallos de ejecución, Edad,
-              Rendimiento de sistema, Coste de mantenimiento, Interporabilidad
-            </p>
+        <hr />
 
-            <hr />
+        <ul class="list-group">
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Evolucion-De-Calidad/">
+              Evolución de la calidad
+            </a>
+          </li>
 
-            <ul class="list-group">
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/Evolucion-De-Calidad/">
-                  Evolución de la calidad
-                </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Gestion-Configuracion/">
+              Gestion de Configuración
+            </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/Gestion-Configuracion/">
-                  Gestion de Configuración
-                </a>
-              </li>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Lehman-laws/"> Lehman Laws </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/Lehman-laws/"> Lehman Laws </a>
-              </li>
-
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/SOLID/">
-                  SOLID Design Principles
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row justify-content-center">
-          <!-- Sidebar Container -->
-
-          <div class="col-lg-8` col-md-10 sidebar-container">
-            <!-- Friends Blog -->
-          </div>
-        </div>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/SOLID/">
+              SOLID Design Principles
+            </a>
+          </li>
+        </ul>
       </div>
     </article>
     <!-- Custom Theme JavaScript -->

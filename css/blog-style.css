@@ -893,53 +893,6 @@ img::-moz-selection {
   }
 }
 
-.toc-col {
-  position: sticky;
-  position: -webkit-sticky;
-  top: 70px; /* required */
-  padding: 0;
-  margin-top: 30px;
-  list-style: none;
-  color: darkgrey;
-  border-left: #eee 3px solid;
-  padding-left: 12px;
-}
-
-@media only screen and (min-width: 992px) {
-  .toc-col {
-    max-height: calc(100vh - 100px);
-    overflow-y: auto;
-  }
-}
-
-@media only screen and (max-width: 992px) {
-  .toc-col {
-    position: static !important;
-  }
-}
-
-.toc-col > ol {
-  list-style: none;
-  padding-left: 0;
-  overflow-x: hidden;
-}
-
-.toc-col li > ol {
-  padding-left: 8px;
-  list-style: none;
-}
-
-.toc-col .toc-level-2 > a {
-  color: #0085a1;
-  font-size: 0.9em;
-}
-
-.toc-col li ol a {
-  color: #555;
-  font-size: 0.85em;
-  padding-left: 5px;
-}
-
 .post-title-haojen {
   display: none;
 }

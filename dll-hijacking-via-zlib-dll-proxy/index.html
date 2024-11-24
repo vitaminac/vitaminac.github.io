@@ -144,70 +144,57 @@
     />
 
     <!-- Post Content -->
-    <article>
-      <div class="container">
-        <div class="row">
-          <!-- Post Container -->
-          <div class="order-lg-2 col-lg-3 col-12 toc-col" style="z-index: 1">
-            <ol class="toc">
-              <li class="toc-item toc-level-3">
-                <a class="toc-link" href="#Reference"
-                  ><span class="toc-text">Reference</span></a
-                >
-              </li>
-            </ol>
-          </div>
-
-          <div class="order-lg-1 col-lg-9 col-12 post-container">
-            <p>
-              DLL hijacking involves manipulating a program to load a DLL that
-              contains the desired code. We will use a simple technique here for
-              ilustration: DLL replacement. We will build a DLL that perserve
-              the same functionlity and interface of original DLL. So we can
-              swap the original DLL with a the one built by us that contains
-              additional code.
-            </p>
-            <p>
-              Assuming the vulnerable program has dependency on
-              <code>zlib1.dll</code>, which is the open source library. We can
-              first check the version from file properties and download the
-              corresponding version of source code for example
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://github.com/madler/zlib/tree/v1.2.1"
-                >zlib v1.2.1</a
-              >.
-            </p>
-            <p>
-              Execute <code>cd</code> into source source folder and then execute
-              <code>nmake -f win32/Makefile.msc</code>, we will obtain
-              <a href="/downloads/code/dll-hijacking/zlib.lib">zlib.lib</a>,
-              <a href="/downloads/code/dll-hijacking/zlib1.res">zlib1.res</a>.
-              We can now build our <code>zlib1.dll</code>. Put our source code
-              <a href="/downloads/code/dll-hijacking/zlib1.c">zlib1.c</a> with
-              additional instantiation logic and copy <code>zlib.lib</code>,
-              <code>zlib1.res</code>,
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://github.com/madler/zlib/blob/v1.2.1/win32/zlib.def"
-                >zlib.def</a
-              >
-              into the same folder and then execute following commands
-            </p>
-            <pre><code>cl /c /nologo /O2 /MD /utf-8 zlib1.c
+    <article class="container" style="width: 100%; max-width: 100%">
+      <!-- Post Container -->
+      <div class="post-container">
+        <p>
+          DLL hijacking involves manipulating a program to load a DLL that
+          contains the desired code. We will use a simple technique here for
+          ilustration: DLL replacement. We will build a DLL that perserve the
+          same functionlity and interface of original DLL. So we can swap the
+          original DLL with a the one built by us that contains additional code.
+        </p>
+        <p>
+          Assuming the vulnerable program has dependency on
+          <code>zlib1.dll</code>, which is the open source library. We can first
+          check the version from file properties and download the corresponding
+          version of source code for example
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://github.com/madler/zlib/tree/v1.2.1"
+            >zlib v1.2.1</a
+          >.
+        </p>
+        <p>
+          Execute <code>cd</code> into source source folder and then execute
+          <code>nmake -f win32/Makefile.msc</code>, we will obtain
+          <a href="/downloads/code/dll-hijacking/zlib.lib">zlib.lib</a>,
+          <a href="/downloads/code/dll-hijacking/zlib1.res">zlib1.res</a>. We
+          can now build our <code>zlib1.dll</code>. Put our source code
+          <a href="/downloads/code/dll-hijacking/zlib1.c">zlib1.c</a> with
+          additional instantiation logic and copy <code>zlib.lib</code>,
+          <code>zlib1.res</code>,
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://github.com/madler/zlib/blob/v1.2.1/win32/zlib.def"
+            >zlib.def</a
+          >
+          into the same folder and then execute following commands
+        </p>
+        <pre><code>cl /c /nologo /O2 /MD /utf-8 zlib1.c
 link /NOLOGO /RELEASE /DEF:zlib.def /DLL /IMPLIB:zdll.lib /OUT:zlib1.dll zlib1.obj zlib.lib zlib1.res User32.lib Gdi32.lib
 </code></pre>
-            <p>
-              In case we don’t have module-definition or <code>.def</code> file
-              then we will need to modify the source code of our proxy DLL
-              <code>zlib1.c</code>. We need to first execute
-              <code>dumpbin /EXPORTS zlib1.dll</code> so we will obtain the
-              export table of original <code>zlib1.dll</code>. The output should
-              be something similar to following:
-            </p>
-            <pre><code>      1    0 00001000 adler32
+        <p>
+          In case we don’t have module-definition or <code>.def</code> file then
+          we will need to modify the source code of our proxy DLL
+          <code>zlib1.c</code>. We need to first execute
+          <code>dumpbin /EXPORTS zlib1.dll</code> so we will obtain the export
+          table of original <code>zlib1.dll</code>. The output should be
+          something similar to following:
+        </p>
+        <pre><code>      1    0 00001000 adler32
       2    1 000011E0 compress
       3    2 00001130 compress2
       4    3 00001200 compressBound
@@ -259,162 +246,152 @@ link /NOLOGO /RELEASE /DEF:zlib.def /DLL /IMPLIB:zdll.lib /OUT:zlib1.dll zlib1.o
      50   31 00009110 zlibCompileFlags
      51   32 00009100 zlibVersion
 </code></pre>
-            <p>
-              for every export attribute we will need a add a line to our
-              <code>zlib1.c</code>
-            </p>
-            <pre><code>#pragma comment(linker, &quot;/export:_&lt;export attribute&gt;&quot;)
+        <p>
+          for every export attribute we will need a add a line to our
+          <code>zlib1.c</code>
+        </p>
+        <pre><code>#pragma comment(linker, &quot;/export:_&lt;export attribute&gt;&quot;)
 </code></pre>
-            <p>for example</p>
-            <pre><code>#pragma comment(linker, &quot;/export:_zlibVersion&quot;)
+        <p>for example</p>
+        <pre><code>#pragma comment(linker, &quot;/export:_zlibVersion&quot;)
 </code></pre>
-            <p>
-              We place generated <code>zlib1.dll</code> into program directory
-              and replace the original one, our logic will be executed when
-              program try to load <code>zlib1.dll</code>.
-            </p>
-            <p>
-              Alternatively for any other DLL even it is not open source, we can
-              build a proxy DLL that redirect all the calls to original DLL
-              file. There are automatic tool for generating the proxy DLL.
-            </p>
-            <h3 id="Reference">
-              <a href="#Reference" class="headerlink" title="Reference"></a
-              >Reference
-            </h3>
-            <ul>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://www.exploit-db.com/docs/english/13140-api-interception-via-dll-redirection.pdf"
-                  >API Interception via DLL Redirection</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation/dll-hijacking#dll-proxifying"
-                  >HackTricks: Dll Hijacking</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://stackoverflow.com/a/45744068/9980245"
-                  >Can we export a function made available through a static
-                  library</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://social.msdn.microsoft.com/Forums/vstudio/en-US/840b6359-c3aa-44b8-b3ef-50e3556e6430/creating-dll-with-cl-and-linker?forum=vclanguage"
-                  >creating dll with cl and linker</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://docs.microsoft.com/en-us/cpp/build/reference/md-mt-ld-use-run-time-library?view=msvc-170"
-                  >&#x2F;MD, &#x2F;MT, &#x2F;LD (Use Run-Time Library)</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://docs.microsoft.com/en-us/cpp/build/reference/compiler-options-listed-alphabetically?view=msvc-170"
-                  >Compiler options listed alphabetically</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://learn.microsoft.com/en-us/cpp/build/exporting-from-a-dll-using-def-files"
-                  >Exporting from a DLL Using DEF Files</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://docs.microsoft.com/en-us/cpp/build/reference/def-specify-module-definition-file?view=msvc-170"
-                  >&#x2F;DEF (Specify Module-Definition File)</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://sim0n.wordpress.com/2009/03/29/c-creating-a-window-from-a-dll/"
-                  >c++ creating a window from a dll</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://www.codeproject.com/Articles/16541/Create-your-Proxy-DLLs-automatically"
-                  >Create your Proxy DLLs automatically</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://www.codeproject.com/Articles/1179147/ProxiFy-Automatic-Proxy-DLL-Generation"
-                  >ProxiFy - Automatic Proxy DLL Generation</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://github.com/Flangvik/SharpDllProxy"
-                  >SharpDllProxy</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://www.cnblogs.com/hetianlab/p/14031412.html"
-                  >DLL代理转发</a
-                >
-              </li>
-            </ul>
+        <p>
+          We place generated <code>zlib1.dll</code> into program directory and
+          replace the original one, our logic will be executed when program try
+          to load <code>zlib1.dll</code>.
+        </p>
+        <p>
+          Alternatively for any other DLL even it is not open source, we can
+          build a proxy DLL that redirect all the calls to original DLL file.
+          There are automatic tool for generating the proxy DLL.
+        </p>
+        <h3 id="Reference">
+          <a href="#Reference" class="headerlink" title="Reference"></a
+          >Reference
+        </h3>
+        <ul>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://www.exploit-db.com/docs/english/13140-api-interception-via-dll-redirection.pdf"
+              >API Interception via DLL Redirection</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation/dll-hijacking#dll-proxifying"
+              >HackTricks: Dll Hijacking</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://stackoverflow.com/a/45744068/9980245"
+              >Can we export a function made available through a static
+              library</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://social.msdn.microsoft.com/Forums/vstudio/en-US/840b6359-c3aa-44b8-b3ef-50e3556e6430/creating-dll-with-cl-and-linker?forum=vclanguage"
+              >creating dll with cl and linker</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://docs.microsoft.com/en-us/cpp/build/reference/md-mt-ld-use-run-time-library?view=msvc-170"
+              >&#x2F;MD, &#x2F;MT, &#x2F;LD (Use Run-Time Library)</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://docs.microsoft.com/en-us/cpp/build/reference/compiler-options-listed-alphabetically?view=msvc-170"
+              >Compiler options listed alphabetically</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://learn.microsoft.com/en-us/cpp/build/exporting-from-a-dll-using-def-files"
+              >Exporting from a DLL Using DEF Files</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://docs.microsoft.com/en-us/cpp/build/reference/def-specify-module-definition-file?view=msvc-170"
+              >&#x2F;DEF (Specify Module-Definition File)</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://sim0n.wordpress.com/2009/03/29/c-creating-a-window-from-a-dll/"
+              >c++ creating a window from a dll</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://www.codeproject.com/Articles/16541/Create-your-Proxy-DLLs-automatically"
+              >Create your Proxy DLLs automatically</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://www.codeproject.com/Articles/1179147/ProxiFy-Automatic-Proxy-DLL-Generation"
+              >ProxiFy - Automatic Proxy DLL Generation</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://github.com/Flangvik/SharpDllProxy"
+              >SharpDllProxy</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://www.cnblogs.com/hetianlab/p/14031412.html"
+              >DLL代理转发</a
+            >
+          </li>
+        </ul>
 
-            <hr />
+        <hr />
 
-            <ul class="list-group">
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/QQTang/"> 浅谈QQ堂 </a>
-              </li>
+        <ul class="list-group">
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/QQTang/"> 浅谈QQ堂 </a>
+          </li>
 
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/cheating/"> 外挂开发原理 </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row justify-content-center">
-          <!-- Sidebar Container -->
-
-          <div class="col-lg-8` col-md-10 sidebar-container">
-            <!-- Friends Blog -->
-          </div>
-        </div>
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/cheating/"> 外挂开发原理 </a>
+          </li>
+        </ul>
       </div>
     </article>
     <!-- Custom Theme JavaScript -->

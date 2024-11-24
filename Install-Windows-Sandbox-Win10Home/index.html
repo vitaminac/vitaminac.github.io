@@ -146,18 +146,11 @@
     />
 
     <!-- Post Content -->
-    <article>
-      <div class="container">
-        <div class="row">
-          <!-- Post Container -->
-          <div
-            class="order-lg-2 col-lg-3 col-12 toc-col"
-            style="z-index: 1"
-          ></div>
-
-          <div class="order-lg-1 col-lg-9 col-12 post-container">
-            <p>save the following command as bat file and then execute</p>
-            <pre><code>@echo off
+    <article class="container" style="width: 100%; max-width: 100%">
+      <!-- Post Container -->
+      <div class="post-container">
+        <p>save the following command as bat file and then execute</p>
+        <pre><code>@echo off
 
 echo Checking for permissions
 &gt;nul 2&gt;&amp;1 &quot;%SYSTEMROOT%\system32\cacls.exe&quot; &quot;%SYSTEMROOT%\system32\config\system&quot;
@@ -202,30 +195,17 @@ Dism /online /enable-feature /featurename:Containers-DisposableClientVM /LimitAc
 pause
 </code></pre>
 
-            <hr />
+        <hr />
 
-            <ul class="list-group">
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a
-                  target="_parent"
-                  href="/posts/Install-DockerDesktop-Win10Home/"
-                >
-                  Install Docker Desktop in Windows10 Home Edition
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row justify-content-center">
-          <!-- Sidebar Container -->
-
-          <div class="col-lg-8` col-md-10 sidebar-container">
-            <!-- Friends Blog -->
-          </div>
-        </div>
+        <ul class="list-group">
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Install-DockerDesktop-Win10Home/">
+              Install Docker Desktop in Windows10 Home Edition
+            </a>
+          </li>
+        </ul>
       </div>
     </article>
     <!-- Custom Theme JavaScript -->

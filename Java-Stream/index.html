@@ -135,99 +135,75 @@
     />
 
     <!-- Post Content -->
-    <article>
-      <div class="container">
-        <div class="row">
-          <!-- Post Container -->
-          <div class="order-lg-2 col-lg-3 col-12 toc-col" style="z-index: 1">
-            <ol class="toc">
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#Streams"
-                  ><span class="toc-text">Streams</span></a
-                >
-              </li>
-            </ol>
-          </div>
-
-          <div class="order-lg-1 col-lg-9 col-12 post-container">
-            <h2 id="Streams">
-              <a href="#Streams" class="headerlink" title="Streams"></a>Streams
-            </h2>
-            <p>
-              A stream represents a sequence of elements and can perform a
-              series of operations on them
-            </p>
-            <pre><code>strings.stream()
+    <article class="container" style="width: 100%; max-width: 100%">
+      <!-- Post Container -->
+      <div class="post-container">
+        <h2 id="Streams">
+          <a href="#Streams" class="headerlink" title="Streams"></a>Streams
+        </h2>
+        <p>
+          A stream represents a sequence of elements and can perform a series of
+          operations on them
+        </p>
+        <pre><code>strings.stream()
 .filter(s -&gt; !s.equals(&quot;&quot;))
 .map(String::toUpperCase)
 .sorted()
 .forEach(System.out::println);
 </code></pre>
-            <p>Operations on streams can be intermediate or final.</p>
-            <ul>
-              <li>
-                Intermediate: they return a stream to be able process them into
-                chain.
-              </li>
-              <li>
-                Finals: they return either void or a result that does not it is
-                a stream.
-              </li>
-            </ul>
-            <p>
-              These operations must work without interference and stateless.
-            </p>
-            <ul>
-              <li>
-                Intermediate operations will not be executed if there is no
-                final operation.
-              </li>
-              <li>The chain operation is followed vertically.</li>
-              <li>
-                Streams are closed as soon as we execute a terminal operation.
-              </li>
-              <li>
-                Parallel streams can improve when we consider a large data size.
-              </li>
-              <li>
-                They are implemented with Fork&#x2F;Join pool, with all the
-                advantages and disadvantages that this entails.
-              </li>
-            </ul>
-            <p>
-              From the viewpoint of parallelism, an important benefit of using
-              Java streams when possible is that the pipeline can be made to
-              execute in parallel by designating the source to be a parallel
-              stream, by simply replacing <strong>.stream()</strong> by
-              <strong>.parallelStream()</strong> or
-              <strong>Stream.of(xxx).parallel</strong>. This form of functional
-              parallelism is a major convenience for the programmer, since they
-              do not need to worry about explicitly allocating intermediate
-              collections, or about ensuring that parallel accesses to data
-              collections are properly synchronized.
-            </p>
+        <p>Operations on streams can be intermediate or final.</p>
+        <ul>
+          <li>
+            Intermediate: they return a stream to be able process them into
+            chain.
+          </li>
+          <li>
+            Finals: they return either void or a result that does not it is a
+            stream.
+          </li>
+        </ul>
+        <p>These operations must work without interference and stateless.</p>
+        <ul>
+          <li>
+            Intermediate operations will not be executed if there is no final
+            operation.
+          </li>
+          <li>The chain operation is followed vertically.</li>
+          <li>
+            Streams are closed as soon as we execute a terminal operation.
+          </li>
+          <li>
+            Parallel streams can improve when we consider a large data size.
+          </li>
+          <li>
+            They are implemented with Fork&#x2F;Join pool, with all the
+            advantages and disadvantages that this entails.
+          </li>
+        </ul>
+        <p>
+          From the viewpoint of parallelism, an important benefit of using Java
+          streams when possible is that the pipeline can be made to execute in
+          parallel by designating the source to be a parallel stream, by simply
+          replacing <strong>.stream()</strong> by
+          <strong>.parallelStream()</strong> or
+          <strong>Stream.of(xxx).parallel</strong>. This form of functional
+          parallelism is a major convenience for the programmer, since they do
+          not need to worry about explicitly allocating intermediate
+          collections, or about ensuring that parallel accesses to data
+          collections are properly synchronized.
+        </p>
 
-            <hr />
+        <hr />
 
-            <ul class="list-group">
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/Java-Concurrent-Programming/">
-                  Java Concurrent Programming
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row justify-content-center">
-          <!-- Sidebar Container -->
-
-          <div class="col-lg-8` col-md-10 sidebar-container">
-            <!-- Friends Blog -->
-          </div>
-        </div>
+        <ul class="list-group">
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Java-Concurrent-Programming/">
+              Java Concurrent Programming
+            </a>
+          </li>
+        </ul>
       </div>
     </article>
     <!-- Custom Theme JavaScript -->

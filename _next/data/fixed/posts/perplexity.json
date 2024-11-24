@@ -14,6 +14,7 @@
       ],
       "isLegacy": true,
       "lang": "en",
+      "tocHtml": "<ol>\n<li><a href=\"/perplexity/index.html#Introduction\" target=\"perplexity\">Introduction</a></li>\n<li><a href=\"/perplexity/index.html#Defition-of-perplexity-of-discrete-probability-distribution\" target=\"perplexity\">Defition of perplexity of discrete probability distribution</a></li>\n<li><a href=\"/perplexity/index.html#Evaluating-probability-model-using-perplexity\" target=\"perplexity\">Evaluating probability model using perplexity</a></li>\n<li><a href=\"/perplexity/index.html#Calcuting-of-perplexity-of-a-tokenized-sequence\" target=\"perplexity\">Calcuting of perplexity of a tokenized sequence</a></li>\n<li><a href=\"/perplexity/index.html#Reference\" target=\"perplexity\">Reference</a></li>\n</ol>",
       "path": "/perplexity/index.html"
     },
     "lang": "en",

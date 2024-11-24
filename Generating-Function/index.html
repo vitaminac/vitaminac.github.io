@@ -138,422 +138,313 @@
     />
 
     <!-- Post Content -->
-    <article>
-      <div class="container">
-        <div class="row">
-          <!-- Post Container -->
-          <div class="order-lg-2 col-lg-3 col-12 toc-col" style="z-index: 1">
-            <ol class="toc">
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#Definition"
-                  ><span class="toc-text">Definition</span></a
-                >
-              </li>
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#Properties"
-                  ><span class="toc-text">Properties</span></a
-                >
-                <ol class="toc-child">
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Scaling"
-                      ><span class="toc-text">Scaling</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Addition"
-                      ><span class="toc-text">Addition</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Right-Shifting"
-                      ><span class="toc-text">Right Shifting</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Differentiation"
-                      ><span class="toc-text">Differentiation</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Convolution"
-                      ><span class="toc-text">Convolution</span></a
-                    >
-                    <ol class="toc-child">
-                      <li class="toc-item toc-level-4">
-                        <a class="toc-link" href="#Proof"
-                          ><span class="toc-text">Proof</span></a
-                        >
-                      </li>
-                    </ol>
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Summation"
-                      ><span class="toc-text">Summation</span></a
-                    >
-                    <ol class="toc-child">
-                      <li class="toc-item toc-level-4">
-                        <a class="toc-link" href="#Proof-1"
-                          ><span class="toc-text">Proof</span></a
-                        >
-                      </li>
-                    </ol>
-                  </li>
-                </ol>
-              </li>
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#Find-the-nth-element"
-                  ><span class="toc-text">Find the nth element</span></a
-                >
-                <ol class="toc-child">
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Taylor-Series"
-                      ><span class="toc-text">Taylor Series</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Partial-Fractions"
-                      ><span class="toc-text">Partial Fractions</span></a
-                    >
-                  </li>
-                </ol>
-              </li>
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#Reference"
-                  ><span class="toc-text">Reference</span></a
-                >
-              </li>
-            </ol>
-          </div>
+    <article class="container" style="width: 100%; max-width: 100%">
+      <!-- Post Container -->
+      <div class="post-container">
+        <h2 id="Definition">
+          <a href="#Definition" class="headerlink" title="Definition"></a
+          >Definition
+        </h2>
+        <p>
+          We define the generating function as the characteristic function which
+          encodes an infinite sequence
+        </p>
+        <p>$$<br />\langle g_0, g_1, g_2, g_3 \dots \rangle<br />$$</p>
+        <p>as below</p>
+        <p>$$<br />G(x) &#x3D; \sum_{i &#x3D; 0}^{\infty} g_{i}x^{i}<br />$$</p>
+        <p>
+          For example, the generating function of the following sequences are
+        </p>
+        <p>
+          $$<br />\begin{split}<br />\langle 0, 0, 0, 0, \dots \rangle
+          \longleftrightarrow G(x) &amp;&#x3D; 0 + 0x + 0x^2 + 0x^3 + \dots
+          &#x3D; 0\\\\<br />\langle 1, 0, 0, 0, \dots \rangle
+          \longleftrightarrow G(x) &amp;&#x3D; 1 + 0x + 0x^2 + 0x^3 + \dots
+          &#x3D; 1\\\\<br />\langle 3, 2, 1, 0, \dots \rangle
+          \longleftrightarrow G(x) &amp;&#x3D; 3 + 2x + 1x^2 + 0x^3 + \dots
+          &#x3D; 3 + 2x + x^2\\\\<br />\langle 1, 1, 1, 1, \dots \rangle
+          \longleftrightarrow G(x) &amp;&#x3D; 1 + x + x^2 + x^3 + \dots &#x3D;
+          \frac{1}{1 - x}\\\\<br />\end{split}<br />$$
+        </p>
+        <p>Thee last equation does not hold when</p>
+        <p>$$<br />|x| \ge 1<br />$$</p>
+        <p>
+          But in the context of generating functions, we regard infinite series
+          as formal algebraic objects and define generating function as symbolic
+          identities that hold for purely algebraic reasons. We won’t worry
+          about convergence issues for now.
+        </p>
+        <p>Some other examples are</p>
+        <p>
+          $$<br />\langle 1, -1, 1, -1, \dots \rangle \longleftrightarrow G(x)
+          &#x3D; 1 - x + x^2 - x^3 + \dots &#x3D; \frac{1}{1 + x}\\\\<br />\langle
+          1, a, a^2, a^3, \dots \rangle \longleftrightarrow G(x) &#x3D; 1 + ax +
+          a^2 x^2 + a^3 x^3 + \dots &#x3D; \frac{1}{1 - ax}\\\\<br />\langle 1,
+          0, 1, 0, 1, 0, \dots \rangle \longleftrightarrow G(x) &#x3D; 1 + x^2 +
+          x^4 + \dots &#x3D; \frac{1}{1 - x^2}\\\\<br />$$
+        </p>
+        <h2 id="Properties">
+          <a href="#Properties" class="headerlink" title="Properties"></a
+          >Properties
+        </h2>
+        <h3 id="Scaling">
+          <a href="#Scaling" class="headerlink" title="Scaling"></a>Scaling
+        </h3>
+        <p>If</p>
+        <p>
+          $$<br />\langle g_0, g_1, g_2, g_3, \dots \rangle \longleftrightarrow
+          G(x)\\\\<br />$$
+        </p>
+        <p>then</p>
+        <p>
+          $$<br />\langle c \cdot g_0, c \cdot g_1, c \cdot g_2, c \cdot g_3,
+          \dots \rangle \longleftrightarrow H(x) &#x3D; \sum_{i &#x3D;
+          0}^{\infty} c \cdot g_{i}x^{i} &#x3D; c \cdot \sum_{i &#x3D;
+          0}^{\infty} g_{i}x^{i} &#x3D; c \cdot G(x)\\\\<br />$$
+        </p>
+        <p>For Example</p>
+        <p>
+          $$<br />2 \cdot \langle 1, 0, 1, 0, 1, 0, \dots \rangle &#x3D; \langle
+          2, 0, 2, 0, 2, 0, \dots \rangle \longleftrightarrow G(x) &#x3D; 2 +
+          2x^2 + 2x^4 + \dots &#x3D; 2 \cdot \frac{1}{1 - x^2} &#x3D; \frac{2}{1
+          - x^2}\\\\<br />$$
+        </p>
+        <h3 id="Addition">
+          <a href="#Addition" class="headerlink" title="Addition"></a>Addition
+        </h3>
+        <p>If</p>
+        <p>
+          $$<br />\langle g_0, g_1, g_2, g_3, \dots \rangle \longleftrightarrow
+          G(x)\\\\<br />\langle h_0, h_1, h_2, h_3, \dots \rangle
+          \longleftrightarrow H(x)\\\\<br />$$
+        </p>
+        <p>then</p>
+        <p>
+          $$<br />\langle g_0 + h_0, g_1 + h_1, g_2 + h_2, g_3 + h_3, \dots
+          \rangle \longleftrightarrow \sum_{i &#x3D; 0}^{\infty} (g_{i} + h_{i})
+          \cdot x^{i} &#x3D; \sum_{i &#x3D; 0}^{\infty} g_{i}x^{i} + \sum_{i
+          &#x3D; 0}^{\infty} h_{i}x^{i} &#x3D; G(x) + H(x)\\\\<br />$$
+        </p>
+        <p>For Example</p>
+        <p>
+          $$<br />\langle 1, 1, 1, 1, \dots \rangle + \langle 1, -1, 1, -1,
+          \dots \rangle &#x3D; \langle 2, 0, 2, 0, \dots \rangle
+          \longleftrightarrow G(x) &#x3D; \frac{1}{1 - x} + \frac{1}{1 + x}
+          &#x3D; \frac{2}{1 - x^2}\\\\<br />$$
+        </p>
+        <h3 id="Right-Shifting">
+          <a
+            href="#Right-Shifting"
+            class="headerlink"
+            title="Right Shifting"
+          ></a
+          >Right Shifting
+        </h3>
+        <p>If</p>
+        <p>
+          $$<br />\langle g_0, g_1, g_2, g_3, \dots \rangle \longleftrightarrow
+          G(x)\\\\<br />$$
+        </p>
+        <p>then the sequence by adding k leading zeros</p>
+        <p>
+          $$<br />\langle 0, 0, \dots, 0, g_0, g_1, g_2, g_3, \dots \rangle
+          \implies x^k \cdot G(x) &#x3D; \sum_{i &#x3D; 0}^{\infty}
+          g_{i}x^{i}x^{k} &#x3D; g_{0}x^{k} + g_{1}x^{k + 1} + g_{2}x^{k + 2} +
+          g_{3}x^{k + 3} + \dots\\\\<br />$$
+        </p>
+        <p>For Example</p>
+        <p>
+          $$<br />\langle 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, \dots \rangle &#x3D;
+          \frac{x^4}{1 - x}<br />$$
+        </p>
+        <h3 id="Differentiation">
+          <a
+            href="#Differentiation"
+            class="headerlink"
+            title="Differentiation"
+          ></a
+          >Differentiation
+        </h3>
+        <p>If</p>
+        <p>
+          $$<br />\langle g_0, g_1, g_2, g_3, \dots \rangle \longleftrightarrow
+          G(x)\\\\<br />$$
+        </p>
+        <p>then</p>
+        <p>
+          $$<br />G^{\prime}(x) &#x3D; \frac{d}{dx}(g_{0} + g_{1}x + g_{2}x^{2}
+          + g_{3}x^{3} + g_{4}x^{4} + \dots) \longleftrightarrow \langle g_1, 2
+          g_2, 3 g_3, 4 g_4, \dots \rangle<br />$$
+        </p>
+        <p>For Example</p>
+        <p>
+          $$<br />\begin{split}<br />&amp; \langle 1, 1, 1, 1, \dots \rangle
+          \longleftrightarrow G(x) &#x3D; \frac{1}{1 - x}\\\\<br />\text{Differentiation}
+          \quad &amp; \langle 1, 2, 3, 4, \dots \rangle \longleftrightarrow 1 +
+          2x + 3x^2 + 4x^3 + \dots &#x3D; \frac{d}{dx}(1 + x + x^2 + x^3 +
+          \dots) &#x3D; \frac{d}{dx}{\frac{1}{1 - x}} &#x3D; \frac{1}{(1 -
+          x)^2}\\\\<br />\text{Right Shifting} \quad &amp; \langle 0, 1, 2, 3,
+          4, \dots \rangle \longleftrightarrow \frac{x}{(1 - x)^2}\\\\<br />\text{Differentiation}
+          \quad &amp; \langle 1, 4, 9, 16, \dots \rangle \longleftrightarrow
+          \frac{d}{dx}{\frac{x}{(1 - x)^2}} &#x3D; \frac{1 + x}{(1 -
+          x)^3}\\\\<br />\text{Right Shifting} \quad &amp; \langle 0, 1, 4, 9,
+          16, \dots \rangle \longleftrightarrow x \cdot \frac{1 + x}{(1 - x)^3}
+          &#x3D; \frac{x(1 + x)}{(1 - x)^3}<br />\end{split}<br />$$
+        </p>
+        <p>So, we have found the sequence of squares</p>
+        <h3 id="Convolution">
+          <a href="#Convolution" class="headerlink" title="Convolution"></a
+          >Convolution
+        </h3>
+        <p>If</p>
+        <p>
+          $$<br />\langle g_0, g_1, g_2, g_3, \dots \rangle \longleftrightarrow
+          G(x)\\\\<br />\langle h_0, h_1, h_2, h_3, \dots \rangle
+          \longleftrightarrow H(x)\\\\<br />$$
+        </p>
+        <p>then</p>
+        <p>
+          $$<br />G(x) * H(x) &#x3D; \sum_{i &#x3D; 0}^{\infty} c_{i}x^{i}<br />$$
+        </p>
+        <p>where</p>
+        <p>$$<br />c_n :&#x3D; \sum_{i &#x3D; 0}^{n} g_{i}h_{n - i}<br />$$</p>
+        <h4 id="Proof">
+          <a href="#Proof" class="headerlink" title="Proof"></a>Proof
+        </h4>
+        <p>
+          $$<br />\begin{array}{l|lllll}<br />
+          &amp; h_{0}x^{0} &amp; h_{1}x^{1} &amp; h_{2}x^{2} &amp; h_{3}x^{3}
+          &amp; \dots\\\\<br />\hline<br />g_{0}x^{0} &amp; g_{0}h_{0}x^{0}
+          &amp; g_{0}h_{1}x^{1} &amp; g_{0}h_{2}x^{2} &amp; g_{0}h_{3}x^{3}
+          &amp; \\\\<br />g_{1}x^{1} &amp; g_{1}h_{0}x^{1} &amp; g_{1}h_{1}x^{2}
+          &amp; g_{1}h_{2}x^{3} &amp; \dots &amp; \\\\<br />g_{2}x^{2} &amp;
+          g_{2}h_{0}x^{2} &amp; g_{2}h_{1}x^{3} &amp; \dots &amp; &amp; \\\\<br />g_{3}x^{3}
+          &amp; g_{3}h_{0}x^{3} &amp; \dots &amp; &amp; &amp; \\\\<br />\vdots
+          &amp; \dots &amp; &amp; &amp; &amp;<br />\end{array}<br />$$
+        </p>
+        <p>
+          We notice that all terms involving the same power of $x$ lie on a
+          diagonal.
+        </p>
+        <h3 id="Summation">
+          <a href="#Summation" class="headerlink" title="Summation"></a
+          >Summation
+        </h3>
+        <p>If</p>
+        <p>
+          $$<br />\langle g_0, g_1, g_2, g_3, \dots \rangle \longleftrightarrow
+          G(x)\\\\<br />$$
+        </p>
+        <p>then</p>
+        <p>
+          $$<br />\langle s_0, s_1, s_2, s_3, \dots \rangle \longleftrightarrow
+          \frac{G(x)}{1 - x}\\\\<br />$$
+        </p>
+        <p>where</p>
+        <p>$$<br />s_n :&#x3D; \sum_{i &#x3D; 0}^{n} g_{i}<br />$$</p>
+        <p>For Example</p>
+        <p>
+          $$<br />\frac{1}{1 - x} \frac{x(1 + x)}{(1 - x)^3} &#x3D; \frac{x(1 +
+          x)}{(1 - x)^4}<br />$$
+        </p>
+        <p>
+          is the generating function for the sequence where the nth element is
+        </p>
+        <p>$$<br />s_n &#x3D; \sum_{i&#x3D;0}^{n} i^2<br />$$</p>
+        <h4 id="Proof-1">
+          <a href="#Proof-1" class="headerlink" title="Proof"></a>Proof
+        </h4>
+        <p>For any sequence represented by $G(x)$, we multiply with</p>
+        <p>
+          $$<br />\frac{1}{1 - x} \longleftrightarrow \langle 1, 1, 1, 1, \dots
+          \rangle<br />$$
+        </p>
+        <p>then the nth element of the sequence is</p>
+        <p>$$<br />\sum_{i &#x3D; 0}^{n} g_{i} \cdot 1<br />$$</p>
+        <h2 id="Find-the-nth-element">
+          <a
+            href="#Find-the-nth-element"
+            class="headerlink"
+            title="Find the nth element"
+          ></a
+          >Find the nth element
+        </h2>
+        <h3 id="Taylor-Series">
+          <a href="#Taylor-Series" class="headerlink" title="Taylor Series"></a
+          >Taylor Series
+        </h3>
+        <p>Let</p>
+        <p>$$<br />G(x)<br />$$</p>
+        <p>be the generating function for the sequence</p>
+        <p>$$<br />\langle g_0, g_1, g_2, g_3, \dots \rangle<br />$$</p>
+        <p>then</p>
+        <p>
+          $$<br />g_0 &#x3D; G(0)\\\\<br />g_n &#x3D;
+          \frac{G^{(n)}(0)}{n!}\\\\<br />$$
+        </p>
+        <h3 id="Partial-Fractions">
+          <a
+            href="#Partial-Fractions"
+            class="headerlink"
+            title="Partial Fractions"
+          ></a
+          >Partial Fractions
+        </h3>
+        <p>
+          While it is theoretically possible to compute the nth derivative of
+          $G(x)$, using generating functions to get the result may have seemed
+          to be more complicated. The good news is that we can use the method of
+          partial fractions to express any generating function that is a ratio
+          of polynomials as a sum of a polynomial.
+        </p>
+        <p>$$<br />\frac{cx^{a}}{(1 - ax)^{b}}<br />$$</p>
+        <p>
+          where $a$ and $b$ are integers and $b \gt a \ge 0$. We do that because
+          it is easier to compute the derivative.
+        </p>
+        <p>
+          After some calculation <em>(see reference 1)</em>, we can conclude
+          that the element in the sequence represented by
+        </p>
+        <p>$$<br />\frac{cx^{a}}{(1 - ax)^{b}}<br />$$</p>
+        <p>is</p>
+        <p>
+          $$<br />\frac{c(n - a + b - 1)! a^{n - a}}{(n - a)!(b - 1)!}<br />$$
+        </p>
+        <h2 id="Reference">
+          <a href="#Reference" class="headerlink" title="Reference"></a
+          >Reference
+        </h2>
+        <ol>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/aadb9105d1139c866272ca0425fc6440_MIT6_042JF10_chap12.pdf"
+              >MIT 6.042j 2010 Readings Chapter 12 - Generating Functions</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://en.wikipedia.org/wiki/Generating_function"
+              >Wikipedia: Generating Function</a
+            >
+          </li>
+        </ol>
 
-          <div class="order-lg-1 col-lg-9 col-12 post-container">
-            <h2 id="Definition">
-              <a href="#Definition" class="headerlink" title="Definition"></a
-              >Definition
-            </h2>
-            <p>
-              We define the generating function as the characteristic function
-              which encodes an infinite sequence
-            </p>
-            <p>$$<br />\langle g_0, g_1, g_2, g_3 \dots \rangle<br />$$</p>
-            <p>as below</p>
-            <p>
-              $$<br />G(x) &#x3D; \sum_{i &#x3D; 0}^{\infty} g_{i}x^{i}<br />$$
-            </p>
-            <p>
-              For example, the generating function of the following sequences
-              are
-            </p>
-            <p>
-              $$<br />\begin{split}<br />\langle 0, 0, 0, 0, \dots \rangle
-              \longleftrightarrow G(x) &amp;&#x3D; 0 + 0x + 0x^2 + 0x^3 + \dots
-              &#x3D; 0\\\\<br />\langle 1, 0, 0, 0, \dots \rangle
-              \longleftrightarrow G(x) &amp;&#x3D; 1 + 0x + 0x^2 + 0x^3 + \dots
-              &#x3D; 1\\\\<br />\langle 3, 2, 1, 0, \dots \rangle
-              \longleftrightarrow G(x) &amp;&#x3D; 3 + 2x + 1x^2 + 0x^3 + \dots
-              &#x3D; 3 + 2x + x^2\\\\<br />\langle 1, 1, 1, 1, \dots \rangle
-              \longleftrightarrow G(x) &amp;&#x3D; 1 + x + x^2 + x^3 + \dots
-              &#x3D; \frac{1}{1 - x}\\\\<br />\end{split}<br />$$
-            </p>
-            <p>Thee last equation does not hold when</p>
-            <p>$$<br />|x| \ge 1<br />$$</p>
-            <p>
-              But in the context of generating functions, we regard infinite
-              series as formal algebraic objects and define generating function
-              as symbolic identities that hold for purely algebraic reasons. We
-              won’t worry about convergence issues for now.
-            </p>
-            <p>Some other examples are</p>
-            <p>
-              $$<br />\langle 1, -1, 1, -1, \dots \rangle \longleftrightarrow
-              G(x) &#x3D; 1 - x + x^2 - x^3 + \dots &#x3D; \frac{1}{1 +
-              x}\\\\<br />\langle 1, a, a^2, a^3, \dots \rangle
-              \longleftrightarrow G(x) &#x3D; 1 + ax + a^2 x^2 + a^3 x^3 + \dots
-              &#x3D; \frac{1}{1 - ax}\\\\<br />\langle 1, 0, 1, 0, 1, 0, \dots
-              \rangle \longleftrightarrow G(x) &#x3D; 1 + x^2 + x^4 + \dots
-              &#x3D; \frac{1}{1 - x^2}\\\\<br />$$
-            </p>
-            <h2 id="Properties">
-              <a href="#Properties" class="headerlink" title="Properties"></a
-              >Properties
-            </h2>
-            <h3 id="Scaling">
-              <a href="#Scaling" class="headerlink" title="Scaling"></a>Scaling
-            </h3>
-            <p>If</p>
-            <p>
-              $$<br />\langle g_0, g_1, g_2, g_3, \dots \rangle
-              \longleftrightarrow G(x)\\\\<br />$$
-            </p>
-            <p>then</p>
-            <p>
-              $$<br />\langle c \cdot g_0, c \cdot g_1, c \cdot g_2, c \cdot
-              g_3, \dots \rangle \longleftrightarrow H(x) &#x3D; \sum_{i &#x3D;
-              0}^{\infty} c \cdot g_{i}x^{i} &#x3D; c \cdot \sum_{i &#x3D;
-              0}^{\infty} g_{i}x^{i} &#x3D; c \cdot G(x)\\\\<br />$$
-            </p>
-            <p>For Example</p>
-            <p>
-              $$<br />2 \cdot \langle 1, 0, 1, 0, 1, 0, \dots \rangle &#x3D;
-              \langle 2, 0, 2, 0, 2, 0, \dots \rangle \longleftrightarrow G(x)
-              &#x3D; 2 + 2x^2 + 2x^4 + \dots &#x3D; 2 \cdot \frac{1}{1 - x^2}
-              &#x3D; \frac{2}{1 - x^2}\\\\<br />$$
-            </p>
-            <h3 id="Addition">
-              <a href="#Addition" class="headerlink" title="Addition"></a
-              >Addition
-            </h3>
-            <p>If</p>
-            <p>
-              $$<br />\langle g_0, g_1, g_2, g_3, \dots \rangle
-              \longleftrightarrow G(x)\\\\<br />\langle h_0, h_1, h_2, h_3,
-              \dots \rangle \longleftrightarrow H(x)\\\\<br />$$
-            </p>
-            <p>then</p>
-            <p>
-              $$<br />\langle g_0 + h_0, g_1 + h_1, g_2 + h_2, g_3 + h_3, \dots
-              \rangle \longleftrightarrow \sum_{i &#x3D; 0}^{\infty} (g_{i} +
-              h_{i}) \cdot x^{i} &#x3D; \sum_{i &#x3D; 0}^{\infty} g_{i}x^{i} +
-              \sum_{i &#x3D; 0}^{\infty} h_{i}x^{i} &#x3D; G(x) + H(x)\\\\<br />$$
-            </p>
-            <p>For Example</p>
-            <p>
-              $$<br />\langle 1, 1, 1, 1, \dots \rangle + \langle 1, -1, 1, -1,
-              \dots \rangle &#x3D; \langle 2, 0, 2, 0, \dots \rangle
-              \longleftrightarrow G(x) &#x3D; \frac{1}{1 - x} + \frac{1}{1 + x}
-              &#x3D; \frac{2}{1 - x^2}\\\\<br />$$
-            </p>
-            <h3 id="Right-Shifting">
-              <a
-                href="#Right-Shifting"
-                class="headerlink"
-                title="Right Shifting"
-              ></a
-              >Right Shifting
-            </h3>
-            <p>If</p>
-            <p>
-              $$<br />\langle g_0, g_1, g_2, g_3, \dots \rangle
-              \longleftrightarrow G(x)\\\\<br />$$
-            </p>
-            <p>then the sequence by adding k leading zeros</p>
-            <p>
-              $$<br />\langle 0, 0, \dots, 0, g_0, g_1, g_2, g_3, \dots \rangle
-              \implies x^k \cdot G(x) &#x3D; \sum_{i &#x3D; 0}^{\infty}
-              g_{i}x^{i}x^{k} &#x3D; g_{0}x^{k} + g_{1}x^{k + 1} + g_{2}x^{k +
-              2} + g_{3}x^{k + 3} + \dots\\\\<br />$$
-            </p>
-            <p>For Example</p>
-            <p>
-              $$<br />\langle 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, \dots \rangle &#x3D;
-              \frac{x^4}{1 - x}<br />$$
-            </p>
-            <h3 id="Differentiation">
-              <a
-                href="#Differentiation"
-                class="headerlink"
-                title="Differentiation"
-              ></a
-              >Differentiation
-            </h3>
-            <p>If</p>
-            <p>
-              $$<br />\langle g_0, g_1, g_2, g_3, \dots \rangle
-              \longleftrightarrow G(x)\\\\<br />$$
-            </p>
-            <p>then</p>
-            <p>
-              $$<br />G^{\prime}(x) &#x3D; \frac{d}{dx}(g_{0} + g_{1}x +
-              g_{2}x^{2} + g_{3}x^{3} + g_{4}x^{4} + \dots) \longleftrightarrow
-              \langle g_1, 2 g_2, 3 g_3, 4 g_4, \dots \rangle<br />$$
-            </p>
-            <p>For Example</p>
-            <p>
-              $$<br />\begin{split}<br />&amp; \langle 1, 1, 1, 1, \dots \rangle
-              \longleftrightarrow G(x) &#x3D; \frac{1}{1 - x}\\\\<br />\text{Differentiation}
-              \quad &amp; \langle 1, 2, 3, 4, \dots \rangle \longleftrightarrow
-              1 + 2x + 3x^2 + 4x^3 + \dots &#x3D; \frac{d}{dx}(1 + x + x^2 + x^3
-              + \dots) &#x3D; \frac{d}{dx}{\frac{1}{1 - x}} &#x3D; \frac{1}{(1 -
-              x)^2}\\\\<br />\text{Right Shifting} \quad &amp; \langle 0, 1, 2,
-              3, 4, \dots \rangle \longleftrightarrow \frac{x}{(1 - x)^2}\\\\<br />\text{Differentiation}
-              \quad &amp; \langle 1, 4, 9, 16, \dots \rangle \longleftrightarrow
-              \frac{d}{dx}{\frac{x}{(1 - x)^2}} &#x3D; \frac{1 + x}{(1 -
-              x)^3}\\\\<br />\text{Right Shifting} \quad &amp; \langle 0, 1, 4,
-              9, 16, \dots \rangle \longleftrightarrow x \cdot \frac{1 + x}{(1 -
-              x)^3} &#x3D; \frac{x(1 + x)}{(1 - x)^3}<br />\end{split}<br />$$
-            </p>
-            <p>So, we have found the sequence of squares</p>
-            <h3 id="Convolution">
-              <a href="#Convolution" class="headerlink" title="Convolution"></a
-              >Convolution
-            </h3>
-            <p>If</p>
-            <p>
-              $$<br />\langle g_0, g_1, g_2, g_3, \dots \rangle
-              \longleftrightarrow G(x)\\\\<br />\langle h_0, h_1, h_2, h_3,
-              \dots \rangle \longleftrightarrow H(x)\\\\<br />$$
-            </p>
-            <p>then</p>
-            <p>
-              $$<br />G(x) * H(x) &#x3D; \sum_{i &#x3D; 0}^{\infty}
-              c_{i}x^{i}<br />$$
-            </p>
-            <p>where</p>
-            <p>
-              $$<br />c_n :&#x3D; \sum_{i &#x3D; 0}^{n} g_{i}h_{n - i}<br />$$
-            </p>
-            <h4 id="Proof">
-              <a href="#Proof" class="headerlink" title="Proof"></a>Proof
-            </h4>
-            <p>
-              $$<br />\begin{array}{l|lllll}<br />
-              &amp; h_{0}x^{0} &amp; h_{1}x^{1} &amp; h_{2}x^{2} &amp;
-              h_{3}x^{3} &amp; \dots\\\\<br />\hline<br />g_{0}x^{0} &amp;
-              g_{0}h_{0}x^{0} &amp; g_{0}h_{1}x^{1} &amp; g_{0}h_{2}x^{2} &amp;
-              g_{0}h_{3}x^{3} &amp; \\\\<br />g_{1}x^{1} &amp; g_{1}h_{0}x^{1}
-              &amp; g_{1}h_{1}x^{2} &amp; g_{1}h_{2}x^{3} &amp; \dots &amp;
-              \\\\<br />g_{2}x^{2} &amp; g_{2}h_{0}x^{2} &amp; g_{2}h_{1}x^{3}
-              &amp; \dots &amp; &amp; \\\\<br />g_{3}x^{3} &amp; g_{3}h_{0}x^{3}
-              &amp; \dots &amp; &amp; &amp; \\\\<br />\vdots &amp; \dots &amp;
-              &amp; &amp; &amp;<br />\end{array}<br />$$
-            </p>
-            <p>
-              We notice that all terms involving the same power of $x$ lie on a
-              diagonal.
-            </p>
-            <h3 id="Summation">
-              <a href="#Summation" class="headerlink" title="Summation"></a
-              >Summation
-            </h3>
-            <p>If</p>
-            <p>
-              $$<br />\langle g_0, g_1, g_2, g_3, \dots \rangle
-              \longleftrightarrow G(x)\\\\<br />$$
-            </p>
-            <p>then</p>
-            <p>
-              $$<br />\langle s_0, s_1, s_2, s_3, \dots \rangle
-              \longleftrightarrow \frac{G(x)}{1 - x}\\\\<br />$$
-            </p>
-            <p>where</p>
-            <p>$$<br />s_n :&#x3D; \sum_{i &#x3D; 0}^{n} g_{i}<br />$$</p>
-            <p>For Example</p>
-            <p>
-              $$<br />\frac{1}{1 - x} \frac{x(1 + x)}{(1 - x)^3} &#x3D;
-              \frac{x(1 + x)}{(1 - x)^4}<br />$$
-            </p>
-            <p>
-              is the generating function for the sequence where the nth element
-              is
-            </p>
-            <p>$$<br />s_n &#x3D; \sum_{i&#x3D;0}^{n} i^2<br />$$</p>
-            <h4 id="Proof-1">
-              <a href="#Proof-1" class="headerlink" title="Proof"></a>Proof
-            </h4>
-            <p>For any sequence represented by $G(x)$, we multiply with</p>
-            <p>
-              $$<br />\frac{1}{1 - x} \longleftrightarrow \langle 1, 1, 1, 1,
-              \dots \rangle<br />$$
-            </p>
-            <p>then the nth element of the sequence is</p>
-            <p>$$<br />\sum_{i &#x3D; 0}^{n} g_{i} \cdot 1<br />$$</p>
-            <h2 id="Find-the-nth-element">
-              <a
-                href="#Find-the-nth-element"
-                class="headerlink"
-                title="Find the nth element"
-              ></a
-              >Find the nth element
-            </h2>
-            <h3 id="Taylor-Series">
-              <a
-                href="#Taylor-Series"
-                class="headerlink"
-                title="Taylor Series"
-              ></a
-              >Taylor Series
-            </h3>
-            <p>Let</p>
-            <p>$$<br />G(x)<br />$$</p>
-            <p>be the generating function for the sequence</p>
-            <p>$$<br />\langle g_0, g_1, g_2, g_3, \dots \rangle<br />$$</p>
-            <p>then</p>
-            <p>
-              $$<br />g_0 &#x3D; G(0)\\\\<br />g_n &#x3D;
-              \frac{G^{(n)}(0)}{n!}\\\\<br />$$
-            </p>
-            <h3 id="Partial-Fractions">
-              <a
-                href="#Partial-Fractions"
-                class="headerlink"
-                title="Partial Fractions"
-              ></a
-              >Partial Fractions
-            </h3>
-            <p>
-              While it is theoretically possible to compute the nth derivative
-              of $G(x)$, using generating functions to get the result may have
-              seemed to be more complicated. The good news is that we can use
-              the method of partial fractions to express any generating function
-              that is a ratio of polynomials as a sum of a polynomial.
-            </p>
-            <p>$$<br />\frac{cx^{a}}{(1 - ax)^{b}}<br />$$</p>
-            <p>
-              where $a$ and $b$ are integers and $b \gt a \ge 0$. We do that
-              because it is easier to compute the derivative.
-            </p>
-            <p>
-              After some calculation <em>(see reference 1)</em>, we can conclude
-              that the element in the sequence represented by
-            </p>
-            <p>$$<br />\frac{cx^{a}}{(1 - ax)^{b}}<br />$$</p>
-            <p>is</p>
-            <p>
-              $$<br />\frac{c(n - a + b - 1)! a^{n - a}}{(n - a)!(b - 1)!}<br />$$
-            </p>
-            <h2 id="Reference">
-              <a href="#Reference" class="headerlink" title="Reference"></a
-              >Reference
-            </h2>
-            <ol>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/aadb9105d1139c866272ca0425fc6440_MIT6_042JF10_chap12.pdf"
-                  >MIT 6.042j 2010 Readings Chapter 12 - Generating Functions</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://en.wikipedia.org/wiki/Generating_function"
-                  >Wikipedia: Generating Function</a
-                >
-              </li>
-            </ol>
+        <hr />
 
-            <hr />
-
-            <ul class="list-group">
-              <li
-                class="list-group-item list-group-item-action flex-column align-items-start"
-              >
-                <a target="_parent" href="/posts/Recurrence-Equation/">
-                  Recurrence Equation
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row justify-content-center">
-          <!-- Sidebar Container -->
-
-          <div class="col-lg-8` col-md-10 sidebar-container">
-            <!-- Friends Blog -->
-          </div>
-        </div>
+        <ul class="list-group">
+          <li
+            class="list-group-item list-group-item-action flex-column align-items-start"
+          >
+            <a target="_parent" href="/posts/Recurrence-Equation/">
+              Recurrence Equation
+            </a>
+          </li>
+        </ul>
       </div>
     </article>
     <!-- Custom Theme JavaScript -->

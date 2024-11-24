@@ -132,757 +132,333 @@
     />
 
     <!-- Post Content -->
-    <article>
-      <div class="container">
-        <div class="row">
-          <!-- Post Container -->
-          <div class="order-lg-2 col-lg-3 col-12 toc-col" style="z-index: 1">
-            <ol class="toc">
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#Scalability"
-                  ><span class="toc-text">Scalability</span></a
-                >
-                <ol class="toc-child">
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Vertical"
-                      ><span class="toc-text">Vertical</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Horizontal"
-                      ><span class="toc-text">Horizontal</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Transversal"
-                      ><span class="toc-text">Transversal</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Google-Evulution"
-                      ><span class="toc-text">Google Evulution</span></a
-                    >
-                    <ol class="toc-child">
-                      <li class="toc-item toc-level-4">
-                        <a class="toc-link" href="#Google-File-System"
-                          ><span class="toc-text">Google File System</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-4">
-                        <a class="toc-link" href="#MapReduce"
-                          ><span class="toc-text">MapReduce</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-4">
-                        <a class="toc-link" href="#Percolator"
-                          ><span class="toc-text">Percolator</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-4">
-                        <a class="toc-link" href="#Pregel"
-                          ><span class="toc-text">Pregel</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-4">
-                        <a class="toc-link" href="#Dremel"
-                          ><span class="toc-text">Dremel</span></a
-                        >
-                      </li>
-                    </ol>
-                  </li>
-                </ol>
-              </li>
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#DHT"
-                  ><span class="toc-text">DHT</span></a
-                >
-              </li>
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#CAP-Theorem"
-                  ><span class="toc-text">CAP Theorem</span></a
-                >
-              </li>
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#PACELC"
-                  ><span class="toc-text">PACELC</span></a
-                >
-              </li>
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#Consensus-algorithm"
-                  ><span class="toc-text">Consensus algorithm</span></a
-                >
-                <ol class="toc-child">
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Paxos"
-                      ><span class="toc-text">Paxos</span></a
-                    >
-                  </li>
-                </ol>
-              </li>
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#ACID"
-                  ><span class="toc-text">ACID</span></a
-                >
-              </li>
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#BASE"
-                  ><span class="toc-text">BASE</span></a
-                >
-              </li>
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#NoSQL"
-                  ><span class="toc-text">NoSQL</span></a
-                >
-                <ol class="toc-child">
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Graph-database"
-                      ><span class="toc-text">Graph database</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Key-Value"
-                      ><span class="toc-text">Key-Value</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Semantic"
-                      ><span class="toc-text">Semantic</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Columnar-Database"
-                      ><span class="toc-text">Columnar Database</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Search-Engine-Database"
-                      ><span class="toc-text">Search-Engine Database</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Document-oriented-Database"
-                      ><span class="toc-text"
-                        >Document-oriented Database</span
-                      ></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Design-Decision"
-                      ><span class="toc-text">Design Decision</span></a
-                    >
-                    <ol class="toc-child">
-                      <li class="toc-item toc-level-4">
-                        <a
-                          class="toc-link"
-                          href="#Model-Relationships-Between-Documents"
-                          ><span class="toc-text"
-                            >Model Relationships Between Documents</span
-                          ></a
-                        >
-                      </li>
-                    </ol>
-                  </li>
-                </ol>
-              </li>
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#MongoDB"
-                  ><span class="toc-text">MongoDB</span></a
-                >
-                <ol class="toc-child">
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#CRUD"
-                      ><span class="toc-text">CRUD</span></a
-                    >
-                    <ol class="toc-child">
-                      <li class="toc-item toc-level-4">
-                        <a class="toc-link" href="#Show-collections"
-                          ><span class="toc-text">Show collections</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-4">
-                        <a class="toc-link" href="#Create"
-                          ><span class="toc-text">Create</span></a
-                        >
-                        <ol class="toc-child">
-                          <li class="toc-item toc-level-5">
-                            <a class="toc-link" href="#Insert"
-                              ><span class="toc-text">Insert</span></a
-                            >
-                          </li>
-                          <li class="toc-item toc-level-5">
-                            <a class="toc-link" href="#Bulk-Insert"
-                              ><span class="toc-text">Bulk Insert</span></a
-                            >
-                          </li>
-                          <li class="toc-item toc-level-5">
-                            <a class="toc-link" href="#Uniqueness"
-                              ><span class="toc-text">Uniqueness</span></a
-                            >
-                          </li>
-                        </ol>
-                      </li>
-                      <li class="toc-item toc-level-4">
-                        <a class="toc-link" href="#Read"
-                          ><span class="toc-text">Read</span></a
-                        >
-                        <ol class="toc-child">
-                          <li class="toc-item toc-level-5">
-                            <a class="toc-link" href="#Read-All"
-                              ><span class="toc-text">Read All</span></a
-                            >
-                          </li>
-                          <li class="toc-item toc-level-5">
-                            <a class="toc-link" href="#Filter"
-                              ><span class="toc-text">Filter</span></a
-                            >
-                          </li>
-                          <li class="toc-item toc-level-5">
-                            <a
-                              class="toc-link"
-                              href="#Filter-with-Embedded-Document"
-                              ><span class="toc-text"
-                                >Filter with Embedded Document</span
-                              ></a
-                            >
-                          </li>
-                          <li class="toc-item toc-level-5">
-                            <a class="toc-link" href="#Filter-with-Arrays"
-                              ><span class="toc-text"
-                                >Filter with Arrays</span
-                              ></a
-                            >
-                          </li>
-                        </ol>
-                      </li>
-                      <li class="toc-item toc-level-4">
-                        <a class="toc-link" href="#Update"
-                          ><span class="toc-text">Update</span></a
-                        >
-                        <ol class="toc-child">
-                          <li class="toc-item toc-level-5">
-                            <a class="toc-link" href="#Upsert"
-                              ><span class="toc-text">Upsert</span></a
-                            >
-                          </li>
-                        </ol>
-                      </li>
-                      <li class="toc-item toc-level-4">
-                        <a class="toc-link" href="#Save"
-                          ><span class="toc-text">Save</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-4">
-                        <a class="toc-link" href="#Delete"
-                          ><span class="toc-text">Delete</span></a
-                        >
-                        <ol class="toc-child">
-                          <li class="toc-item toc-level-5">
-                            <a class="toc-link" href="#Single-Item"
-                              ><span class="toc-text">Single Item</span></a
-                            >
-                          </li>
-                          <li class="toc-item toc-level-5">
-                            <a
-                              class="toc-link"
-                              href="#Delete-All-Documents-Inside-The-Collection"
-                              ><span class="toc-text"
-                                >Delete All Documents Inside The
-                                Collection</span
-                              ></a
-                            >
-                          </li>
-                        </ol>
-                      </li>
-                      <li class="toc-item toc-level-4">
-                        <a class="toc-link" href="#Sort"
-                          ><span class="toc-text">Sort</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-4">
-                        <a class="toc-link" href="#Count"
-                          ><span class="toc-text">Count</span></a
-                        >
-                      </li>
-                    </ol>
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Indexes"
-                      ><span class="toc-text">Indexes</span></a
-                    >
-                    <ol class="toc-child">
-                      <li class="toc-item toc-level-4">
-                        <a class="toc-link" href="#Single-Field"
-                          ><span class="toc-text">Single Field</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-4">
-                        <a class="toc-link" href="#Compound-Index"
-                          ><span class="toc-text">Compound Index</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-4">
-                        <a class="toc-link" href="#Unique-Index"
-                          ><span class="toc-text">Unique Index</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-4">
-                        <a class="toc-link" href="#Sparse-Indexes"
-                          ><span class="toc-text">Sparse Indexes</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-4">
-                        <a class="toc-link" href="#Partial-Indexes"
-                          ><span class="toc-text">Partial Indexes</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-4">
-                        <a class="toc-link" href="#Index-Intersection"
-                          ><span class="toc-text">Index Intersection</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-4">
-                        <a class="toc-link" href="#Index-on-Embedded-Document"
-                          ><span class="toc-text"
-                            >Index on Embedded Document</span
-                          ></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-4">
-                        <a class="toc-link" href="#Multikey-Indexes"
-                          ><span class="toc-text">Multikey Indexes</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-4">
-                        <a class="toc-link" href="#Covered-Query"
-                          ><span class="toc-text">Covered Query</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-4">
-                        <a class="toc-link" href="#Debug-Query"
-                          ><span class="toc-text">Debug Query</span></a
-                        >
-                      </li>
-                    </ol>
-                  </li>
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#Aggregation-Framework"
-                      ><span class="toc-text">Aggregation Framework</span></a
-                    >
-                    <ol class="toc-child">
-                      <li class="toc-item toc-level-4">
-                        <a class="toc-link" href="#Aggregation-Pipeline"
-                          ><span class="toc-text">Aggregation Pipeline</span></a
-                        >
-                        <ol class="toc-child">
-                          <li class="toc-item toc-level-5">
-                            <a class="toc-link" href="#project"
-                              ><span class="toc-text">$project</span></a
-                            >
-                          </li>
-                          <li class="toc-item toc-level-5">
-                            <a class="toc-link" href="#match"
-                              ><span class="toc-text">$match</span></a
-                            >
-                          </li>
-                          <li class="toc-item toc-level-5">
-                            <a class="toc-link" href="#sample"
-                              ><span class="toc-text">$sample</span></a
-                            >
-                          </li>
-                          <li class="toc-item toc-level-5">
-                            <a class="toc-link" href="#sort"
-                              ><span class="toc-text">$sort</span></a
-                            >
-                          </li>
-                          <li class="toc-item toc-level-5">
-                            <a class="toc-link" href="#limit"
-                              ><span class="toc-text">$limit</span></a
-                            >
-                          </li>
-                          <li class="toc-item toc-level-5">
-                            <a class="toc-link" href="#skip"
-                              ><span class="toc-text">$skip</span></a
-                            >
-                          </li>
-                          <li class="toc-item toc-level-5">
-                            <a class="toc-link" href="#out"
-                              ><span class="toc-text">$out</span></a
-                            >
-                          </li>
-                          <li class="toc-item toc-level-5">
-                            <a class="toc-link" href="#group"
-                              ><span class="toc-text">$group</span></a
-                            >
-                          </li>
-                          <li class="toc-item toc-level-5">
-                            <a class="toc-link" href="#unwind"
-                              ><span class="toc-text">$unwind</span></a
-                            >
-                          </li>
-                          <li class="toc-item toc-level-5">
-                            <a class="toc-link" href="#lookup"
-                              ><span class="toc-text">$lookup</span></a
-                            >
-                          </li>
-                        </ol>
-                      </li>
-                      <li class="toc-item toc-level-4">
-                        <a class="toc-link" href="#Map-Reduce"
-                          ><span class="toc-text">Map-Reduce</span></a
-                        >
-                      </li>
-                    </ol>
-                  </li>
-                </ol>
-              </li>
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#Reference"
-                  ><span class="toc-text">Reference</span></a
-                >
-              </li>
-            </ol>
-          </div>
-
-          <div class="order-lg-1 col-lg-9 col-12 post-container">
-            <h2 id="Scalability">
-              <a href="#Scalability" class="headerlink" title="Scalability"></a
-              >Scalability
-            </h2>
-            <p>
-              NoSQL is intented to offer more scalability. A balance between the
-              scalability and the consistency.
-            </p>
-            <h3 id="Vertical">
-              <a href="#Vertical" class="headerlink" title="Vertical"></a
-              >Vertical
-            </h3>
-            <p>Functional decomposition</p>
-            <h3 id="Horizontal">
-              <a href="#Horizontal" class="headerlink" title="Horizontal"></a
-              >Horizontal
-            </h3>
-            <p>Scale by cloing</p>
-            <h3 id="Transversal">
-              <a href="#Transversal" class="headerlink" title="Transversal"></a
-              >Transversal
-            </h3>
-            <p>Partitioning similar things</p>
-            <h3 id="Google-Evulution">
-              <a
-                href="#Google-Evulution"
-                class="headerlink"
-                title="Google Evulution"
-              ></a
-              >Google Evulution
-            </h3>
-            <h4 id="Google-File-System">
-              <a
-                href="#Google-File-System"
-                class="headerlink"
-                title="Google File System"
-              ></a
-              >Google File System
-            </h4>
-            <p>
-              Distributed file system to provide efficient,
-              <strong>reliable access</strong> to data using large clusters of
-              commodity hardward.
-            </p>
-            <h4 id="MapReduce">
-              <a href="#MapReduce" class="headerlink" title="MapReduce"></a
-              >MapReduce
-            </h4>
-            <p>It is a parallel, distributed algorithm on a cluster.</p>
-            <p><img src="map-reduce.png" alt="Map Reduce" /></p>
-            <h4 id="Percolator">
-              <a href="#Percolator" class="headerlink" title="Percolator"></a
-              >Percolator
-            </h4>
-            <p>
-              The process of updating an index is now divided into multiple
-              concurrent transactions, each of which has to preserve invariants.
-            </p>
-            <p><img src="percolator.png" alt="Percolator" /></p>
-            <h4 id="Pregel">
-              <a href="#Pregel" class="headerlink" title="Pregel"></a>Pregel
-            </h4>
-            <p>It is system for large scale graph processing.</p>
-            <h4 id="Dremel">
-              <a href="#Dremel" class="headerlink" title="Dremel"></a>Dremel
-            </h4>
-            <p>
-              Dremel is a distributed system developed for interactively quering
-              large datasets.
-            </p>
-            <h2 id="DHT">
-              <a href="#DHT" class="headerlink" title="DHT"></a>DHT
-            </h2>
-            <p>
-              We use hash function to select node of the cluster, acts as a
-              routing function
-            </p>
-            <h2 id="CAP-Theorem">
-              <a href="#CAP-Theorem" class="headerlink" title="CAP Theorem"></a
-              >CAP Theorem
-            </h2>
-            <p>
-              The CAP theorem, also named Brewer’s theorem states that it is
-              impossible for a distributed data store to simultaneously provide
-              more than two out of the following three guarantees:
-            </p>
+    <article class="container" style="width: 100%; max-width: 100%">
+      <!-- Post Container -->
+      <div class="post-container">
+        <h2 id="Scalability">
+          <a href="#Scalability" class="headerlink" title="Scalability"></a
+          >Scalability
+        </h2>
+        <p>
+          NoSQL is intented to offer more scalability. A balance between the
+          scalability and the consistency.
+        </p>
+        <h3 id="Vertical">
+          <a href="#Vertical" class="headerlink" title="Vertical"></a>Vertical
+        </h3>
+        <p>Functional decomposition</p>
+        <h3 id="Horizontal">
+          <a href="#Horizontal" class="headerlink" title="Horizontal"></a
+          >Horizontal
+        </h3>
+        <p>Scale by cloing</p>
+        <h3 id="Transversal">
+          <a href="#Transversal" class="headerlink" title="Transversal"></a
+          >Transversal
+        </h3>
+        <p>Partitioning similar things</p>
+        <h3 id="Google-Evulution">
+          <a
+            href="#Google-Evulution"
+            class="headerlink"
+            title="Google Evulution"
+          ></a
+          >Google Evulution
+        </h3>
+        <h4 id="Google-File-System">
+          <a
+            href="#Google-File-System"
+            class="headerlink"
+            title="Google File System"
+          ></a
+          >Google File System
+        </h4>
+        <p>
+          Distributed file system to provide efficient,
+          <strong>reliable access</strong> to data using large clusters of
+          commodity hardward.
+        </p>
+        <h4 id="MapReduce">
+          <a href="#MapReduce" class="headerlink" title="MapReduce"></a
+          >MapReduce
+        </h4>
+        <p>It is a parallel, distributed algorithm on a cluster.</p>
+        <p><img src="map-reduce.png" alt="Map Reduce" /></p>
+        <h4 id="Percolator">
+          <a href="#Percolator" class="headerlink" title="Percolator"></a
+          >Percolator
+        </h4>
+        <p>
+          The process of updating an index is now divided into multiple
+          concurrent transactions, each of which has to preserve invariants.
+        </p>
+        <p><img src="percolator.png" alt="Percolator" /></p>
+        <h4 id="Pregel">
+          <a href="#Pregel" class="headerlink" title="Pregel"></a>Pregel
+        </h4>
+        <p>It is system for large scale graph processing.</p>
+        <h4 id="Dremel">
+          <a href="#Dremel" class="headerlink" title="Dremel"></a>Dremel
+        </h4>
+        <p>
+          Dremel is a distributed system developed for interactively quering
+          large datasets.
+        </p>
+        <h2 id="DHT"><a href="#DHT" class="headerlink" title="DHT"></a>DHT</h2>
+        <p>
+          We use hash function to select node of the cluster, acts as a routing
+          function
+        </p>
+        <h2 id="CAP-Theorem">
+          <a href="#CAP-Theorem" class="headerlink" title="CAP Theorem"></a>CAP
+          Theorem
+        </h2>
+        <p>
+          The CAP theorem, also named Brewer’s theorem states that it is
+          impossible for a distributed data store to simultaneously provide more
+          than two out of the following three guarantees:
+        </p>
+        <ul>
+          <li>
+            Consistency: Every read receives the most recent write or an error
+          </li>
+          <li>
+            Availability: Every request receives a non-error response, without
+            the guarantee that it contains the most recent write
+          </li>
+          <li>
+            Partition tolerante: The system continues to operate despite an
+            arbitrary number of messages being dropped.
+          </li>
+        </ul>
+        <h2 id="PACELC">
+          <a href="#PACELC" class="headerlink" title="PACELC"></a>PACELC
+        </h2>
+        <ul>
+          <li>
+            P &#x3D; Partition
             <ul>
-              <li>
-                Consistency: Every read receives the most recent write or an
-                error
-              </li>
-              <li>
-                Availability: Every request receives a non-error response,
-                without the guarantee that it contains the most recent write
-              </li>
-              <li>
-                Partition tolerante: The system continues to operate despite an
-                arbitrary number of messages being dropped.
-              </li>
+              <li>A: DynamoDB, Cassandra, Cosmos DB</li>
+              <li>C: BigTable&#x2F;HBase, MongoDB, MySQL Cluster</li>
             </ul>
-            <h2 id="PACELC">
-              <a href="#PACELC" class="headerlink" title="PACELC"></a>PACELC
-            </h2>
+          </li>
+          <li>
+            E &#x3D; Else
             <ul>
-              <li>
-                P &#x3D; Partition
-                <ul>
-                  <li>A: DynamoDB, Cassandra, Cosmos DB</li>
-                  <li>C: BigTable&#x2F;HBase, MongoDB, MySQL Cluster</li>
-                </ul>
-              </li>
-              <li>
-                E &#x3D; Else
-                <ul>
-                  <li>L: DynamoDB, Cassandra, Cosmos DB</li>
-                  <li>C: BigTable&#x2F;HBase, MongoDB, MySQL Cluster</li>
-                </ul>
-              </li>
+              <li>L: DynamoDB, Cassandra, Cosmos DB</li>
+              <li>C: BigTable&#x2F;HBase, MongoDB, MySQL Cluster</li>
             </ul>
-            <h2 id="Consensus-algorithm">
-              <a
-                href="#Consensus-algorithm"
-                class="headerlink"
-                title="Consensus algorithm"
-              ></a
-              >Consensus algorithm
-            </h2>
-            <p>
-              It is used to achieve aggrement on a single data value among
-              distributed processes or systems or the current state of
-              distributed system. It is used to achieve reliability in a network
-              involving multiple distributed nodes that contain the same
-              information. A tipical use is to select the leader.
-            </p>
-            <ol>
-              <li>
-                Even if a single value is proposed, the network eventually
-                recognizes it and choose it.
-              </li>
-              <li>
-                Once the value is chosen by the network, it cannot be
-                overwritten.
-              </li>
-              <li>
-                Nodes don’t hear that a value has been chosen, unless it has
-                really been chosen by the network.
-              </li>
-            </ol>
-            <h3 id="Paxos">
-              <a href="#Paxos" class="headerlink" title="Paxos"></a>Paxos
-            </h3>
-            <p>
-              There are two main components Proposers(P) and Acceptors(A). There
-              is also a listener(L), but it is less interesting for the majority
-              of the discussion. Each nodes acts as all three. Proposers propose
-              values based on client requests. Acceptors accept values and when
-              there is majority&#x2F;quorum, the proposed value is chosen and
-              committed to the log. There could be a lot of of back and forth
-              between P and A before the value gets chosen.
-            </p>
-            <h2 id="ACID">
-              <a href="#ACID" class="headerlink" title="ACID"></a>ACID
-            </h2>
-            <p>The relational database conforms with ACID principles.</p>
+          </li>
+        </ul>
+        <h2 id="Consensus-algorithm">
+          <a
+            href="#Consensus-algorithm"
+            class="headerlink"
+            title="Consensus algorithm"
+          ></a
+          >Consensus algorithm
+        </h2>
+        <p>
+          It is used to achieve aggrement on a single data value among
+          distributed processes or systems or the current state of distributed
+          system. It is used to achieve reliability in a network involving
+          multiple distributed nodes that contain the same information. A
+          tipical use is to select the leader.
+        </p>
+        <ol>
+          <li>
+            Even if a single value is proposed, the network eventually
+            recognizes it and choose it.
+          </li>
+          <li>
+            Once the value is chosen by the network, it cannot be overwritten.
+          </li>
+          <li>
+            Nodes don’t hear that a value has been chosen, unless it has really
+            been chosen by the network.
+          </li>
+        </ol>
+        <h3 id="Paxos">
+          <a href="#Paxos" class="headerlink" title="Paxos"></a>Paxos
+        </h3>
+        <p>
+          There are two main components Proposers(P) and Acceptors(A). There is
+          also a listener(L), but it is less interesting for the majority of the
+          discussion. Each nodes acts as all three. Proposers propose values
+          based on client requests. Acceptors accept values and when there is
+          majority&#x2F;quorum, the proposed value is chosen and committed to
+          the log. There could be a lot of of back and forth between P and A
+          before the value gets chosen.
+        </p>
+        <h2 id="ACID">
+          <a href="#ACID" class="headerlink" title="ACID"></a>ACID
+        </h2>
+        <p>The relational database conforms with ACID principles.</p>
+        <ul>
+          <li>Atomic: Each transaction is treated as a single unit</li>
+          <li>
+            Consistency: A transaction can only bring the database from one
+            valid state to another
+          </li>
+          <li>
+            Isolation: Concurrent execution of transactions leaves the database
+            in the same state that would have been obtained if the transactions
+            were executed sequentially.
+          </li>
+          <li>
+            Durability: once a transaction has been committed, it will remain
+            committed even in the case of a system failure
+          </li>
+        </ul>
+        <h2 id="BASE">
+          <a href="#BASE" class="headerlink" title="BASE"></a>BASE
+        </h2>
+        <p>Many NoSQL database conforms with BASE principles.</p>
+        <ul>
+          <li>Basic Availability: The system does guarantee availability</li>
+          <li>
+            Soft-state: State of the system may change over time, even without
+            input.
+          </li>
+          <li>
+            Eventually consistent: The system will become consistent over time,
+            given that the system doesn’t receive input during that time.
             <ul>
-              <li>Atomic: Each transaction is treated as a single unit</li>
-              <li>
-                Consistency: A transaction can only bring the database from one
-                valid state to another
-              </li>
-              <li>
-                Isolation: Concurrent execution of transactions leaves the
-                database in the same state that would have been obtained if the
-                transactions were executed sequentially.
-              </li>
-              <li>
-                Durability: once a transaction has been committed, it will
-                remain committed even in the case of a system failure
-              </li>
+              <li>Anti-Entropy Protocol: interchange update between nodes</li>
+              <li>Reconciliation: All the replica arrive at a stable state.</li>
+              <li>Liveness</li>
             </ul>
-            <h2 id="BASE">
-              <a href="#BASE" class="headerlink" title="BASE"></a>BASE
-            </h2>
-            <p>Many NoSQL database conforms with BASE principles.</p>
-            <ul>
-              <li>
-                Basic Availability: The system does guarantee availability
-              </li>
-              <li>
-                Soft-state: State of the system may change over time, even
-                without input.
-              </li>
-              <li>
-                Eventually consistent: The system will become consistent over
-                time, given that the system doesn’t receive input during that
-                time.
-                <ul>
-                  <li>
-                    Anti-Entropy Protocol: interchange update between nodes
-                  </li>
-                  <li>
-                    Reconciliation: All the replica arrive at a stable state.
-                  </li>
-                  <li>Liveness</li>
-                </ul>
-              </li>
-            </ul>
-            <h2 id="NoSQL">
-              <a href="#NoSQL" class="headerlink" title="NoSQL"></a>NoSQL
-            </h2>
-            <p>
-              NoSQL stands for Not Only SQL which provide simple, and flexible
-              and usually schemaless structure. It does not provide the
-              consistency such as we provide with SGBDR.
-            </p>
-            <ul>
-              <li>Schemaless</li>
-              <li>Distributed</li>
-              <li>Structured Data</li>
-              <li>Avoid Join (it allows scale horizontally)</li>
-            </ul>
-            <h3 id="Graph-database">
-              <a
-                href="#Graph-database"
-                class="headerlink"
-                title="Graph database"
-              ></a
-              >Graph database
-            </h3>
-            <p>
-              Graph databases are purpose-built to store and navigate
-              relationships. Relationships are first-class citizens in graph
-              databases, and most of the value of graph databases is derived
-              from these relationships. Graph databases use nodes to store data
-              entities, and edges to store relationships between entities. An
-              edge always has a start node, end node, type, and direction, and
-              an edge can describe parent-child relationships, actions,
-              ownership, and the like. There is no limit to the number and kind
-              of relationships a node can have.
-            </p>
-            <ul>
-              <li>Amazon Neptune</li>
-              <li>Neo4j</li>
-            </ul>
-            <h3 id="Key-Value">
-              <a href="#Key-Value" class="headerlink" title="Key-Value"></a
-              >Key-Value
-            </h3>
-            <p>
-              A key-value database is a type of nonrelational database that uses
-              a simple key-value method to store data. A key-value database
-              stores data as a collection of key-value pairs in which a key
-              serves as a unique identifier. Both keys and values can be
-              anything, ranging from simple objects to complex compound objects.
-              Key-value databases are highly partitionable and allow horizontal
-              scaling at scales that other types of databases cannot achieve.
-              The document model works well with use cases such as catalogs,
-              user profiles, and content management systems where each document
-              is unique and evolves over time. Document databases enable
-              flexible indexing, powerful ad hoc queries, and analytics over
-              collections of documents.
-            </p>
-            <ul>
-              <li>Amazon DynamoDB</li>
-              <li>Redis</li>
-            </ul>
-            <h3 id="Semantic">
-              <a href="#Semantic" class="headerlink" title="Semantic"></a
-              >Semantic
-            </h3>
-            <ul>
-              <li>Triplestores</li>
-            </ul>
-            <h3 id="Columnar-Database">
-              <a
-                href="#Columnar-Database"
-                class="headerlink"
-                title="Columnar Database"
-              ></a
-              >Columnar Database
-            </h3>
-            <p>
-              A columnar database is optimized for fast retrieval of columns of
-              data, typically in analytical applications. Column-oriented
-              databases are designed to scale “out” using distributed clusters
-              of low-cost hardware to increase throughput.
-            </p>
-            <ul>
-              <li>Amazon Redshift</li>
-              <li>Apache Cassandra</li>
-              <li>Apache HBase</li>
-            </ul>
-            <h3 id="Search-Engine-Database">
-              <a
-                href="#Search-Engine-Database"
-                class="headerlink"
-                title="Search-Engine Database"
-              ></a
-              >Search-Engine Database
-            </h3>
-            <p>
-              A search-engine database is a type of nonrelational database that
-              is dedicated to the search of data content. Search-engine
-              databases use indexes to categorize the similar characteristics
-              among data and facilitate search capability. Search-engine
-              databases are optimized for dealing with data that may be long,
-              semistructured, or unstructured, and they typically offer
-              specialized methods such as full-text search, complex search
-              expressions, and ranking of search results.
-            </p>
-            <ul>
-              <li>Elastic Search</li>
-            </ul>
-            <h3 id="Document-oriented-Database">
-              <a
-                href="#Document-oriented-Database"
-                class="headerlink"
-                title="Document-oriented Database"
-              ></a
-              >Document-oriented Database
-            </h3>
-            <p>
-              A document database is a type of nonrelational database that is
-              designed to store and query data as JSON-like documents. Document
-              databases make it easier for developers to store and query data in
-              a database by using the same document-model format they use in
-              their application code. The flexible, semistructured, and
-              hierarchical nature of documents and document databases allows
-              them to evolve with applications’ needs.
-            </p>
-            <ul>
-              <li>MongoDB</li>
-              <li>Amazon DocumentDB</li>
-            </ul>
-            <p>
-              A simple description is key-value database where the value is
-              document, e.g. <strong>JSON</strong> or <strong>XML</strong>.
-            </p>
-            <pre><code>&#123;
+          </li>
+        </ul>
+        <h2 id="NoSQL">
+          <a href="#NoSQL" class="headerlink" title="NoSQL"></a>NoSQL
+        </h2>
+        <p>
+          NoSQL stands for Not Only SQL which provide simple, and flexible and
+          usually schemaless structure. It does not provide the consistency such
+          as we provide with SGBDR.
+        </p>
+        <ul>
+          <li>Schemaless</li>
+          <li>Distributed</li>
+          <li>Structured Data</li>
+          <li>Avoid Join (it allows scale horizontally)</li>
+        </ul>
+        <h3 id="Graph-database">
+          <a
+            href="#Graph-database"
+            class="headerlink"
+            title="Graph database"
+          ></a
+          >Graph database
+        </h3>
+        <p>
+          Graph databases are purpose-built to store and navigate relationships.
+          Relationships are first-class citizens in graph databases, and most of
+          the value of graph databases is derived from these relationships.
+          Graph databases use nodes to store data entities, and edges to store
+          relationships between entities. An edge always has a start node, end
+          node, type, and direction, and an edge can describe parent-child
+          relationships, actions, ownership, and the like. There is no limit to
+          the number and kind of relationships a node can have.
+        </p>
+        <ul>
+          <li>Amazon Neptune</li>
+          <li>Neo4j</li>
+        </ul>
+        <h3 id="Key-Value">
+          <a href="#Key-Value" class="headerlink" title="Key-Value"></a
+          >Key-Value
+        </h3>
+        <p>
+          A key-value database is a type of nonrelational database that uses a
+          simple key-value method to store data. A key-value database stores
+          data as a collection of key-value pairs in which a key serves as a
+          unique identifier. Both keys and values can be anything, ranging from
+          simple objects to complex compound objects. Key-value databases are
+          highly partitionable and allow horizontal scaling at scales that other
+          types of databases cannot achieve. The document model works well with
+          use cases such as catalogs, user profiles, and content management
+          systems where each document is unique and evolves over time. Document
+          databases enable flexible indexing, powerful ad hoc queries, and
+          analytics over collections of documents.
+        </p>
+        <ul>
+          <li>Amazon DynamoDB</li>
+          <li>Redis</li>
+        </ul>
+        <h3 id="Semantic">
+          <a href="#Semantic" class="headerlink" title="Semantic"></a>Semantic
+        </h3>
+        <ul>
+          <li>Triplestores</li>
+        </ul>
+        <h3 id="Columnar-Database">
+          <a
+            href="#Columnar-Database"
+            class="headerlink"
+            title="Columnar Database"
+          ></a
+          >Columnar Database
+        </h3>
+        <p>
+          A columnar database is optimized for fast retrieval of columns of
+          data, typically in analytical applications. Column-oriented databases
+          are designed to scale “out” using distributed clusters of low-cost
+          hardware to increase throughput.
+        </p>
+        <ul>
+          <li>Amazon Redshift</li>
+          <li>Apache Cassandra</li>
+          <li>Apache HBase</li>
+        </ul>
+        <h3 id="Search-Engine-Database">
+          <a
+            href="#Search-Engine-Database"
+            class="headerlink"
+            title="Search-Engine Database"
+          ></a
+          >Search-Engine Database
+        </h3>
+        <p>
+          A search-engine database is a type of nonrelational database that is
+          dedicated to the search of data content. Search-engine databases use
+          indexes to categorize the similar characteristics among data and
+          facilitate search capability. Search-engine databases are optimized
+          for dealing with data that may be long, semistructured, or
+          unstructured, and they typically offer specialized methods such as
+          full-text search, complex search expressions, and ranking of search
+          results.
+        </p>
+        <ul>
+          <li>Elastic Search</li>
+        </ul>
+        <h3 id="Document-oriented-Database">
+          <a
+            href="#Document-oriented-Database"
+            class="headerlink"
+            title="Document-oriented Database"
+          ></a
+          >Document-oriented Database
+        </h3>
+        <p>
+          A document database is a type of nonrelational database that is
+          designed to store and query data as JSON-like documents. Document
+          databases make it easier for developers to store and query data in a
+          database by using the same document-model format they use in their
+          application code. The flexible, semistructured, and hierarchical
+          nature of documents and document databases allows them to evolve with
+          applications’ needs.
+        </p>
+        <ul>
+          <li>MongoDB</li>
+          <li>Amazon DocumentDB</li>
+        </ul>
+        <p>
+          A simple description is key-value database where the value is
+          document, e.g. <strong>JSON</strong> or <strong>XML</strong>.
+        </p>
+        <pre><code>&#123;
 field1: value1,
 field2: value2,
 field3: value3,
@@ -890,626 +466,603 @@ field3: value3,
 fieldN: valueN
 &#125;
 </code></pre>
+        <ul>
+          <li>
+            It is <strong>schemaless</strong> which means more
+            <strong>flexibility</strong> to deal with complex data.
+          </li>
+          <li>we can have <strong>embedded document</strong>.</li>
+          <li>
+            we want to <strong>avoid</strong> using <strong>join</strong>.
+          </li>
+          <li>
+            The difference with key-value is we are allowed to recover document
+            with document’s <strong>attributes</strong>.
+          </li>
+          <li>
+            Documents combine structure and content, and there is great freedom
+            in their structure.
+          </li>
+          <li>We can simulate relationship using key of other document.</li>
+          <li>
+            Documents are grouped into <strong>collections</strong>.
             <ul>
               <li>
-                It is <strong>schemaless</strong> which means more
-                <strong>flexibility</strong> to deal with complex data.
-              </li>
-              <li>we can have <strong>embedded document</strong>.</li>
-              <li>
-                we want to <strong>avoid</strong> using <strong>join</strong>.
+                We should only store documents of same type in a collection.
               </li>
               <li>
-                The difference with key-value is we are allowed to recover
-                document with document’s <strong>attributes</strong>.
+                If we liked store two types into one collection there must have
+                a type identifier. Query one type of documents may require more
+                time.
               </li>
               <li>
-                Documents combine structure and content, and there is great
-                freedom in their structure.
-              </li>
-              <li>We can simulate relationship using key of other document.</li>
-              <li>
-                Documents are grouped into <strong>collections</strong>.
-                <ul>
-                  <li>
-                    We should only store documents of same type in a collection.
-                  </li>
-                  <li>
-                    If we liked store two types into one collection there must
-                    have a type identifier. Query one type of documents may
-                    require more time.
-                  </li>
-                  <li>
-                    CRUD must be common for all document inside the colelction
-                  </li>
-                </ul>
-              </li>
-              <li>
-                Documents are <strong>polymorphic</strong>, which means they
-                don’t have to maintain the same data structure.
-              </li>
-              <li>
-                We may find the <strong>inconsistency</strong> of the referenced
-                document in other document.
+                CRUD must be common for all document inside the colelction
               </li>
             </ul>
-            <h3 id="Design-Decision">
-              <a
-                href="#Design-Decision"
-                class="headerlink"
-                title="Design Decision"
-              ></a
-              >Design Decision
-            </h3>
+          </li>
+          <li>
+            Documents are <strong>polymorphic</strong>, which means they don’t
+            have to maintain the same data structure.
+          </li>
+          <li>
+            We may find the <strong>inconsistency</strong> of the referenced
+            document in other document.
+          </li>
+        </ul>
+        <h3 id="Design-Decision">
+          <a
+            href="#Design-Decision"
+            class="headerlink"
+            title="Design Decision"
+          ></a
+          >Design Decision
+        </h3>
+        <ul>
+          <li>
+            <strong>Balance</strong> between redundancy and performance,
+            <strong>normalizatión y denormalization</strong>.
+            <ul>
+              <li><strong>Normalization</strong> reduce the anomalies</li>
+              <li><strong>Denormalization</strong> Improve the performance.</li>
+            </ul>
+          </li>
+          <li>
+            Priority for <strong>flexibility</strong> and
+            <strong>scalability</strong>
+          </li>
+          <li>Be careful with document size, maximum 16MB</li>
+          <li>
+            identify the indices
+            <ul>
+              <li>index can improve the performance of read</li>
+              <li>index also reduce the performance of write</li>
+              <li>read heavy or write heavy</li>
+            </ul>
+          </li>
+          <li>
+            Think of <strong>frequent queries</strong>.
             <ul>
               <li>
-                <strong>Balance</strong> between redundancy and performance,
-                <strong>normalizatión y denormalization</strong>.
-                <ul>
-                  <li><strong>Normalization</strong> reduce the anomalies</li>
-                  <li>
-                    <strong>Denormalization</strong> Improve the performance.
-                  </li>
-                </ul>
+                If we have three products and all queries use all three products
+                then we should put them into the
+                <strong>same collection</strong>.
               </li>
               <li>
-                Priority for <strong>flexibility</strong> and
-                <strong>scalability</strong>
-              </li>
-              <li>Be careful with document size, maximum 16MB</li>
-              <li>
-                identify the indices
-                <ul>
-                  <li>index can improve the performance of read</li>
-                  <li>index also reduce the performance of write</li>
-                  <li>read heavy or write heavy</li>
-                </ul>
-              </li>
-              <li>
-                Think of <strong>frequent queries</strong>.
-                <ul>
-                  <li>
-                    If we have three products and all queries use all three
-                    products then we should put them into the
-                    <strong>same collection</strong>.
-                  </li>
-                  <li>
-                    Another situation we use same collecon is we know we will
-                    have more more types of product.
-                  </li>
-                </ul>
-              </li>
-              <li>
-                Is it atomic requiered? since we don’t support transation across
-                multiple document.
-              </li>
-              <li>
-                Schemaless !&#x3D; No schema, it means flexible
-                <ul>
-                  <li>same attribute can contains different data type</li>
-                </ul>
-              </li>
-              <li>
-                It suit our developmente because types of
-                queries&#x2F;applications can change
+                Another situation we use same collecon is we know we will have
+                more more types of product.
               </li>
             </ul>
-            <h4 id="Model-Relationships-Between-Documents">
-              <a
-                href="#Model-Relationships-Between-Documents"
-                class="headerlink"
-                title="Model Relationships Between Documents"
-              ></a
-              >Model Relationships Between Documents
-            </h4>
+          </li>
+          <li>
+            Is it atomic requiered? since we don’t support transation across
+            multiple document.
+          </li>
+          <li>
+            Schemaless !&#x3D; No schema, it means flexible
             <ul>
-              <li>
-                Embedded Documents
-                <ul>
-                  <li>One-to-One</li>
-                  <li>One-to-Few</li>
-                  <li>Fast Retrieval</li>
-                  <li>Denormalization</li>
-                  <li>
-                    Two documents must be embedded if your information is always
-                    used together.
-                  </li>
-                </ul>
-              </li>
-              <li>One-to-Many: Embedded Documents</li>
-              <li>
-                Document References
-                <ul>
-                  <li>Many to Many</li>
-                  <li>
-                    The referential integrity of these documents has to be
-                    controlled at the application level
-                  </li>
-                  <li><strong>DBRef</strong></li>
-                </ul>
-              </li>
-              <li>
-                Hierarchy
-                <ul>
-                  <li>Store reference to parent document</li>
-                  <li>Store list of children in parent document</li>
-                </ul>
-              </li>
+              <li>same attribute can contains different data type</li>
             </ul>
-            <h2 id="MongoDB">
-              <a href="#MongoDB" class="headerlink" title="MongoDB"></a>MongoDB
-            </h2>
-            <p>
-              Robust and scalable document oriented NoSQL.
-              <strong>Doesn’t support transation</strong> across multiple
-              documents.
-            </p>
+          </li>
+          <li>
+            It suit our developmente because types of queries&#x2F;applications
+            can change
+          </li>
+        </ul>
+        <h4 id="Model-Relationships-Between-Documents">
+          <a
+            href="#Model-Relationships-Between-Documents"
+            class="headerlink"
+            title="Model Relationships Between Documents"
+          ></a
+          >Model Relationships Between Documents
+        </h4>
+        <ul>
+          <li>
+            Embedded Documents
             <ul>
-              <li><strong>Schemaless</strong></li>
-              <li><strong>Nested Document</strong></li>
-              <li><strong>Semi-structured data</strong></li>
+              <li>One-to-One</li>
+              <li>One-to-Few</li>
+              <li>Fast Retrieval</li>
+              <li>Denormalization</li>
+              <li>
+                Two documents must be embedded if your information is always
+                used together.
+              </li>
             </ul>
-            <h3 id="CRUD">
-              <a href="#CRUD" class="headerlink" title="CRUD"></a>CRUD
-            </h3>
-            <h4 id="Show-collections">
-              <a
-                href="#Show-collections"
-                class="headerlink"
-                title="Show collections"
-              ></a
-              >Show collections
-            </h4>
+          </li>
+          <li>One-to-Many: Embedded Documents</li>
+          <li>
+            Document References
             <ul>
-              <li>Javascript: <strong>db.getCollectionNames()</strong></li>
-              <li>Console: <strong>show collections</strong></li>
+              <li>Many to Many</li>
+              <li>
+                The referential integrity of these documents has to be
+                controlled at the application level
+              </li>
+              <li><strong>DBRef</strong></li>
             </ul>
-            <h4 id="Create">
-              <a href="#Create" class="headerlink" title="Create"></a>Create
-            </h4>
-            <h5 id="Insert">
-              <a href="#Insert" class="headerlink" title="Insert"></a>Insert
-            </h5>
-            <pre><code>db.books.insertOne(&#123;&#39;title&#39;:&#39;Thinking in Java&#39;, &#39;autor&#39;:&#39;Bruce Eckel&#39;&#125;)
+          </li>
+          <li>
+            Hierarchy
+            <ul>
+              <li>Store reference to parent document</li>
+              <li>Store list of children in parent document</li>
+            </ul>
+          </li>
+        </ul>
+        <h2 id="MongoDB">
+          <a href="#MongoDB" class="headerlink" title="MongoDB"></a>MongoDB
+        </h2>
+        <p>
+          Robust and scalable document oriented NoSQL.
+          <strong>Doesn’t support transation</strong> across multiple documents.
+        </p>
+        <ul>
+          <li><strong>Schemaless</strong></li>
+          <li><strong>Nested Document</strong></li>
+          <li><strong>Semi-structured data</strong></li>
+        </ul>
+        <h3 id="CRUD">
+          <a href="#CRUD" class="headerlink" title="CRUD"></a>CRUD
+        </h3>
+        <h4 id="Show-collections">
+          <a
+            href="#Show-collections"
+            class="headerlink"
+            title="Show collections"
+          ></a
+          >Show collections
+        </h4>
+        <ul>
+          <li>Javascript: <strong>db.getCollectionNames()</strong></li>
+          <li>Console: <strong>show collections</strong></li>
+        </ul>
+        <h4 id="Create">
+          <a href="#Create" class="headerlink" title="Create"></a>Create
+        </h4>
+        <h5 id="Insert">
+          <a href="#Insert" class="headerlink" title="Insert"></a>Insert
+        </h5>
+        <pre><code>db.books.insertOne(&#123;&#39;title&#39;:&#39;Thinking in Java&#39;, &#39;autor&#39;:&#39;Bruce Eckel&#39;&#125;)
 </code></pre>
-            <h5 id="Bulk-Insert">
-              <a href="#Bulk-Insert" class="headerlink" title="Bulk Insert"></a
-              >Bulk Insert
-            </h5>
-            <pre><code>db.books.insertMany([&#123;&#39;title&#39;:&#39;Thinking in Java&#39;, &#39;autor&#39;:&#39;Bruce Eckel&#39;&#125;, &#123;&#39;title&#39;:&#39;Effective Java&#39;, &#39;author&#39;:&#39;Joshua Bloch&#39;&#125;])
+        <h5 id="Bulk-Insert">
+          <a href="#Bulk-Insert" class="headerlink" title="Bulk Insert"></a>Bulk
+          Insert
+        </h5>
+        <pre><code>db.books.insertMany([&#123;&#39;title&#39;:&#39;Thinking in Java&#39;, &#39;autor&#39;:&#39;Bruce Eckel&#39;&#125;, &#123;&#39;title&#39;:&#39;Effective Java&#39;, &#39;author&#39;:&#39;Joshua Bloch&#39;&#125;])
 </code></pre>
-            <p>
-              By default the insertion is <strong>ordered</strong>. If there is
-              a error during the insertiong it will just skip the document and
-              continue with the next.
-            </p>
-            <h5 id="Uniqueness">
-              <a href="#Uniqueness" class="headerlink" title="Uniqueness"></a
-              >Uniqueness
-            </h5>
-            <p>
-              The field name <strong>_id</strong> is reserved for use as a
-              primary key; its value must be unique in the collection, is
-              immutable, and may be of any type other than an array, by default
-              an ObjectId is generated. ObjectId is made up of
-              <strong>12 bytes</strong>. The
-              <strong>first four bytes are a timestamp</strong> with the second
-              ones; the next <strong>three bytes</strong> represent the
-              <strong>unique identifier of the machine</strong>; the
-              <strong>next two are the process identifier</strong>; And finally,
-              the <strong>last three bytes</strong> are an
-              <strong>incremental field</strong>. It give us document creation
-              date.
-            </p>
-            <h4 id="Read">
-              <a href="#Read" class="headerlink" title="Read"></a>Read
-            </h4>
-            <h5 id="Read-All">
-              <a href="#Read-All" class="headerlink" title="Read All"></a>Read
-              All
-            </h5>
-            <pre><code>db.collections.find()
+        <p>
+          By default the insertion is <strong>ordered</strong>. If there is a
+          error during the insertiong it will just skip the document and
+          continue with the next.
+        </p>
+        <h5 id="Uniqueness">
+          <a href="#Uniqueness" class="headerlink" title="Uniqueness"></a
+          >Uniqueness
+        </h5>
+        <p>
+          The field name <strong>_id</strong> is reserved for use as a primary
+          key; its value must be unique in the collection, is immutable, and may
+          be of any type other than an array, by default an ObjectId is
+          generated. ObjectId is made up of <strong>12 bytes</strong>. The
+          <strong>first four bytes are a timestamp</strong> with the second
+          ones; the next <strong>three bytes</strong> represent the
+          <strong>unique identifier of the machine</strong>; the
+          <strong>next two are the process identifier</strong>; And finally, the
+          <strong>last three bytes</strong> are an
+          <strong>incremental field</strong>. It give us document creation date.
+        </p>
+        <h4 id="Read">
+          <a href="#Read" class="headerlink" title="Read"></a>Read
+        </h4>
+        <h5 id="Read-All">
+          <a href="#Read-All" class="headerlink" title="Read All"></a>Read All
+        </h5>
+        <pre><code>db.collections.find()
 db.collections.find().pretty()
 </code></pre>
-            <h5 id="Filter">
-              <a href="#Filter" class="headerlink" title="Filter"></a>Filter
-            </h5>
-            <pre><code>db.books.find(&#123;&#39;title&#39;:&#123;$eq : &#39;Thinking in Java&#39;&#125;&#125;)
+        <h5 id="Filter">
+          <a href="#Filter" class="headerlink" title="Filter"></a>Filter
+        </h5>
+        <pre><code>db.books.find(&#123;&#39;title&#39;:&#123;$eq : &#39;Thinking in Java&#39;&#125;&#125;)
 db.books.find(&#123;$and : [
     &#123;$or : [&#123;&#39;title&#39;:&#123;$regex : &#39;^Thinking&#39;&#125;&#125;, &#123;&#39;title&#39;:&#123;$regex : &#39;^Effective&#39;&#125;&#125;]&#125;,
     &#123;&#39;title&#39;:&#123;$regex : &#39;Java$&#39;&#125;&#125;
 ]&#125;)
 </code></pre>
-            <p>
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://docs.mongodb.com/manual/reference/operator/query/"
-                >Query Selectors</a
-              >
-            </p>
-            <p>
-              The syntax is <strong>{ attribute: { $operador: value } }</strong>
-            </p>
-            <h5 id="Filter-with-Embedded-Document">
-              <a
-                href="#Filter-with-Embedded-Document"
-                class="headerlink"
-                title="Filter with Embedded Document"
-              ></a
-              >Filter with Embedded Document
-            </h5>
-            <pre><code>db.clients.find(&#123;&quot;direction&quot;: &#123;&quot;street&quot;:&quot;C/XX, 99&quot;, &quot;city&quot;: &quot;BB&quot;, &quot;state&quot;:&quot;SS&quot;, &quot;ZIP&quot;:&quot;123456&quot;&#125;&#125;)
+        <p>
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://docs.mongodb.com/manual/reference/operator/query/"
+            >Query Selectors</a
+          >
+        </p>
+        <p>
+          The syntax is <strong>{ attribute: { $operador: value } }</strong>
+        </p>
+        <h5 id="Filter-with-Embedded-Document">
+          <a
+            href="#Filter-with-Embedded-Document"
+            class="headerlink"
+            title="Filter with Embedded Document"
+          ></a
+          >Filter with Embedded Document
+        </h5>
+        <pre><code>db.clients.find(&#123;&quot;direction&quot;: &#123;&quot;street&quot;:&quot;C/XX, 99&quot;, &quot;city&quot;: &quot;BB&quot;, &quot;state&quot;:&quot;SS&quot;, &quot;ZIP&quot;:&quot;123456&quot;&#125;&#125;)
 </code></pre>
-            <h5 id="Filter-with-Arrays">
-              <a
-                href="#Filter-with-Arrays"
-                class="headerlink"
-                title="Filter with Arrays"
-              ></a
-              >Filter with Arrays
-            </h5>
-            <pre><code>db.clients.find(&#123;&quot;tel&quot;:[&quot;123456789&quot;, &quot;987654321&quot;]&#125;)
+        <h5 id="Filter-with-Arrays">
+          <a
+            href="#Filter-with-Arrays"
+            class="headerlink"
+            title="Filter with Arrays"
+          ></a
+          >Filter with Arrays
+        </h5>
+        <pre><code>db.clients.find(&#123;&quot;tel&quot;:[&quot;123456789&quot;, &quot;987654321&quot;]&#125;)
 </code></pre>
-            <h4 id="Update">
-              <a href="#Update" class="headerlink" title="Update"></a>Update
-            </h4>
-            <pre><code>db.books.update(&#123;&#39;title&#39;:&#39;Thinking in Java&#39;&#125;, &#123;$set: &#123;&#39;ISBN&#39;:&#39;978-0131872486&#39;&#125;&#125;)
+        <h4 id="Update">
+          <a href="#Update" class="headerlink" title="Update"></a>Update
+        </h4>
+        <pre><code>db.books.update(&#123;&#39;title&#39;:&#39;Thinking in Java&#39;&#125;, &#123;$set: &#123;&#39;ISBN&#39;:&#39;978-0131872486&#39;&#125;&#125;)
 </code></pre>
-            <p>
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://docs.mongodb.com/manual/reference/operator/update/"
-                >Update Operators</a
-              >
-            </p>
-            <p>
-              the syntax is <strong>{ $operador: { attribute: value } }</strong>
-            </p>
-            <h5 id="Upsert">
-              <a href="#Upsert" class="headerlink" title="Upsert"></a>Upsert
-            </h5>
-            <p>
-              If <strong>upsert</strong> set to true, creates a new document
-              when no document matches the query criteria. The default value is
-              false, which does not insert a new document when no match is
-              found.
-            </p>
-            <pre><code>db.collection.update(query, update, &#123;upsert: true&#125;)
+        <p>
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://docs.mongodb.com/manual/reference/operator/update/"
+            >Update Operators</a
+          >
+        </p>
+        <p>
+          the syntax is <strong>{ $operador: { attribute: value } }</strong>
+        </p>
+        <h5 id="Upsert">
+          <a href="#Upsert" class="headerlink" title="Upsert"></a>Upsert
+        </h5>
+        <p>
+          If <strong>upsert</strong> set to true, creates a new document when no
+          document matches the query criteria. The default value is false, which
+          does not insert a new document when no match is found.
+        </p>
+        <pre><code>db.collection.update(query, update, &#123;upsert: true&#125;)
 </code></pre>
-            <h4 id="Save">
-              <a href="#Save" class="headerlink" title="Save"></a>Save
-            </h4>
-            <p>
-              Updates an existing document or inserts a new document, depending
-              on its document parameter.
-            </p>
-            <pre><code>db.collection.save(
+        <h4 id="Save">
+          <a href="#Save" class="headerlink" title="Save"></a>Save
+        </h4>
+        <p>
+          Updates an existing document or inserts a new document, depending on
+          its document parameter.
+        </p>
+        <pre><code>db.collection.save(
     &lt;document&gt;,
     &#123;
         writeConcern: &lt;document&gt;
     &#125;
 )
 </code></pre>
-            <h4 id="Delete">
-              <a href="#Delete" class="headerlink" title="Delete"></a>Delete
-            </h4>
-            <h5 id="Single-Item">
-              <a href="#Single-Item" class="headerlink" title="Single Item"></a
-              >Single Item
-            </h5>
-            <pre><code>db.books.remove([&#123;&#39;author&#39;:&#39;Bruce Eckel&#39;&#125;])
+        <h4 id="Delete">
+          <a href="#Delete" class="headerlink" title="Delete"></a>Delete
+        </h4>
+        <h5 id="Single-Item">
+          <a href="#Single-Item" class="headerlink" title="Single Item"></a
+          >Single Item
+        </h5>
+        <pre><code>db.books.remove([&#123;&#39;author&#39;:&#39;Bruce Eckel&#39;&#125;])
 </code></pre>
-            <h5 id="Delete-All-Documents-Inside-The-Collection">
-              <a
-                href="#Delete-All-Documents-Inside-The-Collection"
-                class="headerlink"
-                title="Delete All Documents Inside The Collection"
-              ></a
-              >Delete All Documents Inside The Collection
-            </h5>
-            <pre><code>db.books.drop()
+        <h5 id="Delete-All-Documents-Inside-The-Collection">
+          <a
+            href="#Delete-All-Documents-Inside-The-Collection"
+            class="headerlink"
+            title="Delete All Documents Inside The Collection"
+          ></a
+          >Delete All Documents Inside The Collection
+        </h5>
+        <pre><code>db.books.drop()
 </code></pre>
-            <p>
-              Has better <strong>drop</strong> performance than
-              <strong>remove</strong>
-            </p>
-            <h4 id="Sort">
-              <a href="#Sort" class="headerlink" title="Sort"></a>Sort
-            </h4>
-            <pre><code>db.books.find().sort(&#123;&#39;title&#39;:1, ...more fields to use for sorting&#125;)
+        <p>
+          Has better <strong>drop</strong> performance than
+          <strong>remove</strong>
+        </p>
+        <h4 id="Sort">
+          <a href="#Sort" class="headerlink" title="Sort"></a>Sort
+        </h4>
+        <pre><code>db.books.find().sort(&#123;&#39;title&#39;:1, ...more fields to use for sorting&#125;)
 </code></pre>
-            <ul>
-              <li>ascending: 1</li>
-              <li>descending: -1</li>
-            </ul>
-            <h4 id="Count">
-              <a href="#Count" class="headerlink" title="Count"></a>Count
-            </h4>
-            <pre><code>db.books.find().count()
+        <ul>
+          <li>ascending: 1</li>
+          <li>descending: -1</li>
+        </ul>
+        <h4 id="Count">
+          <a href="#Count" class="headerlink" title="Count"></a>Count
+        </h4>
+        <pre><code>db.books.find().count()
 db.books.count(&#123;&quot;author&quot;:&#123;$eq:&quot;ABC&quot;&#125;&#125;)
 </code></pre>
-            <h3 id="Indexes">
-              <a href="#Indexes" class="headerlink" title="Indexes"></a>Indexes
-            </h3>
-            <p>
-              Indexes in MongoDB are generated as a <strong>B-tree</strong>.
-              This increases the speed when searching and sorting when returning
-              results. It is recommended that these fields have a
-              <strong>high cardinality</strong>.
-            </p>
-            <pre><code>db.coleccion.createIndex(&#123;…&#125;)
+        <h3 id="Indexes">
+          <a href="#Indexes" class="headerlink" title="Indexes"></a>Indexes
+        </h3>
+        <p>
+          Indexes in MongoDB are generated as a <strong>B-tree</strong>. This
+          increases the speed when searching and sorting when returning results.
+          It is recommended that these fields have a
+          <strong>high cardinality</strong>.
+        </p>
+        <pre><code>db.coleccion.createIndex(&#123;…&#125;)
 db.coleccion.dropIndex(&#123;…&#125;)
 db.coleccion.dropIndexes()
 db.coleccion.getIndexes()
 </code></pre>
-            <h4 id="Single-Field">
-              <a
-                href="#Single-Field"
-                class="headerlink"
-                title="Single Field"
-              ></a
-              >Single Field
-            </h4>
-            <pre><code>db.coleccion.createIndex(&#123; a: 1 &#125;)
+        <h4 id="Single-Field">
+          <a href="#Single-Field" class="headerlink" title="Single Field"></a
+          >Single Field
+        </h4>
+        <pre><code>db.coleccion.createIndex(&#123; a: 1 &#125;)
 </code></pre>
-            <h4 id="Compound-Index">
-              <a
-                href="#Compound-Index"
-                class="headerlink"
-                title="Compound Index"
-              ></a
-              >Compound Index
-            </h4>
-            <pre><code>db.coleccion.createIndex(&#123; A: 1, B: -1, C: 1 &#125;)
+        <h4 id="Compound-Index">
+          <a
+            href="#Compound-Index"
+            class="headerlink"
+            title="Compound Index"
+          ></a
+          >Compound Index
+        </h4>
+        <pre><code>db.coleccion.createIndex(&#123; A: 1, B: -1, C: 1 &#125;)
 </code></pre>
-            <p>
-              The index that will be generated with the previous statement will
-              group the data first by the field A ascendingly and then by the
-              field B descendingly and the by the field C ascendingly. Composite
-              indexes can be used to query one or more of the fields. In these
-              case we can query A, or A and B together, or A and B and C
-              together. We can only query together if they match the order.
-            </p>
-            <h4 id="Unique-Index">
-              <a
-                href="#Unique-Index"
-                class="headerlink"
-                title="Unique Index"
-              ></a
-              >Unique Index
-            </h4>
-            <p>
-              The unique property for an index causes MongoDB to reject
-              duplicate values for the indexed field.
-            </p>
-            <pre><code>db.coleccion.createIndex(&#123;&#39;name&#39;:1&#125;, &#123;&quot;unique&quot;:true&#125;)
+        <p>
+          The index that will be generated with the previous statement will
+          group the data first by the field A ascendingly and then by the field
+          B descendingly and the by the field C ascendingly. Composite indexes
+          can be used to query one or more of the fields. In these case we can
+          query A, or A and B together, or A and B and C together. We can only
+          query together if they match the order.
+        </p>
+        <h4 id="Unique-Index">
+          <a href="#Unique-Index" class="headerlink" title="Unique Index"></a
+          >Unique Index
+        </h4>
+        <p>
+          The unique property for an index causes MongoDB to reject duplicate
+          values for the indexed field.
+        </p>
+        <pre><code>db.coleccion.createIndex(&#123;&#39;name&#39;:1&#125;, &#123;&quot;unique&quot;:true&#125;)
 </code></pre>
-            <h4 id="Sparse-Indexes">
-              <a
-                href="#Sparse-Indexes"
-                class="headerlink"
-                title="Sparse Indexes"
-              ></a
-              >Sparse Indexes
-            </h4>
-            <p>
-              The sparse property of an index ensures that the index only
-              contain entries for documents that have the indexed field.
-            </p>
-            <pre><code>db.coleccion.createIndex(&#123;&#39;name&#39;:1&#125;, &#123;&quot;sparse&quot;:true&#125;)
+        <h4 id="Sparse-Indexes">
+          <a
+            href="#Sparse-Indexes"
+            class="headerlink"
+            title="Sparse Indexes"
+          ></a
+          >Sparse Indexes
+        </h4>
+        <p>
+          The sparse property of an index ensures that the index only contain
+          entries for documents that have the indexed field.
+        </p>
+        <pre><code>db.coleccion.createIndex(&#123;&#39;name&#39;:1&#125;, &#123;&quot;sparse&quot;:true&#125;)
 </code></pre>
-            <h4 id="Partial-Indexes">
-              <a
-                href="#Partial-Indexes"
-                class="headerlink"
-                title="Partial Indexes"
-              ></a
-              >Partial Indexes
-            </h4>
-            <p>
-              Partial indexes only index the documents in a collection that meet
-              a specified filter expression.
-            </p>
-            <pre><code>db.coleccion.createIndex(&#123;&#39;name&#39;:1&#125;, &#123;partialFilterExpression: &#123;age: &#123;$gt:18&#125;&#125;&#125;)
+        <h4 id="Partial-Indexes">
+          <a
+            href="#Partial-Indexes"
+            class="headerlink"
+            title="Partial Indexes"
+          ></a
+          >Partial Indexes
+        </h4>
+        <p>
+          Partial indexes only index the documents in a collection that meet a
+          specified filter expression.
+        </p>
+        <pre><code>db.coleccion.createIndex(&#123;&#39;name&#39;:1&#125;, &#123;partialFilterExpression: &#123;age: &#123;$gt:18&#125;&#125;&#125;)
 </code></pre>
-            <h4 id="Index-Intersection">
-              <a
-                href="#Index-Intersection"
-                class="headerlink"
-                title="Index Intersection"
-              ></a
-              >Index Intersection
-            </h4>
-            <p>
-              MongoDB can use the intersection of multiple indexes to fulfill
-              queries.
-            </p>
-            <pre><code>db.coleccion.createIndex(&#123;&#39;name&#39;:1&#125;)
+        <h4 id="Index-Intersection">
+          <a
+            href="#Index-Intersection"
+            class="headerlink"
+            title="Index Intersection"
+          ></a
+          >Index Intersection
+        </h4>
+        <p>
+          MongoDB can use the intersection of multiple indexes to fulfill
+          queries.
+        </p>
+        <pre><code>db.coleccion.createIndex(&#123;&#39;name&#39;:1&#125;)
 db.coleccion.createIndex(&#123;&#39;age&#39;:1&#125;)
 db.coleccion.find(&#123;&#39;name;: &quot;Jorge&quot;, &#39;age&#39;: &#123;$gt:18&#125;&#125;)
 </code></pre>
-            <h4 id="Index-on-Embedded-Document">
-              <a
-                href="#Index-on-Embedded-Document"
-                class="headerlink"
-                title="Index on Embedded Document"
-              ></a
-              >Index on Embedded Document
-            </h4>
-            <pre><code>db.coleccion.createIndex(&#123; address.city&quot; : 1&#125;)
+        <h4 id="Index-on-Embedded-Document">
+          <a
+            href="#Index-on-Embedded-Document"
+            class="headerlink"
+            title="Index on Embedded Document"
+          ></a
+          >Index on Embedded Document
+        </h4>
+        <pre><code>db.coleccion.createIndex(&#123; address.city&quot; : 1&#125;)
 </code></pre>
-            <h4 id="Multikey-Indexes">
-              <a
-                href="#Multikey-Indexes"
-                class="headerlink"
-                title="Multikey Indexes"
-              ></a
-              >Multikey Indexes
-            </h4>
-            <p>
-              To index a field that holds an array value, MongoDB creates an
-              index key for each element in the array. These multikey indexes
-              support efficient queries against array fields. The limitation is
-              only one field can be array type.
-            </p>
-            <pre><code>db.coll.createIndex(&#123;&lt;field&gt;: &lt; 1 or -1 &gt; &#125;)
+        <h4 id="Multikey-Indexes">
+          <a
+            href="#Multikey-Indexes"
+            class="headerlink"
+            title="Multikey Indexes"
+          ></a
+          >Multikey Indexes
+        </h4>
+        <p>
+          To index a field that holds an array value, MongoDB creates an index
+          key for each element in the array. These multikey indexes support
+          efficient queries against array fields. The limitation is only one
+          field can be array type.
+        </p>
+        <pre><code>db.coll.createIndex(&#123;&lt;field&gt;: &lt; 1 or -1 &gt; &#125;)
 </code></pre>
-            <h4 id="Covered-Query">
-              <a
-                href="#Covered-Query"
-                class="headerlink"
-                title="Covered Query"
-              ></a
-              >Covered Query
-            </h4>
-            <p>
-              A covered query is a query that can be satisfied entirely using an
-              index and does not have to examine any documents. An index covers
-              a query when all of the following apply
-            </p>
-            <ul>
-              <li>all the fields in the query are part of an index</li>
-              <li>
-                all the fields returned in the results are in the same index.
-              </li>
-              <li>
-                no fields in the query are equal to null (i.e. {“field” : null}
-                or {“field” : {$eq : null}} ).
-              </li>
-            </ul>
-            <h4 id="Debug-Query">
-              <a href="#Debug-Query" class="headerlink" title="Debug Query"></a
-              >Debug Query
-            </h4>
-            <pre><code>db.colección.find().explain()
+        <h4 id="Covered-Query">
+          <a href="#Covered-Query" class="headerlink" title="Covered Query"></a
+          >Covered Query
+        </h4>
+        <p>
+          A covered query is a query that can be satisfied entirely using an
+          index and does not have to examine any documents. An index covers a
+          query when all of the following apply
+        </p>
+        <ul>
+          <li>all the fields in the query are part of an index</li>
+          <li>all the fields returned in the results are in the same index.</li>
+          <li>
+            no fields in the query are equal to null (i.e. {“field” : null} or
+            {“field” : {$eq : null}} ).
+          </li>
+        </ul>
+        <h4 id="Debug-Query">
+          <a href="#Debug-Query" class="headerlink" title="Debug Query"></a
+          >Debug Query
+        </h4>
+        <pre><code>db.colección.find().explain()
 </code></pre>
-            <h3 id="Aggregation-Framework">
-              <a
-                href="#Aggregation-Framework"
-                class="headerlink"
-                title="Aggregation Framework"
-              ></a
-              >Aggregation Framework
-            </h3>
-            <h4 id="Aggregation-Pipeline">
-              <a
-                href="#Aggregation-Pipeline"
-                class="headerlink"
-                title="Aggregation Pipeline"
-              ></a
-              >Aggregation Pipeline
-            </h4>
-            <p>
-              Aggregation operations process data records and return computed
-              results, it is modeled on the concept of data processing pipelines
-              with
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://docs.mongodb.com/manual/reference/operator/aggregation-pipeline/"
-                >stages operators</a
-              >
-              and the
-              <a
-                target="_blank"
-                rel="noopener"
-                href="https://docs.mongodb.com/manual/reference/operator/aggregation/"
-                >expression operators</a
-              >.
-            </p>
-            <pre><code>db.orders.aggregate([
+        <h3 id="Aggregation-Framework">
+          <a
+            href="#Aggregation-Framework"
+            class="headerlink"
+            title="Aggregation Framework"
+          ></a
+          >Aggregation Framework
+        </h3>
+        <h4 id="Aggregation-Pipeline">
+          <a
+            href="#Aggregation-Pipeline"
+            class="headerlink"
+            title="Aggregation Pipeline"
+          ></a
+          >Aggregation Pipeline
+        </h4>
+        <p>
+          Aggregation operations process data records and return computed
+          results, it is modeled on the concept of data processing pipelines
+          with
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://docs.mongodb.com/manual/reference/operator/aggregation-pipeline/"
+            >stages operators</a
+          >
+          and the
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://docs.mongodb.com/manual/reference/operator/aggregation/"
+            >expression operators</a
+          >.
+        </p>
+        <pre><code>db.orders.aggregate([
     &#123;$match: &#123; status: &quot;A&quot; &#125;&#125;,
     &#123;$group: &#123; _id: &quot;$cust_id&quot;, total: &#123; $sum: &quot;$amount&quot; &#125;&#125;&#125;
 ])
 </code></pre>
-            <iframe
-              src="https://docs.mongodb.com/manual/_images/agg-pipeline.mp4"
-              width="100%"
-              height="300"
-              frameborder="0"
-              loading="lazy"
-              allowfullscreen
-            ></iframe>
+        <iframe
+          src="https://docs.mongodb.com/manual/_images/agg-pipeline.mp4"
+          width="100%"
+          height="300"
+          frameborder="0"
+          loading="lazy"
+          allowfullscreen
+        ></iframe>
 
-            <p>Each operators receives a set of arguments</p>
-            <pre><code>&#123;&lt;operador&gt;:[&lt;argumento1&gt;, &lt;argumento2&gt;...]&#125;
+        <p>Each operators receives a set of arguments</p>
+        <pre><code>&#123;&lt;operador&gt;:[&lt;argumento1&gt;, &lt;argumento2&gt;...]&#125;
 </code></pre>
-            <p>
-              Expressions are used as filters, and usually have no state of
-              their own except the accumulator. But not all the acumudor has the
-              global state e.g. $project.
-            </p>
-            <h5 id="project">
-              <a href="#project" class="headerlink" title="$project"></a
-              >$project
-            </h5>
-            <p>
-              Reshapes each document in the stream, such as by adding new fields
-              or removing existing fields.
-            </p>
-            <pre><code>&#123; $project: &#123; &lt;specifications&gt; &#125;&#125;
+        <p>
+          Expressions are used as filters, and usually have no state of their
+          own except the accumulator. But not all the acumudor has the global
+          state e.g. $project.
+        </p>
+        <h5 id="project">
+          <a href="#project" class="headerlink" title="$project"></a>$project
+        </h5>
+        <p>
+          Reshapes each document in the stream, such as by adding new fields or
+          removing existing fields.
+        </p>
+        <pre><code>&#123; $project: &#123; &lt;specifications&gt; &#125;&#125;
 </code></pre>
-            <h5 id="match">
-              <a href="#match" class="headerlink" title="$match"></a>$match
-            </h5>
-            <p>
-              Filters the document stream to allow only matching documents to
-              pass unmodified into the next pipeline stage.
-            </p>
-            <pre><code>&#123; $match: &#123; &lt;query&gt; &#125; &#125;
+        <h5 id="match">
+          <a href="#match" class="headerlink" title="$match"></a>$match
+        </h5>
+        <p>
+          Filters the document stream to allow only matching documents to pass
+          unmodified into the next pipeline stage.
+        </p>
+        <pre><code>&#123; $match: &#123; &lt;query&gt; &#125; &#125;
 </code></pre>
-            <h5 id="sample">
-              <a href="#sample" class="headerlink" title="$sample"></a>$sample
-            </h5>
-            <p>
-              Randomly selects the specified number of documents from its input.
-            </p>
-            <pre><code>&#123;$sample: &#123;size: &lt;positive integer&gt;&#125;&#125;
+        <h5 id="sample">
+          <a href="#sample" class="headerlink" title="$sample"></a>$sample
+        </h5>
+        <p>
+          Randomly selects the specified number of documents from its input.
+        </p>
+        <pre><code>&#123;$sample: &#123;size: &lt;positive integer&gt;&#125;&#125;
 </code></pre>
-            <h5 id="sort">
-              <a href="#sort" class="headerlink" title="$sort"></a>$sort
-            </h5>
-            <p>Reorders the document stream by a specified sort key.</p>
-            <pre><code>&#123; $sort: &#123; &lt;field1&gt;: &lt;order&gt;, &lt;field2&gt;:&lt;order&gt; ... &#125;&#125;
+        <h5 id="sort">
+          <a href="#sort" class="headerlink" title="$sort"></a>$sort
+        </h5>
+        <p>Reorders the document stream by a specified sort key.</p>
+        <pre><code>&#123; $sort: &#123; &lt;field1&gt;: &lt;order&gt;, &lt;field2&gt;:&lt;order&gt; ... &#125;&#125;
 </code></pre>
-            <h5 id="limit">
-              <a href="#limit" class="headerlink" title="$limit"></a>$limit
-            </h5>
-            <p>
-              Passes the first n documents unmodified to the pipeline where n is
-              the specified limit.
-            </p>
-            <pre><code>&#123; $limit: &lt;positive integer&gt; &#125;
+        <h5 id="limit">
+          <a href="#limit" class="headerlink" title="$limit"></a>$limit
+        </h5>
+        <p>
+          Passes the first n documents unmodified to the pipeline where n is the
+          specified limit.
+        </p>
+        <pre><code>&#123; $limit: &lt;positive integer&gt; &#125;
 </code></pre>
-            <h5 id="skip">
-              <a href="#skip" class="headerlink" title="$skip"></a>$skip
-            </h5>
-            <p>
-              Skips the first n documents where n is the specified skip number
-              and passes the remaining documents unmodified to the pipeline.
-            </p>
-            <pre><code>&#123; $skip: &lt;positive integer&gt; &#125;
+        <h5 id="skip">
+          <a href="#skip" class="headerlink" title="$skip"></a>$skip
+        </h5>
+        <p>
+          Skips the first n documents where n is the specified skip number and
+          passes the remaining documents unmodified to the pipeline.
+        </p>
+        <pre><code>&#123; $skip: &lt;positive integer&gt; &#125;
 </code></pre>
-            <h5 id="out">
-              <a href="#out" class="headerlink" title="$out"></a>$out
-            </h5>
-            <p>
-              Writes the resulting documents of the aggregation pipeline to a
-              collection.
-            </p>
-            <pre><code>&#123; $out: &quot;&lt;output collections&gt;&quot; &#125;
+        <h5 id="out">
+          <a href="#out" class="headerlink" title="$out"></a>$out
+        </h5>
+        <p>
+          Writes the resulting documents of the aggregation pipeline to a
+          collection.
+        </p>
+        <pre><code>&#123; $out: &quot;&lt;output collections&gt;&quot; &#125;
 </code></pre>
-            <h5 id="group">
-              <a href="#group" class="headerlink" title="$group"></a>$group
-            </h5>
-            <p>
-              Groups input documents by a specified identifier expression and
-              applies the accumulator expression(s), if specified, to each
-              group.
-            </p>
-            <pre><code>&#123;
+        <h5 id="group">
+          <a href="#group" class="headerlink" title="$group"></a>$group
+        </h5>
+        <p>
+          Groups input documents by a specified identifier expression and
+          applies the accumulator expression(s), if specified, to each group.
+        </p>
+        <pre><code>&#123;
   $group:
     &#123;
       _id: &lt;expression&gt;, // Group By Expression
@@ -1518,24 +1071,23 @@ db.coleccion.find(&#123;&#39;name;: &quot;Jorge&quot;, &#39;age&#39;: &#123;$gt:
     &#125;
 &#125;
 </code></pre>
-            <h5 id="unwind">
-              <a href="#unwind" class="headerlink" title="$unwind"></a>$unwind
-            </h5>
-            <p>
-              Deconstructs an array field from the input documents to output a
-              document for each element. Each output document replaces the array
-              with an element value
-            </p>
-            <pre><code>&#123;$unwind: &lt;array field&gt;&#125;
+        <h5 id="unwind">
+          <a href="#unwind" class="headerlink" title="$unwind"></a>$unwind
+        </h5>
+        <p>
+          Deconstructs an array field from the input documents to output a
+          document for each element. Each output document replaces the array
+          with an element value
+        </p>
+        <pre><code>&#123;$unwind: &lt;array field&gt;&#125;
 </code></pre>
-            <h5 id="lookup">
-              <a href="#lookup" class="headerlink" title="$lookup"></a>$lookup
-            </h5>
-            <p>
-              Performs a left outer join to another collection in the same
-              database.
-            </p>
-            <pre><code>&#123;
+        <h5 id="lookup">
+          <a href="#lookup" class="headerlink" title="$lookup"></a>$lookup
+        </h5>
+        <p>
+          Performs a left outer join to another collection in the same database.
+        </p>
+        <pre><code>&#123;
   $lookup:
     &#123;
       from: &lt;collection to join&gt;,
@@ -1545,83 +1097,73 @@ db.coleccion.find(&#123;&#39;name;: &quot;Jorge&quot;, &#39;age&#39;: &#123;$gt:
     &#125;
 &#125;
 </code></pre>
-            <h4 id="Map-Reduce">
-              <a href="#Map-Reduce" class="headerlink" title="Map-Reduce"></a
-              >Map-Reduce
-            </h4>
-            <p>
-              MongoDB also provides map-reduce operations to perform
-              aggregation. In general, map-reduce operations have two phases: a
-              map stage that processes each document and emits one or more
-              objects for each input document, and reduce phase that combines
-              the output of the map operation.
-            </p>
-            <p>
-              <img
-                src="https://docs.mongodb.com/manual/_images/map-reduce.bakedsvg.svg"
-                alt="Map-Reduce"
-              />
-            </p>
-            <h2 id="Reference">
-              <a href="#Reference" class="headerlink" title="Reference"></a
-              >Reference
-            </h2>
-            <ul>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://docs.mongodb.com/manual/tutorial/getting-started/"
-                  >MongoDB Getting Started</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://docs.mongodb.com/manual/applications/data-models-relationships/"
-                  >MongoDB Relationships</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://docs.mongodb.com/manual/indexes/"
-                  >MongoDB Indexes</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://docs.mongodb.com/manual/core/query-optimization/"
-                  >MongoDB Query Optimization</a
-                >
-              </li>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://docs.mongodb.com/manual/aggregation/"
-                  >MongoDB Aggregation</a
-                >
-              </li>
-            </ul>
+        <h4 id="Map-Reduce">
+          <a href="#Map-Reduce" class="headerlink" title="Map-Reduce"></a
+          >Map-Reduce
+        </h4>
+        <p>
+          MongoDB also provides map-reduce operations to perform aggregation. In
+          general, map-reduce operations have two phases: a map stage that
+          processes each document and emits one or more objects for each input
+          document, and reduce phase that combines the output of the map
+          operation.
+        </p>
+        <p>
+          <img
+            src="https://docs.mongodb.com/manual/_images/map-reduce.bakedsvg.svg"
+            alt="Map-Reduce"
+          />
+        </p>
+        <h2 id="Reference">
+          <a href="#Reference" class="headerlink" title="Reference"></a
+          >Reference
+        </h2>
+        <ul>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://docs.mongodb.com/manual/tutorial/getting-started/"
+              >MongoDB Getting Started</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://docs.mongodb.com/manual/applications/data-models-relationships/"
+              >MongoDB Relationships</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://docs.mongodb.com/manual/indexes/"
+              >MongoDB Indexes</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://docs.mongodb.com/manual/core/query-optimization/"
+              >MongoDB Query Optimization</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://docs.mongodb.com/manual/aggregation/"
+              >MongoDB Aggregation</a
+            >
+          </li>
+        </ul>
 
-            <hr />
+        <hr />
 
-            <ul class="list-group"></ul>
-          </div>
-        </div>
-
-        <div class="row justify-content-center">
-          <!-- Sidebar Container -->
-
-          <div class="col-lg-8` col-md-10 sidebar-container">
-            <!-- Friends Blog -->
-          </div>
-        </div>
+        <ul class="list-group"></ul>
       </div>
     </article>
     <!-- Custom Theme JavaScript -->

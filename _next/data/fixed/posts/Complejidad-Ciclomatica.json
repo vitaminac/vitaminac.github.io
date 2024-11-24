@@ -7,6 +7,7 @@
       "tags": ["Software Quality Metrics"],
       "isLegacy": true,
       "lang": "es",
+      "tocHtml": "<p>La Complejidad Ciclomática es una métrica del software que proporciona una medición cuantitativa de la complejidad lógica de un programa.</p>\n<p>Propuesta por Thomas McCabe en 1976, se basa en el diagrama de flujo determinado por las estructuras de control de un determinado código. De dicho análisis se puede obtener una medida cuantitativa de la dificultad de crear pruebas automáticas del código y también es una medición orientativa de la fiabilidad del mismo.</p>\n<p>El resultado obtenido en el cálculo de la complejidad ciclomática define el número de caminos independientes dentro de un fragmento de código y determina la cota superior del número de pruebas que se deben realizar para asegurar que se ejecuta cada sentencia al menos una vez.</p>\n<p>se calcula con $M = E - N + 2 * P$</p>\n<ul>\n<li>M = Complejidad ciclomática</li>\n<li>N = Número de nodos del grafo correspondientes a sentencias del programa</li>\n<li>P = Número de componentes conexos, nodos de salida</li>\n</ul>",
       "path": "/Complejidad-Ciclomatica/index.html"
     },
     "lang": "es",

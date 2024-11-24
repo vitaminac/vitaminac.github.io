@@ -7,6 +7,7 @@
       "tags": ["Docker", "Hacker"],
       "isLegacy": true,
       "lang": "en",
+      "tocHtml": "<ol>\n<li><a href=\"/Install-DockerDesktop-Win10Home/index.html#Install-Docker-Desktop-in-Windows10-Home-Edition\" target=\"Install-DockerDesktop-Win10Home\">Install Docker Desktop in Windows10 Home Edition</a>\n<ol>\n<li><a href=\"/Install-DockerDesktop-Win10Home/index.html#Activate-Hyper-V\" target=\"Install-DockerDesktop-Win10Home\">Activate Hyper-V</a></li>\n<li><a href=\"/Install-DockerDesktop-Win10Home/index.html#Fake-as-a-professional-version-to-bypass-installation-detection\" target=\"Install-DockerDesktop-Win10Home\">Fake as a professional version to bypass installation detection</a></li>\n<li><a href=\"/Install-DockerDesktop-Win10Home/index.html#Other-issues\" target=\"Install-DockerDesktop-Win10Home\">Other issues</a></li>\n</ol>\n</li>\n</ol>",
       "path": "/Install-DockerDesktop-Win10Home/index.html"
     },
     "lang": "en",

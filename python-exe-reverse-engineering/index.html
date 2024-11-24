@@ -144,152 +144,114 @@
     />
 
     <!-- Post Content -->
-    <article>
-      <div class="container">
-        <div class="row">
-          <!-- Post Container -->
-          <div class="order-lg-2 col-lg-3 col-12 toc-col" style="z-index: 1">
-            <ol class="toc">
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#PyInstaller"
-                  ><span class="toc-text">PyInstaller</span></a
-                >
-                <ol class="toc-child">
-                  <li class="toc-item toc-level-3">
-                    <a class="toc-link" href="#%E5%8A%A0%E5%AF%86"
-                      ><span class="toc-text">加密</span></a
-                    >
-                  </li>
-                </ol>
-              </li>
-              <li class="toc-item toc-level-2">
-                <a class="toc-link" href="#%E5%8F%82%E8%80%83"
-                  ><span class="toc-text">参考</span></a
-                >
-              </li>
-            </ol>
-          </div>
-
-          <div class="order-lg-1 col-lg-9 col-12 post-container">
-            <h2 id="PyInstaller">
-              <a href="#PyInstaller" class="headerlink" title="PyInstaller"></a
-              >PyInstaller
-            </h2>
-            <p>
-              如果<code>exe</code>文件是使用<a
-                target="_blank"
-                rel="noopener"
-                href="https://github.com/pyinstaller/pyinstaller"
-                >PyInstaller</a
-              >打包的。我们可以用<a
-                target="_blank"
-                rel="noopener"
-                href="https://github.com/extremecoders-re/pyinstxtractor"
-                >PyInstaller Extractor</a
-              >解包<code>exe</code>文件。
-            </p>
-            <pre><code>python pyinstxtractor.py &lt;文件名&gt;.exe
+    <article class="container" style="width: 100%; max-width: 100%">
+      <!-- Post Container -->
+      <div class="post-container">
+        <h2 id="PyInstaller">
+          <a href="#PyInstaller" class="headerlink" title="PyInstaller"></a
+          >PyInstaller
+        </h2>
+        <p>
+          如果<code>exe</code>文件是使用<a
+            target="_blank"
+            rel="noopener"
+            href="https://github.com/pyinstaller/pyinstaller"
+            >PyInstaller</a
+          >打包的。我们可以用<a
+            target="_blank"
+            rel="noopener"
+            href="https://github.com/extremecoders-re/pyinstxtractor"
+            >PyInstaller Extractor</a
+          >解包<code>exe</code>文件。
+        </p>
+        <pre><code>python pyinstxtractor.py &lt;文件名&gt;.exe
 </code></pre>
-            <p>
-              但是必须要使用相同的<code>Python</code>版本运行命令才能解包<code>PYZ</code>文件。解包成功后我们会得到一系列的<code>.pyc</code>文件。
-            </p>
-            <p>
-              我们可以使用<a
-                target="_blank"
-                rel="noopener"
-                href="https://github.com/rocky/python-uncompyle6/"
-                >uncompyle6</a
-              >去反编译<code>.pyc</code>文件
-            </p>
-            <pre><code>uncompyle6 xxx.pyc
+        <p>
+          但是必须要使用相同的<code>Python</code>版本运行命令才能解包<code>PYZ</code>文件。解包成功后我们会得到一系列的<code>.pyc</code>文件。
+        </p>
+        <p>
+          我们可以使用<a
+            target="_blank"
+            rel="noopener"
+            href="https://github.com/rocky/python-uncompyle6/"
+            >uncompyle6</a
+          >去反编译<code>.pyc</code>文件
+        </p>
+        <pre><code>uncompyle6 xxx.pyc
 </code></pre>
-            <h3 id="加密">
-              <a href="#加密" class="headerlink" title="加密"></a>加密
-            </h3>
-            <p>
-              假如解压<code>PYZ</code>文件的过程中出现下面的这些错误的话,
-              那这个文件在生成的时候是被加密了
-            </p>
-            <pre><code>...
+        <h3 id="加密">
+          <a href="#加密" class="headerlink" title="加密"></a>加密
+        </h3>
+        <p>
+          假如解压<code>PYZ</code>文件的过程中出现下面的这些错误的话,
+          那这个文件在生成的时候是被加密了
+        </p>
+        <pre><code>...
 [!] Error: Failed to decompress PYZ-00.pyz_extracted\xxx.pyc, probably encrypted. Extracting as is.
 ...
 </code></pre>
-            <p>
-              加密的密钥可以在<code>pyimod00_crypto_key.pyc</code>这个文件找到
-            </p>
-            <pre><code>uncompyle6 pyimod00_crypto_key.pyc &gt; pyimod00_crypto_key.py
+        <p>加密的密钥可以在<code>pyimod00_crypto_key.pyc</code>这个文件找到</p>
+        <pre><code>uncompyle6 pyimod00_crypto_key.pyc &gt; pyimod00_crypto_key.py
 </code></pre>
-            <p>
-              <code>Pyinstaller</code>的加密功能使用<a
-                target="_blank"
-                rel="noopener"
-                href="https://github.com/naufraghi/tinyaes-py"
-                >tinyaes</a
-              >实现的。既然有了密钥只需要逆向解密成正常的<code>.pyc</code>文件再用<code>uncompyle6</code>转为<code>.py</code>文件。
-            </p>
-            <figure class="highlight py">
-              <figcaption>
-                <span>decompile-python-exe.py</span
-                ><a href="/downloads/code/py/decompile-python-exe.py"
-                  >view raw</a
-                >
-              </figcaption>
-              <table>
-                <tr>
-                  <td class="gutter">
-                    <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre>
-                  </td>
-                  <td class="code">
-                    <pre><span class="line"><span class="keyword">import</span> tinyaes</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> pyimod00_crypto_key <span class="keyword">import</span> key</span><br><span class="line"></span><br><span class="line">CIPHER_BLOCK_SIZE = <span class="number">16</span></span><br><span class="line">CIPHER_KEY = <span class="built_in">bytes</span>(key, <span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">PYC_HEADER = <span class="string">b&quot;\x42\x0D\x0D\x0A\x00\x00\x00\x00\x70\x79\x69\x30\x10\x01\x00\x00&quot;</span></span><br><span class="line">ENCRYPTED_FILENAME_SUFFIX = <span class="string">&quot;.pyc.encrypted&quot;</span></span><br><span class="line">PYC_FILENAME_SUFFIX = <span class="string">&quot;.pyc&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">encrypted_to_pyc</span>(<span class="params">input_path, output_path</span>):</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(input_path, <span class="string">&quot;rb&quot;</span>) <span class="keyword">as</span> encrypted_pyc:</span><br><span class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(output_path, <span class="string">&quot;wb&quot;</span>) <span class="keyword">as</span> pyc:</span><br><span class="line">            cipher_iv = encrypted_pyc.read(CIPHER_BLOCK_SIZE)</span><br><span class="line">            encrypted_data = encrypted_pyc.read()</span><br><span class="line">            cipher = tinyaes.AES(CIPHER_KEY, cipher_iv)</span><br><span class="line">            decrypted_data = cipher.CTR_xcrypt_buffer(encrypted_data)</span><br><span class="line">            plaintext = zlib.decompress(decrypted_data)</span><br><span class="line">            pyc.write(PYC_HEADER)</span><br><span class="line">            pyc.write(plaintext)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;decrypt <span class="subst">{input_path}</span> and save result to <span class="subst">{output_path}</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">pyc_to_py_with_uncompyle6</span>(<span class="params">input_path</span>):</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="keyword">return</span> subprocess.call([<span class="string">&quot;uncompyle6&quot;</span>, <span class="string">&quot;-o&quot;</span>, os.path.dirname(input_path), input_path], timeout=<span class="number">30</span>)</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">pyc_to_py_with_decompile3</span>(<span class="params">input_path</span>):</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="keyword">return</span> subprocess.call([<span class="string">&quot;decompyle3&quot;</span>, <span class="string">&quot;-o&quot;</span>, os.path.dirname(input_path), input_path], timeout=<span class="number">30</span>)</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">    <span class="comment"># fallback to uncompyle6</span></span><br><span class="line">    <span class="keyword">return</span> pyc_to_py_with_uncompyle6(input_path)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    <span class="keyword">for</span> root, dirs, files <span class="keyword">in</span> os.walk(<span class="string">&quot;.&quot;</span>, topdown=<span class="literal">False</span>):</span><br><span class="line">        <span class="keyword">for</span> filename <span class="keyword">in</span> files:</span><br><span class="line">            filepath = os.path.join(root, filename)</span><br><span class="line">            <span class="keyword">if</span> filename.endswith(<span class="string">&quot;.pyc.encrypted&quot;</span>):</span><br><span class="line">                pyc_filepath = filepath[:-<span class="built_in">len</span>(ENCRYPTED_FILENAME_SUFFIX)] + PYC_FILENAME_SUFFIX</span><br><span class="line">                encrypted_to_pyc(filepath, pyc_filepath)</span><br><span class="line">    failed_list = []</span><br><span class="line">    <span class="keyword">for</span> root, dirs, files <span class="keyword">in</span> os.walk(<span class="string">&quot;.&quot;</span>, topdown=<span class="literal">False</span>):</span><br><span class="line">        <span class="keyword">for</span> filename <span class="keyword">in</span> files:</span><br><span class="line">            filepath = os.path.join(root, filename)</span><br><span class="line">            <span class="keyword">if</span> filename.endswith(PYC_FILENAME_SUFFIX):</span><br><span class="line">                <span class="keyword">if</span> pyc_to_py_with_decompile3(filepath) != <span class="number">0</span>:</span><br><span class="line">                    failed_list.append(filepath)</span><br><span class="line">    <span class="built_in">print</span>(failed_list)</span><br></pre>
-                  </td>
-                </tr>
-              </table>
-            </figure>
+        <p>
+          <code>Pyinstaller</code>的加密功能使用<a
+            target="_blank"
+            rel="noopener"
+            href="https://github.com/naufraghi/tinyaes-py"
+            >tinyaes</a
+          >实现的。既然有了密钥只需要逆向解密成正常的<code>.pyc</code>文件再用<code>uncompyle6</code>转为<code>.py</code>文件。
+        </p>
+        <figure class="highlight py">
+          <figcaption>
+            <span>decompile-python-exe.py</span
+            ><a href="/downloads/code/py/decompile-python-exe.py">view raw</a>
+          </figcaption>
+          <table>
+            <tr>
+              <td class="gutter">
+                <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre>
+              </td>
+              <td class="code">
+                <pre><span class="line"><span class="keyword">import</span> tinyaes</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> pyimod00_crypto_key <span class="keyword">import</span> key</span><br><span class="line"></span><br><span class="line">CIPHER_BLOCK_SIZE = <span class="number">16</span></span><br><span class="line">CIPHER_KEY = <span class="built_in">bytes</span>(key, <span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">PYC_HEADER = <span class="string">b&quot;\x42\x0D\x0D\x0A\x00\x00\x00\x00\x70\x79\x69\x30\x10\x01\x00\x00&quot;</span></span><br><span class="line">ENCRYPTED_FILENAME_SUFFIX = <span class="string">&quot;.pyc.encrypted&quot;</span></span><br><span class="line">PYC_FILENAME_SUFFIX = <span class="string">&quot;.pyc&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">encrypted_to_pyc</span>(<span class="params">input_path, output_path</span>):</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(input_path, <span class="string">&quot;rb&quot;</span>) <span class="keyword">as</span> encrypted_pyc:</span><br><span class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(output_path, <span class="string">&quot;wb&quot;</span>) <span class="keyword">as</span> pyc:</span><br><span class="line">            cipher_iv = encrypted_pyc.read(CIPHER_BLOCK_SIZE)</span><br><span class="line">            encrypted_data = encrypted_pyc.read()</span><br><span class="line">            cipher = tinyaes.AES(CIPHER_KEY, cipher_iv)</span><br><span class="line">            decrypted_data = cipher.CTR_xcrypt_buffer(encrypted_data)</span><br><span class="line">            plaintext = zlib.decompress(decrypted_data)</span><br><span class="line">            pyc.write(PYC_HEADER)</span><br><span class="line">            pyc.write(plaintext)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;decrypt <span class="subst">{input_path}</span> and save result to <span class="subst">{output_path}</span>&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">pyc_to_py_with_uncompyle6</span>(<span class="params">input_path</span>):</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="keyword">return</span> subprocess.call([<span class="string">&quot;uncompyle6&quot;</span>, <span class="string">&quot;-o&quot;</span>, os.path.dirname(input_path), input_path], timeout=<span class="number">30</span>)</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">pyc_to_py_with_decompile3</span>(<span class="params">input_path</span>):</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="keyword">return</span> subprocess.call([<span class="string">&quot;decompyle3&quot;</span>, <span class="string">&quot;-o&quot;</span>, os.path.dirname(input_path), input_path], timeout=<span class="number">30</span>)</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">    <span class="comment"># fallback to uncompyle6</span></span><br><span class="line">    <span class="keyword">return</span> pyc_to_py_with_uncompyle6(input_path)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    <span class="keyword">for</span> root, dirs, files <span class="keyword">in</span> os.walk(<span class="string">&quot;.&quot;</span>, topdown=<span class="literal">False</span>):</span><br><span class="line">        <span class="keyword">for</span> filename <span class="keyword">in</span> files:</span><br><span class="line">            filepath = os.path.join(root, filename)</span><br><span class="line">            <span class="keyword">if</span> filename.endswith(<span class="string">&quot;.pyc.encrypted&quot;</span>):</span><br><span class="line">                pyc_filepath = filepath[:-<span class="built_in">len</span>(ENCRYPTED_FILENAME_SUFFIX)] + PYC_FILENAME_SUFFIX</span><br><span class="line">                encrypted_to_pyc(filepath, pyc_filepath)</span><br><span class="line">    failed_list = []</span><br><span class="line">    <span class="keyword">for</span> root, dirs, files <span class="keyword">in</span> os.walk(<span class="string">&quot;.&quot;</span>, topdown=<span class="literal">False</span>):</span><br><span class="line">        <span class="keyword">for</span> filename <span class="keyword">in</span> files:</span><br><span class="line">            filepath = os.path.join(root, filename)</span><br><span class="line">            <span class="keyword">if</span> filename.endswith(PYC_FILENAME_SUFFIX):</span><br><span class="line">                <span class="keyword">if</span> pyc_to_py_with_decompile3(filepath) != <span class="number">0</span>:</span><br><span class="line">                    failed_list.append(filepath)</span><br><span class="line">    <span class="built_in">print</span>(failed_list)</span><br></pre>
+              </td>
+            </tr>
+          </table>
+        </figure>
 
-            <p>
-              在<code>Pyinstaller</code>最新的版本中已经<a
-                target="_blank"
-                rel="noopener"
-                href="https://pyinstaller.org/en/stable/CHANGES.html?highlight=encrypt#:~:text=Remove%20bytecode%20encryption"
-                >移除了加密的功能</a
-              >
-            </p>
-            <p>
-              有些文件用<code>uncompyle6</code>会解析失败 因为对Python
-              3.7以上的版本支持并不完全 所以还可以用<a
-                target="_blank"
-                rel="noopener"
-                href="https://github.com/rocky/python-decompile3"
-                >decompyle3</a
-              >去尝试失败的文件
-            </p>
-            <h2 id="参考">
-              <a href="#参考" class="headerlink" title="参考"></a>参考
-            </h2>
-            <ul>
-              <li>
-                <a
-                  target="_blank"
-                  rel="noopener"
-                  href="https://zondatw.github.io/2021/decompile_encrypted_pyinstaller_exe/"
-                  >https://zondatw.github.io/2021/decompile_encrypted_pyinstaller_exe/</a
-                >
-              </li>
-            </ul>
+        <p>
+          在<code>Pyinstaller</code>最新的版本中已经<a
+            target="_blank"
+            rel="noopener"
+            href="https://pyinstaller.org/en/stable/CHANGES.html?highlight=encrypt#:~:text=Remove%20bytecode%20encryption"
+            >移除了加密的功能</a
+          >
+        </p>
+        <p>
+          有些文件用<code>uncompyle6</code>会解析失败 因为对Python
+          3.7以上的版本支持并不完全 所以还可以用<a
+            target="_blank"
+            rel="noopener"
+            href="https://github.com/rocky/python-decompile3"
+            >decompyle3</a
+          >去尝试失败的文件
+        </p>
+        <h2 id="参考">
+          <a href="#参考" class="headerlink" title="参考"></a>参考
+        </h2>
+        <ul>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://zondatw.github.io/2021/decompile_encrypted_pyinstaller_exe/"
+              >https://zondatw.github.io/2021/decompile_encrypted_pyinstaller_exe/</a
+            >
+          </li>
+        </ul>
 
-            <hr />
+        <hr />
 
-            <ul class="list-group"></ul>
-          </div>
-        </div>
-
-        <div class="row justify-content-center">
-          <!-- Sidebar Container -->
-
-          <div class="col-lg-8` col-md-10 sidebar-container">
-            <!-- Friends Blog -->
-          </div>
-        </div>
+        <ul class="list-group"></ul>
       </div>
     </article>
     <!-- Custom Theme JavaScript -->

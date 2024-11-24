@@ -141,518 +141,30 @@
     />
 
     <!-- Post Content -->
-    <article>
-      <div class="container">
-        <div class="row">
-          <!-- Post Container -->
-          <div class="order-lg-2 col-lg-3 col-12 toc-col" style="z-index: 1">
-            <ol class="toc">
-              <li class="toc-item toc-level-1">
-                <a class="toc-link" href="#%E5%90%91%E9%87%8F"
-                  ><span class="toc-text">向量</span></a
-                >
-                <ol class="toc-child">
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#%E5%9D%90%E6%A0%87"
-                      ><span class="toc-text">坐标</span></a
-                    >
-                    <ol class="toc-child">
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#%E5%88%9B%E5%BB%BA%E5%90%91%E9%87%8F-%E6%B5%8B%E8%AF%95"
-                          ><span class="toc-text">创建向量-测试</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#%E5%88%9B%E5%BB%BA%E5%90%91%E9%87%8F-%E8%BE%93%E5%87%BA"
-                          ><span class="toc-text">创建向量-输出</span></a
-                        >
-                      </li>
-                    </ol>
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a
-                      class="toc-link"
-                      href="#%E6%A8%A1-%E5%90%91%E9%87%8F%E7%9A%84%E5%A4%A7%E5%B0%8F"
-                      ><span class="toc-text">模(向量的大小)</span></a
-                    >
-                    <ol class="toc-child">
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#%E6%A8%A1-%E5%AE%9E%E7%8E%B0"
-                          ><span class="toc-text">模-实现</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#%E6%A8%A1-%E6%B5%8B%E8%AF%95"
-                          ><span class="toc-text">模-测试</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#%E6%A8%A1-%E8%BE%93%E5%87%BA"
-                          ><span class="toc-text">模-输出</span></a
-                        >
-                      </li>
-                    </ol>
-                  </li>
-                </ol>
-              </li>
-              <li class="toc-item toc-level-1">
-                <a
-                  class="toc-link"
-                  href="#%E5%90%91%E9%87%8F%E7%9A%84%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97"
-                  ><span class="toc-text">向量的基本运算</span></a
-                >
-                <ol class="toc-child">
-                  <li class="toc-item toc-level-2">
-                    <a
-                      class="toc-link"
-                      href="#%E5%90%91%E9%87%8F%E7%9B%B8%E5%8A%A0"
-                      ><span class="toc-text">向量相加</span></a
-                    >
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a
-                      class="toc-link"
-                      href="#%E5%90%91%E9%87%8F%E7%9B%B8%E5%87%8F"
-                      ><span class="toc-text">向量相减</span></a
-                    >
-                    <ol class="toc-child">
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#%E5%90%91%E9%87%8F%E5%8A%A0%E5%87%8F-%E5%AE%9E%E7%8E%B0"
-                          ><span class="toc-text">向量加减-实现</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#%E5%90%91%E9%87%8F%E5%8A%A0%E5%87%8F-%E6%B5%8B%E8%AF%95"
-                          ><span class="toc-text">向量加减-测试</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#%E5%90%91%E9%87%8F%E5%8A%A0%E5%87%8F-%E8%BE%93%E5%87%BA"
-                          ><span class="toc-text">向量加减-输出</span></a
-                        >
-                      </li>
-                    </ol>
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a
-                      class="toc-link"
-                      href="#%E6%A0%87%E9%87%8F%E4%B9%98%E6%B3%95"
-                      ><span class="toc-text">标量乘法</span></a
-                    >
-                    <ol class="toc-child">
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#%E6%A0%87%E9%87%8F%E4%B9%98%E6%B3%95-%E5%AE%9E%E7%8E%B0"
-                          ><span class="toc-text">标量乘法-实现</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#%E6%A0%87%E9%87%8F%E4%B9%98%E6%B3%95-%E6%B5%8B%E8%AF%95"
-                          ><span class="toc-text">标量乘法-测试</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#%E6%A0%87%E9%87%8F%E4%B9%98%E6%B3%95-%E8%BE%93%E5%87%BA"
-                          ><span class="toc-text">标量乘法-输出</span></a
-                        >
-                      </li>
-                    </ol>
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#%E9%9B%B6%E5%90%91%E9%87%8F"
-                      ><span class="toc-text">零向量</span></a
-                    >
-                    <ol class="toc-child">
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#%E9%9B%B6%E5%90%91%E9%87%8F-%E5%AE%9A%E4%B9%89"
-                          ><span class="toc-text">零向量-定义</span></a
-                        >
-                      </li>
-                    </ol>
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#%E5%8F%8D%E5%90%91%E9%87%8F"
-                      ><span class="toc-text">反向量</span></a
-                    >
-                    <ol class="toc-child">
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#%E5%8F%8D%E5%90%91%E9%87%8F-%E5%AE%9E%E7%8E%B0"
-                          ><span class="toc-text">反向量-实现</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#%E5%8F%8D%E5%90%91%E9%87%8F-%E6%B5%8B%E8%AF%95"
-                          ><span class="toc-text">反向量-测试</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#%E5%8F%8D%E5%90%91%E9%87%8F-%E8%BE%93%E5%87%BA"
-                          ><span class="toc-text">反向量-输出</span></a
-                        >
-                      </li>
-                    </ol>
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a
-                      class="toc-link"
-                      href="#%E5%8D%95%E4%BD%8D%E5%90%91%E9%87%8F"
-                      ><span class="toc-text">单位向量</span></a
-                    >
-                    <ol class="toc-child">
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#%E5%8D%95%E4%BD%8D%E5%90%91%E9%87%8F-%E5%AE%9E%E7%8E%B0"
-                          ><span class="toc-text">单位向量-实现</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#%E5%8D%95%E4%BD%8D%E5%90%91%E9%87%8F-%E6%B5%8B%E8%AF%95"
-                          ><span class="toc-text">单位向量-测试</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#%E5%8D%95%E4%BD%8D%E5%90%91%E9%87%8F-%E8%BE%93%E5%87%BA"
-                          ><span class="toc-text">单位向量-输出</span></a
-                        >
-                      </li>
-                    </ol>
-                  </li>
-                </ol>
-              </li>
-              <li class="toc-item toc-level-1">
-                <a
-                  class="toc-link"
-                  href="#%E5%90%91%E9%87%8F%E7%9A%84%E7%82%B9%E7%A7%AF%E5%92%8C%E5%8F%89%E7%A7%AF"
-                  ><span class="toc-text">向量的点积和叉积</span></a
-                >
-                <ol class="toc-child">
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#%E7%82%B9%E7%A7%AF"
-                      ><span class="toc-text">点积</span></a
-                    >
-                    <ol class="toc-child">
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#%E7%82%B9%E7%A7%AF-%E5%AE%9E%E7%8E%B0"
-                          ><span class="toc-text">点积-实现</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#%E7%82%B9%E7%A7%AF-%E6%B5%8B%E8%AF%95"
-                          ><span class="toc-text">点积-测试</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#%E7%82%B9%E7%A7%AF-%E8%BE%93%E5%87%BA"
-                          ><span class="toc-text">点积-输出</span></a
-                        >
-                      </li>
-                    </ol>
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a
-                      class="toc-link"
-                      href="#%E5%90%91%E9%87%8F%E7%A7%AF-%E5%8F%89%E7%A7%AF"
-                      ><span class="toc-text">向量积(叉积)</span></a
-                    >
-                    <ol class="toc-child">
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#%E5%90%91%E9%87%8F%E7%A7%AF-%E5%AE%9E%E7%8E%B0"
-                          ><span class="toc-text">向量积-实现</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#%E5%90%91%E9%87%8F%E7%A7%AF-%E6%B5%8B%E8%AF%95"
-                          ><span class="toc-text">向量积-测试</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#%E5%90%91%E9%87%8F%E7%A7%AF-%E8%BE%93%E5%87%BA"
-                          ><span class="toc-text">向量积-输出</span></a
-                        >
-                      </li>
-                    </ol>
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a class="toc-link" href="#%E5%A4%B9%E8%A7%92"
-                      ><span class="toc-text">夹角</span></a
-                    >
-                    <ol class="toc-child">
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#%E5%A4%B9%E8%A7%92-%E5%AE%9E%E7%8E%B0"
-                          ><span class="toc-text">夹角-实现</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#%E5%A4%B9%E8%A7%92-%E6%B5%8B%E8%AF%95"
-                          ><span class="toc-text">夹角-测试</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#%E5%A4%B9%E8%A7%92-%E8%BE%93%E5%87%BA"
-                          ><span class="toc-text">夹角-输出</span></a
-                        >
-                      </li>
-                    </ol>
-                  </li>
-                </ol>
-              </li>
-              <li class="toc-item toc-level-1">
-                <a class="toc-link" href="#%E4%B8%89%E8%A7%92%E7%BD%91%E6%A0%BC"
-                  ><span class="toc-text">三角网格</span></a
-                >
-                <ol class="toc-child">
-                  <li class="toc-item toc-level-2">
-                    <a
-                      class="toc-link"
-                      href="#%E7%B4%A2%E5%BC%95%E4%B8%89%E8%A7%92%E7%BD%91%E6%A0%BC"
-                      ><span class="toc-text">索引三角网格</span></a
-                    >
-                    <ol class="toc-child">
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#%E8%B0%83%E8%AF%95%E4%B8%89%E8%A7%92%E7%BD%91%E6%A0%BC"
-                          ><span class="toc-text">调试三角网格</span></a
-                        >
-                      </li>
-                    </ol>
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a
-                      class="toc-link"
-                      href="#%E5%82%A8%E5%AD%98%E6%96%B9%E5%BC%8F"
-                      ><span class="toc-text">储存方式</span></a
-                    >
-                    <ol class="toc-child">
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#obj"
-                          ><span class="toc-text">.obj</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a class="toc-link" href="#off"
-                          ><span class="toc-text">.off</span></a
-                        >
-                        <ol class="toc-child">
-                          <li class="toc-item toc-level-4">
-                            <a
-                              class="toc-link"
-                              href="#%E8%A7%A3%E6%9E%90-off%E6%96%87%E4%BB%B6"
-                              ><span class="toc-text">解析.off文件</span></a
-                            >
-                          </li>
-                        </ol>
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#%E6%96%87%E4%BB%B6%E8%A7%A3%E6%9E%90%E6%B5%8B%E8%AF%95"
-                          ><span class="toc-text">文件解析测试</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#%E6%96%87%E4%BB%B6%E8%BE%93%E5%87%BA%E6%B5%8B%E8%AF%95"
-                          ><span class="toc-text">文件输出测试</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#%E4%BF%9D%E5%AD%98%E4%B8%BA-off%E6%96%87%E4%BB%B6"
-                          ><span class="toc-text">保存为.off文件</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#%E4%BF%9D%E5%AD%98%E6%B5%8B%E8%AF%95"
-                          ><span class="toc-text">保存测试</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#%E4%BF%9D%E5%AD%98%E8%BE%93%E5%87%BA"
-                          ><span class="toc-text">保存输出</span></a
-                        >
-                      </li>
-                    </ol>
-                  </li>
-                </ol>
-              </li>
-              <li class="toc-item toc-level-1">
-                <a
-                  class="toc-link"
-                  href="#%E4%B8%89%E8%A7%92%E9%9D%A2%E7%9A%84%E8%BF%90%E7%AE%97"
-                  ><span class="toc-text">三角面的运算</span></a
-                >
-                <ol class="toc-child">
-                  <li class="toc-item toc-level-2">
-                    <a
-                      class="toc-link"
-                      href="#%E4%B8%89%E8%A7%92%E9%9D%A2%E7%A7%AF"
-                      ><span class="toc-text">三角面积</span></a
-                    >
-                    <ol class="toc-child">
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#%E4%B8%89%E8%A7%92%E9%9D%A2%E7%A7%AF-%E5%AE%9E%E7%8E%B0"
-                          ><span class="toc-text">三角面积-实现</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#%E4%B8%89%E8%A7%92%E9%9D%A2%E7%A7%AF-%E6%B5%8B%E8%AF%95"
-                          ><span class="toc-text">三角面积-测试</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#%E4%B8%89%E8%A7%92%E9%9D%A2%E7%A7%AF-%E8%BE%93%E5%87%BA"
-                          ><span class="toc-text">三角面积-输出</span></a
-                        >
-                      </li>
-                    </ol>
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a
-                      class="toc-link"
-                      href="#%E4%B8%89%E8%A7%92%E9%9D%A2%E7%9A%84%E6%B3%95%E5%90%91%E9%87%8F"
-                      ><span class="toc-text">三角面的法向量</span></a
-                    >
-                    <ol class="toc-child">
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#%E4%B8%89%E8%A7%92%E9%9D%A2%E6%B3%95%E5%90%91%E9%87%8F-%E5%AE%9E%E7%8E%B0"
-                          ><span class="toc-text">三角面法向量-实现</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#%E4%B8%89%E8%A7%92%E9%9D%A2%E6%B3%95%E5%90%91%E9%87%8F-%E6%B5%8B%E8%AF%95"
-                          ><span class="toc-text">三角面法向量-测试</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#%E4%B8%89%E8%A7%92%E9%9D%A2%E6%B3%95%E5%90%91%E9%87%8F-%E8%BE%93%E5%87%BA"
-                          ><span class="toc-text">三角面法向量-输出</span></a
-                        >
-                      </li>
-                    </ol>
-                  </li>
-                  <li class="toc-item toc-level-2">
-                    <a
-                      class="toc-link"
-                      href="#%E9%A1%B6%E7%82%B9%E6%B3%95%E5%90%91%E9%87%8F"
-                      ><span class="toc-text">顶点法向量</span></a
-                    >
-                    <ol class="toc-child">
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#%E9%A1%B6%E7%82%B9%E6%B3%95%E5%90%91%E9%87%8F-%E5%AE%9E%E7%8E%B0"
-                          ><span class="toc-text">顶点法向量-实现</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#%E9%A1%B6%E7%82%B9%E6%B3%95%E5%90%91%E9%87%8F-%E6%B5%8B%E8%AF%95"
-                          ><span class="toc-text">顶点法向量-测试</span></a
-                        >
-                      </li>
-                      <li class="toc-item toc-level-3">
-                        <a
-                          class="toc-link"
-                          href="#%E9%A1%B6%E7%82%B9%E6%B3%95%E5%90%91%E9%87%8F-%E8%BE%93%E5%87%BA"
-                          ><span class="toc-text">顶点法向量-输出</span></a
-                        >
-                      </li>
-                    </ol>
-                  </li>
-                </ol>
-              </li>
-            </ol>
-          </div>
-
-          <div class="order-lg-1 col-lg-9 col-12 post-container">
-            <h1 id="向量">
-              <a href="#向量" class="headerlink" title="向量"></a>向量
-            </h1>
-            <p>
-              定义:具有大小同时也代表方向的量.
-              他是几何空间概念中形成的一个抽象的概念.
-              我们可以用它表示一个三维空间的对象, 例如一个点.
-            </p>
-            <h2 id="坐标">
-              <a href="#坐标" class="headerlink" title="坐标"></a>坐标
-            </h2>
-            <p>
-              在笛卡尔坐标系下我们使用三个坐标值代表一个向量, \\\\((x, y,
-              z)\\\\).<br /><img src="coordinate.png" alt="三维向量" />
-            </p>
-            <p>
-              在计算机中我们可以用一个有三个坐标的类表示并储存向量,
-              每个坐标都用双精度浮点数来表示.<br />在
-              <em><strong>vec3.h</strong></em> 中,
-              我定义了个类Vec3用来代表三维向量.
-            </p>
-            <pre><code>class Vec3 &#123;
+    <article class="container" style="width: 100%; max-width: 100%">
+      <!-- Post Container -->
+      <div class="post-container">
+        <h1 id="向量">
+          <a href="#向量" class="headerlink" title="向量"></a>向量
+        </h1>
+        <p>
+          定义:具有大小同时也代表方向的量.
+          他是几何空间概念中形成的一个抽象的概念.
+          我们可以用它表示一个三维空间的对象, 例如一个点.
+        </p>
+        <h2 id="坐标">
+          <a href="#坐标" class="headerlink" title="坐标"></a>坐标
+        </h2>
+        <p>
+          在笛卡尔坐标系下我们使用三个坐标值代表一个向量, \\\\((x, y,
+          z)\\\\).<br /><img src="coordinate.png" alt="三维向量" />
+        </p>
+        <p>
+          在计算机中我们可以用一个有三个坐标的类表示并储存向量,
+          每个坐标都用双精度浮点数来表示.<br />在
+          <em><strong>vec3.h</strong></em> 中, 我定义了个类Vec3用来代表三维向量.
+        </p>
+        <pre><code>class Vec3 &#123;
 public:
     double x;
     double y;
@@ -662,53 +174,41 @@ public:
     &#125;
 &#125;;
 </code></pre>
-            <p>为了方便以后调试我加了下面的方法把向量打印出来</p>
-            <pre><code>ostream&amp; operator&lt;&lt;(ostream&amp; out, const Vec3&amp; v)
+        <p>为了方便以后调试我加了下面的方法把向量打印出来</p>
+        <pre><code>ostream&amp; operator&lt;&lt;(ostream&amp; out, const Vec3&amp; v)
 &#123;
     out &lt;&lt; &quot;(&quot; &lt;&lt; v.x &lt;&lt; &quot;,&quot; &lt;&lt; v.y &lt;&lt; &quot;,&quot; &lt;&lt; v.z &lt;&lt; &quot;)&quot;;
     return out;
 &#125;
 </code></pre>
-            <h3 id="创建向量-测试">
-              <a
-                href="#创建向量-测试"
-                class="headerlink"
-                title="创建向量-测试"
-              ></a
-              >创建向量-测试
-            </h3>
-            <pre><code>#include &quot;vec3.h&quot;
+        <h3 id="创建向量-测试">
+          <a href="#创建向量-测试" class="headerlink" title="创建向量-测试"></a
+          >创建向量-测试
+        </h3>
+        <pre><code>#include &quot;vec3.h&quot;
 
 int main() &#123;
     auto v = Vec3(1.0, 2.0, 3.0);
     std::cout &lt;&lt; v &lt;&lt; std::endl;
 &#125;
 </code></pre>
-            <h3 id="创建向量-输出">
-              <a
-                href="#创建向量-输出"
-                class="headerlink"
-                title="创建向量-输出"
-              ></a
-              >创建向量-输出
-            </h3>
-            <p>(1,2,3)</p>
-            <h2 id="模-向量的大小">
-              <a
-                href="#模-向量的大小"
-                class="headerlink"
-                title="模(向量的大小)"
-              ></a
-              >模(向量的大小)
-            </h2>
-            <p>
-              在三维笛卡尔坐标系下的向量$\vec{a}&#x3D;(x,y,z)$,<br />其模长为
-              $\lVert \vec{a} \rVert&#x3D;\sqrt{x^2+y^2+z^2}$
-            </p>
-            <h3 id="模-实现">
-              <a href="#模-实现" class="headerlink" title="模-实现"></a>模-实现
-            </h3>
-            <pre><code>double Vec3::module2() const &#123;
+        <h3 id="创建向量-输出">
+          <a href="#创建向量-输出" class="headerlink" title="创建向量-输出"></a
+          >创建向量-输出
+        </h3>
+        <p>(1,2,3)</p>
+        <h2 id="模-向量的大小">
+          <a href="#模-向量的大小" class="headerlink" title="模(向量的大小)"></a
+          >模(向量的大小)
+        </h2>
+        <p>
+          在三维笛卡尔坐标系下的向量$\vec{a}&#x3D;(x,y,z)$,<br />其模长为
+          $\lVert \vec{a} \rVert&#x3D;\sqrt{x^2+y^2+z^2}$
+        </p>
+        <h3 id="模-实现">
+          <a href="#模-实现" class="headerlink" title="模-实现"></a>模-实现
+        </h3>
+        <pre><code>double Vec3::module2() const &#123;
     return this-&gt;x*this-&gt;x + this-&gt;y*this-&gt;y + this-&gt;z*this-&gt;z;
 &#125;
 
@@ -716,60 +216,54 @@ double Vec3::module() const &#123;
     return sqrt(this-&gt;module2());
 &#125;
 </code></pre>
-            <h3 id="模-测试">
-              <a href="#模-测试" class="headerlink" title="模-测试"></a>模-测试
-            </h3>
-            <pre><code>std::cout &lt;&lt; &quot;The module of &quot; &lt;&lt; a &lt;&lt; &quot; is &quot; &lt;&lt; a.module() &lt;&lt; std::endl;
+        <h3 id="模-测试">
+          <a href="#模-测试" class="headerlink" title="模-测试"></a>模-测试
+        </h3>
+        <pre><code>std::cout &lt;&lt; &quot;The module of &quot; &lt;&lt; a &lt;&lt; &quot; is &quot; &lt;&lt; a.module() &lt;&lt; std::endl;
 </code></pre>
-            <h3 id="模-输出">
-              <a href="#模-输出" class="headerlink" title="模-输出"></a>模-输出
-            </h3>
-            <pre><code>The module of (1,2,3) is 3.74166
+        <h3 id="模-输出">
+          <a href="#模-输出" class="headerlink" title="模-输出"></a>模-输出
+        </h3>
+        <pre><code>The module of (1,2,3) is 3.74166
 </code></pre>
-            <h1 id="向量的基本运算">
-              <a
-                href="#向量的基本运算"
-                class="headerlink"
-                title="向量的基本运算"
-              ></a
-              >向量的基本运算
-            </h1>
-            <p>向量有两个基本运算: 向量相加和标量乘法</p>
-            <h2 id="向量相加">
-              <a href="#向量相加" class="headerlink" title="向量相加"></a
-              >向量相加
-            </h2>
-            <p>
-              两个向量$\vec{a}$和$\vec{b}$相加会得到另一个向量,
-              并且具有以下特点, 封闭性, 交换律, 结合律, 零向量, 加法逆元.<br /><img
-                src="vector_sum.png"
-                alt="向量相加"
-              />
-            </p>
-            <h2 id="向量相减">
-              <a href="#向量相减" class="headerlink" title="向量相减"></a
-              >向量相减
-            </h2>
-            <p>
-              两个向量$\vec{a}$和$\vec{b}$的相减可以看成是加上了一个与$\vec{b}$大小相等方向相反的向量.<br /><img
-                src="vector_sub.png"
-                alt="向量相减"
-              />
-            </p>
-            <p>
-              $$\vec{a} + \vec{b} &#x3D; (a_i + b_i)\vec{e}_i + (a_j +
-              b_j)\vec{e}_j + (a_k + b_k)\vec{e}_k$$
-            </p>
-            <p>返回一个向量, 它的坐标值是两个向量的各个坐标值的相加或相减</p>
-            <h3 id="向量加减-实现">
-              <a
-                href="#向量加减-实现"
-                class="headerlink"
-                title="向量加减-实现"
-              ></a
-              >向量加减-实现
-            </h3>
-            <pre><code>Vec3 Vec3::operator+(const Vec3&amp; other) const &#123;
+        <h1 id="向量的基本运算">
+          <a
+            href="#向量的基本运算"
+            class="headerlink"
+            title="向量的基本运算"
+          ></a
+          >向量的基本运算
+        </h1>
+        <p>向量有两个基本运算: 向量相加和标量乘法</p>
+        <h2 id="向量相加">
+          <a href="#向量相加" class="headerlink" title="向量相加"></a>向量相加
+        </h2>
+        <p>
+          两个向量$\vec{a}$和$\vec{b}$相加会得到另一个向量, 并且具有以下特点,
+          封闭性, 交换律, 结合律, 零向量, 加法逆元.<br /><img
+            src="vector_sum.png"
+            alt="向量相加"
+          />
+        </p>
+        <h2 id="向量相减">
+          <a href="#向量相减" class="headerlink" title="向量相减"></a>向量相减
+        </h2>
+        <p>
+          两个向量$\vec{a}$和$\vec{b}$的相减可以看成是加上了一个与$\vec{b}$大小相等方向相反的向量.<br /><img
+            src="vector_sub.png"
+            alt="向量相减"
+          />
+        </p>
+        <p>
+          $$\vec{a} + \vec{b} &#x3D; (a_i + b_i)\vec{e}_i + (a_j + b_j)\vec{e}_j
+          + (a_k + b_k)\vec{e}_k$$
+        </p>
+        <p>返回一个向量, 它的坐标值是两个向量的各个坐标值的相加或相减</p>
+        <h3 id="向量加减-实现">
+          <a href="#向量加减-实现" class="headerlink" title="向量加减-实现"></a
+          >向量加减-实现
+        </h3>
+        <pre><code>Vec3 Vec3::operator+(const Vec3&amp; other) const &#123;
     return Vec3(this-&gt;x + other.x, this-&gt;y + other.y, this-&gt;z + other.z);
 &#125;
 
@@ -777,47 +271,34 @@ Vec3 Vec3::operator-(const Vec3&amp; other) const &#123;
     return Vec3(this-&gt;x - other.x, this-&gt;y - other.y, this-&gt;z - other.z);
 &#125;
 </code></pre>
-            <h3 id="向量加减-测试">
-              <a
-                href="#向量加减-测试"
-                class="headerlink"
-                title="向量加减-测试"
-              ></a
-              >向量加减-测试
-            </h3>
-            <pre><code>auto a = Vec3(1.0, 2.0, 3.0);
+        <h3 id="向量加减-测试">
+          <a href="#向量加减-测试" class="headerlink" title="向量加减-测试"></a
+          >向量加减-测试
+        </h3>
+        <pre><code>auto a = Vec3(1.0, 2.0, 3.0);
 auto b = Vec3(1.0, 3.0, 5.0);
 std::cout &lt;&lt; a &lt;&lt; &quot;+&quot; &lt;&lt; b &lt;&lt; &quot;=&quot; &lt;&lt; a + b &lt;&lt; std::endl;
 std::cout &lt;&lt; a &lt;&lt; &quot;-&quot; &lt;&lt; b &lt;&lt; &quot;=&quot; &lt;&lt; a - b &lt;&lt; std::endl;
 </code></pre>
-            <h3 id="向量加减-输出">
-              <a
-                href="#向量加减-输出"
-                class="headerlink"
-                title="向量加减-输出"
-              ></a
-              >向量加减-输出
-            </h3>
-            <pre><code>(1,2,3)+(1,3,5)=(2,5,8)
+        <h3 id="向量加减-输出">
+          <a href="#向量加减-输出" class="headerlink" title="向量加减-输出"></a
+          >向量加减-输出
+        </h3>
+        <pre><code>(1,2,3)+(1,3,5)=(2,5,8)
 (1,2,3)-(1,3,5)=(0,-1,-2)
 </code></pre>
-            <h2 id="标量乘法">
-              <a href="#标量乘法" class="headerlink" title="标量乘法"></a
-              >标量乘法
-            </h2>
-            <p>
-              $k\vec{v}$, 运算结果是对一个向量的拉伸,
-              如果k是负数得出的结果会是与$\vec{v}$方向相反
-            </p>
-            <h3 id="标量乘法-实现">
-              <a
-                href="#标量乘法-实现"
-                class="headerlink"
-                title="标量乘法-实现"
-              ></a
-              >标量乘法-实现
-            </h3>
-            <pre><code>Vec3 Vec3::operator*(double scalar) const &#123;
+        <h2 id="标量乘法">
+          <a href="#标量乘法" class="headerlink" title="标量乘法"></a>标量乘法
+        </h2>
+        <p>
+          $k\vec{v}$, 运算结果是对一个向量的拉伸,
+          如果k是负数得出的结果会是与$\vec{v}$方向相反
+        </p>
+        <h3 id="标量乘法-实现">
+          <a href="#标量乘法-实现" class="headerlink" title="标量乘法-实现"></a
+          >标量乘法-实现
+        </h3>
+        <pre><code>Vec3 Vec3::operator*(double scalar) const &#123;
     return Vec3(this-&gt;x * scalar, this-&gt;y * scalar, this-&gt;z * scalar);
 &#125;
 
@@ -825,83 +306,69 @@ Vec3 operator*(double scalar, const Vec3 &amp; vector) &#123;
     return Vec3(vector.x * scalar, vector.y * scalar, vector.z * scalar);
 &#125;
 </code></pre>
-            <h3 id="标量乘法-测试">
-              <a
-                href="#标量乘法-测试"
-                class="headerlink"
-                title="标量乘法-测试"
-              ></a
-              >标量乘法-测试
-            </h3>
-            <pre><code>std::cout &lt;&lt; a &lt;&lt; &quot; per 3 is &quot; &lt;&lt; a * 3 &lt;&lt; std::endl;
+        <h3 id="标量乘法-测试">
+          <a href="#标量乘法-测试" class="headerlink" title="标量乘法-测试"></a
+          >标量乘法-测试
+        </h3>
+        <pre><code>std::cout &lt;&lt; a &lt;&lt; &quot; per 3 is &quot; &lt;&lt; a * 3 &lt;&lt; std::endl;
 std::cout &lt;&lt; &quot;3 per &quot; &lt;&lt; a &lt;&lt; &quot; is &quot; &lt;&lt; 3 * a &lt;&lt; std::endl;
 </code></pre>
-            <h3 id="标量乘法-输出">
-              <a
-                href="#标量乘法-输出"
-                class="headerlink"
-                title="标量乘法-输出"
-              ></a
-              >标量乘法-输出
-            </h3>
-            <pre><code>(1,2,3) per 3 is (3,6,9)
+        <h3 id="标量乘法-输出">
+          <a href="#标量乘法-输出" class="headerlink" title="标量乘法-输出"></a
+          >标量乘法-输出
+        </h3>
+        <pre><code>(1,2,3) per 3 is (3,6,9)
 3 per (1,2,3) is (3,6,9)
 </code></pre>
-            <h2 id="零向量">
-              <a href="#零向量" class="headerlink" title="零向量"></a>零向量
-            </h2>
-            <p>始点与终点重合, 大小为零的向量$\vec{0}$</p>
-            <h3 id="零向量-定义">
-              <a href="#零向量-定义" class="headerlink" title="零向量-定义"></a
-              >零向量-定义
-            </h3>
-            <pre><code>const Vec3 ZERO_VECTOR = Vec3(0, 0, 0);
+        <h2 id="零向量">
+          <a href="#零向量" class="headerlink" title="零向量"></a>零向量
+        </h2>
+        <p>始点与终点重合, 大小为零的向量$\vec{0}$</p>
+        <h3 id="零向量-定义">
+          <a href="#零向量-定义" class="headerlink" title="零向量-定义"></a
+          >零向量-定义
+        </h3>
+        <pre><code>const Vec3 ZERO_VECTOR = Vec3(0, 0, 0);
 </code></pre>
-            <h2 id="反向量">
-              <a href="#反向量" class="headerlink" title="反向量"></a>反向量
-            </h2>
-            <p>
-              一个向量$\vec{v} (a, b, c)$的反向量$-\vec{v} (-a, -b,
-              -c)$与它大小相等但方向相反.
-            </p>
-            <h3 id="反向量-实现">
-              <a href="#反向量-实现" class="headerlink" title="反向量-实现"></a
-              >反向量-实现
-            </h3>
-            <pre><code>Vec3 Vec3::operator-() const &#123;
+        <h2 id="反向量">
+          <a href="#反向量" class="headerlink" title="反向量"></a>反向量
+        </h2>
+        <p>
+          一个向量$\vec{v} (a, b, c)$的反向量$-\vec{v} (-a, -b,
+          -c)$与它大小相等但方向相反.
+        </p>
+        <h3 id="反向量-实现">
+          <a href="#反向量-实现" class="headerlink" title="反向量-实现"></a
+          >反向量-实现
+        </h3>
+        <pre><code>Vec3 Vec3::operator-() const &#123;
     return Vec3(-this-&gt;x, -this-&gt;y, -this-&gt;z);
 &#125;
 </code></pre>
-            <h3 id="反向量-测试">
-              <a href="#反向量-测试" class="headerlink" title="反向量-测试"></a
-              >反向量-测试
-            </h3>
-            <pre><code>std::cout &lt;&lt; &quot;The opposite of &quot; &lt;&lt; v &lt;&lt; &quot; is &quot; &lt;&lt; -v &lt;&lt; std::endl;
+        <h3 id="反向量-测试">
+          <a href="#反向量-测试" class="headerlink" title="反向量-测试"></a
+          >反向量-测试
+        </h3>
+        <pre><code>std::cout &lt;&lt; &quot;The opposite of &quot; &lt;&lt; v &lt;&lt; &quot; is &quot; &lt;&lt; -v &lt;&lt; std::endl;
 </code></pre>
-            <h3 id="反向量-输出">
-              <a href="#反向量-输出" class="headerlink" title="反向量-输出"></a
-              >反向量-输出
-            </h3>
-            <pre><code>The opposite of (1,2,3) is (-1,-2,-3)
+        <h3 id="反向量-输出">
+          <a href="#反向量-输出" class="headerlink" title="反向量-输出"></a
+          >反向量-输出
+        </h3>
+        <pre><code>The opposite of (1,2,3) is (-1,-2,-3)
 </code></pre>
-            <h2 id="单位向量">
-              <a href="#单位向量" class="headerlink" title="单位向量"></a
-              >单位向量
-            </h2>
-            <p>
-              单位向量$\vec{u}$的任意向量$\vec{a}$, 它的方向与$\vec{a}$相同,
-              长度为1.<br />$$ \vec{u}&#x3D;\frac{\vec{a}}{\lVert \vec{a}
-              \rVert} $$
-            </p>
-            <h3 id="单位向量-实现">
-              <a
-                href="#单位向量-实现"
-                class="headerlink"
-                title="单位向量-实现"
-              ></a
-              >单位向量-实现
-            </h3>
-            <pre><code>Vec3 Vec3::normalize() const &#123;
+        <h2 id="单位向量">
+          <a href="#单位向量" class="headerlink" title="单位向量"></a>单位向量
+        </h2>
+        <p>
+          单位向量$\vec{u}$的任意向量$\vec{a}$, 它的方向与$\vec{a}$相同,
+          长度为1.<br />$$ \vec{u}&#x3D;\frac{\vec{a}}{\lVert \vec{a} \rVert} $$
+        </p>
+        <h3 id="单位向量-实现">
+          <a href="#单位向量-实现" class="headerlink" title="单位向量-实现"></a
+          >单位向量-实现
+        </h3>
+        <pre><code>Vec3 Vec3::normalize() const &#123;
     double length = this-&gt;module();
     return Vec3(
         this-&gt;x / length,
@@ -910,85 +377,75 @@ std::cout &lt;&lt; &quot;3 per &quot; &lt;&lt; a &lt;&lt; &quot; is &quot; &lt;&
     );
 &#125;
 </code></pre>
-            <h3 id="单位向量-测试">
-              <a
-                href="#单位向量-测试"
-                class="headerlink"
-                title="单位向量-测试"
-              ></a
-              >单位向量-测试
-            </h3>
-            <pre><code>std::cout &lt;&lt; &quot;The unit vector of &quot; &lt;&lt; a &lt;&lt; &quot; is &quot; &lt;&lt; a.normalize() &lt;&lt; std::endl;
+        <h3 id="单位向量-测试">
+          <a href="#单位向量-测试" class="headerlink" title="单位向量-测试"></a
+          >单位向量-测试
+        </h3>
+        <pre><code>std::cout &lt;&lt; &quot;The unit vector of &quot; &lt;&lt; a &lt;&lt; &quot; is &quot; &lt;&lt; a.normalize() &lt;&lt; std::endl;
 </code></pre>
-            <h3 id="单位向量-输出">
-              <a
-                href="#单位向量-输出"
-                class="headerlink"
-                title="单位向量-输出"
-              ></a
-              >单位向量-输出
-            </h3>
-            <pre><code>The unit vector of (1,2,3) is (0.267261,0.534522,0.801784)
+        <h3 id="单位向量-输出">
+          <a href="#单位向量-输出" class="headerlink" title="单位向量-输出"></a
+          >单位向量-输出
+        </h3>
+        <pre><code>The unit vector of (1,2,3) is (0.267261,0.534522,0.801784)
 </code></pre>
-            <h1 id="向量的点积和叉积">
-              <a
-                href="#向量的点积和叉积"
-                class="headerlink"
-                title="向量的点积和叉积"
-              ></a
-              >向量的点积和叉积
-            </h1>
-            <h2 id="点积">
-              <a href="#点积" class="headerlink" title="点积"></a>点积
-            </h2>
-            <p>代数运算 $\vec{a}*\vec{b}&#x3D;\sum_{i&#x3D;1}^{n}{a_i b_i}$.</p>
-            <p>
-              几何定义 $\vec{a}*\vec{b}&#x3D;|\vec{a}| |\vec{v}| cos \theta$.
-            </p>
-            <p><img src="dot_product.png" alt="点乘的几何意义" /></p>
-            <h3 id="点积-实现">
-              <a href="#点积-实现" class="headerlink" title="点积-实现"></a
-              >点积-实现
-            </h3>
-            <pre><code>double Vec3::operator*(const Vec3 &amp; other) const &#123;
+        <h1 id="向量的点积和叉积">
+          <a
+            href="#向量的点积和叉积"
+            class="headerlink"
+            title="向量的点积和叉积"
+          ></a
+          >向量的点积和叉积
+        </h1>
+        <h2 id="点积">
+          <a href="#点积" class="headerlink" title="点积"></a>点积
+        </h2>
+        <p>代数运算 $\vec{a}*\vec{b}&#x3D;\sum_{i&#x3D;1}^{n}{a_i b_i}$.</p>
+        <p>几何定义 $\vec{a}*\vec{b}&#x3D;|\vec{a}| |\vec{v}| cos \theta$.</p>
+        <p><img src="dot_product.png" alt="点乘的几何意义" /></p>
+        <h3 id="点积-实现">
+          <a href="#点积-实现" class="headerlink" title="点积-实现"></a
+          >点积-实现
+        </h3>
+        <pre><code>double Vec3::operator*(const Vec3 &amp; other) const &#123;
     return this-&gt;x * other.x + this-&gt;y * other.y + this-&gt;z * other.z;
 &#125;
 </code></pre>
-            <h3 id="点积-测试">
-              <a href="#点积-测试" class="headerlink" title="点积-测试"></a
-              >点积-测试
-            </h3>
-            <pre><code>std::cout &lt;&lt; &quot;The dot product of &quot; &lt;&lt; a &lt;&lt; &quot; with &quot; &lt;&lt; b &lt;&lt; &quot; is &quot; &lt;&lt; a * b;
+        <h3 id="点积-测试">
+          <a href="#点积-测试" class="headerlink" title="点积-测试"></a
+          >点积-测试
+        </h3>
+        <pre><code>std::cout &lt;&lt; &quot;The dot product of &quot; &lt;&lt; a &lt;&lt; &quot; with &quot; &lt;&lt; b &lt;&lt; &quot; is &quot; &lt;&lt; a * b;
 </code></pre>
-            <h3 id="点积-输出">
-              <a href="#点积-输出" class="headerlink" title="点积-输出"></a
-              >点积-输出
-            </h3>
-            <pre><code>The dot product of (1,2,3) with (1,3,5) is 22
+        <h3 id="点积-输出">
+          <a href="#点积-输出" class="headerlink" title="点积-输出"></a
+          >点积-输出
+        </h3>
+        <pre><code>The dot product of (1,2,3) with (1,3,5) is 22
 </code></pre>
-            <h2 id="向量积-叉积">
-              <a href="#向量积-叉积" class="headerlink" title="向量积(叉积)"></a
-              >向量积(叉积)
-            </h2>
-            <p>
-              运算结果是个向量<br /><img
-                src="dot_product.png"
-                alt="向量积的几何意义"
-              />
-            </p>
-            <p>计算方式</p>
-            <p>
-              $$<br />\vec{a} \times \vec{b} &#x3D;<br />\begin{bmatrix}<br />\vec{i}
-              &amp; \vec{j} &amp; \vec{k} \\\\<br />a_x &amp; a_y &amp; a_z
-              \\\\<br />b_x &amp; b_y &amp; b_z \\\\<br />\end{bmatrix}\\\\<br />a
-              \times b &#x3D; (a_yb_z-a_zb_y)\vec{i} - (a_xb_z-a_zb_x)\vec{j} +
-              (a_xb_y-a_yb_x)\vec{k}<br />$$
-            </p>
-            <h3 id="向量积-实现">
-              <a href="#向量积-实现" class="headerlink" title="向量积-实现"></a
-              >向量积-实现
-            </h3>
-            <pre><code>Vec3 Vec3::cross(const Vec3 &amp; other) const &#123;
+        <h2 id="向量积-叉积">
+          <a href="#向量积-叉积" class="headerlink" title="向量积(叉积)"></a
+          >向量积(叉积)
+        </h2>
+        <p>
+          运算结果是个向量<br /><img
+            src="dot_product.png"
+            alt="向量积的几何意义"
+          />
+        </p>
+        <p>计算方式</p>
+        <p>
+          $$<br />\vec{a} \times \vec{b} &#x3D;<br />\begin{bmatrix}<br />\vec{i}
+          &amp; \vec{j} &amp; \vec{k} \\\\<br />a_x &amp; a_y &amp; a_z \\\\<br />b_x
+          &amp; b_y &amp; b_z \\\\<br />\end{bmatrix}\\\\<br />a \times b &#x3D;
+          (a_yb_z-a_zb_y)\vec{i} - (a_xb_z-a_zb_x)\vec{j} +
+          (a_xb_y-a_yb_x)\vec{k}<br />$$
+        </p>
+        <h3 id="向量积-实现">
+          <a href="#向量积-实现" class="headerlink" title="向量积-实现"></a
+          >向量积-实现
+        </h3>
+        <pre><code>Vec3 Vec3::cross(const Vec3 &amp; other) const &#123;
     return Vec3(
         this-&gt;y * other.z - this-&gt;z * other.y,
         -(this-&gt;x * other.z - this-&gt;z * other.x),
@@ -996,33 +453,33 @@ std::cout &lt;&lt; &quot;3 per &quot; &lt;&lt; a &lt;&lt; &quot; is &quot; &lt;&
     );
 &#125;
 </code></pre>
-            <h3 id="向量积-测试">
-              <a href="#向量积-测试" class="headerlink" title="向量积-测试"></a
-              >向量积-测试
-            </h3>
-            <pre><code>std::cout &lt;&lt; &quot;The cross product of &quot; &lt;&lt; a &lt;&lt; &quot; with &quot; &lt;&lt; b &lt;&lt; &quot; is &quot; &lt;&lt; a.cross(b) &lt;&lt; std::endl;
+        <h3 id="向量积-测试">
+          <a href="#向量积-测试" class="headerlink" title="向量积-测试"></a
+          >向量积-测试
+        </h3>
+        <pre><code>std::cout &lt;&lt; &quot;The cross product of &quot; &lt;&lt; a &lt;&lt; &quot; with &quot; &lt;&lt; b &lt;&lt; &quot; is &quot; &lt;&lt; a.cross(b) &lt;&lt; std::endl;
 std::cout &lt;&lt; &quot;The cross product of &quot; &lt;&lt; b &lt;&lt; &quot; with &quot; &lt;&lt; a &lt;&lt; &quot; is &quot; &lt;&lt; b.cross(a) &lt;&lt; std::endl;
 </code></pre>
-            <h3 id="向量积-输出">
-              <a href="#向量积-输出" class="headerlink" title="向量积-输出"></a
-              >向量积-输出
-            </h3>
-            <pre><code>The cross product of (1,2,3) with (1,3,5) is (1,-2,1)
+        <h3 id="向量积-输出">
+          <a href="#向量积-输出" class="headerlink" title="向量积-输出"></a
+          >向量积-输出
+        </h3>
+        <pre><code>The cross product of (1,2,3) with (1,3,5) is (1,-2,1)
 The cross product of (1,3,5) with (1,2,3) is (-1,2,-1)
 </code></pre>
-            <h2 id="夹角">
-              <a href="#夹角" class="headerlink" title="夹角"></a>夹角
-            </h2>
-            <p>
-              $$<br />\arctan<br />\Bigg(<br />\frac<br />{<br />\frac<br />{\lVert
-              \vec{u} \times \vec{v} \rVert}<br />{\sqrt{(\vec{u}<em>\vec{u})</em>(\vec{v}*\vec{v})}}<br />}<br />{<br />\frac<br />{\vec{u}
-              * \vec{v}}<br />{\sqrt{(\vec{u}<em>\vec{u})</em>(\vec{v}*\vec{v})}}<br />}<br />\Bigg)<br />$$
-            </p>
-            <h3 id="夹角-实现">
-              <a href="#夹角-实现" class="headerlink" title="夹角-实现"></a
-              >夹角-实现
-            </h3>
-            <pre><code>double Vec3::includedAngle(Vec3 &amp; v) const &#123;
+        <h2 id="夹角">
+          <a href="#夹角" class="headerlink" title="夹角"></a>夹角
+        </h2>
+        <p>
+          $$<br />\arctan<br />\Bigg(<br />\frac<br />{<br />\frac<br />{\lVert
+          \vec{u} \times \vec{v} \rVert}<br />{\sqrt{(\vec{u}<em>\vec{u})</em>(\vec{v}*\vec{v})}}<br />}<br />{<br />\frac<br />{\vec{u}
+          * \vec{v}}<br />{\sqrt{(\vec{u}<em>\vec{u})</em>(\vec{v}*\vec{v})}}<br />}<br />\Bigg)<br />$$
+        </p>
+        <h3 id="夹角-实现">
+          <a href="#夹角-实现" class="headerlink" title="夹角-实现"></a
+          >夹角-实现
+        </h3>
+        <pre><code>double Vec3::includedAngle(Vec3 &amp; v) const &#123;
     // compute |u| * |v|
     double divisor = sqrt(this-&gt;operator*(*this) * (v * v));
     double cosine = this-&gt;operator*(v) / divisor;
@@ -1031,45 +488,40 @@ The cross product of (1,3,5) with (1,2,3) is (-1,2,-1)
     return atan2(sine, cosine);
 &#125;
 </code></pre>
-            <h3 id="夹角-测试">
-              <a href="#夹角-测试" class="headerlink" title="夹角-测试"></a
-              >夹角-测试
-            </h3>
-            <pre><code>std::cout &lt;&lt; &quot;The angle between &quot; &lt;&lt; a &lt;&lt; &quot; and &quot; &lt;&lt; b &lt;&lt; &quot; is &quot; &lt;&lt; a.includedAngle(b) &lt;&lt; std::endl;
+        <h3 id="夹角-测试">
+          <a href="#夹角-测试" class="headerlink" title="夹角-测试"></a
+          >夹角-测试
+        </h3>
+        <pre><code>std::cout &lt;&lt; &quot;The angle between &quot; &lt;&lt; a &lt;&lt; &quot; and &quot; &lt;&lt; b &lt;&lt; &quot; is &quot; &lt;&lt; a.includedAngle(b) &lt;&lt; std::endl;
 </code></pre>
-            <h3 id="夹角-输出">
-              <a href="#夹角-输出" class="headerlink" title="夹角-输出"></a
-              >夹角-输出
-            </h3>
-            <pre><code>The angle between (1,2,3) and (1,3,5) is 0.110884
+        <h3 id="夹角-输出">
+          <a href="#夹角-输出" class="headerlink" title="夹角-输出"></a
+          >夹角-输出
+        </h3>
+        <pre><code>The angle between (1,2,3) and (1,3,5) is 0.110884
 </code></pre>
-            <h1 id="三角网格">
-              <a href="#三角网格" class="headerlink" title="三角网格"></a
-              >三角网格
-            </h1>
-            <p>
-              三角网格是多边形网格(Mesh)的一种,
-              是一种在计算机图形中用来模拟物体表面的数据结构.
-              在计算机中现实世界的曲面是用大量的小三角形片去组成的.
-              由于多边形实际上也能细分成三角形, 所以使用三角网格(Triangle
-              Mesh)是一种比较常见的情况.<br /><img
-                src="triangle_mesh.png"
-                alt="三角网格"
-              />
-            </p>
-            <h2 id="索引三角网格">
-              <a
-                href="#索引三角网格"
-                class="headerlink"
-                title="索引三角网格"
-              ></a
-              >索引三角网格
-            </h2>
-            <p>
-              为了表示网格我们需要定义点和三角形的数据结构,<br />点可以用向量,
-              三角形则保存三个点的索引
-            </p>
-            <pre><code>class Triangle &#123;
+        <h1 id="三角网格">
+          <a href="#三角网格" class="headerlink" title="三角网格"></a>三角网格
+        </h1>
+        <p>
+          三角网格是多边形网格(Mesh)的一种,
+          是一种在计算机图形中用来模拟物体表面的数据结构.
+          在计算机中现实世界的曲面是用大量的小三角形片去组成的.
+          由于多边形实际上也能细分成三角形, 所以使用三角网格(Triangle
+          Mesh)是一种比较常见的情况.<br /><img
+            src="triangle_mesh.png"
+            alt="三角网格"
+          />
+        </p>
+        <h2 id="索引三角网格">
+          <a href="#索引三角网格" class="headerlink" title="索引三角网格"></a
+          >索引三角网格
+        </h2>
+        <p>
+          为了表示网格我们需要定义点和三角形的数据结构,<br />点可以用向量,
+          三角形则保存三个点的索引
+        </p>
+        <pre><code>class Triangle &#123;
 public:
     unsigned int a;
     unsigned int b;
@@ -1079,26 +531,22 @@ public:
     &#125;
 &#125;;
 </code></pre>
-            <p>
-              这些索引指向的是存储在网格中的顶点,
-              我们必须知道对应是哪个网格三角片才会具有意义.<br />在网格中我们需要维护两个列表,
-              顶点表和三角形表
-            </p>
-            <pre><code>class TriangleMesh &#123;
+        <p>
+          这些索引指向的是存储在网格中的顶点,
+          我们必须知道对应是哪个网格三角片才会具有意义.<br />在网格中我们需要维护两个列表,
+          顶点表和三角形表
+        </p>
+        <pre><code>class TriangleMesh &#123;
 public:
     std::vector&lt;Vec3&gt; vertices;
     std::vector&lt;Triangle&gt; faces;
 &#125;;
 </code></pre>
-            <h3 id="调试三角网格">
-              <a
-                href="#调试三角网格"
-                class="headerlink"
-                title="调试三角网格"
-              ></a
-              >调试三角网格
-            </h3>
-            <pre><code>std::ostream&amp; operator &lt;&lt; (std::ostream &amp; os, const Triangle&amp; t) &#123;
+        <h3 id="调试三角网格">
+          <a href="#调试三角网格" class="headerlink" title="调试三角网格"></a
+          >调试三角网格
+        </h3>
+        <pre><code>std::ostream&amp; operator &lt;&lt; (std::ostream &amp; os, const Triangle&amp; t) &#123;
     os &lt;&lt; &quot;the Triangle a:&quot; &lt;&lt; t.a &lt;&lt; &quot;, b:&quot; &lt;&lt; t.b &lt;&lt; &quot;, c: &quot; &lt;&lt; t.c;
     return os;
 &#125;
@@ -1114,15 +562,14 @@ std::ostream&amp; operator &lt;&lt; (std::ostream &amp; os, const TriangleMesh&a
     return os;
 &#125;
 </code></pre>
-            <h2 id="储存方式">
-              <a href="#储存方式" class="headerlink" title="储存方式"></a
-              >储存方式
-            </h2>
-            <h3 id="obj">
-              <a href="#obj" class="headerlink" title=".obj"></a>.obj
-            </h3>
-            <p>每一行代表一个点v或者面f</p>
-            <pre><code>v 0.0624 0.03942 0.03357
+        <h2 id="储存方式">
+          <a href="#储存方式" class="headerlink" title="储存方式"></a>储存方式
+        </h2>
+        <h3 id="obj">
+          <a href="#obj" class="headerlink" title=".obj"></a>.obj
+        </h3>
+        <p>每一行代表一个点v或者面f</p>
+        <pre><code>v 0.0624 0.03942 0.03357
 v 0.0769 0.03909 0.03235
 v 0.0569 0.03902 0.03239
 v 0.0332 0.03602 0.03412
@@ -1131,14 +578,14 @@ f 1 2 3
 f 3 2 4
 f 1 3 4 
 </code></pre>
-            <h3 id="off">
-              <a href="#off" class="headerlink" title=".off"></a>.off
-            </h3>
-            <p>
-              <a href="16Triangles.off">下载测试文件</a
-              ><br />第一行的头部数据是顶点, 面, 边的数量
-            </p>
-            <pre><code>OFF 4 3 6
+        <h3 id="off">
+          <a href="#off" class="headerlink" title=".off"></a>.off
+        </h3>
+        <p>
+          <a href="16Triangles.off">下载测试文件</a
+          ><br />第一行的头部数据是顶点, 面, 边的数量
+        </p>
+        <pre><code>OFF 4 3 6
 0.0624 0.03942 0.03357
 0.0769 0.03909 0.03235
 0.0569 0.03902 0.03239
@@ -1147,15 +594,11 @@ f 1 3 4
 3 2 1 3
 3 0 2 3
 </code></pre>
-            <h4 id="解析-off文件">
-              <a
-                href="#解析-off文件"
-                class="headerlink"
-                title="解析.off文件"
-              ></a
-              >解析.off文件
-            </h4>
-            <pre><code>void TriangleMesh::importFromOff(std::istream &amp;is) &#123;
+        <h4 id="解析-off文件">
+          <a href="#解析-off文件" class="headerlink" title="解析.off文件"></a
+          >解析.off文件
+        </h4>
+        <pre><code>void TriangleMesh::importFromOff(std::istream &amp;is) &#123;
     std::string header;
     // read header
     if (!(is &gt;&gt; header))
@@ -1213,29 +656,21 @@ f 1 3 4
     &#125;
 &#125;
 </code></pre>
-            <h3 id="文件解析测试">
-              <a
-                href="#文件解析测试"
-                class="headerlink"
-                title="文件解析测试"
-              ></a
-              >文件解析测试
-            </h3>
-            <pre><code>TriangleMesh mesh;
+        <h3 id="文件解析测试">
+          <a href="#文件解析测试" class="headerlink" title="文件解析测试"></a
+          >文件解析测试
+        </h3>
+        <pre><code>TriangleMesh mesh;
 std::ifstream off_in(&quot;16Triangles.off&quot;);
 std::cout &lt;&lt; &quot;Reading file 16Triangles.off&quot; &lt;&lt; std::endl;
 mesh.importFromOff(off_in);
 std::cout &lt;&lt; &quot;The mesh was restored&quot; &lt;&lt; std::endl &lt;&lt; mesh;
 </code></pre>
-            <h3 id="文件输出测试">
-              <a
-                href="#文件输出测试"
-                class="headerlink"
-                title="文件输出测试"
-              ></a
-              >文件输出测试
-            </h3>
-            <pre><code>The mesh was restored
+        <h3 id="文件输出测试">
+          <a href="#文件输出测试" class="headerlink" title="文件输出测试"></a
+          >文件输出测试
+        </h3>
+        <pre><code>The mesh was restored
 the mesh has 15 vertices and 16 faces
 (0,-0.942809,0)
 (0,1.88562,0)
@@ -1269,15 +704,15 @@ the Triangle a:0, b:7, c: 14
 the Triangle a:7, b:3, c: 13
 the Triangle a:14, b:13, c: 5
 </code></pre>
-            <h3 id="保存为-off文件">
-              <a
-                href="#保存为-off文件"
-                class="headerlink"
-                title="保存为.off文件"
-              ></a
-              >保存为.off文件
-            </h3>
-            <pre><code>void TriangleMesh::saveAsOff(std::ostream &amp; os) &#123;
+        <h3 id="保存为-off文件">
+          <a
+            href="#保存为-off文件"
+            class="headerlink"
+            title="保存为.off文件"
+          ></a
+          >保存为.off文件
+        </h3>
+        <pre><code>void TriangleMesh::saveAsOff(std::ostream &amp; os) &#123;
     // write the header
     os &lt;&lt; &quot;OFF&quot; &lt;&lt; &quot;\n&quot; &lt;&lt; this-&gt;vertices.size() &lt;&lt; &quot; &quot; &lt;&lt; this-&gt;faces.size() &lt;&lt; &quot; &quot; &lt;&lt; 0 &lt;&lt; &quot;\n&quot;;
 
@@ -1291,43 +726,32 @@ the Triangle a:14, b:13, c: 5
     &#125;
 &#125;
 </code></pre>
-            <h3 id="保存测试">
-              <a href="#保存测试" class="headerlink" title="保存测试"></a
-              >保存测试
-            </h3>
-            <pre><code>std::ofstream off_out(&quot;16Triangles_out.off&quot;);
+        <h3 id="保存测试">
+          <a href="#保存测试" class="headerlink" title="保存测试"></a>保存测试
+        </h3>
+        <pre><code>std::ofstream off_out(&quot;16Triangles_out.off&quot;);
 std::cout &lt;&lt; &quot;Saving as the .off format&quot; &lt;&lt; std::endl;
 mesh.saveAsOff(off_out);
 </code></pre>
-            <h3 id="保存输出">
-              <a href="#保存输出" class="headerlink" title="保存输出"></a
-              >保存输出
-            </h3>
-            <pre><code>Saving as the .off format
+        <h3 id="保存输出">
+          <a href="#保存输出" class="headerlink" title="保存输出"></a>保存输出
+        </h3>
+        <pre><code>Saving as the .off format
 </code></pre>
-            <h1 id="三角面的运算">
-              <a
-                href="#三角面的运算"
-                class="headerlink"
-                title="三角面的运算"
-              ></a
-              >三角面的运算
-            </h1>
-            <h2 id="三角面积">
-              <a href="#三角面积" class="headerlink" title="三角面积"></a
-              >三角面积
-            </h2>
-            <p><img src="triangle_area.jpg" alt="三角面面积" /></p>
-            <p>$$<br />area &#x3D; \frac{\vec{u} \times \vec{v}}{2}<br />$$</p>
-            <h3 id="三角面积-实现">
-              <a
-                href="#三角面积-实现"
-                class="headerlink"
-                title="三角面积-实现"
-              ></a
-              >三角面积-实现
-            </h3>
-            <pre><code>double TriangleMesh::facetArea(Triangle &amp; f) const &#123;
+        <h1 id="三角面的运算">
+          <a href="#三角面的运算" class="headerlink" title="三角面的运算"></a
+          >三角面的运算
+        </h1>
+        <h2 id="三角面积">
+          <a href="#三角面积" class="headerlink" title="三角面积"></a>三角面积
+        </h2>
+        <p><img src="triangle_area.jpg" alt="三角面面积" /></p>
+        <p>$$<br />area &#x3D; \frac{\vec{u} \times \vec{v}}{2}<br />$$</p>
+        <h3 id="三角面积-实现">
+          <a href="#三角面积-实现" class="headerlink" title="三角面积-实现"></a
+          >三角面积-实现
+        </h3>
+        <pre><code>double TriangleMesh::facetArea(Triangle &amp; f) const &#123;
     auto a = this-&gt;vertices[f.a];
     auto b = this-&gt;vertices[f.b];
     auto c = this-&gt;vertices[f.c];
@@ -1338,49 +762,40 @@ mesh.saveAsOff(off_out);
     return u.cross(v).module() / 2;
 &#125;
 </code></pre>
-            <h3 id="三角面积-测试">
-              <a
-                href="#三角面积-测试"
-                class="headerlink"
-                title="三角面积-测试"
-              ></a
-              >三角面积-测试
-            </h3>
-            <pre><code>std::cout &lt;&lt; &quot;The surface&#39; area of &quot; &lt;&lt; mesh.faces[0] &lt;&lt; &quot; is &quot; &lt;&lt; mesh.facetArea(mesh.faces[0]) &lt;&lt; std::endl;
+        <h3 id="三角面积-测试">
+          <a href="#三角面积-测试" class="headerlink" title="三角面积-测试"></a
+          >三角面积-测试
+        </h3>
+        <pre><code>std::cout &lt;&lt; &quot;The surface&#39; area of &quot; &lt;&lt; mesh.faces[0] &lt;&lt; &quot; is &quot; &lt;&lt; mesh.facetArea(mesh.faces[0]) &lt;&lt; std::endl;
 </code></pre>
-            <h3 id="三角面积-输出">
-              <a
-                href="#三角面积-输出"
-                class="headerlink"
-                title="三角面积-输出"
-              ></a
-              >三角面积-输出
-            </h3>
-            <pre><code>The surface&#39; area of the Triangle a:6, b:7, c: 8 is 0.545776
+        <h3 id="三角面积-输出">
+          <a href="#三角面积-输出" class="headerlink" title="三角面积-输出"></a
+          >三角面积-输出
+        </h3>
+        <pre><code>The surface&#39; area of the Triangle a:6, b:7, c: 8 is 0.545776
 </code></pre>
-            <h2 id="三角面的法向量">
-              <a
-                href="#三角面的法向量"
-                class="headerlink"
-                title="三角面的法向量"
-              ></a
-              >三角面的法向量
-            </h2>
-            <p><img src="triangle_normal.png" alt="三角面法向量" /></p>
-            <p>
-              $$<br />
-              \hat{n} &#x3D; \frac{e_1 \times e_2}{\lVert e_1 \times e_2
-              \rVert}<br />$$
-            </p>
-            <h3 id="三角面法向量-实现">
-              <a
-                href="#三角面法向量-实现"
-                class="headerlink"
-                title="三角面法向量-实现"
-              ></a
-              >三角面法向量-实现
-            </h3>
-            <pre><code>Vec3 TriangleMesh::surfaceNormal(const Triangle &amp; t) const &#123;
+        <h2 id="三角面的法向量">
+          <a
+            href="#三角面的法向量"
+            class="headerlink"
+            title="三角面的法向量"
+          ></a
+          >三角面的法向量
+        </h2>
+        <p><img src="triangle_normal.png" alt="三角面法向量" /></p>
+        <p>
+          $$<br />
+          \hat{n} &#x3D; \frac{e_1 \times e_2}{\lVert e_1 \times e_2 \rVert}<br />$$
+        </p>
+        <h3 id="三角面法向量-实现">
+          <a
+            href="#三角面法向量-实现"
+            class="headerlink"
+            title="三角面法向量-实现"
+          ></a
+          >三角面法向量-实现
+        </h3>
+        <pre><code>Vec3 TriangleMesh::surfaceNormal(const Triangle &amp; t) const &#123;
     auto a = this-&gt;vertices[t.a];
     auto b = this-&gt;vertices[t.b];
     auto c = this-&gt;vertices[t.c];
@@ -1391,46 +806,45 @@ mesh.saveAsOff(off_out);
     return u.cross(v).normalize();
 &#125;
 </code></pre>
-            <h3 id="三角面法向量-测试">
-              <a
-                href="#三角面法向量-测试"
-                class="headerlink"
-                title="三角面法向量-测试"
-              ></a
-              >三角面法向量-测试
-            </h3>
-            <pre><code>std::cout &lt;&lt; &quot;The surface normal associated with &quot; &lt;&lt; mesh.faces[0] &lt;&lt; &quot; is &quot; &lt;&lt; mesh.surfaceNormal(mesh.faces[0]) &lt;&lt; std::endl;
+        <h3 id="三角面法向量-测试">
+          <a
+            href="#三角面法向量-测试"
+            class="headerlink"
+            title="三角面法向量-测试"
+          ></a
+          >三角面法向量-测试
+        </h3>
+        <pre><code>std::cout &lt;&lt; &quot;The surface normal associated with &quot; &lt;&lt; mesh.faces[0] &lt;&lt; &quot; is &quot; &lt;&lt; mesh.surfaceNormal(mesh.faces[0]) &lt;&lt; std::endl;
 </code></pre>
-            <h3 id="三角面法向量-输出">
-              <a
-                href="#三角面法向量-输出"
-                class="headerlink"
-                title="三角面法向量-输出"
-              ></a
-              >三角面法向量-输出
-            </h3>
-            <pre><code>The surface normal associated with the Triangle a:6, b:7, c: 8 is (0,0,1)
+        <h3 id="三角面法向量-输出">
+          <a
+            href="#三角面法向量-输出"
+            class="headerlink"
+            title="三角面法向量-输出"
+          ></a
+          >三角面法向量-输出
+        </h3>
+        <pre><code>The surface normal associated with the Triangle a:6, b:7, c: 8 is (0,0,1)
 </code></pre>
-            <h2 id="顶点法向量">
-              <a href="#顶点法向量" class="headerlink" title="顶点法向量"></a
-              >顶点法向量
-            </h2>
-            <p>
-              顶点处其实是没有法向量定义的, 在这些地方标注了网格不连续的地方.<br />
-              一个近似方法使用平均相邻三角面的法向量并将结果标准化.<br />
-              但是在某些情况下, 其结果并不是所期望的.<br />
-              例如如果使用平均三角形法向量计算顶点的法向量,
-              那些边缘特性会被平滑化.
-            </p>
-            <h3 id="顶点法向量-实现">
-              <a
-                href="#顶点法向量-实现"
-                class="headerlink"
-                title="顶点法向量-实现"
-              ></a
-              >顶点法向量-实现
-            </h3>
-            <pre><code>Vec3 TriangleMesh::vertexNormal(unsigned int index) const &#123;
+        <h2 id="顶点法向量">
+          <a href="#顶点法向量" class="headerlink" title="顶点法向量"></a
+          >顶点法向量
+        </h2>
+        <p>
+          顶点处其实是没有法向量定义的, 在这些地方标注了网格不连续的地方.<br />
+          一个近似方法使用平均相邻三角面的法向量并将结果标准化.<br />
+          但是在某些情况下, 其结果并不是所期望的.<br />
+          例如如果使用平均三角形法向量计算顶点的法向量, 那些边缘特性会被平滑化.
+        </p>
+        <h3 id="顶点法向量-实现">
+          <a
+            href="#顶点法向量-实现"
+            class="headerlink"
+            title="顶点法向量-实现"
+          ></a
+          >顶点法向量-实现
+        </h3>
+        <pre><code>Vec3 TriangleMesh::vertexNormal(unsigned int index) const &#123;
     Vec3 norm = ZERO_VECTOR;
     for (auto &amp; f : this-&gt;faces) &#123;
         if (f.a == index || f.b == index || f.c == index) &#123;
@@ -1440,40 +854,30 @@ mesh.saveAsOff(off_out);
     return norm.normalize();
 &#125;
 </code></pre>
-            <h3 id="顶点法向量-测试">
-              <a
-                href="#顶点法向量-测试"
-                class="headerlink"
-                title="顶点法向量-测试"
-              ></a
-              >顶点法向量-测试
-            </h3>
-            <pre><code>std::cout &lt;&lt; &quot;The vertex normal associated with vectex 0 &quot; &lt;&lt; mesh.vertices[0] &lt;&lt; &quot; is &quot; &lt;&lt; mesh.vertexNormal(0) &lt;&lt; std::endl;
+        <h3 id="顶点法向量-测试">
+          <a
+            href="#顶点法向量-测试"
+            class="headerlink"
+            title="顶点法向量-测试"
+          ></a
+          >顶点法向量-测试
+        </h3>
+        <pre><code>std::cout &lt;&lt; &quot;The vertex normal associated with vectex 0 &quot; &lt;&lt; mesh.vertices[0] &lt;&lt; &quot; is &quot; &lt;&lt; mesh.vertexNormal(0) &lt;&lt; std::endl;
 </code></pre>
-            <h3 id="顶点法向量-输出">
-              <a
-                href="#顶点法向量-输出"
-                class="headerlink"
-                title="顶点法向量-输出"
-              ></a
-              >顶点法向量-输出
-            </h3>
-            <pre><code>The vertex normal associated with vectex 0 (0,-0.942809,0) is (0,0,1)
+        <h3 id="顶点法向量-输出">
+          <a
+            href="#顶点法向量-输出"
+            class="headerlink"
+            title="顶点法向量-输出"
+          ></a
+          >顶点法向量-输出
+        </h3>
+        <pre><code>The vertex normal associated with vectex 0 (0,-0.942809,0) is (0,0,1)
 </code></pre>
 
-            <hr />
+        <hr />
 
-            <ul class="list-group"></ul>
-          </div>
-        </div>
-
-        <div class="row justify-content-center">
-          <!-- Sidebar Container -->
-
-          <div class="col-lg-8` col-md-10 sidebar-container">
-            <!-- Friends Blog -->
-          </div>
-        </div>
+        <ul class="list-group"></ul>
       </div>
     </article>
     <!-- Custom Theme JavaScript -->

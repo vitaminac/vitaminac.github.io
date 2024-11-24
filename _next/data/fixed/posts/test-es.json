@@ -7,8 +7,8 @@
       "tags": [],
       "isLegacy": false,
       "lang": "es",
-      "articleHtml": "<p>Hola Mundo</p>",
-      "tocHtml": ""
+      "tocHtml": "<p>Hola Mundo</p>",
+      "articleHtml": "<p>Hola Mundo</p>"
     },
     "lang": "es",
     "_nextI18Next": {
