@@ -425,10 +425,22 @@ uci commit dropbear
             <code>luci-app-adblock</code> and install.
           </li>
           <li>
-            Services &gt; Adblock &gt; Additional Settings &gt; Download
-            Utility: Select <strong>curl</strong>
+            Services &gt; Adblock
+            <ul>
+              <li>
+                General Settings
+                <ul>
+                  <li>enable force local DNS</li>
+                  <li>enable dns report</li>
+                </ul>
+              </li>
+              <li>
+                Additional Settings &gt; Download Utility: Select
+                <strong>curl</strong>
+              </li>
+              <li>Edit Blacklist: add domain you want to block</li>
+            </ul>
           </li>
-          <li>Services &gt; Edit Blacklist: add domain you want to block</li>
           <li>Services &gt; Adblock: Save &amp; Apply</li>
         </ul>
         <h2 id="Other-Utilities">

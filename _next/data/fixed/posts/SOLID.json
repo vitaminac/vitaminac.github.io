@@ -13,7 +13,7 @@
       ],
       "isLegacy": true,
       "lang": "en",
-      "tocHtml": "<ol>\n<li><a href=\"/SOLID/index.html#SOLID-Design-Principles\" target=\"SOLID\">SOLID Design Principles</a>\n<ol>\n<li><a href=\"/SOLID/index.html#Single-Responsibility-Principle\" target=\"SOLID\">Single Responsibility Principle</a></li>\n<li><a href=\"/SOLID/index.html#OpenClosed-Principle\" target=\"SOLID\">Open–Closed Principle</a></li>\n<li><a href=\"/SOLID/index.html#Liskov-Substitution-Principle\" target=\"SOLID\">Liskov Substitution Principle</a></li>\n<li><a href=\"/SOLID/index.html#Interface-Segregation-Principle\" target=\"SOLID\">Interface Segregation Principle</a></li>\n<li><a href=\"/SOLID/index.html#Dependency-inversion-principle\" target=\"SOLID\">Dependency inversion principle</a></li>\n</ol>\n</li>\n</ol>",
+      "tocHtml": "<ol>\n<li><a href=\"/SOLID/index.html#Single-Responsibility-Principle\" target=\"SOLID\">Single Responsibility Principle</a></li>\n<li><a href=\"/SOLID/index.html#OpenClosed-Principle\" target=\"SOLID\">Open–Closed Principle</a></li>\n<li><a href=\"/SOLID/index.html#Liskov-Substitution-Principle\" target=\"SOLID\">Liskov Substitution Principle</a></li>\n<li><a href=\"/SOLID/index.html#Interface-Segregation-Principle\" target=\"SOLID\">Interface Segregation Principle</a></li>\n<li><a href=\"/SOLID/index.html#Dependency-inversion-principle\" target=\"SOLID\">Dependency inversion principle</a></li>\n<li><a href=\"/SOLID/index.html#Reference\" target=\"SOLID\">Reference</a></li>\n</ol>",
       "path": "/SOLID/index.html"
     },
     "lang": "en",
