@@ -522,10 +522,10 @@
       a.r(t),
         a.d(t, {
           __N_SSG: function () {
-            return b;
+            return v;
           },
           default: function () {
-            return v;
+            return b;
           },
         });
       var s = a(5893),
@@ -534,13 +534,30 @@
       function l(e) {
         let t = (0, i.useRef)(null),
           [a, n] = (0, i.useState)(),
-          [l, c] = (0, i.useState)(0),
-          r = (0, i.useCallback)(() => {
-            n(t.current.contentWindow.document.body);
-          }, [n]),
+          l = (0, i.useCallback)(() => {
+            var e, a;
+            let s =
+              null === (a = t.current) || void 0 === a
+                ? void 0
+                : null === (e = a.contentWindow) || void 0 === e
+                  ? void 0
+                  : e.document.body;
+            s && n(s);
+          }, [t, n]);
+        (0, i.useEffect)(() => {
+          if (!a) {
+            let e = t.current;
+            null == e || e.addEventListener("load", l);
+            let a = setInterval(l, 1e3);
+            return () => {
+              null == e || e.removeEventListener("load", l), clearInterval(a);
+            };
+          }
+        }, [a, t, l]);
+        let [c, r] = (0, i.useState)(0),
           o = (0, i.useCallback)(() => {
-            c(a.scrollHeight);
-          }, [a, c]);
+            r(a.scrollHeight);
+          }, [a, r]);
         return (
           (0, i.useEffect)(() => {
             if (a) {
@@ -558,9 +575,9 @@
             title: e.title,
             src: e.src,
             width: "100%",
-            height: "".concat(l, "px"),
+            height: "".concat(c, "px"),
             ref: t,
-            onLoad: r,
+            onLoad: l,
           })
         );
       }
@@ -587,8 +604,8 @@
         j = a.n(g),
         p = a(3967),
         w = a.n(p),
-        b = !0,
-        v = function (e) {
+        v = !0,
+        b = function (e) {
           let { postData: t, siteConfig: a } = e,
             { t: i } = (0, n.$G)("post-layout");
           return (0, s.jsxs)(u.X, {
