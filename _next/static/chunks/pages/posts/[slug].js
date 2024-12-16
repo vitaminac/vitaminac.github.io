@@ -634,20 +634,21 @@
                   (0, s.jsxs)("div", {
                     className: "row",
                     children: [
-                      (0, s.jsx)("nav", {
-                        className: w()(j().toc, "col-12 col-lg-3 order-lg-2"),
-                        dangerouslySetInnerHTML: { __html: t.tocHtml },
-                      }),
+                      t.tocHtml &&
+                        (0, s.jsx)("nav", {
+                          className: w()(j().toc, "col-12 col-lg-3 order-lg-2"),
+                          dangerouslySetInnerHTML: { __html: t.tocHtml },
+                        }),
                       t.isLegacy
                         ? (0, s.jsx)("article", {
-                            className: "col-12 col-lg-9 order-lg-1",
+                            className: "col-12 col-lg order-lg-1",
                             children: (0, s.jsx)(l, {
                               title: t.slug,
                               src: t.path,
                             }),
                           })
                         : (0, s.jsx)("article", {
-                            className: "col-12 col-lg-9 order-lg-1",
+                            className: "col-12 col-lg order-lg-1",
                             dangerouslySetInnerHTML: { __html: t.articleHtml },
                           }),
                     ],

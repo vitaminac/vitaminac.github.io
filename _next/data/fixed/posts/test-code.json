@@ -7,7 +7,7 @@
       "tags": [],
       "isLegacy": false,
       "lang": "en",
-      "tocHtml": "<pre><code class=\"language-c\">    #include &#x3C;stdio.h>\r\n    \r\n    int main(int argc, char *argv[])\r\n    {\r\n        printf(\"argc = %d\\n\", argc);\r\n        for(int ndx = 0; ndx != argc; ++ndx)\r\n            printf(\"argv[%d] --> %s\\n\", ndx, argv[ndx]);\r\n        printf(\"argv[argc] = %p\\n\", (void*)argv[argc]);\r\n    }\n</code></pre>",
+      "tocHtml": "",
       "articleHtml": "<pre><code class=\"hljs language-c\">    <span class=\"hljs-meta\">#<span class=\"hljs-keyword\">include</span> <span class=\"hljs-string\">&lt;stdio.h&gt;</span></span>\r\n    \r\n    <span class=\"hljs-type\">int</span> <span class=\"hljs-title function_\">main</span><span class=\"hljs-params\">(<span class=\"hljs-type\">int</span> argc, <span class=\"hljs-type\">char</span> *argv[])</span>\r\n    {\r\n        <span class=\"hljs-built_in\">printf</span>(<span class=\"hljs-string\">&quot;argc = %d\\n&quot;</span>, argc);\r\n        <span class=\"hljs-keyword\">for</span>(<span class=\"hljs-type\">int</span> ndx = <span class=\"hljs-number\">0</span>; ndx != argc; ++ndx)\r\n            <span class=\"hljs-built_in\">printf</span>(<span class=\"hljs-string\">&quot;argv[%d] --&gt; %s\\n&quot;</span>, ndx, argv[ndx]);\r\n        <span class=\"hljs-built_in\">printf</span>(<span class=\"hljs-string\">&quot;argv[argc] = %p\\n&quot;</span>, (<span class=\"hljs-type\">void</span>*)argv[argc]);\r\n    }\n</code></pre>"
     },
     "lang": "en",

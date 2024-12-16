@@ -174,64 +174,7 @@
           </section>
         </header>
         <div class="row">
-          <nav class="Post_toc__TAzIW col-12 col-lg-3 order-lg-2">
-            <p>
-              Next.js has two forms of pre-rendering:
-              <strong>Static Generation</strong> and
-              <strong>Server-side Rendering</strong>. The difference is in
-              <strong>when</strong> it generates the HTML for a page.
-            </p>
-            <ul>
-              <li>
-                <strong>Static Generation</strong> is the pre-rendering method
-                that generates the HTML at <strong>build time</strong>. The
-                pre-rendered HTML is then <em>reused</em> on each request.
-              </li>
-              <li>
-                <strong>Server-side Rendering</strong> is the pre-rendering
-                method that generates the HTML on <strong>each request</strong>.
-              </li>
-            </ul>
-            <p>
-              Importantly, Next.js lets you <strong>choose</strong> which
-              pre-rendering form to use for each page. You can create a "hybrid"
-              Next.js app by using Static Generation for most pages and using
-              Server-side Rendering for others.
-            </p>
-            <p>
-              We recommend using <strong>Static Generation</strong> (with and
-              without data) whenever possible because your page can be built
-              once and served by CDN, which makes it much faster than having a
-              server render the page on every request.
-            </p>
-            <p>
-              You can use Static Generation for many types of pages, including:
-            </p>
-            <ul>
-              <li>Marketing pages</li>
-              <li>Blog posts</li>
-              <li>E-commerce product listings</li>
-              <li>Help and documentation</li>
-            </ul>
-            <p>
-              You should ask yourself: "Can I pre-render this page
-              <strong>ahead</strong> of a user's request?" If the answer is yes,
-              then you should choose Static Generation.
-            </p>
-            <p>
-              On the other hand, Static Generation is <strong>not</strong> a
-              good idea if you cannot pre-render a page ahead of a user's
-              request. Maybe your page shows frequently updated data, and the
-              page content changes on every request.
-            </p>
-            <p>
-              In that case, you can use <strong>Server-Side Rendering</strong>.
-              It will be slower, but the pre-rendered page will always be
-              up-to-date. Or you can skip pre-rendering and use client-side
-              JavaScript to populate data.
-            </p>
-          </nav>
-          <article class="col-12 col-lg-9 order-lg-1">
+          <article class="col-12 col-lg order-lg-1">
             <p>
               Next.js has two forms of pre-rendering:
               <strong>Static Generation</strong> and
@@ -413,7 +356,7 @@
               "tags": [],
               "isLegacy": false,
               "lang": "en",
-              "tocHtml": "\u003cp\u003eNext.js has two forms of pre-rendering: \u003cstrong\u003eStatic Generation\u003c/strong\u003e and \u003cstrong\u003eServer-side Rendering\u003c/strong\u003e. The difference is in \u003cstrong\u003ewhen\u003c/strong\u003e it generates the HTML for a page.\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003eStatic Generation\u003c/strong\u003e is the pre-rendering method that generates the HTML at \u003cstrong\u003ebuild time\u003c/strong\u003e. The pre-rendered HTML is then \u003cem\u003ereused\u003c/em\u003e on each request.\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eServer-side Rendering\u003c/strong\u003e is the pre-rendering method that generates the HTML on \u003cstrong\u003eeach request\u003c/strong\u003e.\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eImportantly, Next.js lets you \u003cstrong\u003echoose\u003c/strong\u003e which pre-rendering form to use for each page. You can create a \"hybrid\" Next.js app by using Static Generation for most pages and using Server-side Rendering for others.\u003c/p\u003e\n\u003cp\u003eWe recommend using \u003cstrong\u003eStatic Generation\u003c/strong\u003e (with and without data) whenever possible because your page can be built once and served by CDN, which makes it much faster than having a server render the page on every request.\u003c/p\u003e\n\u003cp\u003eYou can use Static Generation for many types of pages, including:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eMarketing pages\u003c/li\u003e\n\u003cli\u003eBlog posts\u003c/li\u003e\n\u003cli\u003eE-commerce product listings\u003c/li\u003e\n\u003cli\u003eHelp and documentation\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eYou should ask yourself: \"Can I pre-render this page \u003cstrong\u003eahead\u003c/strong\u003e of a user's request?\" If the answer is yes, then you should choose Static Generation.\u003c/p\u003e\n\u003cp\u003eOn the other hand, Static Generation is \u003cstrong\u003enot\u003c/strong\u003e a good idea if you cannot pre-render a page ahead of a user's request. Maybe your page shows frequently updated data, and the page content changes on every request.\u003c/p\u003e\n\u003cp\u003eIn that case, you can use \u003cstrong\u003eServer-Side Rendering\u003c/strong\u003e. It will be slower, but the pre-rendered page will always be up-to-date. Or you can skip pre-rendering and use client-side JavaScript to populate data.\u003c/p\u003e",
+              "tocHtml": "",
               "articleHtml": "\u003cp\u003eNext.js has two forms of pre-rendering: \u003cstrong\u003eStatic Generation\u003c/strong\u003e and \u003cstrong\u003eServer-side Rendering\u003c/strong\u003e. The difference is in \u003cstrong\u003ewhen\u003c/strong\u003e it generates the HTML for a page.\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003eStatic Generation\u003c/strong\u003e is the pre-rendering method that generates the HTML at \u003cstrong\u003ebuild time\u003c/strong\u003e. The pre-rendered HTML is then \u003cem\u003ereused\u003c/em\u003e on each request.\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eServer-side Rendering\u003c/strong\u003e is the pre-rendering method that generates the HTML on \u003cstrong\u003eeach request\u003c/strong\u003e.\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eImportantly, Next.js lets you \u003cstrong\u003echoose\u003c/strong\u003e which pre-rendering form to use for each page. You can create a \u0026quot;hybrid\u0026quot; Next.js app by using Static Generation for most pages and using Server-side Rendering for others.\u003c/p\u003e\n\u003cp\u003eWe recommend using \u003cstrong\u003eStatic Generation\u003c/strong\u003e (with and without data) whenever possible because your page can be built once and served by CDN, which makes it much faster than having a server render the page on every request.\u003c/p\u003e\n\u003cp\u003eYou can use Static Generation for many types of pages, including:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eMarketing pages\u003c/li\u003e\n\u003cli\u003eBlog posts\u003c/li\u003e\n\u003cli\u003eE-commerce product listings\u003c/li\u003e\n\u003cli\u003eHelp and documentation\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eYou should ask yourself: \u0026quot;Can I pre-render this page \u003cstrong\u003eahead\u003c/strong\u003e of a user\u0026#x27;s request?\u0026quot; If the answer is yes, then you should choose Static Generation.\u003c/p\u003e\n\u003cp\u003eOn the other hand, Static Generation is \u003cstrong\u003enot\u003c/strong\u003e a good idea if you cannot pre-render a page ahead of a user\u0026#x27;s request. Maybe your page shows frequently updated data, and the page content changes on every request.\u003c/p\u003e\n\u003cp\u003eIn that case, you can use \u003cstrong\u003eServer-Side Rendering\u003c/strong\u003e. It will be slower, but the pre-rendered page will always be up-to-date. Or you can skip pre-rendering and use client-side JavaScript to populate data.\u003c/p\u003e"
             },
             "lang": "en",

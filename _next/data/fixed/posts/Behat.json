@@ -7,7 +7,7 @@
       "tags": ["BDD"],
       "isLegacy": true,
       "lang": "es",
-      "tocHtml": "<p>Behat es una herramienta Story BDD de código abierto creada para aplicaciones PHP. Behat permite crear historias de usuario centradas en el ejemplo. No solo se pueden usar para comprender mejor el propósito de su aplicación, sino que también se puede usar para probar estas características una vez que se implementan.</p>",
+      "tocHtml": "",
       "path": "/Behat/index.html"
     },
     "lang": "es",

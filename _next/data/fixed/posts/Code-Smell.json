@@ -11,7 +11,7 @@
       ],
       "isLegacy": true,
       "lang": "es",
-      "tocHtml": "<p>Es cualquier síntoma en el código fuente de un programa que posiblemente indica un problema más profundo.</p>\n<ul>\n<li>Código duplicado</li>\n<li>Método grande</li>\n<li>Clase grande</li>\n<li>Demasiados parámetros</li>\n<li>Una clase que usa excesivamente métodos de otra clase</li>\n<li>una clase que tiene dependencias en detalles de implementación de otra clase</li>\n<li>No cumple el principio de sustitución de Liskov</li>\n<li>Clase perezosa que hace poco</li>\n<li>Uso de patrones de diseño demasiado complicados</li>\n<li>Identificadores excesivamente largos, cortos</li>\n<li>Callback excesivos</li>\n</ul>",
+      "tocHtml": "",
       "path": "/Code-Smell/index.html"
     },
     "lang": "es",

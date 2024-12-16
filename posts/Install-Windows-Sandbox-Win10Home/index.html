@@ -185,54 +185,7 @@
           </section>
         </header>
         <div class="row">
-          <nav class="Post_toc__TAzIW col-12 col-lg-3 order-lg-2">
-            <p>save the following command as bat file and then execute</p>
-            <pre><code>@echo off
-
-echo Checking for permissions
->nul 2>&#x26;1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
-
-echo Permission check result: %errorlevel%
-
-REM --> If error flag set, we do not have admin.
-if '%errorlevel%' NEQ '0' (
-echo Requesting administrative privileges...
-goto UACPrompt
-) else ( goto gotAdmin )
-
-:UACPrompt
-echo Set UAC = CreateObject^("Shell.Application"^) > "%temp%\getadmin.vbs"
-echo UAC.ShellExecute "%~s0", "", "", "runas", 1 >> "%temp%\getadmin.vbs"
-
-echo Running created temporary "%temp%\getadmin.vbs"
-timeout /T 2
-"%temp%\getadmin.vbs"
-exit /B
-
-:gotAdmin
-if exist "%temp%\getadmin.vbs" ( del "%temp%\getadmin.vbs" )
-pushd "%CD%"
-CD /D "%~dp0" 
-
-echo Batch was successfully started with admin privileges
-echo .
-cls
-Title Sandbox Installer
-
-pushd "%~dp0"
-
-dir /b %SystemRoot%\servicing\Packages\*Containers*.mum >sandbox.txt
-
-for /f %%i in ('findstr /i . sandbox.txt 2^>nul') do dism /online /norestart /add-package:"%SystemRoot%\servicing\Packages\%%i"
-
-del sandbox.txt
-
-Dism /online /enable-feature /featurename:Containers-DisposableClientVM /LimitAccess /ALL
-
-pause
-</code></pre>
-          </nav>
-          <article class="col-12 col-lg-9 order-lg-1">
+          <article class="col-12 col-lg order-lg-1">
             <iframe
               name="Install-Windows-Sandbox-Win10Home"
               title="Install-Windows-Sandbox-Win10Home"
@@ -366,7 +319,7 @@ pause
               "tags": ["Hacker"],
               "isLegacy": true,
               "lang": "en",
-              "tocHtml": "\u003cp\u003esave the following command as bat file and then execute\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e@echo off\n\necho Checking for permissions\n\u003enul 2\u003e\u0026#x26;1 \"%SYSTEMROOT%\\system32\\cacls.exe\" \"%SYSTEMROOT%\\system32\\config\\system\"\n\necho Permission check result: %errorlevel%\n\nREM --\u003e If error flag set, we do not have admin.\nif '%errorlevel%' NEQ '0' (\necho Requesting administrative privileges...\ngoto UACPrompt\n) else ( goto gotAdmin )\n\n:UACPrompt\necho Set UAC = CreateObject^(\"Shell.Application\"^) \u003e \"%temp%\\getadmin.vbs\"\necho UAC.ShellExecute \"%~s0\", \"\", \"\", \"runas\", 1 \u003e\u003e \"%temp%\\getadmin.vbs\"\n\necho Running created temporary \"%temp%\\getadmin.vbs\"\ntimeout /T 2\n\"%temp%\\getadmin.vbs\"\nexit /B\n\n:gotAdmin\nif exist \"%temp%\\getadmin.vbs\" ( del \"%temp%\\getadmin.vbs\" )\npushd \"%CD%\"\nCD /D \"%~dp0\" \n\necho Batch was successfully started with admin privileges\necho .\ncls\nTitle Sandbox Installer\n\npushd \"%~dp0\"\n\ndir /b %SystemRoot%\\servicing\\Packages\\*Containers*.mum \u003esandbox.txt\n\nfor /f %%i in ('findstr /i . sandbox.txt 2^\u003enul') do dism /online /norestart /add-package:\"%SystemRoot%\\servicing\\Packages\\%%i\"\n\ndel sandbox.txt\n\nDism /online /enable-feature /featurename:Containers-DisposableClientVM /LimitAccess /ALL\n\npause\n\u003c/code\u003e\u003c/pre\u003e",
+              "tocHtml": "",
               "path": "/Install-Windows-Sandbox-Win10Home/index.html"
             },
             "lang": "en",

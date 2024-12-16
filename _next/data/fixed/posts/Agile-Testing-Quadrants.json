@@ -11,7 +11,7 @@
       ],
       "isLegacy": true,
       "lang": "es",
-      "tocHtml": "<p>Un test enfocado al negocio(technology facing) es aquel que podrías describir a un experto del negocio en términos que le podrían interesar.</p>\n<p>También es interesante pensar o preguntar si se quiere que los tests apoyen a la programación (support programming) o analicen/critiquen el producto (critique product), de que los programadores los usen como una parte fundamental del proceso de programar.</p>\n<p>Los tests que analizan o critican el producto no se centran en el proceso de programar, si no que analizan un producto ya finalizado con la intención de encontrar deficiencias.</p>\n<p><img src=\"quadrants.png\" alt=\"Agile Testing Quadrants\"></p>\n<ul>\n<li>Q1: trata sobre testear los componentes de un sistema informático -> Test unitarios. Estos tests pueden ser automatizados.</li>\n<li>Q2: consiste en testear el sistema como un todo, y sus conexiones con el proceso de negocio y otros sistemas. Tests funcionales. Pueden ser manuales o automatizados.</li>\n<li>Q3: tests de Aceptación, los cuales comprueban si los usuarios pueden realizar las acciones que desean con nuestro programa/sistema, basándose en escenarios en tiempo real. Estos tests son manuales.</li>\n<li>Q4: abarca los tests que tienen que ver con perspectivas tecnológicas que solo se pueden testear una vez el sistema está acabado. Tests de rendimiento, carga, estrés, escalabilidad. Se pueden emplear herramientas especiales para realizar estos tests junto con tests de automatización.</li>\n</ul>",
+      "tocHtml": "",
       "path": "/Agile-Testing-Quadrants/index.html"
     },
     "lang": "es",

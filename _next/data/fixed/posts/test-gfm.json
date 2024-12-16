@@ -7,7 +7,7 @@
       "tags": [],
       "isLegacy": false,
       "lang": "en",
-      "tocHtml": "<ul>\n<li>[ ] foo</li>\n<li>[x] bar</li>\n</ul>",
+      "tocHtml": "",
       "articleHtml": "<ul class=\"contains-task-list\">\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled=\"\"/> <!-- -->foo</li>\n<li class=\"task-list-item\"><input type=\"checkbox\" disabled=\"\" checked=\"\"/> <!-- -->bar</li>\n</ul>"
     },
     "lang": "en",

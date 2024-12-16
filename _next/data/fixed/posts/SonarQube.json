@@ -7,7 +7,7 @@
       "tags": ["Software Quality Metrics", "SonarQube"],
       "isLegacy": true,
       "lang": "es",
-      "tocHtml": "<p>SonarQube es la implementación SQALE, que se trata de \"organizar los requisitos no funcionales relacionados con la calidad del código\".</p>\n<p>La implementación de SQALE en SonarQube se basa únicamente en reglas y problemas.</p>\n<ul>\n<li>Bloques duplicados</li>\n<li>Pruebas unitarias fallidas</li>\n<li>Insuficiente cobertura de sucursales por pruebas unitarias.</li>\n<li>Densidad de comentarios insuficiente</li>\n<li>Cobertura de línea insuficiente por pruebas unitarias.</li>\n<li>Pruebas unitarias omitidas</li>\n</ul>\n<p><img src=\"quality.png\" alt=\"Quality\"></p>\n<p>Estas mediciones se realizan sumando la deuda técnica acumulada para cada emisión, que puede ver en cada bloque de emisión. También puede ver los totales de deuda por criterios en la interfaz de problemas seleccionando la visualización de la deuda en la parte superior de la interfaz de búsqueda de problemas. La deuda técnica de un proyecto es simplemente la suma de la deuda técnica de cada “bad smell” de código en el proyecto.</p>",
+      "tocHtml": "",
       "path": "/SonarQube/index.html"
     },
     "lang": "es",
