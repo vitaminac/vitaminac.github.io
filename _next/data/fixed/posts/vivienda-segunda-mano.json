@@ -1,0 +1,50 @@
+{
+  "pageProps": {
+    "postData": {
+      "title": "西班牙二手房买卖流程",
+      "date": "2024-12-01 22:08:24",
+      "slug": "vivienda-segunda-mano",
+      "tags": ["房地产"],
+      "isLegacy": true,
+      "lang": "zh",
+      "tocHtml": "<ol>\n<li><a href=\"/vivienda-segunda-mano/index.html#%E9%80%89%E6%88%BF\" target=\"vivienda-segunda-mano\">选房</a>\n<ol>\n<li><a href=\"/vivienda-segunda-mano/index.html#%E7%8E%AF%E5%A2%83\" target=\"vivienda-segunda-mano\">环境</a></li>\n<li><a href=\"/vivienda-segunda-mano/index.html#%E9%81%BF%E5%9D%91\" target=\"vivienda-segunda-mano\">避坑</a></li>\n<li><a href=\"/vivienda-segunda-mano/index.html#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9\" target=\"vivienda-segunda-mano\">注意事项</a></li>\n</ol>\n</li>\n<li><a href=\"/vivienda-segunda-mano/index.html#%E4%BA%8C%E6%89%8B%E6%88%BF%E4%B9%B0%E6%88%BF%E6%B5%81%E7%A8%8B\" target=\"vivienda-segunda-mano\">二手房买房流程</a></li>\n<li><a href=\"/vivienda-segunda-mano/index.html#%E4%B9%B0%E6%88%BF%E5%90%8E\" target=\"vivienda-segunda-mano\">买房后</a></li>\n<li><a href=\"/vivienda-segunda-mano/index.html#%E5%8F%82%E8%80%83\" target=\"vivienda-segunda-mano\">参考</a></li>\n</ol>",
+      "path": "/vivienda-segunda-mano/index.html"
+    },
+    "lang": "zh",
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "zh": {
+          "navbar": {
+            "Home": "主页",
+            "Language": "语言",
+            "Tags": "标签",
+            "en": "英语",
+            "es": "西语",
+            "zh": "中文"
+          },
+          "post-layout": { "Author": "作者: {{author}}", "Tags": "标签" }
+        },
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          },
+          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
+        }
+      },
+      "initialLocale": "zh",
+      "ns": ["navbar", "post-layout"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}
