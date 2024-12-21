@@ -1,16 +1,15 @@
 {
   "pageProps": {
-    "postData": {
-      "title": "VPPL - Vivienda de Protección Pública de Precio Limitado",
-      "date": "2024-09-01 20:17:51",
-      "slug": "vppl",
-      "tags": ["VPPL", "IPREM", "Inmueble"],
-      "isLegacy": true,
-      "lang": "es",
-      "tocHtml": "<ol>\n<li><a href=\"/vppl/index.html#Referencia\" target=\"vppl\">Referencia</a></li>\n</ol>",
-      "path": "/vppl/index.html"
-    },
     "lang": "es",
+    "tag": "Inmueble",
+    "previews": [
+      {
+        "slug": "vppl",
+        "title": "VPPL - Vivienda de Protección Pública de Precio Limitado",
+        "date": "2024-09-01 20:17:51",
+        "content": "Vivienda de Protección Pública de Precio Limitado (VPPL) es una vivienda protegida con una superficie construida máxima de 150 $m^2$ y precio..."
+      }
+    ],
     "_nextI18Next": {
       "initialI18nStore": {
         "es": {
@@ -21,8 +20,7 @@
             "en": "Inglés",
             "es": "Español",
             "zh": "Chino"
-          },
-          "post-layout": { "Author": "Autor: {{author}}", "Tags": "Tags" }
+          }
         },
         "en": {
           "navbar": {
@@ -32,12 +30,11 @@
             "en": "English",
             "es": "Spanish",
             "zh": "Chinese"
-          },
-          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
+          }
         }
       },
       "initialLocale": "es",
-      "ns": ["navbar", "post-layout"],
+      "ns": ["navbar"],
       "userConfig": {
         "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
         "default": {
