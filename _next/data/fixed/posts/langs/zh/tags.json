@@ -2,11 +2,13 @@
   "pageProps": {
     "lang": "zh",
     "tags": [
+      "ETF",
       "Flash",
       "Game",
       "NIE",
       "PyInstaller",
       "QQ堂",
+      "S&P 500",
       "TIE",
       "hook",
       "python",
@@ -36,6 +38,7 @@
       "沉没成本",
       "秘书问题",
       "纳什均衡",
+      "股票指数",
       "西班牙语基础",
       "西班牙语语法",
       "计算机图形",

@@ -3,6 +3,12 @@
     "lang": "zh",
     "previews": [
       {
+        "slug": "moyu24",
+        "title": "魔域2.4小游戏分析",
+        "date": "2024-02-17 15:02:08",
+        "content": "{% flash moyu2_4.swf 800..."
+      },
+      {
         "slug": "QQTang",
         "title": "浅谈QQ堂",
         "date": "2021-11-24 14:33:25",
@@ -55,15 +61,10 @@
         "title": "西班牙语基数1-10",
         "date": "2018-11-07 00:40:31",
         "content": "从一到十 uno dos tres cuatro cinco seis siete ocho nueve diez 数字\"uno\"在阳性名词前面变成\"un\"  un libro 一本书 un perro 一直狗(公的) un hombre 一个男人  数字\"uno\"在阴性名词前面变成\"una\" ..."
-      },
-      {
-        "slug": "GENDER-OF-NOUNS",
-        "title": "西班牙语名词的阴阳性",
-        "date": "2018-10-27 23:58:56",
-        "content": "第一部分 名词阴阳性  名词是用来指人,物,地点,抽象概念的表达 在西班牙语中, 所有的名词  阳性 | 阴性 ------------- | ------------- el chico(男孩) | la chica(女孩) el jardín(花园) | la universidad(大学)..."
       }
     ],
     "prevPageUrl": "/posts/langs/zh/pagination/1",
+    "nextPageUrl": "/posts/langs/zh/pagination/3",
     "_nextI18Next": {
       "initialI18nStore": {
         "zh": {

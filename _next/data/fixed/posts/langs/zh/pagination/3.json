@@ -1,0 +1,52 @@
+{
+  "pageProps": {
+    "lang": "zh",
+    "previews": [
+      {
+        "slug": "GENDER-OF-NOUNS",
+        "title": "西班牙语名词的阴阳性",
+        "date": "2018-10-27 23:58:56",
+        "content": "第一部分 名词阴阳性  名词是用来指人,物,地点,抽象概念的表达 在西班牙语中, 所有的名词  阳性 | 阴性 ------------- | ------------- el chico(男孩) | la chica(女孩) el jardín(花园) | la universidad(大学)..."
+      }
+    ],
+    "prevPageUrl": "/posts/langs/zh/pagination/2",
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "zh": {
+          "navbar": {
+            "Home": "主页",
+            "Language": "语言",
+            "Tags": "标签",
+            "en": "英语",
+            "es": "西语",
+            "zh": "中文"
+          },
+          "paginated-index": { "PrevPage": "← 前一页", "NextPage": "下一页 →" }
+        },
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          },
+          "paginated-index": {
+            "PrevPage": "← NEWER POSTS",
+            "NextPage": "OLDER POSTS →"
+          }
+        }
+      },
+      "initialLocale": "zh",
+      "ns": ["navbar", "paginated-index"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}
