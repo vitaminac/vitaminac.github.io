@@ -10,8 +10,8 @@
       });
       var i = e(5893),
         t = e(3967),
-        l = e.n(t),
-        n = e(261),
+        n = e.n(t),
+        l = e(261),
         c = {
           src: "/_next/static/media/avatar.f1819002.jpg",
           height: 520,
@@ -22,7 +22,7 @@
           blurHeight: 8,
         };
       function r(a) {
-        return (0, i.jsx)(n.t, { src: c, alt: "Avatar", ...a });
+        return (0, i.jsx)(l.t, { src: c, alt: "Avatar", ...a });
       }
       var m = e(7845),
         o = e.n(m);
@@ -139,7 +139,7 @@
       }
       function A(a) {
         return (0, i.jsxs)("section", {
-          className: l()(o().about, "tw-text-gray-300", "tw-text-center"),
+          className: n()(o().about, "tw-text-gray-300", "tw-text-center"),
           children: [
             (0, i.jsx)(r, { height: 108, width: 108, className: "tw-m-auto" }),
             (0, i.jsx)("h5", { children: a.siteAuthor }),
@@ -161,8 +161,8 @@
       });
       var i = e(5893),
         t = e(4298),
-        l = e.n(t);
-      function n() {
+        n = e.n(t);
+      function l() {
         return (0, i.jsxs)(i.Fragment, {
           children: [
             (0, i.jsx)("link", {
@@ -172,14 +172,14 @@
                 "sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH",
               crossOrigin: "anonymous",
             }),
-            (0, i.jsx)(l(), {
+            (0, i.jsx)(n(), {
               id: "bootstrap-popper-js-cdn",
               src: "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js",
               integrity:
                 "sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r",
               crossOrigin: "anonymous",
             }),
-            (0, i.jsx)(l(), {
+            (0, i.jsx)(n(), {
               id: "bootstrap-js-cdn",
               src: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js",
               integrity:
@@ -340,7 +340,7 @@
                 children: (0, i.jsx)(r(), {
                   className: "tw-text-stone-700",
                   target: "_blank",
-                  href: "https://stackoverflow.com/users/".concat(
+                  href: "https://stackexchange.com/users/".concat(
                     a.stackoverflow,
                   ),
                   children: (0, i.jsxs)("span", {
@@ -501,7 +501,7 @@
         let { children: s, lang: e, siteConfig: t } = a;
         return (0, i.jsxs)(i.Fragment, {
           children: [
-            (0, i.jsx)(n, {}),
+            (0, i.jsx)(l, {}),
             (0, i.jsx)(N, { siteConfig: t, lang: e }),
             s,
             (0, i.jsx)(A, { siteConfig: t }),
@@ -518,16 +518,16 @@
       });
       var i = e(5893),
         t = e(5675),
-        l = e.n(t);
-      let n = (a) => {
+        n = e.n(t);
+      let l = (a) => {
         let { src: s } = a;
         return s;
       };
       function c(a) {
         let { alt: s, src: e, width: t, height: c, className: r, ...m } = a;
-        return (0, i.jsx)(l(), {
+        return (0, i.jsx)(n(), {
           src: e,
-          loader: n,
+          loader: l,
           alt: s || "image",
           placeholder: "blur",
           sizes: "responsive",
@@ -543,14 +543,14 @@
       "use strict";
       e.d(s, {
         K: function () {
-          return n;
+          return l;
         },
       });
       var i = e(5893),
         t = e(9008),
-        l = e.n(t);
-      function n(a) {
-        return (0, i.jsxs)(l(), {
+        n = e.n(t);
+      function l(a) {
+        return (0, i.jsxs)(n(), {
           children: [
             (0, i.jsx)("meta", { charSet: "utf-8" }),
             (0, i.jsx)("meta", {

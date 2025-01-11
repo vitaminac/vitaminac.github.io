@@ -73,8 +73,8 @@
         });
       }
       a(7294);
-      var r = a(1664),
-        c = a.n(r);
+      var c = a(1664),
+        r = a.n(c);
       function o(e) {
         return (0, s.jsx)("div", {
           className: "row justify-content-center",
@@ -83,7 +83,7 @@
             children: [
               (0, s.jsx)("li", {
                 className: "list-inline-item ",
-                children: (0, s.jsx)(c(), {
+                children: (0, s.jsx)(r(), {
                   className: "tw-text-stone-700",
                   target: "_blank",
                   href: "https://www.linkedin.com/in/".concat(e.linkedin),
@@ -102,7 +102,7 @@
               }),
               (0, s.jsx)("li", {
                 className: "list-inline-item",
-                children: (0, s.jsx)(c(), {
+                children: (0, s.jsx)(r(), {
                   className: "tw-text-stone-700",
                   target: "_blank",
                   href: "mailto:".concat(
@@ -124,7 +124,7 @@
               }),
               (0, s.jsx)("li", {
                 className: "list-inline-item",
-                children: (0, s.jsx)(c(), {
+                children: (0, s.jsx)(r(), {
                   className: "tw-text-stone-700",
                   target: "_blank",
                   href: "https://github.com/".concat(e.github),
@@ -143,7 +143,7 @@
               }),
               (0, s.jsx)("li", {
                 className: "list-inline-item",
-                children: (0, s.jsx)(c(), {
+                children: (0, s.jsx)(r(), {
                   className: "tw-text-stone-700",
                   target: "_blank",
                   href: "https://gist.github.com/".concat(e.github),
@@ -163,7 +163,7 @@
               }),
               (0, s.jsx)("li", {
                 className: "list-inline-item",
-                children: (0, s.jsx)(c(), {
+                children: (0, s.jsx)(r(), {
                   className: "tw-text-stone-700",
                   target: "_blank",
                   href: "https://gitlab.com/".concat(e.gitlab),
@@ -182,7 +182,7 @@
               }),
               (0, s.jsx)("li", {
                 className: "list-inline-item",
-                children: (0, s.jsx)(c(), {
+                children: (0, s.jsx)(r(), {
                   className: "tw-text-stone-700",
                   target: "_blank",
                   href: "https://www.kaggle.com/".concat(e.kaggle),
@@ -201,7 +201,7 @@
               }),
               (0, s.jsx)("li", {
                 className: "list-inline-item",
-                children: (0, s.jsx)(c(), {
+                children: (0, s.jsx)(r(), {
                   className: "tw-text-stone-700",
                   target: "_blank",
                   href: "https://leetcode.com/".concat(e.leetcode),
@@ -220,10 +220,10 @@
               }),
               (0, s.jsx)("li", {
                 className: "list-inline-item",
-                children: (0, s.jsx)(c(), {
+                children: (0, s.jsx)(r(), {
                   className: "tw-text-stone-700",
                   target: "_blank",
-                  href: "https://stackoverflow.com/users/".concat(
+                  href: "https://stackexchange.com/users/".concat(
                     e.stackoverflow,
                   ),
                   children: (0, s.jsxs)("span", {
@@ -328,7 +328,7 @@
                   children: [
                     (0, s.jsx)("li", {
                       className: "nav-item",
-                      children: (0, s.jsx)(c(), {
+                      children: (0, s.jsx)(r(), {
                         className: "nav-link active",
                         "aria-current": "page",
                         href: "/posts/langs/".concat(t, "/pagination/1"),
@@ -337,7 +337,7 @@
                     }),
                     (0, s.jsx)("li", {
                       className: "nav-item",
-                      children: (0, s.jsx)(c(), {
+                      children: (0, s.jsx)(r(), {
                         className: "nav-link",
                         "aria-current": "page",
                         href: "/posts/langs/".concat(t, "/tags"),
@@ -361,7 +361,7 @@
                             (0, s.jsx)(
                               "li",
                               {
-                                children: (0, s.jsx)(c(), {
+                                children: (0, s.jsx)(r(), {
                                   className: "dropdown-item",
                                   href: "/posts/langs/".concat(e),
                                   children: n(e),
@@ -430,7 +430,7 @@
       "use strict";
       a.d(t, {
         t: function () {
-          return r;
+          return c;
         },
       });
       var s = a(5893),
@@ -440,8 +440,8 @@
         let { src: t } = e;
         return t;
       };
-      function r(e) {
-        let { alt: t, src: a, width: n, height: r, className: c, ...o } = e;
+      function c(e) {
+        let { alt: t, src: a, width: n, height: c, className: r, ...o } = e;
         return (0, s.jsx)(i(), {
           src: a,
           loader: l,
@@ -450,8 +450,8 @@
           sizes: "responsive",
           unoptimized: !0,
           width: n,
-          height: r,
-          className: c,
+          height: c,
+          className: r,
           ...o,
         });
       }
@@ -554,17 +554,17 @@
             };
           }
         }, [a, t, l]);
-        let [r, c] = (0, i.useState)(0),
+        let [c, r] = (0, i.useState)(0),
           o = (0, i.useCallback)(() => {
             var e;
-            c(
+            r(
               null == a
                 ? void 0
                 : null === (e = a.parentElement) || void 0 === e
                   ? void 0
                   : e.scrollHeight,
             );
-          }, [a, c]);
+          }, [a, r]);
         return (
           (0, i.useEffect)(() => {
             if (a) {
@@ -582,15 +582,15 @@
             title: e.title,
             src: e.src,
             width: "100%",
-            height: "".concat(r, "px"),
+            height: "".concat(c, "px"),
             ref: t,
             onLoad: l,
           })
         );
       }
-      var r = a(3045),
-        c = a(5152),
-        o = a.n(c),
+      var c = a(3045),
+        r = a(5152),
+        o = a.n(r),
         d = a(3944);
       function m(e) {
         return (0, s.jsx)(d.qw, {
@@ -645,7 +645,7 @@
                       (0, s.jsx)("p", {
                         children: i("Author", { author: a.siteAuthor }),
                       }),
-                      (0, s.jsx)(r.E, { dateString: t.date }),
+                      (0, s.jsx)(c.E, { dateString: t.date }),
                       (0, s.jsxs)("section", {
                         className: "tw-mt-3 tw-text-center",
                         children: [
