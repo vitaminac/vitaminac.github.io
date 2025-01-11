@@ -224,7 +224,7 @@
                   className: "tw-text-stone-700",
                   target: "_blank",
                   href: "https://stackexchange.com/users/".concat(
-                    e.stackoverflow,
+                    e.stackexchange,
                   ),
                   children: (0, s.jsxs)("span", {
                     className: "fa-stack fa-lg",
