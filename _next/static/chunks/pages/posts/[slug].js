@@ -35,11 +35,11 @@
         });
       }
     },
-    2967: function (e, t, a) {
+    6050: function (e, t, a) {
       "use strict";
       a.d(t, {
         X: function () {
-          return w;
+          return v;
         },
       });
       var s = a(5893),
@@ -74,8 +74,16 @@
       }
       a(7294);
       var c = a(1664),
-        r = a.n(c);
-      function o(e) {
+        r = a.n(c),
+        o = a(261),
+        d = {
+          src: "/_next/static/media/redbook.d1759325.svg",
+          height: 256,
+          width: 256,
+          blurWidth: 0,
+          blurHeight: 0,
+        };
+      function m(e) {
         return (0, s.jsx)("div", {
           className: "row justify-content-center",
           children: (0, s.jsxs)("ul", {
@@ -95,28 +103,6 @@
                       }),
                       (0, s.jsx)("i", {
                         className: "fab fa-linkedin-in fa-stack-1x fa-inverse",
-                      }),
-                    ],
-                  }),
-                }),
-              }),
-              (0, s.jsx)("li", {
-                className: "list-inline-item",
-                children: (0, s.jsx)(r(), {
-                  className: "tw-text-stone-700",
-                  target: "_blank",
-                  href: "mailto:".concat(
-                    e.email,
-                    "?subject=From my blog&body=Hi,I found this website very useful",
-                  ),
-                  children: (0, s.jsxs)("span", {
-                    className: "fa-stack fa-lg",
-                    children: [
-                      (0, s.jsx)("i", {
-                        className: "fa fa-circle fa-stack-2x",
-                      }),
-                      (0, s.jsx)("i", {
-                        className: "fas fa-envelope fa-stack-1x fa-inverse",
                       }),
                     ],
                   }),
@@ -185,6 +171,24 @@
                 children: (0, s.jsx)(r(), {
                   className: "tw-text-stone-700",
                   target: "_blank",
+                  href: "https://www.xiaohongshu.com/user/profile/".concat(
+                    e.redbook,
+                  ),
+                  children: (0, s.jsx)("span", {
+                    className: "fa-stack fa-lg",
+                    children: (0, s.jsx)(o.t, {
+                      src: d,
+                      alt: "小红书",
+                      className: "tw-max-h-full tw-max-w-full",
+                    }),
+                  }),
+                }),
+              }),
+              (0, s.jsx)("li", {
+                className: "list-inline-item",
+                children: (0, s.jsx)(r(), {
+                  className: "tw-text-stone-700",
+                  target: "_blank",
                   href: "https://www.kaggle.com/".concat(e.kaggle),
                   children: (0, s.jsxs)("span", {
                     className: "fa-stack fa-lg",
@@ -240,28 +244,49 @@
                   }),
                 }),
               }),
+              (0, s.jsx)("li", {
+                className: "list-inline-item",
+                children: (0, s.jsx)(r(), {
+                  className: "tw-text-stone-700",
+                  target: "_blank",
+                  href: "mailto:".concat(
+                    e.email,
+                    "?subject=From my blog&body=Hi,I found this website very useful",
+                  ),
+                  children: (0, s.jsxs)("span", {
+                    className: "fa-stack fa-lg",
+                    children: [
+                      (0, s.jsx)("i", {
+                        className: "fa fa-circle fa-stack-2x",
+                      }),
+                      (0, s.jsx)("i", {
+                        className: "fas fa-envelope fa-stack-1x fa-inverse",
+                      }),
+                    ],
+                  }),
+                }),
+              }),
             ],
           }),
         });
       }
-      var d = a(261),
-        m = {
-          src: "/_next/static/media/QR.b48259ea.png",
-          height: 624,
-          width: 1710,
-          blurDataURL:
-            "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAADCAIAAAAhqtkfAAAAVklEQVR42gFLALT/AKrStMHRxZXRpW3NilHIekDGcw/CYyjCZwC/z8LTwcan0LKu37rI48+228C838WZ16oApdSxvdPCi86doNmvx+LNu9vDx+LOn9muCIkyTVum2sgAAAAASUVORK5CYII=",
-          blurWidth: 8,
-          blurHeight: 3,
-        };
-      function x(e) {
+      var x = {
+        src: "/_next/static/media/QR.b48259ea.png",
+        height: 624,
+        width: 1710,
+        blurDataURL:
+          "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAADCAIAAAAhqtkfAAAAVklEQVR42gFLALT/AKrStMHRxZXRpW3NilHIekDGcw/CYyjCZwC/z8LTwcan0LKu37rI48+228C838WZ16oApdSxvdPCi86doNmvx+LNu9vDx+LOn9muCIkyTVum2sgAAAAASUVORK5CYII=",
+        blurWidth: 8,
+        blurHeight: 3,
+      };
+      function u(e) {
         let { siteConfig: t } = e;
         return (0, s.jsxs)("footer", {
           className: "tw-text-center tw-text-gray-400",
           children: [
-            (0, s.jsx)(o, { ...t }),
-            (0, s.jsx)(d.t, {
-              src: m,
+            (0, s.jsx)(m, { ...t }),
+            (0, s.jsx)(o.t, {
+              src: x,
               alt: "QR",
               className:
                 "tw-mx-auto tw-max-w-full tw-object-contain tw-object-center lg:tw-max-w-xl",
@@ -274,14 +299,14 @@
           ],
         });
       }
-      var u = a(3967),
-        f = a.n(u),
-        h = a(1798),
-        g = a(6985),
-        j = a.n(g);
-      function p(e) {
+      var h = a(3967),
+        f = a.n(h),
+        g = a(1798),
+        j = a(6985),
+        p = a.n(j);
+      function w(e) {
         let { lang: t, siteConfig: a } = e,
-          { t: n } = (0, h.$G)("navbar");
+          { t: n } = (0, g.$G)("navbar");
         return (0, s.jsx)("nav", {
           className: f()(
             "navbar",
@@ -291,7 +316,7 @@
             "tw-bg-white/95",
             "tw-shadow",
             "tw-shadow-black/25",
-            j().navBar,
+            p().navBar,
           ),
           children: (0, s.jsxs)("div", {
             className: "container-fluid px-md-5",
@@ -380,14 +405,14 @@
           }),
         });
       }
-      function w(e) {
+      function v(e) {
         let { children: t, lang: a, siteConfig: n } = e;
         return (0, s.jsxs)(s.Fragment, {
           children: [
             (0, s.jsx)(l, {}),
-            (0, s.jsx)(p, { siteConfig: n, lang: a }),
+            (0, s.jsx)(w, { siteConfig: n, lang: a }),
             t,
-            (0, s.jsx)(x, { siteConfig: n }),
+            (0, s.jsx)(u, { siteConfig: n }),
           ],
         });
       }
@@ -446,7 +471,6 @@
           src: a,
           loader: l,
           alt: t || "image",
-          placeholder: "blur",
           sizes: "responsive",
           unoptimized: !0,
           width: n,
@@ -604,9 +628,9 @@
         });
       }
       let x = o()(() => Promise.resolve(m), { ssr: !1 });
-      var u = a(2967),
-        f = a(1734),
-        h = a(5853),
+      var u = a(6050),
+        h = a(1734),
+        f = a(5853),
         g = a(3260),
         j = a.n(g),
         p = a(3967),
@@ -619,7 +643,7 @@
             lang: t.lang,
             siteConfig: a,
             children: [
-              (0, s.jsx)(h.K, {
+              (0, s.jsx)(f.K, {
                 title: t.title,
                 author: a.siteAuthor,
                 lang: t.lang,
@@ -650,7 +674,7 @@
                         className: "tw-mt-3 tw-text-center",
                         children: [
                           (0, s.jsxs)("p", { children: [i("Tags"), ":"] }),
-                          (0, s.jsx)(f.w, { lang: t.lang, tags: t.tags }),
+                          (0, s.jsx)(h.w, { lang: t.lang, tags: t.tags }),
                         ],
                       }),
                     ],

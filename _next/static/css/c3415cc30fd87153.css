@@ -365,6 +365,9 @@ video {
 .tw-h-96 {
   height: 24rem;
 }
+.tw-max-h-full {
+  max-height: 100%;
+}
 .tw-min-h-32 {
   min-height: 8rem;
 }

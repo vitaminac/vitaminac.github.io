@@ -414,7 +414,7 @@
             var r = {};
             for (var i in e)
               if ({}.hasOwnProperty.call(e, i)) {
-                if (t.includes(i)) continue;
+                if (-1 !== t.indexOf(i)) continue;
                 r[i] = e[i];
               }
             return r;
@@ -423,8 +423,9 @@
           var s = Object.getOwnPropertySymbols(e);
           for (i = 0; i < s.length; i++)
             (r = s[i]),
-              t.includes(r) ||
-                ({}.propertyIsEnumerable.call(e, r) && (n[r] = e[r]));
+              -1 === t.indexOf(r) &&
+                {}.propertyIsEnumerable.call(e, r) &&
+                (n[r] = e[r]);
         }
         return n;
       }

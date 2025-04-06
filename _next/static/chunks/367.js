@@ -94,7 +94,7 @@
         Object.defineProperty(t, "Image", {
           enumerable: !0,
           get: function () {
-            return b;
+            return y;
           },
         });
       let n = r(8754),
@@ -171,8 +171,8 @@
           placeholder: p,
           loading: g,
           unoptimized: v,
-          fill: y,
-          onLoadRef: b,
+          fill: b,
+          onLoadRef: y,
           onLoadingCompleteRef: _,
           setBlurComplete: j,
           setShowAltText: C,
@@ -188,7 +188,7 @@
           width: s,
           height: u,
           decoding: a,
-          "data-nimg": y ? "fill" : "1",
+          "data-nimg": b ? "fill" : "1",
           className: f,
           style: c,
           sizes: o,
@@ -201,19 +201,19 @@
                   ? t(e)
                   : "object" == typeof t && (t.current = e)),
                 e &&
-                  (x && (e.src = e.src), e.complete && h(e, p, b, _, j, v, w));
+                  (x && (e.src = e.src), e.complete && h(e, p, y, _, j, v, w));
             },
-            [r, p, b, _, j, x, v, w, t],
+            [r, p, y, _, j, x, v, w, t],
           ),
           onLoad: (e) => {
-            h(e.currentTarget, p, b, _, j, v, w);
+            h(e.currentTarget, p, y, _, j, v, w);
           },
           onError: (e) => {
             C(!0), "empty" !== p && j(!0), x && x(e);
           },
         });
       });
-      function y(e) {
+      function b(e) {
         let { isAppRouter: t, imgAttributes: r } = e,
           n = {
             as: "image",
@@ -233,14 +233,16 @@
               ),
             });
       }
-      let b = (0, l.forwardRef)((e, t) => {
+      let y = (0, l.forwardRef)((e, t) => {
         let r = (0, l.useContext)(d.RouterContext),
           n = (0, l.useContext)(c.ImageConfigContext),
           o = (0, l.useMemo)(() => {
-            let e = g || n || f.imageConfigDefault,
-              t = [...e.deviceSizes, ...e.imageSizes].sort((e, t) => e - t),
-              r = e.deviceSizes.sort((e, t) => e - t);
-            return { ...e, allSizes: t, deviceSizes: r };
+            var e;
+            let t = g || n || f.imageConfigDefault,
+              r = [...t.deviceSizes, ...t.imageSizes].sort((e, t) => e - t),
+              o = t.deviceSizes.sort((e, t) => e - t),
+              i = null == (e = t.qualities) ? void 0 : e.sort((e, t) => e - t);
+            return { ...t, allSizes: r, deviceSizes: o, qualities: i };
           }, [n]),
           { onLoad: u, onLoadingComplete: s } = e,
           h = (0, l.useRef)(u);
@@ -251,12 +253,12 @@
         (0, l.useEffect)(() => {
           m.current = s;
         }, [s]);
-        let [b, _] = (0, l.useState)(!1),
+        let [y, _] = (0, l.useState)(!1),
           [j, C] = (0, l.useState)(!1),
           { props: w, meta: S } = (0, a.getImgProps)(e, {
             defaultLoader: p.default,
             imgConf: o,
-            blurComplete: b,
+            blurComplete: y,
             showAltText: j,
           });
         return (0, i.jsxs)(i.Fragment, {
@@ -274,7 +276,7 @@
               ref: t,
             }),
             S.priority
-              ? (0, i.jsx)(y, { isAppRouter: !r, imgAttributes: w })
+              ? (0, i.jsx)(b, { isAppRouter: !r, imgAttributes: w })
               : null,
           ],
         });
@@ -310,7 +312,7 @@
         h = r(9470),
         m = r(8199),
         v = new Set();
-      function y(e, t, r, n, o, i) {
+      function b(e, t, r, n, o, i) {
         if (i || (0, u.isLocalURL)(t)) {
           if (!n.bypassPrefetchedCheck) {
             let o =
@@ -331,7 +333,7 @@
           );
         }
       }
-      function b(e) {
+      function y(e) {
         return "string" == typeof e ? e : (0, s.formatUrl)(e);
       }
       let _ = i.default.forwardRef(function (e, t) {
@@ -348,12 +350,12 @@
           locale: P,
           onClick: O,
           onMouseEnter: E,
-          onTouchStart: R,
-          legacyBehavior: M = !1,
+          onTouchStart: M,
+          legacyBehavior: R = !1,
           ...I
         } = e;
         (r = _),
-          M &&
+          R &&
             ("string" == typeof r || "number" == typeof r) &&
             (r = (0, o.jsx)("a", { children: r }));
         let z = i.default.useContext(c.RouterContext),
@@ -364,37 +366,37 @@
           N = null === j ? m.PrefetchKind.AUTO : m.PrefetchKind.FULL,
           { href: D, as: F } = i.default.useMemo(() => {
             if (!z) {
-              let e = b(s);
-              return { href: e, as: v ? b(v) : e };
+              let e = y(s);
+              return { href: e, as: v ? y(v) : e };
             }
             let [e, t] = (0, l.resolveHref)(z, s, !0);
             return { href: e, as: v ? (0, l.resolveHref)(z, v) : t || e };
           }, [z, s, v]),
           U = i.default.useRef(D),
           B = i.default.useRef(F);
-        M && (n = i.default.Children.only(r));
-        let G = M ? n && "object" == typeof n && n.ref : t,
-          [H, K, V] = (0, p.useIntersection)({ rootMargin: "200px" }),
-          W = i.default.useCallback(
+        R && (n = i.default.Children.only(r));
+        let G = R ? n && "object" == typeof n && n.ref : t,
+          [H, K, q] = (0, p.useIntersection)({ rootMargin: "200px" }),
+          V = i.default.useCallback(
             (e) => {
               (B.current !== F || U.current !== D) &&
-                (V(), (B.current = F), (U.current = D)),
+                (q(), (B.current = F), (U.current = D)),
                 H(e),
                 G &&
                   ("function" == typeof G
                     ? G(e)
                     : "object" == typeof G && (G.current = e));
             },
-            [F, G, D, V, H],
+            [F, G, D, q, H],
           );
         i.default.useEffect(() => {
-          k && K && L && y(k, D, F, { locale: P }, { kind: N }, T);
+          k && K && L && b(k, D, F, { locale: P }, { kind: N }, T);
         }, [F, D, K, P, L, null == z ? void 0 : z.locale, k, T, N]);
-        let q = {
-          ref: W,
+        let W = {
+          ref: V,
           onClick(e) {
-            M || "function" != typeof O || O(e),
-              M &&
+            R || "function" != typeof O || O(e),
+              R &&
                 n.props &&
                 "function" == typeof n.props.onClick &&
                 n.props.onClick(e),
@@ -433,14 +435,14 @@
                 })(e, k, D, F, w, S, x, P, T);
           },
           onMouseEnter(e) {
-            M || "function" != typeof E || E(e),
-              M &&
+            R || "function" != typeof E || E(e),
+              R &&
                 n.props &&
                 "function" == typeof n.props.onMouseEnter &&
                 n.props.onMouseEnter(e),
               k &&
                 (L || !T) &&
-                y(
+                b(
                   k,
                   D,
                   F,
@@ -450,14 +452,14 @@
                 );
           },
           onTouchStart: function (e) {
-            M || "function" != typeof R || R(e),
-              M &&
+            R || "function" != typeof M || M(e),
+              R &&
                 n.props &&
                 "function" == typeof n.props.onTouchStart &&
                 n.props.onTouchStart(e),
               k &&
                 (L || !T) &&
-                y(
+                b(
                   k,
                   D,
                   F,
@@ -467,8 +469,8 @@
                 );
           },
         };
-        if ((0, a.isAbsoluteUrl)(F)) q.href = F;
-        else if (!M || C || ("a" === n.type && !("href" in n.props))) {
+        if ((0, a.isAbsoluteUrl)(F)) W.href = F;
+        else if (!R || C || ("a" === n.type && !("href" in n.props))) {
           let e = void 0 !== P ? P : null == z ? void 0 : z.locale,
             t =
               (null == z ? void 0 : z.isLocaleDomain) &&
@@ -478,15 +480,15 @@
                 null == z ? void 0 : z.locales,
                 null == z ? void 0 : z.domainLocales,
               );
-          q.href =
+          W.href =
             t ||
             (0, h.addBasePath)(
               (0, f.addLocale)(F, e, null == z ? void 0 : z.defaultLocale),
             );
         }
-        return M
-          ? i.default.cloneElement(n, q)
-          : (0, o.jsx)("a", { ...I, ...q, children: r });
+        return R
+          ? i.default.cloneElement(n, W)
+          : (0, o.jsx)("a", { ...I, ...W, children: r });
       });
       ("function" == typeof t.default ||
         ("object" == typeof t.default && null !== t.default)) &&
@@ -621,80 +623,81 @@
               : NaN;
       }
       function u(e, t) {
-        var r;
-        let u,
-          s,
+        var r, u;
+        let s,
           a,
+          f,
           {
-            src: f,
-            sizes: c,
-            unoptimized: d = !1,
-            priority: p = !1,
-            loading: g,
-            className: h,
-            quality: m,
-            width: v,
+            src: c,
+            sizes: d,
+            unoptimized: p = !1,
+            priority: g = !1,
+            loading: h,
+            className: m,
+            quality: v,
+            width: b,
             height: y,
-            fill: b = !1,
-            style: _,
-            overrideSrc: j,
-            onLoad: C,
-            onLoadingComplete: w,
-            placeholder: S = "empty",
-            blurDataURL: x,
-            fetchPriority: P,
-            decoding: O = "async",
-            layout: E,
+            fill: _ = !1,
+            style: j,
+            overrideSrc: C,
+            onLoad: w,
+            onLoadingComplete: S,
+            placeholder: x = "empty",
+            blurDataURL: P,
+            fetchPriority: O,
+            decoding: E = "async",
+            layout: M,
             objectFit: R,
-            objectPosition: M,
-            lazyBoundary: I,
-            lazyRoot: z,
-            ...A
+            objectPosition: I,
+            lazyBoundary: z,
+            lazyRoot: A,
+            ...k
           } = e,
-          { imgConf: k, showAltText: T, blurComplete: L, defaultLoader: N } = t,
-          D = k || o.imageConfigDefault;
-        if ("allSizes" in D) u = D;
+          { imgConf: T, showAltText: L, blurComplete: N, defaultLoader: D } = t,
+          F = T || o.imageConfigDefault;
+        if ("allSizes" in F) s = F;
         else {
-          let e = [...D.deviceSizes, ...D.imageSizes].sort((e, t) => e - t),
-            t = D.deviceSizes.sort((e, t) => e - t);
-          u = { ...D, allSizes: e, deviceSizes: t };
+          let e = [...F.deviceSizes, ...F.imageSizes].sort((e, t) => e - t),
+            t = F.deviceSizes.sort((e, t) => e - t),
+            n = null == (r = F.qualities) ? void 0 : r.sort((e, t) => e - t);
+          s = { ...F, allSizes: e, deviceSizes: t, qualities: n };
         }
-        if (void 0 === N)
+        if (void 0 === D)
           throw Error(
             "images.loaderFile detected but the file is missing default export.\nRead more: https://nextjs.org/docs/messages/invalid-images-config",
           );
-        let F = A.loader || N;
-        delete A.loader, delete A.srcSet;
-        let U = "__next_img_default" in F;
-        if (U) {
-          if ("custom" === u.loader)
+        let U = k.loader || D;
+        delete k.loader, delete k.srcSet;
+        let B = "__next_img_default" in U;
+        if (B) {
+          if ("custom" === s.loader)
             throw Error(
               'Image with src "' +
-                f +
+                c +
                 '" is missing "loader" prop.\nRead more: https://nextjs.org/docs/messages/next-image-missing-loader',
             );
         } else {
-          let e = F;
-          F = (t) => {
+          let e = U;
+          U = (t) => {
             let { config: r, ...n } = t;
             return e(n);
           };
         }
-        if (E) {
-          "fill" === E && (b = !0);
+        if (M) {
+          "fill" === M && (_ = !0);
           let e = {
             intrinsic: { maxWidth: "100%", height: "auto" },
             responsive: { width: "100%", height: "auto" },
-          }[E];
-          e && (_ = { ..._, ...e });
-          let t = { responsive: "100vw", fill: "100vw" }[E];
-          t && !c && (c = t);
+          }[M];
+          e && (j = { ...j, ...e });
+          let t = { responsive: "100vw", fill: "100vw" }[M];
+          t && !d && (d = t);
         }
-        let B = "",
-          G = l(v),
-          H = l(y);
-        if ("object" == typeof (r = f) && (i(r) || void 0 !== r.src)) {
-          let e = i(f) ? f.default : f;
+        let G = "",
+          H = l(b),
+          K = l(y);
+        if ("object" == typeof (u = c) && (i(u) || void 0 !== u.src)) {
+          let e = i(c) ? c.default : c;
           if (!e.src)
             throw Error(
               "An object should only be passed to the image component src parameter if it comes from a static image import. It must include src. Received " +
@@ -706,34 +709,34 @@
                 JSON.stringify(e),
             );
           if (
-            ((s = e.blurWidth),
-            (a = e.blurHeight),
-            (x = x || e.blurDataURL),
-            (B = e.src),
-            !b)
+            ((a = e.blurWidth),
+            (f = e.blurHeight),
+            (P = P || e.blurDataURL),
+            (G = e.src),
+            !_)
           ) {
-            if (G || H) {
-              if (G && !H) {
-                let t = G / e.width;
-                H = Math.round(e.height * t);
-              } else if (!G && H) {
-                let t = H / e.height;
-                G = Math.round(e.width * t);
+            if (H || K) {
+              if (H && !K) {
+                let t = H / e.width;
+                K = Math.round(e.height * t);
+              } else if (!H && K) {
+                let t = K / e.height;
+                H = Math.round(e.width * t);
               }
-            } else (G = e.width), (H = e.height);
+            } else (H = e.width), (K = e.height);
           }
         }
-        let K = !p && ("lazy" === g || void 0 === g);
-        (!(f = "string" == typeof f ? f : B) ||
-          f.startsWith("data:") ||
-          f.startsWith("blob:")) &&
-          ((d = !0), (K = !1)),
-          u.unoptimized && (d = !0),
-          U && f.endsWith(".svg") && !u.dangerouslyAllowSVG && (d = !0),
-          p && (P = "high");
-        let V = l(m),
+        let q = !g && ("lazy" === h || void 0 === h);
+        (!(c = "string" == typeof c ? c : G) ||
+          c.startsWith("data:") ||
+          c.startsWith("blob:")) &&
+          ((p = !0), (q = !1)),
+          s.unoptimized && (p = !0),
+          B && c.endsWith(".svg") && !s.dangerouslyAllowSVG && (p = !0),
+          g && (O = "high");
+        let V = l(v),
           W = Object.assign(
-            b
+            _
               ? {
                   position: "absolute",
                   height: "100%",
@@ -743,36 +746,36 @@
                   right: 0,
                   bottom: 0,
                   objectFit: R,
-                  objectPosition: M,
+                  objectPosition: I,
                 }
               : {},
-            T ? {} : { color: "transparent" },
-            _,
+            L ? {} : { color: "transparent" },
+            j,
           ),
-          q =
-            L || "empty" === S
+          Y =
+            N || "empty" === x
               ? null
-              : "blur" === S
+              : "blur" === x
                 ? 'url("data:image/svg+xml;charset=utf-8,' +
                   (0, n.getImageBlurSvg)({
-                    widthInt: G,
-                    heightInt: H,
-                    blurWidth: s,
-                    blurHeight: a,
-                    blurDataURL: x || "",
+                    widthInt: H,
+                    heightInt: K,
+                    blurWidth: a,
+                    blurHeight: f,
+                    blurDataURL: P || "",
                     objectFit: W.objectFit,
                   }) +
                   '")'
-                : 'url("' + S + '")',
-          Y = q
+                : 'url("' + x + '")',
+          J = Y
             ? {
                 backgroundSize: W.objectFit || "cover",
                 backgroundPosition: W.objectPosition || "50% 50%",
                 backgroundRepeat: "no-repeat",
-                backgroundImage: q,
+                backgroundImage: Y,
               }
             : {},
-          J = (function (e) {
+          $ = (function (e) {
             let {
               config: t,
               src: r,
@@ -826,29 +829,29 @@
               src: u({ config: t, src: r, quality: i, width: s[f] }),
             };
           })({
-            config: u,
-            src: f,
-            unoptimized: d,
-            width: G,
+            config: s,
+            src: c,
+            unoptimized: p,
+            width: H,
             quality: V,
-            sizes: c,
-            loader: F,
+            sizes: d,
+            loader: U,
           });
         return {
           props: {
-            ...A,
-            loading: K ? "lazy" : g,
-            fetchPriority: P,
-            width: G,
-            height: H,
-            decoding: O,
-            className: h,
-            style: { ...W, ...Y },
-            sizes: J.sizes,
-            srcSet: J.srcSet,
-            src: j || J.src,
+            ...k,
+            loading: q ? "lazy" : h,
+            fetchPriority: O,
+            width: H,
+            height: K,
+            decoding: E,
+            className: m,
+            style: { ...W, ...J },
+            sizes: $.sizes,
+            srcSet: $.srcSet,
+            src: C || $.src,
           },
-          meta: { unoptimized: d, priority: p, placeholder: S, fill: b },
+          meta: { unoptimized: p, priority: g, placeholder: x, fill: _ },
         };
       }
     },
@@ -928,16 +931,17 @@
     3872: function (e, t) {
       "use strict";
       function r(e) {
-        let { config: t, src: r, width: n, quality: o } = e;
-        return (
-          t.path +
-          "?url=" +
-          encodeURIComponent(r) +
-          "&w=" +
-          n +
-          "&q=" +
-          (o || 75)
-        );
+        var t;
+        let { config: r, src: n, width: o, quality: i } = e,
+          l =
+            i ||
+            (null == (t = r.qualities)
+              ? void 0
+              : t.reduce((e, t) =>
+                  Math.abs(t - 75) < Math.abs(e - 75) ? t : e,
+                )) ||
+            75;
+        return r.path + "?url=" + encodeURIComponent(n) + "&w=" + o + "&q=" + l;
       }
       Object.defineProperty(t, "__esModule", { value: !0 }),
         Object.defineProperty(t, "default", {

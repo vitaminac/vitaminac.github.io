@@ -443,7 +443,7 @@
         H = _._(r(7022)),
         W = _._(r(1152)),
         q = _._(r(3436)),
-        G = "14.2.16",
+        G = "14.2.26",
         z = (0, v.default)(),
         V = (e) => [].slice.call(e),
         X = !1;
@@ -3012,6 +3012,7 @@
           contentDispositionType: "inline",
           localPatterns: void 0,
           remotePatterns: [],
+          qualities: void 0,
           unoptimized: !1,
         };
     },
