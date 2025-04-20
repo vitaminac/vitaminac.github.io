@@ -1,14 +1,16 @@
 {
   "pageProps": {
     "postData": {
-      "title": "Code Smell",
-      "date": "2019-04-28 10:01:41",
       "slug": "Code-Smell",
       "tags": [
         "Software Quality Metrics",
         "Code Smell",
         "Agile Software Development"
       ],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "Code Smell",
+      "date": "2019-04-28 10:01:41",
       "isLegacy": true,
       "lang": "es",
       "tocHtml": "",

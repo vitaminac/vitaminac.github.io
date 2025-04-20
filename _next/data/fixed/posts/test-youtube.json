@@ -1,10 +1,12 @@
 {
   "pageProps": {
     "postData": {
-      "title": "Test Youtube",
-      "date": "2020-01-02",
       "slug": "test-youtube",
       "tags": [],
+      "isDraft": false,
+      "isArchived": true,
+      "title": "Test Youtube",
+      "date": "2020-01-02",
       "isLegacy": false,
       "lang": "en",
       "tocHtml": "",

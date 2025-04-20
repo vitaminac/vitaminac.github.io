@@ -1,10 +1,12 @@
 {
   "pageProps": {
     "postData": {
-      "title": "Gestion de Configuración",
-      "date": "2019-05-12 12:19:53",
       "slug": "Gestion-Configuracion",
       "tags": ["Gestión de Configuración", "Software Evolution"],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "Gestion de Configuración",
+      "date": "2019-05-12 12:19:53",
       "isLegacy": true,
       "lang": "es",
       "tocHtml": "<ol>\n<li><a href=\"/Gestion-Configuracion/index.html#Gesti%C3%B3n-de-la-configuraci%C3%B3n-del-software\" target=\"Gestion-Configuracion\">Gestión de la configuración del software</a></li>\n<li><a href=\"/Gestion-Configuracion/index.html#Est%C3%A1ndar-ISO-12207\" target=\"Gestion-Configuracion\">Estándar ISO 12207</a></li>\n<li><a href=\"/Gestion-Configuracion/index.html#Or%C3%ADgenes-del-cambio\" target=\"Gestion-Configuracion\">Orígenes del cambio</a></li>\n<li><a href=\"/Gestion-Configuracion/index.html#Configuraci%C3%B3n-software\" target=\"Gestion-Configuracion\">Configuración software</a></li>\n<li><a href=\"/Gestion-Configuracion/index.html#Elemento-de-configuraci%C3%B3n\" target=\"Gestion-Configuracion\">Elemento de configuración</a></li>\n<li><a href=\"/Gestion-Configuracion/index.html#L%C3%ADnea-base\" target=\"Gestion-Configuracion\">Línea base</a></li>\n<li><a href=\"/Gestion-Configuracion/index.html#Actividades-de-la-GCS\" target=\"Gestion-Configuracion\">Actividades de la GCS</a></li>\n<li><a href=\"/Gestion-Configuracion/index.html#Documento-del-Plan-de-GCS\" target=\"Gestion-Configuracion\">Documento del Plan de GCS</a></li>\n<li><a href=\"/Gestion-Configuracion/index.html#Control-de-cambios\" target=\"Gestion-Configuracion\">Control de cambios</a></li>\n<li><a href=\"/Gestion-Configuracion/index.html#Control-de-versiones\" target=\"Gestion-Configuracion\">Control de versiones</a>\n<ol>\n<li><a href=\"/Gestion-Configuracion/index.html#Repositorio\" target=\"Gestion-Configuracion\">Repositorio</a></li>\n<li><a href=\"/Gestion-Configuracion/index.html#Evoluciones-posibles-y-sus-definiciones\" target=\"Gestion-Configuracion\">Evoluciones posibles y sus definiciones</a></li>\n<li><a href=\"/Gestion-Configuracion/index.html#Gesti%C3%B3n-de-entregas\" target=\"Gestion-Configuracion\">Gestión de entregas</a></li>\n</ol>\n</li>\n</ol>",

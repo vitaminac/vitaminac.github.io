@@ -1,8 +1,6 @@
 {
   "pageProps": {
     "postData": {
-      "title": "Java Stream",
-      "date": "2020-07-25 22:19:18",
       "slug": "Java-Stream",
       "tags": [
         "Java",
@@ -11,6 +9,10 @@
         "Java Stream",
         "Stream"
       ],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "Java Stream",
+      "date": "2020-07-25 22:19:18",
       "isLegacy": true,
       "lang": "en",
       "tocHtml": "<ol>\n<li><a href=\"/Java-Stream/index.html#Streams\" target=\"Java-Stream\">Streams</a></li>\n</ol>",

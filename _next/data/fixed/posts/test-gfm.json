@@ -1,10 +1,12 @@
 {
   "pageProps": {
     "postData": {
-      "title": "Test GFM",
-      "date": "2020-01-02",
       "slug": "test-gfm",
       "tags": [],
+      "isDraft": false,
+      "isArchived": true,
+      "title": "Test GFM",
+      "date": "2020-01-02",
       "isLegacy": false,
       "lang": "en",
       "tocHtml": "",

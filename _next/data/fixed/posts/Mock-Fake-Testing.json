@@ -1,10 +1,12 @@
 {
   "pageProps": {
     "postData": {
-      "title": "Mock Fake Testing",
-      "date": "2019-04-28 18:51:51",
       "slug": "Mock-Fake-Testing",
       "tags": ["Testing", "Mock", "Fake"],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "Mock Fake Testing",
+      "date": "2019-04-28 18:51:51",
       "isLegacy": true,
       "lang": "es",
       "tocHtml": "",

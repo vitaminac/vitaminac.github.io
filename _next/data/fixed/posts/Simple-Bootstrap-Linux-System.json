@@ -1,10 +1,12 @@
 {
   "pageProps": {
     "postData": {
-      "title": "Build Simple Bootstrap Linux System Image",
-      "date": "2020-11-08 19:15:57",
       "slug": "Simple-Bootstrap-Linux-System",
       "tags": ["Linux", "Embedded System"],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "Build Simple Bootstrap Linux System Image",
+      "date": "2020-11-08 19:15:57",
       "isLegacy": true,
       "lang": "en",
       "tocHtml": "<ol>\n<li><a href=\"/Simple-Bootstrap-Linux-System/index.html#Kernel-Image-for-Emulation\" target=\"Simple-Bootstrap-Linux-System\">Kernel Image for Emulation</a></li>\n<li><a href=\"/Simple-Bootstrap-Linux-System/index.html#Initramfs\" target=\"Simple-Bootstrap-Linux-System\">Initramfs</a>\n<ol>\n<li><a href=\"/Simple-Bootstrap-Linux-System/index.html#Shell-Environment\" target=\"Simple-Bootstrap-Linux-System\">Shell Environment</a></li>\n<li><a href=\"/Simple-Bootstrap-Linux-System/index.html#Configure-Keyboard-Layout-for-Spanish\" target=\"Simple-Bootstrap-Linux-System\">Configure Keyboard Layout for Spanish</a></li>\n<li><a href=\"/Simple-Bootstrap-Linux-System/index.html#Support-USB-Devices\" target=\"Simple-Bootstrap-Linux-System\">Support USB Devices</a></li>\n<li><a href=\"/Simple-Bootstrap-Linux-System/index.html#Init-Script\" target=\"Simple-Bootstrap-Linux-System\">Init Script</a></li>\n</ol>\n</li>\n<li><a href=\"/Simple-Bootstrap-Linux-System/index.html#Test-the-Constructed-Image\" target=\"Simple-Bootstrap-Linux-System\">Test the Constructed Image</a>\n<ol>\n<li><a href=\"/Simple-Bootstrap-Linux-System/index.html#Run-with-QEMU-Emulator\" target=\"Simple-Bootstrap-Linux-System\">Run with QEMU Emulator</a></li>\n<li><a href=\"/Simple-Bootstrap-Linux-System/index.html#Booting-a-real-machine\" target=\"Simple-Bootstrap-Linux-System\">Booting a real machine</a></li>\n</ol>\n</li>\n<li><a href=\"/Simple-Bootstrap-Linux-System/index.html#Reference\" target=\"Simple-Bootstrap-Linux-System\">Reference</a></li>\n</ol>",

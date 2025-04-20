@@ -1,10 +1,12 @@
 {
   "pageProps": {
     "postData": {
-      "title": "Github Trello",
-      "date": "2019-04-28 22:19:41",
       "slug": "Github-Trello",
       "tags": ["Version Control"],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "Github Trello",
+      "date": "2019-04-28 22:19:41",
       "isLegacy": true,
       "lang": "es",
       "tocHtml": "",

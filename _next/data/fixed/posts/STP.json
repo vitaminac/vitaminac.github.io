@@ -1,10 +1,12 @@
 {
   "pageProps": {
     "postData": {
-      "title": "STP",
-      "date": "2021-05-15 19:05:00",
       "slug": "STP",
       "tags": ["Spanning Tree Protocol", "STP"],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "STP",
+      "date": "2021-05-15 19:05:00",
       "isLegacy": true,
       "lang": "en",
       "tocHtml": "<ol>\n<li><a href=\"/STP/index.html#Motivation\" target=\"STP\">Motivation</a></li>\n<li><a href=\"/STP/index.html#Introduction\" target=\"STP\">Introduction</a></li>\n<li><a href=\"/STP/index.html#Implementation\" target=\"STP\">Implementation</a></li>\n<li><a href=\"/STP/index.html#Reference\" target=\"STP\">Reference</a></li>\n</ol>",

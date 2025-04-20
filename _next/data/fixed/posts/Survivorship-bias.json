@@ -1,10 +1,12 @@
 {
   "pageProps": {
     "postData": {
-      "title": "Survivorship bias",
-      "date": "2019-03-25 22:57:23",
       "slug": "Survivorship-bias",
       "tags": ["Operation Research", "Survivorship bias", "Selection bias"],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "Survivorship bias",
+      "date": "2019-03-25 22:57:23",
       "isLegacy": true,
       "lang": "en",
       "tocHtml": "<ol>\n<li><a href=\"/Survivorship-bias/index.html#Introduction\" target=\"Survivorship-bias\">Introduction</a></li>\n<li><a href=\"/Survivorship-bias/index.html#History\" target=\"Survivorship-bias\">History</a></li>\n<li><a href=\"/Survivorship-bias/index.html#Conclusion\" target=\"Survivorship-bias\">Conclusion</a></li>\n</ol>",

@@ -1,10 +1,12 @@
 {
   "pageProps": {
     "postData": {
-      "title": "VPPL - Vivienda de Protección Pública de Precio Limitado",
-      "date": "2024-09-01 20:17:51",
       "slug": "vppl",
       "tags": ["VPPL", "IPREM", "Inmueble"],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "VPPL - Vivienda de Protección Pública de Precio Limitado",
+      "date": "2024-09-01 20:17:51",
       "isLegacy": true,
       "lang": "es",
       "tocHtml": "<ol>\n<li><a href=\"/vppl/index.html#Referencia\" target=\"vppl\">Referencia</a></li>\n</ol>",

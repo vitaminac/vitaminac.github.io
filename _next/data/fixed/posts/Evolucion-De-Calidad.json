@@ -1,10 +1,12 @@
 {
   "pageProps": {
     "postData": {
-      "title": "Evolución de la calidad",
-      "date": "2019-04-28 09:24:43",
       "slug": "Evolucion-De-Calidad",
       "tags": ["Software Evolution"],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "Evolución de la calidad",
+      "date": "2019-04-28 09:24:43",
       "isLegacy": true,
       "lang": "es",
       "tocHtml": "<ol>\n<li><a href=\"/Evolucion-De-Calidad/index.html#La-calidad-de-un-software\" target=\"Evolucion-De-Calidad\">La calidad de un software</a></li>\n<li><a href=\"/Evolucion-De-Calidad/index.html#Qu%C3%A9-refactorizamos\" target=\"Evolucion-De-Calidad\">Qué refactorizamos</a></li>\n</ol>",

@@ -1,10 +1,12 @@
 {
   "pageProps": {
     "postData": {
-      "title": "Google Kickstart 2019 Round G Book Reading",
-      "date": "2019-11-02 19:24:59",
       "slug": "Google-Kickstart-2019-Round-G-Book-Reading",
       "tags": ["algorithms"],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "Google Kickstart 2019 Round G Book Reading",
+      "date": "2019-11-02 19:24:59",
       "isLegacy": true,
       "lang": "en",
       "tocHtml": "<ol>\n<li><a href=\"/Google-Kickstart-2019-Round-G-Book-Reading/index.html#Google-Kickstart-2019-Round-G-Book-Reading\" target=\"Google-Kickstart-2019-Round-G-Book-Reading\">Google Kickstart 2019 Round G Book Reading</a></li>\n</ol>",

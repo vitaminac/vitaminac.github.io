@@ -317,14 +317,16 @@
         "props": {
           "pageProps": {
             "postData": {
-              "title": "Test Code",
-              "date": "2020-01-02",
               "slug": "test-code",
               "tags": [],
+              "isDraft": false,
+              "isArchived": true,
+              "title": "Test Code",
+              "date": "2020-01-02",
               "isLegacy": false,
               "lang": "en",
               "tocHtml": "",
-              "articleHtml": "\u003cpre\u003e\u003ccode class=\"hljs language-c\"\u003e    \u003cspan class=\"hljs-meta\"\u003e#\u003cspan class=\"hljs-keyword\"\u003einclude\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e\u0026lt;stdio.h\u0026gt;\u003c/span\u003e\u003c/span\u003e\r\n    \r\n    \u003cspan class=\"hljs-type\"\u003eint\u003c/span\u003e \u003cspan class=\"hljs-title function_\"\u003emain\u003c/span\u003e\u003cspan class=\"hljs-params\"\u003e(\u003cspan class=\"hljs-type\"\u003eint\u003c/span\u003e argc, \u003cspan class=\"hljs-type\"\u003echar\u003c/span\u003e *argv[])\u003c/span\u003e\r\n    {\r\n        \u003cspan class=\"hljs-built_in\"\u003eprintf\u003c/span\u003e(\u003cspan class=\"hljs-string\"\u003e\u0026quot;argc = %d\\n\u0026quot;\u003c/span\u003e, argc);\r\n        \u003cspan class=\"hljs-keyword\"\u003efor\u003c/span\u003e(\u003cspan class=\"hljs-type\"\u003eint\u003c/span\u003e ndx = \u003cspan class=\"hljs-number\"\u003e0\u003c/span\u003e; ndx != argc; ++ndx)\r\n            \u003cspan class=\"hljs-built_in\"\u003eprintf\u003c/span\u003e(\u003cspan class=\"hljs-string\"\u003e\u0026quot;argv[%d] --\u0026gt; %s\\n\u0026quot;\u003c/span\u003e, ndx, argv[ndx]);\r\n        \u003cspan class=\"hljs-built_in\"\u003eprintf\u003c/span\u003e(\u003cspan class=\"hljs-string\"\u003e\u0026quot;argv[argc] = %p\\n\u0026quot;\u003c/span\u003e, (\u003cspan class=\"hljs-type\"\u003evoid\u003c/span\u003e*)argv[argc]);\r\n    }\n\u003c/code\u003e\u003c/pre\u003e"
+              "articleHtml": "\u003cpre\u003e\u003ccode class=\"hljs language-c\"\u003e    \u003cspan class=\"hljs-meta\"\u003e#\u003cspan class=\"hljs-keyword\"\u003einclude\u003c/span\u003e \u003cspan class=\"hljs-string\"\u003e\u0026lt;stdio.h\u0026gt;\u003c/span\u003e\u003c/span\u003e\n    \n    \u003cspan class=\"hljs-type\"\u003eint\u003c/span\u003e \u003cspan class=\"hljs-title function_\"\u003emain\u003c/span\u003e\u003cspan class=\"hljs-params\"\u003e(\u003cspan class=\"hljs-type\"\u003eint\u003c/span\u003e argc, \u003cspan class=\"hljs-type\"\u003echar\u003c/span\u003e *argv[])\u003c/span\u003e\n    {\n        \u003cspan class=\"hljs-built_in\"\u003eprintf\u003c/span\u003e(\u003cspan class=\"hljs-string\"\u003e\u0026quot;argc = %d\\n\u0026quot;\u003c/span\u003e, argc);\n        \u003cspan class=\"hljs-keyword\"\u003efor\u003c/span\u003e(\u003cspan class=\"hljs-type\"\u003eint\u003c/span\u003e ndx = \u003cspan class=\"hljs-number\"\u003e0\u003c/span\u003e; ndx != argc; ++ndx)\n            \u003cspan class=\"hljs-built_in\"\u003eprintf\u003c/span\u003e(\u003cspan class=\"hljs-string\"\u003e\u0026quot;argv[%d] --\u0026gt; %s\\n\u0026quot;\u003c/span\u003e, ndx, argv[ndx]);\n        \u003cspan class=\"hljs-built_in\"\u003eprintf\u003c/span\u003e(\u003cspan class=\"hljs-string\"\u003e\u0026quot;argv[argc] = %p\\n\u0026quot;\u003c/span\u003e, (\u003cspan class=\"hljs-type\"\u003evoid\u003c/span\u003e*)argv[argc]);\n    }\n\u003c/code\u003e\u003c/pre\u003e"
             },
             "lang": "en",
             "_nextI18Next": {

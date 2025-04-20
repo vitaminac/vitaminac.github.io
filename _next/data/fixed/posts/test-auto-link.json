@@ -1,10 +1,12 @@
 {
   "pageProps": {
     "postData": {
-      "title": "Test AutoLink",
-      "date": "2020-01-01",
       "slug": "test-auto-link",
       "tags": [],
+      "isDraft": false,
+      "isArchived": true,
+      "title": "Test AutoLink",
+      "date": "2020-01-01",
       "isLegacy": false,
       "lang": "en",
       "tocHtml": "<ol>\n<li><a href=\"#Heading-1\">Heading 1</a>\n<ol>\n<li><a href=\"#Heading-2\">Heading 2</a>\n<ol>\n<li><a href=\"#Heading-3\">Heading 3</a></li>\n</ol>\n</li>\n</ol>\n</li>\n</ol>",

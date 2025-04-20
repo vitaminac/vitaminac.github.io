@@ -1,10 +1,12 @@
 {
   "pageProps": {
     "postData": {
-      "title": "Hacer Una Libreria C",
-      "date": "2019-11-05 00:14:26",
       "slug": "Hacer-Una-Libreria-C",
       "tags": ["Systema Operativo"],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "Hacer Una Libreria C",
+      "date": "2019-11-05 00:14:26",
       "isLegacy": true,
       "lang": "es",
       "tocHtml": "<ol>\n<li><a href=\"/Hacer-Una-Libreria-C/index.html#Interfaz-de-Usuario\" target=\"Hacer-Una-Libreria-C\">Interfaz de Usuario</a></li>\n<li><a href=\"/Hacer-Una-Libreria-C/index.html#Descripci%C3%B3n-de-c%C3%B3digo\" target=\"Hacer-Una-Libreria-C\">Descripción de código</a>\n<ol>\n<li><a href=\"/Hacer-Una-Libreria-C/index.html#Head\" target=\"Hacer-Una-Libreria-C\">Head</a></li>\n<li><a href=\"/Hacer-Una-Libreria-C/index.html#Tail\" target=\"Hacer-Una-Libreria-C\">Tail</a></li>\n<li><a href=\"/Hacer-Una-Libreria-C/index.html#Longlines\" target=\"Hacer-Una-Libreria-C\">Longlines</a></li>\n</ol>\n</li>\n</ol>",

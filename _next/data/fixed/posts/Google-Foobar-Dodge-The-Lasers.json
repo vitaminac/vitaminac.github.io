@@ -1,10 +1,12 @@
 {
   "pageProps": {
     "postData": {
-      "title": "Google Foobar Dodge The Lasers",
-      "date": "2019-12-17 22:50:54",
       "slug": "Google-Foobar-Dodge-The-Lasers",
       "tags": ["algorithms"],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "Google Foobar Dodge The Lasers",
+      "date": "2019-12-17 22:50:54",
       "isLegacy": true,
       "lang": "en",
       "tocHtml": "<ol>\n<li><a href=\"/Google-Foobar-Dodge-The-Lasers/index.html#Beatty-sequence\" target=\"Google-Foobar-Dodge-The-Lasers\">Beatty sequence</a>\n<ol>\n<li><a href=\"/Google-Foobar-Dodge-The-Lasers/index.html#Reference\" target=\"Google-Foobar-Dodge-The-Lasers\">Reference</a></li>\n</ol>\n</li>\n</ol>",

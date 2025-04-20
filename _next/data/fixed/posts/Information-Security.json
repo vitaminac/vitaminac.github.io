@@ -1,8 +1,6 @@
 {
   "pageProps": {
     "postData": {
-      "title": "Information Security",
-      "date": "2021-03-28 11:11:17",
       "slug": "Information-Security",
       "tags": [
         "InfoSec",
@@ -17,6 +15,10 @@
         "Authorization",
         "Accounting"
       ],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "Information Security",
+      "date": "2021-03-28 11:11:17",
       "isLegacy": true,
       "lang": "en",
       "tocHtml": "<ol>\n<li><a href=\"/Information-Security/index.html#Information-Security\" target=\"Information-Security\">Information Security</a>\n<ol>\n<li><a href=\"/Information-Security/index.html#CIA\" target=\"Information-Security\">CIA</a>\n<ol>\n<li><a href=\"/Information-Security/index.html#Confidentiality\" target=\"Information-Security\">Confidentiality</a></li>\n<li><a href=\"/Information-Security/index.html#Integrity\" target=\"Information-Security\">Integrity</a></li>\n<li><a href=\"/Information-Security/index.html#Availability\" target=\"Information-Security\">Availability</a></li>\n<li><a href=\"/Information-Security/index.html#Non-Repudiation\" target=\"Information-Security\">Non-Repudiation</a></li>\n</ol>\n</li>\n<li><a href=\"/Information-Security/index.html#AAA\" target=\"Information-Security\">AAA</a>\n<ol>\n<li><a href=\"/Information-Security/index.html#Authentication\" target=\"Information-Security\">Authentication</a></li>\n<li><a href=\"/Information-Security/index.html#Authorization\" target=\"Information-Security\">Authorization</a></li>\n<li><a href=\"/Information-Security/index.html#Accounting\" target=\"Information-Security\">Accounting</a></li>\n</ol>\n</li>\n<li><a href=\"/Information-Security/index.html#Reference\" target=\"Information-Security\">Reference</a></li>\n</ol>\n</li>\n</ol>",

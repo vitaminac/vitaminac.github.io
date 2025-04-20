@@ -1,8 +1,6 @@
 {
   "pageProps": {
     "postData": {
-      "title": "Smoke Test",
-      "date": "2019-04-27 23:50:38",
       "slug": "Smoke-Test",
       "tags": [
         "Testing",
@@ -13,6 +11,10 @@
         "CI",
         "Smoke Test"
       ],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "Smoke Test",
+      "date": "2019-04-27 23:50:38",
       "isLegacy": true,
       "lang": "es",
       "tocHtml": "<ol>\n<li><a href=\"/Smoke-Test/index.html#Smoke-Testing\" target=\"Smoke-Test\">Smoke Testing</a></li>\n</ol>",

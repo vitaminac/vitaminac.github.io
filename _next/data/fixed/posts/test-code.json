@@ -1,14 +1,16 @@
 {
   "pageProps": {
     "postData": {
-      "title": "Test Code",
-      "date": "2020-01-02",
       "slug": "test-code",
       "tags": [],
+      "isDraft": false,
+      "isArchived": true,
+      "title": "Test Code",
+      "date": "2020-01-02",
       "isLegacy": false,
       "lang": "en",
       "tocHtml": "",
-      "articleHtml": "<pre><code class=\"hljs language-c\">    <span class=\"hljs-meta\">#<span class=\"hljs-keyword\">include</span> <span class=\"hljs-string\">&lt;stdio.h&gt;</span></span>\r\n    \r\n    <span class=\"hljs-type\">int</span> <span class=\"hljs-title function_\">main</span><span class=\"hljs-params\">(<span class=\"hljs-type\">int</span> argc, <span class=\"hljs-type\">char</span> *argv[])</span>\r\n    {\r\n        <span class=\"hljs-built_in\">printf</span>(<span class=\"hljs-string\">&quot;argc = %d\\n&quot;</span>, argc);\r\n        <span class=\"hljs-keyword\">for</span>(<span class=\"hljs-type\">int</span> ndx = <span class=\"hljs-number\">0</span>; ndx != argc; ++ndx)\r\n            <span class=\"hljs-built_in\">printf</span>(<span class=\"hljs-string\">&quot;argv[%d] --&gt; %s\\n&quot;</span>, ndx, argv[ndx]);\r\n        <span class=\"hljs-built_in\">printf</span>(<span class=\"hljs-string\">&quot;argv[argc] = %p\\n&quot;</span>, (<span class=\"hljs-type\">void</span>*)argv[argc]);\r\n    }\n</code></pre>"
+      "articleHtml": "<pre><code class=\"hljs language-c\">    <span class=\"hljs-meta\">#<span class=\"hljs-keyword\">include</span> <span class=\"hljs-string\">&lt;stdio.h&gt;</span></span>\n    \n    <span class=\"hljs-type\">int</span> <span class=\"hljs-title function_\">main</span><span class=\"hljs-params\">(<span class=\"hljs-type\">int</span> argc, <span class=\"hljs-type\">char</span> *argv[])</span>\n    {\n        <span class=\"hljs-built_in\">printf</span>(<span class=\"hljs-string\">&quot;argc = %d\\n&quot;</span>, argc);\n        <span class=\"hljs-keyword\">for</span>(<span class=\"hljs-type\">int</span> ndx = <span class=\"hljs-number\">0</span>; ndx != argc; ++ndx)\n            <span class=\"hljs-built_in\">printf</span>(<span class=\"hljs-string\">&quot;argv[%d] --&gt; %s\\n&quot;</span>, ndx, argv[ndx]);\n        <span class=\"hljs-built_in\">printf</span>(<span class=\"hljs-string\">&quot;argv[argc] = %p\\n&quot;</span>, (<span class=\"hljs-type\">void</span>*)argv[argc]);\n    }\n</code></pre>"
     },
     "lang": "en",
     "_nextI18Next": {

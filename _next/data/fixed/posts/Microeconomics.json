@@ -1,10 +1,12 @@
 {
   "pageProps": {
     "postData": {
-      "title": "Microeconomics",
-      "date": "2019-01-31 22:53:35",
       "slug": "Microeconomics",
       "tags": ["Microeconomics"],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "Microeconomics",
+      "date": "2019-01-31 22:53:35",
       "isLegacy": true,
       "lang": "en",
       "tocHtml": "<ol>\n<li><a href=\"/Microeconomics/index.html#Supply-demand-and-market-equilibrium\" target=\"Microeconomics\">Supply, demand, and market equilibrium</a>\n<ol>\n<li><a href=\"/Microeconomics/index.html#Introduction-to-economics\" target=\"Microeconomics\">Introduction to economics</a></li>\n<li><a href=\"/Microeconomics/index.html#Law-of-demand\" target=\"Microeconomics\">Law of demand</a>\n<ol>\n<li><a href=\"/Microeconomics/index.html#Demand-for-goods-and-services\" target=\"Microeconomics\">Demand for goods and services</a></li>\n<li><a href=\"/Microeconomics/index.html#Demand-schedule--and-demand-curve\" target=\"Microeconomics\">Demand schedule  and demand curve</a></li>\n<li><a href=\"/Microeconomics/index.html#The-difference-between-demand-and-quantity-demanded\" target=\"Microeconomics\">The difference between demand and quantity demanded</a></li>\n</ol>\n</li>\n</ol>\n</li>\n<li><a href=\"/Microeconomics/index.html#Reference\" target=\"Microeconomics\">Reference</a></li>\n</ol>",

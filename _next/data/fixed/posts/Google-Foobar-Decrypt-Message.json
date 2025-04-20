@@ -1,10 +1,12 @@
 {
   "pageProps": {
     "postData": {
-      "title": "Google Foobar Decrypt Final Message",
-      "date": "2019-12-26 21:43:50",
       "slug": "Google-Foobar-Decrypt-Message",
       "tags": [],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "Google Foobar Decrypt Final Message",
+      "date": "2019-12-26 21:43:50",
       "isLegacy": true,
       "lang": "en",
       "tocHtml": "",

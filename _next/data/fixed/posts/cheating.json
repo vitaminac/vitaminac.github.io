@@ -1,10 +1,12 @@
 {
   "pageProps": {
     "postData": {
-      "title": "外挂开发原理",
-      "date": "2024-07-28 10:26:32",
       "slug": "cheating",
       "tags": ["外挂", "hook"],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "外挂开发原理",
+      "date": "2024-07-28 10:26:32",
       "isLegacy": true,
       "lang": "zh",
       "tocHtml": "<ol>\n<li><a href=\"/cheating/index.html#%E6%A8%A1%E6%8B%9F%E6%8C%82%E8%84%9A%E6%9C%AC%E6%8C%82\" target=\"cheating\">模拟挂/脚本挂</a></li>\n<li><a href=\"/cheating/index.html#%E5%8A%A0%E9%80%9F%E6%8C%82\" target=\"cheating\">加速挂</a></li>\n<li><a href=\"/cheating/index.html#%E5%86%85%E5%AD%98%E6%8C%82\" target=\"cheating\">内存挂</a>\n<ol>\n<li><a href=\"/cheating/index.html#%E5%86%85%E5%AD%98%E6%8C%82%E5%BC%80%E5%8F%91%E7%A4%BA%E4%BE%8B\" target=\"cheating\">内存挂开发示例</a></li>\n</ol>\n</li>\n<li><a href=\"/cheating/index.html#%E5%B0%81%E5%8C%85%E6%8C%82\" target=\"cheating\">封包挂</a></li>\n<li><a href=\"/cheating/index.html#%E9%92%A9%E5%AD%90%E5%92%8C%E6%B3%A8%E5%85%A5\" target=\"cheating\">钩子和注入</a></li>\n<li><a href=\"/cheating/index.html#%E5%8F%8D%E5%A4%96%E6%8C%82%E6%89%8B%E6%AE%B5%E5%92%8C%E5%8F%8D%E5%8F%8D%E5%A4%96%E6%8C%82%E6%89%8B%E6%AE%B5\" target=\"cheating\">反外挂手段和反“反外挂”手段</a>\n<ol>\n<li><a href=\"/cheating/index.html#%E6%A3%80%E6%B5%8B%E5%A4%96%E6%8C%82%E7%9A%84%E6%96%B9%E6%B3%95\" target=\"cheating\">检测外挂的方法</a></li>\n<li><a href=\"/cheating/index.html#%E9%98%B2%E7%AF%A1%E6%94%B9%E6%80%9D%E8%B7%AF\" target=\"cheating\">防篡改思路</a></li>\n</ol>\n</li>\n<li><a href=\"/cheating/index.html#%E5%A4%96%E6%8C%82%E5%BC%80%E5%8F%91%E7%9A%84%E5%B8%82%E5%9C%BA%E5%8C%96\" target=\"cheating\">外挂开发的市场化</a></li>\n<li><a href=\"/cheating/index.html#%E5%8F%82%E8%80%83\" target=\"cheating\">参考</a></li>\n</ol>",

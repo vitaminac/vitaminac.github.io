@@ -1,10 +1,12 @@
 {
   "pageProps": {
     "postData": {
-      "title": "Deuda Técnica",
-      "date": "2019-04-28 20:14:22",
       "slug": "Deuda-Tecnica",
       "tags": ["Deuda Técnica"],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "Deuda Técnica",
+      "date": "2019-04-28 20:14:22",
       "isLegacy": true,
       "lang": "es",
       "tocHtml": "<ol>\n<li><a href=\"/Deuda-Tecnica/index.html#Recomendaciones-para-evitarlo\" target=\"Deuda-Tecnica\">Recomendaciones para evitarlo</a></li>\n</ol>",

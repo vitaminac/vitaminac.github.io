@@ -1,8 +1,6 @@
 {
   "pageProps": {
     "postData": {
-      "title": "Perplexity",
-      "date": "2024-10-14 23:41:47",
       "slug": "perplexity",
       "tags": [
         "Perplexity",
@@ -12,6 +10,10 @@
         "LLM",
         "transformer"
       ],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "Perplexity",
+      "date": "2024-10-14 23:41:47",
       "isLegacy": true,
       "lang": "en",
       "tocHtml": "<ol>\n<li><a href=\"/perplexity/index.html#Introduction\" target=\"perplexity\">Introduction</a></li>\n<li><a href=\"/perplexity/index.html#Defition-of-perplexity-of-discrete-probability-distribution\" target=\"perplexity\">Defition of perplexity of discrete probability distribution</a></li>\n<li><a href=\"/perplexity/index.html#Evaluating-probability-model-using-perplexity\" target=\"perplexity\">Evaluating probability model using perplexity</a></li>\n<li><a href=\"/perplexity/index.html#Calcuting-of-perplexity-of-a-tokenized-sequence\" target=\"perplexity\">Calcuting of perplexity of a tokenized sequence</a></li>\n<li><a href=\"/perplexity/index.html#Reference\" target=\"perplexity\">Reference</a></li>\n</ol>",

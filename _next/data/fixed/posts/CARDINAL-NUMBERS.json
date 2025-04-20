@@ -1,10 +1,12 @@
 {
   "pageProps": {
     "postData": {
-      "title": "西班牙语基数1-10",
-      "date": "2018-11-07 00:40:31",
       "slug": "CARDINAL-NUMBERS",
       "tags": ["西班牙语语法", "数字", "西班牙语基础"],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "西班牙语基数1-10",
+      "date": "2018-11-07 00:40:31",
       "isLegacy": true,
       "lang": "zh",
       "tocHtml": "<ol>\n<li><a href=\"/CARDINAL-NUMBERS/index.html#%E4%BB%8E%E4%B8%80%E5%88%B0%E5%8D%81\" target=\"CARDINAL-NUMBERS\">从一到十</a>\n<ol>\n<li><a href=\"/CARDINAL-NUMBERS/index.html#%E6%95%B0%E5%AD%97uno%E5%9C%A8%E9%98%B3%E6%80%A7%E5%90%8D%E8%AF%8D%E5%89%8D%E9%9D%A2%E5%8F%98%E6%88%90un\" target=\"CARDINAL-NUMBERS\">数字\"uno\"在阳性名词前面变成\"un\"</a></li>\n<li><a href=\"/CARDINAL-NUMBERS/index.html#%E6%95%B0%E5%AD%97uno%E5%9C%A8%E9%98%B4%E6%80%A7%E5%90%8D%E8%AF%8D%E5%89%8D%E9%9D%A2%E5%8F%98%E6%88%90una\" target=\"CARDINAL-NUMBERS\">数字\"uno\"在阴性名词前面变成\"una\"</a></li>\n</ol>\n</li>\n</ol>",

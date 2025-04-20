@@ -1,10 +1,12 @@
 {
   "pageProps": {
     "postData": {
-      "title": "Remote Access Via TightVNC To Windows Machine",
-      "date": "2022-08-13 11:35:55",
       "slug": "Remote-Access-Via-TightVNC-To-Windows-Machine",
       "tags": ["VNC", "TightVNC"],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "Remote Access Via TightVNC To Windows Machine",
+      "date": "2022-08-13 11:35:55",
       "isLegacy": true,
       "lang": "en",
       "tocHtml": "<ol>\n<li><a href=\"/Remote-Access-Via-TightVNC-To-Windows-Machine/index.html#Install-VNC-Server-on-Windows-Machine\" target=\"Remote-Access-Via-TightVNC-To-Windows-Machine\">Install VNC Server on Windows Machine</a></li>\n<li><a href=\"/Remote-Access-Via-TightVNC-To-Windows-Machine/index.html#TightVNC-Configuration-on-Windows-Machine\" target=\"Remote-Access-Via-TightVNC-To-Windows-Machine\">TightVNC Configuration on Windows Machine</a></li>\n<li><a href=\"/Remote-Access-Via-TightVNC-To-Windows-Machine/index.html#Configure-OpenSSH-Server\" target=\"Remote-Access-Via-TightVNC-To-Windows-Machine\">Configure OpenSSH Server</a></li>\n<li><a href=\"/Remote-Access-Via-TightVNC-To-Windows-Machine/index.html#Key-Based-Authentication\" target=\"Remote-Access-Via-TightVNC-To-Windows-Machine\">Key Based Authentication</a></li>\n<li><a href=\"/Remote-Access-Via-TightVNC-To-Windows-Machine/index.html#Port-Forward-for-SSH-Server\" target=\"Remote-Access-Via-TightVNC-To-Windows-Machine\">Port Forward for SSH Server</a></li>\n<li><a href=\"/Remote-Access-Via-TightVNC-To-Windows-Machine/index.html#Connect-from-Remote-Machine\" target=\"Remote-Access-Via-TightVNC-To-Windows-Machine\">Connect from Remote Machine</a></li>\n<li><a href=\"/Remote-Access-Via-TightVNC-To-Windows-Machine/index.html#Reference\" target=\"Remote-Access-Via-TightVNC-To-Windows-Machine\">Reference</a></li>\n</ol>",

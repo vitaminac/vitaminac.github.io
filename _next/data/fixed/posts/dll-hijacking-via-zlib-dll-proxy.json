@@ -1,10 +1,12 @@
 {
   "pageProps": {
     "postData": {
-      "title": "DLL Hijacking via zlib DLL Proxy",
-      "date": "2024-07-21 11:59:24",
       "slug": "dll-hijacking-via-zlib-dll-proxy",
       "tags": ["dll injection", "dll hijacking", "zlib", "外挂"],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "DLL Hijacking via zlib DLL Proxy",
+      "date": "2024-07-21 11:59:24",
       "isLegacy": true,
       "lang": "en",
       "tocHtml": "<ol>\n<li><a href=\"/dll-hijacking-via-zlib-dll-proxy/index.html#Reference\" target=\"dll-hijacking-via-zlib-dll-proxy\">Reference</a></li>\n</ol>",

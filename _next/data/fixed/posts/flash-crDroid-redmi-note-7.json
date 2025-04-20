@@ -1,10 +1,12 @@
 {
   "pageProps": {
     "postData": {
-      "title": "Flash crDroid ROM for Redmi Note 7",
-      "date": "2024-05-25 18:11:53",
       "slug": "flash-crDroid-redmi-note-7",
       "tags": ["lavender", "crDroid"],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "Flash crDroid ROM for Redmi Note 7",
+      "date": "2024-05-25 18:11:53",
       "isLegacy": true,
       "lang": "en",
       "tocHtml": "<ol>\n<li><a href=\"/flash-crDroid-redmi-note-7/index.html#Reference\" target=\"flash-crDroid-redmi-note-7\">Reference</a></li>\n</ol>",

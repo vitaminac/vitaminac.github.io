@@ -1,8 +1,6 @@
 {
   "pageProps": {
     "postData": {
-      "title": "Matrices in Computer Graphics",
-      "date": "2020-05-31 13:34:44",
       "slug": "Matrices-in-Computer-Graphics",
       "tags": [
         "4D Matrices",
@@ -16,6 +14,10 @@
         "Matrix",
         "Computer Graphics"
       ],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "Matrices in Computer Graphics",
+      "date": "2020-05-31 13:34:44",
       "isLegacy": true,
       "lang": "en",
       "tocHtml": "<ol>\n<li><a href=\"/Matrices-in-Computer-Graphics/index.html#Matrix-Transformations\" target=\"Matrices-in-Computer-Graphics\">Matrix Transformations</a>\n<ol>\n<li><a href=\"/Matrices-in-Computer-Graphics/index.html#Affine-Space\" target=\"Matrices-in-Computer-Graphics\">Affine Space</a></li>\n<li><a href=\"/Matrices-in-Computer-Graphics/index.html#Affine-transformation\" target=\"Matrices-in-Computer-Graphics\">Affine transformation</a></li>\n<li><a href=\"/Matrices-in-Computer-Graphics/index.html#4D-Homogeneous-Space\" target=\"Matrices-in-Computer-Graphics\">4D Homogeneous Space</a></li>\n<li><a href=\"/Matrices-in-Computer-Graphics/index.html#Scaling-Matrices\" target=\"Matrices-in-Computer-Graphics\">Scaling Matrices</a></li>\n<li><a href=\"/Matrices-in-Computer-Graphics/index.html#Rotation-Matrices\" target=\"Matrices-in-Computer-Graphics\">Rotation Matrices</a></li>\n<li><a href=\"/Matrices-in-Computer-Graphics/index.html#Refletion-Matrix\" target=\"Matrices-in-Computer-Graphics\">Refletion Matrix</a></li>\n<li><a href=\"/Matrices-in-Computer-Graphics/index.html#Shearing-Matrix\" target=\"Matrices-in-Computer-Graphics\">Shearing Matrix</a></li>\n<li><a href=\"/Matrices-in-Computer-Graphics/index.html#Translation-Matrix\" target=\"Matrices-in-Computer-Graphics\">Translation Matrix</a></li>\n<li><a href=\"/Matrices-in-Computer-Graphics/index.html#Compositions-of-Transformations\" target=\"Matrices-in-Computer-Graphics\">Compositions of Transformations</a></li>\n<li><a href=\"/Matrices-in-Computer-Graphics/index.html#Model-Matrix\" target=\"Matrices-in-Computer-Graphics\">Model Matrix</a></li>\n<li><a href=\"/Matrices-in-Computer-Graphics/index.html#View-Matrix\" target=\"Matrices-in-Computer-Graphics\">View Matrix</a></li>\n<li><a href=\"/Matrices-in-Computer-Graphics/index.html#Projection-Matrix\" target=\"Matrices-in-Computer-Graphics\">Projection Matrix</a>\n<ol>\n<li><a href=\"/Matrices-in-Computer-Graphics/index.html#Orthographic-Projection\" target=\"Matrices-in-Computer-Graphics\">Orthographic Projection</a></li>\n<li><a href=\"/Matrices-in-Computer-Graphics/index.html#Perspective-Projection\" target=\"Matrices-in-Computer-Graphics\">Perspective Projection</a></li>\n<li><a href=\"/Matrices-in-Computer-Graphics/index.html#Frustum-Culling\" target=\"Matrices-in-Computer-Graphics\">Frustum Culling</a></li>\n</ol>\n</li>\n<li><a href=\"/Matrices-in-Computer-Graphics/index.html#MVP-Matrix\" target=\"Matrices-in-Computer-Graphics\">MVP Matrix</a></li>\n<li><a href=\"/Matrices-in-Computer-Graphics/index.html#3D-Normalized-Device-Coordinates\" target=\"Matrices-in-Computer-Graphics\">3D Normalized Device Coordinates</a></li>\n<li><a href=\"/Matrices-in-Computer-Graphics/index.html#Viewport-Transformation-Matrix\" target=\"Matrices-in-Computer-Graphics\">Viewport Transformation Matrix</a></li>\n<li><a href=\"/Matrices-in-Computer-Graphics/index.html#Reference\" target=\"Matrices-in-Computer-Graphics\">Reference</a></li>\n</ol>\n</li>\n</ol>",

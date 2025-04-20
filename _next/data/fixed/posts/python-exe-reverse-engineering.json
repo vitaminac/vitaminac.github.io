@@ -1,10 +1,12 @@
 {
   "pageProps": {
     "postData": {
-      "title": "Python打包的可执行文件的逆向工程",
-      "date": "2024-03-28 20:39:24",
       "slug": "python-exe-reverse-engineering",
       "tags": ["python", "PyInstaller"],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "Python打包的可执行文件的逆向工程",
+      "date": "2024-03-28 20:39:24",
       "isLegacy": true,
       "lang": "zh",
       "tocHtml": "<ol>\n<li><a href=\"/python-exe-reverse-engineering/index.html#PyInstaller\" target=\"python-exe-reverse-engineering\">PyInstaller</a>\n<ol>\n<li><a href=\"/python-exe-reverse-engineering/index.html#%E5%8A%A0%E5%AF%86\" target=\"python-exe-reverse-engineering\">加密</a></li>\n</ol>\n</li>\n<li><a href=\"/python-exe-reverse-engineering/index.html#%E5%8F%82%E8%80%83\" target=\"python-exe-reverse-engineering\">参考</a></li>\n</ol>",

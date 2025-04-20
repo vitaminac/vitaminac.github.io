@@ -1,10 +1,12 @@
 {
   "pageProps": {
     "postData": {
-      "title": "Behat",
-      "date": "2019-04-28 23:08:37",
       "slug": "Behat",
       "tags": ["BDD"],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "Behat",
+      "date": "2019-04-28 23:08:37",
       "isLegacy": true,
       "lang": "es",
       "tocHtml": "",

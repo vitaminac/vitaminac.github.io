@@ -1,10 +1,12 @@
 {
   "pageProps": {
     "postData": {
-      "title": "Vector Database",
-      "date": "2024-09-29 19:19:40",
       "slug": "vector-database",
       "tags": ["vector database"],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "Vector Database",
+      "date": "2024-09-29 19:19:40",
       "isLegacy": true,
       "lang": "en",
       "tocHtml": "<ol>\n<li><a href=\"/vector-database/index.html#Reference\" target=\"vector-database\">Reference</a></li>\n</ol>",

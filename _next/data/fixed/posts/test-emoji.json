@@ -1,10 +1,12 @@
 {
   "pageProps": {
     "postData": {
-      "title": "Test Emoji",
-      "date": "2020-01-02",
       "slug": "test-emoji",
       "tags": [],
+      "isDraft": false,
+      "isArchived": true,
+      "title": "Test Emoji",
+      "date": "2020-01-02",
       "isLegacy": false,
       "lang": "en",
       "tocHtml": "",

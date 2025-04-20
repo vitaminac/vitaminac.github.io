@@ -1,10 +1,12 @@
 {
   "pageProps": {
     "postData": {
-      "title": "Testable Design",
-      "date": "2021-01-24 20:30:40",
       "slug": "Testable-Design",
       "tags": ["Testable Design"],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "Testable Design",
+      "date": "2021-01-24 20:30:40",
       "isLegacy": true,
       "lang": "en",
       "tocHtml": "<ol>\n<li><a href=\"/Testable-Design/index.html#Guidelines-for-Testable-Design\" target=\"Testable-Design\">Guidelines for Testable Design</a>\n<ol>\n<li><a href=\"/Testable-Design/index.html#Testability-issues\" target=\"Testable-Design\">Testability issues</a>\n<ol>\n<li><a href=\"/Testable-Design/index.html#Cant-instantiate-a-class\" target=\"Testable-Design\">Can’t instantiate a class</a></li>\n<li><a href=\"/Testable-Design/index.html#Cant-substitute-a-collaborator\" target=\"Testable-Design\">Can’t substitute a collaborator</a></li>\n</ol>\n</li>\n<li><a href=\"/Testable-Design/index.html#Avoid-complex-private-methods\" target=\"Testable-Design\">Avoid complex private methods</a></li>\n<li><a href=\"/Testable-Design/index.html#Avoid-final-methods\" target=\"Testable-Design\">Avoid final methods</a></li>\n<li><a href=\"/Testable-Design/index.html#Avoid-static-methods\" target=\"Testable-Design\">Avoid static methods</a></li>\n<li><a href=\"/Testable-Design/index.html#Use-new-with-care\" target=\"Testable-Design\">Use new with care</a></li>\n<li><a href=\"/Testable-Design/index.html#Avoid-logic-in-constructors\" target=\"Testable-Design\">Avoid logic in constructors</a></li>\n<li><a href=\"/Testable-Design/index.html#Avoid-the-Singleton\" target=\"Testable-Design\">Avoid the Singleton</a></li>\n<li><a href=\"/Testable-Design/index.html#Favor-composition-over-inheritance\" target=\"Testable-Design\">Favor composition over inheritance</a></li>\n<li><a href=\"/Testable-Design/index.html#Wrap-external-libraries\" target=\"Testable-Design\">Wrap external libraries</a></li>\n<li><a href=\"/Testable-Design/index.html#Reference\" target=\"Testable-Design\">Reference</a></li>\n</ol>\n</li>\n</ol>",

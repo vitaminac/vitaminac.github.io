@@ -1,10 +1,12 @@
 {
   "pageProps": {
     "postData": {
-      "title": "Escuelas del Testing",
-      "date": "2019-04-28 00:18:12",
       "slug": "Escuelas-del-Testing",
       "tags": ["Testing", "Agile Software Development", "BDD", "TDD"],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "Escuelas del Testing",
+      "date": "2019-04-28 00:18:12",
       "isLegacy": true,
       "lang": "es",
       "tocHtml": "<ol>\n<li><a href=\"/Escuelas-del-Testing/index.html#Cinco-manera-de-ver-el-testing\" target=\"Escuelas-del-Testing\">Cinco manera de ver el testing</a></li>\n</ol>",

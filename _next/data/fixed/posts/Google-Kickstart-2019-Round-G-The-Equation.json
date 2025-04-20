@@ -1,10 +1,12 @@
 {
   "pageProps": {
     "postData": {
-      "title": "Google Kickstart 2019 Round G The Equation",
-      "date": "2019-11-02 22:11:00",
       "slug": "Google-Kickstart-2019-Round-G-The-Equation",
       "tags": ["algorithms"],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "Google Kickstart 2019 Round G The Equation",
+      "date": "2019-11-02 22:11:00",
       "isLegacy": true,
       "lang": "en",
       "tocHtml": "<ol>\n<li><a href=\"/Google-Kickstart-2019-Round-G-The-Equation/index.html#Google-Kickstart-2019-Round-G-The-Equation\" target=\"Google-Kickstart-2019-Round-G-The-Equation\">Google Kickstart 2019 Round G The Equation</a></li>\n</ol>",

@@ -1,10 +1,12 @@
 {
   "pageProps": {
     "postData": {
-      "title": "Como calcular un préstamo",
-      "date": "2021-10-23 12:09:41",
       "slug": "Prestamo",
       "tags": ["TAE", "TIN", "prestamo", "Economy"],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "Como calcular un préstamo",
+      "date": "2021-10-23 12:09:41",
       "isLegacy": true,
       "lang": "es",
       "tocHtml": "<ol>\n<li><a href=\"/Prestamo/index.html#En-qu%C3%A9-consiste-un-pr%C3%A9stamo\" target=\"Prestamo\">¿En qué consiste un préstamo?</a></li>\n<li><a href=\"/Prestamo/index.html#C%C3%B3mo-calcular-el-capital-de-un-pr%C3%A9stamo-personal\" target=\"Prestamo\">¿Cómo calcular el capital de un préstamo personal?</a></li>\n<li><a href=\"/Prestamo/index.html#C%C3%B3mo-calcular-los-intereses-de-un-pr%C3%A9stamo-personal\" target=\"Prestamo\">¿Cómo calcular los intereses de un préstamo personal?</a></li>\n<li><a href=\"/Prestamo/index.html#C%C3%B3mo-calcular-la-cuota-de-un-pr%C3%A9stamo-personal\" target=\"Prestamo\">¿Cómo calcular la cuota de un préstamo personal?</a>\n<ol>\n<li><a href=\"/Prestamo/index.html#Calcular-la-tabla-de-amortizaci%C3%B3n\" target=\"Prestamo\">Calcular la tabla de amortización</a></li>\n<li><a href=\"/Prestamo/index.html#Derivaci%C3%B3n-de-la-f%C3%B3rmula-de-la-renta\" target=\"Prestamo\">Derivación de la fórmula de la renta</a></li>\n</ol>\n</li>\n<li><a href=\"/Prestamo/index.html#TAE\" target=\"Prestamo\">TAE</a></li>\n<li><a href=\"/Prestamo/index.html#Referencia\" target=\"Prestamo\">Referencia</a></li>\n</ol>",
