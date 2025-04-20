@@ -689,14 +689,14 @@
                         }),
                       t.isLegacy
                         ? (0, s.jsx)("article", {
-                            className: "col-12 col-lg order-lg-1",
+                            className: "col-12 col-lg-9 order-lg-1",
                             children: (0, s.jsx)(l, {
                               title: t.slug,
                               src: t.path,
                             }),
                           })
                         : (0, s.jsx)("article", {
-                            className: "col-12 col-lg order-lg-1",
+                            className: "col-12 col-lg-9 order-lg-1",
                             dangerouslySetInnerHTML: { __html: t.articleHtml },
                           }),
                     ],
