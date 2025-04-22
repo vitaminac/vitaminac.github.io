@@ -1,24 +1,13 @@
 {
   "pageProps": {
     "lang": "zh",
+    "tag": "西班牙生活",
     "previews": [
-      {
-        "slug": "etf",
-        "title": "ETF是什么",
-        "date": "2024-12-26 15:48:16",
-        "content": "股票指数是什么? ..."
-      },
       {
         "slug": "vivienda-segunda-mano",
         "title": "马德里二手房买卖流程",
         "date": "2024-12-01 22:08:24",
         "content": "选房  前期可以先在西班牙最大的几个房产网站上例如  Idealista: https://www.idealista.com/ Milanuncios: https://www.milanuncios.com/inmobiliaria/ Fotocasa:..."
-      },
-      {
-        "slug": "flash",
-        "title": "Flash小游戏",
-        "date": "2024-10-27 10:08:36",
-        "content": "Flash小游戏曾经在xp/win7时代是很火的, 更带火了一些小游戏网站例如4399.com，7k7k.com。 但是自从Adobe取消Flash支持现在最新的浏览器已经玩不了。现在想玩Flash小游戏都需要单独下载一些还支持Flash的国内厂商的浏览器，例如QQ浏览器,..."
       },
       {
         "slug": "passport-renewal",
@@ -33,37 +22,12 @@
         "content": "西班牙的永居卡或者欧盟永居卡需要每五年更新一次，且要在居留过期前60天申请。  更换永居卡或者欧盟永居卡需要满足下面的条件：  没有犯罪记录 单次离境欧盟不超过12个月 单次离境西班牙不超过6年 没有在其他欧盟国家拿到欧盟永居卡 ..."
       },
       {
-        "slug": "jyqxz",
-        "title": "金庸群侠传3贺岁版",
-        "date": "2024-08-31 12:23:16",
-        "content": "{% flash root.swf 800 %}  角色属性 【力道】影响攻击效果。可通过小游戏【伐木】增加，上限100 【根骨】影响生命值，1点根骨=70点生命。可通过小游戏【海底采矿】增加，上限100 【悟性】影响武功修炼效率和升级获修为点多寡。可在【华山派】学习【儒风】技能增加，上限100..."
-      },
-      {
-        "slug": "skyrim",
-        "title": "老滚5天际周年版安装教程",
-        "date": "2024-08-29 20:29:39",
-        "content": "游戏和Mods安装  下载游戏本体和游戏更新到版本v1.6.1170。  解压安装游戏本体。 解压更新压缩包按顺序再游戏目录下一个一个执行更新程序 执行SkyrimSELauncher.exe设置启动参数 下载安装Vortex 在Vortex里面添加Skyrim Special Edition..."
-      },
-      {
-        "slug": "cheating",
-        "title": "外挂开发原理",
-        "date": "2024-07-28 10:26:32",
-        "content": "先说一下写一个外挂需要什么条件，想要写外挂至少需要掌握一门编程语言，主要负责写一些上层逻辑例如外挂界面，可以是易语言，但是单单会易语言是远远不够的。目前的外挂和主流PC游戏大部分底层逻辑都是用C/C++写的，拥有熟练的C/C++语言和Win32..."
-      },
-      {
         "slug": "driving-license",
         "title": "西班牙驾照换中国驾照流程 - 长乐版",
         "date": "2024-05-30 22:00:44",
         "content": "有西班牙驾照的朋友可以直接回国换中国驾照，只需要考个科一就行。科一可以下载驾考宝典学习。换驾照的具体办事流程每个省市都有点不一样，例如在丽水所有的程序都能在一个地方一天办好，但是在福州会复杂一点。换驾照要在户籍所在地才可以，在其他地方换需要有暂住证。例如在长乐换驾照需要下面的一些材料 ..."
-      },
-      {
-        "slug": "python-exe-reverse-engineering",
-        "title": "Python打包的可执行文件的逆向工程",
-        "date": "2024-03-28 20:39:24",
-        "content": "PyInstaller  如果exe文件是使用PyInstaller打包的。我们可以用PyInstaller Extractor解包exe文件。  python pyinstxtractor.py <文件名>.exe  ..."
       }
     ],
-    "nextPageUrl": "/posts/langs/zh/pagination/2",
     "_nextI18Next": {
       "initialI18nStore": {
         "zh": {
@@ -74,8 +38,7 @@
             "en": "英语",
             "es": "西语",
             "zh": "中文"
-          },
-          "paginated-index": { "PrevPage": "← 前一页", "NextPage": "下一页 →" }
+          }
         },
         "en": {
           "navbar": {
@@ -85,15 +48,11 @@
             "en": "English",
             "es": "Spanish",
             "zh": "Chinese"
-          },
-          "paginated-index": {
-            "PrevPage": "← NEWER POSTS",
-            "NextPage": "OLDER POSTS →"
           }
         }
       },
       "initialLocale": "zh",
-      "ns": ["navbar", "paginated-index"],
+      "ns": ["navbar"],
       "userConfig": {
         "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
         "default": {

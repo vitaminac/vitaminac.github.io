@@ -2,10 +2,10 @@
   "pageProps": {
     "postData": {
       "slug": "passport-renewal",
-      "tags": ["护照"],
+      "tags": ["护照", "西班牙生活"],
       "isDraft": false,
       "isArchived": false,
-      "title": "护照更换",
+      "title": "驻西大使馆在线护照更换",
       "date": "2024-10-10 23:54:23",
       "isLegacy": true,
       "lang": "zh",
