@@ -534,9 +534,6 @@ video {
   --tw-shadow-color: rgba(0, 0, 0, 0.25);
   --tw-shadow: var(--tw-shadow-colored);
 }
-ul {
-  list-style-type: circle;
-}
 .hover\:tw-bg-sky-300:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(125 211 252 / var(--tw-bg-opacity));

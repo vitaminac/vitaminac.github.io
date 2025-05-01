@@ -34,3 +34,17 @@
   content: counters(item, ".") " ";
   counter-increment: item;
 }
+.Post_content__QBxez {
+  padding-top: 1em;
+}
+.Post_content__QBxez ul {
+  list-style-type: circle;
+}
+.Post_content__QBxez li {
+  list-style-type: decimal;
+}
+.Post_content__QBxez blockquote {
+  font-style: italic;
+  padding-left: 0.5em;
+  border-left: 0.25em solid gray;
+}

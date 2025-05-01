@@ -553,12 +553,14 @@
           },
         });
       var s = a(5893),
-        n = a(1798),
-        i = a(7294);
-      function l(e) {
-        let t = (0, i.useRef)(null),
-          [a, n] = (0, i.useState)(),
-          l = (0, i.useCallback)(() => {
+        n = a(3967),
+        i = a.n(n),
+        l = a(1798),
+        c = a(7294);
+      function r(e) {
+        let t = (0, c.useRef)(null),
+          [a, n] = (0, c.useState)(),
+          i = (0, c.useCallback)(() => {
             var e, a;
             let s =
               null === (a = t.current) || void 0 === a
@@ -568,18 +570,18 @@
                   : e.document.body;
             s && n(s);
           }, [t, n]);
-        (0, i.useEffect)(() => {
+        (0, c.useEffect)(() => {
           if (!a) {
             let e = t.current;
-            null == e || e.addEventListener("load", l);
-            let a = setInterval(l, 1e3);
+            null == e || e.addEventListener("load", i);
+            let a = setInterval(i, 1e3);
             return () => {
-              null == e || e.removeEventListener("load", l), clearInterval(a);
+              null == e || e.removeEventListener("load", i), clearInterval(a);
             };
           }
-        }, [a, t, l]);
-        let [c, r] = (0, i.useState)(0),
-          o = (0, i.useCallback)(() => {
+        }, [a, t, i]);
+        let [l, r] = (0, c.useState)(0),
+          o = (0, c.useCallback)(() => {
             var e;
             r(
               null == a
@@ -590,7 +592,7 @@
             );
           }, [a, r]);
         return (
-          (0, i.useEffect)(() => {
+          (0, c.useEffect)(() => {
             if (a) {
               let e = new ResizeObserver(o);
               return (
@@ -606,18 +608,18 @@
             title: e.title,
             src: e.src,
             width: "100%",
-            height: "".concat(c, "px"),
+            height: "".concat(l, "px"),
             ref: t,
-            onLoad: l,
+            onLoad: i,
           })
         );
       }
-      var c = a(3045),
-        r = a(5152),
-        o = a.n(r),
-        d = a(3944);
-      function m(e) {
-        return (0, s.jsx)(d.qw, {
+      var o = a(3045),
+        d = a(5152),
+        m = a.n(d),
+        x = a(3944);
+      function u(e) {
+        return (0, s.jsx)(x.qw, {
           shortname: e.username,
           config: {
             url: window.location.href,
@@ -627,23 +629,21 @@
           },
         });
       }
-      let x = o()(() => Promise.resolve(m), { ssr: !1 });
-      var u = a(6050),
-        h = a(1734),
-        f = a(5853),
-        g = a(3260),
-        j = a.n(g),
-        p = a(3967),
+      let h = m()(() => Promise.resolve(u), { ssr: !1 });
+      var f = a(6050),
+        g = a(1734),
+        j = a(5853),
+        p = a(3260),
         w = a.n(p),
         v = !0,
         b = function (e) {
           let { postData: t, siteConfig: a } = e,
-            { t: i } = (0, n.$G)("post-layout");
-          return (0, s.jsxs)(u.X, {
+            { t: n } = (0, l.$G)("post-layout");
+          return (0, s.jsxs)(f.X, {
             lang: t.lang,
             siteConfig: a,
             children: [
-              (0, s.jsx)(f.K, {
+              (0, s.jsx)(j.K, {
                 title: t.title,
                 author: a.siteAuthor,
                 lang: t.lang,
@@ -667,14 +667,14 @@
                     children: [
                       (0, s.jsx)("h1", { children: t.title }),
                       (0, s.jsx)("p", {
-                        children: i("Author", { author: a.siteAuthor }),
+                        children: n("Author", { author: a.siteAuthor }),
                       }),
-                      (0, s.jsx)(c.E, { dateString: t.date }),
+                      (0, s.jsx)(o.E, { dateString: t.date }),
                       (0, s.jsxs)("section", {
                         className: "tw-mt-3 tw-text-center",
                         children: [
-                          (0, s.jsxs)("p", { children: [i("Tags"), ":"] }),
-                          (0, s.jsx)(h.w, { lang: t.lang, tags: t.tags }),
+                          (0, s.jsxs)("p", { children: [n("Tags"), ":"] }),
+                          (0, s.jsx)(g.w, { lang: t.lang, tags: t.tags }),
                         ],
                       }),
                     ],
@@ -684,25 +684,28 @@
                     children: [
                       t.tocHtml &&
                         (0, s.jsx)("nav", {
-                          className: w()(j().toc, "col-12 col-lg-3 order-lg-2"),
+                          className: i()(w().toc, "col-12 col-lg-3 order-lg-2"),
                           dangerouslySetInnerHTML: { __html: t.tocHtml },
                         }),
                       t.isLegacy
                         ? (0, s.jsx)("article", {
                             className: "col-12 col-lg-9 order-lg-1",
-                            children: (0, s.jsx)(l, {
+                            children: (0, s.jsx)(r, {
                               title: t.slug,
                               src: t.path,
                             }),
                           })
                         : (0, s.jsx)("article", {
-                            className: "col-12 col-lg-9 order-lg-1",
+                            className: i()(
+                              w().content,
+                              "col-12 col-lg-9 order-lg-1",
+                            ),
                             dangerouslySetInnerHTML: { __html: t.articleHtml },
                           }),
                     ],
                   }),
                   (0, s.jsx)("aside", {
-                    children: (0, s.jsx)(x, {
+                    children: (0, s.jsx)(h, {
                       username: a.disqusUsername,
                       id: t.slug,
                       title: t.title,
@@ -719,7 +722,7 @@
       e.exports = { navBar: "NavigationBar_navBar__fSiIq" };
     },
     3260: function (e) {
-      e.exports = { toc: "Post_toc__TAzIW" };
+      e.exports = { toc: "Post_toc__TAzIW", content: "Post_content__QBxez" };
     },
   },
   function (e) {
