@@ -37,6 +37,13 @@
 .Post_content__QBxez {
   padding-top: 1em;
 }
+.Post_content__QBxez h1 > a > i.fa-link:not(:hover),
+.Post_content__QBxez h2 > a > i.fa-link:not(:hover),
+.Post_content__QBxez h3 > a > i.fa-link:not(:hover),
+.Post_content__QBxez h4 > a > i.fa-link:not(:hover),
+.Post_content__QBxez h5 > a > i.fa-link:not(:hover) {
+  color: transparent;
+}
 .Post_content__QBxez ul {
   list-style-type: circle;
 }
