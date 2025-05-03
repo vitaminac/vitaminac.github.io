@@ -940,7 +940,11 @@
         a = (e) => {
           if (!e.startsWith("/")) return e;
           let { pathname: t, query: r, hash: a } = (0, o.parsePath)(e);
-          return "" + (0, n.removeTrailingSlash)(t) + r + a;
+          return /\.[^/]+\/?$/.test(t)
+            ? "" + (0, n.removeTrailingSlash)(t) + r + a
+            : t.endsWith("/")
+              ? "" + t + r + a
+              : t + "/" + r + a;
         };
       ("function" == typeof t.default ||
         ("object" == typeof t.default && null !== t.default)) &&
@@ -3366,7 +3370,7 @@
             let n = {
                 basePath: r.router.basePath,
                 i18n: { locales: r.router.locales },
-                trailingSlash: !1,
+                trailingSlash: !0,
               },
               o = t.headers.get("x-nextjs-rewrite"),
               u = o || t.headers.get("x-nextjs-matched-path"),
