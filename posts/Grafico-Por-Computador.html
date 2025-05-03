@@ -1,0 +1,827 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="content-language" content="es" />
+    <link rel="icon" href="/favicon.ico" />
+    <title>Grafico Por Computador</title>
+    <meta name="og:title" content="Grafico Por Computador" />
+    <meta name="author" content="Gao" />
+    <meta name="keywords" content="Computer Graphics" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="next-head-count" content="10" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css"
+      integrity="sha384-ZPe7yZ91iWxYumsBEOn7ieg8q/o+qh/hQpSaPow8T6BwALcXSCS6C6fSRPIAnTQs"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+      integrity="sha512-hasIneQUHlh06VNBe7f6ZcHmeRTLIaQWFd43YriJ0UND19bvYRauxthDg8E4eVNPm9bRUhr5JGeqH7FRFXQu5g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="preload"
+      href="/_next/static/css/476137c6413f10f9.css"
+      as="style"
+    />
+    <link
+      rel="stylesheet"
+      href="/_next/static/css/476137c6413f10f9.css"
+      data-n-g=""
+    />
+    <link
+      rel="preload"
+      href="/_next/static/css/7864c11838d6b072.css"
+      as="style"
+    />
+    <link
+      rel="stylesheet"
+      href="/_next/static/css/7864c11838d6b072.css"
+      data-n-p=""
+    />
+    <noscript data-n-css=""></noscript>
+    <script
+      defer=""
+      nomodule=""
+      src="/_next/static/chunks/polyfills-42372ed130431b0a.js"
+    ></script>
+    <script src="/_next/static/chunks/webpack.js" defer=""></script>
+    <script src="/_next/static/chunks/framework.js" defer=""></script>
+    <script src="/_next/static/chunks/main.js" defer=""></script>
+    <script src="/_next/static/chunks/pages/_app.js" defer=""></script>
+    <script src="/_next/static/chunks/367.js" defer=""></script>
+    <script src="/_next/static/chunks/503.js" defer=""></script>
+    <script src="/_next/static/chunks/287.js" defer=""></script>
+    <script
+      src="/_next/static/chunks/pages/posts/%5Bslug%5D.js"
+      defer=""
+    ></script>
+    <script src="/_next/static/fixed/_buildManifest.js" defer=""></script>
+    <script src="/_next/static/fixed/_ssgManifest.js" defer=""></script>
+  </head>
+  <body>
+    <div id="__next">
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+        crossorigin="anonymous"
+      />
+      <nav
+        class="navbar navbar-expand-md navbar-light sticky-top NavigationBar_navBar__fSiIq tw-bg-white/95 tw-shadow tw-shadow-black/25"
+      >
+        <div class="container-fluid px-md-5">
+          <div class="navbar-brand animate__animated animate__pulse">
+            <span
+              class="tw-rounded tw-bg-black tw-p-1 tw-text-xl tw-font-medium tw-text-white"
+              >Gao&#x27;s blog</span
+            >
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="navbar-collapse collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="/posts/langs/es/pagination/1"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="/posts/langs/es/tags"
+                  >Tags</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  >Lenguaje</a
+                >
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li>
+                    <a class="dropdown-item" href="/posts/langs/en">Inglés</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/posts/langs/es">Español</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/posts/langs/zh">Chino</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <main class="container">
+        <header
+          class="tw-relative tw-flex tw-h-96 tw-w-screen tw-flex-col tw-content-center tw-justify-center tw-bg-cover tw-bg-center tw-bg-no-repeat tw-text-center tw-text-white"
+          style="
+            background-image: url(/_next/static/media/default-post-preview.c96b099a.jpeg);
+            left: calc(50% - 50vw);
+          "
+        >
+          <h1>Grafico Por Computador</h1>
+          <p>Autor: Gao</p>
+          <span
+            ><i class="fa-regular fa-calendar"></i
+            ><time class="tw-pl-1.5" datetime="2020-05-31 11:18:28"
+              >May 31, 2020</time
+            ></span
+          >
+          <section class="tw-mt-3 tw-text-center">
+            <p>Tags<!-- -->:</p>
+            <ul class="tw-p-0">
+              <li class="tw-inline tw-px-1">
+                <a
+                  class="tw-m-0.5 tw-inline-block tw-rounded tw-border tw-border-solid tw-border-white tw-bg-neutral-300 tw-px-2 tw-text-sm tw-leading-6 tw-text-white tw-no-underline hover:tw-bg-sky-300"
+                  href="/posts/langs/es/tags/Computer%20Graphics"
+                  >Computer Graphics</a
+                >
+              </li>
+            </ul>
+          </section>
+        </header>
+        <div class="row">
+          <nav class="Post_toc__TAzIW col-12 col-lg-3 order-lg-2">
+            <ol>
+              <li>
+                <a
+                  href="/Grafico-Por-Computador/index.html#Gr%C3%A1fico-por-computador"
+                  target="Grafico-Por-Computador"
+                  >Gráfico por computador</a
+                >
+                <ol>
+                  <li>
+                    <a
+                      href="/Grafico-Por-Computador/index.html#Definici%C3%B3n"
+                      target="Grafico-Por-Computador"
+                      >Definición</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/Grafico-Por-Computador/index.html#Cause-gr%C3%A1fico"
+                      target="Grafico-Por-Computador"
+                      >Cause gráfico</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/Grafico-Por-Computador/index.html#T%C3%A9cnica-de-modelado"
+                      target="Grafico-Por-Computador"
+                      >Técnica de modelado</a
+                    >
+                    <ol>
+                      <li>
+                        <a
+                          href="/Grafico-Por-Computador/index.html#Propiedades-deseables-en-un-modelo"
+                          target="Grafico-Por-Computador"
+                          >Propiedades deseables en un modelo</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/Grafico-Por-Computador/index.html#Modelos-de-alambre"
+                          target="Grafico-Por-Computador"
+                          >Modelos de alambre</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/Grafico-Por-Computador/index.html#Modelos-de-mallas"
+                          target="Grafico-Por-Computador"
+                          >Modelos de mallas</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/Grafico-Por-Computador/index.html#Representaciones-de-fronteras-no-poli%C3%A9dricas"
+                          target="Grafico-Por-Computador"
+                          >Representaciones de fronteras no poliédricas</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/Grafico-Por-Computador/index.html#Modelos-multiresoluci%C3%B3n"
+                          target="Grafico-Por-Computador"
+                          >Modelos multiresolución</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/Grafico-Por-Computador/index.html#Otros"
+                          target="Grafico-Por-Computador"
+                          >Otros</a
+                        >
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    <a
+                      href="/Grafico-Por-Computador/index.html#Visibilidad"
+                      target="Grafico-Por-Computador"
+                      >Visibilidad</a
+                    >
+                    <ol>
+                      <li>
+                        <a
+                          href="/Grafico-Por-Computador/index.html#Etapa-de-aplicacion"
+                          target="Grafico-Por-Computador"
+                          >Etapa de aplicacion</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/Grafico-Por-Computador/index.html#En-el-cause-gr%C3%A1fico"
+                          target="Grafico-Por-Computador"
+                          >En el cause gráfico</a
+                        >
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    <a
+                      href="/Grafico-Por-Computador/index.html#Iluminaci%C3%B3n"
+                      target="Grafico-Por-Computador"
+                      >Iluminación</a
+                    >
+                    <ol>
+                      <li>
+                        <a
+                          href="/Grafico-Por-Computador/index.html#Luces"
+                          target="Grafico-Por-Computador"
+                          >Luces</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/Grafico-Por-Computador/index.html#Modelos-de-iluminaci%C3%B3n"
+                          target="Grafico-Por-Computador"
+                          >Modelos de iluminación</a
+                        >
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    <a
+                      href="/Grafico-Por-Computador/index.html#Buffer-de-Stencil"
+                      target="Grafico-Por-Computador"
+                      >Buffer de Stencil</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/Grafico-Por-Computador/index.html#Buffer-de-Acumulaci%C3%B3n"
+                      target="Grafico-Por-Computador"
+                      >Buffer de Acumulación</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/Grafico-Por-Computador/index.html#Texturas"
+                      target="Grafico-Por-Computador"
+                      >Texturas</a
+                    >
+                    <ol>
+                      <li>
+                        <a
+                          href="/Grafico-Por-Computador/index.html#Unidimensionales"
+                          target="Grafico-Por-Computador"
+                          >Unidimensionales</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/Grafico-Por-Computador/index.html#Bidimensionales"
+                          target="Grafico-Por-Computador"
+                          >Bidimensionales</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/Grafico-Por-Computador/index.html#Texturas-c%C3%BAbicas"
+                          target="Grafico-Por-Computador"
+                          >Texturas cúbicas</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/Grafico-Por-Computador/index.html#Tridimensionales"
+                          target="Grafico-Por-Computador"
+                          >Tridimensionales</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/Grafico-Por-Computador/index.html#Diffuse-Map"
+                          target="Grafico-Por-Computador"
+                          >Diffuse Map</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/Grafico-Por-Computador/index.html#Specular-Map"
+                          target="Grafico-Por-Computador"
+                          >Specular Map</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/Grafico-Por-Computador/index.html#Emissive-Map"
+                          target="Grafico-Por-Computador"
+                          >Emissive Map</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/Grafico-Por-Computador/index.html#Lighting-Map"
+                          target="Grafico-Por-Computador"
+                          >Lighting Map</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/Grafico-Por-Computador/index.html#Alpha-Blending"
+                          target="Grafico-Por-Computador"
+                          >Alpha Blending</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/Grafico-Por-Computador/index.html#Bump-Map"
+                          target="Grafico-Por-Computador"
+                          >Bump Map</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/Grafico-Por-Computador/index.html#Normal-Map"
+                          target="Grafico-Por-Computador"
+                          >Normal Map</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/Grafico-Por-Computador/index.html#Height-Map"
+                          target="Grafico-Por-Computador"
+                          >Height Map</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/Grafico-Por-Computador/index.html#Displacement-Map"
+                          target="Grafico-Por-Computador"
+                          >Displacement Map</a
+                        >
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    <a
+                      href="/Grafico-Por-Computador/index.html#Coordenadas-de-Textura"
+                      target="Grafico-Por-Computador"
+                      >Coordenadas de Textura</a
+                    >
+                    <ol>
+                      <li>
+                        <a
+                          href="/Grafico-Por-Computador/index.html#Mapeado-Plano"
+                          target="Grafico-Por-Computador"
+                          >Mapeado Plano</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/Grafico-Por-Computador/index.html#Mapeado-Cil%C3%ADndrico"
+                          target="Grafico-Por-Computador"
+                          >Mapeado Cilíndrico</a
+                        >
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    <a
+                      href="/Grafico-Por-Computador/index.html#Aliasing-en-Texturas"
+                      target="Grafico-Por-Computador"
+                      >Aliasing en Texturas</a
+                    >
+                    <ol>
+                      <li>
+                        <a
+                          href="/Grafico-Por-Computador/index.html#Minificaci%C3%B3n"
+                          target="Grafico-Por-Computador"
+                          >Minificación</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/Grafico-Por-Computador/index.html#Magnificaci%C3%B3n"
+                          target="Grafico-Por-Computador"
+                          >Magnificación</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/Grafico-Por-Computador/index.html#Box-filter"
+                          target="Grafico-Por-Computador"
+                          >Box filter</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/Grafico-Por-Computador/index.html#Bilinear-filter"
+                          target="Grafico-Por-Computador"
+                          >Bilinear filter</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/Grafico-Por-Computador/index.html#Mipmapping"
+                          target="Grafico-Por-Computador"
+                          >Mipmapping</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/Grafico-Por-Computador/index.html#Supersampling"
+                          target="Grafico-Por-Computador"
+                          >Supersampling</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/Grafico-Por-Computador/index.html#Pre-filtering"
+                          target="Grafico-Por-Computador"
+                          >Pre-filtering</a
+                        >
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    <a
+                      href="/Grafico-Por-Computador/index.html#Alpha-Blending-1"
+                      target="Grafico-Por-Computador"
+                      >Alpha Blending</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/Grafico-Por-Computador/index.html#Reflejos"
+                      target="Grafico-Por-Computador"
+                      >Reflejos</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/Grafico-Por-Computador/index.html#Sombras"
+                      target="Grafico-Por-Computador"
+                      >Sombras</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="/Grafico-Por-Computador/index.html#OpenGL"
+                      target="Grafico-Por-Computador"
+                      >OpenGL</a
+                    >
+                    <ol>
+                      <li>
+                        <a
+                          href="/Grafico-Por-Computador/index.html#Modelo-de-programaci%C3%B3n"
+                          target="Grafico-Por-Computador"
+                          >Modelo de programación</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/Grafico-Por-Computador/index.html#Framebuffer"
+                          target="Grafico-Por-Computador"
+                          >Framebuffer</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/Grafico-Por-Computador/index.html#GLUT"
+                          target="Grafico-Por-Computador"
+                          >GLUT</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/Grafico-Por-Computador/index.html#Etapas-del-cauce"
+                          target="Grafico-Por-Computador"
+                          >Etapas del cauce</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/Grafico-Por-Computador/index.html#Shaders"
+                          target="Grafico-Por-Computador"
+                          >Shaders</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/Grafico-Por-Computador/index.html#GLSL"
+                          target="Grafico-Por-Computador"
+                          >GLSL</a
+                        >
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    <a
+                      href="/Grafico-Por-Computador/index.html#Textura"
+                      target="Grafico-Por-Computador"
+                      >Textura</a
+                    >
+                    <ol>
+                      <li>
+                        <a
+                          href="/Grafico-Por-Computador/index.html#Par%C3%A1metros"
+                          target="Grafico-Por-Computador"
+                          >Parámetros</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="/Grafico-Por-Computador/index.html#Pasos"
+                          target="Grafico-Por-Computador"
+                          >Pasos</a
+                        >
+                      </li>
+                    </ol>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+          </nav>
+          <article class="col-12 col-lg-9 order-lg-1">
+            <iframe
+              name="Grafico-Por-Computador"
+              title="Grafico-Por-Computador"
+              src="/Grafico-Por-Computador/index.html"
+              width="100%"
+              height="0px"
+            ></iframe>
+          </article>
+        </div>
+        <aside></aside>
+      </main>
+      <footer class="tw-text-center tw-text-gray-400">
+        <div class="row justify-content-center">
+          <ul class="list-inline text-center tw-text-stone-700">
+            <li class="list-inline-item">
+              <a
+                class="tw-text-stone-700"
+                target="_blank"
+                href="https://www.linkedin.com/in/shuxig"
+                ><span class="fa-stack fa-lg"
+                  ><i class="fa fa-circle fa-stack-2x"></i
+                  ><i
+                    class="fab fa-linkedin-in fa-stack-1x fa-inverse"
+                  ></i></span
+              ></a>
+            </li>
+            <li class="list-inline-item">
+              <a
+                class="tw-text-stone-700"
+                target="_blank"
+                href="https://github.com/vitaminac"
+                ><span class="fa-stack fa-lg"
+                  ><i class="fa fa-circle fa-stack-2x"></i
+                  ><i class="fab fa-github fa-stack-1x fa-inverse"></i></span
+              ></a>
+            </li>
+            <li class="list-inline-item">
+              <a
+                class="tw-text-stone-700"
+                target="_blank"
+                href="https://gist.github.com/vitaminac"
+                ><span class="fa-stack fa-lg"
+                  ><i class="fa fa-circle fa-stack-2x"></i
+                  ><i
+                    class="fab fa-github-square fa-stack-1x fa-inverse"
+                  ></i></span
+              ></a>
+            </li>
+            <li class="list-inline-item">
+              <a
+                class="tw-text-stone-700"
+                target="_blank"
+                href="https://gitlab.com/vitaminac"
+                ><span class="fa-stack fa-lg"
+                  ><i class="fa fa-circle fa-stack-2x"></i
+                  ><i class="fab fa-gitlab fa-stack-1x fa-inverse"></i></span
+              ></a>
+            </li>
+            <li class="list-inline-item">
+              <a
+                class="tw-text-stone-700"
+                target="_blank"
+                href="https://www.xiaohongshu.com/user/profile/622dca68000000001000c9b2"
+                ><span class="fa-stack fa-lg"
+                  ><img
+                    alt="小红书"
+                    loading="lazy"
+                    width="256"
+                    height="256"
+                    decoding="async"
+                    data-nimg="1"
+                    class="tw-max-h-full tw-max-w-full"
+                    style="color: transparent"
+                    src="/_next/static/media/redbook.d1759325.svg" /></span
+              ></a>
+            </li>
+            <li class="list-inline-item">
+              <a
+                class="tw-text-stone-700"
+                target="_blank"
+                href="https://www.kaggle.com/dalao1002"
+                ><span class="fa-stack fa-lg"
+                  ><i class="fa fa-circle fa-stack-2x"></i
+                  ><i class="fab fa-kaggle fa-stack-1x fa-inverse"></i></span
+              ></a>
+            </li>
+            <li class="list-inline-item">
+              <a
+                class="tw-text-stone-700"
+                target="_blank"
+                href="https://leetcode.com/dalao1002"
+                ><span class="fa-stack fa-lg"
+                  ><i class="fa fa-circle fa-stack-2x"></i
+                  ><i class="fas fa-code fa-stack-1x fa-inverse"></i></span
+              ></a>
+            </li>
+            <li class="list-inline-item">
+              <a
+                class="tw-text-stone-700"
+                target="_blank"
+                href="https://stackexchange.com/users/13825906"
+                ><span class="fa-stack fa-lg"
+                  ><i class="fa fa-circle fa-stack-2x"></i
+                  ><i
+                    class="fab fa-stack-overflow fa-stack-1x fa-inverse"
+                  ></i></span
+              ></a>
+            </li>
+            <li class="list-inline-item">
+              <a
+                class="tw-text-stone-700"
+                target="_blank"
+                href="mailto:dalao1002@gmail.com?subject=From my blog&amp;body=Hi,I found this website very useful"
+                ><span class="fa-stack fa-lg"
+                  ><i class="fa fa-circle fa-stack-2x"></i
+                  ><i class="fas fa-envelope fa-stack-1x fa-inverse"></i></span
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <img
+          alt="QR"
+          loading="lazy"
+          width="1710"
+          height="624"
+          decoding="async"
+          data-nimg="1"
+          class="tw-mx-auto tw-max-w-full tw-object-contain tw-object-center lg:tw-max-w-xl"
+          style="color: transparent"
+          src="/_next/static/media/QR.b48259ea.png"
+        />
+        <p>Copyright © Gao&#x27;s blog 2025</p>
+      </footer>
+    </div>
+    <script id="__NEXT_DATA__" type="application/json">
+      {
+        "props": {
+          "pageProps": {
+            "postData": {
+              "slug": "Grafico-Por-Computador",
+              "tags": ["Computer Graphics"],
+              "isDraft": false,
+              "isArchived": false,
+              "title": "Grafico Por Computador",
+              "date": "2020-05-31 11:18:28",
+              "isLegacy": true,
+              "lang": "es",
+              "tocHtml": "\u003col\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Gr%C3%A1fico-por-computador\" target=\"Grafico-Por-Computador\"\u003eGráfico por computador\u003c/a\u003e\n\u003col\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Definici%C3%B3n\" target=\"Grafico-Por-Computador\"\u003eDefinición\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Cause-gr%C3%A1fico\" target=\"Grafico-Por-Computador\"\u003eCause gráfico\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#T%C3%A9cnica-de-modelado\" target=\"Grafico-Por-Computador\"\u003eTécnica de modelado\u003c/a\u003e\n\u003col\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Propiedades-deseables-en-un-modelo\" target=\"Grafico-Por-Computador\"\u003ePropiedades deseables en un modelo\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Modelos-de-alambre\" target=\"Grafico-Por-Computador\"\u003eModelos de alambre\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Modelos-de-mallas\" target=\"Grafico-Por-Computador\"\u003eModelos de mallas\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Representaciones-de-fronteras-no-poli%C3%A9dricas\" target=\"Grafico-Por-Computador\"\u003eRepresentaciones de fronteras no poliédricas\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Modelos-multiresoluci%C3%B3n\" target=\"Grafico-Por-Computador\"\u003eModelos multiresolución\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Otros\" target=\"Grafico-Por-Computador\"\u003eOtros\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Visibilidad\" target=\"Grafico-Por-Computador\"\u003eVisibilidad\u003c/a\u003e\n\u003col\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Etapa-de-aplicacion\" target=\"Grafico-Por-Computador\"\u003eEtapa de aplicacion\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#En-el-cause-gr%C3%A1fico\" target=\"Grafico-Por-Computador\"\u003eEn el cause gráfico\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Iluminaci%C3%B3n\" target=\"Grafico-Por-Computador\"\u003eIluminación\u003c/a\u003e\n\u003col\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Luces\" target=\"Grafico-Por-Computador\"\u003eLuces\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Modelos-de-iluminaci%C3%B3n\" target=\"Grafico-Por-Computador\"\u003eModelos de iluminación\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Buffer-de-Stencil\" target=\"Grafico-Por-Computador\"\u003eBuffer de Stencil\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Buffer-de-Acumulaci%C3%B3n\" target=\"Grafico-Por-Computador\"\u003eBuffer de Acumulación\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Texturas\" target=\"Grafico-Por-Computador\"\u003eTexturas\u003c/a\u003e\n\u003col\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Unidimensionales\" target=\"Grafico-Por-Computador\"\u003eUnidimensionales\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Bidimensionales\" target=\"Grafico-Por-Computador\"\u003eBidimensionales\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Texturas-c%C3%BAbicas\" target=\"Grafico-Por-Computador\"\u003eTexturas cúbicas\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Tridimensionales\" target=\"Grafico-Por-Computador\"\u003eTridimensionales\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Diffuse-Map\" target=\"Grafico-Por-Computador\"\u003eDiffuse Map\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Specular-Map\" target=\"Grafico-Por-Computador\"\u003eSpecular Map\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Emissive-Map\" target=\"Grafico-Por-Computador\"\u003eEmissive Map\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Lighting-Map\" target=\"Grafico-Por-Computador\"\u003eLighting Map\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Alpha-Blending\" target=\"Grafico-Por-Computador\"\u003eAlpha Blending\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Bump-Map\" target=\"Grafico-Por-Computador\"\u003eBump Map\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Normal-Map\" target=\"Grafico-Por-Computador\"\u003eNormal Map\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Height-Map\" target=\"Grafico-Por-Computador\"\u003eHeight Map\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Displacement-Map\" target=\"Grafico-Por-Computador\"\u003eDisplacement Map\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Coordenadas-de-Textura\" target=\"Grafico-Por-Computador\"\u003eCoordenadas de Textura\u003c/a\u003e\n\u003col\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Mapeado-Plano\" target=\"Grafico-Por-Computador\"\u003eMapeado Plano\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Mapeado-Cil%C3%ADndrico\" target=\"Grafico-Por-Computador\"\u003eMapeado Cilíndrico\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Aliasing-en-Texturas\" target=\"Grafico-Por-Computador\"\u003eAliasing en Texturas\u003c/a\u003e\n\u003col\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Minificaci%C3%B3n\" target=\"Grafico-Por-Computador\"\u003eMinificación\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Magnificaci%C3%B3n\" target=\"Grafico-Por-Computador\"\u003eMagnificación\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Box-filter\" target=\"Grafico-Por-Computador\"\u003eBox filter\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Bilinear-filter\" target=\"Grafico-Por-Computador\"\u003eBilinear filter\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Mipmapping\" target=\"Grafico-Por-Computador\"\u003eMipmapping\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Supersampling\" target=\"Grafico-Por-Computador\"\u003eSupersampling\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Pre-filtering\" target=\"Grafico-Por-Computador\"\u003ePre-filtering\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Alpha-Blending-1\" target=\"Grafico-Por-Computador\"\u003eAlpha Blending\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Reflejos\" target=\"Grafico-Por-Computador\"\u003eReflejos\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Sombras\" target=\"Grafico-Por-Computador\"\u003eSombras\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#OpenGL\" target=\"Grafico-Por-Computador\"\u003eOpenGL\u003c/a\u003e\n\u003col\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Modelo-de-programaci%C3%B3n\" target=\"Grafico-Por-Computador\"\u003eModelo de programación\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Framebuffer\" target=\"Grafico-Por-Computador\"\u003eFramebuffer\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#GLUT\" target=\"Grafico-Por-Computador\"\u003eGLUT\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Etapas-del-cauce\" target=\"Grafico-Por-Computador\"\u003eEtapas del cauce\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Shaders\" target=\"Grafico-Por-Computador\"\u003eShaders\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#GLSL\" target=\"Grafico-Por-Computador\"\u003eGLSL\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Textura\" target=\"Grafico-Por-Computador\"\u003eTextura\u003c/a\u003e\n\u003col\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Par%C3%A1metros\" target=\"Grafico-Por-Computador\"\u003eParámetros\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Grafico-Por-Computador/index.html#Pasos\" target=\"Grafico-Por-Computador\"\u003ePasos\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003c/ol\u003e",
+              "path": "/Grafico-Por-Computador/index.html"
+            },
+            "lang": "es",
+            "_nextI18Next": {
+              "initialI18nStore": {
+                "es": {
+                  "navbar": {
+                    "Home": "Inicio",
+                    "Language": "Lenguaje",
+                    "Tags": "Tags",
+                    "en": "Inglés",
+                    "es": "Español",
+                    "zh": "Chino"
+                  },
+                  "post-layout": {
+                    "Author": "Autor: {{author}}",
+                    "Tags": "Tags"
+                  }
+                },
+                "en": {
+                  "navbar": {
+                    "Home": "Home",
+                    "Language": "Language",
+                    "Tags": "Tags",
+                    "en": "English",
+                    "es": "Spanish",
+                    "zh": "Chinese"
+                  },
+                  "post-layout": {
+                    "Author": "Author: {{author}}",
+                    "Tags": "Tags"
+                  }
+                }
+              },
+              "initialLocale": "es",
+              "ns": ["navbar", "post-layout"],
+              "userConfig": {
+                "i18n": {
+                  "defaultLocale": "en",
+                  "locales": ["en", "es", "zh"]
+                },
+                "default": {
+                  "i18n": {
+                    "defaultLocale": "en",
+                    "locales": ["en", "es", "zh"]
+                  }
+                }
+              }
+            }
+          },
+          "__N_SSG": true
+        },
+        "page": "/posts/[slug]",
+        "query": { "slug": "Grafico-Por-Computador" },
+        "buildId": "fixed",
+        "runtimeConfig": {
+          "siteConfig": {
+            "siteAuthor": "Gao",
+            "siteTitle": "Gao's blog",
+            "siteDescription": "Gao's blog",
+            "aboutMe": "see more about me on my Github profile.",
+            "email": "dalao1002@gmail.com",
+            "linkedin": "shuxig",
+            "github": "vitaminac",
+            "gitlab": "vitaminac",
+            "redbook": "622dca68000000001000c9b2",
+            "kaggle": "dalao1002",
+            "leetcode": "dalao1002",
+            "stackexchange": "13825906",
+            "disqusUsername": "blog-vnwybnwkiz",
+            "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+          }
+        },
+        "isFallback": false,
+        "gsp": true,
+        "scriptLoader": []
+      }
+    </script>
+  </body>
+</html>
