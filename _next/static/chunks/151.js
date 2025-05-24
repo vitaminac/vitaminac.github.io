@@ -5,7 +5,7 @@
       "use strict";
       e.d(s, {
         h: function () {
-          return A;
+          return f;
         },
       });
       var t = e(5893),
@@ -148,7 +148,7 @@
           ],
         });
       }
-      function A(a) {
+      function f(a) {
         return (0, t.jsx)("header", { children: (0, t.jsx)(d, { ...a }) });
       }
     },
@@ -167,9 +167,9 @@
           children: [
             (0, t.jsx)("link", {
               rel: "stylesheet",
-              href: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css",
+              href: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css",
               integrity:
-                "sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH",
+                "sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT",
               crossOrigin: "anonymous",
             }),
             (0, t.jsx)(l(), {
@@ -181,9 +181,9 @@
             }),
             (0, t.jsx)(l(), {
               id: "bootstrap-js-cdn",
-              src: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js",
+              src: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js",
               integrity:
-                "sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy",
+                "sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D",
               crossOrigin: "anonymous",
             }),
           ],
@@ -396,7 +396,7 @@
         blurWidth: 8,
         blurHeight: 3,
       };
-      function A(a) {
+      function f(a) {
         let { siteConfig: s } = a;
         return (0, t.jsxs)("footer", {
           className: "tw-text-center tw-text-gray-400",
@@ -416,8 +416,8 @@
           ],
         });
       }
-      var f = e(3967),
-        h = e.n(f),
+      var A = e(3967),
+        h = e.n(A),
         j = e(1798),
         g = e(6985),
         N = e.n(g);
@@ -529,7 +529,7 @@
             (0, t.jsx)(n, {}),
             (0, t.jsx)(u, { siteConfig: i, lang: e }),
             s,
-            (0, t.jsx)(A, { siteConfig: i }),
+            (0, t.jsx)(f, { siteConfig: i }),
           ],
         });
       }

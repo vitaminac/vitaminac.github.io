@@ -50,9 +50,9 @@
           children: [
             (0, s.jsx)("link", {
               rel: "stylesheet",
-              href: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css",
+              href: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css",
               integrity:
-                "sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH",
+                "sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT",
               crossOrigin: "anonymous",
             }),
             (0, s.jsx)(i(), {
@@ -64,9 +64,9 @@
             }),
             (0, s.jsx)(i(), {
               id: "bootstrap-js-cdn",
-              src: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js",
+              src: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js",
               integrity:
-                "sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy",
+                "sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D",
               crossOrigin: "anonymous",
             }),
           ],
@@ -303,8 +303,8 @@
         f = a.n(h),
         g = a(1798),
         j = a(6985),
-        p = a.n(j);
-      function w(e) {
+        w = a.n(j);
+      function p(e) {
         let { lang: t, siteConfig: a } = e,
           { t: n } = (0, g.$G)("navbar");
         return (0, s.jsx)("nav", {
@@ -316,7 +316,7 @@
             "tw-bg-white/95",
             "tw-shadow",
             "tw-shadow-black/25",
-            p().navBar,
+            w().navBar,
           ),
           children: (0, s.jsxs)("div", {
             className: "container-fluid px-md-5",
@@ -410,7 +410,7 @@
         return (0, s.jsxs)(s.Fragment, {
           children: [
             (0, s.jsx)(l, {}),
-            (0, s.jsx)(w, { siteConfig: n, lang: a }),
+            (0, s.jsx)(p, { siteConfig: n, lang: a }),
             t,
             (0, s.jsx)(u, { siteConfig: n }),
           ],
@@ -633,8 +633,8 @@
       var f = a(6050),
         g = a(1734),
         j = a(5853),
-        p = a(3260),
-        w = a.n(p),
+        w = a(3260),
+        p = a.n(w),
         v = !0,
         b = function (e) {
           let { postData: t, siteConfig: a } = e,
@@ -684,7 +684,7 @@
                     children: [
                       t.tocHtml &&
                         (0, s.jsx)("nav", {
-                          className: i()(w().toc, "col-12 col-lg-3 order-lg-2"),
+                          className: i()(p().toc, "col-12 col-lg-3 order-lg-2"),
                           dangerouslySetInnerHTML: { __html: t.tocHtml },
                         }),
                       t.isLegacy
@@ -697,7 +697,7 @@
                           })
                         : (0, s.jsx)("article", {
                             className: i()(
-                              w().content,
+                              p().content,
                               "col-12 col-lg-9 order-lg-1",
                             ),
                             dangerouslySetInnerHTML: { __html: t.articleHtml },
