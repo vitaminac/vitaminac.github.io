@@ -1,0 +1,938 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="content-language" content="en" />
+    <link rel="icon" href="/favicon.ico" />
+    <title>Embedded System and Real-Time Computation</title>
+    <meta name="og:title" content="Embedded System and Real-Time Computation" />
+    <meta name="author" content="Gao" />
+    <meta name="keywords" content="Embedded System,Real-Time Computation" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="next-head-count" content="10" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css"
+      integrity="sha384-ZPe7yZ91iWxYumsBEOn7ieg8q/o+qh/hQpSaPow8T6BwALcXSCS6C6fSRPIAnTQs"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+      integrity="sha512-hasIneQUHlh06VNBe7f6ZcHmeRTLIaQWFd43YriJ0UND19bvYRauxthDg8E4eVNPm9bRUhr5JGeqH7FRFXQu5g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="preload"
+      href="/_next/static/css/476137c6413f10f9.css"
+      as="style"
+    />
+    <link
+      rel="stylesheet"
+      href="/_next/static/css/476137c6413f10f9.css"
+      data-n-g=""
+    />
+    <link
+      rel="preload"
+      href="/_next/static/css/7864c11838d6b072.css"
+      as="style"
+    />
+    <link
+      rel="stylesheet"
+      href="/_next/static/css/7864c11838d6b072.css"
+      data-n-p=""
+    />
+    <noscript data-n-css=""></noscript>
+    <script
+      defer=""
+      nomodule=""
+      src="/_next/static/chunks/polyfills-42372ed130431b0a.js"
+    ></script>
+    <script src="/_next/static/chunks/webpack.js" defer=""></script>
+    <script src="/_next/static/chunks/framework.js" defer=""></script>
+    <script src="/_next/static/chunks/main.js" defer=""></script>
+    <script src="/_next/static/chunks/pages/_app.js" defer=""></script>
+    <script src="/_next/static/chunks/367.js" defer=""></script>
+    <script src="/_next/static/chunks/503.js" defer=""></script>
+    <script src="/_next/static/chunks/287.js" defer=""></script>
+    <script
+      src="/_next/static/chunks/pages/posts/%5Bslug%5D.js"
+      defer=""
+    ></script>
+    <script src="/_next/static/fixed/_buildManifest.js" defer=""></script>
+    <script src="/_next/static/fixed/_ssgManifest.js" defer=""></script>
+  </head>
+  <body>
+    <div id="__next">
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+        crossorigin="anonymous"
+      />
+      <nav
+        class="navbar navbar-expand-md navbar-light sticky-top NavigationBar_navBar__fSiIq tw-bg-white/95 tw-shadow tw-shadow-black/25"
+      >
+        <div class="container-fluid px-md-5">
+          <div class="navbar-brand animate__animated animate__pulse">
+            <span
+              class="tw-rounded tw-bg-black tw-p-1 tw-text-xl tw-font-medium tw-text-white"
+              >Gao&#x27;s blog</span
+            >
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="navbar-collapse collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="/posts/langs/en/pagination/1/"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="/posts/langs/en/tags/"
+                  >Tags</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  >Language</a
+                >
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li>
+                    <a class="dropdown-item" href="/posts/langs/en/">English</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/posts/langs/es/">Spanish</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/posts/langs/zh/">Chinese</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <main class="container">
+        <header
+          class="tw-relative tw-flex tw-h-96 tw-w-screen tw-flex-col tw-content-center tw-justify-center tw-bg-cover tw-bg-center tw-bg-no-repeat tw-text-center tw-text-white"
+          style="
+            background-image: url(/_next/static/media/default-post-preview.c96b099a.jpeg);
+            left: calc(50% - 50vw);
+          "
+        >
+          <h1>Embedded System and Real-Time Computation</h1>
+          <p>Author: Gao</p>
+          <span
+            ><i class="fa-regular fa-calendar"></i
+            ><time class="tw-pl-1.5" datetime="2020-11-04 12:50:58"
+              >November 4, 2020</time
+            ></span
+          >
+          <section class="tw-mt-3 tw-text-center">
+            <p>Tags<!-- -->:</p>
+            <ul class="tw-p-0">
+              <li class="tw-inline tw-px-1">
+                <a
+                  class="tw-m-0.5 tw-inline-block tw-rounded tw-border tw-border-solid tw-border-white tw-bg-neutral-300 tw-px-2 tw-text-sm tw-leading-6 tw-text-white tw-no-underline hover:tw-bg-sky-300"
+                  href="/posts/langs/en/tags/Embedded%20System/"
+                  >Embedded System</a
+                >
+              </li>
+              <li class="tw-inline tw-px-1">
+                <a
+                  class="tw-m-0.5 tw-inline-block tw-rounded tw-border tw-border-solid tw-border-white tw-bg-neutral-300 tw-px-2 tw-text-sm tw-leading-6 tw-text-white tw-no-underline hover:tw-bg-sky-300"
+                  href="/posts/langs/en/tags/Real-Time%20Computation/"
+                  >Real-Time Computation</a
+                >
+              </li>
+            </ul>
+          </section>
+        </header>
+        <div class="row">
+          <nav class="Post_toc__TAzIW col-12 col-lg-3 order-lg-2">
+            <ol>
+              <li><a href="#Definition">Definition</a></li>
+              <li><a href="#Characteristics">Characteristics</a></li>
+              <li><a href="#RAMS">RAMS</a></li>
+              <li>
+                <a href="#Embedded-System-Design">Embedded System Design</a>
+              </li>
+              <li><a href="#Development">Development</a></li>
+              <li>
+                <a href="#Real-time-Computing">Real-time Computing</a>
+                <ol>
+                  <li><a href="#Activation">Activation</a></li>
+                  <li><a href="#Time-to-Response">Time to Response</a></li>
+                  <li>
+                    <a href="#Temporal-Requirement">Temporal Requirement</a>
+                  </li>
+                  <li>
+                    <a href="#Temporal-Determinism">Temporal Determinism</a>
+                  </li>
+                  <li><a href="#Fault-Tolerance">Fault Tolerance</a></li>
+                </ol>
+              </li>
+              <li>
+                <a href="#Software-Hardware-Co-Design"
+                  >Software Hardware Co-Design</a
+                >
+              </li>
+              <li><a href="#Simulink">Simulink</a></li>
+              <li>
+                <a href="#Java-for-Embedded-System">Java for Embedded System</a>
+              </li>
+              <li>
+                <a href="#MMIO-Memory-Mapped-IO">MMIO (Memory-Mapped I/O)</a>
+              </li>
+              <li><a href="#Reference">Reference</a></li>
+            </ol>
+          </nav>
+          <article class="Post_content__QBxez col-12 col-lg-9 order-lg-1">
+            <h2 id="Definition">
+              Definition<a aria-hidden="true" tabindex="-1" href="#Definition"
+                ><i class="fa-solid fa-link"></i
+              ></a>
+            </h2>
+            <p>
+              An embedded system is a computer system is embedded as part of a
+              complete device.
+            </p>
+            <h2 id="Characteristics">
+              Characteristics<a
+                aria-hidden="true"
+                tabindex="-1"
+                href="#Characteristics"
+                ><i class="fa-solid fa-link"></i
+              ></a>
+            </h2>
+            <ul>
+              <li>It has limited resources</li>
+              <li>
+                It has peripheral devices that has a dedicated function within a
+                larger mechanical or electrical system.
+              </li>
+              <li>
+                It typically interacts, supervises and controls physical
+                operations of the machine that it is embedded within.
+              </li>
+              <li>
+                It often has real-time computing constraints<!-- -->
+                <ul>
+                  <li>It must react within a time limit.</li>
+                </ul>
+              </li>
+              <li><a href="#Temporal-Determinism">temporal determinism</a></li>
+            </ul>
+            <h2 id="RAMS">
+              RAMS<a aria-hidden="true" tabindex="-1" href="#RAMS"
+                ><i class="fa-solid fa-link"></i
+              ></a>
+            </h2>
+            <ul>
+              <li>
+                Reliability<!-- -->
+                <ul>
+                  <li>MTTF (mean time to failure)</li>
+                </ul>
+              </li>
+              <li>Availability</li>
+              <li>
+                Maintainability<!-- -->
+                <ul>
+                  <li>MTTR (mean time to recovery)</li>
+                </ul>
+              </li>
+              <li>Safety</li>
+            </ul>
+            <span class="katex-display"
+              ><span class="katex"
+                ><span class="katex-mathml"
+                  ><math
+                    xmlns="http://www.w3.org/1998/Math/MathML"
+                    display="block"
+                    ><semantics
+                      ><mrow
+                        ><mtext>availability</mtext><mo>=</mo
+                        ><mfrac
+                          ><mrow><mi>M</mi><mi>T</mi><mi>T</mi><mi>F</mi></mrow
+                          ><mrow
+                            ><mi>M</mi><mi>T</mi><mi>T</mi><mi>F</mi><mo>+</mo
+                            ><mi>M</mi><mi>T</mi><mi>T</mi><mi>R</mi></mrow
+                          ></mfrac
+                        ><mo>=</mo
+                        ><mfrac
+                          ><mrow><mi>M</mi><mi>T</mi><mi>T</mi><mi>F</mi></mrow
+                          ><mrow
+                            ><mi>M</mi><mi>T</mi><mi>B</mi><mi>F</mi></mrow
+                          ></mfrac
+                        ></mrow
+                      ><annotation encoding="application/x-tex"
+                        >\text{availability} = \frac{MTTF}{MTTF + MTTR} =
+                        \frac{MTTF}{MTBF}</annotation
+                      ></semantics
+                    ></math
+                  ></span
+                ><span class="katex-html" aria-hidden="true"
+                  ><span class="base"
+                    ><span
+                      class="strut"
+                      style="height: 0.8889em; vertical-align: -0.1944em"
+                    ></span
+                    ><span class="mord text"
+                      ><span class="mord">availability</span></span
+                    ><span class="mspace" style="margin-right: 0.2778em"></span
+                    ><span class="mrel">=</span
+                    ><span
+                      class="mspace"
+                      style="margin-right: 0.2778em"
+                    ></span></span
+                  ><span class="base"
+                    ><span
+                      class="strut"
+                      style="height: 2.1297em; vertical-align: -0.7693em"
+                    ></span
+                    ><span class="mord"
+                      ><span class="mopen nulldelimiter"></span
+                      ><span class="mfrac"
+                        ><span class="vlist-t vlist-t2"
+                          ><span class="vlist-r"
+                            ><span class="vlist" style="height: 1.3603em"
+                              ><span style="top: -2.314em"
+                                ><span class="pstrut" style="height: 3em"></span
+                                ><span class="mord"
+                                  ><span
+                                    class="mord mathnormal"
+                                    style="margin-right: 0.13889em"
+                                    >MTTF</span
+                                  ><span
+                                    class="mspace"
+                                    style="margin-right: 0.2222em"
+                                  ></span
+                                  ><span class="mbin">+</span
+                                  ><span
+                                    class="mspace"
+                                    style="margin-right: 0.2222em"
+                                  ></span
+                                  ><span
+                                    class="mord mathnormal"
+                                    style="margin-right: 0.00773em"
+                                    >MTTR</span
+                                  ></span
+                                ></span
+                              ><span style="top: -3.23em"
+                                ><span class="pstrut" style="height: 3em"></span
+                                ><span
+                                  class="frac-line"
+                                  style="border-bottom-width: 0.04em"
+                                ></span></span
+                              ><span style="top: -3.677em"
+                                ><span class="pstrut" style="height: 3em"></span
+                                ><span class="mord"
+                                  ><span
+                                    class="mord mathnormal"
+                                    style="margin-right: 0.13889em"
+                                    >MTTF</span
+                                  ></span
+                                ></span
+                              ></span
+                            ><span class="vlist-s">​</span></span
+                          ><span class="vlist-r"
+                            ><span class="vlist" style="height: 0.7693em"
+                              ><span></span></span></span></span></span
+                      ><span class="mclose nulldelimiter"></span></span
+                    ><span class="mspace" style="margin-right: 0.2778em"></span
+                    ><span class="mrel">=</span
+                    ><span
+                      class="mspace"
+                      style="margin-right: 0.2778em"
+                    ></span></span
+                  ><span class="base"
+                    ><span
+                      class="strut"
+                      style="height: 2.0463em; vertical-align: -0.686em"
+                    ></span
+                    ><span class="mord"
+                      ><span class="mopen nulldelimiter"></span
+                      ><span class="mfrac"
+                        ><span class="vlist-t vlist-t2"
+                          ><span class="vlist-r"
+                            ><span class="vlist" style="height: 1.3603em"
+                              ><span style="top: -2.314em"
+                                ><span class="pstrut" style="height: 3em"></span
+                                ><span class="mord"
+                                  ><span
+                                    class="mord mathnormal"
+                                    style="margin-right: 0.13889em"
+                                    >MTBF</span
+                                  ></span
+                                ></span
+                              ><span style="top: -3.23em"
+                                ><span class="pstrut" style="height: 3em"></span
+                                ><span
+                                  class="frac-line"
+                                  style="border-bottom-width: 0.04em"
+                                ></span></span
+                              ><span style="top: -3.677em"
+                                ><span class="pstrut" style="height: 3em"></span
+                                ><span class="mord"
+                                  ><span
+                                    class="mord mathnormal"
+                                    style="margin-right: 0.13889em"
+                                    >MTTF</span
+                                  ></span
+                                ></span
+                              ></span
+                            ><span class="vlist-s">​</span></span
+                          ><span class="vlist-r"
+                            ><span class="vlist" style="height: 0.686em"
+                              ><span></span></span></span></span></span
+                      ><span
+                        class="mclose nulldelimiter"
+                      ></span></span></span></span></span
+            ></span>
+            <h2 id="Embedded-System-Design">
+              Embedded System Design<a
+                aria-hidden="true"
+                tabindex="-1"
+                href="#Embedded-System-Design"
+                ><i class="fa-solid fa-link"></i
+              ></a>
+            </h2>
+            <ul>
+              <li>Functional and analytical</li>
+              <li>Concurrency</li>
+              <li>Time-constrained</li>
+              <li>Architectural</li>
+            </ul>
+            <h2 id="Development">
+              Development<a aria-hidden="true" tabindex="-1" href="#Development"
+                ><i class="fa-solid fa-link"></i
+              ></a>
+            </h2>
+            <ul>
+              <li>Multidisciplinary</li>
+              <li>Development specific hardware and firmware</li>
+            </ul>
+            <h2 id="Real-time-Computing">
+              Real-time Computing<a
+                aria-hidden="true"
+                tabindex="-1"
+                href="#Real-time-Computing"
+                ><i class="fa-solid fa-link"></i
+              ></a>
+            </h2>
+            <p>
+              Real&#x27;time programs must guarantee response
+              <strong>within specified time constraints</strong>.
+            </p>
+            <h3 id="Activation">
+              Activation<a aria-hidden="true" tabindex="-1" href="#Activation"
+                ><i class="fa-solid fa-link"></i
+              ></a>
+            </h3>
+            <ul>
+              <li>periodic</li>
+              <li>
+                aperiodic<!-- -->
+                <ul>
+                  <li>sporadic - minimum separation T between activations</li>
+                  <li>stochastic</li>
+                </ul>
+              </li>
+            </ul>
+            <h3 id="Time-to-Response">
+              Time to Response<a
+                aria-hidden="true"
+                tabindex="-1"
+                href="#Time-to-Response"
+                ><i class="fa-solid fa-link"></i
+              ></a>
+            </h3>
+            <ul>
+              <li>Absolute</li>
+              <li>Relative</li>
+            </ul>
+            <h3 id="Temporal-Requirement">
+              Temporal Requirement<a
+                aria-hidden="true"
+                tabindex="-1"
+                href="#Temporal-Requirement"
+                ><i class="fa-solid fa-link"></i
+              ></a>
+            </h3>
+            <ul>
+              <li>
+                Hard Real-Time<!-- -->
+                <ul>
+                  <li>all actions must comply time constraints</li>
+                </ul>
+              </li>
+              <li>
+                Soft Real-Time<!-- -->
+                <ul>
+                  <li>deadlines may be missed from time to time</li>
+                  <li>the time limit of the response decreases over time</li>
+                </ul>
+              </li>
+              <li>
+                Firm Real-Time<!-- -->
+                <ul>
+                  <li>deadlines may occasionally be missed</li>
+                  <li>a late answer is useless</li>
+                </ul>
+              </li>
+              <li>
+                Within the same system there may be tasks with different types
+                of temporal requirements
+              </li>
+            </ul>
+            <h3 id="Temporal-Determinism">
+              Temporal Determinism<a
+                aria-hidden="true"
+                tabindex="-1"
+                href="#Temporal-Determinism"
+                ><i class="fa-solid fa-link"></i
+              ></a>
+            </h3>
+            <ul>
+              <li>
+                Concurrency<!-- -->
+                <ul>
+                  <li>
+                    Different physical variable can evolve simultaneously.
+                  </li>
+                </ul>
+              </li>
+              <li>The response time of each output is known.</li>
+              <li>
+                The scheduling of the processor use should allow to comply the
+                response time.
+              </li>
+              <li>Analyze temporal behavior</li>
+            </ul>
+            <h3 id="Fault-Tolerance">
+              Fault Tolerance<a
+                aria-hidden="true"
+                tabindex="-1"
+                href="#Fault-Tolerance"
+                ><i class="fa-solid fa-link"></i
+              ></a>
+            </h3>
+            <ul>
+              <li>
+                Failure: deviation of the behavior of a system from its
+                specification
+              </li>
+              <li>Errors: Internal state of failure</li>
+              <li>Faults: the mechanical or algorithmic causes of errors</li>
+              <li>Faults -&gt; Error -&gt; Failure</li>
+              <li>
+                Reliability<!-- -->
+                <ul>
+                  <li>
+                    Failure Prevention<!-- -->
+                    <ul>
+                      <li>Avoid failure with proper design and development.</li>
+                      <li>Fault elimination with verification and test.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    Fault Tolerance<!-- -->
+                    <ul>
+                      <li>
+                        Fail Operational<!-- -->
+                        <ul>
+                          <li>
+                            the system continues to work at least for a time
+                            without losing functionality or performance.
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        Fail Soft<!-- -->
+                        <ul>
+                          <li>
+                            The system continues to function with a partial loss
+                            of functionality or performance until the fault is
+                            repaired.
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        Fail Safe<!-- -->
+                        <ul>
+                          <li>
+                            the system is stopped in a state that ensures the
+                            integrity of the environment until the fault is
+                            repaired.
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        Redundancy: Duplication of critical components or
+                        function to detect faults and recover correct behavior.<!-- -->
+                        <ul>
+                          <li>
+                            Static Redundancy: Is always active, the output is
+                            the output of the majority<!-- -->
+                            <ul>
+                              <li>Duplication of hardware</li>
+                              <li>
+                                Different of implementation of same
+                                specification
+                              </li>
+                            </ul>
+                          </li>
+                          <li>
+                            Dynamic Redundancy<!-- -->
+                            <ul>
+                              <li>Cold Redundancy</li>
+                              <li>Hot Redundancy</li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <h2 id="Software-Hardware-Co-Design">
+              Software Hardware Co-Design<a
+                aria-hidden="true"
+                tabindex="-1"
+                href="#Software-Hardware-Co-Design"
+                ><i class="fa-solid fa-link"></i
+              ></a>
+            </h2>
+            <p>
+              System design derives an abstract system representation from
+              requirements to a model, using this abstraction allow reuse and
+              adaptation of component libraries, but this separation of software
+              from physicality doesn&#x27;t work for embedded system. Embedded
+              systems design requires a more holistic approach that integrates
+              from hardware and software design, analysis and verification.
+              Configurable hardware platforms can integrate a larger number of
+              components (often are ac hoc), the software and hardware are not
+              designed separately but together.
+            </p>
+            <p>
+              Embedded system is subject to physical constraints. Co-design
+              allow to gain the control of the interplay between computation
+              reaction constraints to a physical environment and execution
+              constrains bound to hardware or implementation to meet a given set
+              of requirements on a given set of requirements on a given
+              implementation platform.
+            </p>
+            <h2 id="Simulink">
+              Simulink<a aria-hidden="true" tabindex="-1" href="#Simulink"
+                ><i class="fa-solid fa-link"></i
+              ></a>
+            </h2>
+            <p>
+              We use Simulink to design la relationship between input(feedback
+              signals, periodic input) and output(control signal).
+            </p>
+            <h2 id="Java-for-Embedded-System">
+              Java for Embedded System<a
+                aria-hidden="true"
+                tabindex="-1"
+                href="#Java-for-Embedded-System"
+                ><i class="fa-solid fa-link"></i
+              ></a>
+            </h2>
+            <ul>
+              <li>
+                Pros<!-- -->
+                <ul>
+                  <li>Dynamic Object</li>
+                  <li>Useful APIs</li>
+                  <li>Portable</li>
+                </ul>
+              </li>
+              <li>
+                Cons<!-- -->
+                <ul>
+                  <li>Not suitable for real-time embedded systems.</li>
+                  <li>Concurrent task scheduling is not defined.</li>
+                  <li>Synchronization mechanisms are inadequate.</li>
+                  <li>Dynamic memory introduces uncertainty.</li>
+                  <li>Time measurement is not accurate.</li>
+                  <li>Other problem with exception y concurrency.</li>
+                </ul>
+              </li>
+            </ul>
+            <h2 id="MMIO-Memory-Mapped-IO">
+              MMIO (Memory-Mapped I/O)<a
+                aria-hidden="true"
+                tabindex="-1"
+                href="#MMIO-Memory-Mapped-IO"
+                ><i class="fa-solid fa-link"></i
+              ></a>
+            </h2>
+            <p>
+              Memory-mapped I/O uses the same address space and instruction to
+              address both memory and I/O devices.
+            </p>
+            <h2 id="Reference">
+              Reference<a aria-hidden="true" tabindex="-1" href="#Reference"
+                ><i class="fa-solid fa-link"></i
+              ></a>
+            </h2>
+            <ul>
+              <li>
+                <a
+                  href="https://en.wikipedia.org/wiki/Embedded_system"
+                  rel="nofollow"
+                  target="_blank"
+                  >https://en.wikipedia.org/wiki/Embedded_system</a
+                >
+              </li>
+            </ul>
+          </article>
+        </div>
+        <aside></aside>
+      </main>
+      <footer class="tw-text-center tw-text-gray-400">
+        <div class="row justify-content-center">
+          <ul class="list-inline text-center tw-text-stone-700">
+            <li class="list-inline-item">
+              <a
+                class="tw-text-stone-700"
+                target="_blank"
+                href="https://www.linkedin.com/in/shuxig"
+                ><span class="fa-stack fa-lg"
+                  ><i class="fa fa-circle fa-stack-2x"></i
+                  ><i
+                    class="fab fa-linkedin-in fa-stack-1x fa-inverse"
+                  ></i></span
+              ></a>
+            </li>
+            <li class="list-inline-item">
+              <a
+                class="tw-text-stone-700"
+                target="_blank"
+                href="https://github.com/vitaminac"
+                ><span class="fa-stack fa-lg"
+                  ><i class="fa fa-circle fa-stack-2x"></i
+                  ><i class="fab fa-github fa-stack-1x fa-inverse"></i></span
+              ></a>
+            </li>
+            <li class="list-inline-item">
+              <a
+                class="tw-text-stone-700"
+                target="_blank"
+                href="https://gist.github.com/vitaminac"
+                ><span class="fa-stack fa-lg"
+                  ><i class="fa fa-circle fa-stack-2x"></i
+                  ><i
+                    class="fab fa-github-square fa-stack-1x fa-inverse"
+                  ></i></span
+              ></a>
+            </li>
+            <li class="list-inline-item">
+              <a
+                class="tw-text-stone-700"
+                target="_blank"
+                href="https://gitlab.com/vitaminac"
+                ><span class="fa-stack fa-lg"
+                  ><i class="fa fa-circle fa-stack-2x"></i
+                  ><i class="fab fa-gitlab fa-stack-1x fa-inverse"></i></span
+              ></a>
+            </li>
+            <li class="list-inline-item">
+              <a
+                class="tw-text-stone-700"
+                target="_blank"
+                href="https://www.xiaohongshu.com/user/profile/622dca68000000001000c9b2"
+                ><span class="fa-stack fa-lg"
+                  ><img
+                    alt="小红书"
+                    loading="lazy"
+                    width="256"
+                    height="256"
+                    decoding="async"
+                    data-nimg="1"
+                    class="tw-max-h-full tw-max-w-full"
+                    style="color: transparent"
+                    src="/_next/static/media/redbook.d1759325.svg" /></span
+              ></a>
+            </li>
+            <li class="list-inline-item">
+              <a
+                class="tw-text-stone-700"
+                target="_blank"
+                href="https://www.kaggle.com/dalao1002"
+                ><span class="fa-stack fa-lg"
+                  ><i class="fa fa-circle fa-stack-2x"></i
+                  ><i class="fab fa-kaggle fa-stack-1x fa-inverse"></i></span
+              ></a>
+            </li>
+            <li class="list-inline-item">
+              <a
+                class="tw-text-stone-700"
+                target="_blank"
+                href="https://leetcode.com/dalao1002"
+                ><span class="fa-stack fa-lg"
+                  ><i class="fa fa-circle fa-stack-2x"></i
+                  ><i class="fas fa-code fa-stack-1x fa-inverse"></i></span
+              ></a>
+            </li>
+            <li class="list-inline-item">
+              <a
+                class="tw-text-stone-700"
+                target="_blank"
+                href="https://stackexchange.com/users/13825906"
+                ><span class="fa-stack fa-lg"
+                  ><i class="fa fa-circle fa-stack-2x"></i
+                  ><i
+                    class="fab fa-stack-overflow fa-stack-1x fa-inverse"
+                  ></i></span
+              ></a>
+            </li>
+            <li class="list-inline-item">
+              <a
+                class="tw-text-stone-700"
+                target="_blank"
+                href="mailto:dalao1002@gmail.com?subject=From my blog&amp;body=Hi,I found this website very useful"
+                ><span class="fa-stack fa-lg"
+                  ><i class="fa fa-circle fa-stack-2x"></i
+                  ><i class="fas fa-envelope fa-stack-1x fa-inverse"></i></span
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <img
+          alt="QR"
+          loading="lazy"
+          width="1710"
+          height="624"
+          decoding="async"
+          data-nimg="1"
+          class="tw-mx-auto tw-max-w-full tw-object-contain tw-object-center lg:tw-max-w-xl"
+          style="color: transparent"
+          src="/_next/static/media/QR.b48259ea.png"
+        />
+        <p>Copyright © Gao&#x27;s blog 2025</p>
+      </footer>
+    </div>
+    <script id="__NEXT_DATA__" type="application/json">
+      {
+        "props": {
+          "pageProps": {
+            "postData": {
+              "slug": "embedded",
+              "tags": ["Embedded System", "Real-Time Computation"],
+              "isDraft": false,
+              "isArchived": true,
+              "title": "Embedded System and Real-Time Computation",
+              "date": "2020-11-04 12:50:58",
+              "isLegacy": false,
+              "lang": "en",
+              "tocHtml": "\u003col\u003e\n\u003cli\u003e\u003ca href=\"#Definition\"\u003eDefinition\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Characteristics\"\u003eCharacteristics\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#RAMS\"\u003eRAMS\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Embedded-System-Design\"\u003eEmbedded System Design\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Development\"\u003eDevelopment\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Real-time-Computing\"\u003eReal-time Computing\u003c/a\u003e\n\u003col\u003e\n\u003cli\u003e\u003ca href=\"#Activation\"\u003eActivation\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Time-to-Response\"\u003eTime to Response\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Temporal-Requirement\"\u003eTemporal Requirement\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Temporal-Determinism\"\u003eTemporal Determinism\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Fault-Tolerance\"\u003eFault Tolerance\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Software-Hardware-Co-Design\"\u003eSoftware Hardware Co-Design\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Simulink\"\u003eSimulink\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Java-for-Embedded-System\"\u003eJava for Embedded System\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#MMIO-Memory-Mapped-IO\"\u003eMMIO (Memory-Mapped I/O)\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Reference\"\u003eReference\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e",
+              "articleHtml": "\u003ch2 id=\"Definition\"\u003eDefinition\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Definition\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003eAn embedded system is a computer system is embedded as part of a complete device.\u003c/p\u003e\n\u003ch2 id=\"Characteristics\"\u003eCharacteristics\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Characteristics\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003eIt has limited resources\u003c/li\u003e\n\u003cli\u003eIt has peripheral devices that has a dedicated function within a larger mechanical or electrical system.\u003c/li\u003e\n\u003cli\u003eIt typically interacts, supervises and controls physical operations of the machine that it is embedded within.\u003c/li\u003e\n\u003cli\u003eIt often has real-time computing constraints\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003eIt must react within a time limit.\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Temporal-Determinism\"\u003etemporal determinism\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"RAMS\"\u003eRAMS\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#RAMS\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003eReliability\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003eMTTF (mean time to failure)\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eAvailability\u003c/li\u003e\n\u003cli\u003eMaintainability\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003eMTTR (mean time to recovery)\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eSafety\u003c/li\u003e\n\u003c/ul\u003e\n\u003cspan class=\"katex-display\"\u003e\u003cspan class=\"katex\"\u003e\u003cspan class=\"katex-mathml\"\u003e\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"\u003e\u003csemantics\u003e\u003cmrow\u003e\u003cmtext\u003eavailability\u003c/mtext\u003e\u003cmo\u003e=\u003c/mo\u003e\u003cmfrac\u003e\u003cmrow\u003e\u003cmi\u003eM\u003c/mi\u003e\u003cmi\u003eT\u003c/mi\u003e\u003cmi\u003eT\u003c/mi\u003e\u003cmi\u003eF\u003c/mi\u003e\u003c/mrow\u003e\u003cmrow\u003e\u003cmi\u003eM\u003c/mi\u003e\u003cmi\u003eT\u003c/mi\u003e\u003cmi\u003eT\u003c/mi\u003e\u003cmi\u003eF\u003c/mi\u003e\u003cmo\u003e+\u003c/mo\u003e\u003cmi\u003eM\u003c/mi\u003e\u003cmi\u003eT\u003c/mi\u003e\u003cmi\u003eT\u003c/mi\u003e\u003cmi\u003eR\u003c/mi\u003e\u003c/mrow\u003e\u003c/mfrac\u003e\u003cmo\u003e=\u003c/mo\u003e\u003cmfrac\u003e\u003cmrow\u003e\u003cmi\u003eM\u003c/mi\u003e\u003cmi\u003eT\u003c/mi\u003e\u003cmi\u003eT\u003c/mi\u003e\u003cmi\u003eF\u003c/mi\u003e\u003c/mrow\u003e\u003cmrow\u003e\u003cmi\u003eM\u003c/mi\u003e\u003cmi\u003eT\u003c/mi\u003e\u003cmi\u003eB\u003c/mi\u003e\u003cmi\u003eF\u003c/mi\u003e\u003c/mrow\u003e\u003c/mfrac\u003e\u003c/mrow\u003e\u003cannotation encoding=\"application/x-tex\"\u003e\\text{availability} = \\frac{MTTF}{MTTF + MTTR} = \\frac{MTTF}{MTBF}\u003c/annotation\u003e\u003c/semantics\u003e\u003c/math\u003e\u003c/span\u003e\u003cspan class=\"katex-html\" aria-hidden=\"true\"\u003e\u003cspan class=\"base\"\u003e\u003cspan class=\"strut\" style=\"height:0.8889em;vertical-align:-0.1944em\"\u003e\u003c/span\u003e\u003cspan class=\"mord text\"\u003e\u003cspan class=\"mord\"\u003eavailability\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"mspace\" style=\"margin-right:0.2778em\"\u003e\u003c/span\u003e\u003cspan class=\"mrel\"\u003e=\u003c/span\u003e\u003cspan class=\"mspace\" style=\"margin-right:0.2778em\"\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"base\"\u003e\u003cspan class=\"strut\" style=\"height:2.1297em;vertical-align:-0.7693em\"\u003e\u003c/span\u003e\u003cspan class=\"mord\"\u003e\u003cspan class=\"mopen nulldelimiter\"\u003e\u003c/span\u003e\u003cspan class=\"mfrac\"\u003e\u003cspan class=\"vlist-t vlist-t2\"\u003e\u003cspan class=\"vlist-r\"\u003e\u003cspan class=\"vlist\" style=\"height:1.3603em\"\u003e\u003cspan style=\"top:-2.314em\"\u003e\u003cspan class=\"pstrut\" style=\"height:3em\"\u003e\u003c/span\u003e\u003cspan class=\"mord\"\u003e\u003cspan class=\"mord mathnormal\" style=\"margin-right:0.13889em\"\u003eMTTF\u003c/span\u003e\u003cspan class=\"mspace\" style=\"margin-right:0.2222em\"\u003e\u003c/span\u003e\u003cspan class=\"mbin\"\u003e+\u003c/span\u003e\u003cspan class=\"mspace\" style=\"margin-right:0.2222em\"\u003e\u003c/span\u003e\u003cspan class=\"mord mathnormal\" style=\"margin-right:0.00773em\"\u003eMTTR\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan style=\"top:-3.23em\"\u003e\u003cspan class=\"pstrut\" style=\"height:3em\"\u003e\u003c/span\u003e\u003cspan class=\"frac-line\" style=\"border-bottom-width:0.04em\"\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan style=\"top:-3.677em\"\u003e\u003cspan class=\"pstrut\" style=\"height:3em\"\u003e\u003c/span\u003e\u003cspan class=\"mord\"\u003e\u003cspan class=\"mord mathnormal\" style=\"margin-right:0.13889em\"\u003eMTTF\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"vlist-s\"\u003e​\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"vlist-r\"\u003e\u003cspan class=\"vlist\" style=\"height:0.7693em\"\u003e\u003cspan\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"mclose nulldelimiter\"\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"mspace\" style=\"margin-right:0.2778em\"\u003e\u003c/span\u003e\u003cspan class=\"mrel\"\u003e=\u003c/span\u003e\u003cspan class=\"mspace\" style=\"margin-right:0.2778em\"\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"base\"\u003e\u003cspan class=\"strut\" style=\"height:2.0463em;vertical-align:-0.686em\"\u003e\u003c/span\u003e\u003cspan class=\"mord\"\u003e\u003cspan class=\"mopen nulldelimiter\"\u003e\u003c/span\u003e\u003cspan class=\"mfrac\"\u003e\u003cspan class=\"vlist-t vlist-t2\"\u003e\u003cspan class=\"vlist-r\"\u003e\u003cspan class=\"vlist\" style=\"height:1.3603em\"\u003e\u003cspan style=\"top:-2.314em\"\u003e\u003cspan class=\"pstrut\" style=\"height:3em\"\u003e\u003c/span\u003e\u003cspan class=\"mord\"\u003e\u003cspan class=\"mord mathnormal\" style=\"margin-right:0.13889em\"\u003eMTBF\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan style=\"top:-3.23em\"\u003e\u003cspan class=\"pstrut\" style=\"height:3em\"\u003e\u003c/span\u003e\u003cspan class=\"frac-line\" style=\"border-bottom-width:0.04em\"\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan style=\"top:-3.677em\"\u003e\u003cspan class=\"pstrut\" style=\"height:3em\"\u003e\u003c/span\u003e\u003cspan class=\"mord\"\u003e\u003cspan class=\"mord mathnormal\" style=\"margin-right:0.13889em\"\u003eMTTF\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"vlist-s\"\u003e​\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"vlist-r\"\u003e\u003cspan class=\"vlist\" style=\"height:0.686em\"\u003e\u003cspan\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"mclose nulldelimiter\"\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\n\u003ch2 id=\"Embedded-System-Design\"\u003eEmbedded System Design\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Embedded-System-Design\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003eFunctional and analytical\u003c/li\u003e\n\u003cli\u003eConcurrency\u003c/li\u003e\n\u003cli\u003eTime-constrained\u003c/li\u003e\n\u003cli\u003eArchitectural\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"Development\"\u003eDevelopment\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Development\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003eMultidisciplinary\u003c/li\u003e\n\u003cli\u003eDevelopment specific hardware and firmware\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"Real-time-Computing\"\u003eReal-time Computing\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Real-time-Computing\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003eReal\u0026#x27;time programs must guarantee response \u003cstrong\u003ewithin specified time constraints\u003c/strong\u003e.\u003c/p\u003e\n\u003ch3 id=\"Activation\"\u003eActivation\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Activation\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003eperiodic\u003c/li\u003e\n\u003cli\u003eaperiodic\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003esporadic - minimum separation T between activations\u003c/li\u003e\n\u003cli\u003estochastic\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"Time-to-Response\"\u003eTime to Response\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Time-to-Response\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003eAbsolute\u003c/li\u003e\n\u003cli\u003eRelative\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"Temporal-Requirement\"\u003eTemporal Requirement\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Temporal-Requirement\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003eHard Real-Time\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003eall actions must comply time constraints\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eSoft Real-Time\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003edeadlines may be missed from time to time\u003c/li\u003e\n\u003cli\u003ethe time limit of the response decreases over time\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eFirm Real-Time\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003edeadlines may occasionally be missed\u003c/li\u003e\n\u003cli\u003ea late answer is useless\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eWithin the same system there may be tasks with different types of temporal requirements\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"Temporal-Determinism\"\u003eTemporal Determinism\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Temporal-Determinism\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003eConcurrency\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003eDifferent physical variable can evolve simultaneously.\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eThe response time of each output is known.\u003c/li\u003e\n\u003cli\u003eThe scheduling of the processor use should allow to comply the response time.\u003c/li\u003e\n\u003cli\u003eAnalyze temporal behavior\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"Fault-Tolerance\"\u003eFault Tolerance\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Fault-Tolerance\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003eFailure: deviation of the behavior of a system from its specification\u003c/li\u003e\n\u003cli\u003eErrors: Internal state of failure\u003c/li\u003e\n\u003cli\u003eFaults: the mechanical or algorithmic causes of errors\u003c/li\u003e\n\u003cli\u003eFaults -\u0026gt; Error -\u0026gt; Failure\u003c/li\u003e\n\u003cli\u003eReliability\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003eFailure Prevention\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003eAvoid failure with proper design and development.\u003c/li\u003e\n\u003cli\u003eFault elimination with verification and test.\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eFault Tolerance\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003eFail Operational\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003ethe system continues to work at least for a time without losing functionality or performance.\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eFail Soft\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003eThe system continues to function with a partial loss of functionality or performance until the fault is repaired.\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eFail Safe\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003ethe system is stopped in a state that ensures the integrity of the environment until the fault is repaired.\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eRedundancy: Duplication of critical components or function to detect faults and recover correct behavior.\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003eStatic Redundancy: Is always active, the output is the output of the majority\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003eDuplication of hardware\u003c/li\u003e\n\u003cli\u003eDifferent of implementation of same specification\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eDynamic Redundancy\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003eCold Redundancy\u003c/li\u003e\n\u003cli\u003eHot Redundancy\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"Software-Hardware-Co-Design\"\u003eSoftware Hardware Co-Design\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Software-Hardware-Co-Design\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003eSystem design derives an abstract system representation from requirements to a model, using this abstraction allow reuse and adaptation of component libraries, but this separation of software from physicality doesn\u0026#x27;t work for embedded system. Embedded systems design requires a more holistic approach that integrates from hardware and software design, analysis and verification. Configurable hardware platforms can integrate a larger number of components (often are ac hoc), the software and hardware are not designed separately but together.\u003c/p\u003e\n\u003cp\u003eEmbedded system is subject to physical constraints. Co-design allow to gain the control of the interplay between computation reaction constraints to a physical environment and execution constrains bound to hardware or implementation to meet a given set of requirements on a given set of requirements on a given implementation platform.\u003c/p\u003e\n\u003ch2 id=\"Simulink\"\u003eSimulink\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Simulink\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003eWe use Simulink to design la relationship between input(feedback signals, periodic input) and output(control signal).\u003c/p\u003e\n\u003ch2 id=\"Java-for-Embedded-System\"\u003eJava for Embedded System\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Java-for-Embedded-System\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003ePros\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003eDynamic Object\u003c/li\u003e\n\u003cli\u003eUseful APIs\u003c/li\u003e\n\u003cli\u003ePortable\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eCons\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003eNot suitable for real-time embedded systems.\u003c/li\u003e\n\u003cli\u003eConcurrent task scheduling is not defined.\u003c/li\u003e\n\u003cli\u003eSynchronization mechanisms are inadequate.\u003c/li\u003e\n\u003cli\u003eDynamic memory introduces uncertainty.\u003c/li\u003e\n\u003cli\u003eTime measurement is not accurate.\u003c/li\u003e\n\u003cli\u003eOther problem with exception y concurrency.\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"MMIO-Memory-Mapped-IO\"\u003eMMIO (Memory-Mapped I/O)\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#MMIO-Memory-Mapped-IO\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003eMemory-mapped I/O uses the same address space and instruction to address both memory and I/O devices.\u003c/p\u003e\n\u003ch2 id=\"Reference\"\u003eReference\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Reference\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href=\"https://en.wikipedia.org/wiki/Embedded_system\" rel=\"nofollow\" target=\"_blank\"\u003ehttps://en.wikipedia.org/wiki/Embedded_system\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e"
+            },
+            "lang": "en",
+            "_nextI18Next": {
+              "initialI18nStore": {
+                "en": {
+                  "navbar": {
+                    "Home": "Home",
+                    "Language": "Language",
+                    "Tags": "Tags",
+                    "en": "English",
+                    "es": "Spanish",
+                    "zh": "Chinese"
+                  },
+                  "post-layout": {
+                    "Author": "Author: {{author}}",
+                    "Tags": "Tags"
+                  }
+                }
+              },
+              "initialLocale": "en",
+              "ns": ["navbar", "post-layout"],
+              "userConfig": {
+                "i18n": {
+                  "defaultLocale": "en",
+                  "locales": ["en", "es", "zh"]
+                },
+                "default": {
+                  "i18n": {
+                    "defaultLocale": "en",
+                    "locales": ["en", "es", "zh"]
+                  }
+                }
+              }
+            }
+          },
+          "__N_SSG": true
+        },
+        "page": "/posts/[slug]",
+        "query": { "slug": "embedded" },
+        "buildId": "fixed",
+        "runtimeConfig": {
+          "siteConfig": {
+            "siteAuthor": "Gao",
+            "siteTitle": "Gao's blog",
+            "siteDescription": "Gao's blog",
+            "aboutMe": "see more about me on my Github profile.",
+            "email": "dalao1002@gmail.com",
+            "linkedin": "shuxig",
+            "github": "vitaminac",
+            "gitlab": "vitaminac",
+            "redbook": "622dca68000000001000c9b2",
+            "kaggle": "dalao1002",
+            "leetcode": "dalao1002",
+            "stackexchange": "13825906",
+            "disqusUsername": "blog-vnwybnwkiz",
+            "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+          }
+        },
+        "isFallback": false,
+        "gsp": true,
+        "scriptLoader": []
+      }
+    </script>
+  </body>
+</html>
