@@ -201,190 +201,169 @@
           blurHeight: 0,
         };
       function x(a) {
-        return (0, t.jsx)("div", {
-          className: "row justify-content-center",
-          children: (0, t.jsxs)("ul", {
-            className: "list-inline text-center tw-text-stone-700",
-            children: [
-              (0, t.jsx)("li", {
-                className: "list-inline-item ",
-                children: (0, t.jsx)(r(), {
-                  className: "tw-text-stone-700",
-                  target: "_blank",
-                  href: "https://www.linkedin.com/in/".concat(a.linkedin),
-                  children: (0, t.jsxs)("span", {
-                    className: "fa-stack fa-lg",
-                    children: [
-                      (0, t.jsx)("i", {
-                        className: "fa fa-circle fa-stack-2x",
-                      }),
-                      (0, t.jsx)("i", {
-                        className: "fab fa-linkedin-in fa-stack-1x fa-inverse",
-                      }),
-                    ],
-                  }),
-                }),
-              }),
-              (0, t.jsx)("li", {
-                className: "list-inline-item",
-                children: (0, t.jsx)(r(), {
-                  className: "tw-text-stone-700",
-                  target: "_blank",
-                  href: "https://github.com/".concat(a.github),
-                  children: (0, t.jsxs)("span", {
-                    className: "fa-stack fa-lg",
-                    children: [
-                      (0, t.jsx)("i", {
-                        className: "fa fa-circle fa-stack-2x",
-                      }),
-                      (0, t.jsx)("i", {
-                        className: "fab fa-github fa-stack-1x fa-inverse",
-                      }),
-                    ],
-                  }),
-                }),
-              }),
-              (0, t.jsx)("li", {
-                className: "list-inline-item",
-                children: (0, t.jsx)(r(), {
-                  className: "tw-text-stone-700",
-                  target: "_blank",
-                  href: "https://gist.github.com/".concat(a.github),
-                  children: (0, t.jsxs)("span", {
-                    className: "fa-stack fa-lg",
-                    children: [
-                      (0, t.jsx)("i", {
-                        className: "fa fa-circle fa-stack-2x",
-                      }),
-                      (0, t.jsx)("i", {
-                        className:
-                          "fab fa-github-square fa-stack-1x fa-inverse",
-                      }),
-                    ],
-                  }),
-                }),
-              }),
-              (0, t.jsx)("li", {
-                className: "list-inline-item",
-                children: (0, t.jsx)(r(), {
-                  className: "tw-text-stone-700",
-                  target: "_blank",
-                  href: "https://gitlab.com/".concat(a.gitlab),
-                  children: (0, t.jsxs)("span", {
-                    className: "fa-stack fa-lg",
-                    children: [
-                      (0, t.jsx)("i", {
-                        className: "fa fa-circle fa-stack-2x",
-                      }),
-                      (0, t.jsx)("i", {
-                        className: "fab fa-gitlab fa-stack-1x fa-inverse",
-                      }),
-                    ],
-                  }),
-                }),
-              }),
-              (0, t.jsx)("li", {
-                className: "list-inline-item",
-                children: (0, t.jsx)(r(), {
-                  className: "tw-text-stone-700",
-                  target: "_blank",
-                  href: "https://www.xiaohongshu.com/user/profile/".concat(
-                    a.redbook,
-                  ),
-                  children: (0, t.jsx)("span", {
-                    className: "fa-stack fa-lg",
-                    children: (0, t.jsx)(m.t, {
-                      src: o,
-                      alt: "小红书",
-                      className: "tw-max-h-full tw-max-w-full",
+        return (0, t.jsxs)("ul", {
+          className: "list-inline text-center tw-text-stone-700",
+          children: [
+            (0, t.jsx)("li", {
+              className: "list-inline-item ",
+              children: (0, t.jsx)(r(), {
+                className: "tw-text-stone-700",
+                target: "_blank",
+                href: "https://www.linkedin.com/in/".concat(a.linkedin),
+                children: (0, t.jsxs)("span", {
+                  className: "fa-stack fa-lg",
+                  children: [
+                    (0, t.jsx)("i", { className: "fa fa-circle fa-stack-2x" }),
+                    (0, t.jsx)("i", {
+                      className: "fab fa-linkedin-in fa-stack-1x fa-inverse",
                     }),
+                  ],
+                }),
+              }),
+            }),
+            (0, t.jsx)("li", {
+              className: "list-inline-item",
+              children: (0, t.jsx)(r(), {
+                className: "tw-text-stone-700",
+                target: "_blank",
+                href: "https://github.com/".concat(a.github),
+                children: (0, t.jsxs)("span", {
+                  className: "fa-stack fa-lg",
+                  children: [
+                    (0, t.jsx)("i", { className: "fa fa-circle fa-stack-2x" }),
+                    (0, t.jsx)("i", {
+                      className: "fab fa-github fa-stack-1x fa-inverse",
+                    }),
+                  ],
+                }),
+              }),
+            }),
+            (0, t.jsx)("li", {
+              className: "list-inline-item",
+              children: (0, t.jsx)(r(), {
+                className: "tw-text-stone-700",
+                target: "_blank",
+                href: "https://gist.github.com/".concat(a.github),
+                children: (0, t.jsxs)("span", {
+                  className: "fa-stack fa-lg",
+                  children: [
+                    (0, t.jsx)("i", { className: "fa fa-circle fa-stack-2x" }),
+                    (0, t.jsx)("i", {
+                      className: "fab fa-github-square fa-stack-1x fa-inverse",
+                    }),
+                  ],
+                }),
+              }),
+            }),
+            (0, t.jsx)("li", {
+              className: "list-inline-item",
+              children: (0, t.jsx)(r(), {
+                className: "tw-text-stone-700",
+                target: "_blank",
+                href: "https://gitlab.com/".concat(a.gitlab),
+                children: (0, t.jsxs)("span", {
+                  className: "fa-stack fa-lg",
+                  children: [
+                    (0, t.jsx)("i", { className: "fa fa-circle fa-stack-2x" }),
+                    (0, t.jsx)("i", {
+                      className: "fab fa-gitlab fa-stack-1x fa-inverse",
+                    }),
+                  ],
+                }),
+              }),
+            }),
+            (0, t.jsx)("li", {
+              className: "list-inline-item",
+              children: (0, t.jsx)(r(), {
+                className: "tw-text-stone-700",
+                target: "_blank",
+                href: "https://www.xiaohongshu.com/user/profile/".concat(
+                  a.redbook,
+                ),
+                children: (0, t.jsx)("span", {
+                  className: "fa-stack fa-lg",
+                  children: (0, t.jsx)(m.t, {
+                    src: o,
+                    alt: "小红书",
+                    className: "tw-max-h-full tw-max-w-full",
                   }),
                 }),
               }),
-              (0, t.jsx)("li", {
-                className: "list-inline-item",
-                children: (0, t.jsx)(r(), {
-                  className: "tw-text-stone-700",
-                  target: "_blank",
-                  href: "https://www.kaggle.com/".concat(a.kaggle),
-                  children: (0, t.jsxs)("span", {
-                    className: "fa-stack fa-lg",
-                    children: [
-                      (0, t.jsx)("i", {
-                        className: "fa fa-circle fa-stack-2x",
-                      }),
-                      (0, t.jsx)("i", {
-                        className: "fab fa-kaggle fa-stack-1x fa-inverse",
-                      }),
-                    ],
-                  }),
+            }),
+            (0, t.jsx)("li", {
+              className: "list-inline-item",
+              children: (0, t.jsx)(r(), {
+                className: "tw-text-stone-700",
+                target: "_blank",
+                href: "https://www.kaggle.com/".concat(a.kaggle),
+                children: (0, t.jsxs)("span", {
+                  className: "fa-stack fa-lg",
+                  children: [
+                    (0, t.jsx)("i", { className: "fa fa-circle fa-stack-2x" }),
+                    (0, t.jsx)("i", {
+                      className: "fab fa-kaggle fa-stack-1x fa-inverse",
+                    }),
+                  ],
                 }),
               }),
-              (0, t.jsx)("li", {
-                className: "list-inline-item",
-                children: (0, t.jsx)(r(), {
-                  className: "tw-text-stone-700",
-                  target: "_blank",
-                  href: "https://leetcode.com/".concat(a.leetcode),
-                  children: (0, t.jsxs)("span", {
-                    className: "fa-stack fa-lg",
-                    children: [
-                      (0, t.jsx)("i", {
-                        className: "fa fa-circle fa-stack-2x",
-                      }),
-                      (0, t.jsx)("i", {
-                        className: "fas fa-code fa-stack-1x fa-inverse",
-                      }),
-                    ],
-                  }),
+            }),
+            (0, t.jsx)("li", {
+              className: "list-inline-item",
+              children: (0, t.jsx)(r(), {
+                className: "tw-text-stone-700",
+                target: "_blank",
+                href: "https://leetcode.com/".concat(a.leetcode),
+                children: (0, t.jsxs)("span", {
+                  className: "fa-stack fa-lg",
+                  children: [
+                    (0, t.jsx)("i", { className: "fa fa-circle fa-stack-2x" }),
+                    (0, t.jsx)("i", {
+                      className: "fas fa-code fa-stack-1x fa-inverse",
+                    }),
+                  ],
                 }),
               }),
-              (0, t.jsx)("li", {
-                className: "list-inline-item",
-                children: (0, t.jsx)(r(), {
-                  className: "tw-text-stone-700",
-                  target: "_blank",
-                  href: "https://stackexchange.com/users/".concat(
-                    a.stackexchange,
-                  ),
-                  children: (0, t.jsxs)("span", {
-                    className: "fa-stack fa-lg",
-                    children: [
-                      (0, t.jsx)("i", {
-                        className: "fa fa-circle fa-stack-2x",
-                      }),
-                      (0, t.jsx)("i", {
-                        className:
-                          "fab fa-stack-overflow fa-stack-1x fa-inverse",
-                      }),
-                    ],
-                  }),
+            }),
+            (0, t.jsx)("li", {
+              className: "list-inline-item",
+              children: (0, t.jsx)(r(), {
+                className: "tw-text-stone-700",
+                target: "_blank",
+                href: "https://stackexchange.com/users/".concat(
+                  a.stackexchange,
+                ),
+                children: (0, t.jsxs)("span", {
+                  className: "fa-stack fa-lg",
+                  children: [
+                    (0, t.jsx)("i", { className: "fa fa-circle fa-stack-2x" }),
+                    (0, t.jsx)("i", {
+                      className: "fab fa-stack-overflow fa-stack-1x fa-inverse",
+                    }),
+                  ],
                 }),
               }),
-              (0, t.jsx)("li", {
-                className: "list-inline-item",
-                children: (0, t.jsx)(r(), {
-                  className: "tw-text-stone-700",
-                  target: "_blank",
-                  href: "mailto:".concat(
-                    a.email,
-                    "?subject=From my blog&body=Hi,I found this website very useful",
-                  ),
-                  children: (0, t.jsxs)("span", {
-                    className: "fa-stack fa-lg",
-                    children: [
-                      (0, t.jsx)("i", {
-                        className: "fa fa-circle fa-stack-2x",
-                      }),
-                      (0, t.jsx)("i", {
-                        className: "fas fa-envelope fa-stack-1x fa-inverse",
-                      }),
-                    ],
-                  }),
+            }),
+            (0, t.jsx)("li", {
+              className: "list-inline-item",
+              children: (0, t.jsx)(r(), {
+                className: "tw-text-stone-700",
+                target: "_blank",
+                href: "mailto:".concat(
+                  a.email,
+                  "?subject=From my blog&body=Hi,I found this website very useful",
+                ),
+                children: (0, t.jsxs)("span", {
+                  className: "fa-stack fa-lg",
+                  children: [
+                    (0, t.jsx)("i", { className: "fa fa-circle fa-stack-2x" }),
+                    (0, t.jsx)("i", {
+                      className: "fas fa-envelope fa-stack-1x fa-inverse",
+                    }),
+                  ],
                 }),
               }),
-            ],
-          }),
+            }),
+          ],
         });
       }
       var d = {
