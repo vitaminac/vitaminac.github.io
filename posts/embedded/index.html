@@ -42,12 +42,12 @@
     />
     <link
       rel="preload"
-      href="/_next/static/css/476137c6413f10f9.css"
+      href="/_next/static/css/a169840b427f8744.css"
       as="style"
     />
     <link
       rel="stylesheet"
-      href="/_next/static/css/476137c6413f10f9.css"
+      href="/_next/static/css/a169840b427f8744.css"
       data-n-g=""
     />
     <link
@@ -152,9 +152,9 @@
           </div>
         </div>
       </nav>
-      <main class="container">
+      <main>
         <header
-          class="tw-relative tw-flex tw-h-96 tw-w-screen tw-flex-col tw-content-center tw-justify-center tw-bg-cover tw-bg-center tw-bg-no-repeat tw-text-center tw-text-white"
+          class="tw-relative tw-flex tw-h-96 tw-w-full tw-flex-col tw-content-center tw-justify-center tw-bg-cover tw-bg-center tw-bg-no-repeat tw-text-center tw-text-white"
           style="
             background-image: url(/_next/static/media/default-post-preview.c96b099a.jpeg);
             left: calc(50% - 50vw);
@@ -188,550 +188,588 @@
             </ul>
           </section>
         </header>
-        <div class="row">
-          <nav class="Post_toc__TAzIW col-12 col-lg-3 order-lg-2">
-            <ol>
-              <li><a href="#Definition">Definition</a></li>
-              <li><a href="#Characteristics">Characteristics</a></li>
-              <li><a href="#RAMS">RAMS</a></li>
-              <li>
-                <a href="#Embedded-System-Design">Embedded System Design</a>
-              </li>
-              <li><a href="#Development">Development</a></li>
-              <li>
-                <a href="#Real-time-Computing">Real-time Computing</a>
-                <ol>
-                  <li><a href="#Activation">Activation</a></li>
-                  <li><a href="#Time-to-Response">Time to Response</a></li>
-                  <li>
-                    <a href="#Temporal-Requirement">Temporal Requirement</a>
-                  </li>
-                  <li>
-                    <a href="#Temporal-Determinism">Temporal Determinism</a>
-                  </li>
-                  <li><a href="#Fault-Tolerance">Fault Tolerance</a></li>
-                </ol>
-              </li>
-              <li>
-                <a href="#Software-Hardware-Co-Design"
-                  >Software Hardware Co-Design</a
-                >
-              </li>
-              <li><a href="#Simulink">Simulink</a></li>
-              <li>
-                <a href="#Java-for-Embedded-System">Java for Embedded System</a>
-              </li>
-              <li>
-                <a href="#MMIO-Memory-Mapped-IO">MMIO (Memory-Mapped I/O)</a>
-              </li>
-              <li><a href="#Reference">Reference</a></li>
-            </ol>
-          </nav>
-          <article class="Post_content__QBxez col-12 col-lg-9 order-lg-1">
-            <h2 id="Definition">
-              Definition<a aria-hidden="true" tabindex="-1" href="#Definition"
-                ><i class="fa-solid fa-link"></i
-              ></a>
-            </h2>
-            <p>
-              An embedded system is a computer system is embedded as part of a
-              complete device.
-            </p>
-            <h2 id="Characteristics">
-              Characteristics<a
-                aria-hidden="true"
-                tabindex="-1"
-                href="#Characteristics"
-                ><i class="fa-solid fa-link"></i
-              ></a>
-            </h2>
-            <ul>
-              <li>It has limited resources</li>
-              <li>
-                It has peripheral devices that has a dedicated function within a
-                larger mechanical or electrical system.
-              </li>
-              <li>
-                It typically interacts, supervises and controls physical
-                operations of the machine that it is embedded within.
-              </li>
-              <li>
-                It often has real-time computing constraints<!-- -->
-                <ul>
-                  <li>It must react within a time limit.</li>
-                </ul>
-              </li>
-              <li><a href="#Temporal-Determinism">temporal determinism</a></li>
-            </ul>
-            <h2 id="RAMS">
-              RAMS<a aria-hidden="true" tabindex="-1" href="#RAMS"
-                ><i class="fa-solid fa-link"></i
-              ></a>
-            </h2>
-            <ul>
-              <li>
-                Reliability<!-- -->
-                <ul>
-                  <li>MTTF (mean time to failure)</li>
-                </ul>
-              </li>
-              <li>Availability</li>
-              <li>
-                Maintainability<!-- -->
-                <ul>
-                  <li>MTTR (mean time to recovery)</li>
-                </ul>
-              </li>
-              <li>Safety</li>
-            </ul>
-            <span class="katex-display"
-              ><span class="katex"
-                ><span class="katex-mathml"
-                  ><math
-                    xmlns="http://www.w3.org/1998/Math/MathML"
-                    display="block"
-                    ><semantics
-                      ><mrow
-                        ><mtext>availability</mtext><mo>=</mo
-                        ><mfrac
-                          ><mrow><mi>M</mi><mi>T</mi><mi>T</mi><mi>F</mi></mrow
-                          ><mrow
-                            ><mi>M</mi><mi>T</mi><mi>T</mi><mi>F</mi><mo>+</mo
-                            ><mi>M</mi><mi>T</mi><mi>T</mi><mi>R</mi></mrow
-                          ></mfrac
-                        ><mo>=</mo
-                        ><mfrac
-                          ><mrow><mi>M</mi><mi>T</mi><mi>T</mi><mi>F</mi></mrow
-                          ><mrow
-                            ><mi>M</mi><mi>T</mi><mi>B</mi><mi>F</mi></mrow
-                          ></mfrac
-                        ></mrow
-                      ><annotation encoding="application/x-tex"
-                        >\text{availability} = \frac{MTTF}{MTTF + MTTR} =
-                        \frac{MTTF}{MTBF}</annotation
-                      ></semantics
-                    ></math
-                  ></span
-                ><span class="katex-html" aria-hidden="true"
-                  ><span class="base"
-                    ><span
-                      class="strut"
-                      style="height: 0.8889em; vertical-align: -0.1944em"
+        <div class="container">
+          <div class="row">
+            <nav class="Post_toc__TAzIW col-12 col-lg-3 order-lg-2">
+              <ol>
+                <li><a href="#Definition">Definition</a></li>
+                <li><a href="#Characteristics">Characteristics</a></li>
+                <li><a href="#RAMS">RAMS</a></li>
+                <li>
+                  <a href="#Embedded-System-Design">Embedded System Design</a>
+                </li>
+                <li><a href="#Development">Development</a></li>
+                <li>
+                  <a href="#Real-time-Computing">Real-time Computing</a>
+                  <ol>
+                    <li><a href="#Activation">Activation</a></li>
+                    <li><a href="#Time-to-Response">Time to Response</a></li>
+                    <li>
+                      <a href="#Temporal-Requirement">Temporal Requirement</a>
+                    </li>
+                    <li>
+                      <a href="#Temporal-Determinism">Temporal Determinism</a>
+                    </li>
+                    <li><a href="#Fault-Tolerance">Fault Tolerance</a></li>
+                  </ol>
+                </li>
+                <li>
+                  <a href="#Software-Hardware-Co-Design"
+                    >Software Hardware Co-Design</a
+                  >
+                </li>
+                <li><a href="#Simulink">Simulink</a></li>
+                <li>
+                  <a href="#Java-for-Embedded-System"
+                    >Java for Embedded System</a
+                  >
+                </li>
+                <li>
+                  <a href="#MMIO-Memory-Mapped-IO">MMIO (Memory-Mapped I/O)</a>
+                </li>
+                <li><a href="#Reference">Reference</a></li>
+              </ol>
+            </nav>
+            <article class="Post_content__QBxez col-12 col-lg-9 order-lg-1">
+              <h2 id="Definition">
+                Definition<a aria-hidden="true" tabindex="-1" href="#Definition"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <p>
+                An embedded system is a computer system is embedded as part of a
+                complete device.
+              </p>
+              <h2 id="Characteristics">
+                Characteristics<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Characteristics"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <ul>
+                <li>It has limited resources</li>
+                <li>
+                  It has peripheral devices that has a dedicated function within
+                  a larger mechanical or electrical system.
+                </li>
+                <li>
+                  It typically interacts, supervises and controls physical
+                  operations of the machine that it is embedded within.
+                </li>
+                <li>
+                  It often has real-time computing constraints<!-- -->
+                  <ul>
+                    <li>It must react within a time limit.</li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#Temporal-Determinism">temporal determinism</a>
+                </li>
+              </ul>
+              <h2 id="RAMS">
+                RAMS<a aria-hidden="true" tabindex="-1" href="#RAMS"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <ul>
+                <li>
+                  Reliability<!-- -->
+                  <ul>
+                    <li>MTTF (mean time to failure)</li>
+                  </ul>
+                </li>
+                <li>Availability</li>
+                <li>
+                  Maintainability<!-- -->
+                  <ul>
+                    <li>MTTR (mean time to recovery)</li>
+                  </ul>
+                </li>
+                <li>Safety</li>
+              </ul>
+              <span class="katex-display"
+                ><span class="katex"
+                  ><span class="katex-mathml"
+                    ><math
+                      xmlns="http://www.w3.org/1998/Math/MathML"
+                      display="block"
+                      ><semantics
+                        ><mrow
+                          ><mtext>availability</mtext><mo>=</mo
+                          ><mfrac
+                            ><mrow
+                              ><mi>M</mi><mi>T</mi><mi>T</mi><mi>F</mi></mrow
+                            ><mrow
+                              ><mi>M</mi><mi>T</mi><mi>T</mi><mi>F</mi><mo>+</mo
+                              ><mi>M</mi><mi>T</mi><mi>T</mi><mi>R</mi></mrow
+                            ></mfrac
+                          ><mo>=</mo
+                          ><mfrac
+                            ><mrow
+                              ><mi>M</mi><mi>T</mi><mi>T</mi><mi>F</mi></mrow
+                            ><mrow
+                              ><mi>M</mi><mi>T</mi><mi>B</mi><mi>F</mi></mrow
+                            ></mfrac
+                          ></mrow
+                        ><annotation encoding="application/x-tex"
+                          >\text{availability} = \frac{MTTF}{MTTF + MTTR} =
+                          \frac{MTTF}{MTBF}</annotation
+                        ></semantics
+                      ></math
                     ></span
-                    ><span class="mord text"
-                      ><span class="mord">availability</span></span
-                    ><span class="mspace" style="margin-right: 0.2778em"></span
-                    ><span class="mrel">=</span
-                    ><span
-                      class="mspace"
-                      style="margin-right: 0.2778em"
-                    ></span></span
-                  ><span class="base"
-                    ><span
-                      class="strut"
-                      style="height: 2.1297em; vertical-align: -0.7693em"
-                    ></span
-                    ><span class="mord"
-                      ><span class="mopen nulldelimiter"></span
-                      ><span class="mfrac"
-                        ><span class="vlist-t vlist-t2"
-                          ><span class="vlist-r"
-                            ><span class="vlist" style="height: 1.3603em"
-                              ><span style="top: -2.314em"
-                                ><span class="pstrut" style="height: 3em"></span
-                                ><span class="mord"
-                                  ><span
-                                    class="mord mathnormal"
-                                    style="margin-right: 0.13889em"
-                                    >MTTF</span
-                                  ><span
-                                    class="mspace"
-                                    style="margin-right: 0.2222em"
-                                  ></span
-                                  ><span class="mbin">+</span
-                                  ><span
-                                    class="mspace"
-                                    style="margin-right: 0.2222em"
-                                  ></span
-                                  ><span
-                                    class="mord mathnormal"
-                                    style="margin-right: 0.00773em"
-                                    >MTTR</span
-                                  ></span
-                                ></span
-                              ><span style="top: -3.23em"
-                                ><span class="pstrut" style="height: 3em"></span
-                                ><span
-                                  class="frac-line"
-                                  style="border-bottom-width: 0.04em"
-                                ></span></span
-                              ><span style="top: -3.677em"
-                                ><span class="pstrut" style="height: 3em"></span
-                                ><span class="mord"
-                                  ><span
-                                    class="mord mathnormal"
-                                    style="margin-right: 0.13889em"
-                                    >MTTF</span
-                                  ></span
-                                ></span
-                              ></span
-                            ><span class="vlist-s">​</span></span
-                          ><span class="vlist-r"
-                            ><span class="vlist" style="height: 0.7693em"
-                              ><span></span></span></span></span></span
-                      ><span class="mclose nulldelimiter"></span></span
-                    ><span class="mspace" style="margin-right: 0.2778em"></span
-                    ><span class="mrel">=</span
-                    ><span
-                      class="mspace"
-                      style="margin-right: 0.2778em"
-                    ></span></span
-                  ><span class="base"
-                    ><span
-                      class="strut"
-                      style="height: 2.0463em; vertical-align: -0.686em"
-                    ></span
-                    ><span class="mord"
-                      ><span class="mopen nulldelimiter"></span
-                      ><span class="mfrac"
-                        ><span class="vlist-t vlist-t2"
-                          ><span class="vlist-r"
-                            ><span class="vlist" style="height: 1.3603em"
-                              ><span style="top: -2.314em"
-                                ><span class="pstrut" style="height: 3em"></span
-                                ><span class="mord"
-                                  ><span
-                                    class="mord mathnormal"
-                                    style="margin-right: 0.13889em"
-                                    >MTBF</span
-                                  ></span
-                                ></span
-                              ><span style="top: -3.23em"
-                                ><span class="pstrut" style="height: 3em"></span
-                                ><span
-                                  class="frac-line"
-                                  style="border-bottom-width: 0.04em"
-                                ></span></span
-                              ><span style="top: -3.677em"
-                                ><span class="pstrut" style="height: 3em"></span
-                                ><span class="mord"
-                                  ><span
-                                    class="mord mathnormal"
-                                    style="margin-right: 0.13889em"
-                                    >MTTF</span
-                                  ></span
-                                ></span
-                              ></span
-                            ><span class="vlist-s">​</span></span
-                          ><span class="vlist-r"
-                            ><span class="vlist" style="height: 0.686em"
-                              ><span></span></span></span></span></span
+                  ><span class="katex-html" aria-hidden="true"
+                    ><span class="base"
                       ><span
-                        class="mclose nulldelimiter"
-                      ></span></span></span></span></span
-            ></span>
-            <h2 id="Embedded-System-Design">
-              Embedded System Design<a
-                aria-hidden="true"
-                tabindex="-1"
-                href="#Embedded-System-Design"
-                ><i class="fa-solid fa-link"></i
-              ></a>
-            </h2>
-            <ul>
-              <li>Functional and analytical</li>
-              <li>Concurrency</li>
-              <li>Time-constrained</li>
-              <li>Architectural</li>
-            </ul>
-            <h2 id="Development">
-              Development<a aria-hidden="true" tabindex="-1" href="#Development"
-                ><i class="fa-solid fa-link"></i
-              ></a>
-            </h2>
-            <ul>
-              <li>Multidisciplinary</li>
-              <li>Development specific hardware and firmware</li>
-            </ul>
-            <h2 id="Real-time-Computing">
-              Real-time Computing<a
-                aria-hidden="true"
-                tabindex="-1"
-                href="#Real-time-Computing"
-                ><i class="fa-solid fa-link"></i
-              ></a>
-            </h2>
-            <p>
-              Real&#x27;time programs must guarantee response
-              <strong>within specified time constraints</strong>.
-            </p>
-            <h3 id="Activation">
-              Activation<a aria-hidden="true" tabindex="-1" href="#Activation"
-                ><i class="fa-solid fa-link"></i
-              ></a>
-            </h3>
-            <ul>
-              <li>periodic</li>
-              <li>
-                aperiodic<!-- -->
-                <ul>
-                  <li>sporadic - minimum separation T between activations</li>
-                  <li>stochastic</li>
-                </ul>
-              </li>
-            </ul>
-            <h3 id="Time-to-Response">
-              Time to Response<a
-                aria-hidden="true"
-                tabindex="-1"
-                href="#Time-to-Response"
-                ><i class="fa-solid fa-link"></i
-              ></a>
-            </h3>
-            <ul>
-              <li>Absolute</li>
-              <li>Relative</li>
-            </ul>
-            <h3 id="Temporal-Requirement">
-              Temporal Requirement<a
-                aria-hidden="true"
-                tabindex="-1"
-                href="#Temporal-Requirement"
-                ><i class="fa-solid fa-link"></i
-              ></a>
-            </h3>
-            <ul>
-              <li>
-                Hard Real-Time<!-- -->
-                <ul>
-                  <li>all actions must comply time constraints</li>
-                </ul>
-              </li>
-              <li>
-                Soft Real-Time<!-- -->
-                <ul>
-                  <li>deadlines may be missed from time to time</li>
-                  <li>the time limit of the response decreases over time</li>
-                </ul>
-              </li>
-              <li>
-                Firm Real-Time<!-- -->
-                <ul>
-                  <li>deadlines may occasionally be missed</li>
-                  <li>a late answer is useless</li>
-                </ul>
-              </li>
-              <li>
-                Within the same system there may be tasks with different types
-                of temporal requirements
-              </li>
-            </ul>
-            <h3 id="Temporal-Determinism">
-              Temporal Determinism<a
-                aria-hidden="true"
-                tabindex="-1"
-                href="#Temporal-Determinism"
-                ><i class="fa-solid fa-link"></i
-              ></a>
-            </h3>
-            <ul>
-              <li>
-                Concurrency<!-- -->
-                <ul>
-                  <li>
-                    Different physical variable can evolve simultaneously.
-                  </li>
-                </ul>
-              </li>
-              <li>The response time of each output is known.</li>
-              <li>
-                The scheduling of the processor use should allow to comply the
-                response time.
-              </li>
-              <li>Analyze temporal behavior</li>
-            </ul>
-            <h3 id="Fault-Tolerance">
-              Fault Tolerance<a
-                aria-hidden="true"
-                tabindex="-1"
-                href="#Fault-Tolerance"
-                ><i class="fa-solid fa-link"></i
-              ></a>
-            </h3>
-            <ul>
-              <li>
-                Failure: deviation of the behavior of a system from its
-                specification
-              </li>
-              <li>Errors: Internal state of failure</li>
-              <li>Faults: the mechanical or algorithmic causes of errors</li>
-              <li>Faults -&gt; Error -&gt; Failure</li>
-              <li>
-                Reliability<!-- -->
-                <ul>
-                  <li>
-                    Failure Prevention<!-- -->
-                    <ul>
-                      <li>Avoid failure with proper design and development.</li>
-                      <li>Fault elimination with verification and test.</li>
-                    </ul>
-                  </li>
-                  <li>
-                    Fault Tolerance<!-- -->
-                    <ul>
-                      <li>
-                        Fail Operational<!-- -->
-                        <ul>
-                          <li>
-                            the system continues to work at least for a time
-                            without losing functionality or performance.
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        Fail Soft<!-- -->
-                        <ul>
-                          <li>
-                            The system continues to function with a partial loss
-                            of functionality or performance until the fault is
-                            repaired.
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        Fail Safe<!-- -->
-                        <ul>
-                          <li>
-                            the system is stopped in a state that ensures the
-                            integrity of the environment until the fault is
-                            repaired.
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        Redundancy: Duplication of critical components or
-                        function to detect faults and recover correct behavior.<!-- -->
-                        <ul>
-                          <li>
-                            Static Redundancy: Is always active, the output is
-                            the output of the majority<!-- -->
-                            <ul>
-                              <li>Duplication of hardware</li>
-                              <li>
-                                Different of implementation of same
-                                specification
-                              </li>
-                            </ul>
-                          </li>
-                          <li>
-                            Dynamic Redundancy<!-- -->
-                            <ul>
-                              <li>Cold Redundancy</li>
-                              <li>Hot Redundancy</li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-            <h2 id="Software-Hardware-Co-Design">
-              Software Hardware Co-Design<a
-                aria-hidden="true"
-                tabindex="-1"
-                href="#Software-Hardware-Co-Design"
-                ><i class="fa-solid fa-link"></i
-              ></a>
-            </h2>
-            <p>
-              System design derives an abstract system representation from
-              requirements to a model, using this abstraction allow reuse and
-              adaptation of component libraries, but this separation of software
-              from physicality doesn&#x27;t work for embedded system. Embedded
-              systems design requires a more holistic approach that integrates
-              from hardware and software design, analysis and verification.
-              Configurable hardware platforms can integrate a larger number of
-              components (often are ac hoc), the software and hardware are not
-              designed separately but together.
-            </p>
-            <p>
-              Embedded system is subject to physical constraints. Co-design
-              allow to gain the control of the interplay between computation
-              reaction constraints to a physical environment and execution
-              constrains bound to hardware or implementation to meet a given set
-              of requirements on a given set of requirements on a given
-              implementation platform.
-            </p>
-            <h2 id="Simulink">
-              Simulink<a aria-hidden="true" tabindex="-1" href="#Simulink"
-                ><i class="fa-solid fa-link"></i
-              ></a>
-            </h2>
-            <p>
-              We use Simulink to design la relationship between input(feedback
-              signals, periodic input) and output(control signal).
-            </p>
-            <h2 id="Java-for-Embedded-System">
-              Java for Embedded System<a
-                aria-hidden="true"
-                tabindex="-1"
-                href="#Java-for-Embedded-System"
-                ><i class="fa-solid fa-link"></i
-              ></a>
-            </h2>
-            <ul>
-              <li>
-                Pros<!-- -->
-                <ul>
-                  <li>Dynamic Object</li>
-                  <li>Useful APIs</li>
-                  <li>Portable</li>
-                </ul>
-              </li>
-              <li>
-                Cons<!-- -->
-                <ul>
-                  <li>Not suitable for real-time embedded systems.</li>
-                  <li>Concurrent task scheduling is not defined.</li>
-                  <li>Synchronization mechanisms are inadequate.</li>
-                  <li>Dynamic memory introduces uncertainty.</li>
-                  <li>Time measurement is not accurate.</li>
-                  <li>Other problem with exception y concurrency.</li>
-                </ul>
-              </li>
-            </ul>
-            <h2 id="MMIO-Memory-Mapped-IO">
-              MMIO (Memory-Mapped I/O)<a
-                aria-hidden="true"
-                tabindex="-1"
-                href="#MMIO-Memory-Mapped-IO"
-                ><i class="fa-solid fa-link"></i
-              ></a>
-            </h2>
-            <p>
-              Memory-mapped I/O uses the same address space and instruction to
-              address both memory and I/O devices.
-            </p>
-            <h2 id="Reference">
-              Reference<a aria-hidden="true" tabindex="-1" href="#Reference"
-                ><i class="fa-solid fa-link"></i
-              ></a>
-            </h2>
-            <ul>
-              <li>
-                <a
-                  href="https://en.wikipedia.org/wiki/Embedded_system"
-                  rel="nofollow"
-                  target="_blank"
-                  >https://en.wikipedia.org/wiki/Embedded_system</a
-                >
-              </li>
-            </ul>
-          </article>
+                        class="strut"
+                        style="height: 0.8889em; vertical-align: -0.1944em"
+                      ></span
+                      ><span class="mord text"
+                        ><span class="mord">availability</span></span
+                      ><span
+                        class="mspace"
+                        style="margin-right: 0.2778em"
+                      ></span
+                      ><span class="mrel">=</span
+                      ><span
+                        class="mspace"
+                        style="margin-right: 0.2778em"
+                      ></span></span
+                    ><span class="base"
+                      ><span
+                        class="strut"
+                        style="height: 2.1297em; vertical-align: -0.7693em"
+                      ></span
+                      ><span class="mord"
+                        ><span class="mopen nulldelimiter"></span
+                        ><span class="mfrac"
+                          ><span class="vlist-t vlist-t2"
+                            ><span class="vlist-r"
+                              ><span class="vlist" style="height: 1.3603em"
+                                ><span style="top: -2.314em"
+                                  ><span
+                                    class="pstrut"
+                                    style="height: 3em"
+                                  ></span
+                                  ><span class="mord"
+                                    ><span
+                                      class="mord mathnormal"
+                                      style="margin-right: 0.13889em"
+                                      >MTTF</span
+                                    ><span
+                                      class="mspace"
+                                      style="margin-right: 0.2222em"
+                                    ></span
+                                    ><span class="mbin">+</span
+                                    ><span
+                                      class="mspace"
+                                      style="margin-right: 0.2222em"
+                                    ></span
+                                    ><span
+                                      class="mord mathnormal"
+                                      style="margin-right: 0.00773em"
+                                      >MTTR</span
+                                    ></span
+                                  ></span
+                                ><span style="top: -3.23em"
+                                  ><span
+                                    class="pstrut"
+                                    style="height: 3em"
+                                  ></span
+                                  ><span
+                                    class="frac-line"
+                                    style="border-bottom-width: 0.04em"
+                                  ></span></span
+                                ><span style="top: -3.677em"
+                                  ><span
+                                    class="pstrut"
+                                    style="height: 3em"
+                                  ></span
+                                  ><span class="mord"
+                                    ><span
+                                      class="mord mathnormal"
+                                      style="margin-right: 0.13889em"
+                                      >MTTF</span
+                                    ></span
+                                  ></span
+                                ></span
+                              ><span class="vlist-s">​</span></span
+                            ><span class="vlist-r"
+                              ><span class="vlist" style="height: 0.7693em"
+                                ><span></span></span></span></span></span
+                        ><span class="mclose nulldelimiter"></span></span
+                      ><span
+                        class="mspace"
+                        style="margin-right: 0.2778em"
+                      ></span
+                      ><span class="mrel">=</span
+                      ><span
+                        class="mspace"
+                        style="margin-right: 0.2778em"
+                      ></span></span
+                    ><span class="base"
+                      ><span
+                        class="strut"
+                        style="height: 2.0463em; vertical-align: -0.686em"
+                      ></span
+                      ><span class="mord"
+                        ><span class="mopen nulldelimiter"></span
+                        ><span class="mfrac"
+                          ><span class="vlist-t vlist-t2"
+                            ><span class="vlist-r"
+                              ><span class="vlist" style="height: 1.3603em"
+                                ><span style="top: -2.314em"
+                                  ><span
+                                    class="pstrut"
+                                    style="height: 3em"
+                                  ></span
+                                  ><span class="mord"
+                                    ><span
+                                      class="mord mathnormal"
+                                      style="margin-right: 0.13889em"
+                                      >MTBF</span
+                                    ></span
+                                  ></span
+                                ><span style="top: -3.23em"
+                                  ><span
+                                    class="pstrut"
+                                    style="height: 3em"
+                                  ></span
+                                  ><span
+                                    class="frac-line"
+                                    style="border-bottom-width: 0.04em"
+                                  ></span></span
+                                ><span style="top: -3.677em"
+                                  ><span
+                                    class="pstrut"
+                                    style="height: 3em"
+                                  ></span
+                                  ><span class="mord"
+                                    ><span
+                                      class="mord mathnormal"
+                                      style="margin-right: 0.13889em"
+                                      >MTTF</span
+                                    ></span
+                                  ></span
+                                ></span
+                              ><span class="vlist-s">​</span></span
+                            ><span class="vlist-r"
+                              ><span class="vlist" style="height: 0.686em"
+                                ><span></span></span></span></span></span
+                        ><span
+                          class="mclose nulldelimiter"
+                        ></span></span></span></span></span
+              ></span>
+              <h2 id="Embedded-System-Design">
+                Embedded System Design<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Embedded-System-Design"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <ul>
+                <li>Functional and analytical</li>
+                <li>Concurrency</li>
+                <li>Time-constrained</li>
+                <li>Architectural</li>
+              </ul>
+              <h2 id="Development">
+                Development<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Development"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <ul>
+                <li>Multidisciplinary</li>
+                <li>Development specific hardware and firmware</li>
+              </ul>
+              <h2 id="Real-time-Computing">
+                Real-time Computing<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Real-time-Computing"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <p>
+                Real&#x27;time programs must guarantee response
+                <strong>within specified time constraints</strong>.
+              </p>
+              <h3 id="Activation">
+                Activation<a aria-hidden="true" tabindex="-1" href="#Activation"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h3>
+              <ul>
+                <li>periodic</li>
+                <li>
+                  aperiodic<!-- -->
+                  <ul>
+                    <li>sporadic - minimum separation T between activations</li>
+                    <li>stochastic</li>
+                  </ul>
+                </li>
+              </ul>
+              <h3 id="Time-to-Response">
+                Time to Response<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Time-to-Response"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h3>
+              <ul>
+                <li>Absolute</li>
+                <li>Relative</li>
+              </ul>
+              <h3 id="Temporal-Requirement">
+                Temporal Requirement<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Temporal-Requirement"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h3>
+              <ul>
+                <li>
+                  Hard Real-Time<!-- -->
+                  <ul>
+                    <li>all actions must comply time constraints</li>
+                  </ul>
+                </li>
+                <li>
+                  Soft Real-Time<!-- -->
+                  <ul>
+                    <li>deadlines may be missed from time to time</li>
+                    <li>the time limit of the response decreases over time</li>
+                  </ul>
+                </li>
+                <li>
+                  Firm Real-Time<!-- -->
+                  <ul>
+                    <li>deadlines may occasionally be missed</li>
+                    <li>a late answer is useless</li>
+                  </ul>
+                </li>
+                <li>
+                  Within the same system there may be tasks with different types
+                  of temporal requirements
+                </li>
+              </ul>
+              <h3 id="Temporal-Determinism">
+                Temporal Determinism<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Temporal-Determinism"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h3>
+              <ul>
+                <li>
+                  Concurrency<!-- -->
+                  <ul>
+                    <li>
+                      Different physical variable can evolve simultaneously.
+                    </li>
+                  </ul>
+                </li>
+                <li>The response time of each output is known.</li>
+                <li>
+                  The scheduling of the processor use should allow to comply the
+                  response time.
+                </li>
+                <li>Analyze temporal behavior</li>
+              </ul>
+              <h3 id="Fault-Tolerance">
+                Fault Tolerance<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Fault-Tolerance"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h3>
+              <ul>
+                <li>
+                  Failure: deviation of the behavior of a system from its
+                  specification
+                </li>
+                <li>Errors: Internal state of failure</li>
+                <li>Faults: the mechanical or algorithmic causes of errors</li>
+                <li>Faults -&gt; Error -&gt; Failure</li>
+                <li>
+                  Reliability<!-- -->
+                  <ul>
+                    <li>
+                      Failure Prevention<!-- -->
+                      <ul>
+                        <li>
+                          Avoid failure with proper design and development.
+                        </li>
+                        <li>Fault elimination with verification and test.</li>
+                      </ul>
+                    </li>
+                    <li>
+                      Fault Tolerance<!-- -->
+                      <ul>
+                        <li>
+                          Fail Operational<!-- -->
+                          <ul>
+                            <li>
+                              the system continues to work at least for a time
+                              without losing functionality or performance.
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          Fail Soft<!-- -->
+                          <ul>
+                            <li>
+                              The system continues to function with a partial
+                              loss of functionality or performance until the
+                              fault is repaired.
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          Fail Safe<!-- -->
+                          <ul>
+                            <li>
+                              the system is stopped in a state that ensures the
+                              integrity of the environment until the fault is
+                              repaired.
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          Redundancy: Duplication of critical components or
+                          function to detect faults and recover correct
+                          behavior.<!-- -->
+                          <ul>
+                            <li>
+                              Static Redundancy: Is always active, the output is
+                              the output of the majority<!-- -->
+                              <ul>
+                                <li>Duplication of hardware</li>
+                                <li>
+                                  Different of implementation of same
+                                  specification
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              Dynamic Redundancy<!-- -->
+                              <ul>
+                                <li>Cold Redundancy</li>
+                                <li>Hot Redundancy</li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <h2 id="Software-Hardware-Co-Design">
+                Software Hardware Co-Design<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Software-Hardware-Co-Design"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <p>
+                System design derives an abstract system representation from
+                requirements to a model, using this abstraction allow reuse and
+                adaptation of component libraries, but this separation of
+                software from physicality doesn&#x27;t work for embedded system.
+                Embedded systems design requires a more holistic approach that
+                integrates from hardware and software design, analysis and
+                verification. Configurable hardware platforms can integrate a
+                larger number of components (often are ac hoc), the software and
+                hardware are not designed separately but together.
+              </p>
+              <p>
+                Embedded system is subject to physical constraints. Co-design
+                allow to gain the control of the interplay between computation
+                reaction constraints to a physical environment and execution
+                constrains bound to hardware or implementation to meet a given
+                set of requirements on a given set of requirements on a given
+                implementation platform.
+              </p>
+              <h2 id="Simulink">
+                Simulink<a aria-hidden="true" tabindex="-1" href="#Simulink"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <p>
+                We use Simulink to design la relationship between input(feedback
+                signals, periodic input) and output(control signal).
+              </p>
+              <h2 id="Java-for-Embedded-System">
+                Java for Embedded System<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Java-for-Embedded-System"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <ul>
+                <li>
+                  Pros<!-- -->
+                  <ul>
+                    <li>Dynamic Object</li>
+                    <li>Useful APIs</li>
+                    <li>Portable</li>
+                  </ul>
+                </li>
+                <li>
+                  Cons<!-- -->
+                  <ul>
+                    <li>Not suitable for real-time embedded systems.</li>
+                    <li>Concurrent task scheduling is not defined.</li>
+                    <li>Synchronization mechanisms are inadequate.</li>
+                    <li>Dynamic memory introduces uncertainty.</li>
+                    <li>Time measurement is not accurate.</li>
+                    <li>Other problem with exception y concurrency.</li>
+                  </ul>
+                </li>
+              </ul>
+              <h2 id="MMIO-Memory-Mapped-IO">
+                MMIO (Memory-Mapped I/O)<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#MMIO-Memory-Mapped-IO"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <p>
+                Memory-mapped I/O uses the same address space and instruction to
+                address both memory and I/O devices.
+              </p>
+              <h2 id="Reference">
+                Reference<a aria-hidden="true" tabindex="-1" href="#Reference"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <ul>
+                <li>
+                  <a
+                    href="https://en.wikipedia.org/wiki/Embedded_system"
+                    rel="nofollow"
+                    target="_blank"
+                    >https://en.wikipedia.org/wiki/Embedded_system</a
+                  >
+                </li>
+              </ul>
+            </article>
+          </div>
+          <aside></aside>
         </div>
-        <aside></aside>
       </main>
       <footer class="tw-text-center tw-text-gray-400">
         <ul class="list-inline text-center tw-text-stone-700">

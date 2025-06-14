@@ -374,8 +374,8 @@ video {
 .tw-w-11\/12 {
   width: 91.666667%;
 }
-.tw-w-screen {
-  width: 100vw;
+.tw-w-full {
+  width: 100%;
 }
 .tw-max-w-full {
   max-width: 100%;

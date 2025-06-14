@@ -631,11 +631,10 @@
                 previewImage: t.previewImageUrl,
               }),
               (0, s.jsxs)("main", {
-                className: "container",
                 children: [
                   (0, s.jsxs)("header", {
                     className:
-                      "tw-relative tw-flex tw-h-96 tw-w-screen tw-flex-col tw-content-center tw-justify-center tw-bg-cover tw-bg-center tw-bg-no-repeat tw-text-center tw-text-white",
+                      "tw-relative tw-flex tw-h-96 tw-w-full tw-flex-col tw-content-center tw-justify-center tw-bg-cover tw-bg-center tw-bg-no-repeat tw-text-center tw-text-white",
                     style: {
                       backgroundImage: "url(".concat(
                         "/_next/static/media/default-post-preview.c96b099a.jpeg",
@@ -659,37 +658,47 @@
                     ],
                   }),
                   (0, s.jsxs)("div", {
-                    className: "row",
+                    className: "container",
                     children: [
-                      t.tocHtml &&
-                        (0, s.jsx)("nav", {
-                          className: i()(p().toc, "col-12 col-lg-3 order-lg-2"),
-                          dangerouslySetInnerHTML: { __html: t.tocHtml },
-                        }),
-                      t.isLegacy
-                        ? (0, s.jsx)("article", {
-                            className: "col-12 col-lg-9 order-lg-1",
-                            children: (0, s.jsx)(r, {
-                              title: t.slug,
-                              src: t.path,
+                      (0, s.jsxs)("div", {
+                        className: "row",
+                        children: [
+                          t.tocHtml &&
+                            (0, s.jsx)("nav", {
+                              className: i()(
+                                p().toc,
+                                "col-12 col-lg-3 order-lg-2",
+                              ),
+                              dangerouslySetInnerHTML: { __html: t.tocHtml },
                             }),
-                          })
-                        : (0, s.jsx)("article", {
-                            className: i()(
-                              p().content,
-                              "col-12 col-lg-9 order-lg-1",
-                            ),
-                            dangerouslySetInnerHTML: { __html: t.articleHtml },
-                          }),
+                          t.isLegacy
+                            ? (0, s.jsx)("article", {
+                                className: "col-12 col-lg-9 order-lg-1",
+                                children: (0, s.jsx)(r, {
+                                  title: t.slug,
+                                  src: t.path,
+                                }),
+                              })
+                            : (0, s.jsx)("article", {
+                                className: i()(
+                                  p().content,
+                                  "col-12 col-lg-9 order-lg-1",
+                                ),
+                                dangerouslySetInnerHTML: {
+                                  __html: t.articleHtml,
+                                },
+                              }),
+                        ],
+                      }),
+                      (0, s.jsx)("aside", {
+                        children: (0, s.jsx)(h, {
+                          username: a.disqusUsername,
+                          id: t.slug,
+                          title: t.title,
+                          lang: t.lang,
+                        }),
+                      }),
                     ],
-                  }),
-                  (0, s.jsx)("aside", {
-                    children: (0, s.jsx)(h, {
-                      username: a.disqusUsername,
-                      id: t.slug,
-                      title: t.title,
-                      lang: t.lang,
-                    }),
                   }),
                 ],
               }),
