@@ -682,7 +682,8 @@
                             : (0, s.jsx)("article", {
                                 className: i()(
                                   p().content,
-                                  "col-12 col-lg-9 order-lg-1",
+                                  "col-12 order-lg-1",
+                                  { "col-lg-9": t.tocHtml },
                                 ),
                                 dangerouslySetInnerHTML: {
                                   __html: t.articleHtml,
