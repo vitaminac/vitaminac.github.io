@@ -3,10 +3,10 @@
     "lang": "en",
     "previews": [
       {
-        "slug": "RaspberryPi4B-Setup",
-        "title": "Raspberry Pi 4B Setup",
-        "date": "2022-07-10 13:00:17",
-        "content": "Buy a Raspberry Pi 4B  You can buy the Raspberry Pi 4B board on Amazon, the recommended version is 4 GB. You may also need to buy a SD card, and..."
+        "slug": "Remote-Access-Via-TightVNC-To-Windows-Machine",
+        "title": "Remote Access Via TightVNC To Windows Machine",
+        "date": "2022-08-13 11:35:55",
+        "content": "Install VNC Server on Windows Machine  Download TightVNC which is free VNC server that support Windows 11 and then install TightVNC on Windows..."
       },
       {
         "slug": "Windows7-Vagrant",

@@ -26,7 +26,7 @@
 
     <meta
       name="keywords"
-      content="Linux,Debian,Raspberry,Prestashop,Raspberry Pi 4"
+      content="Linux,Debian,Raspberry,Prestashop,Raspberry Pi 4,Workspace Setup"
     />
 
     <meta name="theme-color" content="#600090" />
@@ -303,42 +303,42 @@ sudo apt install agnostics
 Random write speed 1077 IOPS
 Random read speed 2642 IOPS
 </code></pre>
-        <h2 id="Download-Raspberry-Pi-OS-image">
+        <h2 id="Burn-the-Raspberry-Pi-OS-image-to-SD-card">
           <a
-            href="#Download-Raspberry-Pi-OS-image"
+            href="#Burn-the-Raspberry-Pi-OS-image-to-SD-card"
             class="headerlink"
-            title="Download Raspberry Pi OS image"
+            title="Burn the Raspberry Pi OS image to SD card"
           ></a
-          >Download Raspberry Pi OS image
+          >Burn the Raspberry Pi OS image to SD card
         </h2>
-        <p>
-          Download <strong>Raspberry Pi OS Lite</strong> or
-          <strong>Raspberry Pi OS with desktop</strong> from
-          <a
-            target="_blank"
-            rel="noopener"
-            href="https://www.raspberrypi.com/software/operating-systems/#raspberry-pi-os-64-bit"
-            >Raspberry Pi official operating system images</a
-          >.
-        </p>
-        <h2 id="Burn-the-image-to-SD-card">
-          <a
-            href="#Burn-the-image-to-SD-card"
-            class="headerlink"
-            title="Burn the image to SD card"
-          ></a
-          >Burn the image to SD card
-        </h2>
-        <p>
-          Download
-          <a target="_blank" rel="noopener" href="https://rufus.ie/">Rufus</a>
-          and unzip the image file you downloaded previously, you will see a
-          single <strong>.img</strong> file. Select SD card as device and select
-          <strong>.img</strong> file as <strong>Disk or ISO image</strong> and
-          then click <strong>Start</strong>. You may need
-          <strong>SD Card Reader USB adapter</strong> if your computer doesn’t
-          have SD card slot.
-        </p>
+        <ol>
+          <li>
+            Download and install
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://www.raspberrypi.com/software/"
+              >Raspberry Pi Imager</a
+            >.
+          </li>
+          <li>Select device</li>
+          <li>
+            Select OS <strong>Raspberry Pi OS Lite</strong> or
+            <strong>Raspberry Pi OS with desktop</strong> from
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://www.raspberrypi.com/software/operating-systems/#raspberry-pi-os-64-bit"
+              >Raspberry Pi official operating system images</a
+            >.
+          </li>
+          <li>
+            Select SD card. You may need
+            <strong>SD Card Reader USB adapter</strong> if your computer doesn’t
+            have SD card slot.
+          </li>
+          <li>Click <strong>Start</strong></li>
+        </ol>
         <h2 id="CLI-Enviroment-Configuration">
           <a
             href="#CLI-Enviroment-Configuration"

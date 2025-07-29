@@ -3,6 +3,12 @@
     "lang": "en",
     "previews": [
       {
+        "slug": "RaspberryPi4B-Setup",
+        "title": "Raspberry Pi 4B Setup",
+        "date": "2025-07-30 01:07:15",
+        "content": "Buy a Raspberry Pi 4B  You can buy the Raspberry Pi 4B board on Amazon, the recommended version is 4 GB. You may also need to buy a SD card, and..."
+      },
+      {
         "slug": "Generating-Function",
         "title": "Generating Function",
         "date": "2024-10-28",
@@ -55,12 +61,6 @@
         "title": "OpenWrt Installation and Configuration on D-LINK DIR-882-A1",
         "date": "2022-10-30 17:03:37",
         "content": "Download OpenWrt Firmware  Open https://openwrt.org/toh/d-link/dir-882_a1#installation and select Firmware Install. At this step we need to download..."
-      },
-      {
-        "slug": "Remote-Access-Via-TightVNC-To-Windows-Machine",
-        "title": "Remote Access Via TightVNC To Windows Machine",
-        "date": "2022-08-13 11:35:55",
-        "content": "Install VNC Server on Windows Machine  Download TightVNC which is free VNC server that support Windows 11 and then install TightVNC on Windows..."
       }
     ],
     "nextPageUrl": "/posts/langs/en/pagination/2",
