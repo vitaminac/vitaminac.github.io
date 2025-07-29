@@ -2,7 +2,7 @@
   "pageProps": {
     "postData": {
       "slug": "Remote-Access-Via-TightVNC-To-Windows-Machine",
-      "tags": ["VNC", "TightVNC"],
+      "tags": ["VNC", "TightVNC", "Workspace Setup"],
       "isDraft": false,
       "isArchived": false,
       "title": "Remote Access Via TightVNC To Windows Machine",

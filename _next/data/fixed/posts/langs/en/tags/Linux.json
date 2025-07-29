@@ -10,16 +10,16 @@
         "content": "Buy a Raspberry Pi 4B  You can buy the Raspberry Pi 4B board on Amazon, the recommended version is 4 GB. You may also need to buy a SD card, and..."
       },
       {
+        "slug": "Minimalist-Linux-Workspace",
+        "title": "Minimalist Linux Workspace",
+        "date": "2025-07-30 00:51:57",
+        "content": "Download Image  Download Debian image, let we choose the net-install ISO since we don't need any heavy desktop enviroment e.g. KDE, GNOME, etc... . ..."
+      },
+      {
         "slug": "RaspberryPi-Odoo",
         "title": "RaspberryPi Odoo",
         "date": "2024-01-02 21:12:35",
         "content": "Configure Prestashop Install Docker Engine Install Docker Compose  Since Docker Compose stable release doesn't provide binary for armv7, you need to..."
-      },
-      {
-        "slug": "Minimalist-Linux-Workspace",
-        "title": "Minimalist Linux Workspace",
-        "date": "2021-01-31 18:25:16",
-        "content": "Download Image  Download Debian image, let we choose the net-install ISO since we don't need any heavy desktop enviroment e.g. KDE, GNOME, etc... . ..."
       },
       {
         "slug": "Simple-Bootstrap-Linux-System",

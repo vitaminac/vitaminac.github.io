@@ -3,6 +3,12 @@
     "lang": "en",
     "previews": [
       {
+        "slug": "D-LINK-DIR-882-A1-OpenWrt",
+        "title": "OpenWrt Installation and Configuration on D-LINK DIR-882-A1",
+        "date": "2022-10-30 17:03:37",
+        "content": "Download OpenWrt Firmware  Open https://openwrt.org/toh/d-link/dir-882_a1#installation and select Firmware Install. At this step we need to download..."
+      },
+      {
         "slug": "Remote-Access-Via-TightVNC-To-Windows-Machine",
         "title": "Remote Access Via TightVNC To Windows Machine",
         "date": "2022-08-13 11:35:55",
@@ -55,12 +61,6 @@
         "title": "Authenticated Encryption",
         "date": "2021-03-28 11:21:16",
         "content": "Glossary Cryptographic Hash Function  It is a one-way function that maps data of arbitrary size (often called the message) to a bit array of a fixed..."
-      },
-      {
-        "slug": "Information-Security",
-        "title": "Information Security",
-        "date": "2021-03-28 11:11:17",
-        "content": "Information Security  Information security(infosec), is the practice of protecting information by mitigating information risks like ..."
       }
     ],
     "prevPageUrl": "/posts/langs/en/pagination/1",

@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="content-language" content="en" />
     <link rel="icon" href="/favicon.ico" />
-    <title>Minimalist Linux Workspace</title>
-    <meta name="og:title" content="Minimalist Linux Workspace" />
+    <title>WSL2 Workspace Setup for Windows</title>
+    <meta name="og:title" content="WSL2 Workspace Setup for Windows" />
     <meta name="author" content="Gao" />
     <meta name="keywords" content="Linux,Debian,Workspace Setup" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -160,12 +160,12 @@
             left: calc(50% - 50vw);
           "
         >
-          <h1>Minimalist Linux Workspace</h1>
+          <h1>WSL2 Workspace Setup for Windows</h1>
           <p>Author: Gao</p>
           <span
             ><i class="fa-regular fa-calendar"></i
-            ><time class="tw-pl-1.5" datetime="2025-07-30 00:51:57"
-              >July 30, 2025</time
+            ><time class="tw-pl-1.5" datetime="2025-07-29 23:29:05"
+              >July 29, 2025</time
             ></span
           >
           <section class="tw-mt-3 tw-text-center">
@@ -199,179 +199,86 @@
           <div class="row">
             <nav class="Post_toc__TAzIW col-12 col-lg-3 order-lg-2">
               <ol>
-                <li><a href="#Download-Image">Download Image</a></li>
-                <li><a href="#Create-Boot-Device">Create Boot Device</a></li>
-                <li><a href="#Installation">Installation</a></li>
-                <li><a href="#Update-Sources-List">Update Sources List</a></li>
-                <li><a href="#Configure-Openbox">Configure Openbox</a></li>
-                <li><a href="#Install-Asian-Fonts">Install Asian Fonts</a></li>
-                <li><a href="#Enable-Sound">Enable Sound</a></li>
-                <li><a href="#Configure-Dev-Tools">Configure Dev Tools</a></li>
-                <li><a href="#References">References</a></li>
+                <li>
+                  <a href="#Install-WSL-on-Windows">Install WSL on Windows</a>
+                </li>
+                <li><a href="#Configure-Git">Configure Git</a></li>
               </ol>
             </nav>
             <article class="Post_content__QBxez col-12 order-lg-1 col-lg-9">
-              <h2 id="Download-Image">
-                Download Image<a
+              <h2 id="Install-WSL-on-Windows">
+                Install WSL on Windows<a
                   aria-hidden="true"
                   tabindex="-1"
-                  href="#Download-Image"
+                  href="#Install-WSL-on-Windows"
                   ><i class="fa-solid fa-link"></i
                 ></a>
               </h2>
               <p>
-                Download
+                Following this
                 <a
-                  href="https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/"
+                  href="https://learn.microsoft.com/en-us/windows/wsl/install"
                   rel="nofollow"
                   target="_blank"
-                  >Debian image</a
-                >, let we choose the net-install ISO since we don&#x27;t need
-                any heavy desktop enviroment e.g. KDE, GNOME, etc... .
+                  >instruction</a
+                >
+                to install WSL2
               </p>
-              <h2 id="Create-Boot-Device">
-                Create Boot Device<a
-                  aria-hidden="true"
-                  tabindex="-1"
-                  href="#Create-Boot-Device"
-                  ><i class="fa-solid fa-link"></i
-                ></a>
-              </h2>
+              <pre><code>wsl --install
+</code></pre>
               <p>
-                There are a ton of tools which can burn ISO to a USB or CD,
-                simply follow the instruction and create the boot device.
+                Install one of the
+                <a
+                  href="https://github.com/microsoft/WSL/blob/master/distributions/DistributionInfo.json"
+                  rel="nofollow"
+                  target="_blank"
+                  >supported Linux distributions</a
+                >
               </p>
-              <h2 id="Installation">
-                Installation<a
-                  aria-hidden="true"
-                  tabindex="-1"
-                  href="#Installation"
-                  ><i class="fa-solid fa-link"></i
-                ></a>
-              </h2>
-              <p>
-                Plug the USB into your computer reboot and following the
-                instruction to complete the installation. Remember to use a
-                different partition for <strong>/home</strong> which is helpful
-                for reinstallation in the future.
-              </p>
-              <h2 id="Update-Sources-List">
-                Update Sources List<a
-                  aria-hidden="true"
-                  tabindex="-1"
-                  href="#Update-Sources-List"
-                  ><i class="fa-solid fa-link"></i
-                ></a>
-              </h2>
-              <ul>
-                <li>
-                  <a
-                    href="https://wiki.debian.org/SourcesList"
-                    rel="nofollow"
-                    target="_blank"
-                    >https://wiki.debian.org/SourcesList</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://backports.debian.org/Instructions/"
-                    rel="nofollow"
-                    target="_blank"
-                    >https://backports.debian.org/Instructions/</a
-                  >
-                </li>
-              </ul>
-              <h2 id="Configure-Openbox">
-                Configure Openbox<a
-                  aria-hidden="true"
-                  tabindex="-1"
-                  href="#Configure-Openbox"
-                  ><i class="fa-solid fa-link"></i
-                ></a>
-              </h2>
-              <pre><code>sudo apt install xinit openbox menu xfce4-terminal
-ehoc &quot;exec openbox-session&quot; &gt;&gt; ~/.xinitrc
-echo &quot;startx&quot; &gt;&gt; ~/.bash_profile
+              <pre><code>wsl --install -d Debian
 </code></pre>
-              <h2 id="Install-Asian-Fonts">
-                Install Asian Fonts<a
+              <h2 id="Configure-Git">
+                Configure Git<a
                   aria-hidden="true"
                   tabindex="-1"
-                  href="#Install-Asian-Fonts"
+                  href="#Configure-Git"
                   ><i class="fa-solid fa-link"></i
                 ></a>
               </h2>
-              <pre><code>sudo apt install fonts-arphic-ukai fonts-arphic-uming fonts-ipafont-mincho fonts-ipafont-gothic fonts-unfonts-core
-sudo fc-cache -fv
-</code></pre>
-              <h2 id="Enable-Sound">
-                Enable Sound<a
-                  aria-hidden="true"
-                  tabindex="-1"
-                  href="#Enable-Sound"
-                  ><i class="fa-solid fa-link"></i
-                ></a>
-              </h2>
-              <pre><code>sudo install alsa-utils
-amixer set Master 100% unmute
-</code></pre>
-              <h2 id="Configure-Dev-Tools">
-                Configure Dev Tools<a
-                  aria-hidden="true"
-                  tabindex="-1"
-                  href="#Configure-Dev-Tools"
-                  ><i class="fa-solid fa-link"></i
-                ></a>
-              </h2>
-              <ul>
+              <ol>
                 <li>
-                  <a
-                    href="https://wiki.debian.org/Java"
-                    rel="nofollow"
-                    target="_blank"
-                    >https://wiki.debian.org/Java</a
-                  >
+                  Install the <code>git</code> inside of WSL with
+                  <code>sudo apt install git</code>
                 </li>
                 <li>
+                  Follow this
                   <a
-                    href="https://wiki.debian.org/VisualStudioCode"
+                    href="https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-git"
                     rel="nofollow"
                     target="_blank"
-                    >https://wiki.debian.org/VisualStudioCode</a
+                    >instruction</a
                   >
+                  Configure <code>git</code> inside of WSL to use Windows
+                  Credential Manager
                 </li>
                 <li>
+                  Install
                   <a
-                    href="https://wiki.debian.org/Chromium"
+                    href="https://github.com/andy-5/wslgit"
                     rel="nofollow"
                     target="_blank"
-                    >https://wiki.debian.org/Chromium</a
+                    ><code>wslgit</code></a
                   >
-                </li>
-              </ul>
-              <h2 id="References">
-                References<a aria-hidden="true" tabindex="-1" href="#References"
-                  ><i class="fa-solid fa-link"></i
-                ></a>
-              </h2>
-              <ul>
-                <li>
-                  <a
-                    href="https://wiki.debian.org/Openbox"
-                    rel="nofollow"
-                    target="_blank"
-                    >https://wiki.debian.org/Openbox</a
-                  >
+                  on Windows
                 </li>
                 <li>
-                  <a
-                    href="https://unix.stackexchange.com/a/149368"
-                    rel="nofollow"
-                    target="_blank"
-                    >https://unix.stackexchange.com/a/149368</a
-                  >
+                  Execute <code>git config --global core.autocrlf true</code>
                 </li>
-              </ul>
+                <li>
+                  Install <code>git-lfs</code> with
+                  <code>sudo apt install git-lfs</code>
+                </li>
+              </ol>
             </article>
           </div>
           <aside></aside>
@@ -501,16 +408,16 @@ amixer set Master 100% unmute
         "props": {
           "pageProps": {
             "postData": {
-              "slug": "Minimalist-Linux-Workspace",
+              "slug": "WSL",
               "tags": ["Linux", "Debian", "Workspace Setup"],
               "isDraft": false,
-              "isArchived": false,
-              "title": "Minimalist Linux Workspace",
-              "date": "2025-07-30 00:51:57",
+              "isArchived": true,
+              "title": "WSL2 Workspace Setup for Windows",
+              "date": "2025-07-29 23:29:05",
               "isLegacy": false,
               "lang": "en",
-              "tocHtml": "\u003col\u003e\n\u003cli\u003e\u003ca href=\"#Download-Image\"\u003eDownload Image\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Create-Boot-Device\"\u003eCreate Boot Device\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Installation\"\u003eInstallation\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Update-Sources-List\"\u003eUpdate Sources List\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Configure-Openbox\"\u003eConfigure Openbox\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Install-Asian-Fonts\"\u003eInstall Asian Fonts\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Enable-Sound\"\u003eEnable Sound\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Configure-Dev-Tools\"\u003eConfigure Dev Tools\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#References\"\u003eReferences\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e",
-              "articleHtml": "\u003ch2 id=\"Download-Image\"\u003eDownload Image\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Download-Image\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003eDownload \u003ca href=\"https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/\" rel=\"nofollow\" target=\"_blank\"\u003eDebian image\u003c/a\u003e, let we choose the net-install ISO since we don\u0026#x27;t need any heavy desktop enviroment e.g. KDE, GNOME, etc... .\u003c/p\u003e\n\u003ch2 id=\"Create-Boot-Device\"\u003eCreate Boot Device\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Create-Boot-Device\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003eThere are a ton of tools which can burn ISO to a USB or CD, simply follow the instruction and create the boot device.\u003c/p\u003e\n\u003ch2 id=\"Installation\"\u003eInstallation\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Installation\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003ePlug the USB into your computer reboot and following the instruction to complete the installation. Remember to use a different partition for \u003cstrong\u003e/home\u003c/strong\u003e which is helpful for reinstallation in the future.\u003c/p\u003e\n\u003ch2 id=\"Update-Sources-List\"\u003eUpdate Sources List\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Update-Sources-List\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href=\"https://wiki.debian.org/SourcesList\" rel=\"nofollow\" target=\"_blank\"\u003ehttps://wiki.debian.org/SourcesList\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://backports.debian.org/Instructions/\" rel=\"nofollow\" target=\"_blank\"\u003ehttps://backports.debian.org/Instructions/\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"Configure-Openbox\"\u003eConfigure Openbox\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Configure-Openbox\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cpre\u003e\u003ccode\u003esudo apt install xinit openbox menu xfce4-terminal\nehoc \u0026quot;exec openbox-session\u0026quot; \u0026gt;\u0026gt; ~/.xinitrc\necho \u0026quot;startx\u0026quot; \u0026gt;\u0026gt; ~/.bash_profile\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch2 id=\"Install-Asian-Fonts\"\u003eInstall Asian Fonts\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Install-Asian-Fonts\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cpre\u003e\u003ccode\u003esudo apt install fonts-arphic-ukai fonts-arphic-uming fonts-ipafont-mincho fonts-ipafont-gothic fonts-unfonts-core\nsudo fc-cache -fv\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch2 id=\"Enable-Sound\"\u003eEnable Sound\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Enable-Sound\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cpre\u003e\u003ccode\u003esudo install alsa-utils\namixer set Master 100% unmute\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch2 id=\"Configure-Dev-Tools\"\u003eConfigure Dev Tools\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Configure-Dev-Tools\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href=\"https://wiki.debian.org/Java\" rel=\"nofollow\" target=\"_blank\"\u003ehttps://wiki.debian.org/Java\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://wiki.debian.org/VisualStudioCode\" rel=\"nofollow\" target=\"_blank\"\u003ehttps://wiki.debian.org/VisualStudioCode\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://wiki.debian.org/Chromium\" rel=\"nofollow\" target=\"_blank\"\u003ehttps://wiki.debian.org/Chromium\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"References\"\u003eReferences\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#References\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href=\"https://wiki.debian.org/Openbox\" rel=\"nofollow\" target=\"_blank\"\u003ehttps://wiki.debian.org/Openbox\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://unix.stackexchange.com/a/149368\" rel=\"nofollow\" target=\"_blank\"\u003ehttps://unix.stackexchange.com/a/149368\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e"
+              "tocHtml": "\u003col\u003e\n\u003cli\u003e\u003ca href=\"#Install-WSL-on-Windows\"\u003eInstall WSL on Windows\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Configure-Git\"\u003eConfigure Git\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e",
+              "articleHtml": "\u003ch2 id=\"Install-WSL-on-Windows\"\u003eInstall WSL on Windows\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Install-WSL-on-Windows\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003eFollowing this \u003ca href=\"https://learn.microsoft.com/en-us/windows/wsl/install\" rel=\"nofollow\" target=\"_blank\"\u003einstruction\u003c/a\u003e to install WSL2\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003ewsl --install\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eInstall one of the \u003ca href=\"https://github.com/microsoft/WSL/blob/master/distributions/DistributionInfo.json\" rel=\"nofollow\" target=\"_blank\"\u003esupported Linux distributions\u003c/a\u003e\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003ewsl --install -d Debian\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch2 id=\"Configure-Git\"\u003eConfigure Git\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Configure-Git\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003col\u003e\n\u003cli\u003eInstall the \u003ccode\u003egit\u003c/code\u003e inside of WSL with \u003ccode\u003esudo apt install git\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003eFollow this \u003ca href=\"https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-git\" rel=\"nofollow\" target=\"_blank\"\u003einstruction\u003c/a\u003e Configure \u003ccode\u003egit\u003c/code\u003e inside of WSL to use Windows Credential Manager\u003c/li\u003e\n\u003cli\u003eInstall \u003ca href=\"https://github.com/andy-5/wslgit\" rel=\"nofollow\" target=\"_blank\"\u003e\u003ccode\u003ewslgit\u003c/code\u003e\u003c/a\u003e on Windows\u003c/li\u003e\n\u003cli\u003eExecute \u003ccode\u003egit config --global core.autocrlf true\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003eInstall \u003ccode\u003egit-lfs\u003c/code\u003e with \u003ccode\u003esudo apt install git-lfs\u003c/code\u003e\u003c/li\u003e\n\u003c/ol\u003e"
             },
             "lang": "en",
             "_nextI18Next": {
@@ -549,7 +456,7 @@ amixer set Master 100% unmute
           "__N_SSG": true
         },
         "page": "/posts/[slug]",
-        "query": { "slug": "Minimalist-Linux-Workspace" },
+        "query": { "slug": "WSL" },
         "buildId": "fixed",
         "runtimeConfig": {
           "siteConfig": {

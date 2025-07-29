@@ -9,6 +9,12 @@
         "content": "Buy a Raspberry Pi 4B  You can buy the Raspberry Pi 4B board on Amazon, the recommended version is 4 GB. You may also need to buy a SD card, and..."
       },
       {
+        "slug": "Minimalist-Linux-Workspace",
+        "title": "Minimalist Linux Workspace",
+        "date": "2025-07-30 00:51:57",
+        "content": "Download Image  Download Debian image, let we choose the net-install ISO since we don't need any heavy desktop enviroment e.g. KDE, GNOME, etc... . ..."
+      },
+      {
         "slug": "Generating-Function",
         "title": "Generating Function",
         "date": "2024-10-28",
@@ -55,12 +61,6 @@
         "title": "RaspberryPi Odoo",
         "date": "2024-01-02 21:12:35",
         "content": "Configure Prestashop Install Docker Engine Install Docker Compose  Since Docker Compose stable release doesn't provide binary for armv7, you need to..."
-      },
-      {
-        "slug": "D-LINK-DIR-882-A1-OpenWrt",
-        "title": "OpenWrt Installation and Configuration on D-LINK DIR-882-A1",
-        "date": "2022-10-30 17:03:37",
-        "content": "Download OpenWrt Firmware  Open https://openwrt.org/toh/d-link/dir-882_a1#installation and select Firmware Install. At this step we need to download..."
       }
     ],
     "nextPageUrl": "/posts/langs/en/pagination/2",
