@@ -29,7 +29,7 @@
       s,
       a,
       "static/chunks/287.js",
-      "static/css/c71ce6ada404f598.css",
+      "static/css/fe56aecab9bc9f9e.css",
       "static/chunks/pages/posts/[slug].js",
     ],
     sortedPages: [

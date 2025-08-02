@@ -35,19 +35,53 @@
   counter-increment: item;
 }
 .Post_content__QBxez {
+  font-family: Arial;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #404040;
   padding-top: 1em;
+}
+.Post_content__QBxez h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
+.Post_content__QBxez h3 {
+  font-size: 20px;
+  font-weight: 400;
+}
+.Post_content__QBxez h4 {
+  font-size: 18px;
+  font-weight: 400;
+}
+.Post_content__QBxez h5 {
+  font-size: 16px;
+  font-weight: 400;
+}
+.Post_content__QBxez h6 {
+  font-size: 15px;
+  font-weight: 400;
+}
+.Post_content__QBxez h1,
+.Post_content__QBxez h2,
+.Post_content__QBxez h3,
+.Post_content__QBxez h4,
+.Post_content__QBxez h5,
+.Post_content__QBxez h6 {
+  margin-top: -90px;
+  padding: 100px 0 0;
 }
 .Post_content__QBxez h1 > a > i.fa-link:not(:hover),
 .Post_content__QBxez h2 > a > i.fa-link:not(:hover),
 .Post_content__QBxez h3 > a > i.fa-link:not(:hover),
 .Post_content__QBxez h4 > a > i.fa-link:not(:hover),
-.Post_content__QBxez h5 > a > i.fa-link:not(:hover) {
+.Post_content__QBxez h5 > a > i.fa-link:not(:hover),
+.Post_content__QBxez h6 > a > i.fa-link:not(:hover) {
   color: transparent;
 }
 .Post_content__QBxez ul {
-  list-style-type: circle;
+  list-style-type: disc;
 }
-.Post_content__QBxez li {
+.Post_content__QBxez ol {
   list-style-type: decimal;
 }
 .Post_content__QBxez blockquote {

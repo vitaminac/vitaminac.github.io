@@ -1,0 +1,971 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="content-language" content="en" />
+    <link rel="icon" href="/favicon.ico" />
+    <title>OpenWrt Configuration</title>
+    <meta name="og:title" content="OpenWrt Configuration" />
+    <meta name="author" content="Gao" />
+    <meta
+      name="keywords"
+      content="openwrt,network,router,hard router,Workspace Setup"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="next-head-count" content="10" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css"
+      integrity="sha384-ZPe7yZ91iWxYumsBEOn7ieg8q/o+qh/hQpSaPow8T6BwALcXSCS6C6fSRPIAnTQs"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+      integrity="sha512-hasIneQUHlh06VNBe7f6ZcHmeRTLIaQWFd43YriJ0UND19bvYRauxthDg8E4eVNPm9bRUhr5JGeqH7FRFXQu5g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="preload"
+      href="/_next/static/css/a169840b427f8744.css"
+      as="style"
+    />
+    <link
+      rel="stylesheet"
+      href="/_next/static/css/a169840b427f8744.css"
+      data-n-g=""
+    />
+    <link
+      rel="preload"
+      href="/_next/static/css/fe56aecab9bc9f9e.css"
+      as="style"
+    />
+    <link
+      rel="stylesheet"
+      href="/_next/static/css/fe56aecab9bc9f9e.css"
+      data-n-p=""
+    />
+    <noscript data-n-css=""></noscript>
+    <script
+      defer=""
+      nomodule=""
+      src="/_next/static/chunks/polyfills-42372ed130431b0a.js"
+    ></script>
+    <script src="/_next/static/chunks/webpack.js" defer=""></script>
+    <script src="/_next/static/chunks/framework.js" defer=""></script>
+    <script src="/_next/static/chunks/main.js" defer=""></script>
+    <script src="/_next/static/chunks/pages/_app.js" defer=""></script>
+    <script src="/_next/static/chunks/367.js" defer=""></script>
+    <script src="/_next/static/chunks/503.js" defer=""></script>
+    <script src="/_next/static/chunks/287.js" defer=""></script>
+    <script
+      src="/_next/static/chunks/pages/posts/%5Bslug%5D.js"
+      defer=""
+    ></script>
+    <script src="/_next/static/fixed/_buildManifest.js" defer=""></script>
+    <script src="/_next/static/fixed/_ssgManifest.js" defer=""></script>
+  </head>
+  <body>
+    <div id="__next">
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+        crossorigin="anonymous"
+      />
+      <nav
+        class="navbar navbar-expand-md navbar-light sticky-top NavigationBar_navBar__fSiIq tw-bg-white/95 tw-shadow tw-shadow-black/25"
+      >
+        <div class="container-fluid px-md-5">
+          <div class="navbar-brand animate__animated animate__pulse">
+            <span
+              class="tw-rounded tw-bg-black tw-p-1 tw-text-xl tw-font-medium tw-text-white"
+              >Gao&#x27;s blog</span
+            >
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="navbar-collapse collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="/posts/langs/en/pagination/1/"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="/posts/langs/en/tags/"
+                  >Tags</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  >Language</a
+                >
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li>
+                    <a class="dropdown-item" href="/posts/langs/en/">English</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/posts/langs/es/">Spanish</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/posts/langs/zh/">Chinese</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <main>
+        <header
+          class="tw-relative tw-flex tw-h-96 tw-w-full tw-flex-col tw-content-center tw-justify-center tw-bg-cover tw-bg-center tw-bg-no-repeat tw-text-center tw-text-white"
+          style="
+            background-image: url(/_next/static/media/default-post-preview.c96b099a.jpeg);
+            left: calc(50% - 50vw);
+          "
+        >
+          <h1>OpenWrt Configuration</h1>
+          <p>Author: Gao</p>
+          <span
+            ><i class="fa-regular fa-calendar"></i
+            ><time class="tw-pl-1.5" datetime="2025-08-02 11:08:07"
+              >August 2, 2025</time
+            ></span
+          >
+          <section class="tw-mt-3 tw-text-center">
+            <p>Tags<!-- -->:</p>
+            <ul class="tw-p-0">
+              <li class="tw-inline tw-px-1">
+                <a
+                  class="tw-m-0.5 tw-inline-block tw-rounded tw-border tw-border-solid tw-border-white tw-bg-neutral-300 tw-px-2 tw-text-sm tw-leading-6 tw-text-white tw-no-underline hover:tw-bg-sky-300"
+                  href="/posts/langs/en/tags/openwrt/"
+                  >openwrt</a
+                >
+              </li>
+              <li class="tw-inline tw-px-1">
+                <a
+                  class="tw-m-0.5 tw-inline-block tw-rounded tw-border tw-border-solid tw-border-white tw-bg-neutral-300 tw-px-2 tw-text-sm tw-leading-6 tw-text-white tw-no-underline hover:tw-bg-sky-300"
+                  href="/posts/langs/en/tags/network/"
+                  >network</a
+                >
+              </li>
+              <li class="tw-inline tw-px-1">
+                <a
+                  class="tw-m-0.5 tw-inline-block tw-rounded tw-border tw-border-solid tw-border-white tw-bg-neutral-300 tw-px-2 tw-text-sm tw-leading-6 tw-text-white tw-no-underline hover:tw-bg-sky-300"
+                  href="/posts/langs/en/tags/router/"
+                  >router</a
+                >
+              </li>
+              <li class="tw-inline tw-px-1">
+                <a
+                  class="tw-m-0.5 tw-inline-block tw-rounded tw-border tw-border-solid tw-border-white tw-bg-neutral-300 tw-px-2 tw-text-sm tw-leading-6 tw-text-white tw-no-underline hover:tw-bg-sky-300"
+                  href="/posts/langs/en/tags/hard%20router/"
+                  >hard router</a
+                >
+              </li>
+              <li class="tw-inline tw-px-1">
+                <a
+                  class="tw-m-0.5 tw-inline-block tw-rounded tw-border tw-border-solid tw-border-white tw-bg-neutral-300 tw-px-2 tw-text-sm tw-leading-6 tw-text-white tw-no-underline hover:tw-bg-sky-300"
+                  href="/posts/langs/en/tags/Workspace%20Setup/"
+                  >Workspace Setup</a
+                >
+              </li>
+            </ul>
+          </section>
+        </header>
+        <div class="container">
+          <div class="row">
+            <nav class="Post_toc__TAzIW col-12 col-lg-3 order-lg-2">
+              <ol>
+                <li>
+                  <a href="#Configuration-through-OpenWrt-LuCI-web-interface"
+                    >Configuration through OpenWrt LuCI web interface</a
+                  >
+                </li>
+                <li>
+                  <a href="#Configuration-through-OpenWrt-SSH"
+                    >Configuration through OpenWrt SSH</a
+                  >
+                  <ol>
+                    <li>
+                      <a href="#Disabling-password-authentication"
+                        >Disabling password authentication</a
+                      >
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <a href="#Obtain-PPPoE-Username--Password"
+                    >Obtain PPPoE Username &#x26; Password</a
+                  >
+                </li>
+                <li><a href="#Configure-PPPoE">Configure PPPoE</a></li>
+                <li><a href="#Adblock">Adblock</a></li>
+                <li><a href="#Other-Utilities">Other Utilities</a></li>
+                <li>
+                  <a href="#Benchmark">Benchmark</a>
+                  <ol>
+                    <li>
+                      <a href="#Wireless-Speed-Test">Wireless Speed Test</a>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <a href="#Map-with-a-Free-Domain">Map with a Free Domain</a>
+                  <ol>
+                    <li><a href="#Verify-NAT">Verify NAT</a></li>
+                    <li><a href="#Create-Domain">Create Domain</a></li>
+                    <li>
+                      <a href="#Keep-the-IP-Address-Up-to-Date"
+                        >Keep the IP Address Up-to-Date</a
+                      >
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <a href="#Expose-Internal-Service-to-Internet"
+                    >Expose Internal Service to Internet</a
+                  >
+                </li>
+                <li><a href="#Reference">Reference</a></li>
+              </ol>
+            </nav>
+            <article class="Post_content__QBxez col-12 order-lg-1 col-lg-9">
+              <p>
+                OpenWrt is highly customizable and
+                <a
+                  href="https://github.com/openwrt/openwrt"
+                  rel="nofollow"
+                  target="_blank"
+                  >open-source</a
+                >
+                Linux-based operating system designed for routers. OpenWrt
+                offers much greater control, flexibility, and features for users
+                who want more than just basic internet access.
+              </p>
+              <h2 id="Configuration-through-OpenWrt-LuCI-web-interface">
+                Configuration through OpenWrt LuCI web interface<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Configuration-through-OpenWrt-LuCI-web-interface"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <ul>
+                <li>Change to DHCP mode after the router is restarted</li>
+                <li>
+                  The gateway by default is
+                  <a href="http://192.168.1.1" rel="nofollow" target="_blank"
+                    >http://192.168.1.1</a
+                  >
+                  without password
+                </li>
+                <li>
+                  System &gt; Administration<!-- -->
+                  <ul>
+                    <li>change router admin password</li>
+                    <li>
+                      SSH Access<!-- -->
+                      <ul>
+                        <li>modify interface to LAN</li>
+                        <li>change SSH port to other</li>
+                      </ul>
+                    </li>
+                    <li>
+                      SSH Keys<!-- -->
+                      <ul>
+                        <li>
+                          past the content of your public key file. It will be a
+                          long string starting with <code>ssh-rsa …</code>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  Network &gt; Wireless &gt; 2.4G AP &amp; 5G AP<!-- -->
+                  <ul>
+                    <li>
+                      Device Configuration<!-- -->
+                      <ul>
+                        <li>Advance Settings: modify country code</li>
+                      </ul>
+                    </li>
+                    <li>
+                      Interface Configuration<!-- -->
+                      <ul>
+                        <li>General Setup: modify ESSID</li>
+                        <li>
+                          Wireless Security<!-- -->
+                          <ul>
+                            <li>Encryption: WPA2-PSK</li>
+                            <li>Cipher: Force CCMP</li>
+                            <li>Key: Your Wi-Fi Password</li>
+                          </ul>
+                        </li>
+                        <li>
+                          Advanced Settings<!-- -->
+                          <ul>
+                            <li>
+                              uncheck
+                              <em>Disassociate On Low Acknowledgement</em>
+                            </li>
+                            <li>check <em>Disable Inactivity Polling</em></li>
+                            <li>Time interval for rekeying GTK: 3600</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  Network &gt; Wireless &gt; 5G AP &gt; Device Configuration<!-- -->
+                  <ul>
+                    <li>
+                      Operating frequency<!-- -->
+                      <ul>
+                        <li>Mode: <strong>AC</strong></li>
+                        <li>Channel: 36</li>
+                        <li>Width <strong>80mhz</strong></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>Network &gt; Wireless: Save &amp; Apply</li>
+                <li>
+                  Network &gt; Interface<!-- -->
+                  <ol>
+                    <li>
+                      LAN &gt; General Settings: modify IPv4 address to
+                      192.168.0.1 if 192.168.1.1 as gateway has conflict with
+                      upstream
+                    </li>
+                    <li>
+                      WAN &gt; Advanced Settings: unchecked
+                      <strong>Use DNS servers advertised by peer</strong>
+                    </li>
+                    <li>
+                      WAN &gt; Advanced Settings: add and click
+                      <strong>+</strong> button for following DNS
+                      <strong>1.1.1.1</strong>, <strong>8.8.8.8</strong>,
+                      <strong>9.9.9.9</strong> in
+                      <strong>Use custom DNS servers</strong>
+                    </li>
+                    <li>Save &amp; Apply</li>
+                  </ol>
+                </li>
+                <li>
+                  Network &gt; Firewall &gt; General Settings<!-- -->
+                  <ol>
+                    <li>
+                      Routing/NAT Offloading<!-- -->
+                      <ul>
+                        <li>check <strong>Software flow offloading</strong></li>
+                        <li>check <strong>Hardware flow offloading</strong></li>
+                      </ul>
+                    </li>
+                    <li>Save &amp; Apply</li>
+                  </ol>
+                </li>
+                <li>
+                  Network &gt; DHCP and DNS &gt; Hostnames: add custom binding
+                  of domain name to static IP for example blocking a website.
+                  You might need to add two versions of mapping, one for IPv4
+                  and one for IPv6.<!-- -->
+                  <ul>
+                    <li>
+                      for blocking the domain it is recommended to use adblock
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <h2 id="Configuration-through-OpenWrt-SSH">
+                Configuration through OpenWrt SSH<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Configuration-through-OpenWrt-SSH"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <h3 id="Disabling-password-authentication">
+                Disabling password authentication<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Disabling-password-authentication"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h3>
+              <pre><code>uci set dropbear.@dropbear[0].PasswordAuth=&quot;0&quot;
+uci set dropbear.@dropbear[0].RootPasswordAuth=&quot;0&quot;
+uci commit dropbear
+/etc/init.d/dropbear restart
+</code></pre>
+              <h2 id="Obtain-PPPoE-Username--Password">
+                Obtain PPPoE Username &amp; Password<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Obtain-PPPoE-Username--Password"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <p>
+                The steps to obtain PPPoE will vary per country and operator.
+                I&#x27;ve followed
+                <a
+                  href="https://www.frikidelto.com/tutorial/como-conseguir-el-usuario-y-contrasena-pppoe-para-instalar-un-router-neutro/"
+                  rel="nofollow"
+                  target="_blank"
+                  >this tutorial</a
+                >.
+              </p>
+              <h2 id="Configure-PPPoE">
+                Configure PPPoE<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Configure-PPPoE"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <ol>
+                <li>
+                  Network&gt; Interfaces &gt; Devices: Add device configuration<!-- -->
+                  <ol>
+                    <li>Select VLAN (802.1q) as device type</li>
+                    <li>Select WAN as base device</li>
+                    <li>
+                      Introduce 20 in VLAN ID 20 (This configuration depends on
+                      the operator)
+                    </li>
+                    <li>uncheck &quot;Enable IPv6&quot;</li>
+                    <li>Save</li>
+                    <li>Save &amp; apply</li>
+                  </ol>
+                </li>
+                <li>
+                  Network&gt; Interfaces &gt; Interface: click edit on WAN
+                  configuration<!-- -->
+                  <ol>
+                    <li>Change protocol to PPPoE</li>
+                    <li>Select Software VLAN wan.20 as device</li>
+                    <li>Introduce PPPoE username and password</li>
+                    <li>Save</li>
+                    <li>Save &amp; apply</li>
+                  </ol>
+                </li>
+              </ol>
+              <h2 id="Adblock">
+                Adblock<a aria-hidden="true" tabindex="-1" href="#Adblock"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <ul>
+                <li>System &gt; Software: Update lists</li>
+                <li>
+                  System &gt; Software: Search <strong>curl</strong> and
+                  install.
+                </li>
+                <li>
+                  System &gt; Software: Search <code>adblock</code>,
+                  <code>luci-app-adblock</code> and install.
+                </li>
+                <li>
+                  Services &gt; Adblock<!-- -->
+                  <ul>
+                    <li>
+                      General Settings<!-- -->
+                      <ul>
+                        <li>enable force local DNS</li>
+                        <li>enable dns report</li>
+                      </ul>
+                    </li>
+                    <li>
+                      Additional Settings &gt; Download Utility: Select
+                      <strong>curl</strong>
+                    </li>
+                    <li>Edit Blacklist: add domain you want to block</li>
+                  </ul>
+                </li>
+                <li>Services &gt; Adblock: Save &amp; Apply</li>
+              </ul>
+              <h2 id="Other-Utilities">
+                Other Utilities<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Other-Utilities"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <ul>
+                <li>System &gt; Software: Search <em>htop</em> and install.</li>
+              </ul>
+              <p>
+                You can also access router OS through SSH with
+                <code>ssh root@192.168.0.1</code> and install the packages with
+                <code>opkg</code> command. It is recommended to not upgrade
+                <code>luci-*</code> packages, this package is web interface of
+                router, and it often generates conflict between the new version
+                and old version.
+              </p>
+              <h2 id="Benchmark">
+                Benchmark<a aria-hidden="true" tabindex="-1" href="#Benchmark"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <h3 id="Wireless-Speed-Test">
+                Wireless Speed Test<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Wireless-Speed-Test"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h3>
+              <h4 id="TX-Device---Wireless---Router">
+                TX: Device - Wireless - Router<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#TX-Device---Wireless---Router"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h4>
+              <p>
+                Install
+                <a
+                  href="https://openwrt.org/packages/pkgdata/iperf3"
+                  rel="nofollow"
+                  target="_blank"
+                  ><code>iperf3</code></a
+                >
+                on OpenWrt and after than run <code>iperf3 -s</code>. Then from
+                a client device connected to the network through wireless
+                execute the command
+                <code
+                  >iperf3 -c &lt;IP Address of Your OpenWrt Router&gt; -p
+                  &lt;iperf3 Server Port&gt; -f m -t 30 -w 256k -P 4</code
+                >.
+              </p>
+              <h4 id="TX-Device---Wireless---Router---Ethernet---Device">
+                TX: Device - Wireless - Router - Ethernet - Device<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#TX-Device---Wireless---Router---Ethernet---Device"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h4>
+              <p>
+                Install <code>iperf3</code> on another device connected to the
+                network through Ethernet interface and then repeat the same
+                testing again this device. The reason we need to repeat the
+                testing with this configuration is because
+                <a
+                  href="https://forum.openwrt.org/t/iperf-measure-network-speed/9203/2"
+                  rel="nofollow"
+                  target="_blank"
+                  >your router might not be able to process the packets as
+                  consumer efficiently but do switch packet quickly</a
+                >.
+              </p>
+              <h4 id="RX">
+                RX<a aria-hidden="true" tabindex="-1" href="#RX"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h4>
+              <p>
+                Repeat the experiments but reverse the relationship of server
+                and client. You should now run <code>iperf3 -s</code> in your
+                device to verify the download speed.
+              </p>
+              <h2 id="Map-with-a-Free-Domain">
+                Map with a Free Domain<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Map-with-a-Free-Domain"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <h3 id="Verify-NAT">
+                Verify NAT<a aria-hidden="true" tabindex="-1" href="#Verify-NAT"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h3>
+              <p>
+                First you need to confirm with your internet provider that your
+                router doesn&#x27;t live behind a
+                <a
+                  href="https://en.wikipedia.org/wiki/Network_address_translation"
+                  rel="nofollow"
+                  target="_blank"
+                  >NAT</a
+                >
+                or
+                <a
+                  href="https://en.wikipedia.org/wiki/Carrier-grade_NAT"
+                  rel="nofollow"
+                  target="_blank"
+                  >CGNAT</a
+                >. You can also manually verify this by checking your IP address
+                when you search in Google and the IP address from OpenWrt GUI
+                -&gt; Network -&gt; Interfaces -&gt; WAN -&gt; IPv4.
+              </p>
+              <h3 id="Create-Domain">
+                Create Domain<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Create-Domain"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h3>
+              <p>
+                You can request a free domain with
+                <a
+                  href="https://www.duckdns.org/"
+                  rel="nofollow"
+                  target="_blank"
+                  >Duck DNS</a
+                >.
+              </p>
+              <h3 id="Keep-the-IP-Address-Up-to-Date">
+                <a
+                  href="https://www.duckdns.org/install.jsp"
+                  rel="nofollow"
+                  target="_blank"
+                  >Keep the IP Address Up-to-Date</a
+                ><a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Keep-the-IP-Address-Up-to-Date"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h3>
+              <h2 id="Expose-Internal-Service-to-Internet">
+                Expose Internal Service to Internet<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Expose-Internal-Service-to-Internet"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <p>
+                From OpenWrt Luci GUI -&gt; Network -&gt; DHCP and DNS -&gt;
+                Static Leases, set your internal host with a static IP address
+                so port forwarding can work.
+              </p>
+              <p>
+                Go to OpenWrt Luci GUI -&gt; Network -&gt; Firewall -&gt; Port
+                Forwards, then add rules to forward traffic from Internet to
+                your internal host which lives inside of private network e.g.
+                port forwarding to SSH server.
+              </p>
+              <h2 id="Reference">
+                Reference<a aria-hidden="true" tabindex="-1" href="#Reference"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <ul>
+                <li>
+                  <a
+                    href="https://bandaancha.eu/articulos/canales-wifi-banda-5-ghz-espana-mejor-9826"
+                    rel="nofollow"
+                    target="_blank"
+                    >Canales wifi en la banda 5 GHz en España: Lo que nunca te
+                    han contado</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://bandaancha.eu/articulos/todas-canales-bandas-wifi-2-4-5-6ghz-10117"
+                    rel="nofollow"
+                    target="_blank"
+                    >Todos los canales y bandas de frecuencias wifi legales en
+                    España en 2,4; 5 y 6 GHz</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://bandaancha.eu/articulos/mejor-router-wifi-tiene-muchas-antenas-9810"
+                    rel="nofollow"
+                    target="_blank"
+                    >¿Es mejor un router wifi si tiene muchas antenas MIMO?</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.cbtnuggets.com/blog/certifications/cisco/when-to-use-20mhz-vs-40mhz-vs-80mhz"
+                    rel="nofollow"
+                    target="_blank"
+                    >When to Use 20mhz vs 40mhz vs 80mhz</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.smallnetbuilder.com/wireless/wireless-features/33228-wi-fi-ping-spikes-causes-and-fixes"
+                    rel="nofollow"
+                    target="_blank"
+                    >Wi-Fi Ping Spikes: Causes and Fixes</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.intel.com/content/www/us/en/support/articles/000005725/wireless/legacy-intel-wireless-products.html"
+                    rel="nofollow"
+                    target="_blank"
+                    >Different Wi-Fi Protocols and Data Rates</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://forum.archive.openwrt.org/viewtopic.php?id=54943"
+                    rel="nofollow"
+                    target="_blank"
+                    >Edit /etc/hosts via WebUI</a
+                  >
+                </li>
+              </ul>
+            </article>
+          </div>
+          <aside></aside>
+        </div>
+      </main>
+      <footer class="tw-text-center tw-text-gray-400">
+        <ul class="list-inline text-center tw-text-stone-700">
+          <li class="list-inline-item">
+            <a
+              class="tw-text-stone-700"
+              target="_blank"
+              href="https://www.linkedin.com/in/shuxig"
+              ><span class="fa-stack fa-lg"
+                ><i class="fa fa-circle fa-stack-2x"></i
+                ><i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i></span
+            ></a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              class="tw-text-stone-700"
+              target="_blank"
+              href="https://github.com/vitaminac"
+              ><span class="fa-stack fa-lg"
+                ><i class="fa fa-circle fa-stack-2x"></i
+                ><i class="fab fa-github fa-stack-1x fa-inverse"></i></span
+            ></a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              class="tw-text-stone-700"
+              target="_blank"
+              href="https://gist.github.com/vitaminac"
+              ><span class="fa-stack fa-lg"
+                ><i class="fa fa-circle fa-stack-2x"></i
+                ><i
+                  class="fab fa-github-square fa-stack-1x fa-inverse"
+                ></i></span
+            ></a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              class="tw-text-stone-700"
+              target="_blank"
+              href="https://gitlab.com/vitaminac"
+              ><span class="fa-stack fa-lg"
+                ><i class="fa fa-circle fa-stack-2x"></i
+                ><i class="fab fa-gitlab fa-stack-1x fa-inverse"></i></span
+            ></a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              class="tw-text-stone-700"
+              target="_blank"
+              href="https://www.xiaohongshu.com/user/profile/622dca68000000001000c9b2"
+              ><span class="fa-stack fa-lg"
+                ><img
+                  alt="小红书"
+                  loading="lazy"
+                  width="256"
+                  height="256"
+                  decoding="async"
+                  data-nimg="1"
+                  class="tw-max-h-full tw-max-w-full"
+                  style="color: transparent"
+                  src="/_next/static/media/redbook.d1759325.svg" /></span
+            ></a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              class="tw-text-stone-700"
+              target="_blank"
+              href="https://www.kaggle.com/dalao1002"
+              ><span class="fa-stack fa-lg"
+                ><i class="fa fa-circle fa-stack-2x"></i
+                ><i class="fab fa-kaggle fa-stack-1x fa-inverse"></i></span
+            ></a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              class="tw-text-stone-700"
+              target="_blank"
+              href="https://leetcode.com/dalao1002"
+              ><span class="fa-stack fa-lg"
+                ><i class="fa fa-circle fa-stack-2x"></i
+                ><i class="fas fa-code fa-stack-1x fa-inverse"></i></span
+            ></a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              class="tw-text-stone-700"
+              target="_blank"
+              href="https://stackexchange.com/users/13825906"
+              ><span class="fa-stack fa-lg"
+                ><i class="fa fa-circle fa-stack-2x"></i
+                ><i
+                  class="fab fa-stack-overflow fa-stack-1x fa-inverse"
+                ></i></span
+            ></a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              class="tw-text-stone-700"
+              target="_blank"
+              href="mailto:dalao1002@gmail.com?subject=From my blog&amp;body=Hi,I found this website very useful"
+              ><span class="fa-stack fa-lg"
+                ><i class="fa fa-circle fa-stack-2x"></i
+                ><i class="fas fa-envelope fa-stack-1x fa-inverse"></i></span
+            ></a>
+          </li>
+        </ul>
+        <img
+          alt="QR"
+          loading="lazy"
+          width="1710"
+          height="624"
+          decoding="async"
+          data-nimg="1"
+          class="tw-mx-auto tw-max-w-full tw-object-contain tw-object-center lg:tw-max-w-xl"
+          style="color: transparent"
+          src="/_next/static/media/QR.b48259ea.png"
+        />
+        <p>Copyright © Gao&#x27;s blog 2025</p>
+      </footer>
+    </div>
+    <script id="__NEXT_DATA__" type="application/json">
+      {
+        "props": {
+          "pageProps": {
+            "postData": {
+              "slug": "openwrt",
+              "tags": [
+                "openwrt",
+                "network",
+                "router",
+                "hard router",
+                "Workspace Setup"
+              ],
+              "isDraft": false,
+              "isArchived": false,
+              "title": "OpenWrt Configuration",
+              "date": "2025-08-02 11:08:07",
+              "isLegacy": false,
+              "lang": "en",
+              "tocHtml": "\u003col\u003e\n\u003cli\u003e\u003ca href=\"#Configuration-through-OpenWrt-LuCI-web-interface\"\u003eConfiguration through OpenWrt LuCI web interface\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Configuration-through-OpenWrt-SSH\"\u003eConfiguration through OpenWrt SSH\u003c/a\u003e\n\u003col\u003e\n\u003cli\u003e\u003ca href=\"#Disabling-password-authentication\"\u003eDisabling password authentication\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Obtain-PPPoE-Username--Password\"\u003eObtain PPPoE Username \u0026#x26; Password\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Configure-PPPoE\"\u003eConfigure PPPoE\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Adblock\"\u003eAdblock\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Other-Utilities\"\u003eOther Utilities\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Benchmark\"\u003eBenchmark\u003c/a\u003e\n\u003col\u003e\n\u003cli\u003e\u003ca href=\"#Wireless-Speed-Test\"\u003eWireless Speed Test\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Map-with-a-Free-Domain\"\u003eMap with a Free Domain\u003c/a\u003e\n\u003col\u003e\n\u003cli\u003e\u003ca href=\"#Verify-NAT\"\u003eVerify NAT\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Create-Domain\"\u003eCreate Domain\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Keep-the-IP-Address-Up-to-Date\"\u003eKeep the IP Address Up-to-Date\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Expose-Internal-Service-to-Internet\"\u003eExpose Internal Service to Internet\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Reference\"\u003eReference\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e",
+              "articleHtml": "\u003cp\u003eOpenWrt is highly customizable and \u003ca href=\"https://github.com/openwrt/openwrt\" rel=\"nofollow\" target=\"_blank\"\u003eopen-source\u003c/a\u003e Linux-based operating system designed for routers. OpenWrt offers much greater control, flexibility, and features for users who want more than just basic internet access.\u003c/p\u003e\n\u003ch2 id=\"Configuration-through-OpenWrt-LuCI-web-interface\"\u003eConfiguration through OpenWrt LuCI web interface\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Configuration-through-OpenWrt-LuCI-web-interface\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003eChange to DHCP mode after the router is restarted\u003c/li\u003e\n\u003cli\u003eThe gateway by default is \u003ca href=\"http://192.168.1.1\" rel=\"nofollow\" target=\"_blank\"\u003ehttp://192.168.1.1\u003c/a\u003e without password\u003c/li\u003e\n\u003cli\u003eSystem \u0026gt; Administration\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003echange router admin password\u003c/li\u003e\n\u003cli\u003eSSH Access\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003emodify interface to LAN\u003c/li\u003e\n\u003cli\u003echange SSH port to other\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eSSH Keys\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003epast the content of your public key file. It will be a long string starting with \u003ccode\u003essh-rsa …\u003c/code\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eNetwork \u0026gt; Wireless \u0026gt; 2.4G AP \u0026amp; 5G AP\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003eDevice Configuration\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003eAdvance Settings: modify country code\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eInterface Configuration\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003eGeneral Setup: modify ESSID\u003c/li\u003e\n\u003cli\u003eWireless Security\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003eEncryption: WPA2-PSK\u003c/li\u003e\n\u003cli\u003eCipher: Force CCMP\u003c/li\u003e\n\u003cli\u003eKey: Your Wi-Fi Password\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eAdvanced Settings\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003euncheck \u003cem\u003eDisassociate On Low Acknowledgement\u003c/em\u003e\u003c/li\u003e\n\u003cli\u003echeck \u003cem\u003eDisable Inactivity Polling\u003c/em\u003e\u003c/li\u003e\n\u003cli\u003eTime interval for rekeying GTK: 3600\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eNetwork \u0026gt; Wireless \u0026gt; 5G AP \u0026gt; Device Configuration\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003eOperating frequency\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003eMode: \u003cstrong\u003eAC\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003eChannel: 36\u003c/li\u003e\n\u003cli\u003eWidth \u003cstrong\u003e80mhz\u003c/strong\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eNetwork \u0026gt; Wireless: Save \u0026amp; Apply\u003c/li\u003e\n\u003cli\u003eNetwork \u0026gt; Interface\u003c!-- --\u003e\n\u003col\u003e\n\u003cli\u003eLAN \u0026gt; General Settings: modify IPv4 address to 192.168.0.1 if 192.168.1.1 as gateway has conflict with upstream\u003c/li\u003e\n\u003cli\u003eWAN \u0026gt; Advanced Settings: unchecked \u003cstrong\u003eUse DNS servers advertised by peer\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003eWAN \u0026gt; Advanced Settings: add and click \u003cstrong\u003e+\u003c/strong\u003e button for following DNS \u003cstrong\u003e1.1.1.1\u003c/strong\u003e, \u003cstrong\u003e8.8.8.8\u003c/strong\u003e, \u003cstrong\u003e9.9.9.9\u003c/strong\u003e in \u003cstrong\u003eUse custom DNS servers\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003eSave \u0026amp; Apply\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003cli\u003eNetwork \u0026gt; Firewall \u0026gt; General Settings\u003c!-- --\u003e\n\u003col\u003e\n\u003cli\u003eRouting/NAT Offloading\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003echeck \u003cstrong\u003eSoftware flow offloading\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003echeck \u003cstrong\u003eHardware flow offloading\u003c/strong\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eSave \u0026amp; Apply\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003cli\u003eNetwork \u0026gt; DHCP and DNS \u0026gt; Hostnames: add custom binding of domain name to static IP for example blocking a website. You might need to add two versions of mapping, one for IPv4 and one for IPv6.\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003efor blocking the domain it is recommended to use adblock\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"Configuration-through-OpenWrt-SSH\"\u003eConfiguration through OpenWrt SSH\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Configuration-through-OpenWrt-SSH\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003ch3 id=\"Disabling-password-authentication\"\u003eDisabling password authentication\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Disabling-password-authentication\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h3\u003e\n\u003cpre\u003e\u003ccode\u003euci set dropbear.@dropbear[0].PasswordAuth=\u0026quot;0\u0026quot;\nuci set dropbear.@dropbear[0].RootPasswordAuth=\u0026quot;0\u0026quot;\nuci commit dropbear\n/etc/init.d/dropbear restart\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch2 id=\"Obtain-PPPoE-Username--Password\"\u003eObtain PPPoE Username \u0026amp; Password\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Obtain-PPPoE-Username--Password\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003eThe steps to obtain PPPoE will vary per country and operator. I\u0026#x27;ve followed \u003ca href=\"https://www.frikidelto.com/tutorial/como-conseguir-el-usuario-y-contrasena-pppoe-para-instalar-un-router-neutro/\" rel=\"nofollow\" target=\"_blank\"\u003ethis tutorial\u003c/a\u003e.\u003c/p\u003e\n\u003ch2 id=\"Configure-PPPoE\"\u003eConfigure PPPoE\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Configure-PPPoE\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003col\u003e\n\u003cli\u003eNetwork\u0026gt; Interfaces \u0026gt; Devices: Add device configuration\u003c!-- --\u003e\n\u003col\u003e\n\u003cli\u003eSelect VLAN (802.1q) as device type\u003c/li\u003e\n\u003cli\u003eSelect WAN as base device\u003c/li\u003e\n\u003cli\u003eIntroduce 20 in VLAN ID 20 (This configuration depends on the operator)\u003c/li\u003e\n\u003cli\u003euncheck \u0026quot;Enable IPv6\u0026quot;\u003c/li\u003e\n\u003cli\u003eSave\u003c/li\u003e\n\u003cli\u003eSave \u0026amp; apply\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003cli\u003eNetwork\u0026gt; Interfaces \u0026gt; Interface: click edit on WAN configuration\u003c!-- --\u003e\n\u003col\u003e\n\u003cli\u003eChange protocol to PPPoE\u003c/li\u003e\n\u003cli\u003eSelect Software VLAN wan.20 as device\u003c/li\u003e\n\u003cli\u003eIntroduce PPPoE username and password\u003c/li\u003e\n\u003cli\u003eSave\u003c/li\u003e\n\u003cli\u003eSave \u0026amp; apply\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003c/ol\u003e\n\u003ch2 id=\"Adblock\"\u003eAdblock\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Adblock\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003eSystem \u0026gt; Software: Update lists\u003c/li\u003e\n\u003cli\u003eSystem \u0026gt; Software: Search \u003cstrong\u003ecurl\u003c/strong\u003e and install.\u003c/li\u003e\n\u003cli\u003eSystem \u0026gt; Software: Search \u003ccode\u003eadblock\u003c/code\u003e, \u003ccode\u003eluci-app-adblock\u003c/code\u003e and install.\u003c/li\u003e\n\u003cli\u003eServices \u0026gt; Adblock\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003eGeneral Settings\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003eenable force local DNS\u003c/li\u003e\n\u003cli\u003eenable dns report\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eAdditional Settings \u0026gt; Download Utility: Select \u003cstrong\u003ecurl\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003eEdit Blacklist: add domain you want to block\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eServices \u0026gt; Adblock: Save \u0026amp; Apply\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"Other-Utilities\"\u003eOther Utilities\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Other-Utilities\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003eSystem \u0026gt; Software: Search \u003cem\u003ehtop\u003c/em\u003e and install.\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eYou can also access router OS through SSH with \u003ccode\u003essh root@192.168.0.1\u003c/code\u003e and install the packages with \u003ccode\u003eopkg\u003c/code\u003e command. It is recommended to not upgrade \u003ccode\u003eluci-*\u003c/code\u003e packages, this package is web interface of router, and it often generates conflict between the new version and old version.\u003c/p\u003e\n\u003ch2 id=\"Benchmark\"\u003eBenchmark\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Benchmark\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003ch3 id=\"Wireless-Speed-Test\"\u003eWireless Speed Test\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Wireless-Speed-Test\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h3\u003e\n\u003ch4 id=\"TX-Device---Wireless---Router\"\u003eTX: Device - Wireless - Router\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#TX-Device---Wireless---Router\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h4\u003e\n\u003cp\u003eInstall \u003ca href=\"https://openwrt.org/packages/pkgdata/iperf3\" rel=\"nofollow\" target=\"_blank\"\u003e\u003ccode\u003eiperf3\u003c/code\u003e\u003c/a\u003e on OpenWrt and after than run \u003ccode\u003eiperf3 -s\u003c/code\u003e. Then from a client device connected to the network through wireless execute the command \u003ccode\u003eiperf3 -c \u0026lt;IP Address of Your OpenWrt Router\u0026gt; -p \u0026lt;iperf3 Server Port\u0026gt; -f m -t 30 -w 256k -P 4\u003c/code\u003e.\u003c/p\u003e\n\u003ch4 id=\"TX-Device---Wireless---Router---Ethernet---Device\"\u003eTX: Device - Wireless - Router - Ethernet - Device\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#TX-Device---Wireless---Router---Ethernet---Device\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h4\u003e\n\u003cp\u003eInstall \u003ccode\u003eiperf3\u003c/code\u003e on another device connected to the network through Ethernet interface and then repeat the same testing again this device. The reason we need to repeat the testing with this configuration is because \u003ca href=\"https://forum.openwrt.org/t/iperf-measure-network-speed/9203/2\" rel=\"nofollow\" target=\"_blank\"\u003eyour router might not be able to process the packets as consumer efficiently but do switch packet quickly\u003c/a\u003e.\u003c/p\u003e\n\u003ch4 id=\"RX\"\u003eRX\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#RX\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h4\u003e\n\u003cp\u003eRepeat the experiments but reverse the relationship of server and client. You should now run \u003ccode\u003eiperf3 -s\u003c/code\u003e in your device to verify the download speed.\u003c/p\u003e\n\u003ch2 id=\"Map-with-a-Free-Domain\"\u003eMap with a Free Domain\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Map-with-a-Free-Domain\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003ch3 id=\"Verify-NAT\"\u003eVerify NAT\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Verify-NAT\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h3\u003e\n\u003cp\u003eFirst you need to confirm with your internet provider that your router doesn\u0026#x27;t live behind a \u003ca href=\"https://en.wikipedia.org/wiki/Network_address_translation\" rel=\"nofollow\" target=\"_blank\"\u003eNAT\u003c/a\u003e or \u003ca href=\"https://en.wikipedia.org/wiki/Carrier-grade_NAT\" rel=\"nofollow\" target=\"_blank\"\u003eCGNAT\u003c/a\u003e. You can also manually verify this by checking your IP address when you search in Google and the IP address from OpenWrt GUI -\u0026gt; Network -\u0026gt; Interfaces -\u0026gt; WAN -\u0026gt; IPv4.\u003c/p\u003e\n\u003ch3 id=\"Create-Domain\"\u003eCreate Domain\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Create-Domain\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h3\u003e\n\u003cp\u003eYou can request a free domain with \u003ca href=\"https://www.duckdns.org/\" rel=\"nofollow\" target=\"_blank\"\u003eDuck DNS\u003c/a\u003e.\u003c/p\u003e\n\u003ch3 id=\"Keep-the-IP-Address-Up-to-Date\"\u003e\u003ca href=\"https://www.duckdns.org/install.jsp\" rel=\"nofollow\" target=\"_blank\"\u003eKeep the IP Address Up-to-Date\u003c/a\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Keep-the-IP-Address-Up-to-Date\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h3\u003e\n\u003ch2 id=\"Expose-Internal-Service-to-Internet\"\u003eExpose Internal Service to Internet\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Expose-Internal-Service-to-Internet\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003eFrom OpenWrt Luci GUI -\u0026gt; Network -\u0026gt; DHCP and DNS -\u0026gt; Static Leases, set your internal host with a static IP address so port forwarding can work.\u003c/p\u003e\n\u003cp\u003eGo to OpenWrt Luci GUI -\u0026gt; Network -\u0026gt; Firewall -\u0026gt; Port Forwards, then add rules to forward traffic from Internet to your internal host which lives inside of private network e.g. port forwarding to SSH server.\u003c/p\u003e\n\u003ch2 id=\"Reference\"\u003eReference\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Reference\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href=\"https://bandaancha.eu/articulos/canales-wifi-banda-5-ghz-espana-mejor-9826\" rel=\"nofollow\" target=\"_blank\"\u003eCanales wifi en la banda 5 GHz en España: Lo que nunca te han contado\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://bandaancha.eu/articulos/todas-canales-bandas-wifi-2-4-5-6ghz-10117\" rel=\"nofollow\" target=\"_blank\"\u003eTodos los canales y bandas de frecuencias wifi legales en España en 2,4; 5 y 6 GHz\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://bandaancha.eu/articulos/mejor-router-wifi-tiene-muchas-antenas-9810\" rel=\"nofollow\" target=\"_blank\"\u003e¿Es mejor un router wifi si tiene muchas antenas MIMO?\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://www.cbtnuggets.com/blog/certifications/cisco/when-to-use-20mhz-vs-40mhz-vs-80mhz\" rel=\"nofollow\" target=\"_blank\"\u003eWhen to Use 20mhz vs 40mhz vs 80mhz\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://www.smallnetbuilder.com/wireless/wireless-features/33228-wi-fi-ping-spikes-causes-and-fixes\" rel=\"nofollow\" target=\"_blank\"\u003eWi-Fi Ping Spikes: Causes and Fixes\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://www.intel.com/content/www/us/en/support/articles/000005725/wireless/legacy-intel-wireless-products.html\" rel=\"nofollow\" target=\"_blank\"\u003eDifferent Wi-Fi Protocols and Data Rates\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://forum.archive.openwrt.org/viewtopic.php?id=54943\" rel=\"nofollow\" target=\"_blank\"\u003eEdit /etc/hosts via WebUI\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e"
+            },
+            "lang": "en",
+            "_nextI18Next": {
+              "initialI18nStore": {
+                "en": {
+                  "navbar": {
+                    "Home": "Home",
+                    "Language": "Language",
+                    "Tags": "Tags",
+                    "en": "English",
+                    "es": "Spanish",
+                    "zh": "Chinese"
+                  },
+                  "post-layout": {
+                    "Author": "Author: {{author}}",
+                    "Tags": "Tags"
+                  }
+                }
+              },
+              "initialLocale": "en",
+              "ns": ["navbar", "post-layout"],
+              "userConfig": {
+                "i18n": {
+                  "defaultLocale": "en",
+                  "locales": ["en", "es", "zh"]
+                },
+                "default": {
+                  "i18n": {
+                    "defaultLocale": "en",
+                    "locales": ["en", "es", "zh"]
+                  }
+                }
+              }
+            }
+          },
+          "__N_SSG": true
+        },
+        "page": "/posts/[slug]",
+        "query": { "slug": "openwrt" },
+        "buildId": "fixed",
+        "runtimeConfig": {
+          "siteConfig": {
+            "siteAuthor": "Gao",
+            "siteTitle": "Gao's blog",
+            "siteDescription": "Gao's blog",
+            "aboutMe": "see more about me on my Github profile.",
+            "email": "dalao1002@gmail.com",
+            "linkedin": "shuxig",
+            "github": "vitaminac",
+            "gitlab": "vitaminac",
+            "redbook": "622dca68000000001000c9b2",
+            "kaggle": "dalao1002",
+            "leetcode": "dalao1002",
+            "stackexchange": "13825906",
+            "disqusUsername": "blog-vnwybnwkiz",
+            "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+          }
+        },
+        "isFallback": false,
+        "gsp": true,
+        "scriptLoader": []
+      }
+    </script>
+  </body>
+</html>
