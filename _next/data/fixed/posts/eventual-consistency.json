@@ -1,0 +1,41 @@
+{
+  "pageProps": {
+    "postData": {
+      "slug": "eventual-consistency",
+      "tags": ["database", "BASE", "NoSQL", "Eventual Consistency"],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "Eventual Consistency",
+      "date": "2021-06-01 10:32:46",
+      "isLegacy": false,
+      "lang": "en",
+      "tocHtml": "<ol>\n<li><a href=\"#Reference\">Reference</a></li>\n</ol>",
+      "articleHtml": "<p><strong>Eventual consistency</strong> is a <strong>weak consistency model</strong> that ensures <strong>all replicas</strong> of a distributed system <strong>converge to identical states</strong> in the absence of further updates.</p>\n<p>In order achieve replica convergence, a system must merge differences between multiple copies of distributed servers. This consists of two parts:</p>\n<ul>\n<li><strong>Anti-Entropy</strong>: exchanging versions or updates of data between servers</li>\n<li><strong>Reconciliation</strong>: choosing an appropriate final state when concurrent updates have occurred</li>\n</ul>\n<p>Eventual consistency provides only a <strong>liveness</strong> guarantee that reads will eventually return the same value without without safety guarantees for any intermediate value before convergence.</p>\n<p>The distributed data stores that implement evetual consistency usually achieve high availability and operate under the assumption of <strong>rare simultaneous updates</strong>, as most of the operations involve reading data. In such systems, it is often acceptable to propagate an update after some time, with the main concern of how fast updates should become visible to read-only processes. When <strong>only a small group of processes can perform updates</strong>, concurrent updates become relatively easy to solve. The distributed data stores with eventual consistency require only that updates are guaranteed to propagate to all replicas and are therefore often <strong>cheap to implement</strong>.</p>\n<h2 id=\"Reference\">Reference<a aria-hidden=\"true\" tabindex=\"-1\" href=\"#Reference\"><i class=\"fa-solid fa-link\"></i></a></h2>\n<ul>\n<li><a href=\"https://en.wikipedia.org/wiki/Eventual_consistency\" rel=\"nofollow\" target=\"_blank\">Eventual Consistency</a></li>\n</ul>"
+    },
+    "lang": "en",
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          },
+          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
+        }
+      },
+      "initialLocale": "en",
+      "ns": ["navbar", "post-layout"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

@@ -3,6 +3,18 @@
     "lang": "en",
     "previews": [
       {
+        "slug": "Google-Kickstart-2019-Round-G-Shifts",
+        "title": "Google Kickstart 2019 Round G Shifts",
+        "date": "2019-11-03 01:47:31",
+        "content": "Google Kickstart 2019 Round G Shifts  We need to calculate the number of valid combinations that makes two guards happy. I first tried backtracking..."
+      },
+      {
+        "slug": "Google-Kickstart-2019-Round-G-The-Equation",
+        "title": "Google Kickstart 2019 Round G The Equation",
+        "date": "2019-11-02 22:11:00",
+        "content": "Google Kickstart 2019 Round G The Equation  The essential of the problem is to find the number $k$ that xor with each $A_i$ gives the largest number...."
+      },
+      {
         "slug": "Install-DockerDesktop-Win10Home",
         "title": "Install Docker Desktop in Windows10 Home Edition",
         "date": "2019-11-02 21:11:31",

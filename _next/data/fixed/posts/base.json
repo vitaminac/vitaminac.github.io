@@ -1,0 +1,41 @@
+{
+  "pageProps": {
+    "postData": {
+      "slug": "base",
+      "tags": ["database", "BASE", "NoSQL"],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "BASE",
+      "date": "2021-06-01 10:32:46",
+      "isLegacy": false,
+      "lang": "en",
+      "tocHtml": "<ol>\n<li><a href=\"#Reference\">Reference</a></li>\n</ol>",
+      "articleHtml": "<p><strong>BASE</strong> is an acronym describing the design principles behind many NoSQL and eventually consistent databases. BASE often contrasted with ACID and its stands for:</p>\n<ul>\n<li><strong>B</strong>asic Availability – the system guarantees availability, even if parts of it fail or are inconsistent.</li>\n<li><strong>S</strong>oft state – the state of the system may change over time, even without input because of replication or background updates.</li>\n<li><strong>E</strong>ventual consistency – the system will become consistent eventually, once all updates have propagated.</li>\n</ul>\n<h2 id=\"Reference\">Reference<a aria-hidden=\"true\" tabindex=\"-1\" href=\"#Reference\"><i class=\"fa-solid fa-link\"></i></a></h2>\n<ul>\n<li><a href=\"https://en.wikipedia.org/wiki/Eventual_consistency\" rel=\"nofollow\" target=\"_blank\">Eventual Consistency</a></li>\n</ul>"
+    },
+    "lang": "en",
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          },
+          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
+        }
+      },
+      "initialLocale": "en",
+      "ns": ["navbar", "post-layout"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

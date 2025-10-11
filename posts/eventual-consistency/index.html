@@ -6,13 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="content-language" content="en" />
     <link rel="icon" href="/favicon.ico" />
-    <title>Gao&#x27;s blog</title>
-    <meta name="og:title" content="Gao&#x27;s blog" />
+    <title>Eventual Consistency</title>
+    <meta name="og:title" content="Eventual Consistency" />
     <meta name="author" content="Gao" />
-    <meta name="description" content="Gao&#x27;s blog" />
-    <meta name="og:description" content="Gao&#x27;s blog" />
+    <meta name="keywords" content="database,BASE,NoSQL,Eventual Consistency" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="next-head-count" content="11" />
+    <meta name="next-head-count" content="10" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -53,12 +52,12 @@
     />
     <link
       rel="preload"
-      href="/_next/static/css/b6ae49f768350e65.css"
+      href="/_next/static/css/ae40a2b2ee8ce9da.css"
       as="style"
     />
     <link
       rel="stylesheet"
-      href="/_next/static/css/b6ae49f768350e65.css"
+      href="/_next/static/css/ae40a2b2ee8ce9da.css"
       data-n-p=""
     />
     <noscript data-n-css=""></noscript>
@@ -73,9 +72,9 @@
     <script src="/_next/static/chunks/pages/_app.js" defer=""></script>
     <script src="/_next/static/chunks/367.js" defer=""></script>
     <script src="/_next/static/chunks/503.js" defer=""></script>
-    <script src="/_next/static/chunks/151.js" defer=""></script>
+    <script src="/_next/static/chunks/287.js" defer=""></script>
     <script
-      src="/_next/static/chunks/pages/posts/langs/%5Blang%5D/tags/%5Btag%5D.js"
+      src="/_next/static/chunks/pages/posts/%5Bslug%5D.js"
       defer=""
     ></script>
     <script src="/_next/static/fixed/_buildManifest.js" defer=""></script>
@@ -153,79 +152,127 @@
           </div>
         </div>
       </nav>
-      <div class="tw-mx-auto tw-w-11/12 tw-max-w-screen-xl">
-        <header>
-          <section class="AboutMe_about__UiMOu tw-text-center tw-text-gray-300">
-            <img
-              alt="Avatar"
-              loading="lazy"
-              width="108"
-              height="108"
-              decoding="async"
-              data-nimg="1"
-              class="tw-m-auto"
-              style="color: transparent"
-              src="/_next/static/media/avatar.f1819002.jpg"
-            />
-            <h5>Gao</h5>
-            <ul class="list-inline text-center">
-              <li class="list-inline-item"><i class="fab fa-android"></i></li>
-              <li class="list-inline-item"><i class="fab fa-angular"></i></li>
-              <li class="list-inline-item"><i class="fas fa-blog"></i></li>
-              <li class="list-inline-item"><i class="fab fa-bootstrap"></i></li>
-              <li class="list-inline-item"><i class="fab fa-chrome"></i></li>
-              <li class="list-inline-item"><i class="fas fa-cloud"></i></li>
-              <li class="list-inline-item"><i class="fas">C</i></li>
-              <li class="list-inline-item"><i class="fas">C#</i></li>
-              <li class="list-inline-item"><i class="fab fa-docker"></i></li>
-              <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
-              <li class="list-inline-item"><i class="fas fa-database"></i></li>
-              <li class="list-inline-item"><i class="fab fa-git"></i></li>
-              <li class="list-inline-item"><i class="fab fa-html5"></i></li>
-              <li class="list-inline-item"><i class="fab fa-java"></i></li>
-              <li class="list-inline-item"><i class="fab fa-js"></i></li>
-              <li class="list-inline-item"><i class="fab fa-linux"></i></li>
-              <li class="list-inline-item"><i class="fab fa-markdown"></i></li>
-              <li class="list-inline-item"><i class="fab fa-microsoft"></i></li>
-              <li class="list-inline-item"><i class="fab fa-node-js"></i></li>
-              <li class="list-inline-item"><i class="fab fa-python"></i></li>
-              <li class="list-inline-item">
-                <i class="fab fa-raspberry-pi"></i>
+      <main>
+        <header
+          class="tw-relative tw-flex tw-h-96 tw-w-full tw-flex-col tw-content-center tw-justify-center tw-bg-cover tw-bg-center tw-bg-no-repeat tw-text-center tw-text-white"
+          style="
+            background-image: url(/_next/static/media/default-post-preview.c96b099a.jpeg);
+            left: calc(50% - 50vw);
+          "
+        >
+          <h1>Eventual Consistency</h1>
+          <p>Author: Gao</p>
+          <span
+            ><i class="fa-regular fa-calendar"></i
+            ><time class="tw-pl-1.5" datetime="2021-06-01 10:32:46"
+              >June 1, 2021</time
+            ></span
+          >
+          <section class="tw-mt-3 tw-text-center">
+            <p>Tags<!-- -->:</p>
+            <ul class="tw-p-0">
+              <li class="tw-inline tw-px-1">
+                <a
+                  class="tw-m-0.5 tw-inline-block tw-rounded tw-border tw-border-solid tw-border-white tw-bg-neutral-300 tw-px-2 tw-text-sm tw-leading-6 tw-text-white tw-no-underline hover:tw-bg-sky-300"
+                  href="/posts/langs/en/tags/database/"
+                  >database</a
+                >
               </li>
-              <li class="list-inline-item"><i class="fab fa-react"></i></li>
-              <li class="list-inline-item"><i class="fab fa-r-project"></i></li>
-              <li class="list-inline-item"><i class="fas fa-server"></i></li>
-              <li class="list-inline-item"><i class="fab fa-trello"></i></li>
-              <li class="list-inline-item"><i class="fab fa-vuejs"></i></li>
+              <li class="tw-inline tw-px-1">
+                <a
+                  class="tw-m-0.5 tw-inline-block tw-rounded tw-border tw-border-solid tw-border-white tw-bg-neutral-300 tw-px-2 tw-text-sm tw-leading-6 tw-text-white tw-no-underline hover:tw-bg-sky-300"
+                  href="/posts/langs/en/tags/BASE/"
+                  >BASE</a
+                >
+              </li>
+              <li class="tw-inline tw-px-1">
+                <a
+                  class="tw-m-0.5 tw-inline-block tw-rounded tw-border tw-border-solid tw-border-white tw-bg-neutral-300 tw-px-2 tw-text-sm tw-leading-6 tw-text-white tw-no-underline hover:tw-bg-sky-300"
+                  href="/posts/langs/en/tags/NoSQL/"
+                  >NoSQL</a
+                >
+              </li>
+              <li class="tw-inline tw-px-1">
+                <a
+                  class="tw-m-0.5 tw-inline-block tw-rounded tw-border tw-border-solid tw-border-white tw-bg-neutral-300 tw-px-2 tw-text-sm tw-leading-6 tw-text-white tw-no-underline hover:tw-bg-sky-300"
+                  href="/posts/langs/en/tags/Eventual%20Consistency/"
+                  >Eventual Consistency</a
+                >
+              </li>
             </ul>
-            <p>see more about me on my Github profile.</p>
           </section>
         </header>
-        <main>
-          <hr />
-          <section class="tw-min-h-32">
-            <h4>
-              <a
-                class="tw-text-black tw-no-underline"
-                href="/posts/Client-Centric-Consistency-Models/"
-                >Client-Centric Consistency Models</a
-              >
-            </h4>
-            <span
-              ><i class="fa-regular fa-calendar"></i
-              ><time class="tw-pl-1.5" datetime="2021-07-03 15:06:02"
-                >July 3, 2021</time
-              ></span
-            >
-            <p class="tw-mt-3">
-              Eventual consistent data stores work fine as long as clients
-              always access the same replica. However, problems arise when
-              different replicas are...
-            </p>
-          </section>
-          <hr />
-        </main>
-      </div>
+        <div class="container">
+          <div class="row">
+            <nav class="Post_toc__TAzIW col-12 col-lg-3 order-lg-2">
+              <ol>
+                <li><a href="#Reference">Reference</a></li>
+              </ol>
+            </nav>
+            <article class="Post_content__QBxez col-12 order-lg-1 col-lg-9">
+              <p>
+                <strong>Eventual consistency</strong> is a
+                <strong>weak consistency model</strong> that ensures
+                <strong>all replicas</strong> of a distributed system
+                <strong>converge to identical states</strong> in the absence of
+                further updates.
+              </p>
+              <p>
+                In order achieve replica convergence, a system must merge
+                differences between multiple copies of distributed servers. This
+                consists of two parts:
+              </p>
+              <ul>
+                <li>
+                  <strong>Anti-Entropy</strong>: exchanging versions or updates
+                  of data between servers
+                </li>
+                <li>
+                  <strong>Reconciliation</strong>: choosing an appropriate final
+                  state when concurrent updates have occurred
+                </li>
+              </ul>
+              <p>
+                Eventual consistency provides only a
+                <strong>liveness</strong> guarantee that reads will eventually
+                return the same value without without safety guarantees for any
+                intermediate value before convergence.
+              </p>
+              <p>
+                The distributed data stores that implement evetual consistency
+                usually achieve high availability and operate under the
+                assumption of <strong>rare simultaneous updates</strong>, as
+                most of the operations involve reading data. In such systems, it
+                is often acceptable to propagate an update after some time, with
+                the main concern of how fast updates should become visible to
+                read-only processes. When
+                <strong
+                  >only a small group of processes can perform updates</strong
+                >, concurrent updates become relatively easy to solve. The
+                distributed data stores with eventual consistency require only
+                that updates are guaranteed to propagate to all replicas and are
+                therefore often <strong>cheap to implement</strong>.
+              </p>
+              <h2 id="Reference">
+                Reference<a aria-hidden="true" tabindex="-1" href="#Reference"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <ul>
+                <li>
+                  <a
+                    href="https://en.wikipedia.org/wiki/Eventual_consistency"
+                    rel="nofollow"
+                    target="_blank"
+                    >Eventual Consistency</a
+                  >
+                </li>
+              </ul>
+            </article>
+          </div>
+          <aside></aside>
+        </div>
+      </main>
       <footer class="tw-text-center tw-text-gray-400">
         <ul class="list-inline text-center tw-text-stone-700">
           <li class="list-inline-item">
@@ -349,16 +396,19 @@
       {
         "props": {
           "pageProps": {
+            "postData": {
+              "slug": "eventual-consistency",
+              "tags": ["database", "BASE", "NoSQL", "Eventual Consistency"],
+              "isDraft": false,
+              "isArchived": false,
+              "title": "Eventual Consistency",
+              "date": "2021-06-01 10:32:46",
+              "isLegacy": false,
+              "lang": "en",
+              "tocHtml": "\u003col\u003e\n\u003cli\u003e\u003ca href=\"#Reference\"\u003eReference\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e",
+              "articleHtml": "\u003cp\u003e\u003cstrong\u003eEventual consistency\u003c/strong\u003e is a \u003cstrong\u003eweak consistency model\u003c/strong\u003e that ensures \u003cstrong\u003eall replicas\u003c/strong\u003e of a distributed system \u003cstrong\u003econverge to identical states\u003c/strong\u003e in the absence of further updates.\u003c/p\u003e\n\u003cp\u003eIn order achieve replica convergence, a system must merge differences between multiple copies of distributed servers. This consists of two parts:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cstrong\u003eAnti-Entropy\u003c/strong\u003e: exchanging versions or updates of data between servers\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eReconciliation\u003c/strong\u003e: choosing an appropriate final state when concurrent updates have occurred\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eEventual consistency provides only a \u003cstrong\u003eliveness\u003c/strong\u003e guarantee that reads will eventually return the same value without without safety guarantees for any intermediate value before convergence.\u003c/p\u003e\n\u003cp\u003eThe distributed data stores that implement evetual consistency usually achieve high availability and operate under the assumption of \u003cstrong\u003erare simultaneous updates\u003c/strong\u003e, as most of the operations involve reading data. In such systems, it is often acceptable to propagate an update after some time, with the main concern of how fast updates should become visible to read-only processes. When \u003cstrong\u003eonly a small group of processes can perform updates\u003c/strong\u003e, concurrent updates become relatively easy to solve. The distributed data stores with eventual consistency require only that updates are guaranteed to propagate to all replicas and are therefore often \u003cstrong\u003echeap to implement\u003c/strong\u003e.\u003c/p\u003e\n\u003ch2 id=\"Reference\"\u003eReference\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Reference\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href=\"https://en.wikipedia.org/wiki/Eventual_consistency\" rel=\"nofollow\" target=\"_blank\"\u003eEventual Consistency\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e"
+            },
             "lang": "en",
-            "tag": "Read Your Writes",
-            "previews": [
-              {
-                "slug": "Client-Centric-Consistency-Models",
-                "title": "Client-Centric Consistency Models",
-                "date": "2021-07-03 15:06:02",
-                "content": "Eventual consistent data stores work fine as long as clients always access the same replica. However, problems arise when different replicas are..."
-              }
-            ],
             "_nextI18Next": {
               "initialI18nStore": {
                 "en": {
@@ -369,11 +419,15 @@
                     "en": "English",
                     "es": "Spanish",
                     "zh": "Chinese"
+                  },
+                  "post-layout": {
+                    "Author": "Author: {{author}}",
+                    "Tags": "Tags"
                   }
                 }
               },
               "initialLocale": "en",
-              "ns": ["navbar"],
+              "ns": ["navbar", "post-layout"],
               "userConfig": {
                 "i18n": {
                   "defaultLocale": "en",
@@ -390,8 +444,8 @@
           },
           "__N_SSG": true
         },
-        "page": "/posts/langs/[lang]/tags/[tag]",
-        "query": { "lang": "en", "tag": "Read Your Writes" },
+        "page": "/posts/[slug]",
+        "query": { "slug": "eventual-consistency" },
         "buildId": "fixed",
         "runtimeConfig": {
           "siteConfig": {

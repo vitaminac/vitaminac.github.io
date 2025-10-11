@@ -365,9 +365,9 @@
               ></span
             >
             <p class="tw-mt-3">
-              Eventual consistency There is a special class of distributed data
-              stores that characterized by the lack of simultaneous updates,
-              most of the...
+              Eventual consistent data stores work fine as long as clients
+              always access the same replica. However, problems arise when
+              different replicas are...
             </p>
           </section>
           <hr />
@@ -392,8 +392,10 @@
           <hr />
           <section class="tw-min-h-32">
             <h4>
-              <a class="tw-text-black tw-no-underline" href="/posts/acid/"
-                >ACID</a
+              <a
+                class="tw-text-black tw-no-underline"
+                href="/posts/eventual-consistency/"
+                >Eventual Consistency</a
               >
             </h4>
             <span
@@ -403,9 +405,9 @@
               ></span
             >
             <p class="tw-mt-3">
-              ACID is an acronym used in database systems to describe 4
-              properties that the relational database must conform with: Atomic:
-              Each transaction is...
+              Eventual consistency is a weak consistency model that ensures all
+              replicas of a distributed system converge to identical states in
+              the absence of...
             </p>
           </section>
           <hr />
@@ -601,7 +603,7 @@
                 "slug": "Client-Centric-Consistency-Models",
                 "title": "Client-Centric Consistency Models",
                 "date": "2021-07-03 15:06:02",
-                "content": "Eventual consistency  There is a special class of distributed data stores that characterized by the lack of simultaneous updates, most of the..."
+                "content": "Eventual consistent data stores work fine as long as clients always access the same replica. However, problems arise when different replicas are..."
               },
               {
                 "slug": "cap",
@@ -610,10 +612,10 @@
                 "content": "The CAP theorem, also named as Brewer's theorem states that it is impossible for a distributed data store to simultaneously provide more than two out..."
               },
               {
-                "slug": "acid",
-                "title": "ACID",
+                "slug": "eventual-consistency",
+                "title": "Eventual Consistency",
                 "date": "2021-06-01 10:32:46",
-                "content": "ACID is an acronym used in database systems to describe 4 properties that the relational database must conform with:  Atomic: Each transaction is..."
+                "content": "Eventual consistency is a weak consistency model that ensures all replicas of a distributed system converge to identical states in the absence of..."
               }
             ],
             "prevPageUrl": "/posts/langs/en/pagination/1",

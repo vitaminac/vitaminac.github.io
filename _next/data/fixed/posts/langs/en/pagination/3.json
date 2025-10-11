@@ -3,6 +3,18 @@
     "lang": "en",
     "previews": [
       {
+        "slug": "base",
+        "title": "BASE",
+        "date": "2021-06-01 10:32:46",
+        "content": "BASE is an acronym describing the design principles behind many NoSQL and eventually consistent databases. BASE often contrasted with ACID and its..."
+      },
+      {
+        "slug": "acid",
+        "title": "ACID",
+        "date": "2021-06-01 10:32:46",
+        "content": "ACID is an acronym used in database systems to describe 4 properties that the relational database must conform with:  Atomic: Each transaction is..."
+      },
+      {
         "slug": "STP",
         "title": "STP",
         "date": "2021-05-15 19:05:00",
@@ -49,18 +61,6 @@
         "title": "Build Simple Bootstrap Linux System Image",
         "date": "2020-11-08 19:15:57",
         "content": "Kernel Image for Emulation  We will create a tiny Linux system with absolute minimum additional software. We reuse host kernel image vmlinuz to..."
-      },
-      {
-        "slug": "Java-Stream",
-        "title": "Java Stream",
-        "date": "2020-07-25 22:19:18",
-        "content": "Streams  A stream represents a sequence of elements and can perform a series of operations on them  strings.stream() .filter(s -> !s.equals(\"\"))..."
-      },
-      {
-        "slug": "MongoDB",
-        "title": "MongoDB",
-        "date": "2020-06-07 13:57:06",
-        "content": "Scalability  NoSQL is intented to offer more scalability. A balance between the scalability and the consistency.  Vertical  Functional decomposition ..."
       }
     ],
     "prevPageUrl": "/posts/langs/en/pagination/2",

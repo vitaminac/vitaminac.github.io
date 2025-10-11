@@ -1,7 +1,7 @@
 {
   "pageProps": {
     "lang": "en",
-    "tag": "NoSQL",
+    "tag": "Eventual Consistency",
     "previews": [
       {
         "slug": "Client-Centric-Consistency-Models",
@@ -14,24 +14,6 @@
         "title": "Eventual Consistency",
         "date": "2021-06-01 10:32:46",
         "content": "Eventual consistency is a weak consistency model that ensures all replicas of a distributed system converge to identical states in the absence of..."
-      },
-      {
-        "slug": "base",
-        "title": "BASE",
-        "date": "2021-06-01 10:32:46",
-        "content": "BASE is an acronym describing the design principles behind many NoSQL and eventually consistent databases. BASE often contrasted with ACID and its..."
-      },
-      {
-        "slug": "MongoDB",
-        "title": "MongoDB",
-        "date": "2020-06-07 13:57:06",
-        "content": "Scalability  NoSQL is intented to offer more scalability. A balance between the scalability and the consistency.  Vertical  Functional decomposition ..."
-      },
-      {
-        "slug": "Neo4j-Graph-Database",
-        "title": "Neo4j Graph Database",
-        "date": "2019-10-11 23:37:29",
-        "content": "Neo4j  Neo4j is an open source, NoSQL, native graph databases. In Neo4j, the data are persisted for long term durability. Neo4j can be used with both..."
       }
     ],
     "_nextI18Next": {

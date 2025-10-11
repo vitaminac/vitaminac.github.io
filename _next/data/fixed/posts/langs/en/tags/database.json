@@ -13,13 +13,25 @@
         "slug": "Client-Centric-Consistency-Models",
         "title": "Client-Centric Consistency Models",
         "date": "2021-07-03 15:06:02",
-        "content": "Eventual consistency  There is a special class of distributed data stores that characterized by the lack of simultaneous updates, most of the..."
+        "content": "Eventual consistent data stores work fine as long as clients always access the same replica. However, problems arise when different replicas are..."
       },
       {
         "slug": "cap",
         "title": "CAP Theorem",
         "date": "2021-06-07 13:57:06",
         "content": "The CAP theorem, also named as Brewer's theorem states that it is impossible for a distributed data store to simultaneously provide more than two out..."
+      },
+      {
+        "slug": "eventual-consistency",
+        "title": "Eventual Consistency",
+        "date": "2021-06-01 10:32:46",
+        "content": "Eventual consistency is a weak consistency model that ensures all replicas of a distributed system converge to identical states in the absence of..."
+      },
+      {
+        "slug": "base",
+        "title": "BASE",
+        "date": "2021-06-01 10:32:46",
+        "content": "BASE is an acronym describing the design principles behind many NoSQL and eventually consistent databases. BASE often contrasted with ACID and its..."
       },
       {
         "slug": "acid",

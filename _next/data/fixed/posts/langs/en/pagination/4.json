@@ -3,6 +3,18 @@
     "lang": "en",
     "previews": [
       {
+        "slug": "Java-Stream",
+        "title": "Java Stream",
+        "date": "2020-07-25 22:19:18",
+        "content": "Streams  A stream represents a sequence of elements and can perform a series of operations on them  strings.stream() .filter(s -> !s.equals(\"\"))..."
+      },
+      {
+        "slug": "MongoDB",
+        "title": "MongoDB",
+        "date": "2020-06-07 13:57:06",
+        "content": "Scalability  NoSQL is intented to offer more scalability. A balance between the scalability and the consistency.  Vertical  Functional decomposition ..."
+      },
+      {
         "slug": "Matrices-in-Computer-Graphics",
         "title": "Matrices in Computer Graphics",
         "date": "2020-05-31 13:34:44",
@@ -49,18 +61,6 @@
         "title": "Google Kickstart 2019 Round F Flattening",
         "date": "2019-11-03 17:51:53",
         "content": "Google Kickstart 2019 Round F Flattening  First, we find the major height $H_k$ from each position $i$ to each position $j$. The change is not more..."
-      },
-      {
-        "slug": "Google-Kickstart-2019-Round-G-Shifts",
-        "title": "Google Kickstart 2019 Round G Shifts",
-        "date": "2019-11-03 01:47:31",
-        "content": "Google Kickstart 2019 Round G Shifts  We need to calculate the number of valid combinations that makes two guards happy. I first tried backtracking..."
-      },
-      {
-        "slug": "Google-Kickstart-2019-Round-G-The-Equation",
-        "title": "Google Kickstart 2019 Round G The Equation",
-        "date": "2019-11-02 22:11:00",
-        "content": "Google Kickstart 2019 Round G The Equation  The essential of the problem is to find the number $k$ that xor with each $A_i$ gives the largest number...."
       }
     ],
     "prevPageUrl": "/posts/langs/en/pagination/3",
