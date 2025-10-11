@@ -51,16 +51,16 @@
         "content": "Eventual consistency  There is a special class of distributed data stores that characterized by the lack of simultaneous updates, most of the..."
       },
       {
+        "slug": "cap",
+        "title": "CAP Theorem",
+        "date": "2021-06-07 13:57:06",
+        "content": "The CAP theorem, also named as Brewer's theorem states that it is impossible for a distributed data store to simultaneously provide more than two out..."
+      },
+      {
         "slug": "STP",
         "title": "STP",
         "date": "2021-05-15 19:05:00",
         "content": "Motivation  The Spanning Tree Protocol (STP) is a layer 2 protocol that runs on bridges and switches. The main purpose of STP is to ensure that you..."
-      },
-      {
-        "slug": "Testing",
-        "title": "Testing",
-        "date": "2021-04-24 11:27:04",
-        "content": "Testing Unit Test  The purpose of unit test is to validate that each unit of the software code performs as expected. A unit may be an individual..."
       }
     ],
     "prevPageUrl": "/posts/langs/en/pagination/1",

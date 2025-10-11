@@ -4,6 +4,7 @@
     "tags": [
       "4D Matrices",
       "AAA",
+      "ACID",
       "AE",
       "Accounting",
       "Agile Software Development",
@@ -11,8 +12,10 @@
       "Authentication",
       "Authorization",
       "Availability",
+      "BASE",
       "Boundary Value Analysis",
       "C",
+      "CAP",
       "CIA",
       "CQL",
       "Client-Centric Consistency Models",
