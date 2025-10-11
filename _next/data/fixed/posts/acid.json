@@ -1,0 +1,41 @@
+{
+  "pageProps": {
+    "postData": {
+      "slug": "acid",
+      "tags": ["database", "ACID"],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "ACID",
+      "date": "2021-06-01 10:32:46",
+      "isLegacy": false,
+      "lang": "en",
+      "tocHtml": "<ol>\n<li><a href=\"#Reference\">Reference</a></li>\n</ol>",
+      "articleHtml": "<p><strong>ACID</strong> is an acronym used in database systems to describe 4 properties that the relational database must conform with:</p>\n<ul>\n<li><strong>A</strong>tomic: Each transaction is treated as a single unit, either process all operations or nothing.</li>\n<li><strong>C</strong>onsistency: A transaction must bring the database from one valid state to another</li>\n<li><strong>I</strong>solation: Concurrent execution of transactions leaves the database in the same state that would have been obtained if the transactions were executed sequentially.</li>\n<li><strong>D</strong>urability: Once a transaction is committed, it will not be lost.</li>\n</ul>\n<h2 id=\"Reference\">Reference<a aria-hidden=\"true\" tabindex=\"-1\" href=\"#Reference\"><i class=\"fa-solid fa-link\"></i></a></h2>\n<ul>\n<li><a href=\"https://en.wikipedia.org/wiki/ACID\" rel=\"nofollow\" target=\"_blank\">ACID</a></li>\n</ul>"
+    },
+    "lang": "en",
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          },
+          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
+        }
+      },
+      "initialLocale": "en",
+      "ns": ["navbar", "post-layout"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

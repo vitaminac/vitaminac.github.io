@@ -7,7 +7,8 @@
         "Monotonic Reads",
         "Monotonic Writes",
         "Read Your Writes",
-        "Writes Follow Reads"
+        "Writes Follow Reads",
+        "database"
       ],
       "isDraft": false,
       "isArchived": false,

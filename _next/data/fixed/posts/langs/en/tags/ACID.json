@@ -8,6 +8,12 @@
         "title": "CAP Theorem",
         "date": "2021-06-07 13:57:06",
         "content": "The CAP theorem, also named as Brewer's theorem states that it is impossible for a distributed data store to simultaneously provide more than two out..."
+      },
+      {
+        "slug": "acid",
+        "title": "ACID",
+        "date": "2021-06-01 10:32:46",
+        "content": "ACID is an acronym used in database systems to describe 4 properties that the relational database must conform with:  Atomic: Each transaction is..."
       }
     ],
     "_nextI18Next": {

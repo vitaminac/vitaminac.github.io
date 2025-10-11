@@ -9,7 +9,7 @@
     <title>CAP Theorem</title>
     <meta name="og:title" content="CAP Theorem" />
     <meta name="author" content="Gao" />
-    <meta name="keywords" content="CAP,Database,BASE,ACID" />
+    <meta name="keywords" content="CAP,database,BASE,ACID" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="next-head-count" content="10" />
     <link
@@ -52,12 +52,12 @@
     />
     <link
       rel="preload"
-      href="/_next/static/css/fe56aecab9bc9f9e.css"
+      href="/_next/static/css/ae40a2b2ee8ce9da.css"
       as="style"
     />
     <link
       rel="stylesheet"
-      href="/_next/static/css/fe56aecab9bc9f9e.css"
+      href="/_next/static/css/ae40a2b2ee8ce9da.css"
       data-n-p=""
     />
     <noscript data-n-css=""></noscript>
@@ -181,8 +181,8 @@
               <li class="tw-inline tw-px-1">
                 <a
                   class="tw-m-0.5 tw-inline-block tw-rounded tw-border tw-border-solid tw-border-white tw-bg-neutral-300 tw-px-2 tw-text-sm tw-leading-6 tw-text-white tw-no-underline hover:tw-bg-sky-300"
-                  href="/posts/langs/en/tags/Database/"
-                  >Database</a
+                  href="/posts/langs/en/tags/database/"
+                  >database</a
                 >
               </li>
               <li class="tw-inline tw-px-1">
@@ -211,10 +211,10 @@
             </nav>
             <article class="Post_content__QBxez col-12 order-lg-1 col-lg-9">
               <p>
-                The <strong>CAP theorem</strong>, also named as Brewer&#x27;s
-                theorem states that it is impossible for a distributed data
-                store to simultaneously provide more than two out of the
-                following three guarantees:
+                The <strong>CAP theorem</strong>, also named as
+                <strong>Brewer&#x27;s theorem</strong> states that it is
+                impossible for a distributed data store to simultaneously
+                provide more than two out of the following three guarantees:
               </p>
               <ul>
                 <li>
@@ -271,11 +271,11 @@
                 In practical system design, since distributed systems must have
                 partition tolerance (P), developers usually have to make
                 trade-offs between consistency (C) and availability (A). This
-                has led to the BASE theory (Basically Available, Soft state,
-                Eventually consistent), which emphasizes eventual consistency
-                rather than strong consistency. So, BASE mitigate CAP by
-                choosing a practical balance of &quot;Be available now,
-                consistent later.”
+                has led to the <strong>BASE</strong> theory (Basically
+                Available, Soft state, Eventually consistent), which emphasizes
+                eventual consistency rather than strong consistency. So, BASE
+                mitigate CAP by choosing a practical balance of &quot;Be
+                available now, consistent later.”
               </p>
               <h2 id="Reference">
                 Reference<a aria-hidden="true" tabindex="-1" href="#Reference"
@@ -422,7 +422,7 @@
           "pageProps": {
             "postData": {
               "slug": "cap",
-              "tags": ["CAP", "Database", "BASE", "ACID"],
+              "tags": ["CAP", "database", "BASE", "ACID"],
               "isDraft": false,
               "isArchived": false,
               "title": "CAP Theorem",
@@ -430,7 +430,7 @@
               "isLegacy": false,
               "lang": "en",
               "tocHtml": "\u003col\u003e\n\u003cli\u003e\u003ca href=\"#Reference\"\u003eReference\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e",
-              "articleHtml": "\u003cp\u003eThe \u003cstrong\u003eCAP theorem\u003c/strong\u003e, also named as Brewer\u0026#x27;s theorem states that it is impossible for a distributed data store to simultaneously provide more than two out of the following three guarantees:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eConsistency: Every read receives the most recent write or an error\u003c/li\u003e\n\u003cli\u003eAvailability: Every request receives a non-error response, without the guarantee that it contains the most recent write\u003c/li\u003e\n\u003cli\u003ePartition tolerante: The system continues to operate despite an arbitrary number of messages being dropped.\u003c/li\u003e\n\u003c/ul\u003e\n\u003ctable\u003e\u003cthead\u003e\u003ctr\u003e\u003cth\u003eSystem Type\u003c/th\u003e\u003cth\u003eGuarantees Provided\u003c/th\u003e\u003cth\u003eDescription\u003c/th\u003e\u003c/tr\u003e\u003c/thead\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003e\u003cstrong\u003eCA System\u003c/strong\u003e\u003c/td\u003e\u003ctd\u003eConsistency + Availability\u003c/td\u003e\u003ctd\u003eA single-machine database has no partition issues, so it can guarantee both consistency and availability.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e\u003cstrong\u003eCP System\u003c/strong\u003e\u003c/td\u003e\u003ctd\u003eConsistency + Partition Tolerance\u003c/td\u003e\u003ctd\u003eWhen a network partition occurs, the system sacrifices availability (rejecting some requests) to maintain consistency.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e\u003cstrong\u003eAP System\u003c/strong\u003e\u003c/td\u003e\u003ctd\u003eAvailability + Partition Tolerance\u003c/td\u003e\u003ctd\u003eWhen a network partition occurs, the system continues to provide services, but data may be temporarily inconsistent (eventual consistency).\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\n\u003cp\u003eIn practical system design, since distributed systems must have partition tolerance (P), developers usually have to make trade-offs between consistency (C) and availability (A). This has led to the BASE theory (Basically Available, Soft state, Eventually consistent), which emphasizes eventual consistency rather than strong consistency. So, BASE mitigate CAP by choosing a practical balance of \u0026quot;Be available now, consistent later.”\u003c/p\u003e\n\u003ch2 id=\"Reference\"\u003eReference\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Reference\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href=\"https://en.wikipedia.org/wiki/CAP_theorem\" rel=\"nofollow\" target=\"_blank\"\u003eCAP Theorem\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e"
+              "articleHtml": "\u003cp\u003eThe \u003cstrong\u003eCAP theorem\u003c/strong\u003e, also named as \u003cstrong\u003eBrewer\u0026#x27;s theorem\u003c/strong\u003e states that it is impossible for a distributed data store to simultaneously provide more than two out of the following three guarantees:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eConsistency: Every read receives the most recent write or an error\u003c/li\u003e\n\u003cli\u003eAvailability: Every request receives a non-error response, without the guarantee that it contains the most recent write\u003c/li\u003e\n\u003cli\u003ePartition tolerante: The system continues to operate despite an arbitrary number of messages being dropped.\u003c/li\u003e\n\u003c/ul\u003e\n\u003ctable\u003e\u003cthead\u003e\u003ctr\u003e\u003cth\u003eSystem Type\u003c/th\u003e\u003cth\u003eGuarantees Provided\u003c/th\u003e\u003cth\u003eDescription\u003c/th\u003e\u003c/tr\u003e\u003c/thead\u003e\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003e\u003cstrong\u003eCA System\u003c/strong\u003e\u003c/td\u003e\u003ctd\u003eConsistency + Availability\u003c/td\u003e\u003ctd\u003eA single-machine database has no partition issues, so it can guarantee both consistency and availability.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e\u003cstrong\u003eCP System\u003c/strong\u003e\u003c/td\u003e\u003ctd\u003eConsistency + Partition Tolerance\u003c/td\u003e\u003ctd\u003eWhen a network partition occurs, the system sacrifices availability (rejecting some requests) to maintain consistency.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e\u003cstrong\u003eAP System\u003c/strong\u003e\u003c/td\u003e\u003ctd\u003eAvailability + Partition Tolerance\u003c/td\u003e\u003ctd\u003eWhen a network partition occurs, the system continues to provide services, but data may be temporarily inconsistent (eventual consistency).\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e\u003c/table\u003e\n\u003cp\u003eIn practical system design, since distributed systems must have partition tolerance (P), developers usually have to make trade-offs between consistency (C) and availability (A). This has led to the \u003cstrong\u003eBASE\u003c/strong\u003e theory (Basically Available, Soft state, Eventually consistent), which emphasizes eventual consistency rather than strong consistency. So, BASE mitigate CAP by choosing a practical balance of \u0026quot;Be available now, consistent later.”\u003c/p\u003e\n\u003ch2 id=\"Reference\"\u003eReference\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Reference\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href=\"https://en.wikipedia.org/wiki/CAP_theorem\" rel=\"nofollow\" target=\"_blank\"\u003eCAP Theorem\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e"
             },
             "lang": "en",
             "_nextI18Next": {

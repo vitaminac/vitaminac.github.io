@@ -2,7 +2,7 @@
   "pageProps": {
     "postData": {
       "slug": "vector-database",
-      "tags": ["vector database"],
+      "tags": ["vector database", "database"],
       "isDraft": false,
       "isArchived": false,
       "title": "Vector Database",
