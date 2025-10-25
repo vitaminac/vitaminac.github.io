@@ -4,6 +4,11 @@
     "/": ["static/chunks/pages/index.js"],
     "/404": ["static/chunks/pages/404.js"],
     "/_error": ["static/chunks/pages/_error.js"],
+    "/flash/[id]": [
+      s,
+      "static/css/ef1dc90026d69db2.css",
+      "static/chunks/pages/flash/[id].js",
+    ],
     "/posts/langs/[lang]": ["static/chunks/pages/posts/langs/[lang].js"],
     "/posts/langs/[lang]/pagination/[pagination]": [
       s,
@@ -37,6 +42,7 @@
       "/404",
       "/_app",
       "/_error",
+      "/flash/[id]",
       "/posts/langs/[lang]",
       "/posts/langs/[lang]/pagination/[pagination]",
       "/posts/langs/[lang]/tags",
