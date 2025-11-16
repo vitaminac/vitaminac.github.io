@@ -193,89 +193,1020 @@
             <nav class="Post_toc__TAzIW col-12 col-lg-3 order-lg-2">
               <ol>
                 <li>
-                  <a
-                    href="/Simple-Bootstrap-Linux-System/index.html#Kernel-Image-for-Emulation"
-                    target="Simple-Bootstrap-Linux-System"
+                  <a href="#Kernel-Image-for-Emulation"
                     >Kernel Image for Emulation</a
                   >
                 </li>
                 <li>
-                  <a
-                    href="/Simple-Bootstrap-Linux-System/index.html#Initramfs"
-                    target="Simple-Bootstrap-Linux-System"
-                    >Initramfs</a
-                  >
+                  <a href="#Initramfs">Initramfs</a>
                   <ol>
+                    <li><a href="#Shell-Environment">Shell Environment</a></li>
                     <li>
-                      <a
-                        href="/Simple-Bootstrap-Linux-System/index.html#Shell-Environment"
-                        target="Simple-Bootstrap-Linux-System"
-                        >Shell Environment</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="/Simple-Bootstrap-Linux-System/index.html#Configure-Keyboard-Layout-for-Spanish"
-                        target="Simple-Bootstrap-Linux-System"
+                      <a href="#Configure-Keyboard-Layout-for-Spanish"
                         >Configure Keyboard Layout for Spanish</a
                       >
                     </li>
                     <li>
-                      <a
-                        href="/Simple-Bootstrap-Linux-System/index.html#Support-USB-Devices"
-                        target="Simple-Bootstrap-Linux-System"
-                        >Support USB Devices</a
-                      >
+                      <a href="#Support-USB-Devices">Support USB Devices</a>
                     </li>
-                    <li>
-                      <a
-                        href="/Simple-Bootstrap-Linux-System/index.html#Init-Script"
-                        target="Simple-Bootstrap-Linux-System"
-                        >Init Script</a
-                      >
-                    </li>
+                    <li><a href="#Init-Script">Init Script</a></li>
                   </ol>
                 </li>
                 <li>
-                  <a
-                    href="/Simple-Bootstrap-Linux-System/index.html#Test-the-Constructed-Image"
-                    target="Simple-Bootstrap-Linux-System"
+                  <a href="#Test-the-Constructed-Image"
                     >Test the Constructed Image</a
                   >
                   <ol>
                     <li>
-                      <a
-                        href="/Simple-Bootstrap-Linux-System/index.html#Run-with-QEMU-Emulator"
-                        target="Simple-Bootstrap-Linux-System"
+                      <a href="#Run-with-QEMU-Emulator"
                         >Run with QEMU Emulator</a
                       >
                     </li>
                     <li>
-                      <a
-                        href="/Simple-Bootstrap-Linux-System/index.html#Booting-a-real-machine"
-                        target="Simple-Bootstrap-Linux-System"
+                      <a href="#Booting-a-real-machine"
                         >Booting a real machine</a
                       >
                     </li>
                   </ol>
                 </li>
-                <li>
-                  <a
-                    href="/Simple-Bootstrap-Linux-System/index.html#Reference"
-                    target="Simple-Bootstrap-Linux-System"
-                    >Reference</a
-                  >
-                </li>
+                <li><a href="#Reference">Reference</a></li>
               </ol>
             </nav>
-            <article class="col-12 col-lg-9 order-lg-1">
-              <iframe
-                name="Simple-Bootstrap-Linux-System"
-                title="Simple-Bootstrap-Linux-System"
-                src="/Simple-Bootstrap-Linux-System/index.html"
-                width="100%"
-                height="0px"
-              ></iframe>
+            <article class="Post_content__QBxez col-12 order-lg-1 col-lg-9">
+              <h2 id="Kernel-Image-for-Emulation">
+                Kernel Image for Emulation<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Kernel-Image-for-Emulation"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <p>
+                We will create a tiny Linux system with absolute minimum
+                additional software. We reuse host kernel image
+                <strong>vmlinuz</strong> to simply the process.
+              </p>
+              <pre><code>cp /vmlinuz vmlinuz
+</code></pre>
+              <p>
+                <strong>vmlinux</strong> is a
+                <a
+                  href="https://en.wikipedia.org/wiki/Executable_and_Linkable_Format"
+                  rel="nofollow"
+                  target="_blank"
+                  >ELF format</a
+                >
+                based Linux kernel executable image and
+                <strong
+                  ><a
+                    href="https://s905060.gitbooks.io/site-reliability-engineer-handbook/content/anatomy_of_the_initrd_and_vmlinuz.html"
+                    rel="nofollow"
+                    target="_blank"
+                    >vmlinuz</a
+                  >
+                  (Virtual Memory Linux gZip)</strong
+                >
+                is a compressed version of <strong>vmlinux</strong>. At the
+                beginning of <strong>vmlinuz</strong> is a routine that does
+                some minimal amount of hardware setup and then decompresses the
+                kernel contained within the kernel image and places it into high
+                memory. The routine then calls the kernel and the kernel boot
+                begins.
+              </p>
+              <h2 id="Initramfs">
+                Initramfs<a aria-hidden="true" tabindex="-1" href="#Initramfs"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <p>
+                We need a temporary root file system, an
+                <strong>initramfs</strong> when the kernel boots up. An
+                initramfs is a <strong>cpio</strong> compressed archive. Unlike
+                the
+                <a
+                  href="https://www.kernel.org/doc/html/latest/filesystems/ramfs-rootfs-initramfs.html?highlight=initramfs#ramfs-and-ramdisk"
+                  rel="nofollow"
+                  target="_blank"
+                  >old initrd</a
+                >, <strong>initramfs</strong> reuse disk cache mechanism of main
+                memory so <strong>initramfs</strong> doesn&#x27;t require
+                creating a synthetic block device nor having a intermediate
+                file-system driver inside the kernel to interpret the data which
+                may have license problem and avoid unnecessarily copying memory
+                from the fake block device into the page cache. Bootloader
+                places <strong>initramfs</strong> image(s) in a memory location
+                and then pass its location and its size as
+                <a
+                  href="https://www.kernel.org/doc/html/latest/admin-guide/kernel-parameters.html"
+                  rel="nofollow"
+                  target="_blank"
+                  >parameter</a
+                >
+                to kernel. The kernel checks for the presence of the
+                <strong>initramfs</strong> and if found it is unpacked into a
+                RAM disk at kernel initialization, mounts it as
+                <strong>/</strong>. Once <strong>initramfs</strong> is
+                extracted, into <strong>rootfs</strong> the kernel checks if it
+                contains a file <strong>/init</strong>. If it does, the kernel
+                executes this <strong>/init</strong> file.
+              </p>
+              <pre><code>mkdir simple
+cd simple
+</code></pre>
+              <h3 id="Shell-Environment">
+                Shell Environment<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Shell-Environment"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h3>
+              <pre><code>sudo apt install busybox-static
+</code></pre>
+              <p>
+                We have to install
+                <strong
+                  ><a
+                    href="https://packages.debian.org/buster/busybox-static"
+                    rel="nofollow"
+                    target="_blank"
+                    >busybox-static</a
+                  ></strong
+                >,
+                <strong
+                  ><a
+                    href="https://packages.debian.org/buster/utils/busybox"
+                    rel="nofollow"
+                    target="_blank"
+                    >busybox</a
+                  ></strong
+                >
+                does not install symbolic links for any of the supported
+                utilities.
+              </p>
+              <pre><code>mkdir -p bin sbin usr/bin usr/sbin
+cp /bin/busybox bin/busybox
+ln -s busybox bin/sh
+</code></pre>
+              <h3 id="Configure-Keyboard-Layout-for-Spanish">
+                Configure Keyboard Layout for Spanish<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Configure-Keyboard-Layout-for-Spanish"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h3>
+              <p>
+                We have to
+                <a
+                  href="https://stackoverflow.com/a/34882663/9980245"
+                  rel="nofollow"
+                  target="_blank"
+                  >install the list of keymaps</a
+                >
+              </p>
+              <pre><code>sudo apt install kbd console-data
+</code></pre>
+              <p>
+                <a
+                  href="https://bbs.archlinux.org/viewtopic.php?id=191064"
+                  rel="nofollow"
+                  target="_blank"
+                  >Convert to binary format</a
+                >
+                and copy to our <strong>initramfs</strong>
+              </p>
+              <pre><code>loadkeys -b /usr/share/keymaps/i386/qwerty/es.kmap.gz &gt; es.kmap
+</code></pre>
+              <h3 id="Support-USB-Devices">
+                <a
+                  href="https://www.cyberciti.biz/faq/usb-drive-not-being-recognized-under-linux/"
+                  rel="nofollow"
+                  target="_blank"
+                  >Support USB Devices</a
+                ><a aria-hidden="true" tabindex="-1" href="#Support-USB-Devices"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h3>
+              <p>
+                We repeatedly use this command
+                <a
+                  href="https://askubuntu.com/a/521231"
+                  rel="nofollow"
+                  target="_blank"
+                  >sudo lsmod | grep usb_storage</a
+                >
+                to recursively find all modules that are required for USB
+                hot-plug. They are the
+                <a
+                  href="https://unix.stackexchange.com/a/299501"
+                  rel="nofollow"
+                  target="_blank"
+                  >following modules</a
+                >
+                in total
+              </p>
+              <ul>
+                <li>
+                  <a
+                    href="https://www.kernel.org/doc/html/latest/usb/ohci.html"
+                    rel="nofollow"
+                    target="_blank"
+                    >ohci-hcd</a
+                  >
+                </li>
+                <li>ohci-pci</li>
+                <li>uas</li>
+                <li>usb_storage</li>
+                <li>usbcore</li>
+                <li>scsi_mod</li>
+                <li>usb_common</li>
+                <li>
+                  <a
+                    href="https://tldp.org/HOWTO/SCSI-2.4-HOWTO/sd.html"
+                    rel="nofollow"
+                    target="_blank"
+                    >sd_mod</a
+                  >
+                </li>
+                <li>fat</li>
+                <li>vfat</li>
+                <li>
+                  <a
+                    href="https://unix.stackexchange.com/q/62086"
+                    rel="nofollow"
+                    target="_blank"
+                    >nls_* e.g. nls_cp437, nls_ascii</a
+                  >
+                </li>
+              </ul>
+              <p>
+                We then use
+                <strong
+                  ><a
+                    href="https://www.cyberciti.biz/faq/linux-how-to-load-a-kernel-module-automatically-at-boot-time/"
+                    rel="nofollow"
+                    target="_blank"
+                    >sudo modinfo [module name]</a
+                  ></strong
+                >
+                to find each module path and copy to our
+                <strong>initramfs</strong>.
+              </p>
+              <pre><code>mkdir -p lib/modules/$(uname -r)
+cp /lib/modules/$(uname -r)/kernel/drivers/usb/host/ohci-hcd.ko lib/modules/$(uname -r)
+cp /lib/modules/$(uname -r)/kernel/drivers/usb/host/ohci-pci.ko lib/modules/$(uname -r)
+cp /lib/modules/$(uname -r)/kernel/drivers/usb/storage/uas.ko lib/modules/$(uname -r)
+cp /lib/modules/$(uname -r)/kernel/drivers/usb/storage/usb-storage.ko lib/modules/$(uname -r)
+cp /lib/modules/$(uname -r)/kernel/drivers/usb/core/usbcore.ko lib/modules/$(uname -r)
+cp /lib/modules/$(uname -r)/kernel/drivers/usb/core/usbcore.ko lib/modules/$(uname -r)
+cp /lib/modules/$(uname -r)/kernel/drivers/scsi/scsi_mod.ko lib/modules/$(uname -r)
+cp /lib/modules/$(uname -r)/kernel/drivers/usb/common/usb-common.ko lib/modules/$(uname -r)
+cp /lib/modules/$(uname -r)/kernel/drivers/scsi/sd_mod.ko lib/modules/$(uname -r)
+cp /lib/modules/$(uname -r)/kernel/fs/fat/vfat.ko lib/modules/$(uname -r)
+cp /lib/modules/$(uname -r)/kernel/fs/fat/fat.ko lib/modules/$(uname -r)
+cp /lib/modules/$(uname -r)/kernel/fs/nls/*.ko lib/modules/$(uname -r)
+</code></pre>
+              <h3 id="Init-Script">
+                Init Script<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Init-Script"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h3>
+              <p>
+                We will require a <strong>/init</strong> program, it is
+                typically a shell script. It configures some basic device nodes
+                and directories, mounts the special <strong>/sys</strong> and
+                <strong>/proc</strong> file systems, and starts the processing
+                of hotplug events using mdev and then execute the more-typical
+                /sbin/init program.
+              </p>
+              <pre><code>nano init
+</code></pre>
+              <p>and put following content</p>
+              <pre><code>#!/bin/sh
+# install symlinks for all of the suppoted utilities
+# install busybox symbolic links
+/bin/busybox --install -s
+#
+[ -d /dev ] || mkdir -m 0755 /dev
+[ -d /root ] || mkdir --mode=0700 /root
+[ -d /sys ] || mkdir /sys
+[ -d /proc ] || mkdir /proc
+[ -d /tmp ] || mkdir /tmp
+mkdir -p /var/lock
+#
+mount -t sysfs none /sys -onodev,noexec,nosuid
+mount -t proc none /proc -onodev,noexec,nosuid
+#
+mknod /dev/zero c 1 5
+mknod /dev/null c 1 3
+mknod /dev/tty c 5 0
+mknod /dev/console c 5 1
+mknod /dev/ptmx c 5 2
+mknod /dev/tty0 c 4 0
+mknod /dev/tty1 c 4 1
+# load USB drivers
+depmod -a # https://stackoverflow.com/q/45658297/9980245
+modprobe ohci-pci
+modprobe uas
+modprobe sd_mod
+# initial population and dynamic updates
+echo &quot;/sbin/mdev&quot; &gt; /proc/sys/kernel/hotplug
+/sbin/mdev -s
+# change keymaps http://ilikelinux69.github.io/How-to-change-the-keyboard-layout-in-Busybox
+loadkmap &lt; es.kmap
+# traditional init program
+exec /sbin/init
+</code></pre>
+              <p>add the execution permission</p>
+              <pre><code>chmod a+x init
+</code></pre>
+              <p>
+                <a
+                  href="https://www.kernel.org/doc/html/latest/admin-guide/initrd.html#compressed-cpio-images"
+                  rel="nofollow"
+                  target="_blank"
+                  >compress into cpio images</a
+                >
+              </p>
+              <pre><code>find . | cpio --quiet -o -H newc | gzip &gt;../simple.igz
+</code></pre>
+              <p>
+                The result <strong>simple.igz</strong> is our
+                <strong>initramfs</strong>.
+              </p>
+              <h4 id="Install-Busybox-Symbolic-Links">
+                Install Busybox Symbolic Links<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Install-Busybox-Symbolic-Links"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h4>
+              <p>
+                The <strong>busybox</strong> provide a
+                <strong>--install</strong> options to create symbolic links
+                (<strong>-s</strong>) for all the supported commands in
+                <strong>/bin</strong>, <strong>/sbin</strong>,
+                <strong>/usr/sbin</strong>. Here are the list of command that
+                <strong>busybox</strong> install.
+              </p>
+              <ul>
+                <li>
+                  ls -al <strong>/bin</strong> | grep &quot;-&gt;&quot; | less<!-- -->
+                  <ul>
+                    <li>arch</li>
+                    <li>ash</li>
+                    <li>cat</li>
+                    <li>chgrp</li>
+                    <li>chmod</li>
+                    <li>chown</li>
+                    <li>cp</li>
+                    <li>cpio</li>
+                    <li>cttyhack</li>
+                    <li>date</li>
+                    <li>dd</li>
+                    <li>df</li>
+                    <li>dmesg</li>
+                    <li>dnsdomainname</li>
+                    <li>dumkmap</li>
+                    <li>echo</li>
+                    <li>ed</li>
+                    <li>egrep</li>
+                    <li>false</li>
+                    <li>fatattr</li>
+                    <li>fgrep</li>
+                    <li>getopt</li>
+                    <li>grep</li>
+                    <li>hunzip</li>
+                    <li>gzip</li>
+                    <li>hostname</li>
+                    <li>ionice</li>
+                    <li>ipcalc</li>
+                    <li>kill</li>
+                    <li>link</li>
+                    <li>linux32</li>
+                    <li>linux64</li>
+                    <li>ln</li>
+                    <li>login</li>
+                    <li>ls</li>
+                    <li>lzop</li>
+                    <li>mkdir</li>
+                    <li>mknod</li>
+                    <li>mktemp</li>
+                    <li>more</li>
+                    <li>mount</li>
+                    <li>mt</li>
+                    <li>mv</li>
+                    <li>netstat</li>
+                    <li>nuke</li>
+                    <li>pidof</li>
+                    <li>ping</li>
+                    <li>ping6</li>
+                    <li>ps</li>
+                    <li>pwd</li>
+                    <li>readlink</li>
+                    <li>resume</li>
+                    <li>rev</li>
+                    <li>rm</li>
+                    <li>rmdir</li>
+                    <li>rpm</li>
+                    <li>run-parts</li>
+                    <li>sed</li>
+                    <li>setpriv</li>
+                    <li>sh</li>
+                    <li>sleep</li>
+                    <li>slat</li>
+                    <li>stty</li>
+                    <li>su</li>
+                    <li>sync</li>
+                    <li>tar</li>
+                    <li>touch</li>
+                    <li>true</li>
+                    <li>umount</li>
+                    <li>uname</li>
+                    <li>uncompress</li>
+                    <li>usleep</li>
+                    <li>vi</li>
+                    <li>watch</li>
+                    <li>zcat</li>
+                  </ul>
+                </li>
+                <li>
+                  ls -al <strong>/sbin</strong> | grep &quot;-&gt;&quot; | less<!-- -->
+                  <ul>
+                    <li>acpid</li>
+                    <li>adjtimex</li>
+                    <li>arp</li>
+                    <li>blockdev</li>
+                    <li>depmod</li>
+                    <li>devmem</li>
+                    <li>fdisk</li>
+                    <li>freeramdisk</li>
+                    <li>fstrim</li>
+                    <li>getty</li>
+                    <li>halt</li>
+                    <li>hwclock</li>
+                    <li>ifconfig</li>
+                    <li>ifdown</li>
+                    <li>ifup</li>
+                    <li>init</li>
+                    <li>insmod</li>
+                    <li>ip</li>
+                    <li>ipneigh</li>
+                    <li>klogd</li>
+                    <li>loadkmap</li>
+                    <li>logread</li>
+                    <li>losetup</li>
+                    <li>lsmod</li>
+                    <li>mdev</li>
+                    <li>mkdosfs</li>
+                    <li>mke2fs</li>
+                    <li>mkswap</li>
+                    <li>modinfo</li>
+                    <li>modprobe</li>
+                    <li>nameif</li>
+                    <li>pivot_root</li>
+                    <li>poweroff</li>
+                    <li>reboot</li>
+                    <li>rmmod</li>
+                    <li>route</li>
+                    <li>run-init</li>
+                    <li>start-stop-daemon</li>
+                    <li>sulogin</li>
+                    <li>swapon</li>
+                    <li>switch_root</li>
+                    <li>sysctl</li>
+                    <li>syslogd</li>
+                    <li>tc</li>
+                    <li>tunctl</li>
+                    <li>udhcpc</li>
+                    <li>uevent</li>
+                    <li>vconfig</li>
+                    <li>watchdog</li>
+                  </ul>
+                </li>
+                <li>
+                  ls -al <strong>/usr/bin</strong> | grep &quot;-&gt;&quot; |
+                  less<!-- -->
+                  <ul>
+                    <li>[</li>
+                    <li>[[</li>
+                    <li>ar</li>
+                    <li>awk</li>
+                    <li>basename</li>
+                    <li>bc</li>
+                    <li>blkdiscard</li>
+                    <li>bunzip2</li>
+                    <li>bzcat</li>
+                    <li>bzip2</li>
+                    <li>cal</li>
+                    <li>chvt</li>
+                    <li>clear</li>
+                    <li>cmp</li>
+                    <li>crontab</li>
+                    <li>cut</li>
+                    <li>dc</li>
+                    <li>deallocvt</li>
+                    <li>diff</li>
+                    <li>dirname</li>
+                    <li>dos2unix</li>
+                    <li>dkpg</li>
+                    <li>dkpg-deb</li>
+                    <li>du</li>
+                    <li>dumpleases</li>
+                    <li>env</li>
+                    <li>expand</li>
+                    <li>expr</li>
+                    <li>factor</li>
+                    <li>fallocate</li>
+                    <li>find</li>
+                    <li>fold</li>
+                    <li>free</li>
+                    <li>ftpget</li>
+                    <li>ftpput</li>
+                    <li>groups</li>
+                    <li>head</li>
+                    <li>hexdump</li>
+                    <li>hostid</li>
+                    <li>id</li>
+                    <li>killall</li>
+                    <li>last</li>
+                    <li>less</li>
+                    <li>loggger</li>
+                    <li>logname</li>
+                    <li>lsscsi</li>
+                    <li>lzcat</li>
+                    <li>lzma</li>
+                    <li>md5sum</li>
+                    <li>microcom</li>
+                    <li>mkfifo</li>
+                    <li>mkpasswd</li>
+                    <li>nc</li>
+                    <li>nl</li>
+                    <li>nproc</li>
+                    <li>nsenter</li>
+                    <li>nslookup</li>
+                    <li>od</li>
+                    <li>openvt</li>
+                    <li>passwd</li>
+                    <li>paste</li>
+                    <li>patch</li>
+                    <li>printf</li>
+                    <li>realpath</li>
+                    <li>renice</li>
+                    <li>reset</li>
+                    <li>rpm2cpio</li>
+                    <li>seq</li>
+                    <li>setkeycodes</li>
+                    <li>setsid</li>
+                    <li>sha1sum</li>
+                    <li>sha256sum</li>
+                    <li>sha512sum</li>
+                    <li>shred</li>
+                    <li>shuf</li>
+                    <li>sort</li>
+                    <li>ssl_client</li>
+                    <li>strings</li>
+                    <li>svc</li>
+                    <li>svok</li>
+                    <li>tac</li>
+                    <li>tail</li>
+                    <li>taskset</li>
+                    <li>tee</li>
+                    <li>telnet</li>
+                    <li>test</li>
+                    <li>tftp</li>
+                    <li>time</li>
+                    <li>timeout</li>
+                    <li>top</li>
+                    <li>tr</li>
+                    <li>traceroute</li>
+                    <li>traceroute6</li>
+                    <li>truncate</li>
+                    <li>tty</li>
+                    <li>unexpand</li>
+                    <li>uniq</li>
+                    <li>unix2dos</li>
+                    <li>unlink</li>
+                    <li>unlzma</li>
+                    <li>unshare</li>
+                    <li>unxz</li>
+                    <li>unzip</li>
+                    <li>uptime</li>
+                    <li>uudecode</li>
+                    <li>uuencode</li>
+                    <li>w</li>
+                    <li>wc</li>
+                    <li>wget</li>
+                    <li>which</li>
+                    <li>who</li>
+                    <li>whoami</li>
+                    <li>xargs</li>
+                    <li>xxd</li>
+                    <li>xz</li>
+                    <li>xzcat</li>
+                    <li>yes</li>
+                  </ul>
+                </li>
+              </ul>
+              <h4 id="Initial-Population-and-Dynamic-Updates">
+                <a
+                  href="https://git.busybox.net/busybox/plain/docs/mdev.txt"
+                  rel="nofollow"
+                  target="_blank"
+                  >Initial Population and Dynamic Updates</a
+                ><a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Initial-Population-and-Dynamic-Updates"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h4>
+              <p>
+                We instruct the kernel to execute /sbin/mdev whenever a device
+                is added or removed so that the device node can be created or
+                destroyed. Then we seed /dev with all the device nodes that were
+                created while the system was booting.
+              </p>
+              <h4 id="Traditional-Init-Program">
+                Traditional Init Program<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Traditional-Init-Program"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h4>
+              <p>
+                At the end of <strong>/init</strong> we call
+                <strong>/sbin/init</strong> program which coordinates the rest
+                of the boot process and configures the enviroment for the user.
+                It becomes the parent or grandparent of all the processes that
+                start up automatically on the system. In our case
+                <strong>/sbin/init</strong> is our
+                <strong>busybox</strong> console. At this point we have two
+                busybox running one executing the /init and second one - our
+                console <strong>/sbin/init</strong> that is executed by
+                <strong>/init</strong>.
+              </p>
+              <h2 id="Test-the-Constructed-Image">
+                Test the Constructed Image<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Test-the-Constructed-Image"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <pre><code>cd ..
+</code></pre>
+              <h3 id="Run-with-QEMU-Emulator">
+                Run with QEMU Emulator<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Run-with-QEMU-Emulator"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h3>
+              <p>Install the QEMU</p>
+              <pre><code>sudo apt install qemu-system
+</code></pre>
+              <p>Execute the kernel with host architecture e.g. x86_64.</p>
+              <pre><code>qemu-system-x86_64 -vnc :0 -kernel vmlinuz -initrd simple.igz -append &quot;root=/dev/ram&quot; /dev/zero
+</code></pre>
+              <h3 id="Booting-a-real-machine">
+                Booting a real machine<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Booting-a-real-machine"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h3>
+              <p>
+                The <strong>syslinux</strong> package allows us to construct
+                bootable systems for standard PCs on DOS-formatted storage.
+              </p>
+              <pre><code>sudo apt install syslinux
+</code></pre>
+              <p>
+                A suitable medium should be chosen to boot from, e.g., a
+                DOS-formatted USB flash drive. The DOS partition of the USB
+                flash drive must be marked bootable. Some USB flash drives might
+                need repartitioning and reformatting with the Linux tools in
+                order to work correctly.
+              </p>
+              <h4 id="Syslinux-Boot-Process-Overview">
+                <a
+                  href="https://wiki.archlinux.org/index.php/syslinux#Boot_process_overview"
+                  rel="nofollow"
+                  target="_blank"
+                  >Syslinux Boot Process Overview</a
+                ><a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Syslinux-Boot-Process-Overview"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h4>
+              <ol>
+                <li>
+                  <strong
+                    >Stage 1 - Part 1 - Load
+                    <a
+                      href="https://en.wikipedia.org/wiki/Master_boot_record#Sector_layout"
+                      rel="nofollow"
+                      target="_blank"
+                      >MBR</a
+                    ></strong
+                  >: At boot, the BIOS loads the 440 byte
+                  <a
+                    href="https://git.kernel.org/pub/scm/boot/syslinux/syslinux.git/tree/mbr/mbr.S?id=4298786ca19e9121568ecd4cc8b79d276ccfd24a"
+                    rel="nofollow"
+                    target="_blank"
+                    >MBR boot code</a
+                  >
+                  at the start of the disk
+                  (<strong>/usr/lib/syslinux/bios/mbr.bin</strong>).
+                </li>
+                <li>
+                  <strong
+                    >Stage 1 - Part 2 -
+                    <a
+                      href="https://git.kernel.org/pub/scm/boot/syslinux/syslinux.git/tree/mbr/mbr.S?id=4298786ca19e9121568ecd4cc8b79d276ccfd24a#n195"
+                      rel="nofollow"
+                      target="_blank"
+                      >Search active partition</a
+                    ></strong
+                  >: The MBR boot code looks for the active partition that is
+                  marked with boot flag. e.g. <strong>/boot</strong> partition.
+                </li>
+                <li>
+                  <strong
+                    >Stage 2 - Part 1 - Execute volume boot record:</strong
+                  >
+                  The
+                  <a
+                    href="https://git.kernel.org/pub/scm/boot/syslinux/syslinux.git/tree/core/diskstart.inc?id=10f6cf6eef0a7da7dad1933efdbfb101155792d0#n154"
+                    rel="nofollow"
+                    target="_blank"
+                    >MBR boot code executes the Volume Boot Record (VBR) of the
+                    /boot partition</a
+                  >. In the case of Syslinux, the VBR boot code is the starting
+                  sector of /boot/syslinux/ldlinux.sys which is created by the
+                  extlinux --install command.
+                </li>
+                <li>
+                  <strong
+                    >Stage 2 - Part 2 - Execute
+                    /boot/syslinux/ldlinux.sys:</strong
+                  >
+                  - The VBR will
+                  <a
+                    href="https://git.kernel.org/pub/scm/boot/syslinux/syslinux.git/tree/core/diskstart.inc#n154"
+                    rel="nofollow"
+                    target="_blank"
+                    >load the rest of /boot/syslinux/ldlinux.sys</a
+                  >. The sector location of /boot/syslinux/ldlinux.sys should
+                  not change, otherwise syslinux will not boot.
+                </li>
+                <li>
+                  <strong>Stage 3 - Load /boot/syslinux/ldlinux.c32:</strong>
+                  The /boot/syslinux/ldlinux.sys will load the
+                  /boot/syslinux/ldlinux.c32 (core module) that contains the
+                  rest of the core part of syslinux that could not be fit into
+                  ldlinux.sys (due to file-size constraints). The ldlinux.c32
+                  file should be present in every Syslinux installation and
+                  should match the version of ldlinux.sys installed in the
+                  partition.
+                </li>
+                <li>
+                  <strong>Stage 4 - Search and Load configuration file:</strong>
+                  - Once Syslinux is fully loaded, it
+                  <a
+                    href="https://git.kernel.org/pub/scm/boot/syslinux/syslinux.git/tree/core/fs/lib/loadconfig.c?id=7d9c9eca562857fed25b4c8ef902e3de968d7631"
+                    rel="nofollow"
+                    target="_blank"
+                    >looks for /boot/syslinux/syslinux.cfg and loads</a
+                  >.
+                </li>
+              </ol>
+              <h4 id="Config-for-syslinux">
+                Config for syslinux<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Config-for-syslinux"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h4>
+              <p>
+                The syslinux program should be run on the device something
+                similar to /dev/sdx1 for a USB flash drive. You should be
+                careful, as selecting the wrong devide name might overwrite your
+                host system&#x27;s hard drive. The syslinux loader can be
+                configured using a file called <strong>syslinux.cfg</strong>
+              </p>
+              <pre><code>nano syslinux.cfg
+</code></pre>
+              <p>which would look something like:</p>
+              <pre><code>Default simple
+timeout 100
+prompt 1
+label simple
+  kernel vmlinuz
+  append initrd=simple.igz root=/dev/ram
+</code></pre>
+              <h4 id="Burning-the-Bootloader">
+                Burning the Bootloader<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Burning-the-Bootloader"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h4>
+              <p>
+                We give our user permission that allow
+                <strong>syslinux</strong> to write code to MBR. We add our
+                username to
+                <a
+                  href="https://wiki.debian.org/SystemGroups#Groups_without_an_associated_user"
+                  rel="nofollow"
+                  target="_blank"
+                  >disk</a
+                >
+                group which have <strong>raw access to disks</strong> with
+                <a
+                  href="https://man7.org/linux/man-pages/man8/usermod.8.html"
+                  rel="nofollow"
+                  target="_blank"
+                  >usermod</a
+                >.
+              </p>
+              <pre><code>sudo usermod -G disk -a $(whoami)
+</code></pre>
+              <p>
+                We execute this command only once, the change is permanent. We
+                now mount the USB devices and copy the remaining archives to
+                normal file system, we can use <strong>dmesg</strong> to find
+                <strong>sdX1</strong>.
+              </p>
+              <pre><code>sudo syslinux /dev/sdX1
+# Mount hand if not magicaly mounted when connected.
+sudo mkdir /mnt/test
+sudo mount -t vfat /dev/sdX1 /mnt/test
+# And then work with /mnt/test
+sudo cp vmlinuz simple.igz syslinux.cfg /mnt/test
+sudo umount /mnt/test
+</code></pre>
+              <p>
+                The device may now be removed and booted on an appropriate PC.
+              </p>
+              <h4 id="Test-with-VirtualBox">
+                Test with VirtualBox<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Test-with-VirtualBox"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h4>
+              <ol>
+                <li>
+                  Download
+                  <a
+                    href="https://www.plop.at/en/bootmanager/download.html"
+                    rel="nofollow"
+                    target="_blank"
+                    >Plop Boot Manager</a
+                  >
+                </li>
+                <li>Extract plpbt.iso</li>
+                <li>
+                  From Settings -&gt; Sorage -&gt; Controller: IDE -&gt; Add
+                  -&gt; Select plpbt.iso
+                </li>
+                <li>
+                  From Settings -&gt; System -&gt; Boot Order -&gt; Ensure
+                  Optical is before any other devices
+                </li>
+                <li>From Plop boot menu select USB device</li>
+              </ol>
+              <p>
+                When we finish booting from USB, we can unplug USB. All content,
+                kernel and initramfs is available in the main memory, we
+                don&#x27;t use USB anymore. We could not access the content of
+                our USB since there is no corresponding driver for USB and file
+                system.
+              </p>
+              <h4 id="Mount-USB">
+                <a
+                  href="https://unix.stackexchange.com/a/134516"
+                  rel="nofollow"
+                  target="_blank"
+                  >Mount USB</a
+                ><a aria-hidden="true" tabindex="-1" href="#Mount-USB"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h4>
+              <p>
+                Since there is no
+                <strong
+                  ><a
+                    href="https://wiki.debian.org/udev"
+                    rel="nofollow"
+                    target="_blank"
+                    >udev</a
+                  ></strong
+                >
+                running, we have to create block device node in
+                <strong>/dev</strong> manually. First check with
+                <strong>dmesg</strong> if drivers detect USB and which
+                identifier it has e.g. sda1 and then create our block device
+                manually which following parameters for sda1, if identifier is
+                diferrent you have to check
+                <a
+                  href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/Documentation/admin-guide/devices.txt?id=15ab85695595fbaba1ccccd07f7b0cede57cccf2#n200"
+                  rel="nofollow"
+                  target="_blank"
+                  >here</a
+                >.
+              </p>
+              <pre><code>mknod /dev/sda b 8 0
+mknod /dev/sda1 b 8 1
+mkdir -p /mnt/test
+mount -t vfat /dev/sda1 /mnt/test
+</code></pre>
+              <h2 id="Reference">
+                Reference<a aria-hidden="true" tabindex="-1" href="#Reference"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <ul>
+                <li>
+                  <a
+                    href="http://www.datsi.fi.upm.es/docencia/SEUM/publico/practica_USLES.pdf"
+                    rel="nofollow"
+                    target="_blank"
+                    >Un Sistema Linux Empotrado Sencillo</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://opensource.com/article/17/2/linux-boot-and-startup"
+                    rel="nofollow"
+                    target="_blank"
+                    >An introduction to the Linux boot and startup processes</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/5/html/installation_guide/s1-boot-init-shutdown-process"
+                    rel="nofollow"
+                    target="_blank"
+                    >A DETAILED LOOK AT THE BOOT PROCESS</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://wiki.debian.org/SystemGroups#Groups_without_an_associated_user"
+                    rel="nofollow"
+                    target="_blank"
+                    >Disk Group</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://s905060.gitbooks.io/site-reliability-engineer-handbook/content/anatomy_of_the_initrd_and_vmlinuz.html"
+                    rel="nofollow"
+                    target="_blank"
+                    >Anatomy of the initrd and vmlinuz</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.kernel.org/doc/html/latest/filesystems/ramfs-rootfs-initramfs.html?highlight=initramfs#ramfs-and-ramdisk"
+                    rel="nofollow"
+                    target="_blank"
+                    >Ramfs, rootfs and initramfs</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://packages.debian.org/buster/utils/busybox"
+                    rel="nofollow"
+                    target="_blank"
+                    >Package: busybox</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://docs.windriver.com/bundle/Wind_River_Linux_Users_Guide_3.0_1/page/497722.html"
+                    rel="nofollow"
+                    target="_blank"
+                    >QEMU Example: Deploying initramfs</a
+                  >
+                </li>
+              </ul>
             </article>
           </div>
           <aside></aside>
@@ -411,10 +1342,10 @@
               "isArchived": false,
               "title": "Build Simple Bootstrap Linux System Image",
               "date": "2020-11-08 19:15:57",
-              "isLegacy": true,
+              "isLegacy": false,
               "lang": "en",
-              "tocHtml": "\u003col\u003e\n\u003cli\u003e\u003ca href=\"/Simple-Bootstrap-Linux-System/index.html#Kernel-Image-for-Emulation\" target=\"Simple-Bootstrap-Linux-System\"\u003eKernel Image for Emulation\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Simple-Bootstrap-Linux-System/index.html#Initramfs\" target=\"Simple-Bootstrap-Linux-System\"\u003eInitramfs\u003c/a\u003e\n\u003col\u003e\n\u003cli\u003e\u003ca href=\"/Simple-Bootstrap-Linux-System/index.html#Shell-Environment\" target=\"Simple-Bootstrap-Linux-System\"\u003eShell Environment\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Simple-Bootstrap-Linux-System/index.html#Configure-Keyboard-Layout-for-Spanish\" target=\"Simple-Bootstrap-Linux-System\"\u003eConfigure Keyboard Layout for Spanish\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Simple-Bootstrap-Linux-System/index.html#Support-USB-Devices\" target=\"Simple-Bootstrap-Linux-System\"\u003eSupport USB Devices\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Simple-Bootstrap-Linux-System/index.html#Init-Script\" target=\"Simple-Bootstrap-Linux-System\"\u003eInit Script\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Simple-Bootstrap-Linux-System/index.html#Test-the-Constructed-Image\" target=\"Simple-Bootstrap-Linux-System\"\u003eTest the Constructed Image\u003c/a\u003e\n\u003col\u003e\n\u003cli\u003e\u003ca href=\"/Simple-Bootstrap-Linux-System/index.html#Run-with-QEMU-Emulator\" target=\"Simple-Bootstrap-Linux-System\"\u003eRun with QEMU Emulator\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Simple-Bootstrap-Linux-System/index.html#Booting-a-real-machine\" target=\"Simple-Bootstrap-Linux-System\"\u003eBooting a real machine\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Simple-Bootstrap-Linux-System/index.html#Reference\" target=\"Simple-Bootstrap-Linux-System\"\u003eReference\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e",
-              "path": "/Simple-Bootstrap-Linux-System/index.html"
+              "tocHtml": "\u003col\u003e\n\u003cli\u003e\u003ca href=\"#Kernel-Image-for-Emulation\"\u003eKernel Image for Emulation\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Initramfs\"\u003eInitramfs\u003c/a\u003e\n\u003col\u003e\n\u003cli\u003e\u003ca href=\"#Shell-Environment\"\u003eShell Environment\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Configure-Keyboard-Layout-for-Spanish\"\u003eConfigure Keyboard Layout for Spanish\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Support-USB-Devices\"\u003eSupport USB Devices\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Init-Script\"\u003eInit Script\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Test-the-Constructed-Image\"\u003eTest the Constructed Image\u003c/a\u003e\n\u003col\u003e\n\u003cli\u003e\u003ca href=\"#Run-with-QEMU-Emulator\"\u003eRun with QEMU Emulator\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Booting-a-real-machine\"\u003eBooting a real machine\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Reference\"\u003eReference\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e",
+              "articleHtml": "\u003ch2 id=\"Kernel-Image-for-Emulation\"\u003eKernel Image for Emulation\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Kernel-Image-for-Emulation\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003eWe will create a tiny Linux system with absolute minimum additional software. We reuse host kernel image \u003cstrong\u003evmlinuz\u003c/strong\u003e to simply the process.\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003ecp /vmlinuz vmlinuz\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e\u003cstrong\u003evmlinux\u003c/strong\u003e is a \u003ca href=\"https://en.wikipedia.org/wiki/Executable_and_Linkable_Format\" rel=\"nofollow\" target=\"_blank\"\u003eELF format\u003c/a\u003e based Linux kernel executable image and \u003cstrong\u003e\u003ca href=\"https://s905060.gitbooks.io/site-reliability-engineer-handbook/content/anatomy_of_the_initrd_and_vmlinuz.html\" rel=\"nofollow\" target=\"_blank\"\u003evmlinuz\u003c/a\u003e (Virtual Memory Linux gZip)\u003c/strong\u003e is a compressed version of \u003cstrong\u003evmlinux\u003c/strong\u003e. At the beginning of \u003cstrong\u003evmlinuz\u003c/strong\u003e is a routine that does some minimal amount of hardware setup and then decompresses the kernel contained within the kernel image and places it into high memory. The routine then calls the kernel and the kernel boot begins.\u003c/p\u003e\n\u003ch2 id=\"Initramfs\"\u003eInitramfs\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Initramfs\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003eWe need a temporary root file system, an \u003cstrong\u003einitramfs\u003c/strong\u003e when the kernel boots up. An initramfs is a \u003cstrong\u003ecpio\u003c/strong\u003e compressed archive. Unlike the \u003ca href=\"https://www.kernel.org/doc/html/latest/filesystems/ramfs-rootfs-initramfs.html?highlight=initramfs#ramfs-and-ramdisk\" rel=\"nofollow\" target=\"_blank\"\u003eold initrd\u003c/a\u003e, \u003cstrong\u003einitramfs\u003c/strong\u003e reuse disk cache mechanism of main memory so \u003cstrong\u003einitramfs\u003c/strong\u003e doesn\u0026#x27;t require creating a synthetic block device nor having a intermediate file-system driver inside the kernel to interpret the data which may have license problem and avoid unnecessarily copying memory from the fake block device into the page cache. Bootloader places \u003cstrong\u003einitramfs\u003c/strong\u003e image(s) in a memory location and then pass its location and its size as \u003ca href=\"https://www.kernel.org/doc/html/latest/admin-guide/kernel-parameters.html\" rel=\"nofollow\" target=\"_blank\"\u003eparameter\u003c/a\u003e to kernel. The kernel checks for the presence of the \u003cstrong\u003einitramfs\u003c/strong\u003e and if found it is unpacked into a RAM disk at kernel initialization, mounts it as \u003cstrong\u003e/\u003c/strong\u003e. Once \u003cstrong\u003einitramfs\u003c/strong\u003e is extracted, into \u003cstrong\u003erootfs\u003c/strong\u003e the kernel checks if it contains a file \u003cstrong\u003e/init\u003c/strong\u003e. If it does, the kernel executes this \u003cstrong\u003e/init\u003c/strong\u003e file.\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003emkdir simple\ncd simple\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3 id=\"Shell-Environment\"\u003eShell Environment\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Shell-Environment\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h3\u003e\n\u003cpre\u003e\u003ccode\u003esudo apt install busybox-static\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eWe have to install \u003cstrong\u003e\u003ca href=\"https://packages.debian.org/buster/busybox-static\" rel=\"nofollow\" target=\"_blank\"\u003ebusybox-static\u003c/a\u003e\u003c/strong\u003e, \u003cstrong\u003e\u003ca href=\"https://packages.debian.org/buster/utils/busybox\" rel=\"nofollow\" target=\"_blank\"\u003ebusybox\u003c/a\u003e\u003c/strong\u003e does not install symbolic links for any of the supported utilities.\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003emkdir -p bin sbin usr/bin usr/sbin\ncp /bin/busybox bin/busybox\nln -s busybox bin/sh\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3 id=\"Configure-Keyboard-Layout-for-Spanish\"\u003eConfigure Keyboard Layout for Spanish\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Configure-Keyboard-Layout-for-Spanish\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h3\u003e\n\u003cp\u003eWe have to \u003ca href=\"https://stackoverflow.com/a/34882663/9980245\" rel=\"nofollow\" target=\"_blank\"\u003einstall the list of keymaps\u003c/a\u003e\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003esudo apt install kbd console-data\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e\u003ca href=\"https://bbs.archlinux.org/viewtopic.php?id=191064\" rel=\"nofollow\" target=\"_blank\"\u003eConvert to binary format\u003c/a\u003e and copy to our \u003cstrong\u003einitramfs\u003c/strong\u003e\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003eloadkeys -b /usr/share/keymaps/i386/qwerty/es.kmap.gz \u0026gt; es.kmap\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3 id=\"Support-USB-Devices\"\u003e\u003ca href=\"https://www.cyberciti.biz/faq/usb-drive-not-being-recognized-under-linux/\" rel=\"nofollow\" target=\"_blank\"\u003eSupport USB Devices\u003c/a\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Support-USB-Devices\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h3\u003e\n\u003cp\u003eWe repeatedly use this command \u003ca href=\"https://askubuntu.com/a/521231\" rel=\"nofollow\" target=\"_blank\"\u003esudo lsmod | grep usb_storage\u003c/a\u003e to recursively find all modules that are required for USB hot-plug. They are the \u003ca href=\"https://unix.stackexchange.com/a/299501\" rel=\"nofollow\" target=\"_blank\"\u003efollowing modules\u003c/a\u003e in total\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href=\"https://www.kernel.org/doc/html/latest/usb/ohci.html\" rel=\"nofollow\" target=\"_blank\"\u003eohci-hcd\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003eohci-pci\u003c/li\u003e\n\u003cli\u003euas\u003c/li\u003e\n\u003cli\u003eusb_storage\u003c/li\u003e\n\u003cli\u003eusbcore\u003c/li\u003e\n\u003cli\u003escsi_mod\u003c/li\u003e\n\u003cli\u003eusb_common\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://tldp.org/HOWTO/SCSI-2.4-HOWTO/sd.html\" rel=\"nofollow\" target=\"_blank\"\u003esd_mod\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003efat\u003c/li\u003e\n\u003cli\u003evfat\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://unix.stackexchange.com/q/62086\" rel=\"nofollow\" target=\"_blank\"\u003enls_* e.g. nls_cp437, nls_ascii\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eWe then use \u003cstrong\u003e\u003ca href=\"https://www.cyberciti.biz/faq/linux-how-to-load-a-kernel-module-automatically-at-boot-time/\" rel=\"nofollow\" target=\"_blank\"\u003esudo modinfo [module name]\u003c/a\u003e\u003c/strong\u003e to find each module path and copy to our \u003cstrong\u003einitramfs\u003c/strong\u003e.\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003emkdir -p lib/modules/$(uname -r)\ncp /lib/modules/$(uname -r)/kernel/drivers/usb/host/ohci-hcd.ko lib/modules/$(uname -r)\ncp /lib/modules/$(uname -r)/kernel/drivers/usb/host/ohci-pci.ko lib/modules/$(uname -r)\ncp /lib/modules/$(uname -r)/kernel/drivers/usb/storage/uas.ko lib/modules/$(uname -r)\ncp /lib/modules/$(uname -r)/kernel/drivers/usb/storage/usb-storage.ko lib/modules/$(uname -r)\ncp /lib/modules/$(uname -r)/kernel/drivers/usb/core/usbcore.ko lib/modules/$(uname -r)\ncp /lib/modules/$(uname -r)/kernel/drivers/usb/core/usbcore.ko lib/modules/$(uname -r)\ncp /lib/modules/$(uname -r)/kernel/drivers/scsi/scsi_mod.ko lib/modules/$(uname -r)\ncp /lib/modules/$(uname -r)/kernel/drivers/usb/common/usb-common.ko lib/modules/$(uname -r)\ncp /lib/modules/$(uname -r)/kernel/drivers/scsi/sd_mod.ko lib/modules/$(uname -r)\ncp /lib/modules/$(uname -r)/kernel/fs/fat/vfat.ko lib/modules/$(uname -r)\ncp /lib/modules/$(uname -r)/kernel/fs/fat/fat.ko lib/modules/$(uname -r)\ncp /lib/modules/$(uname -r)/kernel/fs/nls/*.ko lib/modules/$(uname -r)\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3 id=\"Init-Script\"\u003eInit Script\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Init-Script\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h3\u003e\n\u003cp\u003eWe will require a \u003cstrong\u003e/init\u003c/strong\u003e program, it is typically a shell script. It configures some basic device nodes and directories, mounts the special \u003cstrong\u003e/sys\u003c/strong\u003e and \u003cstrong\u003e/proc\u003c/strong\u003e file systems, and starts the processing of hotplug events using mdev and then execute the more-typical /sbin/init program.\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003enano init\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eand put following content\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e#!/bin/sh\n# install symlinks for all of the suppoted utilities\n# install busybox symbolic links\n/bin/busybox --install -s\n#\n[ -d /dev ] || mkdir -m 0755 /dev\n[ -d /root ] || mkdir --mode=0700 /root\n[ -d /sys ] || mkdir /sys\n[ -d /proc ] || mkdir /proc\n[ -d /tmp ] || mkdir /tmp\nmkdir -p /var/lock\n#\nmount -t sysfs none /sys -onodev,noexec,nosuid\nmount -t proc none /proc -onodev,noexec,nosuid\n#\nmknod /dev/zero c 1 5\nmknod /dev/null c 1 3\nmknod /dev/tty c 5 0\nmknod /dev/console c 5 1\nmknod /dev/ptmx c 5 2\nmknod /dev/tty0 c 4 0\nmknod /dev/tty1 c 4 1\n# load USB drivers\ndepmod -a # https://stackoverflow.com/q/45658297/9980245\nmodprobe ohci-pci\nmodprobe uas\nmodprobe sd_mod\n# initial population and dynamic updates\necho \u0026quot;/sbin/mdev\u0026quot; \u0026gt; /proc/sys/kernel/hotplug\n/sbin/mdev -s\n# change keymaps http://ilikelinux69.github.io/How-to-change-the-keyboard-layout-in-Busybox\nloadkmap \u0026lt; es.kmap\n# traditional init program\nexec /sbin/init\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eadd the execution permission\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003echmod a+x init\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003e\u003ca href=\"https://www.kernel.org/doc/html/latest/admin-guide/initrd.html#compressed-cpio-images\" rel=\"nofollow\" target=\"_blank\"\u003ecompress into cpio images\u003c/a\u003e\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003efind . | cpio --quiet -o -H newc | gzip \u0026gt;../simple.igz\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eThe result \u003cstrong\u003esimple.igz\u003c/strong\u003e is our \u003cstrong\u003einitramfs\u003c/strong\u003e.\u003c/p\u003e\n\u003ch4 id=\"Install-Busybox-Symbolic-Links\"\u003eInstall Busybox Symbolic Links\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Install-Busybox-Symbolic-Links\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h4\u003e\n\u003cp\u003eThe \u003cstrong\u003ebusybox\u003c/strong\u003e provide a \u003cstrong\u003e--install\u003c/strong\u003e options to create symbolic links (\u003cstrong\u003e-s\u003c/strong\u003e) for all the supported commands in \u003cstrong\u003e/bin\u003c/strong\u003e, \u003cstrong\u003e/sbin\u003c/strong\u003e, \u003cstrong\u003e/usr/sbin\u003c/strong\u003e. Here are the list of command that \u003cstrong\u003ebusybox\u003c/strong\u003e install.\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003els -al \u003cstrong\u003e/bin\u003c/strong\u003e | grep \u0026quot;-\u0026gt;\u0026quot; | less\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003earch\u003c/li\u003e\n\u003cli\u003eash\u003c/li\u003e\n\u003cli\u003ecat\u003c/li\u003e\n\u003cli\u003echgrp\u003c/li\u003e\n\u003cli\u003echmod\u003c/li\u003e\n\u003cli\u003echown\u003c/li\u003e\n\u003cli\u003ecp\u003c/li\u003e\n\u003cli\u003ecpio\u003c/li\u003e\n\u003cli\u003ecttyhack\u003c/li\u003e\n\u003cli\u003edate\u003c/li\u003e\n\u003cli\u003edd\u003c/li\u003e\n\u003cli\u003edf\u003c/li\u003e\n\u003cli\u003edmesg\u003c/li\u003e\n\u003cli\u003ednsdomainname\u003c/li\u003e\n\u003cli\u003edumkmap\u003c/li\u003e\n\u003cli\u003eecho\u003c/li\u003e\n\u003cli\u003eed\u003c/li\u003e\n\u003cli\u003eegrep\u003c/li\u003e\n\u003cli\u003efalse\u003c/li\u003e\n\u003cli\u003efatattr\u003c/li\u003e\n\u003cli\u003efgrep\u003c/li\u003e\n\u003cli\u003egetopt\u003c/li\u003e\n\u003cli\u003egrep\u003c/li\u003e\n\u003cli\u003ehunzip\u003c/li\u003e\n\u003cli\u003egzip\u003c/li\u003e\n\u003cli\u003ehostname\u003c/li\u003e\n\u003cli\u003eionice\u003c/li\u003e\n\u003cli\u003eipcalc\u003c/li\u003e\n\u003cli\u003ekill\u003c/li\u003e\n\u003cli\u003elink\u003c/li\u003e\n\u003cli\u003elinux32\u003c/li\u003e\n\u003cli\u003elinux64\u003c/li\u003e\n\u003cli\u003eln\u003c/li\u003e\n\u003cli\u003elogin\u003c/li\u003e\n\u003cli\u003els\u003c/li\u003e\n\u003cli\u003elzop\u003c/li\u003e\n\u003cli\u003emkdir\u003c/li\u003e\n\u003cli\u003emknod\u003c/li\u003e\n\u003cli\u003emktemp\u003c/li\u003e\n\u003cli\u003emore\u003c/li\u003e\n\u003cli\u003emount\u003c/li\u003e\n\u003cli\u003emt\u003c/li\u003e\n\u003cli\u003emv\u003c/li\u003e\n\u003cli\u003enetstat\u003c/li\u003e\n\u003cli\u003enuke\u003c/li\u003e\n\u003cli\u003epidof\u003c/li\u003e\n\u003cli\u003eping\u003c/li\u003e\n\u003cli\u003eping6\u003c/li\u003e\n\u003cli\u003eps\u003c/li\u003e\n\u003cli\u003epwd\u003c/li\u003e\n\u003cli\u003ereadlink\u003c/li\u003e\n\u003cli\u003eresume\u003c/li\u003e\n\u003cli\u003erev\u003c/li\u003e\n\u003cli\u003erm\u003c/li\u003e\n\u003cli\u003ermdir\u003c/li\u003e\n\u003cli\u003erpm\u003c/li\u003e\n\u003cli\u003erun-parts\u003c/li\u003e\n\u003cli\u003esed\u003c/li\u003e\n\u003cli\u003esetpriv\u003c/li\u003e\n\u003cli\u003esh\u003c/li\u003e\n\u003cli\u003esleep\u003c/li\u003e\n\u003cli\u003eslat\u003c/li\u003e\n\u003cli\u003estty\u003c/li\u003e\n\u003cli\u003esu\u003c/li\u003e\n\u003cli\u003esync\u003c/li\u003e\n\u003cli\u003etar\u003c/li\u003e\n\u003cli\u003etouch\u003c/li\u003e\n\u003cli\u003etrue\u003c/li\u003e\n\u003cli\u003eumount\u003c/li\u003e\n\u003cli\u003euname\u003c/li\u003e\n\u003cli\u003euncompress\u003c/li\u003e\n\u003cli\u003eusleep\u003c/li\u003e\n\u003cli\u003evi\u003c/li\u003e\n\u003cli\u003ewatch\u003c/li\u003e\n\u003cli\u003ezcat\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003els -al \u003cstrong\u003e/sbin\u003c/strong\u003e | grep \u0026quot;-\u0026gt;\u0026quot; | less\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003eacpid\u003c/li\u003e\n\u003cli\u003eadjtimex\u003c/li\u003e\n\u003cli\u003earp\u003c/li\u003e\n\u003cli\u003eblockdev\u003c/li\u003e\n\u003cli\u003edepmod\u003c/li\u003e\n\u003cli\u003edevmem\u003c/li\u003e\n\u003cli\u003efdisk\u003c/li\u003e\n\u003cli\u003efreeramdisk\u003c/li\u003e\n\u003cli\u003efstrim\u003c/li\u003e\n\u003cli\u003egetty\u003c/li\u003e\n\u003cli\u003ehalt\u003c/li\u003e\n\u003cli\u003ehwclock\u003c/li\u003e\n\u003cli\u003eifconfig\u003c/li\u003e\n\u003cli\u003eifdown\u003c/li\u003e\n\u003cli\u003eifup\u003c/li\u003e\n\u003cli\u003einit\u003c/li\u003e\n\u003cli\u003einsmod\u003c/li\u003e\n\u003cli\u003eip\u003c/li\u003e\n\u003cli\u003eipneigh\u003c/li\u003e\n\u003cli\u003eklogd\u003c/li\u003e\n\u003cli\u003eloadkmap\u003c/li\u003e\n\u003cli\u003elogread\u003c/li\u003e\n\u003cli\u003elosetup\u003c/li\u003e\n\u003cli\u003elsmod\u003c/li\u003e\n\u003cli\u003emdev\u003c/li\u003e\n\u003cli\u003emkdosfs\u003c/li\u003e\n\u003cli\u003emke2fs\u003c/li\u003e\n\u003cli\u003emkswap\u003c/li\u003e\n\u003cli\u003emodinfo\u003c/li\u003e\n\u003cli\u003emodprobe\u003c/li\u003e\n\u003cli\u003enameif\u003c/li\u003e\n\u003cli\u003epivot_root\u003c/li\u003e\n\u003cli\u003epoweroff\u003c/li\u003e\n\u003cli\u003ereboot\u003c/li\u003e\n\u003cli\u003ermmod\u003c/li\u003e\n\u003cli\u003eroute\u003c/li\u003e\n\u003cli\u003erun-init\u003c/li\u003e\n\u003cli\u003estart-stop-daemon\u003c/li\u003e\n\u003cli\u003esulogin\u003c/li\u003e\n\u003cli\u003eswapon\u003c/li\u003e\n\u003cli\u003eswitch_root\u003c/li\u003e\n\u003cli\u003esysctl\u003c/li\u003e\n\u003cli\u003esyslogd\u003c/li\u003e\n\u003cli\u003etc\u003c/li\u003e\n\u003cli\u003etunctl\u003c/li\u003e\n\u003cli\u003eudhcpc\u003c/li\u003e\n\u003cli\u003euevent\u003c/li\u003e\n\u003cli\u003evconfig\u003c/li\u003e\n\u003cli\u003ewatchdog\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003els -al \u003cstrong\u003e/usr/bin\u003c/strong\u003e | grep \u0026quot;-\u0026gt;\u0026quot; | less\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003e[\u003c/li\u003e\n\u003cli\u003e[[\u003c/li\u003e\n\u003cli\u003ear\u003c/li\u003e\n\u003cli\u003eawk\u003c/li\u003e\n\u003cli\u003ebasename\u003c/li\u003e\n\u003cli\u003ebc\u003c/li\u003e\n\u003cli\u003eblkdiscard\u003c/li\u003e\n\u003cli\u003ebunzip2\u003c/li\u003e\n\u003cli\u003ebzcat\u003c/li\u003e\n\u003cli\u003ebzip2\u003c/li\u003e\n\u003cli\u003ecal\u003c/li\u003e\n\u003cli\u003echvt\u003c/li\u003e\n\u003cli\u003eclear\u003c/li\u003e\n\u003cli\u003ecmp\u003c/li\u003e\n\u003cli\u003ecrontab\u003c/li\u003e\n\u003cli\u003ecut\u003c/li\u003e\n\u003cli\u003edc\u003c/li\u003e\n\u003cli\u003edeallocvt\u003c/li\u003e\n\u003cli\u003ediff\u003c/li\u003e\n\u003cli\u003edirname\u003c/li\u003e\n\u003cli\u003edos2unix\u003c/li\u003e\n\u003cli\u003edkpg\u003c/li\u003e\n\u003cli\u003edkpg-deb\u003c/li\u003e\n\u003cli\u003edu\u003c/li\u003e\n\u003cli\u003edumpleases\u003c/li\u003e\n\u003cli\u003eenv\u003c/li\u003e\n\u003cli\u003eexpand\u003c/li\u003e\n\u003cli\u003eexpr\u003c/li\u003e\n\u003cli\u003efactor\u003c/li\u003e\n\u003cli\u003efallocate\u003c/li\u003e\n\u003cli\u003efind\u003c/li\u003e\n\u003cli\u003efold\u003c/li\u003e\n\u003cli\u003efree\u003c/li\u003e\n\u003cli\u003eftpget\u003c/li\u003e\n\u003cli\u003eftpput\u003c/li\u003e\n\u003cli\u003egroups\u003c/li\u003e\n\u003cli\u003ehead\u003c/li\u003e\n\u003cli\u003ehexdump\u003c/li\u003e\n\u003cli\u003ehostid\u003c/li\u003e\n\u003cli\u003eid\u003c/li\u003e\n\u003cli\u003ekillall\u003c/li\u003e\n\u003cli\u003elast\u003c/li\u003e\n\u003cli\u003eless\u003c/li\u003e\n\u003cli\u003eloggger\u003c/li\u003e\n\u003cli\u003elogname\u003c/li\u003e\n\u003cli\u003elsscsi\u003c/li\u003e\n\u003cli\u003elzcat\u003c/li\u003e\n\u003cli\u003elzma\u003c/li\u003e\n\u003cli\u003emd5sum\u003c/li\u003e\n\u003cli\u003emicrocom\u003c/li\u003e\n\u003cli\u003emkfifo\u003c/li\u003e\n\u003cli\u003emkpasswd\u003c/li\u003e\n\u003cli\u003enc\u003c/li\u003e\n\u003cli\u003enl\u003c/li\u003e\n\u003cli\u003enproc\u003c/li\u003e\n\u003cli\u003ensenter\u003c/li\u003e\n\u003cli\u003enslookup\u003c/li\u003e\n\u003cli\u003eod\u003c/li\u003e\n\u003cli\u003eopenvt\u003c/li\u003e\n\u003cli\u003epasswd\u003c/li\u003e\n\u003cli\u003epaste\u003c/li\u003e\n\u003cli\u003epatch\u003c/li\u003e\n\u003cli\u003eprintf\u003c/li\u003e\n\u003cli\u003erealpath\u003c/li\u003e\n\u003cli\u003erenice\u003c/li\u003e\n\u003cli\u003ereset\u003c/li\u003e\n\u003cli\u003erpm2cpio\u003c/li\u003e\n\u003cli\u003eseq\u003c/li\u003e\n\u003cli\u003esetkeycodes\u003c/li\u003e\n\u003cli\u003esetsid\u003c/li\u003e\n\u003cli\u003esha1sum\u003c/li\u003e\n\u003cli\u003esha256sum\u003c/li\u003e\n\u003cli\u003esha512sum\u003c/li\u003e\n\u003cli\u003eshred\u003c/li\u003e\n\u003cli\u003eshuf\u003c/li\u003e\n\u003cli\u003esort\u003c/li\u003e\n\u003cli\u003essl_client\u003c/li\u003e\n\u003cli\u003estrings\u003c/li\u003e\n\u003cli\u003esvc\u003c/li\u003e\n\u003cli\u003esvok\u003c/li\u003e\n\u003cli\u003etac\u003c/li\u003e\n\u003cli\u003etail\u003c/li\u003e\n\u003cli\u003etaskset\u003c/li\u003e\n\u003cli\u003etee\u003c/li\u003e\n\u003cli\u003etelnet\u003c/li\u003e\n\u003cli\u003etest\u003c/li\u003e\n\u003cli\u003etftp\u003c/li\u003e\n\u003cli\u003etime\u003c/li\u003e\n\u003cli\u003etimeout\u003c/li\u003e\n\u003cli\u003etop\u003c/li\u003e\n\u003cli\u003etr\u003c/li\u003e\n\u003cli\u003etraceroute\u003c/li\u003e\n\u003cli\u003etraceroute6\u003c/li\u003e\n\u003cli\u003etruncate\u003c/li\u003e\n\u003cli\u003etty\u003c/li\u003e\n\u003cli\u003eunexpand\u003c/li\u003e\n\u003cli\u003euniq\u003c/li\u003e\n\u003cli\u003eunix2dos\u003c/li\u003e\n\u003cli\u003eunlink\u003c/li\u003e\n\u003cli\u003eunlzma\u003c/li\u003e\n\u003cli\u003eunshare\u003c/li\u003e\n\u003cli\u003eunxz\u003c/li\u003e\n\u003cli\u003eunzip\u003c/li\u003e\n\u003cli\u003euptime\u003c/li\u003e\n\u003cli\u003euudecode\u003c/li\u003e\n\u003cli\u003euuencode\u003c/li\u003e\n\u003cli\u003ew\u003c/li\u003e\n\u003cli\u003ewc\u003c/li\u003e\n\u003cli\u003ewget\u003c/li\u003e\n\u003cli\u003ewhich\u003c/li\u003e\n\u003cli\u003ewho\u003c/li\u003e\n\u003cli\u003ewhoami\u003c/li\u003e\n\u003cli\u003exargs\u003c/li\u003e\n\u003cli\u003exxd\u003c/li\u003e\n\u003cli\u003exz\u003c/li\u003e\n\u003cli\u003exzcat\u003c/li\u003e\n\u003cli\u003eyes\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch4 id=\"Initial-Population-and-Dynamic-Updates\"\u003e\u003ca href=\"https://git.busybox.net/busybox/plain/docs/mdev.txt\" rel=\"nofollow\" target=\"_blank\"\u003eInitial Population and Dynamic Updates\u003c/a\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Initial-Population-and-Dynamic-Updates\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h4\u003e\n\u003cp\u003eWe instruct the kernel to execute /sbin/mdev whenever a device is added or removed so that the device node can be created or destroyed. Then we seed /dev with all the device nodes that were created while the system was booting.\u003c/p\u003e\n\u003ch4 id=\"Traditional-Init-Program\"\u003eTraditional Init Program\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Traditional-Init-Program\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h4\u003e\n\u003cp\u003eAt the end of \u003cstrong\u003e/init\u003c/strong\u003e we call \u003cstrong\u003e/sbin/init\u003c/strong\u003e program which coordinates the rest of the boot process and configures the enviroment for the user. It becomes the parent or grandparent of all the processes that start up automatically on the system. In our case \u003cstrong\u003e/sbin/init\u003c/strong\u003e is our \u003cstrong\u003ebusybox\u003c/strong\u003e console. At this point we have two busybox running one executing the /init and second one - our console \u003cstrong\u003e/sbin/init\u003c/strong\u003e that is executed by \u003cstrong\u003e/init\u003c/strong\u003e.\u003c/p\u003e\n\u003ch2 id=\"Test-the-Constructed-Image\"\u003eTest the Constructed Image\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Test-the-Constructed-Image\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cpre\u003e\u003ccode\u003ecd ..\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3 id=\"Run-with-QEMU-Emulator\"\u003eRun with QEMU Emulator\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Run-with-QEMU-Emulator\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h3\u003e\n\u003cp\u003eInstall the QEMU\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003esudo apt install qemu-system\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eExecute the kernel with host architecture e.g. x86_64.\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003eqemu-system-x86_64 -vnc :0 -kernel vmlinuz -initrd simple.igz -append \u0026quot;root=/dev/ram\u0026quot; /dev/zero\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch3 id=\"Booting-a-real-machine\"\u003eBooting a real machine\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Booting-a-real-machine\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h3\u003e\n\u003cp\u003eThe \u003cstrong\u003esyslinux\u003c/strong\u003e package allows us to construct bootable systems for standard PCs on DOS-formatted storage.\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003esudo apt install syslinux\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eA suitable medium should be chosen to boot from, e.g., a DOS-formatted USB flash drive. The DOS partition of the USB flash drive must be marked bootable. Some USB flash drives might need repartitioning and reformatting with the Linux tools in order to work correctly.\u003c/p\u003e\n\u003ch4 id=\"Syslinux-Boot-Process-Overview\"\u003e\u003ca href=\"https://wiki.archlinux.org/index.php/syslinux#Boot_process_overview\" rel=\"nofollow\" target=\"_blank\"\u003eSyslinux Boot Process Overview\u003c/a\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Syslinux-Boot-Process-Overview\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h4\u003e\n\u003col\u003e\n\u003cli\u003e\u003cstrong\u003eStage 1 - Part 1 - Load \u003ca href=\"https://en.wikipedia.org/wiki/Master_boot_record#Sector_layout\" rel=\"nofollow\" target=\"_blank\"\u003eMBR\u003c/a\u003e\u003c/strong\u003e: At boot, the BIOS loads the 440 byte \u003ca href=\"https://git.kernel.org/pub/scm/boot/syslinux/syslinux.git/tree/mbr/mbr.S?id=4298786ca19e9121568ecd4cc8b79d276ccfd24a\" rel=\"nofollow\" target=\"_blank\"\u003eMBR boot code\u003c/a\u003e at the start of the disk (\u003cstrong\u003e/usr/lib/syslinux/bios/mbr.bin\u003c/strong\u003e).\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eStage 1 - Part 2 - \u003ca href=\"https://git.kernel.org/pub/scm/boot/syslinux/syslinux.git/tree/mbr/mbr.S?id=4298786ca19e9121568ecd4cc8b79d276ccfd24a#n195\" rel=\"nofollow\" target=\"_blank\"\u003eSearch active partition\u003c/a\u003e\u003c/strong\u003e: The MBR boot code looks for the active partition that is marked with boot flag. e.g. \u003cstrong\u003e/boot\u003c/strong\u003e partition.\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eStage 2 - Part 1 - Execute volume boot record:\u003c/strong\u003e  The \u003ca href=\"https://git.kernel.org/pub/scm/boot/syslinux/syslinux.git/tree/core/diskstart.inc?id=10f6cf6eef0a7da7dad1933efdbfb101155792d0#n154\" rel=\"nofollow\" target=\"_blank\"\u003eMBR boot code executes the Volume Boot Record (VBR) of the /boot partition\u003c/a\u003e. In the case of Syslinux, the VBR boot code is the starting sector of /boot/syslinux/ldlinux.sys which is created by the extlinux --install command.\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eStage 2 - Part 2 - Execute /boot/syslinux/ldlinux.sys:\u003c/strong\u003e - The VBR will \u003ca href=\"https://git.kernel.org/pub/scm/boot/syslinux/syslinux.git/tree/core/diskstart.inc#n154\" rel=\"nofollow\" target=\"_blank\"\u003eload the rest of /boot/syslinux/ldlinux.sys\u003c/a\u003e. The sector location of /boot/syslinux/ldlinux.sys should not change, otherwise syslinux will not boot.\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eStage 3 - Load /boot/syslinux/ldlinux.c32:\u003c/strong\u003e The /boot/syslinux/ldlinux.sys will load the /boot/syslinux/ldlinux.c32 (core module) that contains the rest of the core part of syslinux that could not be fit into ldlinux.sys (due to file-size constraints). The ldlinux.c32 file should be present in every Syslinux installation and should match the version of ldlinux.sys installed in the partition.\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003eStage 4 - Search and Load configuration file:\u003c/strong\u003e - Once Syslinux is fully loaded, it \u003ca href=\"https://git.kernel.org/pub/scm/boot/syslinux/syslinux.git/tree/core/fs/lib/loadconfig.c?id=7d9c9eca562857fed25b4c8ef902e3de968d7631\" rel=\"nofollow\" target=\"_blank\"\u003elooks for /boot/syslinux/syslinux.cfg and loads\u003c/a\u003e.\u003c/li\u003e\n\u003c/ol\u003e\n\u003ch4 id=\"Config-for-syslinux\"\u003eConfig for syslinux\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Config-for-syslinux\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h4\u003e\n\u003cp\u003eThe syslinux program should be run on the device something similar to /dev/sdx1 for a USB flash drive. You should be careful, as selecting the wrong devide name might overwrite your host system\u0026#x27;s hard drive. The syslinux loader can be\nconfigured using a file called \u003cstrong\u003esyslinux.cfg\u003c/strong\u003e\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003enano syslinux.cfg\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003ewhich would look something like:\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003eDefault simple\ntimeout 100\nprompt 1\nlabel simple\n  kernel vmlinuz\n  append initrd=simple.igz root=/dev/ram\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch4 id=\"Burning-the-Bootloader\"\u003eBurning the Bootloader\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Burning-the-Bootloader\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h4\u003e\n\u003cp\u003eWe give our user permission that allow \u003cstrong\u003esyslinux\u003c/strong\u003e to write code to MBR. We add our username to \u003ca href=\"https://wiki.debian.org/SystemGroups#Groups_without_an_associated_user\" rel=\"nofollow\" target=\"_blank\"\u003edisk\u003c/a\u003e group which have \u003cstrong\u003eraw access to disks\u003c/strong\u003e with \u003ca href=\"https://man7.org/linux/man-pages/man8/usermod.8.html\" rel=\"nofollow\" target=\"_blank\"\u003eusermod\u003c/a\u003e.\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003esudo usermod -G disk -a $(whoami)\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eWe execute this command only once, the change is permanent. We now mount the USB devices and copy the remaining archives to normal file system, we can use \u003cstrong\u003edmesg\u003c/strong\u003e to find \u003cstrong\u003esdX1\u003c/strong\u003e.\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003esudo syslinux /dev/sdX1\n# Mount hand if not magicaly mounted when connected.\nsudo mkdir /mnt/test\nsudo mount -t vfat /dev/sdX1 /mnt/test\n# And then work with /mnt/test\nsudo cp vmlinuz simple.igz syslinux.cfg /mnt/test\nsudo umount /mnt/test\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eThe device may now be removed and booted on an appropriate PC.\u003c/p\u003e\n\u003ch4 id=\"Test-with-VirtualBox\"\u003eTest with VirtualBox\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Test-with-VirtualBox\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h4\u003e\n\u003col\u003e\n\u003cli\u003eDownload \u003ca href=\"https://www.plop.at/en/bootmanager/download.html\" rel=\"nofollow\" target=\"_blank\"\u003ePlop Boot Manager\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003eExtract plpbt.iso\u003c/li\u003e\n\u003cli\u003eFrom Settings -\u0026gt; Sorage -\u0026gt; Controller: IDE -\u0026gt; Add -\u0026gt; Select plpbt.iso\u003c/li\u003e\n\u003cli\u003eFrom Settings -\u0026gt; System -\u0026gt; Boot Order -\u0026gt; Ensure Optical is before any other devices\u003c/li\u003e\n\u003cli\u003eFrom Plop boot menu select USB device\u003c/li\u003e\n\u003c/ol\u003e\n\u003cp\u003eWhen we finish booting from USB, we can unplug USB. All content, kernel and initramfs is available in the main memory, we don\u0026#x27;t use USB anymore. We could not access the content of our USB since there is no corresponding driver for USB and file system.\u003c/p\u003e\n\u003ch4 id=\"Mount-USB\"\u003e\u003ca href=\"https://unix.stackexchange.com/a/134516\" rel=\"nofollow\" target=\"_blank\"\u003eMount USB\u003c/a\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Mount-USB\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h4\u003e\n\u003cp\u003eSince there is no \u003cstrong\u003e\u003ca href=\"https://wiki.debian.org/udev\" rel=\"nofollow\" target=\"_blank\"\u003eudev\u003c/a\u003e\u003c/strong\u003e running, we have to create block device node in \u003cstrong\u003e/dev\u003c/strong\u003e manually. First check with \u003cstrong\u003edmesg\u003c/strong\u003e if drivers detect USB and which identifier it has e.g. sda1 and then create our block device manually which following parameters for sda1, if identifier is diferrent you have to check \u003ca href=\"https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/Documentation/admin-guide/devices.txt?id=15ab85695595fbaba1ccccd07f7b0cede57cccf2#n200\" rel=\"nofollow\" target=\"_blank\"\u003ehere\u003c/a\u003e.\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003emknod /dev/sda b 8 0\nmknod /dev/sda1 b 8 1\nmkdir -p /mnt/test\nmount -t vfat /dev/sda1 /mnt/test\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch2 id=\"Reference\"\u003eReference\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Reference\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href=\"http://www.datsi.fi.upm.es/docencia/SEUM/publico/practica_USLES.pdf\" rel=\"nofollow\" target=\"_blank\"\u003eUn Sistema Linux Empotrado Sencillo\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://opensource.com/article/17/2/linux-boot-and-startup\" rel=\"nofollow\" target=\"_blank\"\u003eAn introduction to the Linux boot and startup processes\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/5/html/installation_guide/s1-boot-init-shutdown-process\" rel=\"nofollow\" target=\"_blank\"\u003eA DETAILED LOOK AT THE BOOT PROCESS\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://wiki.debian.org/SystemGroups#Groups_without_an_associated_user\" rel=\"nofollow\" target=\"_blank\"\u003eDisk Group\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://s905060.gitbooks.io/site-reliability-engineer-handbook/content/anatomy_of_the_initrd_and_vmlinuz.html\" rel=\"nofollow\" target=\"_blank\"\u003eAnatomy of the initrd and vmlinuz\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://www.kernel.org/doc/html/latest/filesystems/ramfs-rootfs-initramfs.html?highlight=initramfs#ramfs-and-ramdisk\" rel=\"nofollow\" target=\"_blank\"\u003eRamfs, rootfs and initramfs\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://packages.debian.org/buster/utils/busybox\" rel=\"nofollow\" target=\"_blank\"\u003ePackage: busybox\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://docs.windriver.com/bundle/Wind_River_Linux_Users_Guide_3.0_1/page/497722.html\" rel=\"nofollow\" target=\"_blank\"\u003eQEMU Example: Deploying initramfs\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e"
             },
             "lang": "en",
             "_nextI18Next": {
