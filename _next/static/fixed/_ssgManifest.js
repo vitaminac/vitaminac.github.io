@@ -1,6 +1,7 @@
 self.__SSG_MANIFEST = new Set([
   "\u002F",
   "\u002Fflash\u002F[id]",
+  "\u002Fflash\u002Flangs\u002F[lang]",
   "\u002Fposts\u002F[slug]",
   "\u002Fposts\u002Flangs\u002F[lang]",
   "\u002Fposts\u002Flangs\u002F[lang]\u002Fpagination\u002F[pagination]",
