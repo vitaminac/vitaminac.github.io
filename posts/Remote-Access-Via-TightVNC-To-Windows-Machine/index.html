@@ -203,64 +203,238 @@
             <nav class="Post_toc__TAzIW col-12 col-lg-3 order-lg-2">
               <ol>
                 <li>
-                  <a
-                    href="/Remote-Access-Via-TightVNC-To-Windows-Machine/index.html#Install-VNC-Server-on-Windows-Machine"
-                    target="Remote-Access-Via-TightVNC-To-Windows-Machine"
+                  <a href="#Install-VNC-Server-on-Windows-Machine"
                     >Install VNC Server on Windows Machine</a
                   >
                 </li>
                 <li>
-                  <a
-                    href="/Remote-Access-Via-TightVNC-To-Windows-Machine/index.html#TightVNC-Configuration-on-Windows-Machine"
-                    target="Remote-Access-Via-TightVNC-To-Windows-Machine"
+                  <a href="#TightVNC-Configuration-on-Windows-Machine"
                     >TightVNC Configuration on Windows Machine</a
                   >
                 </li>
                 <li>
-                  <a
-                    href="/Remote-Access-Via-TightVNC-To-Windows-Machine/index.html#Configure-OpenSSH-Server"
-                    target="Remote-Access-Via-TightVNC-To-Windows-Machine"
+                  <a href="#Configure-OpenSSH-Server"
                     >Configure OpenSSH Server</a
                   >
                 </li>
                 <li>
-                  <a
-                    href="/Remote-Access-Via-TightVNC-To-Windows-Machine/index.html#Key-Based-Authentication"
-                    target="Remote-Access-Via-TightVNC-To-Windows-Machine"
+                  <a href="#Key-Based-Authentication"
                     >Key Based Authentication</a
                   >
                 </li>
                 <li>
-                  <a
-                    href="/Remote-Access-Via-TightVNC-To-Windows-Machine/index.html#Port-Forward-for-SSH-Server"
-                    target="Remote-Access-Via-TightVNC-To-Windows-Machine"
+                  <a href="#Port-Forward-for-SSH-Server"
                     >Port Forward for SSH Server</a
                   >
                 </li>
                 <li>
-                  <a
-                    href="/Remote-Access-Via-TightVNC-To-Windows-Machine/index.html#Connect-from-Remote-Machine"
-                    target="Remote-Access-Via-TightVNC-To-Windows-Machine"
+                  <a href="#Connect-from-Remote-Machine"
                     >Connect from Remote Machine</a
+                  >
+                </li>
+                <li><a href="#Reference">Reference</a></li>
+              </ol>
+            </nav>
+            <article class="Post_content__QBxez col-12 order-lg-1 col-lg-9">
+              <h2 id="Install-VNC-Server-on-Windows-Machine">
+                Install VNC Server on Windows Machine<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Install-VNC-Server-on-Windows-Machine"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <p>
+                Download
+                <a
+                  href="https://www.tightvnc.com/download.php"
+                  rel="nofollow"
+                  target="_blank"
+                  >TightVNC</a
+                >
+                which is free VNC server that support Windows 11 and then
+                install TightVNC on Windows machine.
+              </p>
+              <h2 id="TightVNC-Configuration-on-Windows-Machine">
+                TightVNC Configuration on Windows Machine<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#TightVNC-Configuration-on-Windows-Machine"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <ol>
+                <li>Click on <strong>Register TightVNC Service</strong></li>
+                <li>
+                  Click on
+                  <strong>TightVNC Service - Offline Configuration</strong>
+                  <ul>
+                    <li>
+                      From tab <strong>Server</strong>
+                      <ul>
+                        <li>
+                          Check <strong>Require VNC Authentication</strong> and
+                          set password
+                        </li>
+                        <li>Uncheck <strong>Enable file transfers</strong></li>
+                        <li>Uncheck <strong>Hide desktop wallpaper</strong></li>
+                        <li>
+                          Uncheck
+                          <strong>Serve Java Viewer to Web clients</strong>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      From tab <strong>Access Control</strong>
+                      <ul>
+                        <li>
+                          Check <strong>Allow loopback connections</strong>
+                        </li>
+                        <li>
+                          Check <strong>Allow only loopback connections</strong>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      From tab <strong>Administration</strong>
+                      <ul>
+                        <li>
+                          Check
+                          <strong
+                            >Protect control operations with a password</strong
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li>Save the confguration</li>
+                  </ul>
+                </li>
+                <li>Click on <strong>Start TightVNC Service</strong></li>
+              </ol>
+              <h2 id="Configure-OpenSSH-Server">
+                Configure OpenSSH Server<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Configure-OpenSSH-Server"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <p>
+                Install OpenSSH server following these
+                <a
+                  href="https://github.com/PowerShell/Win32-OpenSSH/wiki/Install-Win32-OpenSSH"
+                  rel="nofollow"
+                  target="_blank"
+                  >instructions</a
+                >
+                and configure sshd with these
+                <a
+                  href="https://github.com/PowerShell/Win32-OpenSSH/wiki/sshd_config"
+                  rel="nofollow"
+                  target="_blank"
+                  >instructions</a
+                >
+                e.g. set port to <strong>2222</strong>.
+              </p>
+              <h2 id="Key-Based-Authentication">
+                <a
+                  href="https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement"
+                  rel="nofollow"
+                  target="_blank"
+                  >Key Based Authentication</a
+                ><a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Key-Based-Authentication"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <p>
+                Execute following command in remote machine and copy the content
+                of <code>id_ed25519.pub</code> to the
+                <code>~/.ssh/authorized_keys</code> of Windows machine. If you
+                face permission issue try this
+                <a
+                  href="https://stackoverflow.com/a/50502015"
+                  rel="nofollow"
+                  target="_blank"
+                  >workaround</a
+                >.
+              </p>
+              <pre><code>ssh-keygen -t ed25519
+</code></pre>
+              <h2 id="Port-Forward-for-SSH-Server">
+                Port Forward for SSH Server<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Port-Forward-for-SSH-Server"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <p>
+                Follow
+                <a
+                  href="/D-LINK-DIR-882-A1-OpenWrt/#Expose-Internal-Service-to-Internet"
+                  >these instructions</a
+                >
+                to expose port <strong>2222</strong> to the Internet.
+              </p>
+              <h2 id="Connect-from-Remote-Machine">
+                Connect from Remote Machine<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Connect-from-Remote-Machine"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <p>
+                Download
+                <a
+                  href="https://www.tightvnc.com/download.php"
+                  rel="nofollow"
+                  target="_blank"
+                  >TightVNC Java Viewer</a
+                >, unzip and open jar. Execute SSH
+                <a
+                  href="https://www.tightvnc.com/faq.php#portfwd"
+                  rel="nofollow"
+                  target="_blank"
+                  >port forwarding to TightVNC</a
+                >
+                <code
+                  >ssh -N -L 5900:localhost:5900 &lt;your Windows user
+                  name&gt;@&lt;your public domain name&gt; -p &lt;SSH port&gt;
+                  -vv</code
+                >. Introduce <code>localhost</code> on
+                <strong>Remote Host</strong> text box, <code>5900</code> on
+                <strong>Port</strong> text box of
+                <strong>TightVNC Java Viewer</strong> and click Connect,
+                introduce access password, got it!
+              </p>
+              <h2 id="Reference">
+                Reference<a aria-hidden="true" tabindex="-1" href="#Reference"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <ul>
+                <li>
+                  <a
+                    href="https://www.tightvnc.com/faq.php#howsecure"
+                    rel="nofollow"
+                    target="_blank"
+                    >How secure is TightVNC?</a
                   >
                 </li>
                 <li>
                   <a
-                    href="/Remote-Access-Via-TightVNC-To-Windows-Machine/index.html#Reference"
-                    target="Remote-Access-Via-TightVNC-To-Windows-Machine"
-                    >Reference</a
+                    href="https://www.tightvnc.com/faq.php#portfwd"
+                    rel="nofollow"
+                    target="_blank"
+                    >How would I connect from the Internet to a machine in the
+                    internal network which is behind a router?</a
                   >
                 </li>
-              </ol>
-            </nav>
-            <article class="col-12 col-lg-9 order-lg-1">
-              <iframe
-                name="Remote-Access-Via-TightVNC-To-Windows-Machine"
-                title="Remote-Access-Via-TightVNC-To-Windows-Machine"
-                src="/Remote-Access-Via-TightVNC-To-Windows-Machine/index.html"
-                width="100%"
-                height="0px"
-              ></iframe>
+              </ul>
             </article>
           </div>
           <aside></aside>
@@ -396,10 +570,10 @@
               "isArchived": false,
               "title": "Remote Access Via TightVNC To Windows Machine",
               "date": "2022-08-13 11:35:55",
-              "isLegacy": true,
+              "isLegacy": false,
               "lang": "en",
-              "tocHtml": "\u003col\u003e\n\u003cli\u003e\u003ca href=\"/Remote-Access-Via-TightVNC-To-Windows-Machine/index.html#Install-VNC-Server-on-Windows-Machine\" target=\"Remote-Access-Via-TightVNC-To-Windows-Machine\"\u003eInstall VNC Server on Windows Machine\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Remote-Access-Via-TightVNC-To-Windows-Machine/index.html#TightVNC-Configuration-on-Windows-Machine\" target=\"Remote-Access-Via-TightVNC-To-Windows-Machine\"\u003eTightVNC Configuration on Windows Machine\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Remote-Access-Via-TightVNC-To-Windows-Machine/index.html#Configure-OpenSSH-Server\" target=\"Remote-Access-Via-TightVNC-To-Windows-Machine\"\u003eConfigure OpenSSH Server\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Remote-Access-Via-TightVNC-To-Windows-Machine/index.html#Key-Based-Authentication\" target=\"Remote-Access-Via-TightVNC-To-Windows-Machine\"\u003eKey Based Authentication\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Remote-Access-Via-TightVNC-To-Windows-Machine/index.html#Port-Forward-for-SSH-Server\" target=\"Remote-Access-Via-TightVNC-To-Windows-Machine\"\u003ePort Forward for SSH Server\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Remote-Access-Via-TightVNC-To-Windows-Machine/index.html#Connect-from-Remote-Machine\" target=\"Remote-Access-Via-TightVNC-To-Windows-Machine\"\u003eConnect from Remote Machine\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Remote-Access-Via-TightVNC-To-Windows-Machine/index.html#Reference\" target=\"Remote-Access-Via-TightVNC-To-Windows-Machine\"\u003eReference\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e",
-              "path": "/Remote-Access-Via-TightVNC-To-Windows-Machine/index.html"
+              "tocHtml": "\u003col\u003e\n\u003cli\u003e\u003ca href=\"#Install-VNC-Server-on-Windows-Machine\"\u003eInstall VNC Server on Windows Machine\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#TightVNC-Configuration-on-Windows-Machine\"\u003eTightVNC Configuration on Windows Machine\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Configure-OpenSSH-Server\"\u003eConfigure OpenSSH Server\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Key-Based-Authentication\"\u003eKey Based Authentication\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Port-Forward-for-SSH-Server\"\u003ePort Forward for SSH Server\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Connect-from-Remote-Machine\"\u003eConnect from Remote Machine\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Reference\"\u003eReference\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e",
+              "articleHtml": "\u003ch2 id=\"Install-VNC-Server-on-Windows-Machine\"\u003eInstall VNC Server on Windows Machine\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Install-VNC-Server-on-Windows-Machine\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003eDownload \u003ca href=\"https://www.tightvnc.com/download.php\" rel=\"nofollow\" target=\"_blank\"\u003eTightVNC\u003c/a\u003e which is free VNC server that support Windows 11 and then install TightVNC on Windows machine.\u003c/p\u003e\n\u003ch2 id=\"TightVNC-Configuration-on-Windows-Machine\"\u003eTightVNC Configuration on Windows Machine\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#TightVNC-Configuration-on-Windows-Machine\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003col\u003e\n\u003cli\u003eClick on \u003cstrong\u003eRegister TightVNC Service\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003eClick on \u003cstrong\u003eTightVNC Service - Offline Configuration\u003c/strong\u003e\n\u003cul\u003e\n\u003cli\u003eFrom tab \u003cstrong\u003eServer\u003c/strong\u003e\n\u003cul\u003e\n\u003cli\u003eCheck \u003cstrong\u003eRequire VNC Authentication\u003c/strong\u003e and set password\u003c/li\u003e\n\u003cli\u003eUncheck \u003cstrong\u003eEnable file transfers\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003eUncheck \u003cstrong\u003eHide desktop wallpaper\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003eUncheck \u003cstrong\u003eServe Java Viewer to Web clients\u003c/strong\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eFrom tab \u003cstrong\u003eAccess Control\u003c/strong\u003e\n\u003cul\u003e\n\u003cli\u003eCheck \u003cstrong\u003eAllow loopback connections\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003eCheck \u003cstrong\u003eAllow only loopback connections\u003c/strong\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eFrom tab \u003cstrong\u003eAdministration\u003c/strong\u003e\n\u003cul\u003e\n\u003cli\u003eCheck \u003cstrong\u003eProtect control operations with a password\u003c/strong\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eSave the confguration\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eClick on \u003cstrong\u003eStart TightVNC Service\u003c/strong\u003e\u003c/li\u003e\n\u003c/ol\u003e\n\u003ch2 id=\"Configure-OpenSSH-Server\"\u003eConfigure OpenSSH Server\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Configure-OpenSSH-Server\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003eInstall OpenSSH server following these \u003ca href=\"https://github.com/PowerShell/Win32-OpenSSH/wiki/Install-Win32-OpenSSH\" rel=\"nofollow\" target=\"_blank\"\u003einstructions\u003c/a\u003e and configure sshd with these \u003ca href=\"https://github.com/PowerShell/Win32-OpenSSH/wiki/sshd_config\" rel=\"nofollow\" target=\"_blank\"\u003einstructions\u003c/a\u003e e.g. set port to \u003cstrong\u003e2222\u003c/strong\u003e.\u003c/p\u003e\n\u003ch2 id=\"Key-Based-Authentication\"\u003e\u003ca href=\"https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement\" rel=\"nofollow\" target=\"_blank\"\u003eKey Based Authentication\u003c/a\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Key-Based-Authentication\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003eExecute following command in remote machine and copy the content of \u003ccode\u003eid_ed25519.pub\u003c/code\u003e to the \u003ccode\u003e~/.ssh/authorized_keys\u003c/code\u003e of Windows machine. If you face permission issue try this \u003ca href=\"https://stackoverflow.com/a/50502015\" rel=\"nofollow\" target=\"_blank\"\u003eworkaround\u003c/a\u003e.\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003essh-keygen -t ed25519\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch2 id=\"Port-Forward-for-SSH-Server\"\u003ePort Forward for SSH Server\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Port-Forward-for-SSH-Server\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003eFollow \u003ca href=\"/D-LINK-DIR-882-A1-OpenWrt/#Expose-Internal-Service-to-Internet\"\u003ethese instructions\u003c/a\u003e to expose port \u003cstrong\u003e2222\u003c/strong\u003e to the Internet.\u003c/p\u003e\n\u003ch2 id=\"Connect-from-Remote-Machine\"\u003eConnect from Remote Machine\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Connect-from-Remote-Machine\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003eDownload \u003ca href=\"https://www.tightvnc.com/download.php\" rel=\"nofollow\" target=\"_blank\"\u003eTightVNC Java Viewer\u003c/a\u003e, unzip and open jar. Execute SSH \u003ca href=\"https://www.tightvnc.com/faq.php#portfwd\" rel=\"nofollow\" target=\"_blank\"\u003eport forwarding to TightVNC\u003c/a\u003e \u003ccode\u003essh -N -L 5900:localhost:5900 \u0026lt;your Windows user name\u0026gt;@\u0026lt;your public domain name\u0026gt; -p \u0026lt;SSH port\u0026gt; -vv\u003c/code\u003e. Introduce \u003ccode\u003elocalhost\u003c/code\u003e on \u003cstrong\u003eRemote Host\u003c/strong\u003e text box, \u003ccode\u003e5900\u003c/code\u003e on \u003cstrong\u003ePort\u003c/strong\u003e text box of \u003cstrong\u003eTightVNC Java Viewer\u003c/strong\u003e and click Connect, introduce access password, got it!\u003c/p\u003e\n\u003ch2 id=\"Reference\"\u003eReference\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Reference\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href=\"https://www.tightvnc.com/faq.php#howsecure\" rel=\"nofollow\" target=\"_blank\"\u003eHow secure is TightVNC?\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://www.tightvnc.com/faq.php#portfwd\" rel=\"nofollow\" target=\"_blank\"\u003eHow would I connect from the Internet to a machine in the internal network which is behind a router?\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e"
             },
             "lang": "en",
             "_nextI18Next": {
