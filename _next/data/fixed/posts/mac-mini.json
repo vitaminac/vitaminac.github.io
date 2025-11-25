@@ -1,0 +1,41 @@
+{
+  "pageProps": {
+    "postData": {
+      "slug": "mac-mini",
+      "tags": ["Apple", "Mac", "router", "VNC", "iOS", "MacOS"],
+      "isDraft": false,
+      "isArchived": true,
+      "title": "Mac Mini Is All You Need",
+      "date": "2025-11-23 17:40:37",
+      "isLegacy": false,
+      "lang": "en",
+      "tocHtml": "<ol>\n<li><a href=\"#Prerequisite\">Prerequisite</a></li>\n<li><a href=\"#Mac-Mini-can-be-a-NAS\">Mac Mini can be a NAS</a></li>\n<li><a href=\"#Mac-Mini-can-be-a-Silent-Download-Server\">Mac Mini can be a Silent Download Server</a></li>\n<li><a href=\"#Mac-Mini-can-be-a-Backup-Server\">Mac Mini can be a Backup Server</a></li>\n<li><a href=\"#Mac-Mini-can-be-a-Remote-Compute-Unit\">Mac Mini can be a Remote Compute Unit</a></li>\n<li><a href=\"#Mac-Mini-can-be-a-TV-Box\">Mac Mini can be a TV Box</a></li>\n<li><a href=\"#Mac-Mini-can-be-an-Apple-caching-server\">Mac Mini can be an Apple caching server</a></li>\n<li><a href=\"#Mac-Mini-can-allow-development-of-iOSMacOS-App\">Mac Mini can allow development of iOS/MacOS App</a></li>\n</ol>",
+      "articleHtml": "<p>Because of ultra-low power consumption, easy to use interface, nearly silent working, Mac Mini M4 has become a good candidate for lots of more interesting usage, like NAS, home media server, soft router.</p>\n<h2 id=\"Prerequisite\">Prerequisite<a aria-hidden=\"true\" tabindex=\"-1\" href=\"#Prerequisite\"><i class=\"fa-solid fa-link\"></i></a></h2>\n<ul>\n<li>If you buy the cheapest version with the default disk capacity 256 GB which is low, you have different options to expand the storage. You can buy an external SSD that support Thunderbolt 4. Buying an Thunderbolt 4 enclosure plus branded NVMe SSD is usually cheaper than the standalone branded portal SSD. You can also manually replace the internal SSD and upgrade to 2TB.</li>\n<li>Assign a static IP address to the Mac.<!-- -->\n<ul>\n<li>This can be configured in the main router. With main router option, if using Wi-Fi remember to turn off <strong>private Wi-Fi address</strong> in the Wi-Fi configuration to allow assignment by fixed MAC address.</li>\n<li>This can be also be configured in the network/Wi-Fi setting.</li>\n<li>It is recommended to turn off <strong>limit IP address tracking</strong> so the traffic can be cnotrolled by the main router.</li>\n</ul>\n</li>\n<li>Buy a HDMI virtual display emulator to allow working headless while allow remote VNC connect.</li>\n<li>To prevent service interruption, go to Settings -&gt; General -&gt; Software Update and <strong>disable automatic downaload &amp; update</strong>.</li>\n<li>Go to Settings -&gt; Privacy &amp; Security and <strong>turn off FileVault</strong></li>\n<li>Go to Settings -&gt; Energy and enable <strong>prevent automatic sleeping</strong> and <strong>start up automatically after power failure</strong>.</li>\n<li>Go to Settings -&gt; Lock Screen and set <strong>screen saver</strong> to <strong>never</strong> and set <strong>require password after lock</strong> to <strong>never</strong>.</li>\n<li><del>Go to Settings -&gt; Users &amp; Groups and enable <strong>automatic log in</strong></del>.</li>\n<li>Install <a href=\"https://formulae.brew.sh/\" rel=\"nofollow\" target=\"_blank\">Homebrew</a> for easy software management.</li>\n</ul>\n<h2 id=\"Mac-Mini-can-be-a-NAS\">Mac Mini can be a NAS<a aria-hidden=\"true\" tabindex=\"-1\" href=\"#Mac-Mini-can-be-a-NAS\"><i class=\"fa-solid fa-link\"></i></a></h2>\n<ol>\n<li><del>Go to Settings -&gt; Users &amp; Groups and create a sharing only account</del></li>\n<li>Go to Settings -&gt; General -&gt; Sharing and enable <strong>File Sharing</strong>.</li>\n<li>Click on <strong>!</strong> icon on the right<!-- -->\n<ol>\n<li>Remove access for all others users and disable <strong>allow full disk access for all users</strong></li>\n<li>Choose the external drive as shared location. This is required for sharing external drive because symlink from user folder (which is default sharing location) to external drive doesn&#x27;t work.</li>\n</ol>\n</li>\n<li>Click <strong>Options</strong> and enable account for sharing to Windows if needed.</li>\n</ol>\n<h2 id=\"Mac-Mini-can-be-a-Silent-Download-Server\">Mac Mini can be a Silent Download Server<a aria-hidden=\"true\" tabindex=\"-1\" href=\"#Mac-Mini-can-be-a-Silent-Download-Server\"><i class=\"fa-solid fa-link\"></i></a></h2>\n<p>You can run any download job on the Mac Mini and leave it on forever.</p>\n<h2 id=\"Mac-Mini-can-be-a-Backup-Server\">Mac Mini can be a Backup Server<a aria-hidden=\"true\" tabindex=\"-1\" href=\"#Mac-Mini-can-be-a-Backup-Server\"><i class=\"fa-solid fa-link\"></i></a></h2>\n<p>You can download Dropbox, Google Drive, OneDrive, etc. and start synchronizing file to local drive.</p>\n<h2 id=\"Mac-Mini-can-be-a-Remote-Compute-Unit\">Mac Mini can be a Remote Compute Unit<a aria-hidden=\"true\" tabindex=\"-1\" href=\"#Mac-Mini-can-be-a-Remote-Compute-Unit\"><i class=\"fa-solid fa-link\"></i></a></h2>\n<ul>\n<li>Enable SSH<!-- -->\n<ol>\n<li>Go to Settings -&gt; General -&gt; Sharing and enable <strong>Remote Login</strong></li>\n<li>how to enable certificate ssh</li>\n</ol>\n</li>\n<li>Enable remote desktop<!-- -->\n<ol>\n<li>Go to Settings -&gt; General -&gt; Sharing and enable <strong>Screen Sharing</strong>. Now you are ready to connect to Mac Mini using any VNC client. To connect securely to the VNC endpoint, use <strong>Apple Remote Desktop</strong> if have Mac or use SSH tunnel <code>ssh -N -L 5901:localhost:5900 user@your-mac-ip</code> and VNC client connect to local proxy port.</li>\n</ol>\n</li>\n</ul>\n<h2 id=\"Mac-Mini-can-be-a-TV-Box\">Mac Mini can be a TV Box<a aria-hidden=\"true\" tabindex=\"-1\" href=\"#Mac-Mini-can-be-a-TV-Box\"><i class=\"fa-solid fa-link\"></i></a></h2>\n<h2 id=\"Mac-Mini-can-be-an-Apple-caching-server\">Mac Mini can be an Apple caching server<a aria-hidden=\"true\" tabindex=\"-1\" href=\"#Mac-Mini-can-be-an-Apple-caching-server\"><i class=\"fa-solid fa-link\"></i></a></h2>\n<h2 id=\"Mac-Mini-can-allow-development-of-iOSMacOS-App\">Mac Mini can allow development of iOS/MacOS App<a aria-hidden=\"true\" tabindex=\"-1\" href=\"#Mac-Mini-can-allow-development-of-iOSMacOS-App\"><i class=\"fa-solid fa-link\"></i></a></h2>\n<p>Go to <a href=\"https://developer.apple.com/download/all/\" rel=\"nofollow\" target=\"_blank\">https://developer.apple.com/download/all/</a> and download <strong>Xcode</strong> and <strong>Command Line Tools</strong> and other relevant tools for your MacOS and/or iOS app development. You can also download them from App Store. <strong>TestFlight</strong> is also useful.</p>"
+    },
+    "lang": "en",
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          },
+          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
+        }
+      },
+      "initialLocale": "en",
+      "ns": ["navbar", "post-layout"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}
