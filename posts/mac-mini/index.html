@@ -222,21 +222,21 @@
               <ol>
                 <li><a href="#Prerequisite">Prerequisite</a></li>
                 <li>
+                  <a href="#Mac-Mini-is-a-247-Remote-Server"
+                    >Mac Mini is a 24/7 Remote Server</a
+                  >
+                </li>
+                <li>
                   <a href="#Mac-Mini-can-be-a-NAS">Mac Mini can be a NAS</a>
                 </li>
                 <li>
-                  <a href="#Mac-Mini-can-be-a-Silent-Download-Server"
-                    >Mac Mini can be a Silent Download Server</a
+                  <a href="#Mac-Mini-can-be-a-24H-Silent-Downloader"
+                    >Mac Mini can be a 24H Silent Downloader</a
                   >
                 </li>
                 <li>
                   <a href="#Mac-Mini-can-be-a-Backup-Server"
                     >Mac Mini can be a Backup Server</a
-                  >
-                </li>
-                <li>
-                  <a href="#Mac-Mini-can-be-a-Remote-Compute-Unit"
-                    >Mac Mini can be a Remote Compute Unit</a
                   >
                 </li>
                 <li>
@@ -254,6 +254,37 @@
                     >Mac Mini can allow development of iOS/MacOS App</a
                   >
                 </li>
+                <li>
+                  <a href="#Useful-Configuration">Useful Configuration</a>
+                  <ol>
+                    <li>
+                      <a href="#Prevent-Service-Interruption"
+                        >Prevent Service Interruption</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#Improve-Fault-Tolerance"
+                        >Improve Fault Tolerance</a
+                      >
+                    </li>
+                    <li><a href="#Improve-Security">Improve Security</a></li>
+                    <li>
+                      <a href="#Improve-Privacy-Protection"
+                        >Improve Privacy Protection</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#Reduce-Energy-Consumption"
+                        >Reduce Energy Consumption</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#Optimize-Storage-Usage"
+                        >Optimize Storage Usage</a
+                      >
+                    </li>
+                  </ol>
+                </li>
               </ol>
             </nav>
             <article class="Post_content__QBxez col-12 order-lg-1 col-lg-9">
@@ -263,14 +294,14 @@
                 for lots of more interesting usage, like NAS, home media server,
                 soft router.
               </p>
-              <h2 id="Prerequisite">
+              <h1 id="Prerequisite">
                 Prerequisite<a
                   aria-hidden="true"
                   tabindex="-1"
                   href="#Prerequisite"
                   ><i class="fa-solid fa-link"></i
                 ></a>
-              </h2>
+              </h1>
               <ul>
                 <li>
                   If you buy the cheapest version with the default disk capacity
@@ -279,6 +310,10 @@
                   4. Buying an Thunderbolt 4 enclosure plus branded NVMe SSD is
                   usually cheaper than the standalone branded portal SSD. You
                   can also manually replace the internal SSD and upgrade to 2TB.
+                </li>
+                <li>
+                  Buy a HDMI virtual display emulator to allow working headless
+                  while allow remote VNC connect.
                 </li>
                 <li>
                   Assign a static IP address to the Mac.<!-- -->
@@ -293,42 +328,7 @@
                       This can be also be configured in the network/Wi-Fi
                       setting.
                     </li>
-                    <li>
-                      It is recommended to turn off
-                      <strong>limit IP address tracking</strong> so the traffic
-                      can be cnotrolled by the main router.
-                    </li>
                   </ul>
-                </li>
-                <li>
-                  Buy a HDMI virtual display emulator to allow working headless
-                  while allow remote VNC connect.
-                </li>
-                <li>
-                  To prevent service interruption, go to Settings -&gt; General
-                  -&gt; Software Update and
-                  <strong>disable automatic downaload &amp; update</strong>.
-                </li>
-                <li>
-                  Go to Settings -&gt; Privacy &amp; Security and
-                  <strong>turn off FileVault</strong>
-                </li>
-                <li>
-                  Go to Settings -&gt; Energy and enable
-                  <strong>prevent automatic sleeping</strong> and
-                  <strong>start up automatically after power failure</strong>.
-                </li>
-                <li>
-                  Go to Settings -&gt; Lock Screen and set
-                  <strong>screen saver</strong> to <strong>never</strong> and
-                  set <strong>require password after lock</strong> to
-                  <strong>never</strong>.
-                </li>
-                <li>
-                  <del
-                    >Go to Settings -&gt; Users &amp; Groups and enable
-                    <strong>automatic log in</strong></del
-                  >.
                 </li>
                 <li>
                   Install
@@ -338,17 +338,86 @@
                     target="_blank"
                     >Homebrew</a
                   >
-                  for easy software management.
+                  for easy software package management.
                 </li>
               </ul>
-              <h2 id="Mac-Mini-can-be-a-NAS">
+              <h1 id="Mac-Mini-is-a-247-Remote-Server">
+                Mac Mini is a 24/7 Remote Server<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Mac-Mini-is-a-247-Remote-Server"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h1>
+              <p>
+                To enable SSH access, we can go to Settings -&gt; General -&gt;
+                Sharing and enable <strong>Remote Login</strong>. For easy
+                access, we can edit the local hostname to something simple e.g.
+                <code>mac-mini.local</code>.
+              </p>
+              <p>
+                To secure your SSH server, you can change default SSH port to
+                something else. It is recommended to use private ports between
+                49152 to 65535. You can edit with
+              </p>
+              <pre><code>sudo nano /etc/services
+</code></pre>
+              <p>
+                find the line with <code>CTRL+W</code> and search for
+                <code>SSH</code>
+              </p>
+              <pre><code>ssh  22/udp    #SSH Remote Login Protocol
+ssh  22/tcp    #SSH Remote Login Protocol
+</code></pre>
+              <p>uncomment it and change it to your desired port</p>
+              <pre><code>ssh  &lt;your desired new port&gt;/udp    #SSH Remote Login Protocol
+ssh  &lt;your desired new port&gt;/tcp    #SSH Remote Login Protocol
+</code></pre>
+              <p>Restart the SSH service</p>
+              <pre><code>sudo launchctl unload /System/Library/LaunchDaemons/ssh.plist
+sudo launchctl load   /System/Library/LaunchDaemons/ssh.plist
+</code></pre>
+              <p>
+                Now you can access your Mac Mini with
+                <code
+                  >ssh -p &lt;your new ssh port&gt; &lt;your user
+                  name&gt;@&lt;your mac mini host name&gt;</code
+                >.
+              </p>
+              <p>
+                Using certificate login instead password is much more
+                recommended.
+              </p>
+              <ol>
+                <li>how to enable certificate ssh</li>
+              </ol>
+              <ul>
+                <li>
+                  Enable remote desktop<!-- -->
+                  <ol>
+                    <li>
+                      Go to Settings -&gt; General -&gt; Sharing and enable
+                      <strong>Screen Sharing</strong>. Now you are ready to
+                      connect to Mac Mini using any VNC client. To connect
+                      securely to the VNC endpoint, use
+                      <strong>Apple Remote Desktop</strong> if have Mac or use
+                      SSH tunnel
+                      <code
+                        >ssh -N -L 5901:localhost:5900 user@your-mac-ip</code
+                      >
+                      and VNC client connect to local proxy port.
+                    </li>
+                  </ol>
+                </li>
+              </ul>
+              <h1 id="Mac-Mini-can-be-a-NAS">
                 Mac Mini can be a NAS<a
                   aria-hidden="true"
                   tabindex="-1"
                   href="#Mac-Mini-can-be-a-NAS"
                   ><i class="fa-solid fa-link"></i
                 ></a>
-              </h2>
+              </h1>
               <ol>
                 <li>
                   <del
@@ -380,91 +449,55 @@
                   to Windows if needed.
                 </li>
               </ol>
-              <h2 id="Mac-Mini-can-be-a-Silent-Download-Server">
-                Mac Mini can be a Silent Download Server<a
+              <p>可以组raid</p>
+              <h1 id="Mac-Mini-can-be-a-24H-Silent-Downloader">
+                Mac Mini can be a 24H Silent Downloader<a
                   aria-hidden="true"
                   tabindex="-1"
-                  href="#Mac-Mini-can-be-a-Silent-Download-Server"
+                  href="#Mac-Mini-can-be-a-24H-Silent-Downloader"
                   ><i class="fa-solid fa-link"></i
                 ></a>
-              </h2>
+              </h1>
               <p>
                 You can run any download job on the Mac Mini and leave it on
                 forever.
               </p>
-              <h2 id="Mac-Mini-can-be-a-Backup-Server">
+              <h1 id="Mac-Mini-can-be-a-Backup-Server">
                 Mac Mini can be a Backup Server<a
                   aria-hidden="true"
                   tabindex="-1"
                   href="#Mac-Mini-can-be-a-Backup-Server"
                   ><i class="fa-solid fa-link"></i
                 ></a>
-              </h2>
+              </h1>
               <p>
                 You can download Dropbox, Google Drive, OneDrive, etc. and start
                 synchronizing file to local drive.
               </p>
-              <h2 id="Mac-Mini-can-be-a-Remote-Compute-Unit">
-                Mac Mini can be a Remote Compute Unit<a
-                  aria-hidden="true"
-                  tabindex="-1"
-                  href="#Mac-Mini-can-be-a-Remote-Compute-Unit"
-                  ><i class="fa-solid fa-link"></i
-                ></a>
-              </h2>
-              <ul>
-                <li>
-                  Enable SSH<!-- -->
-                  <ol>
-                    <li>
-                      Go to Settings -&gt; General -&gt; Sharing and enable
-                      <strong>Remote Login</strong>
-                    </li>
-                    <li>how to enable certificate ssh</li>
-                  </ol>
-                </li>
-                <li>
-                  Enable remote desktop<!-- -->
-                  <ol>
-                    <li>
-                      Go to Settings -&gt; General -&gt; Sharing and enable
-                      <strong>Screen Sharing</strong>. Now you are ready to
-                      connect to Mac Mini using any VNC client. To connect
-                      securely to the VNC endpoint, use
-                      <strong>Apple Remote Desktop</strong> if have Mac or use
-                      SSH tunnel
-                      <code
-                        >ssh -N -L 5901:localhost:5900 user@your-mac-ip</code
-                      >
-                      and VNC client connect to local proxy port.
-                    </li>
-                  </ol>
-                </li>
-              </ul>
-              <h2 id="Mac-Mini-can-be-a-TV-Box">
+              <h1 id="Mac-Mini-can-be-a-TV-Box">
                 Mac Mini can be a TV Box<a
                   aria-hidden="true"
                   tabindex="-1"
                   href="#Mac-Mini-can-be-a-TV-Box"
                   ><i class="fa-solid fa-link"></i
                 ></a>
-              </h2>
-              <h2 id="Mac-Mini-can-be-an-Apple-caching-server">
+              </h1>
+              <h1 id="Mac-Mini-can-be-an-Apple-caching-server">
                 Mac Mini can be an Apple caching server<a
                   aria-hidden="true"
                   tabindex="-1"
                   href="#Mac-Mini-can-be-an-Apple-caching-server"
                   ><i class="fa-solid fa-link"></i
                 ></a>
-              </h2>
-              <h2 id="Mac-Mini-can-allow-development-of-iOSMacOS-App">
+              </h1>
+              <h1 id="Mac-Mini-can-allow-development-of-iOSMacOS-App">
                 Mac Mini can allow development of iOS/MacOS App<a
                   aria-hidden="true"
                   tabindex="-1"
                   href="#Mac-Mini-can-allow-development-of-iOSMacOS-App"
                   ><i class="fa-solid fa-link"></i
                 ></a>
-              </h2>
+              </h1>
               <p>
                 Go to
                 <a
@@ -478,6 +511,330 @@
                 your MacOS and/or iOS app development. You can also download
                 them from App Store. <strong>TestFlight</strong> is also useful.
               </p>
+              <h1 id="Useful-Configuration">
+                Useful Configuration<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Useful-Configuration"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h1>
+              <h2 id="Prevent-Service-Interruption">
+                Prevent Service Interruption<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Prevent-Service-Interruption"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <ul>
+                <li>
+                  Go to Settings -&gt; Energy<!-- -->
+                  <ul>
+                    <li>
+                      enable
+                      <strong
+                        >prevent automatic sleeping when display is off</strong
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  Go to Settings -&gt; General -&gt; Software Update<!-- -->
+                  <ul>
+                    <li>disable <strong>beta update</strong></li>
+                    <li>
+                      disable
+                      <strong
+                        >automatically download new updates when
+                        available</strong
+                      >.
+                    </li>
+                    <li>
+                      disable
+                      <strong>automatically install macOS updates</strong>
+                    </li>
+                    <li>
+                      disable
+                      <strong
+                        >automatically install application updates from the App
+                        Store</strong
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <h2 id="Improve-Fault-Tolerance">
+                Improve Fault Tolerance<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Improve-Fault-Tolerance"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <ul>
+                <li>
+                  Go to Settings -&gt; Energy<!-- -->
+                  <ul>
+                    <li>
+                      enable
+                      <strong>start up automatically after power failure</strong
+                      >.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  Go to Settings -&gt; General -&gt; Time Machine<!-- -->
+                  <ul>
+                    <li>
+                      click on <strong>add backup disk...</strong> and select an
+                      external disk. You can perform partition on your external
+                      disk to have a volume dedicated for backup while other
+                      space for storing other files.
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <h2 id="Improve-Security">
+                Improve Security<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Improve-Security"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <ul>
+                <li>
+                  Go to Network -&gt; Firewall<!-- -->
+                  <ul>
+                    <li>enable <strong>firewall</strong></li>
+                    <li>enable <strong>stealth mode</strong></li>
+                    <li>
+                      disable
+                      <strong
+                        >automatically allow built-in software to receive
+                        incoming connections</strong
+                      >
+                    </li>
+                    <li>
+                      disable
+                      <strong
+                        >automatically allow downloaded signed software to
+                        receive incoming connections</strong
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  Go to Settings -&gt; Lock Screen<!-- -->
+                  <ul>
+                    <li>
+                      set <strong>require password after lock</strong> to
+                      <strong>immediately</strong>.
+                    </li>
+                    <li>disable <strong>show user name and photo</strong></li>
+                    <li>disable <strong>password hints</strong></li>
+                    <li>disable <strong>show message when locked</strong></li>
+                    <li>
+                      set <strong>login window shows</strong> to
+                      <strong>name and password</strong>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  Go to Settings -&gt; Users &amp; Groups<!-- -->
+                  <ul>
+                    <li>turn off <strong>automatic log in</strong></li>
+                  </ul>
+                </li>
+              </ul>
+              <h2 id="Improve-Privacy-Protection">
+                Improve Privacy Protection<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Improve-Privacy-Protection"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <ul>
+                <li>
+                  Go to Settings -&gt; Wi-Fi -&gt; Details<!-- -->
+                  <ul>
+                    <li>
+                      change <strong>private Wi-Fi address</strong> to
+                      <strong>Rotating</strong>.
+                    </li>
+                    <li>enable <strong>limit IP address tracking</strong></li>
+                  </ul>
+                </li>
+                <li>
+                  Go to App Store -&gt; Settings<!-- -->
+                  <ul>
+                    <li>
+                      disable <strong>in-app ratings &amp; reviews</strong>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <h2 id="Reduce-Energy-Consumption">
+                Reduce Energy Consumption<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Reduce-Energy-Consumption"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <ul>
+                <li>
+                  Bluetooth and Location can be turned off to reduce energy
+                  consumption
+                </li>
+                <li>
+                  Go System Settings -&gt; Displays -&gt; Advance...<!-- -->
+                  <ul>
+                    <li>
+                      disable
+                      <strong
+                        >push through the edge of a display to connect a nearby
+                        Mac or iPads</strong
+                      >
+                    </li>
+                    <li>
+                      disable
+                      <strong
+                        >allow your pointer and keyboard to move between nearby
+                        Macs or iPads</strong
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  If you have macOS 26, downgrading system version to macOS
+                  Sequoia (version 15) would have lower energy consumption and
+                  more stable environment<!-- -->
+                  <ol>
+                    <li>Download macOS Sequoia from AppStore</li>
+                    <li>
+                      Go to Application and right click on the
+                      <strong>Install macOS Sequoia</strong> and show package
+                      content
+                    </li>
+                    <li>
+                      run following command
+                      <code
+                        >sudo &lt;drag and drop the createinstallmedia from
+                        package content&gt; --volume &lt;drag and drop the USB
+                        or SD volume&gt;</code
+                      >
+                    </li>
+                    <li>
+                      long press the power button and boot into recovery mode
+                    </li>
+                    <li>erase erase macintosh disk</li>
+                    <li>
+                      back to recovery mode and select install macOS Sequoia
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  Go to Settings -&gt; Privacy &amp; Security and
+                  <strong>turn off FileVault</strong>
+                </li>
+                <li>
+                  Go to Settings -&gt; Energy<!-- -->
+                  <ul>
+                    <li>disable <strong>wake for network access</strong></li>
+                  </ul>
+                </li>
+                <li>
+                  (if you use Mac Mini in headless mode) Go to Settings -&gt;
+                  Lock Screen<!-- -->
+                  <ul>
+                    <li>
+                      set <strong>screen saver</strong> to
+                      <strong>never</strong>
+                    </li>
+                    <li>
+                      set <strong>turn display off when inactive</strong> to
+                      <strong>never</strong>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  Go to App Store -&gt; Settings<!-- -->
+                  <ul>
+                    <li>disable <strong>automatic updates</strong></li>
+                    <li>
+                      disable
+                      <strong
+                        >automatically download apps purchased on other
+                        devices</strong
+                      >
+                    </li>
+                    <li>
+                      disable
+                      <strong>automatically download in-app content</strong>
+                    </li>
+                    <li>disable <strong>video autoplay</strong></li>
+                  </ul>
+                </li>
+              </ul>
+              <h2 id="Optimize-Storage-Usage">
+                Optimize Storage Usage<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Optimize-Storage-Usage"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <ul>
+                <li>
+                  Go to App Store -&gt; Settings<!-- -->
+                  <ul>
+                    <li>
+                      enable
+                      <strong
+                        >download and install large apps to a separate
+                        disk</strong
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  We can also move Xcode Simulator to external disk (only user
+                  one, moving the system one
+                  <code>/Library/Developer/CoreSimulator</code> would cause
+                  issue)<!-- -->
+                  <ol>
+                    <li>
+                      check simulator&#x27;s disks are unmounted using Disk
+                      Utility
+                    </li>
+                    <li>
+                      <code
+                        >mv ~/Library/Developer/CoreSimulator /Volumes/&lt;your
+                        external
+                        disk&gt;/Home/Library/Developer/CoreSimulator</code
+                      >
+                    </li>
+                    <li>
+                      <code
+                        >ln -s /Volumes/&lt;your external
+                        disk&gt;/Home/Library/Developer/CoreSimulator
+                        ~/Library/Developer/CoreSimulator</code
+                      >
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  Go to finder -&gt; Go -&gt; Computer and then choose View
+                  -&gt; Show View Options and enable
+                  <strong>calculate all sizes</strong> so you can manually
+                  explore the disk and perform clean up
+                </li>
+              </ul>
+              <hr />
+              <p>还能配合小米摄像头做监视</p>
             </article>
           </div>
           <aside></aside>
@@ -615,8 +972,8 @@
               "date": "2025-11-23 17:40:37",
               "isLegacy": false,
               "lang": "en",
-              "tocHtml": "\u003col\u003e\n\u003cli\u003e\u003ca href=\"#Prerequisite\"\u003ePrerequisite\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Mac-Mini-can-be-a-NAS\"\u003eMac Mini can be a NAS\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Mac-Mini-can-be-a-Silent-Download-Server\"\u003eMac Mini can be a Silent Download Server\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Mac-Mini-can-be-a-Backup-Server\"\u003eMac Mini can be a Backup Server\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Mac-Mini-can-be-a-Remote-Compute-Unit\"\u003eMac Mini can be a Remote Compute Unit\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Mac-Mini-can-be-a-TV-Box\"\u003eMac Mini can be a TV Box\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Mac-Mini-can-be-an-Apple-caching-server\"\u003eMac Mini can be an Apple caching server\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Mac-Mini-can-allow-development-of-iOSMacOS-App\"\u003eMac Mini can allow development of iOS/MacOS App\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e",
-              "articleHtml": "\u003cp\u003eBecause of ultra-low power consumption, easy to use interface, nearly silent working, Mac Mini M4 has become a good candidate for lots of more interesting usage, like NAS, home media server, soft router.\u003c/p\u003e\n\u003ch2 id=\"Prerequisite\"\u003ePrerequisite\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Prerequisite\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003eIf you buy the cheapest version with the default disk capacity 256 GB which is low, you have different options to expand the storage. You can buy an external SSD that support Thunderbolt 4. Buying an Thunderbolt 4 enclosure plus branded NVMe SSD is usually cheaper than the standalone branded portal SSD. You can also manually replace the internal SSD and upgrade to 2TB.\u003c/li\u003e\n\u003cli\u003eAssign a static IP address to the Mac.\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003eThis can be configured in the main router. With main router option, if using Wi-Fi remember to turn off \u003cstrong\u003eprivate Wi-Fi address\u003c/strong\u003e in the Wi-Fi configuration to allow assignment by fixed MAC address.\u003c/li\u003e\n\u003cli\u003eThis can be also be configured in the network/Wi-Fi setting.\u003c/li\u003e\n\u003cli\u003eIt is recommended to turn off \u003cstrong\u003elimit IP address tracking\u003c/strong\u003e so the traffic can be cnotrolled by the main router.\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eBuy a HDMI virtual display emulator to allow working headless while allow remote VNC connect.\u003c/li\u003e\n\u003cli\u003eTo prevent service interruption, go to Settings -\u0026gt; General -\u0026gt; Software Update and \u003cstrong\u003edisable automatic downaload \u0026amp; update\u003c/strong\u003e.\u003c/li\u003e\n\u003cli\u003eGo to Settings -\u0026gt; Privacy \u0026amp; Security and \u003cstrong\u003eturn off FileVault\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003eGo to Settings -\u0026gt; Energy and enable \u003cstrong\u003eprevent automatic sleeping\u003c/strong\u003e and \u003cstrong\u003estart up automatically after power failure\u003c/strong\u003e.\u003c/li\u003e\n\u003cli\u003eGo to Settings -\u0026gt; Lock Screen and set \u003cstrong\u003escreen saver\u003c/strong\u003e to \u003cstrong\u003enever\u003c/strong\u003e and set \u003cstrong\u003erequire password after lock\u003c/strong\u003e to \u003cstrong\u003enever\u003c/strong\u003e.\u003c/li\u003e\n\u003cli\u003e\u003cdel\u003eGo to Settings -\u0026gt; Users \u0026amp; Groups and enable \u003cstrong\u003eautomatic log in\u003c/strong\u003e\u003c/del\u003e.\u003c/li\u003e\n\u003cli\u003eInstall \u003ca href=\"https://formulae.brew.sh/\" rel=\"nofollow\" target=\"_blank\"\u003eHomebrew\u003c/a\u003e for easy software management.\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"Mac-Mini-can-be-a-NAS\"\u003eMac Mini can be a NAS\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Mac-Mini-can-be-a-NAS\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003col\u003e\n\u003cli\u003e\u003cdel\u003eGo to Settings -\u0026gt; Users \u0026amp; Groups and create a sharing only account\u003c/del\u003e\u003c/li\u003e\n\u003cli\u003eGo to Settings -\u0026gt; General -\u0026gt; Sharing and enable \u003cstrong\u003eFile Sharing\u003c/strong\u003e.\u003c/li\u003e\n\u003cli\u003eClick on \u003cstrong\u003e!\u003c/strong\u003e icon on the right\u003c!-- --\u003e\n\u003col\u003e\n\u003cli\u003eRemove access for all others users and disable \u003cstrong\u003eallow full disk access for all users\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003eChoose the external drive as shared location. This is required for sharing external drive because symlink from user folder (which is default sharing location) to external drive doesn\u0026#x27;t work.\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003cli\u003eClick \u003cstrong\u003eOptions\u003c/strong\u003e and enable account for sharing to Windows if needed.\u003c/li\u003e\n\u003c/ol\u003e\n\u003ch2 id=\"Mac-Mini-can-be-a-Silent-Download-Server\"\u003eMac Mini can be a Silent Download Server\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Mac-Mini-can-be-a-Silent-Download-Server\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003eYou can run any download job on the Mac Mini and leave it on forever.\u003c/p\u003e\n\u003ch2 id=\"Mac-Mini-can-be-a-Backup-Server\"\u003eMac Mini can be a Backup Server\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Mac-Mini-can-be-a-Backup-Server\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003eYou can download Dropbox, Google Drive, OneDrive, etc. and start synchronizing file to local drive.\u003c/p\u003e\n\u003ch2 id=\"Mac-Mini-can-be-a-Remote-Compute-Unit\"\u003eMac Mini can be a Remote Compute Unit\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Mac-Mini-can-be-a-Remote-Compute-Unit\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003eEnable SSH\u003c!-- --\u003e\n\u003col\u003e\n\u003cli\u003eGo to Settings -\u0026gt; General -\u0026gt; Sharing and enable \u003cstrong\u003eRemote Login\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003ehow to enable certificate ssh\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003cli\u003eEnable remote desktop\u003c!-- --\u003e\n\u003col\u003e\n\u003cli\u003eGo to Settings -\u0026gt; General -\u0026gt; Sharing and enable \u003cstrong\u003eScreen Sharing\u003c/strong\u003e. Now you are ready to connect to Mac Mini using any VNC client. To connect securely to the VNC endpoint, use \u003cstrong\u003eApple Remote Desktop\u003c/strong\u003e if have Mac or use SSH tunnel \u003ccode\u003essh -N -L 5901:localhost:5900 user@your-mac-ip\u003c/code\u003e and VNC client connect to local proxy port.\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"Mac-Mini-can-be-a-TV-Box\"\u003eMac Mini can be a TV Box\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Mac-Mini-can-be-a-TV-Box\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003ch2 id=\"Mac-Mini-can-be-an-Apple-caching-server\"\u003eMac Mini can be an Apple caching server\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Mac-Mini-can-be-an-Apple-caching-server\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003ch2 id=\"Mac-Mini-can-allow-development-of-iOSMacOS-App\"\u003eMac Mini can allow development of iOS/MacOS App\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Mac-Mini-can-allow-development-of-iOSMacOS-App\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003eGo to \u003ca href=\"https://developer.apple.com/download/all/\" rel=\"nofollow\" target=\"_blank\"\u003ehttps://developer.apple.com/download/all/\u003c/a\u003e and download \u003cstrong\u003eXcode\u003c/strong\u003e and \u003cstrong\u003eCommand Line Tools\u003c/strong\u003e and other relevant tools for your MacOS and/or iOS app development. You can also download them from App Store. \u003cstrong\u003eTestFlight\u003c/strong\u003e is also useful.\u003c/p\u003e"
+              "tocHtml": "\u003col\u003e\n\u003cli\u003e\u003ca href=\"#Prerequisite\"\u003ePrerequisite\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Mac-Mini-is-a-247-Remote-Server\"\u003eMac Mini is a 24/7 Remote Server\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Mac-Mini-can-be-a-NAS\"\u003eMac Mini can be a NAS\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Mac-Mini-can-be-a-24H-Silent-Downloader\"\u003eMac Mini can be a 24H Silent Downloader\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Mac-Mini-can-be-a-Backup-Server\"\u003eMac Mini can be a Backup Server\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Mac-Mini-can-be-a-TV-Box\"\u003eMac Mini can be a TV Box\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Mac-Mini-can-be-an-Apple-caching-server\"\u003eMac Mini can be an Apple caching server\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Mac-Mini-can-allow-development-of-iOSMacOS-App\"\u003eMac Mini can allow development of iOS/MacOS App\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Useful-Configuration\"\u003eUseful Configuration\u003c/a\u003e\n\u003col\u003e\n\u003cli\u003e\u003ca href=\"#Prevent-Service-Interruption\"\u003ePrevent Service Interruption\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Improve-Fault-Tolerance\"\u003eImprove Fault Tolerance\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Improve-Security\"\u003eImprove Security\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Improve-Privacy-Protection\"\u003eImprove Privacy Protection\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Reduce-Energy-Consumption\"\u003eReduce Energy Consumption\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Optimize-Storage-Usage\"\u003eOptimize Storage Usage\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003c/ol\u003e",
+              "articleHtml": "\u003cp\u003eBecause of ultra-low power consumption, easy to use interface, nearly silent working, Mac Mini M4 has become a good candidate for lots of more interesting usage, like NAS, home media server, soft router.\u003c/p\u003e\n\u003ch1 id=\"Prerequisite\"\u003ePrerequisite\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Prerequisite\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h1\u003e\n\u003cul\u003e\n\u003cli\u003eIf you buy the cheapest version with the default disk capacity 256 GB which is low, you have different options to expand the storage. You can buy an external SSD that support Thunderbolt 4. Buying an Thunderbolt 4 enclosure plus branded NVMe SSD is usually cheaper than the standalone branded portal SSD. You can also manually replace the internal SSD and upgrade to 2TB.\u003c/li\u003e\n\u003cli\u003eBuy a HDMI virtual display emulator to allow working headless while allow remote VNC connect.\u003c/li\u003e\n\u003cli\u003eAssign a static IP address to the Mac.\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003eThis can be configured in the main router. With main router option, if using Wi-Fi remember to turn off \u003cstrong\u003eprivate Wi-Fi address\u003c/strong\u003e in the Wi-Fi configuration to allow assignment by fixed MAC address.\u003c/li\u003e\n\u003cli\u003eThis can be also be configured in the network/Wi-Fi setting.\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eInstall \u003ca href=\"https://formulae.brew.sh/\" rel=\"nofollow\" target=\"_blank\"\u003eHomebrew\u003c/a\u003e for easy software package management.\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch1 id=\"Mac-Mini-is-a-247-Remote-Server\"\u003eMac Mini is a 24/7 Remote Server\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Mac-Mini-is-a-247-Remote-Server\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h1\u003e\n\u003cp\u003eTo enable SSH access, we can go to Settings -\u0026gt; General -\u0026gt; Sharing and enable \u003cstrong\u003eRemote Login\u003c/strong\u003e. For easy access, we can edit the local hostname to something simple e.g. \u003ccode\u003emac-mini.local\u003c/code\u003e.\u003c/p\u003e\n\u003cp\u003eTo secure your SSH server, you can change default SSH port to something else. It is recommended to use private ports between 49152 to 65535. You can edit with\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003esudo nano /etc/services\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003efind the line with \u003ccode\u003eCTRL+W\u003c/code\u003e and search for \u003ccode\u003eSSH\u003c/code\u003e\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003essh  22/udp    #SSH Remote Login Protocol\nssh  22/tcp    #SSH Remote Login Protocol\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003euncomment it and change it to your desired port\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003essh  \u0026lt;your desired new port\u0026gt;/udp    #SSH Remote Login Protocol\nssh  \u0026lt;your desired new port\u0026gt;/tcp    #SSH Remote Login Protocol\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eRestart the SSH service\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003esudo launchctl unload /System/Library/LaunchDaemons/ssh.plist\nsudo launchctl load   /System/Library/LaunchDaemons/ssh.plist\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eNow you can access your Mac Mini with \u003ccode\u003essh -p \u0026lt;your new ssh port\u0026gt; \u0026lt;your user name\u0026gt;@\u0026lt;your mac mini host name\u0026gt;\u003c/code\u003e.\u003c/p\u003e\n\u003cp\u003eUsing certificate login instead password is much more recommended.\u003c/p\u003e\n\u003col\u003e\n\u003cli\u003ehow to enable certificate ssh\u003c/li\u003e\n\u003c/ol\u003e\n\u003cul\u003e\n\u003cli\u003eEnable remote desktop\u003c!-- --\u003e\n\u003col\u003e\n\u003cli\u003eGo to Settings -\u0026gt; General -\u0026gt; Sharing and enable \u003cstrong\u003eScreen Sharing\u003c/strong\u003e. Now you are ready to connect to Mac Mini using any VNC client. To connect securely to the VNC endpoint, use \u003cstrong\u003eApple Remote Desktop\u003c/strong\u003e if have Mac or use SSH tunnel \u003ccode\u003essh -N -L 5901:localhost:5900 user@your-mac-ip\u003c/code\u003e and VNC client connect to local proxy port.\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch1 id=\"Mac-Mini-can-be-a-NAS\"\u003eMac Mini can be a NAS\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Mac-Mini-can-be-a-NAS\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h1\u003e\n\u003col\u003e\n\u003cli\u003e\u003cdel\u003eGo to Settings -\u0026gt; Users \u0026amp; Groups and create a sharing only account\u003c/del\u003e\u003c/li\u003e\n\u003cli\u003eGo to Settings -\u0026gt; General -\u0026gt; Sharing and enable \u003cstrong\u003eFile Sharing\u003c/strong\u003e.\u003c/li\u003e\n\u003cli\u003eClick on \u003cstrong\u003e!\u003c/strong\u003e icon on the right\u003c!-- --\u003e\n\u003col\u003e\n\u003cli\u003eRemove access for all others users and disable \u003cstrong\u003eallow full disk access for all users\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003eChoose the external drive as shared location. This is required for sharing external drive because symlink from user folder (which is default sharing location) to external drive doesn\u0026#x27;t work.\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003cli\u003eClick \u003cstrong\u003eOptions\u003c/strong\u003e and enable account for sharing to Windows if needed.\u003c/li\u003e\n\u003c/ol\u003e\n\u003cp\u003e可以组raid\u003c/p\u003e\n\u003ch1 id=\"Mac-Mini-can-be-a-24H-Silent-Downloader\"\u003eMac Mini can be a 24H Silent Downloader\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Mac-Mini-can-be-a-24H-Silent-Downloader\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h1\u003e\n\u003cp\u003eYou can run any download job on the Mac Mini and leave it on forever.\u003c/p\u003e\n\u003ch1 id=\"Mac-Mini-can-be-a-Backup-Server\"\u003eMac Mini can be a Backup Server\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Mac-Mini-can-be-a-Backup-Server\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h1\u003e\n\u003cp\u003eYou can download Dropbox, Google Drive, OneDrive, etc. and start synchronizing file to local drive.\u003c/p\u003e\n\u003ch1 id=\"Mac-Mini-can-be-a-TV-Box\"\u003eMac Mini can be a TV Box\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Mac-Mini-can-be-a-TV-Box\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h1\u003e\n\u003ch1 id=\"Mac-Mini-can-be-an-Apple-caching-server\"\u003eMac Mini can be an Apple caching server\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Mac-Mini-can-be-an-Apple-caching-server\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h1\u003e\n\u003ch1 id=\"Mac-Mini-can-allow-development-of-iOSMacOS-App\"\u003eMac Mini can allow development of iOS/MacOS App\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Mac-Mini-can-allow-development-of-iOSMacOS-App\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h1\u003e\n\u003cp\u003eGo to \u003ca href=\"https://developer.apple.com/download/all/\" rel=\"nofollow\" target=\"_blank\"\u003ehttps://developer.apple.com/download/all/\u003c/a\u003e and download \u003cstrong\u003eXcode\u003c/strong\u003e and \u003cstrong\u003eCommand Line Tools\u003c/strong\u003e and other relevant tools for your MacOS and/or iOS app development. You can also download them from App Store. \u003cstrong\u003eTestFlight\u003c/strong\u003e is also useful.\u003c/p\u003e\n\u003ch1 id=\"Useful-Configuration\"\u003eUseful Configuration\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Useful-Configuration\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h1\u003e\n\u003ch2 id=\"Prevent-Service-Interruption\"\u003ePrevent Service Interruption\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Prevent-Service-Interruption\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003eGo to Settings -\u0026gt; Energy\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003eenable \u003cstrong\u003eprevent automatic sleeping when display is off\u003c/strong\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eGo to Settings -\u0026gt; General -\u0026gt; Software Update\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003edisable \u003cstrong\u003ebeta update\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003edisable \u003cstrong\u003eautomatically download new updates when available\u003c/strong\u003e.\u003c/li\u003e\n\u003cli\u003edisable \u003cstrong\u003eautomatically install macOS updates\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003edisable \u003cstrong\u003eautomatically install application updates from the App Store\u003c/strong\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"Improve-Fault-Tolerance\"\u003eImprove Fault Tolerance\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Improve-Fault-Tolerance\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003eGo to Settings -\u0026gt; Energy\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003eenable \u003cstrong\u003estart up automatically after power failure\u003c/strong\u003e.\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eGo to Settings -\u0026gt; General -\u0026gt; Time Machine\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003eclick on \u003cstrong\u003eadd backup disk...\u003c/strong\u003e and select an external disk. You can perform partition on your external disk to have a volume dedicated for backup while other space for storing other files.\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"Improve-Security\"\u003eImprove Security\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Improve-Security\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003eGo to Network -\u0026gt; Firewall\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003eenable \u003cstrong\u003efirewall\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003eenable \u003cstrong\u003estealth mode\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003edisable \u003cstrong\u003eautomatically allow built-in software to receive incoming connections\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003edisable \u003cstrong\u003eautomatically allow downloaded signed software to receive incoming connections\u003c/strong\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eGo to Settings -\u0026gt; Lock Screen\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003eset \u003cstrong\u003erequire password after lock\u003c/strong\u003e to \u003cstrong\u003eimmediately\u003c/strong\u003e.\u003c/li\u003e\n\u003cli\u003edisable \u003cstrong\u003eshow user name and photo\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003edisable \u003cstrong\u003epassword hints\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003edisable \u003cstrong\u003eshow message when locked\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003eset \u003cstrong\u003elogin window shows\u003c/strong\u003e to \u003cstrong\u003ename and password\u003c/strong\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eGo to Settings -\u0026gt; Users \u0026amp; Groups\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003eturn off \u003cstrong\u003eautomatic log in\u003c/strong\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"Improve-Privacy-Protection\"\u003eImprove Privacy Protection\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Improve-Privacy-Protection\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003eGo to Settings -\u0026gt; Wi-Fi -\u0026gt; Details\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003echange \u003cstrong\u003eprivate Wi-Fi address\u003c/strong\u003e to \u003cstrong\u003eRotating\u003c/strong\u003e.\u003c/li\u003e\n\u003cli\u003eenable \u003cstrong\u003elimit IP address tracking\u003c/strong\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eGo to App Store -\u0026gt; Settings\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003edisable \u003cstrong\u003ein-app ratings \u0026amp; reviews\u003c/strong\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"Reduce-Energy-Consumption\"\u003eReduce Energy Consumption\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Reduce-Energy-Consumption\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003eBluetooth and Location can be turned off to reduce energy consumption\u003c/li\u003e\n\u003cli\u003eGo System Settings -\u0026gt; Displays -\u0026gt; Advance...\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003edisable \u003cstrong\u003epush through the edge of a display to connect a nearby Mac or iPads\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003edisable \u003cstrong\u003eallow your pointer and keyboard to move between nearby Macs or iPads\u003c/strong\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eIf you have macOS 26, downgrading system version to macOS Sequoia (version 15) would have lower energy consumption and more stable environment\u003c!-- --\u003e\n\u003col\u003e\n\u003cli\u003eDownload macOS Sequoia from AppStore\u003c/li\u003e\n\u003cli\u003eGo to Application and right click on the \u003cstrong\u003eInstall macOS Sequoia\u003c/strong\u003e and show package content\u003c/li\u003e\n\u003cli\u003erun following command \u003ccode\u003esudo \u0026lt;drag and drop the createinstallmedia from package content\u0026gt; --volume \u0026lt;drag and drop the USB or SD volume\u0026gt;\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003elong press the power button and boot into recovery mode\u003c/li\u003e\n\u003cli\u003eerase erase macintosh disk\u003c/li\u003e\n\u003cli\u003eback to recovery mode and select install macOS Sequoia\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003cli\u003eGo to Settings -\u0026gt; Privacy \u0026amp; Security and \u003cstrong\u003eturn off FileVault\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003eGo to Settings -\u0026gt; Energy\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003edisable \u003cstrong\u003ewake for network access\u003c/strong\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003e(if you use Mac Mini in headless mode) Go to Settings -\u0026gt; Lock Screen\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003eset \u003cstrong\u003escreen saver\u003c/strong\u003e to \u003cstrong\u003enever\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003eset \u003cstrong\u003eturn display off when inactive\u003c/strong\u003e to \u003cstrong\u003enever\u003c/strong\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eGo to App Store -\u0026gt; Settings\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003edisable \u003cstrong\u003eautomatic updates\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003edisable \u003cstrong\u003eautomatically download apps purchased on other devices\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003edisable \u003cstrong\u003eautomatically download in-app content\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003edisable \u003cstrong\u003evideo autoplay\u003c/strong\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"Optimize-Storage-Usage\"\u003eOptimize Storage Usage\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Optimize-Storage-Usage\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003eGo to App Store -\u0026gt; Settings\u003c!-- --\u003e\n\u003cul\u003e\n\u003cli\u003eenable \u003cstrong\u003edownload and install large apps to a separate disk\u003c/strong\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eWe can also move Xcode Simulator to external disk (only user one, moving the system one \u003ccode\u003e/Library/Developer/CoreSimulator\u003c/code\u003e would cause issue)\u003c!-- --\u003e\n\u003col\u003e\n\u003cli\u003echeck simulator\u0026#x27;s disks are unmounted using Disk Utility\u003c/li\u003e\n\u003cli\u003e\u003ccode\u003emv ~/Library/Developer/CoreSimulator /Volumes/\u0026lt;your external disk\u0026gt;/Home/Library/Developer/CoreSimulator\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003e\u003ccode\u003eln -s /Volumes/\u0026lt;your external disk\u0026gt;/Home/Library/Developer/CoreSimulator ~/Library/Developer/CoreSimulator\u003c/code\u003e\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003cli\u003eGo to finder -\u0026gt; Go -\u0026gt; Computer and then choose View -\u0026gt; Show View Options and enable \u003cstrong\u003ecalculate all sizes\u003c/strong\u003e so you can manually explore the disk and perform clean up\u003c/li\u003e\n\u003c/ul\u003e\n\u003chr/\u003e\n\u003cp\u003e还能配合小米摄像头做监视\u003c/p\u003e"
             },
             "lang": "en",
             "_nextI18Next": {
