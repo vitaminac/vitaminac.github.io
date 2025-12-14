@@ -55,12 +55,12 @@
     />
     <link
       rel="preload"
-      href="/_next/static/css/ae40a2b2ee8ce9da.css"
+      href="/_next/static/css/b6f191fba809344d.css"
       as="style"
     />
     <link
       rel="stylesheet"
-      href="/_next/static/css/ae40a2b2ee8ce9da.css"
+      href="/_next/static/css/b6f191fba809344d.css"
       data-n-p=""
     />
     <noscript data-n-css=""></noscript>
@@ -217,55 +217,200 @@
             <nav class="Post_toc__TAzIW col-12 col-lg-3 order-lg-2">
               <ol>
                 <li>
-                  <a
-                    href="/SOLID/index.html#Single-Responsibility-Principle"
-                    target="SOLID"
+                  <a href="#Single-Responsibility-Principle"
                     >Single Responsibility Principle</a
                   >
                 </li>
                 <li>
-                  <a
-                    href="/SOLID/index.html#OpenClosed-Principle"
-                    target="SOLID"
-                    >Open–Closed Principle</a
-                  >
+                  <a href="#OpenClosed-Principle">Open–Closed Principle</a>
                 </li>
                 <li>
-                  <a
-                    href="/SOLID/index.html#Liskov-Substitution-Principle"
-                    target="SOLID"
+                  <a href="#Liskov-Substitution-Principle"
                     >Liskov Substitution Principle</a
                   >
                 </li>
                 <li>
-                  <a
-                    href="/SOLID/index.html#Interface-Segregation-Principle"
-                    target="SOLID"
+                  <a href="#Interface-Segregation-Principle"
                     >Interface Segregation Principle</a
                   >
                 </li>
                 <li>
-                  <a
-                    href="/SOLID/index.html#Dependency-inversion-principle"
-                    target="SOLID"
+                  <a href="#Dependency-inversion-principle"
                     >Dependency inversion principle</a
                   >
                 </li>
-                <li>
-                  <a href="/SOLID/index.html#Reference" target="SOLID"
-                    >Reference</a
-                  >
-                </li>
+                <li><a href="#Reference">Reference</a></li>
               </ol>
             </nav>
-            <article class="col-12 col-lg-9 order-lg-1">
-              <iframe
-                name="SOLID"
-                title="SOLID"
-                src="/SOLID/index.html"
-                width="100%"
-                height="0px"
-              ></iframe>
+            <article class="Post_content__QBxez col-12 order-lg-1 col-lg-9">
+              <p>
+                In object-oriented computer programming, SOLID is acronym and
+                stands for a set of five design principles documented by Robert
+                C. Martin. Keep your code in line with SOLID make software
+                designs more clear, and you&#x27;re much more likely to end up
+                with a modular flexible and maintainable. SOLID also mesh well
+                with testability.
+              </p>
+              <h2 id="Single-Responsibility-Principle">
+                Single Responsibility Principle<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Single-Responsibility-Principle"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <p>
+                It states that there should never be more than one reason for a
+                class to change. Every module, class, or function should have
+                responsibility over a single part of the functionality provided
+                by the software, and will have only one reason for modification.
+                Writing test for code that follows the SRP is essentially
+                expressing our understanding of the problem and specifying the
+                expected behavior. We can test the class independently. When we
+                add some more functionality, the old tests shouldn&#x27;t fail.
+              </p>
+              <h2 id="OpenClosed-Principle">
+                Open–Closed Principle<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#OpenClosed-Principle"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <p>
+                The open/closed principle states software entities (classes,
+                modules, functions, etc.) should be open for extension, but
+                closed for modification. This can be achieved by abstraction,
+                polymorphism and several design patterns e.g. strategy,
+                composite, decorator, factory method. Classes that delegate
+                specific responsibilities to other objects allow tests to
+                substitute a test double when needed to simulate a specific
+                scenario.
+              </p>
+              <p>
+                <img
+                  alt="Strategy Pattern"
+                  loading="lazy"
+                  width="720"
+                  height="268"
+                  decoding="async"
+                  data-nimg="1"
+                  style="color: transparent"
+                  src="/_next/static/media/strategy.3511deb0.png"
+                />
+              </p>
+              <h2 id="Liskov-Substitution-Principle">
+                Liskov Substitution Principle<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Liskov-Substitution-Principle"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <p>
+                It states that if S is a subtype of T, then objects of type T
+                may be replaced with objects of type S without altering any of
+                the desirable properties of the program. LSP emphasize the
+                hierarchies should exist for the right reason, embodying a valid
+                abstraction. Class hierarchies that follow the LSP enable the
+                use of contract tests, tests written for parent class/interface
+                can be executed against all derived/implementation.
+              </p>
+              <p>
+                <img
+                  alt="Liskov Substitution"
+                  loading="lazy"
+                  width="1264"
+                  height="807"
+                  decoding="async"
+                  data-nimg="1"
+                  style="color: transparent"
+                  src="/_next/static/media/liskov-substitution.a500a95d.png"
+                />
+              </p>
+              <h2 id="Interface-Segregation-Principle">
+                Interface Segregation Principle<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Interface-Segregation-Principle"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <p>
+                It states that no client should be forced to depend on methods
+                it does not use, we should split interfaces that are very large
+                into smaller and more specific ones so that clients will only
+                have to know about the methods that are of interest to them.
+                Small interfaces keep test simple for each interface, it also
+                improve testability by making it easier to write and use test
+                doubles.
+              </p>
+              <h2 id="Dependency-inversion-principle">
+                Dependency inversion principle<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Dependency-inversion-principle"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <p>
+                The dependency inversion principle says code should depend on
+                abstractions not on concretions, it suggests that a class
+                shouldn&#x27;t instantiate its own collaborators but rather have
+                their interfaces passed in. The dependency inversion principle
+                is a specific form of decoupling software modules. When
+                following this principle, the conventional dependency
+                relationships from high-level module to low-level module are
+                reversed, thus rendering high-level modules independent of the
+                low-level module implementation details. The principle states:
+              </p>
+              <ol>
+                <li>
+                  High-level modules should not depend on low-level modules.
+                  Both should depend on abstractions(interfaces).
+                </li>
+                <li>
+                  Abstractions should not depend on details. Details (classes)
+                  should depend on abstractions.
+                </li>
+              </ol>
+              <p>
+                The both high-level and low-level objects must depend on the
+                same abstraction. The interaction between a high level module
+                and a low-level one, the interaction should be thought of as an
+                abstract interaction between them.
+              </p>
+              <p>
+                The high-level class defines its own adapter interface which is
+                the abstraction that the other high-level classes depend on. The
+                adaptee implementation also depends on the adapter interface
+                abstraction while it can be implemented by using code from
+                within its own low-level module. The high-level has no
+                dependency on the low-level module since it only uses the
+                low-level indirectly through the adapter interface by invoking
+                polymorphic methods to the interface which are implemented by
+                the adaptee and its low-level module, for example
+                <strong>plugin</strong>.
+              </p>
+              <p>
+                For writing tests. the ability to pass collaborators in make
+                possible the injection of test double fairly easy.
+              </p>
+              <h2 id="Reference">
+                Reference<a aria-hidden="true" tabindex="-1" href="#Reference"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <ul>
+                <li>
+                  <a
+                    href="https://en.wikipedia.org/wiki/SOLID"
+                    rel="nofollow"
+                    target="_blank"
+                    >Wikipedia - SOLID</a
+                  >
+                </li>
+              </ul>
             </article>
           </div>
           <aside></aside>
@@ -407,10 +552,10 @@
               "isArchived": false,
               "title": "SOLID Design Principles",
               "date": "2021-01-10 17:14:33",
-              "isLegacy": true,
+              "isLegacy": false,
               "lang": "en",
-              "tocHtml": "\u003col\u003e\n\u003cli\u003e\u003ca href=\"/SOLID/index.html#Single-Responsibility-Principle\" target=\"SOLID\"\u003eSingle Responsibility Principle\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/SOLID/index.html#OpenClosed-Principle\" target=\"SOLID\"\u003eOpen–Closed Principle\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/SOLID/index.html#Liskov-Substitution-Principle\" target=\"SOLID\"\u003eLiskov Substitution Principle\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/SOLID/index.html#Interface-Segregation-Principle\" target=\"SOLID\"\u003eInterface Segregation Principle\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/SOLID/index.html#Dependency-inversion-principle\" target=\"SOLID\"\u003eDependency inversion principle\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/SOLID/index.html#Reference\" target=\"SOLID\"\u003eReference\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e",
-              "path": "/SOLID/index.html"
+              "tocHtml": "\u003col\u003e\n\u003cli\u003e\u003ca href=\"#Single-Responsibility-Principle\"\u003eSingle Responsibility Principle\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#OpenClosed-Principle\"\u003eOpen–Closed Principle\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Liskov-Substitution-Principle\"\u003eLiskov Substitution Principle\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Interface-Segregation-Principle\"\u003eInterface Segregation Principle\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Dependency-inversion-principle\"\u003eDependency inversion principle\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Reference\"\u003eReference\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e",
+              "articleHtml": "\u003cp\u003eIn object-oriented computer programming, SOLID is acronym and stands for a set of five design principles documented by Robert C. Martin. Keep your code in line with SOLID make software designs more clear, and you\u0026#x27;re much more likely to end up with a modular flexible and maintainable. SOLID also mesh well with testability.\u003c/p\u003e\n\u003ch2 id=\"Single-Responsibility-Principle\"\u003eSingle Responsibility Principle\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Single-Responsibility-Principle\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003eIt states that there should never be more than one\nreason for a class to change. Every module, class, or function should have responsibility over a single part of the functionality provided by the software, and will have only one reason for modification. Writing test for code that follows the SRP is essentially expressing our understanding of the problem and specifying the expected behavior. We can test the class independently. When we add some more functionality, the old tests shouldn\u0026#x27;t fail.\u003c/p\u003e\n\u003ch2 id=\"OpenClosed-Principle\"\u003eOpen–Closed Principle\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#OpenClosed-Principle\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003eThe open/closed principle states software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification. This can be achieved by abstraction, polymorphism and several design patterns e.g. strategy, composite, decorator, factory method. Classes that delegate specific responsibilities to other objects allow tests to substitute a test double when needed to simulate a specific scenario.\u003c/p\u003e\n\u003cp\u003e\u003cimg alt=\"Strategy Pattern\" loading=\"lazy\" width=\"720\" height=\"268\" decoding=\"async\" data-nimg=\"1\" style=\"color:transparent\" src=\"/_next/static/media/strategy.3511deb0.png\"/\u003e\u003c/p\u003e\n\u003ch2 id=\"Liskov-Substitution-Principle\"\u003eLiskov Substitution Principle\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Liskov-Substitution-Principle\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003eIt states that if S is a subtype of T, then objects of type T may be replaced with objects of type S without altering any of the desirable properties of the program. LSP emphasize the hierarchies should exist for the right reason, embodying a valid abstraction. Class hierarchies that follow the LSP enable the use of contract tests, tests written for parent class/interface can be executed against all derived/implementation.\u003c/p\u003e\n\u003cp\u003e\u003cimg alt=\"Liskov Substitution\" loading=\"lazy\" width=\"1264\" height=\"807\" decoding=\"async\" data-nimg=\"1\" style=\"color:transparent\" src=\"/_next/static/media/liskov-substitution.a500a95d.png\"/\u003e\u003c/p\u003e\n\u003ch2 id=\"Interface-Segregation-Principle\"\u003eInterface Segregation Principle\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Interface-Segregation-Principle\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003eIt states that no client should be forced to depend on methods it does not use, we should split interfaces that are very large into smaller and more specific ones so that clients will only have to know about the methods that are of interest to them. Small interfaces keep test simple for each interface, it also improve testability by making it easier to write and use test doubles.\u003c/p\u003e\n\u003ch2 id=\"Dependency-inversion-principle\"\u003eDependency inversion principle\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Dependency-inversion-principle\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003eThe dependency inversion principle says code should depend on abstractions not on concretions, it suggests that a class shouldn\u0026#x27;t instantiate its own collaborators but rather have their interfaces passed in. The dependency inversion principle is a specific form of decoupling software modules. When following this principle, the conventional dependency relationships from high-level module to low-level module are reversed, thus rendering high-level modules independent of the low-level module implementation details. The principle states:\u003c/p\u003e\n\u003col\u003e\n\u003cli\u003eHigh-level modules should not depend on low-level modules. Both should depend on abstractions(interfaces).\u003c/li\u003e\n\u003cli\u003eAbstractions should not depend on details. Details (classes) should depend on abstractions.\u003c/li\u003e\n\u003c/ol\u003e\n\u003cp\u003eThe both high-level and low-level objects must depend on the same abstraction. The interaction between a high level module and a low-level one, the interaction should be thought of as an abstract interaction between them.\u003c/p\u003e\n\u003cp\u003eThe high-level class defines its own adapter interface which is the abstraction that the other high-level classes depend on. The adaptee implementation also depends on the adapter interface abstraction while it can be implemented by using code from within its own low-level module. The high-level has no dependency on the low-level module since it only uses the low-level indirectly through the adapter interface by invoking polymorphic methods to the interface which are implemented by the adaptee and its low-level module, for example \u003cstrong\u003eplugin\u003c/strong\u003e.\u003c/p\u003e\n\u003cp\u003eFor writing tests. the ability to pass collaborators in make possible the injection of test double fairly easy.\u003c/p\u003e\n\u003ch2 id=\"Reference\"\u003eReference\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Reference\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href=\"https://en.wikipedia.org/wiki/SOLID\" rel=\"nofollow\" target=\"_blank\"\u003eWikipedia - SOLID\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e"
             },
             "lang": "en",
             "_nextI18Next": {

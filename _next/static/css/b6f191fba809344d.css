@@ -107,6 +107,7 @@
   width: auto;
   white-space: pre;
   word-wrap: normal;
+  padding: 0 !important;
 }
 .Post_content__QBxez table {
   table-layout: fixed;
