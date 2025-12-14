@@ -2,15 +2,15 @@
   "pageProps": {
     "postData": {
       "slug": "Install-Windows-Sandbox-Win10Home",
-      "tags": ["Hacker"],
+      "tags": ["Workspace Setup"],
       "isDraft": false,
-      "isArchived": false,
+      "isArchived": true,
       "title": "Install Windows Sandbox in Windoes 10 Home Edition",
       "date": "2019-11-16 15:07:28",
-      "isLegacy": true,
+      "isLegacy": false,
       "lang": "en",
       "tocHtml": "",
-      "path": "/Install-Windows-Sandbox-Win10Home/index.html"
+      "articleHtml": "<p>save the following command as bat file and then execute</p>\n<pre><code>@echo off\n\necho Checking for permissions\n&gt;nul 2&gt;&amp;1 &quot;%SYSTEMROOT%\\system32\\cacls.exe&quot; &quot;%SYSTEMROOT%\\system32\\config\\system&quot;\n\necho Permission check result: %errorlevel%\n\nREM --&gt; If error flag set, we do not have admin.\nif &#x27;%errorlevel%&#x27; NEQ &#x27;0&#x27; (\necho Requesting administrative privileges...\ngoto UACPrompt\n) else ( goto gotAdmin )\n\n:UACPrompt\necho Set UAC = CreateObject^(&quot;Shell.Application&quot;^) &gt; &quot;%temp%\\getadmin.vbs&quot;\necho UAC.ShellExecute &quot;%~s0&quot;, &quot;&quot;, &quot;&quot;, &quot;runas&quot;, 1 &gt;&gt; &quot;%temp%\\getadmin.vbs&quot;\n\necho Running created temporary &quot;%temp%\\getadmin.vbs&quot;\ntimeout /T 2\n&quot;%temp%\\getadmin.vbs&quot;\nexit /B\n\n:gotAdmin\nif exist &quot;%temp%\\getadmin.vbs&quot; ( del &quot;%temp%\\getadmin.vbs&quot; )\npushd &quot;%CD%&quot;\nCD /D &quot;%~dp0&quot; \n\necho Batch was successfully started with admin privileges\necho .\ncls\nTitle Sandbox Installer\n\npushd &quot;%~dp0&quot;\n\ndir /b %SystemRoot%\\servicing\\Packages\\*Containers*.mum &gt;sandbox.txt\n\nfor /f %%i in (&#x27;findstr /i . sandbox.txt 2^&gt;nul&#x27;) do dism /online /norestart /add-package:&quot;%SystemRoot%\\servicing\\Packages\\%%i&quot;\n\ndel sandbox.txt\n\nDism /online /enable-feature /featurename:Containers-DisposableClientVM /LimitAccess /ALL\n\npause\n</code></pre>"
     },
     "lang": "en",
     "_nextI18Next": {

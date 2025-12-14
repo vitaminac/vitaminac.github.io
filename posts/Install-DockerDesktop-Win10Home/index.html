@@ -12,7 +12,7 @@
       content="Install Docker Desktop in Windows10 Home Edition"
     />
     <meta name="author" content="Gao" />
-    <meta name="keywords" content="Docker,Hacker" />
+    <meta name="keywords" content="Docker,Workspace Setup" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="next-head-count" content="10" />
     <link
@@ -184,8 +184,8 @@
               <li class="tw-inline tw-px-1">
                 <a
                   class="tw-m-0.5 tw-inline-block tw-rounded tw-border tw-border-solid tw-border-white tw-bg-neutral-300 tw-px-2 tw-text-sm tw-leading-6 tw-text-white tw-no-underline hover:tw-bg-sky-300"
-                  href="/posts/langs/en/tags/Hacker/"
-                  >Hacker</a
+                  href="/posts/langs/en/tags/Workspace%20Setup/"
+                  >Workspace Setup</a
                 >
               </li>
             </ul>
@@ -196,46 +196,104 @@
             <nav class="Post_toc__TAzIW col-12 col-lg-3 order-lg-2">
               <ol>
                 <li>
-                  <a
-                    href="/Install-DockerDesktop-Win10Home/index.html#Install-Docker-Desktop-in-Windows10-Home-Edition"
-                    target="Install-DockerDesktop-Win10Home"
+                  <a href="#Install-Docker-Desktop-in-Windows10-Home-Edition"
                     >Install Docker Desktop in Windows10 Home Edition</a
                   >
                   <ol>
+                    <li><a href="#Activate-Hyper-V">Activate Hyper-V</a></li>
                     <li>
                       <a
-                        href="/Install-DockerDesktop-Win10Home/index.html#Activate-Hyper-V"
-                        target="Install-DockerDesktop-Win10Home"
-                        >Activate Hyper-V</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="/Install-DockerDesktop-Win10Home/index.html#Fake-as-a-professional-version-to-bypass-installation-detection"
-                        target="Install-DockerDesktop-Win10Home"
+                        href="#Fake-as-a-professional-version-to-bypass-installation-detection"
                         >Fake as a professional version to bypass installation
                         detection</a
                       >
                     </li>
-                    <li>
-                      <a
-                        href="/Install-DockerDesktop-Win10Home/index.html#Other-issues"
-                        target="Install-DockerDesktop-Win10Home"
-                        >Other issues</a
-                      >
-                    </li>
+                    <li><a href="#Other-issues">Other issues</a></li>
                   </ol>
                 </li>
               </ol>
             </nav>
-            <article class="col-12 col-lg-9 order-lg-1">
-              <iframe
-                name="Install-DockerDesktop-Win10Home"
-                title="Install-DockerDesktop-Win10Home"
-                src="/Install-DockerDesktop-Win10Home/index.html"
-                width="100%"
-                height="0px"
-              ></iframe>
+            <article class="Post_content__QBxez col-12 order-lg-1 col-lg-9">
+              <h1 id="Install-Docker-Desktop-in-Windows10-Home-Edition">
+                Install Docker Desktop in Windows10 Home Edition<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Install-Docker-Desktop-in-Windows10-Home-Edition"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h1>
+              <p>
+                Most laptop are now pre-installed with Windows 10 Home Edition,
+                while the Home Edition does not support Hyper-V. Docker Desktop
+                cannot be installed directly. But in fact, the home version can
+                activate Hyper-V by script to install Docker Desktop.
+                Here&#x27;s how to do it.
+              </p>
+              <h2 id="Activate-Hyper-V">
+                Activate Hyper-V<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Activate-Hyper-V"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <p>
+                The method is very simple, save the following as a .cmd file,
+                then open the file as an administrator. Prompt to restart, and
+                then you can use the full-featured Hyper-V after the restart.
+              </p>
+              <pre><code>pushd &quot;%~dp0&quot;
+
+dir /b %SystemRoot%\servicing\Packages\*Hyper-V*.mum &gt;hyper-v.txt
+
+for /f %%i in (&#x27;findstr /i . hyper-v.txt 2^&gt;nul&#x27;) do dism /online /norestart /add-package:&quot;%SystemRoot%\servicing\Packages\%%i&quot;
+
+del hyper-v.txt
+
+Dism /online /enable-feature /featurename:Microsoft-Hyper-V-All /LimitAccess /ALL
+</code></pre>
+              <h2
+                id="Fake-as-a-professional-version-to-bypass-installation-detection"
+              >
+                Fake as a professional version to bypass installation
+                detection<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Fake-as-a-professional-version-to-bypass-installation-detection"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <p>
+                Since Docker Desktop will detect the system version at the time
+                of installation, direct installation will show that the
+                installation failed. So you need to change the registry to
+                bypass the installation detection. Execute the following
+                command.
+              </p>
+              <pre><code>REG ADD &quot;HKEY_LOCAL_MACHINE\software\Microsoft\Windows NT\CurrentVersion&quot; /v EditionId /T REG_EXPAND_SZ /d Professional /F
+</code></pre>
+              <h2 id="Other-issues">
+                Other issues<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Other-issues"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <p>
+                Install the
+                <a
+                  href="https://docs.docker.com/docker-for-windows/install/"
+                  rel="nofollow"
+                  target="_blank"
+                  >docker-ce-desktop-windows</a
+                >
+                directly on the official website, and uncheck the window
+                container during installation. After testing, the linux
+                container is running normally. Switching to the windows
+                container will detect the windows version and will not start.
+                However, the windows container is generally not used.
+              </p>
             </article>
           </div>
           <aside></aside>
@@ -366,15 +424,15 @@
           "pageProps": {
             "postData": {
               "slug": "Install-DockerDesktop-Win10Home",
-              "tags": ["Docker", "Hacker"],
+              "tags": ["Docker", "Workspace Setup"],
               "isDraft": false,
-              "isArchived": false,
+              "isArchived": true,
               "title": "Install Docker Desktop in Windows10 Home Edition",
               "date": "2019-11-02 21:11:31",
-              "isLegacy": true,
+              "isLegacy": false,
               "lang": "en",
-              "tocHtml": "\u003col\u003e\n\u003cli\u003e\u003ca href=\"/Install-DockerDesktop-Win10Home/index.html#Install-Docker-Desktop-in-Windows10-Home-Edition\" target=\"Install-DockerDesktop-Win10Home\"\u003eInstall Docker Desktop in Windows10 Home Edition\u003c/a\u003e\n\u003col\u003e\n\u003cli\u003e\u003ca href=\"/Install-DockerDesktop-Win10Home/index.html#Activate-Hyper-V\" target=\"Install-DockerDesktop-Win10Home\"\u003eActivate Hyper-V\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Install-DockerDesktop-Win10Home/index.html#Fake-as-a-professional-version-to-bypass-installation-detection\" target=\"Install-DockerDesktop-Win10Home\"\u003eFake as a professional version to bypass installation detection\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Install-DockerDesktop-Win10Home/index.html#Other-issues\" target=\"Install-DockerDesktop-Win10Home\"\u003eOther issues\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003c/ol\u003e",
-              "path": "/Install-DockerDesktop-Win10Home/index.html"
+              "tocHtml": "\u003col\u003e\n\u003cli\u003e\u003ca href=\"#Install-Docker-Desktop-in-Windows10-Home-Edition\"\u003eInstall Docker Desktop in Windows10 Home Edition\u003c/a\u003e\n\u003col\u003e\n\u003cli\u003e\u003ca href=\"#Activate-Hyper-V\"\u003eActivate Hyper-V\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Fake-as-a-professional-version-to-bypass-installation-detection\"\u003eFake as a professional version to bypass installation detection\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Other-issues\"\u003eOther issues\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003c/ol\u003e",
+              "articleHtml": "\u003ch1 id=\"Install-Docker-Desktop-in-Windows10-Home-Edition\"\u003eInstall Docker Desktop in Windows10 Home Edition\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Install-Docker-Desktop-in-Windows10-Home-Edition\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h1\u003e\n\u003cp\u003eMost laptop are now pre-installed with Windows 10 Home Edition, while the Home Edition does not support Hyper-V. Docker Desktop cannot be installed directly. But in fact, the home version can activate Hyper-V by script to install Docker Desktop. Here\u0026#x27;s how to do it.\u003c/p\u003e\n\u003ch2 id=\"Activate-Hyper-V\"\u003eActivate Hyper-V\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Activate-Hyper-V\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003eThe method is very simple, save the following as a .cmd file, then open the file as an administrator. Prompt to restart, and then you can use the full-featured Hyper-V after the restart.\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003epushd \u0026quot;%~dp0\u0026quot;\n\ndir /b %SystemRoot%\\servicing\\Packages\\*Hyper-V*.mum \u0026gt;hyper-v.txt\n\nfor /f %%i in (\u0026#x27;findstr /i . hyper-v.txt 2^\u0026gt;nul\u0026#x27;) do dism /online /norestart /add-package:\u0026quot;%SystemRoot%\\servicing\\Packages\\%%i\u0026quot;\n\ndel hyper-v.txt\n\nDism /online /enable-feature /featurename:Microsoft-Hyper-V-All /LimitAccess /ALL\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch2 id=\"Fake-as-a-professional-version-to-bypass-installation-detection\"\u003eFake as a professional version to bypass installation detection\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Fake-as-a-professional-version-to-bypass-installation-detection\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003eSince Docker Desktop will detect the system version at the time of installation, direct installation will show that the installation failed. So you need to change the registry to bypass the installation detection. Execute the following command.\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003eREG ADD \u0026quot;HKEY_LOCAL_MACHINE\\software\\Microsoft\\Windows NT\\CurrentVersion\u0026quot; /v EditionId /T REG_EXPAND_SZ /d Professional /F\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch2 id=\"Other-issues\"\u003eOther issues\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Other-issues\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003eInstall the \u003ca href=\"https://docs.docker.com/docker-for-windows/install/\" rel=\"nofollow\" target=\"_blank\"\u003edocker-ce-desktop-windows\u003c/a\u003e directly on the official website, and uncheck the window container during installation. After testing, the linux container is running normally. Switching to the windows container will detect the windows version and will not start. However, the windows container is generally not used.\u003c/p\u003e"
             },
             "lang": "en",
             "_nextI18Next": {
