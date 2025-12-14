@@ -11,7 +11,8 @@
         "MacOS",
         "DNS",
         "SMB",
-        "rclone"
+        "rclone",
+        "Workspace Setup"
       ],
       "isDraft": false,
       "isArchived": true,

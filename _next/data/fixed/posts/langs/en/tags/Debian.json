@@ -14,6 +14,12 @@
         "title": "Minimalist Linux Workspace",
         "date": "2025-07-30 00:51:57",
         "content": "Download Image  Download Debian image, let we choose the net-install ISO since we don't need any heavy desktop enviroment e.g. KDE, GNOME, etc... . ..."
+      },
+      {
+        "slug": "WSL",
+        "title": "WSL2 Workspace Setup for Windows",
+        "date": "2025-07-29 23:29:05",
+        "content": "Install WSL on Windows  Following this instruction to install WSL2  wsl --install   Install one of the supported Linux distributions  wsl --install..."
       }
     ],
     "_nextI18Next": {

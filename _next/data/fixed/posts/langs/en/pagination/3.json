@@ -3,6 +3,12 @@
     "lang": "en",
     "previews": [
       {
+        "slug": "eventual-consistency",
+        "title": "Eventual Consistency",
+        "date": "2021-06-01 10:32:46",
+        "content": "Eventual consistency is a weak consistency model that ensures all replicas of a distributed system converge to identical states in the absence of..."
+      },
+      {
         "slug": "base",
         "title": "BASE",
         "date": "2021-06-01 10:32:46",
@@ -55,12 +61,6 @@
         "title": "Test Case Design Techniques",
         "date": "2020-11-24 12:56:14",
         "content": "| Approach/Implementation | White Box | Black Box | | | |-------------------------|---------------------------|-------------------|---|---| |..."
-      },
-      {
-        "slug": "Simple-Bootstrap-Linux-System",
-        "title": "Build Simple Bootstrap Linux System Image",
-        "date": "2020-11-08 19:15:57",
-        "content": "Kernel Image for Emulation  We will create a tiny Linux system with absolute minimum additional software. We reuse host kernel image vmlinuz to..."
       }
     ],
     "prevPageUrl": "/posts/langs/en/pagination/2",

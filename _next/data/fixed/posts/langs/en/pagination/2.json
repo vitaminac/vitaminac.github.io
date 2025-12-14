@@ -3,6 +3,12 @@
     "lang": "en",
     "previews": [
       {
+        "slug": "flash-crDroid-redmi-note-7",
+        "title": "Flash crDroid ROM for Redmi Note 7",
+        "date": "2024-05-25 18:11:53",
+        "content": "You need to have a Xiaomi account that has been given permission for unlocking device. Download MiFlash from https://www.miui.com/unlock/index.html..."
+      },
+      {
         "slug": "probability",
         "title": "Probability",
         "date": "2024-04-14 13:15:47",
@@ -55,12 +61,6 @@
         "title": "CAP Theorem",
         "date": "2021-06-07 13:57:06",
         "content": "The CAP theorem, also named as Brewer's theorem states that it is impossible for a distributed data store to simultaneously provide more than two out..."
-      },
-      {
-        "slug": "eventual-consistency",
-        "title": "Eventual Consistency",
-        "date": "2021-06-01 10:32:46",
-        "content": "Eventual consistency is a weak consistency model that ensures all replicas of a distributed system converge to identical states in the absence of..."
       }
     ],
     "prevPageUrl": "/posts/langs/en/pagination/1",
