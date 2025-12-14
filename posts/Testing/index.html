@@ -223,66 +223,245 @@
           <div class="row">
             <nav class="Post_toc__TAzIW col-12 col-lg-3 order-lg-2">
               <ol>
-                <li>
-                  <a href="/Testing/index.html#Testing" target="Testing"
-                    >Testing</a
-                  >
-                  <ol>
-                    <li>
-                      <a href="/Testing/index.html#Unit-Test" target="Testing"
-                        >Unit Test</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="/Testing/index.html#Integration-Test"
-                        target="Testing"
-                        >Integration Test</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="/Testing/index.html#Contract-Test"
-                        target="Testing"
-                        >Contract Test</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="/Testing/index.html#End-to-End-Test"
-                        target="Testing"
-                        >End-to-End Test</a
-                      >
-                    </li>
-                    <li>
-                      <a href="/Testing/index.html#Load-Test" target="Testing"
-                        >Load Test</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="/Testing/index.html#Snapshot-Test"
-                        target="Testing"
-                        >Snapshot Test</a
-                      >
-                    </li>
-                    <li>
-                      <a href="/Testing/index.html#Reference" target="Testing"
-                        >Reference</a
-                      >
-                    </li>
-                  </ol>
-                </li>
+                <li><a href="#Unit-Test">Unit Test</a></li>
+                <li><a href="#Integration-Test">Integration Test</a></li>
+                <li><a href="#Contract-Test">Contract Test</a></li>
+                <li><a href="#End-to-End-Test">End-to-End Test</a></li>
+                <li><a href="#Load-Test">Load Test</a></li>
+                <li><a href="#Snapshot-Test">Snapshot Test</a></li>
+                <li><a href="#Reference">Reference</a></li>
               </ol>
             </nav>
-            <article class="col-12 col-lg-9 order-lg-1">
-              <iframe
-                name="Testing"
-                title="Testing"
-                src="/Testing/index.html"
-                width="100%"
-                height="0px"
-              ></iframe>
+            <article class="Post_content__QBxez col-12 order-lg-1 col-lg-9">
+              <h1 id="Unit-Test">
+                Unit Test<a aria-hidden="true" tabindex="-1" href="#Unit-Test"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h1>
+              <p>
+                The purpose of unit test is to validate that each unit of the
+                software code performs as expected. A unit may be an individual
+                function, method, procedure, module, or object. Unit testing is
+                done during the development of an application by the developers.
+                If proper unit testing is done in early development, then it
+                saves time and money in the maintenance phase.
+              </p>
+              <p>
+                <img
+                  alt="Unit Test"
+                  loading="lazy"
+                  width="553"
+                  height="495"
+                  decoding="async"
+                  data-nimg="1"
+                  style="color: transparent"
+                  src="/_next/static/media/unit-testing.d88f9a59.png"
+                />
+              </p>
+              <h1 id="Integration-Test">
+                Integration Test<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Integration-Test"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h1>
+              <p>
+                Integration tests determine if independently developed units of
+                software work correctly when they are connected to each other.
+                It was performed by activating many modules and running higher
+                level tests against all of them to ensure they operated
+                together.
+              </p>
+              <p>
+                <img
+                  alt="Integration Test"
+                  loading="lazy"
+                  width="1111"
+                  height="555"
+                  decoding="async"
+                  data-nimg="1"
+                  style="color: transparent"
+                  src="/_next/static/media/integration-test.58302089.png"
+                />
+              </p>
+              <h1 id="Contract-Test">
+                Contract Test<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Contract-Test"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h1>
+              <p>
+                One of the most common cases of using a test double is when you
+                are communicating with an external service. Typically, such
+                services are being maintained by a different team, they may be
+                subject to slow, and unreliable networks, and maybe unreliable
+                themselves. The test double is indeed not an accurate
+                representation of the external service, e.g. what happens if the
+                external service changes its contract?
+              </p>
+              <p>
+                <img
+                  alt="Contract Test"
+                  loading="lazy"
+                  width="478"
+                  height="263"
+                  decoding="async"
+                  data-nimg="1"
+                  style="color: transparent"
+                  src="/_next/static/media/contract-test.94e48969.png"
+                />
+              </p>
+              <p>
+                A contract change may break a production application, triggering
+                an emergency fix and an urgent conversation with the supplier
+                team. A good way to deal with this is to continue to run your
+                own tests against the double, but in addition to periodically
+                run a separate set of contract tests. These check that all the
+                calls against your test doubles return the same results as a
+                call to the external service would. A failure in any of these
+                contract tests implies you need to update your test doubles, and
+                probably your code to take into account the service contract
+                change.
+              </p>
+              <h1 id="End-to-End-Test">
+                End-to-End Test<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#End-to-End-Test"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h1>
+              <p>
+                E2E tests are smoke test with a very limited range of paths
+                tested that validates entire software from starting to the end
+                along with its integration with external services.
+              </p>
+              <h1 id="Load-Test">
+                Load Test<a aria-hidden="true" tabindex="-1" href="#Load-Test"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h1>
+              <p>
+                Load Test is a non-functional software test in which the
+                performance of software application is tested under a specific
+                expected load. It determines how the software application
+                behaves while being accessed by multiple users simultaneously.
+                The goal of Load Testing is to improve performance bottlenecks
+                and to ensure stability and smooth functioning of software
+                application before deployment.
+              </p>
+              <h1 id="Snapshot-Test">
+                Snapshot Test<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Snapshot-Test"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h1>
+              <p>
+                Snapshot tests ensure your serializable output (e.g. React tree)
+                does not change unexpectedly. On test runs, we will compare the
+                output with the previous snapshot, the test will fail if they do
+                not match: either the change is unexpected, or the snapshot
+                needs to be updated because of the new version of the code.
+              </p>
+              <p>
+                Snapshots identify unexpected interface changes within your
+                application – whether that interface is an API response, UI,
+                logs, or error messages.
+              </p>
+              <ul>
+                <li>
+                  False positive/false negative result in CI: The snapshot
+                  should be committed alongside code changes, so CI will run the
+                  test with update to date snapshots, and it should be reviewed
+                  as part of your code review process. It can also provide a lot
+                  of additional context during code review in which reviewers
+                  can study your changes better.
+                </li>
+                <li>
+                  Snapshots take a lot of time to review: We should ensure our
+                  snapshots are readable by keeping them focused, short.
+                </li>
+                <li>
+                  Snapshot tests fail unexpectedly: Tests should be
+                  deterministic, running the same tests multiple times on a
+                  component that has not changed should produce the same results
+                  every time.
+                </li>
+                <li>
+                  Meaning of each snapshot: Give descriptive names for each
+                  snapshot. This makes it easier for reviewers to verify the
+                  snapshots during the code review.
+                </li>
+                <li>
+                  Lot of unit tests: The aim of snapshot testing is not to
+                  replace existing unit tests, but in some scenarios, snapshot
+                  testing can potentially remove the need for unit testing for a
+                  particular set of functionalities (e.g. rendering of React
+                  components).
+                </li>
+              </ul>
+              <h1 id="Reference">
+                Reference<a aria-hidden="true" tabindex="-1" href="#Reference"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h1>
+              <ul>
+                <li>
+                  <a
+                    href="https://martinfowler.com/bliki/IntegrationTest.html"
+                    rel="nofollow"
+                    target="_blank"
+                    >IntegrationTest</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://martinfowler.com/bliki/ContractTest.html"
+                    rel="nofollow"
+                    target="_blank"
+                    >ContractTest</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.guru99.com/unit-testing-guide.html"
+                    rel="nofollow"
+                    target="_blank"
+                    >Unit Testing Tutorial: What is, Types, Tools &amp; Test
+                    EXAMPLE</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.guru99.com/end-to-end-testing.html"
+                    rel="nofollow"
+                    target="_blank"
+                    >END-To-END Testing Tutorial: What is E2E Testing with
+                    Example</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.guru99.com/load-testing-tutorial.html"
+                    rel="nofollow"
+                    target="_blank"
+                    >Load Testing Tutorial: What is? How to? (with Examples)</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://jestjs.io/docs/snapshot-testing"
+                    rel="nofollow"
+                    target="_blank"
+                    >Snapshot Testing</a
+                  >
+                </li>
+              </ul>
             </article>
           </div>
           <aside></aside>
@@ -425,10 +604,10 @@
               "isArchived": false,
               "title": "Testing",
               "date": "2021-04-24 11:27:04",
-              "isLegacy": true,
+              "isLegacy": false,
               "lang": "en",
-              "tocHtml": "\u003col\u003e\n\u003cli\u003e\u003ca href=\"/Testing/index.html#Testing\" target=\"Testing\"\u003eTesting\u003c/a\u003e\n\u003col\u003e\n\u003cli\u003e\u003ca href=\"/Testing/index.html#Unit-Test\" target=\"Testing\"\u003eUnit Test\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Testing/index.html#Integration-Test\" target=\"Testing\"\u003eIntegration Test\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Testing/index.html#Contract-Test\" target=\"Testing\"\u003eContract Test\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Testing/index.html#End-to-End-Test\" target=\"Testing\"\u003eEnd-to-End Test\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Testing/index.html#Load-Test\" target=\"Testing\"\u003eLoad Test\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Testing/index.html#Snapshot-Test\" target=\"Testing\"\u003eSnapshot Test\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"/Testing/index.html#Reference\" target=\"Testing\"\u003eReference\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003c/ol\u003e",
-              "path": "/Testing/index.html"
+              "tocHtml": "\u003col\u003e\n\u003cli\u003e\u003ca href=\"#Unit-Test\"\u003eUnit Test\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Integration-Test\"\u003eIntegration Test\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Contract-Test\"\u003eContract Test\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#End-to-End-Test\"\u003eEnd-to-End Test\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Load-Test\"\u003eLoad Test\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Snapshot-Test\"\u003eSnapshot Test\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Reference\"\u003eReference\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e",
+              "articleHtml": "\u003ch1 id=\"Unit-Test\"\u003eUnit Test\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Unit-Test\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h1\u003e\n\u003cp\u003eThe purpose of unit test is to validate that each unit of the software code performs as expected. A unit may be an individual function, method, procedure, module, or object. Unit testing is done during the development of an application by the developers. If proper unit testing is done in early development, then it saves time and money in the maintenance phase.\u003c/p\u003e\n\u003cp\u003e\u003cimg alt=\"Unit Test\" loading=\"lazy\" width=\"553\" height=\"495\" decoding=\"async\" data-nimg=\"1\" style=\"color:transparent\" src=\"/_next/static/media/unit-testing.d88f9a59.png\"/\u003e\u003c/p\u003e\n\u003ch1 id=\"Integration-Test\"\u003eIntegration Test\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Integration-Test\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h1\u003e\n\u003cp\u003eIntegration tests determine if independently developed units of software work correctly when they are connected to each other. It was performed by activating many modules and running higher level tests against all of them to ensure they operated together.\u003c/p\u003e\n\u003cp\u003e\u003cimg alt=\"Integration Test\" loading=\"lazy\" width=\"1111\" height=\"555\" decoding=\"async\" data-nimg=\"1\" style=\"color:transparent\" src=\"/_next/static/media/integration-test.58302089.png\"/\u003e\u003c/p\u003e\n\u003ch1 id=\"Contract-Test\"\u003eContract Test\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Contract-Test\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h1\u003e\n\u003cp\u003eOne of the most common cases of using a test double is when you are communicating with an external service. Typically, such services are being maintained by a different team, they may be subject to slow, and unreliable networks, and maybe unreliable themselves. The test double is indeed not an accurate representation of the external service, e.g. what happens if the external service changes its contract?\u003c/p\u003e\n\u003cp\u003e\u003cimg alt=\"Contract Test\" loading=\"lazy\" width=\"478\" height=\"263\" decoding=\"async\" data-nimg=\"1\" style=\"color:transparent\" src=\"/_next/static/media/contract-test.94e48969.png\"/\u003e\u003c/p\u003e\n\u003cp\u003eA contract change may break a production application, triggering an emergency fix and an urgent conversation with the supplier team. A good way to deal with this is to continue to run your own tests against the double, but in addition to periodically run a separate set of contract tests. These check that all the calls against your test doubles return the same results as a call to the external service would. A failure in any of these contract tests implies you need to update your test doubles, and probably your code to take into account the service contract change.\u003c/p\u003e\n\u003ch1 id=\"End-to-End-Test\"\u003eEnd-to-End Test\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#End-to-End-Test\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h1\u003e\n\u003cp\u003eE2E tests are smoke test with a very limited range of paths tested that validates entire software from starting to the end along with its integration with external services.\u003c/p\u003e\n\u003ch1 id=\"Load-Test\"\u003eLoad Test\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Load-Test\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h1\u003e\n\u003cp\u003eLoad Test is a non-functional software test in which the performance of software application is tested under a specific expected load. It determines how the software application behaves while being accessed by multiple users simultaneously. The goal of Load Testing is to improve performance bottlenecks and to ensure stability and smooth functioning of software application before deployment.\u003c/p\u003e\n\u003ch1 id=\"Snapshot-Test\"\u003eSnapshot Test\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Snapshot-Test\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h1\u003e\n\u003cp\u003eSnapshot tests ensure your serializable output (e.g. React tree) does not change unexpectedly. On test runs, we will compare the output with the previous snapshot, the test will fail if they do not match: either the change is unexpected, or the snapshot needs to be updated because of the new version of the code.\u003c/p\u003e\n\u003cp\u003eSnapshots identify unexpected interface changes within your application – whether that interface is an API response, UI, logs, or error messages.\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eFalse positive/false negative result in CI: The snapshot should be committed alongside code changes, so CI will run the test with update to date snapshots, and it should be reviewed as part of your code review process. It can also provide a lot of additional context during code review in which reviewers can study your changes better.\u003c/li\u003e\n\u003cli\u003eSnapshots take a lot of time to review: We should ensure our snapshots are readable by keeping them focused, short.\u003c/li\u003e\n\u003cli\u003eSnapshot tests fail unexpectedly: Tests should be deterministic, running the same tests multiple times on a component that has not changed should produce the same results every time.\u003c/li\u003e\n\u003cli\u003eMeaning of each snapshot: Give descriptive names for each snapshot. This makes it easier for reviewers to verify the snapshots during the code review.\u003c/li\u003e\n\u003cli\u003eLot of unit tests: The aim of snapshot testing is not to replace existing unit tests, but in some scenarios, snapshot testing can potentially remove the need for unit testing for a particular set of functionalities (e.g. rendering of React components).\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch1 id=\"Reference\"\u003eReference\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Reference\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h1\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href=\"https://martinfowler.com/bliki/IntegrationTest.html\" rel=\"nofollow\" target=\"_blank\"\u003eIntegrationTest\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://martinfowler.com/bliki/ContractTest.html\" rel=\"nofollow\" target=\"_blank\"\u003eContractTest\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://www.guru99.com/unit-testing-guide.html\" rel=\"nofollow\" target=\"_blank\"\u003eUnit Testing Tutorial: What is, Types, Tools \u0026amp; Test EXAMPLE\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://www.guru99.com/end-to-end-testing.html\" rel=\"nofollow\" target=\"_blank\"\u003eEND-To-END Testing Tutorial: What is E2E Testing with Example\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://www.guru99.com/load-testing-tutorial.html\" rel=\"nofollow\" target=\"_blank\"\u003eLoad Testing Tutorial: What is? How to? (with Examples)\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://jestjs.io/docs/snapshot-testing\" rel=\"nofollow\" target=\"_blank\"\u003eSnapshot Testing\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e"
             },
             "lang": "en",
             "_nextI18Next": {
