@@ -9,7 +9,7 @@
     <title>Flash crDroid ROM for Redmi Note 7</title>
     <meta name="og:title" content="Flash crDroid ROM for Redmi Note 7" />
     <meta name="author" content="Gao" />
-    <meta name="keywords" content="lavender,crDroid" />
+    <meta name="keywords" content="lavender,crDroid,Workspace Setup" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="next-head-count" content="10" />
     <link
@@ -185,6 +185,13 @@
                   >crDroid</a
                 >
               </li>
+              <li class="tw-inline tw-px-1">
+                <a
+                  class="tw-m-0.5 tw-inline-block tw-rounded tw-border tw-border-solid tw-border-white tw-bg-neutral-300 tw-px-2 tw-text-sm tw-leading-6 tw-text-white tw-no-underline hover:tw-bg-sky-300"
+                  href="/posts/langs/en/tags/Workspace%20Setup/"
+                  >Workspace Setup</a
+                >
+              </li>
             </ul>
           </section>
         </header>
@@ -192,23 +199,151 @@
           <div class="row">
             <nav class="Post_toc__TAzIW col-12 col-lg-3 order-lg-2">
               <ol>
+                <li><a href="#Reference">Reference</a></li>
+              </ol>
+            </nav>
+            <article class="Post_content__QBxez col-12 order-lg-1 col-lg-9">
+              <ol>
+                <li>
+                  You need to have a Xiaomi account that has been given
+                  permission for unlocking device.
+                </li>
+                <li>
+                  Download MiFlash from
+                  <a
+                    href="https://www.miui.com/unlock/index.html"
+                    rel="nofollow"
+                    target="_blank"
+                    >https://www.miui.com/unlock/index.html</a
+                  >
+                </li>
+                <li>
+                  Download the crDroid ROM for Redmi Note 7
+                  <a
+                    href="https://crdroid.net/lavender/9"
+                    rel="nofollow"
+                    target="_blank"
+                    >https://crdroid.net/lavender/9</a
+                  >
+                </li>
+                <li>Download firmware update from [1]</li>
+                <li>
+                  Download NikGapps from
+                  <a
+                    href="https://sourceforge.net/projects/nikgapps/files/Releases/NikGapps-T/"
+                    rel="nofollow"
+                    target="_blank"
+                    >https://sourceforge.net/projects/nikgapps/files/Releases/NikGapps-T/</a
+                  >. Core variant is enough.
+                </li>
+                <li>
+                  Download OrangeFox recovery for Redmi Note 7
+                  <a
+                    href="https://orangefox.download/en/device/lavender"
+                    rel="nofollow"
+                    target="_blank"
+                    >https://orangefox.download/en/device/lavender</a
+                  >
+                  <ul>
+                    <li>
+                      crDroid version 9.8 introduce dynamic partition. We need
+                      to use OrangeFox because is the one that support dynamic
+                      partition since
+                      <a
+                        href="https://orangefox.download/release/64e67545531cf4e269b8aaa3"
+                        rel="nofollow"
+                        target="_blank"
+                        >https://orangefox.download/release/64e67545531cf4e269b8aaa3</a
+                      >.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  Download Magisk from
+                  <a
+                    href="https://github.com/topjohnwu/Magisk/releases"
+                    rel="nofollow"
+                    target="_blank"
+                    >https://github.com/topjohnwu/Magisk/releases</a
+                  >
+                </li>
+                <li>
+                  Connect the phone to your laptop and open MiFlash to unlock
+                  your device following the instruction.
+                </li>
+                <li>Reboot into bootloader mode</li>
+                <li>
+                  Execute the command to detect your device
+                  <code>fastboot.exe devices</code>
+                </li>
+                <li>
+                  Flash OrangeFox recovery from bootloader with
+                  <code>fastboot.exe flash recovery recovery.img</code>
+                </li>
+                <li>
+                  Reboot into recovery mode <code>fastboot.exe reboot</code>
+                </li>
+                <li>Wipe Dalvik, cache, system, vendor from recovery</li>
+                <li>
+                  Copy the downloaded files to your phone in recovery mode
+                </li>
+                <li>Flash firmware update from recovery</li>
+                <li>Flash <code>crDroid</code> from recovery</li>
+                <li>Reboot into system once and reboot again into recovery</li>
+                <li>Flash <code>NikGapps</code> from recovery</li>
+                <li>Boot into system</li>
+                <li>Install <code>Magisk-XX.apk</code></li>
+                <li>
+                  Follow this instruction to complete
+                  <code>Magisk</code> installation
+                  <a
+                    href="https://topjohnwu.github.io/Magisk/install.html"
+                    rel="nofollow"
+                    target="_blank"
+                    >https://topjohnwu.github.io/Magisk/install.html</a
+                  >
+                </li>
+                <li>Install <code>F-Droid</code></li>
+                <li>
+                  Install <code>Aurora Store</code> from <code>F-Droid</code>
+                </li>
+                <li>Install <code>Gboard</code></li>
+                <li>
+                  Install <code>Chrome</code> from <code>Aurora Store</code>
+                </li>
+                <li>Install 腾讯应用宝 from <code>Chrome</code></li>
+              </ol>
+              <h1 id="Reference">
+                Reference<a aria-hidden="true" tabindex="-1" href="#Reference"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h1>
+              <ol>
                 <li>
                   <a
-                    href="/flash-crDroid-redmi-note-7/index.html#Reference"
-                    target="flash-crDroid-redmi-note-7"
-                    >Reference</a
+                    href="https://xdaforums.com/t/rom-13-0-official-lavender-crdroid-v9-10-28-10-2023.4638733/"
+                    rel="nofollow"
+                    target="_blank"
+                    >https://xdaforums.com/t/rom-13-0-official-lavender-crdroid-v9-10-28-10-2023.4638733/</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://xdaforums.com/t/closed-rom-13-0-official-lavender-crdroid-v9-8-14-08-2023.4523341/"
+                    rel="nofollow"
+                    target="_blank"
+                    >https://xdaforums.com/t/closed-rom-13-0-official-lavender-crdroid-v9-8-14-08-2023.4523341/</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://xdaforums.com/t/closed-rom-13-0-official-lavender-crdroid-v9-8-14-08-2023.4523341/page-4#post-88874307"
+                    rel="nofollow"
+                    target="_blank"
+                    >https://xdaforums.com/t/closed-rom-13-0-official-lavender-crdroid-v9-8-14-08-2023.4523341/page-4#post-88874307</a
                   >
                 </li>
               </ol>
-            </nav>
-            <article class="col-12 col-lg-9 order-lg-1">
-              <iframe
-                name="flash-crDroid-redmi-note-7"
-                title="flash-crDroid-redmi-note-7"
-                src="/flash-crDroid-redmi-note-7/index.html"
-                width="100%"
-                height="0px"
-              ></iframe>
             </article>
           </div>
           <aside></aside>
@@ -339,15 +474,15 @@
           "pageProps": {
             "postData": {
               "slug": "flash-crDroid-redmi-note-7",
-              "tags": ["lavender", "crDroid"],
+              "tags": ["lavender", "crDroid", "Workspace Setup"],
               "isDraft": false,
               "isArchived": false,
               "title": "Flash crDroid ROM for Redmi Note 7",
               "date": "2024-05-25 18:11:53",
-              "isLegacy": true,
+              "isLegacy": false,
               "lang": "en",
-              "tocHtml": "\u003col\u003e\n\u003cli\u003e\u003ca href=\"/flash-crDroid-redmi-note-7/index.html#Reference\" target=\"flash-crDroid-redmi-note-7\"\u003eReference\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e",
-              "path": "/flash-crDroid-redmi-note-7/index.html"
+              "tocHtml": "\u003col\u003e\n\u003cli\u003e\u003ca href=\"#Reference\"\u003eReference\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e",
+              "articleHtml": "\u003col\u003e\n\u003cli\u003eYou need to have a Xiaomi account that has been given permission for unlocking device.\u003c/li\u003e\n\u003cli\u003eDownload MiFlash from \u003ca href=\"https://www.miui.com/unlock/index.html\" rel=\"nofollow\" target=\"_blank\"\u003ehttps://www.miui.com/unlock/index.html\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003eDownload the crDroid ROM for Redmi Note 7 \u003ca href=\"https://crdroid.net/lavender/9\" rel=\"nofollow\" target=\"_blank\"\u003ehttps://crdroid.net/lavender/9\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003eDownload firmware update from [1]\u003c/li\u003e\n\u003cli\u003eDownload NikGapps from \u003ca href=\"https://sourceforge.net/projects/nikgapps/files/Releases/NikGapps-T/\" rel=\"nofollow\" target=\"_blank\"\u003ehttps://sourceforge.net/projects/nikgapps/files/Releases/NikGapps-T/\u003c/a\u003e. Core variant is enough.\u003c/li\u003e\n\u003cli\u003eDownload OrangeFox recovery for Redmi Note 7 \u003ca href=\"https://orangefox.download/en/device/lavender\" rel=\"nofollow\" target=\"_blank\"\u003ehttps://orangefox.download/en/device/lavender\u003c/a\u003e\n\u003cul\u003e\n\u003cli\u003ecrDroid version 9.8 introduce dynamic partition. We need to use OrangeFox because is the one that support dynamic partition since \u003ca href=\"https://orangefox.download/release/64e67545531cf4e269b8aaa3\" rel=\"nofollow\" target=\"_blank\"\u003ehttps://orangefox.download/release/64e67545531cf4e269b8aaa3\u003c/a\u003e.\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eDownload Magisk from \u003ca href=\"https://github.com/topjohnwu/Magisk/releases\" rel=\"nofollow\" target=\"_blank\"\u003ehttps://github.com/topjohnwu/Magisk/releases\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003eConnect the phone to your laptop and open MiFlash to unlock your device following the instruction.\u003c/li\u003e\n\u003cli\u003eReboot into bootloader mode\u003c/li\u003e\n\u003cli\u003eExecute the command to detect your device \u003ccode\u003efastboot.exe devices\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003eFlash OrangeFox recovery from bootloader with \u003ccode\u003efastboot.exe flash recovery recovery.img\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003eReboot into recovery mode \u003ccode\u003efastboot.exe reboot\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003eWipe Dalvik, cache, system, vendor from recovery\u003c/li\u003e\n\u003cli\u003eCopy the downloaded files to your phone in recovery mode\u003c/li\u003e\n\u003cli\u003eFlash firmware update from recovery\u003c/li\u003e\n\u003cli\u003eFlash \u003ccode\u003ecrDroid\u003c/code\u003e from recovery\u003c/li\u003e\n\u003cli\u003eReboot into system once and reboot again into recovery\u003c/li\u003e\n\u003cli\u003eFlash \u003ccode\u003eNikGapps\u003c/code\u003e from recovery\u003c/li\u003e\n\u003cli\u003eBoot into system\u003c/li\u003e\n\u003cli\u003eInstall \u003ccode\u003eMagisk-XX.apk\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003eFollow this instruction to complete \u003ccode\u003eMagisk\u003c/code\u003e installation \u003ca href=\"https://topjohnwu.github.io/Magisk/install.html\" rel=\"nofollow\" target=\"_blank\"\u003ehttps://topjohnwu.github.io/Magisk/install.html\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003eInstall \u003ccode\u003eF-Droid\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003eInstall \u003ccode\u003eAurora Store\u003c/code\u003e from \u003ccode\u003eF-Droid\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003eInstall \u003ccode\u003eGboard\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003eInstall \u003ccode\u003eChrome\u003c/code\u003e from \u003ccode\u003eAurora Store\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003eInstall 腾讯应用宝 from \u003ccode\u003eChrome\u003c/code\u003e\u003c/li\u003e\n\u003c/ol\u003e\n\u003ch1 id=\"Reference\"\u003eReference\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Reference\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h1\u003e\n\u003col\u003e\n\u003cli\u003e\u003ca href=\"https://xdaforums.com/t/rom-13-0-official-lavender-crdroid-v9-10-28-10-2023.4638733/\" rel=\"nofollow\" target=\"_blank\"\u003ehttps://xdaforums.com/t/rom-13-0-official-lavender-crdroid-v9-10-28-10-2023.4638733/\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://xdaforums.com/t/closed-rom-13-0-official-lavender-crdroid-v9-8-14-08-2023.4523341/\" rel=\"nofollow\" target=\"_blank\"\u003ehttps://xdaforums.com/t/closed-rom-13-0-official-lavender-crdroid-v9-8-14-08-2023.4523341/\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://xdaforums.com/t/closed-rom-13-0-official-lavender-crdroid-v9-8-14-08-2023.4523341/page-4#post-88874307\" rel=\"nofollow\" target=\"_blank\"\u003ehttps://xdaforums.com/t/closed-rom-13-0-official-lavender-crdroid-v9-8-14-08-2023.4523341/page-4#post-88874307\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e"
             },
             "lang": "en",
             "_nextI18Next": {

@@ -34,6 +34,12 @@
         "content": "Install WSL on Windows  Following this instruction to install WSL2  wsl --install   Install one of the supported Linux distributions  wsl --install..."
       },
       {
+        "slug": "flash-crDroid-redmi-note-7",
+        "title": "Flash crDroid ROM for Redmi Note 7",
+        "date": "2024-05-25 18:11:53",
+        "content": "You need to have a Xiaomi account that has been given permission for unlocking device. Download MiFlash from https://www.miui.com/unlock/index.html..."
+      },
+      {
         "slug": "Remote-Access-Via-TightVNC-To-Windows-Machine",
         "title": "Remote Access Via TightVNC To Windows Machine",
         "date": "2022-08-13 11:35:55",
