@@ -1,0 +1,37 @@
+{
+  "pageProps": {
+    "lang": "en",
+    "tag": "Android",
+    "previews": [
+      {
+        "slug": "flash-crDroid-redmi-note-7",
+        "title": "Flash crDroid ROM for Redmi Note 7",
+        "date": "2024-05-25 18:11:53",
+        "content": "You need to have a Xiaomi account that has been given permission for unlocking device. Download MiFlash from https://www.miui.com/unlock/index.html..."
+      }
+    ],
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          }
+        }
+      },
+      "initialLocale": "en",
+      "ns": ["navbar"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}
