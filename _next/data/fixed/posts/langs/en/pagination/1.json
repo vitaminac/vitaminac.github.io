@@ -15,6 +15,12 @@
         "content": "Download OpenWrt Firmware  Open https://openwrt.org/toh/d-link/dir-882_a1#installation and select Firmware Install. At this step we need to download..."
       },
       {
+        "slug": "mac-mini",
+        "title": "Mac Mini Is All You Need",
+        "date": "2025-11-23 17:40:37",
+        "content": "Because of ultra-low power consumption, easy to use interface, nearly silent working, Mac Mini M4 has become a good candidate for lots of more..."
+      },
+      {
         "slug": "RaspberryPi4B-Setup",
         "title": "Raspberry Pi 4B Setup",
         "date": "2025-07-30 01:07:15",
@@ -55,12 +61,6 @@
         "title": "Vector Database",
         "date": "2024-09-29 19:19:40",
         "content": "A vector database indexes and stores vector embeddings for fast retrieval and similarity search, with capabilities like CRUD operations. Vector..."
-      },
-      {
-        "slug": "dll-hijacking-via-zlib-dll-proxy",
-        "title": "DLL Hijacking via zlib DLL Proxy",
-        "date": "2024-07-21 11:59:24",
-        "content": "DLL hijacking involves manipulating a program to load a DLL that contains the desired code. We will use a simple technique here for ilustration: DLL..."
       }
     ],
     "nextPageUrl": "/posts/langs/en/pagination/2",

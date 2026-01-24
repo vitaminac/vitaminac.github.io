@@ -4,6 +4,12 @@
     "tag": "SMB",
     "previews": [
       {
+        "slug": "mac-mini",
+        "title": "Mac Mini Is All You Need",
+        "date": "2025-11-23 17:40:37",
+        "content": "Because of ultra-low power consumption, easy to use interface, nearly silent working, Mac Mini M4 has become a good candidate for lots of more..."
+      },
+      {
         "slug": "RaspberryPi4B-Setup",
         "title": "Raspberry Pi 4B Setup",
         "date": "2025-07-30 01:07:15",

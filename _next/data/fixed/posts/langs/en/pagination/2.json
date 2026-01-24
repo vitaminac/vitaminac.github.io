@@ -3,6 +3,12 @@
     "lang": "en",
     "previews": [
       {
+        "slug": "dll-hijacking-via-zlib-dll-proxy",
+        "title": "DLL Hijacking via zlib DLL Proxy",
+        "date": "2024-07-21 11:59:24",
+        "content": "DLL hijacking involves manipulating a program to load a DLL that contains the desired code. We will use a simple technique here for ilustration: DLL..."
+      },
+      {
         "slug": "flash-crDroid-redmi-note-7",
         "title": "Flash crDroid ROM for Redmi Note 7",
         "date": "2024-05-25 18:11:53",
@@ -55,12 +61,6 @@
         "title": "Client-Centric Consistency Models",
         "date": "2021-07-03 15:06:02",
         "content": "Eventual consistent data stores work fine as long as clients always access the same replica. However, problems arise when different replicas are..."
-      },
-      {
-        "slug": "cap",
-        "title": "CAP Theorem",
-        "date": "2021-06-07 13:57:06",
-        "content": "The CAP theorem, also named as Brewer's theorem states that it is impossible for a distributed data store to simultaneously provide more than two out..."
       }
     ],
     "prevPageUrl": "/posts/langs/en/pagination/1",

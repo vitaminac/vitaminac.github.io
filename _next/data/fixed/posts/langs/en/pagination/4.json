@@ -3,6 +3,12 @@
     "lang": "en",
     "previews": [
       {
+        "slug": "Test-Case-Design-Techniques",
+        "title": "Test Case Design Techniques",
+        "date": "2020-11-24 12:56:14",
+        "content": "| Approach/Implementation | White Box | Black Box | | | |-------------------------|---------------------------|-------------------|---|---| |..."
+      },
+      {
         "slug": "Simple-Bootstrap-Linux-System",
         "title": "Build Simple Bootstrap Linux System Image",
         "date": "2020-11-08 19:15:57",
@@ -55,12 +61,6 @@
         "title": "Google Foobar Free the Bunny Prisoners",
         "date": "2019-11-09 09:28:42",
         "content": "Free the Bunny Prisoners Analysys  The problem can be rearrange as follow:  If you have N bunnies, and M locks, distribute M distinct keys among the..."
-      },
-      {
-        "slug": "Google-Kickstart-2019-Round-F-Flattening",
-        "title": "Google Kickstart 2019 Round F Flattening",
-        "date": "2019-11-03 17:51:53",
-        "content": "Google Kickstart 2019 Round F Flattening  First, we find the major height $H_k$ from each position $i$ to each position $j$. The change is not more..."
       }
     ],
     "prevPageUrl": "/posts/langs/en/pagination/3",
