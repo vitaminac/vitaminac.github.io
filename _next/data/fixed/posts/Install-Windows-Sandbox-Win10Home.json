@@ -3,6 +3,7 @@
     "postData": {
       "slug": "Install-Windows-Sandbox-Win10Home",
       "tags": ["Workspace Setup"],
+      "keywords": [],
       "isDraft": false,
       "isArchived": true,
       "title": "Install Windows Sandbox in Windoes 10 Home Edition",
@@ -24,7 +25,11 @@
             "es": "Spanish",
             "zh": "Chinese"
           },
-          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
+          "post-layout": {
+            "Author": "Author: {{author}}",
+            "Tags": "Tags",
+            "Keywords": "Keywords"
+          }
         }
       },
       "initialLocale": "en",

@@ -3,6 +3,7 @@
     "postData": {
       "slug": "vppl",
       "tags": ["VPPL", "IPREM", "Inmueble"],
+      "keywords": [],
       "isDraft": false,
       "isArchived": false,
       "title": "VPPL - Vivienda de Protección Pública de Precio Limitado",
@@ -24,7 +25,11 @@
             "es": "Español",
             "zh": "Chino"
           },
-          "post-layout": { "Author": "Autor: {{author}}", "Tags": "Tags" }
+          "post-layout": {
+            "Author": "Autor: {{author}}",
+            "Tags": "Etiquetas",
+            "Keywords": "Palabras Clave"
+          }
         },
         "en": {
           "navbar": {
@@ -35,7 +40,11 @@
             "es": "Spanish",
             "zh": "Chinese"
           },
-          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
+          "post-layout": {
+            "Author": "Author: {{author}}",
+            "Tags": "Tags",
+            "Keywords": "Keywords"
+          }
         }
       },
       "initialLocale": "es",

@@ -11,6 +11,7 @@
         "Workspace Setup",
         "SMB"
       ],
+      "keywords": [],
       "isDraft": false,
       "isArchived": false,
       "title": "Raspberry Pi 4B Setup",
@@ -32,7 +33,11 @@
             "es": "Spanish",
             "zh": "Chinese"
           },
-          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
+          "post-layout": {
+            "Author": "Author: {{author}}",
+            "Tags": "Tags",
+            "Keywords": "Keywords"
+          }
         }
       },
       "initialLocale": "en",

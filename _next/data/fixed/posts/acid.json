@@ -3,6 +3,7 @@
     "postData": {
       "slug": "acid",
       "tags": ["database", "ACID"],
+      "keywords": [],
       "isDraft": false,
       "isArchived": false,
       "title": "ACID",
@@ -24,7 +25,11 @@
             "es": "Spanish",
             "zh": "Chinese"
           },
-          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
+          "post-layout": {
+            "Author": "Author: {{author}}",
+            "Tags": "Tags",
+            "Keywords": "Keywords"
+          }
         }
       },
       "initialLocale": "en",

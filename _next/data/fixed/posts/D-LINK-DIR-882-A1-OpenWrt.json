@@ -9,6 +9,7 @@
         "hard router",
         "Workspace Setup"
       ],
+      "keywords": [],
       "isDraft": false,
       "isArchived": false,
       "title": "OpenWrt Installation on D-LINK DIR-882-A1",
@@ -30,7 +31,11 @@
             "es": "Spanish",
             "zh": "Chinese"
           },
-          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
+          "post-layout": {
+            "Author": "Author: {{author}}",
+            "Tags": "Tags",
+            "Keywords": "Keywords"
+          }
         }
       },
       "initialLocale": "en",

@@ -12,6 +12,7 @@
         "Eventual Consistency",
         "NoSQL"
       ],
+      "keywords": [],
       "isDraft": false,
       "isArchived": false,
       "title": "Client-Centric Consistency Models",
@@ -33,7 +34,11 @@
             "es": "Spanish",
             "zh": "Chinese"
           },
-          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
+          "post-layout": {
+            "Author": "Author: {{author}}",
+            "Tags": "Tags",
+            "Keywords": "Keywords"
+          }
         }
       },
       "initialLocale": "en",

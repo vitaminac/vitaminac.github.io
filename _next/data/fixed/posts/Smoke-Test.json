@@ -11,6 +11,7 @@
         "CI",
         "Smoke Test"
       ],
+      "keywords": [],
       "isDraft": false,
       "isArchived": false,
       "title": "Smoke Test",
@@ -32,7 +33,11 @@
             "es": "Español",
             "zh": "Chino"
           },
-          "post-layout": { "Author": "Autor: {{author}}", "Tags": "Tags" }
+          "post-layout": {
+            "Author": "Autor: {{author}}",
+            "Tags": "Etiquetas",
+            "Keywords": "Palabras Clave"
+          }
         },
         "en": {
           "navbar": {
@@ -43,7 +48,11 @@
             "es": "Spanish",
             "zh": "Chinese"
           },
-          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
+          "post-layout": {
+            "Author": "Author: {{author}}",
+            "Tags": "Tags",
+            "Keywords": "Keywords"
+          }
         }
       },
       "initialLocale": "es",

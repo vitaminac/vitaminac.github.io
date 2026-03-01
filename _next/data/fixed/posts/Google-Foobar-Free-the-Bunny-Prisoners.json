@@ -3,6 +3,7 @@
     "postData": {
       "slug": "Google-Foobar-Free-the-Bunny-Prisoners",
       "tags": ["algorithms"],
+      "keywords": [],
       "isDraft": false,
       "isArchived": false,
       "title": "Google Foobar Free the Bunny Prisoners",
@@ -24,7 +25,11 @@
             "es": "Spanish",
             "zh": "Chinese"
           },
-          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
+          "post-layout": {
+            "Author": "Author: {{author}}",
+            "Tags": "Tags",
+            "Keywords": "Keywords"
+          }
         }
       },
       "initialLocale": "en",

@@ -3,6 +3,7 @@
     "postData": {
       "slug": "The-Verb-Form-Hay",
       "tags": ["西班牙语语法", "动词变位", "西班牙语基础"],
+      "keywords": [],
       "isDraft": false,
       "isArchived": false,
       "title": "动词形式hay",
@@ -24,7 +25,11 @@
             "es": "西语",
             "zh": "中文"
           },
-          "post-layout": { "Author": "作者: {{author}}", "Tags": "标签" }
+          "post-layout": {
+            "Author": "作者: {{author}}",
+            "Tags": "标签",
+            "Keywords": "关键词"
+          }
         },
         "en": {
           "navbar": {
@@ -35,7 +40,11 @@
             "es": "Spanish",
             "zh": "Chinese"
           },
-          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
+          "post-layout": {
+            "Author": "Author: {{author}}",
+            "Tags": "Tags",
+            "Keywords": "Keywords"
+          }
         }
       },
       "initialLocale": "zh",

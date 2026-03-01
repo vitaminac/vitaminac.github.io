@@ -1,4 +1,5 @@
 {
   "Author": "Autor: {{author}}",
-  "Tags": "Tags"
+  "Tags": "Etiquetas",
+  "Keywords": "Palabras Clave"
 }

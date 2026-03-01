@@ -3,6 +3,7 @@
     "postData": {
       "slug": "Google-Foobar-Dodge-The-Lasers",
       "tags": ["algorithms"],
+      "keywords": [],
       "isDraft": false,
       "isArchived": false,
       "title": "Google Foobar Dodge The Lasers",
@@ -24,7 +25,11 @@
             "es": "Spanish",
             "zh": "Chinese"
           },
-          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
+          "post-layout": {
+            "Author": "Author: {{author}}",
+            "Tags": "Tags",
+            "Keywords": "Keywords"
+          }
         }
       },
       "initialLocale": "en",

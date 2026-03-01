@@ -8,6 +8,7 @@
         "Recurrence Equation",
         "Generating Function"
       ],
+      "keywords": [],
       "isDraft": false,
       "isArchived": false,
       "title": "Recurrence Equation",
@@ -29,7 +30,11 @@
             "es": "Spanish",
             "zh": "Chinese"
           },
-          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
+          "post-layout": {
+            "Author": "Author: {{author}}",
+            "Tags": "Tags",
+            "Keywords": "Keywords"
+          }
         }
       },
       "initialLocale": "en",

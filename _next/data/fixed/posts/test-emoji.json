@@ -3,6 +3,7 @@
     "postData": {
       "slug": "test-emoji",
       "tags": [],
+      "keywords": [],
       "isDraft": false,
       "isArchived": true,
       "title": "Test Emoji",
@@ -24,7 +25,11 @@
             "es": "Spanish",
             "zh": "Chinese"
           },
-          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
+          "post-layout": {
+            "Author": "Author: {{author}}",
+            "Tags": "Tags",
+            "Keywords": "Keywords"
+          }
         }
       },
       "initialLocale": "en",

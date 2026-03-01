@@ -3,6 +3,7 @@
     "postData": {
       "slug": "Install-DockerDesktop-Win10Home",
       "tags": ["Docker", "Workspace Setup"],
+      "keywords": [],
       "isDraft": false,
       "isArchived": true,
       "title": "Install Docker Desktop in Windows10 Home Edition",
@@ -24,7 +25,11 @@
             "es": "Spanish",
             "zh": "Chinese"
           },
-          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
+          "post-layout": {
+            "Author": "Author: {{author}}",
+            "Tags": "Tags",
+            "Keywords": "Keywords"
+          }
         }
       },
       "initialLocale": "en",

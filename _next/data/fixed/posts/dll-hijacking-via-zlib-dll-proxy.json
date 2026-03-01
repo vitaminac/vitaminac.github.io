@@ -3,6 +3,7 @@
     "postData": {
       "slug": "dll-hijacking-via-zlib-dll-proxy",
       "tags": ["dll injection", "dll hijacking", "zlib", "外挂"],
+      "keywords": [],
       "isDraft": false,
       "isArchived": false,
       "title": "DLL Hijacking via zlib DLL Proxy",
@@ -24,7 +25,11 @@
             "es": "Spanish",
             "zh": "Chinese"
           },
-          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
+          "post-layout": {
+            "Author": "Author: {{author}}",
+            "Tags": "Tags",
+            "Keywords": "Keywords"
+          }
         }
       },
       "initialLocale": "en",

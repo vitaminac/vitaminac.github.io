@@ -3,6 +3,7 @@
     "postData": {
       "slug": "Compiling-Executing-C",
       "tags": ["C", "Compilation", "ELF", "crt0", "exit"],
+      "keywords": [],
       "isDraft": false,
       "isArchived": false,
       "title": "The Process Behind Compiling and Executing C Code",
@@ -24,7 +25,11 @@
             "es": "Spanish",
             "zh": "Chinese"
           },
-          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
+          "post-layout": {
+            "Author": "Author: {{author}}",
+            "Tags": "Tags",
+            "Keywords": "Keywords"
+          }
         }
       },
       "initialLocale": "en",

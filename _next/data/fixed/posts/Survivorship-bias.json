@@ -3,6 +3,7 @@
     "postData": {
       "slug": "Survivorship-bias",
       "tags": ["Operation Research", "Survivorship bias", "Selection bias"],
+      "keywords": [],
       "isDraft": false,
       "isArchived": false,
       "title": "Survivorship bias",
@@ -24,7 +25,11 @@
             "es": "Spanish",
             "zh": "Chinese"
           },
-          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
+          "post-layout": {
+            "Author": "Author: {{author}}",
+            "Tags": "Tags",
+            "Keywords": "Keywords"
+          }
         }
       },
       "initialLocale": "en",

@@ -3,6 +3,7 @@
     "postData": {
       "slug": "embedded",
       "tags": ["Embedded System", "Real-Time Computation"],
+      "keywords": [],
       "isDraft": false,
       "isArchived": true,
       "title": "Embedded System and Real-Time Computation",
@@ -24,7 +25,11 @@
             "es": "Spanish",
             "zh": "Chinese"
           },
-          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
+          "post-layout": {
+            "Author": "Author: {{author}}",
+            "Tags": "Tags",
+            "Keywords": "Keywords"
+          }
         }
       },
       "initialLocale": "en",

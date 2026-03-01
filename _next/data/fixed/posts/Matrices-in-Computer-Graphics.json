@@ -14,6 +14,7 @@
         "Matrix",
         "Computer Graphics"
       ],
+      "keywords": [],
       "isDraft": false,
       "isArchived": false,
       "title": "Matrices in Computer Graphics",
@@ -35,7 +36,11 @@
             "es": "Spanish",
             "zh": "Chinese"
           },
-          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
+          "post-layout": {
+            "Author": "Author: {{author}}",
+            "Tags": "Tags",
+            "Keywords": "Keywords"
+          }
         }
       },
       "initialLocale": "en",

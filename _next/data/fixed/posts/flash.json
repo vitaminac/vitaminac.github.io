@@ -3,6 +3,7 @@
     "postData": {
       "slug": "flash",
       "tags": ["Game", "Flash"],
+      "keywords": [],
       "isDraft": false,
       "isArchived": false,
       "title": "Flash小游戏",
@@ -24,7 +25,11 @@
             "es": "西语",
             "zh": "中文"
           },
-          "post-layout": { "Author": "作者: {{author}}", "Tags": "标签" }
+          "post-layout": {
+            "Author": "作者: {{author}}",
+            "Tags": "标签",
+            "Keywords": "关键词"
+          }
         },
         "en": {
           "navbar": {
@@ -35,7 +40,11 @@
             "es": "Spanish",
             "zh": "Chinese"
           },
-          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
+          "post-layout": {
+            "Author": "Author: {{author}}",
+            "Tags": "Tags",
+            "Keywords": "Keywords"
+          }
         }
       },
       "initialLocale": "zh",

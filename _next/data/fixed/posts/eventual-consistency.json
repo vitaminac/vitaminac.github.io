@@ -3,6 +3,7 @@
     "postData": {
       "slug": "eventual-consistency",
       "tags": ["database", "BASE", "NoSQL", "Eventual Consistency"],
+      "keywords": [],
       "isDraft": false,
       "isArchived": false,
       "title": "Eventual Consistency",
@@ -24,7 +25,11 @@
             "es": "Spanish",
             "zh": "Chinese"
           },
-          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
+          "post-layout": {
+            "Author": "Author: {{author}}",
+            "Tags": "Tags",
+            "Keywords": "Keywords"
+          }
         }
       },
       "initialLocale": "en",

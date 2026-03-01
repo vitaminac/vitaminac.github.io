@@ -15,6 +15,7 @@
         "Latex",
         "Workspace Setup"
       ],
+      "keywords": [],
       "isDraft": false,
       "isArchived": false,
       "title": "Mac Mini Is All You Need",
@@ -36,7 +37,11 @@
             "es": "Spanish",
             "zh": "Chinese"
           },
-          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
+          "post-layout": {
+            "Author": "Author: {{author}}",
+            "Tags": "Tags",
+            "Keywords": "Keywords"
+          }
         }
       },
       "initialLocale": "en",

@@ -3,6 +3,7 @@
     "postData": {
       "slug": "Windows7-Vagrant",
       "tags": ["Vagrant", "winrm"],
+      "keywords": [],
       "isDraft": false,
       "isArchived": false,
       "title": "How to Create a Windows7 Vagrant Base Box",
@@ -24,7 +25,11 @@
             "es": "Spanish",
             "zh": "Chinese"
           },
-          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
+          "post-layout": {
+            "Author": "Author: {{author}}",
+            "Tags": "Tags",
+            "Keywords": "Keywords"
+          }
         }
       },
       "initialLocale": "en",

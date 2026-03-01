@@ -3,6 +3,7 @@
     "postData": {
       "slug": "STP",
       "tags": ["Spanning Tree Protocol", "STP"],
+      "keywords": [],
       "isDraft": false,
       "isArchived": false,
       "title": "STP",
@@ -24,7 +25,11 @@
             "es": "Spanish",
             "zh": "Chinese"
           },
-          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
+          "post-layout": {
+            "Author": "Author: {{author}}",
+            "Tags": "Tags",
+            "Keywords": "Keywords"
+          }
         }
       },
       "initialLocale": "en",

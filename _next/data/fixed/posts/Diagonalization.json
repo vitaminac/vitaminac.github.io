@@ -3,6 +3,7 @@
     "postData": {
       "slug": "Diagonalization",
       "tags": ["Math", "Diagonalization", "Matrix", "Linear Algebra"],
+      "keywords": [],
       "isDraft": false,
       "isArchived": false,
       "title": "Diagonalization",
@@ -24,7 +25,11 @@
             "es": "Spanish",
             "zh": "Chinese"
           },
-          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
+          "post-layout": {
+            "Author": "Author: {{author}}",
+            "Tags": "Tags",
+            "Keywords": "Keywords"
+          }
         }
       },
       "initialLocale": "en",

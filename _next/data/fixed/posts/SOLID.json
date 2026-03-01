@@ -9,6 +9,7 @@
         "Agile Software Development",
         "Software Evolution"
       ],
+      "keywords": [],
       "isDraft": false,
       "isArchived": false,
       "title": "SOLID Design Principles",
@@ -30,7 +31,11 @@
             "es": "Spanish",
             "zh": "Chinese"
           },
-          "post-layout": { "Author": "Author: {{author}}", "Tags": "Tags" }
+          "post-layout": {
+            "Author": "Author: {{author}}",
+            "Tags": "Tags",
+            "Keywords": "Keywords"
+          }
         }
       },
       "initialLocale": "en",
