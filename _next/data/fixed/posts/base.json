@@ -2,8 +2,8 @@
   "pageProps": {
     "postData": {
       "slug": "base",
-      "tags": ["database", "BASE", "NoSQL"],
-      "keywords": [],
+      "tags": ["database"],
+      "keywords": ["BASE", "NoSQL"],
       "isDraft": false,
       "isArchived": false,
       "title": "BASE",

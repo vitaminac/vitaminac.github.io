@@ -2,17 +2,16 @@
   "pageProps": {
     "postData": {
       "slug": "Client-Centric-Consistency-Models",
-      "tags": [
+      "tags": ["database"],
+      "keywords": [
         "Client-Centric Consistency Models",
         "Monotonic Reads",
         "Monotonic Writes",
         "Read Your Writes",
         "Writes Follow Reads",
-        "database",
         "Eventual Consistency",
         "NoSQL"
       ],
-      "keywords": [],
       "isDraft": false,
       "isArchived": false,
       "title": "Client-Centric Consistency Models",

@@ -2,16 +2,15 @@
   "pageProps": {
     "postData": {
       "slug": "RaspberryPi4B-Setup",
-      "tags": [
+      "tags": ["Workspace Setup"],
+      "keywords": [
         "Linux",
         "Debian",
         "Raspberry",
         "Raspberry Pi 4",
         "Prestashop",
-        "Workspace Setup",
         "SMB"
       ],
-      "keywords": [],
       "isDraft": false,
       "isArchived": false,
       "title": "Raspberry Pi 4B Setup",

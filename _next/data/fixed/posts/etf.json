@@ -2,11 +2,11 @@
   "pageProps": {
     "postData": {
       "slug": "etf",
-      "tags": ["ETF", "股票指数", "S&P 500"],
-      "keywords": [],
+      "tags": ["投资"],
+      "keywords": ["ETF", "股票指数", "S&P 500", "基金"],
       "isDraft": false,
       "isArchived": false,
-      "title": "ETF是什么",
+      "title": "股指ETF的运行逻辑",
       "date": "2024-12-26 15:48:16",
       "isLegacy": false,
       "lang": "zh",

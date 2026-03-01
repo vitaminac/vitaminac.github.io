@@ -50,7 +50,7 @@
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/Client-Centric-Consistency-Models</loc>
-    <lastmod>2025-10-11</lastmod>
+    <lastmod>2026-03-01</lastmod>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/Code-Smell</loc>
@@ -70,7 +70,7 @@
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/D-LINK-DIR-882-A1-OpenWrt</loc>
-    <lastmod>2025-12-14</lastmod>
+    <lastmod>2026-03-01</lastmod>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/DEFINITE-AND-INDEFINITE-ARTICLES</loc>
@@ -86,7 +86,7 @@
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/Diagonalization</loc>
-    <lastmod>2025-12-14</lastmod>
+    <lastmod>2026-03-01</lastmod>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/Docker</loc>
@@ -210,7 +210,7 @@
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/Minimalist-Linux-Workspace</loc>
-    <lastmod>2025-07-30</lastmod>
+    <lastmod>2026-03-01</lastmod>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/Mock-Fake-Testing</loc>
@@ -262,7 +262,7 @@
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/RaspberryPi4B-Setup</loc>
-    <lastmod>2025-12-14</lastmod>
+    <lastmod>2026-03-01</lastmod>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/Recurrence-Equation</loc>
@@ -346,7 +346,7 @@
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/WSL</loc>
-    <lastmod>2025-12-14</lastmod>
+    <lastmod>2026-03-01</lastmod>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/Windows7-Vagrant</loc>
@@ -354,15 +354,15 @@
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/acid</loc>
-    <lastmod>2025-10-11</lastmod>
+    <lastmod>2026-03-01</lastmod>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/base</loc>
-    <lastmod>2025-10-11</lastmod>
+    <lastmod>2026-03-01</lastmod>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/cap</loc>
-    <lastmod>2025-10-11</lastmod>
+    <lastmod>2026-03-01</lastmod>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/cheating</loc>
@@ -382,7 +382,7 @@
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/etf</loc>
-    <lastmod>2026-01-06</lastmod>
+    <lastmod>2026-03-01</lastmod>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/eventual-consistency</loc>
@@ -394,7 +394,7 @@
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/flash-crDroid-redmi-note-7</loc>
-    <lastmod>2025-12-15</lastmod>
+    <lastmod>2026-03-01</lastmod>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/langs/en</loc>
@@ -421,9 +421,6 @@
     <loc>https://vitaminac.github.io/posts/langs/en/tags/AAA</loc>
   </url>
   <url>
-    <loc>https://vitaminac.github.io/posts/langs/en/tags/ACID</loc>
-  </url>
-  <url>
     <loc>https://vitaminac.github.io/posts/langs/en/tags/AE</loc>
   </url>
   <url>
@@ -431,12 +428,6 @@
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/langs/en/tags/Agile Software Development</loc>
-  </url>
-  <url>
-    <loc>https://vitaminac.github.io/posts/langs/en/tags/Android</loc>
-  </url>
-  <url>
-    <loc>https://vitaminac.github.io/posts/langs/en/tags/Apple</loc>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/langs/en/tags/Authenticated Encryption</loc>
@@ -460,16 +451,10 @@
     <loc>https://vitaminac.github.io/posts/langs/en/tags/C</loc>
   </url>
   <url>
-    <loc>https://vitaminac.github.io/posts/langs/en/tags/CAP</loc>
-  </url>
-  <url>
     <loc>https://vitaminac.github.io/posts/langs/en/tags/CIA</loc>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/langs/en/tags/CQL</loc>
-  </url>
-  <url>
-    <loc>https://vitaminac.github.io/posts/langs/en/tags/Client-Centric Consistency Models</loc>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/langs/en/tags/Compilation</loc>
@@ -488,15 +473,6 @@
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/langs/en/tags/Contract Test</loc>
-  </url>
-  <url>
-    <loc>https://vitaminac.github.io/posts/langs/en/tags/DNS</loc>
-  </url>
-  <url>
-    <loc>https://vitaminac.github.io/posts/langs/en/tags/Debian</loc>
-  </url>
-  <url>
-    <loc>https://vitaminac.github.io/posts/langs/en/tags/Diagonalization</loc>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/langs/en/tags/Docker</loc>
@@ -550,13 +526,7 @@
     <loc>https://vitaminac.github.io/posts/langs/en/tags/LLM</loc>
   </url>
   <url>
-    <loc>https://vitaminac.github.io/posts/langs/en/tags/Latex</loc>
-  </url>
-  <url>
     <loc>https://vitaminac.github.io/posts/langs/en/tags/Lehman laws</loc>
-  </url>
-  <url>
-    <loc>https://vitaminac.github.io/posts/langs/en/tags/Linear Algebra</loc>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/langs/en/tags/Linux</loc>
@@ -566,9 +536,6 @@
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/langs/en/tags/Mac</loc>
-  </url>
-  <url>
-    <loc>https://vitaminac.github.io/posts/langs/en/tags/MacOS</loc>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/langs/en/tags/Math</loc>
@@ -587,12 +554,6 @@
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/langs/en/tags/MongoDB</loc>
-  </url>
-  <url>
-    <loc>https://vitaminac.github.io/posts/langs/en/tags/Monotonic Reads</loc>
-  </url>
-  <url>
-    <loc>https://vitaminac.github.io/posts/langs/en/tags/Monotonic Writes</loc>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/langs/en/tags/NLP</loc>
@@ -640,12 +601,6 @@
     <loc>https://vitaminac.github.io/posts/langs/en/tags/Raspberry</loc>
   </url>
   <url>
-    <loc>https://vitaminac.github.io/posts/langs/en/tags/Raspberry Pi 4</loc>
-  </url>
-  <url>
-    <loc>https://vitaminac.github.io/posts/langs/en/tags/Read Your Writes</loc>
-  </url>
-  <url>
     <loc>https://vitaminac.github.io/posts/langs/en/tags/Real-Time Computation</loc>
   </url>
   <url>
@@ -653,9 +608,6 @@
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/langs/en/tags/Rotation Matrix</loc>
-  </url>
-  <url>
-    <loc>https://vitaminac.github.io/posts/langs/en/tags/SMB</loc>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/langs/en/tags/SOLID</loc>
@@ -715,13 +667,7 @@
     <loc>https://vitaminac.github.io/posts/langs/en/tags/Workspace Setup</loc>
   </url>
   <url>
-    <loc>https://vitaminac.github.io/posts/langs/en/tags/Writes Follow Reads</loc>
-  </url>
-  <url>
     <loc>https://vitaminac.github.io/posts/langs/en/tags/algorithms</loc>
-  </url>
-  <url>
-    <loc>https://vitaminac.github.io/posts/langs/en/tags/crDroid</loc>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/langs/en/tags/cross-entropy</loc>
@@ -742,31 +688,13 @@
     <loc>https://vitaminac.github.io/posts/langs/en/tags/exit</loc>
   </url>
   <url>
-    <loc>https://vitaminac.github.io/posts/langs/en/tags/hard router</loc>
-  </url>
-  <url>
-    <loc>https://vitaminac.github.io/posts/langs/en/tags/iOS</loc>
-  </url>
-  <url>
     <loc>https://vitaminac.github.io/posts/langs/en/tags</loc>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/langs/en/tags/information theory</loc>
   </url>
   <url>
-    <loc>https://vitaminac.github.io/posts/langs/en/tags/lavender</loc>
-  </url>
-  <url>
     <loc>https://vitaminac.github.io/posts/langs/en/tags/network</loc>
-  </url>
-  <url>
-    <loc>https://vitaminac.github.io/posts/langs/en/tags/openwrt</loc>
-  </url>
-  <url>
-    <loc>https://vitaminac.github.io/posts/langs/en/tags/rclone</loc>
-  </url>
-  <url>
-    <loc>https://vitaminac.github.io/posts/langs/en/tags/router</loc>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/langs/en/tags/transformer</loc>
@@ -1057,16 +985,10 @@
     <loc>https://vitaminac.github.io/posts/langs/zh/pagination/2</loc>
   </url>
   <url>
-    <loc>https://vitaminac.github.io/posts/langs/zh/tags/ETF</loc>
-  </url>
-  <url>
     <loc>https://vitaminac.github.io/posts/langs/zh/tags/Flash</loc>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/langs/zh/tags/Game</loc>
-  </url>
-  <url>
-    <loc>https://vitaminac.github.io/posts/langs/zh/tags/IRPF</loc>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/langs/zh/tags/NIE</loc>
@@ -1076,12 +998,6 @@
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/langs/zh/tags/QQ堂</loc>
-  </url>
-  <url>
-    <loc>https://vitaminac.github.io/posts/langs/zh/tags/Renta</loc>
-  </url>
-  <url>
-    <loc>https://vitaminac.github.io/posts/langs/zh/tags/S&amp;P 500</loc>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/langs/zh/tags/TIE</loc>
@@ -1153,6 +1069,9 @@
     <loc>https://vitaminac.github.io/posts/langs/zh/tags/房地产</loc>
   </url>
   <url>
+    <loc>https://vitaminac.github.io/posts/langs/zh/tags/投资</loc>
+  </url>
+  <url>
     <loc>https://vitaminac.github.io/posts/langs/zh/tags/护照</loc>
   </url>
   <url>
@@ -1168,10 +1087,10 @@
     <loc>https://vitaminac.github.io/posts/langs/zh/tags/秘书问题</loc>
   </url>
   <url>
-    <loc>https://vitaminac.github.io/posts/langs/zh/tags/纳什均衡</loc>
+    <loc>https://vitaminac.github.io/posts/langs/zh/tags/税务优化</loc>
   </url>
   <url>
-    <loc>https://vitaminac.github.io/posts/langs/zh/tags/股票指数</loc>
+    <loc>https://vitaminac.github.io/posts/langs/zh/tags/纳什均衡</loc>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/langs/zh/tags/西班牙生活</loc>
@@ -1199,7 +1118,7 @@
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/mac-mini</loc>
-    <lastmod>2026-01-24</lastmod>
+    <lastmod>2026-03-01</lastmod>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/minishell</loc>
@@ -1211,7 +1130,7 @@
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/openwrt</loc>
-    <lastmod>2025-12-21</lastmod>
+    <lastmod>2026-03-01</lastmod>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/passport-renewal</loc>
@@ -1231,7 +1150,7 @@
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/renta</loc>
-    <lastmod>2025-05-04</lastmod>
+    <lastmod>2026-03-01</lastmod>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/skyrim</loc>

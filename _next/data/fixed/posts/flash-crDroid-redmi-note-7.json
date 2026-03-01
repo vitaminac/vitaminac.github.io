@@ -2,8 +2,8 @@
   "pageProps": {
     "postData": {
       "slug": "flash-crDroid-redmi-note-7",
-      "tags": ["lavender", "crDroid", "Workspace Setup", "Android"],
-      "keywords": [],
+      "tags": ["Workspace Setup"],
+      "keywords": ["lavender", "crDroid", "Android"],
       "isDraft": false,
       "isArchived": false,
       "title": "Flash crDroid ROM for Redmi Note 7",

@@ -2,8 +2,8 @@
   "pageProps": {
     "postData": {
       "slug": "cap",
-      "tags": ["CAP", "database", "BASE", "ACID"],
-      "keywords": [],
+      "tags": ["database"],
+      "keywords": ["CAP", "BASE", "ACID"],
       "isDraft": false,
       "isArchived": false,
       "title": "CAP Theorem",

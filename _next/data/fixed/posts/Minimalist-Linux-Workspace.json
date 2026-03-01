@@ -2,8 +2,8 @@
   "pageProps": {
     "postData": {
       "slug": "Minimalist-Linux-Workspace",
-      "tags": ["Linux", "Debian", "Workspace Setup"],
-      "keywords": [],
+      "tags": ["Workspace Setup"],
+      "keywords": ["Linux", "Debian"],
       "isDraft": false,
       "isArchived": false,
       "title": "Minimalist Linux Workspace",

@@ -2,8 +2,8 @@
   "pageProps": {
     "postData": {
       "slug": "WSL",
-      "tags": ["Linux", "Debian", "Workspace Setup"],
-      "keywords": [],
+      "tags": ["Workspace Setup"],
+      "keywords": ["Linux", "Debian"],
       "isDraft": false,
       "isArchived": false,
       "title": "WSL2 Workspace Setup for Windows",

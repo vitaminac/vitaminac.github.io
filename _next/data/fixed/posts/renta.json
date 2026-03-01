@@ -2,8 +2,8 @@
   "pageProps": {
     "postData": {
       "slug": "renta",
-      "tags": ["Renta", "IRPF", "西班牙生活"],
-      "keywords": [],
+      "tags": ["税务优化"],
+      "keywords": ["Renta", "IRPF", "西班牙生活"],
       "isDraft": false,
       "isArchived": true,
       "title": "西班牙2024年Renta申报",

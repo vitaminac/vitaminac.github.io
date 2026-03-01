@@ -4,22 +4,10 @@
     "tag": "NoSQL",
     "previews": [
       {
-        "slug": "Client-Centric-Consistency-Models",
-        "title": "Client-Centric Consistency Models",
-        "date": "2021-07-03 15:06:02",
-        "content": "Eventual consistent data stores work fine as long as clients always access the same replica. However, problems arise when different replicas are..."
-      },
-      {
         "slug": "eventual-consistency",
         "title": "Eventual Consistency",
         "date": "2021-06-01 10:32:46",
         "content": "Eventual consistency is a weak consistency model that ensures all replicas of a distributed system converge to identical states in the absence of..."
-      },
-      {
-        "slug": "base",
-        "title": "BASE",
-        "date": "2021-06-01 10:32:46",
-        "content": "BASE is an acronym describing the design principles behind many NoSQL and eventually consistent databases. BASE often contrasted with ACID and its..."
       },
       {
         "slug": "MongoDB",

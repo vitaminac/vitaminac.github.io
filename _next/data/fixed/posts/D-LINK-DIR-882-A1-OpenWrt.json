@@ -2,14 +2,8 @@
   "pageProps": {
     "postData": {
       "slug": "D-LINK-DIR-882-A1-OpenWrt",
-      "tags": [
-        "openwrt",
-        "network",
-        "router",
-        "hard router",
-        "Workspace Setup"
-      ],
-      "keywords": [],
+      "tags": ["network", "Workspace Setup"],
+      "keywords": ["openwrt", "router", "hard router"],
       "isDraft": false,
       "isArchived": false,
       "title": "OpenWrt Installation on D-LINK DIR-882-A1",

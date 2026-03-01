@@ -1,17 +1,27 @@
 {
   "pageProps": {
-    "lang": "en",
-    "tag": "crDroid",
+    "lang": "zh",
+    "tag": "投资",
     "previews": [
       {
-        "slug": "flash-crDroid-redmi-note-7",
-        "title": "Flash crDroid ROM for Redmi Note 7",
-        "date": "2024-05-25 18:11:53",
-        "content": "You need to have a Xiaomi account that has been given permission for unlocking device. Download MiFlash from https://www.miui.com/unlock/index.html..."
+        "slug": "etf",
+        "title": "股指ETF的运行逻辑",
+        "date": "2024-12-26 15:48:16",
+        "content": "股票指数是什么? ..."
       }
     ],
     "_nextI18Next": {
       "initialI18nStore": {
+        "zh": {
+          "navbar": {
+            "Home": "主页",
+            "Language": "语言",
+            "Tags": "标签",
+            "en": "英语",
+            "es": "西语",
+            "zh": "中文"
+          }
+        },
         "en": {
           "navbar": {
             "Home": "Home",
@@ -23,7 +33,7 @@
           }
         }
       },
-      "initialLocale": "en",
+      "initialLocale": "zh",
       "ns": ["navbar"],
       "userConfig": {
         "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },

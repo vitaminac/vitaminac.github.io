@@ -2,8 +2,8 @@
   "pageProps": {
     "postData": {
       "slug": "openwrt",
-      "tags": ["openwrt", "network", "router", "Workspace Setup", "DNS"],
-      "keywords": [],
+      "tags": ["network", "Workspace Setup"],
+      "keywords": ["openwrt", "router", "DNS"],
       "isDraft": false,
       "isArchived": false,
       "title": "OpenWrt Configuration",

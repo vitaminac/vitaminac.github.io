@@ -2,8 +2,8 @@
   "pageProps": {
     "postData": {
       "slug": "Diagonalization",
-      "tags": ["Math", "Diagonalization", "Matrix", "Linear Algebra"],
-      "keywords": [],
+      "tags": ["Math"],
+      "keywords": ["Diagonalization", "Matrix", "Linear Algebra"],
       "isDraft": false,
       "isArchived": false,
       "title": "Diagonalization",

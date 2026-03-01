@@ -2,7 +2,8 @@
   "pageProps": {
     "postData": {
       "slug": "mac-mini",
-      "tags": [
+      "tags": ["Workspace Setup"],
+      "keywords": [
         "Apple",
         "Mac",
         "router",
@@ -12,10 +13,8 @@
         "DNS",
         "SMB",
         "rclone",
-        "Latex",
-        "Workspace Setup"
+        "Latex"
       ],
-      "keywords": [],
       "isDraft": false,
       "isArchived": false,
       "title": "Mac Mini Is All You Need",

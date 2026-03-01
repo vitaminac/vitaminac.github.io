@@ -2,8 +2,8 @@
   "pageProps": {
     "postData": {
       "slug": "acid",
-      "tags": ["database", "ACID"],
-      "keywords": [],
+      "tags": ["database"],
+      "keywords": ["ACID"],
       "isDraft": false,
       "isArchived": false,
       "title": "ACID",
