@@ -556,9 +556,6 @@
     <loc>https://vitaminac.github.io/posts/langs/en/tags/MongoDB</loc>
   </url>
   <url>
-    <loc>https://vitaminac.github.io/posts/langs/en/tags/NLP</loc>
-  </url>
-  <url>
     <loc>https://vitaminac.github.io/posts/langs/en/tags/Neo4j</loc>
   </url>
   <url>
@@ -581,9 +578,6 @@
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/langs/en/tags/Parallelism</loc>
-  </url>
-  <url>
-    <loc>https://vitaminac.github.io/posts/langs/en/tags/Perplexity</loc>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/langs/en/tags/Prestashop</loc>
@@ -670,9 +664,6 @@
     <loc>https://vitaminac.github.io/posts/langs/en/tags/algorithms</loc>
   </url>
   <url>
-    <loc>https://vitaminac.github.io/posts/langs/en/tags/cross-entropy</loc>
-  </url>
-  <url>
     <loc>https://vitaminac.github.io/posts/langs/en/tags/crt0</loc>
   </url>
   <url>
@@ -691,13 +682,7 @@
     <loc>https://vitaminac.github.io/posts/langs/en/tags</loc>
   </url>
   <url>
-    <loc>https://vitaminac.github.io/posts/langs/en/tags/information theory</loc>
-  </url>
-  <url>
     <loc>https://vitaminac.github.io/posts/langs/en/tags/network</loc>
-  </url>
-  <url>
-    <loc>https://vitaminac.github.io/posts/langs/en/tags/transformer</loc>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/langs/en/tags/vector database</loc>
@@ -1138,7 +1123,7 @@
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/perplexity</loc>
-    <lastmod>2024-10-26</lastmod>
+    <lastmod>2026-03-07</lastmod>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/probability</loc>
