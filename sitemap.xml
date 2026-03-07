@@ -42,7 +42,7 @@
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/CARDINAL-NUMBERS</loc>
-    <lastmod>2024-10-23</lastmod>
+    <lastmod>2026-03-07</lastmod>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/Caso-De-Estudio-Redes-De-Colas</loc>
@@ -74,7 +74,7 @@
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/DEFINITE-AND-INDEFINITE-ARTICLES</loc>
-    <lastmod>2024-10-23</lastmod>
+    <lastmod>2026-03-07</lastmod>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/Desarrollo-de-Aplicaciones-Web</loc>
@@ -114,7 +114,7 @@
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/GENDER-OF-NOUNS</loc>
-    <lastmod>2024-10-23</lastmod>
+    <lastmod>2026-03-07</lastmod>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/Game-Theory</loc>
@@ -226,7 +226,7 @@
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/PLURAL-FORMS-OF-NOUNS</loc>
-    <lastmod>2024-10-23</lastmod>
+    <lastmod>2026-03-07</lastmod>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/Pair-Review</loc>
@@ -254,7 +254,7 @@
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/REGULAR-VERBS</loc>
-    <lastmod>2024-10-23</lastmod>
+    <lastmod>2026-03-07</lastmod>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/RaspberryPi-Odoo</loc>
@@ -282,7 +282,7 @@
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/SUBJECT-PRONOUNS</loc>
-    <lastmod>2024-10-23</lastmod>
+    <lastmod>2026-03-07</lastmod>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/Simple-Bootstrap-Linux-System</loc>
@@ -330,7 +330,7 @@
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/The-Verb-Form-Hay</loc>
-    <lastmod>2024-10-23</lastmod>
+    <lastmod>2026-03-07</lastmod>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/Tree-Diameter</loc>
@@ -374,7 +374,7 @@
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/driving-license</loc>
-    <lastmod>2025-04-22</lastmod>
+    <lastmod>2026-03-07</lastmod>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/embedded</loc>
@@ -386,7 +386,7 @@
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/eventual-consistency</loc>
-    <lastmod>2025-10-11</lastmod>
+    <lastmod>2026-03-07</lastmod>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/flash</loc>
@@ -442,9 +442,6 @@
     <loc>https://vitaminac.github.io/posts/langs/en/tags/Availability</loc>
   </url>
   <url>
-    <loc>https://vitaminac.github.io/posts/langs/en/tags/BASE</loc>
-  </url>
-  <url>
     <loc>https://vitaminac.github.io/posts/langs/en/tags/Boundary Value Analysis</loc>
   </url>
   <url>
@@ -491,9 +488,6 @@
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/langs/en/tags/Equivalence Partitioning</loc>
-  </url>
-  <url>
-    <loc>https://vitaminac.github.io/posts/langs/en/tags/Eventual Consistency</loc>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/langs/en/tags/Generating Function</loc>
@@ -976,16 +970,10 @@
     <loc>https://vitaminac.github.io/posts/langs/zh/tags/Game</loc>
   </url>
   <url>
-    <loc>https://vitaminac.github.io/posts/langs/zh/tags/NIE</loc>
-  </url>
-  <url>
     <loc>https://vitaminac.github.io/posts/langs/zh/tags/PyInstaller</loc>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/langs/zh/tags/QQ堂</loc>
-  </url>
-  <url>
-    <loc>https://vitaminac.github.io/posts/langs/zh/tags/TIE</loc>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/langs/zh/tags/hook</loc>
@@ -1006,34 +994,16 @@
     <loc>https://vitaminac.github.io/posts/langs/zh/tags/三角网格</loc>
   </url>
   <url>
-    <loc>https://vitaminac.github.io/posts/langs/zh/tags/不定冠词</loc>
-  </url>
-  <url>
-    <loc>https://vitaminac.github.io/posts/langs/zh/tags/主语</loc>
-  </url>
-  <url>
-    <loc>https://vitaminac.github.io/posts/langs/zh/tags/代词</loc>
-  </url>
-  <url>
     <loc>https://vitaminac.github.io/posts/langs/zh/tags/公共知识</loc>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/langs/zh/tags/共有知识</loc>
   </url>
   <url>
-    <loc>https://vitaminac.github.io/posts/langs/zh/tags/冠词</loc>
-  </url>
-  <url>
     <loc>https://vitaminac.github.io/posts/langs/zh/tags/几何</loc>
   </url>
   <url>
-    <loc>https://vitaminac.github.io/posts/langs/zh/tags/动词变位</loc>
-  </url>
-  <url>
     <loc>https://vitaminac.github.io/posts/langs/zh/tags/博弈论</loc>
-  </url>
-  <url>
-    <loc>https://vitaminac.github.io/posts/langs/zh/tags/名词</loc>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/langs/zh/tags/向量</loc>
@@ -1042,31 +1012,19 @@
     <loc>https://vitaminac.github.io/posts/langs/zh/tags/图形结构</loc>
   </url>
   <url>
-    <loc>https://vitaminac.github.io/posts/langs/zh/tags/复数</loc>
-  </url>
-  <url>
     <loc>https://vitaminac.github.io/posts/langs/zh/tags/外挂</loc>
   </url>
   <url>
-    <loc>https://vitaminac.github.io/posts/langs/zh/tags/定冠词</loc>
-  </url>
-  <url>
-    <loc>https://vitaminac.github.io/posts/langs/zh/tags/房地产</loc>
-  </url>
-  <url>
     <loc>https://vitaminac.github.io/posts/langs/zh/tags/投资</loc>
-  </url>
-  <url>
-    <loc>https://vitaminac.github.io/posts/langs/zh/tags/护照</loc>
-  </url>
-  <url>
-    <loc>https://vitaminac.github.io/posts/langs/zh/tags/数字</loc>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/langs/zh/tags/最优停止问题</loc>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/langs/zh/tags/沉没成本</loc>
+  </url>
+  <url>
+    <loc>https://vitaminac.github.io/posts/langs/zh/tags/游戏</loc>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/langs/zh/tags/秘书问题</loc>
@@ -1081,29 +1039,17 @@
     <loc>https://vitaminac.github.io/posts/langs/zh/tags/西班牙生活</loc>
   </url>
   <url>
-    <loc>https://vitaminac.github.io/posts/langs/zh/tags/西班牙语基础</loc>
-  </url>
-  <url>
     <loc>https://vitaminac.github.io/posts/langs/zh/tags/西班牙语语法</loc>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/langs/zh/tags/计算机图形</loc>
   </url>
   <url>
-    <loc>https://vitaminac.github.io/posts/langs/zh/tags/阳性</loc>
-  </url>
-  <url>
-    <loc>https://vitaminac.github.io/posts/langs/zh/tags/阴性</loc>
-  </url>
-  <url>
-    <loc>https://vitaminac.github.io/posts/langs/zh/tags/驾照认证</loc>
-  </url>
-  <url>
     <loc>https://vitaminac.github.io/posts/langs/zh/tags/麦穗原理</loc>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/mac-mini</loc>
-    <lastmod>2026-03-01</lastmod>
+    <lastmod>2026-03-07</lastmod>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/minishell</loc>
@@ -1111,7 +1057,7 @@
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/nie</loc>
-    <lastmod>2025-04-22</lastmod>
+    <lastmod>2026-03-07</lastmod>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/openwrt</loc>
@@ -1119,7 +1065,7 @@
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/passport-renewal</loc>
-    <lastmod>2025-04-22</lastmod>
+    <lastmod>2026-03-07</lastmod>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/perplexity</loc>
@@ -1139,7 +1085,7 @@
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/skyrim</loc>
-    <lastmod>2024-10-23</lastmod>
+    <lastmod>2026-03-07</lastmod>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/test-auto-link</loc>
@@ -1187,7 +1133,7 @@
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/vivienda-segunda-mano</loc>
-    <lastmod>2025-08-30</lastmod>
+    <lastmod>2026-03-07</lastmod>
   </url>
   <url>
     <loc>https://vitaminac.github.io/posts/vppl</loc>

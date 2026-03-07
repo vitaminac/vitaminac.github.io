@@ -2,8 +2,8 @@
   "pageProps": {
     "postData": {
       "slug": "eventual-consistency",
-      "tags": ["database", "BASE", "NoSQL", "Eventual Consistency"],
-      "keywords": [],
+      "tags": ["database"],
+      "keywords": ["BASE", "NoSQL", "Eventual Consistency"],
       "isDraft": false,
       "isArchived": false,
       "title": "Eventual Consistency",

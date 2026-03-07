@@ -2,16 +2,16 @@
   "pageProps": {
     "postData": {
       "slug": "CARDINAL-NUMBERS",
-      "tags": ["西班牙语语法", "数字", "西班牙语基础"],
-      "keywords": [],
+      "tags": ["西班牙语语法"],
+      "keywords": ["数字", "西班牙语基础"],
       "isDraft": false,
       "isArchived": false,
       "title": "西班牙语基数1-10",
       "date": "2018-11-07 00:40:31",
-      "isLegacy": true,
+      "isLegacy": false,
       "lang": "zh",
-      "tocHtml": "<ol>\n<li><a href=\"/CARDINAL-NUMBERS/index.html#%E4%BB%8E%E4%B8%80%E5%88%B0%E5%8D%81\" target=\"CARDINAL-NUMBERS\">从一到十</a>\n<ol>\n<li><a href=\"/CARDINAL-NUMBERS/index.html#%E6%95%B0%E5%AD%97uno%E5%9C%A8%E9%98%B3%E6%80%A7%E5%90%8D%E8%AF%8D%E5%89%8D%E9%9D%A2%E5%8F%98%E6%88%90un\" target=\"CARDINAL-NUMBERS\">数字\"uno\"在阳性名词前面变成\"un\"</a></li>\n<li><a href=\"/CARDINAL-NUMBERS/index.html#%E6%95%B0%E5%AD%97uno%E5%9C%A8%E9%98%B4%E6%80%A7%E5%90%8D%E8%AF%8D%E5%89%8D%E9%9D%A2%E5%8F%98%E6%88%90una\" target=\"CARDINAL-NUMBERS\">数字\"uno\"在阴性名词前面变成\"una\"</a></li>\n</ol>\n</li>\n</ol>",
-      "path": "/CARDINAL-NUMBERS/index.html"
+      "tocHtml": "<ol>\n<li><a href=\"#%E4%BB%8E%E4%B8%80%E5%88%B0%E5%8D%81\">从一到十</a>\n<ol>\n<li><a href=\"#%E6%95%B0%E5%AD%97uno%E5%9C%A8%E9%98%B3%E6%80%A7%E5%90%8D%E8%AF%8D%E5%89%8D%E9%9D%A2%E5%8F%98%E6%88%90un\">数字\"uno\"在阳性名词前面变成\"un\"</a></li>\n<li><a href=\"#%E6%95%B0%E5%AD%97uno%E5%9C%A8%E9%98%B4%E6%80%A7%E5%90%8D%E8%AF%8D%E5%89%8D%E9%9D%A2%E5%8F%98%E6%88%90una\">数字\"uno\"在阴性名词前面变成\"una\"</a></li>\n</ol>\n</li>\n</ol>",
+      "articleHtml": "<h1 id=\"从一到十\">从一到十<a aria-hidden=\"true\" tabindex=\"-1\" href=\"#从一到十\"><i class=\"fa-solid fa-link\"></i></a></h1>\n<ol>\n<li>uno</li>\n<li>dos</li>\n<li>tres</li>\n<li>cuatro</li>\n<li>cinco</li>\n<li>seis</li>\n<li>siete</li>\n<li>ocho</li>\n<li>nueve</li>\n<li>diez</li>\n</ol>\n<h2 id=\"数字uno在阳性名词前面变成un\">数字&quot;uno&quot;在阳性名词前面变成&quot;un&quot;<a aria-hidden=\"true\" tabindex=\"-1\" href=\"#数字uno在阳性名词前面变成un\"><i class=\"fa-solid fa-link\"></i></a></h2>\n<p>un libro 一本书\nun perro 一直狗(公的)\nun hombre 一个男人</p>\n<h2 id=\"数字uno在阴性名词前面变成una\">数字&quot;uno&quot;在阴性名词前面变成&quot;una&quot;<a aria-hidden=\"true\" tabindex=\"-1\" href=\"#数字uno在阴性名词前面变成una\"><i class=\"fa-solid fa-link\"></i></a></h2>\n<p>una pluma 一只钢笔\nuna gata 一只猫\nuna chica 一位女孩</p>\n<p>数数的时候我们用&quot;uno&quot; 但是当我们数某个物体的时候用 &quot;un&quot; 或者 &quot;una&quot;\nun libro 一本书\nuna pluma 一只钢笔\nuno dos tres 一二三</p>"
     },
     "lang": "zh",
     "_nextI18Next": {

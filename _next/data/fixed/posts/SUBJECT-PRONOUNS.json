@@ -2,16 +2,16 @@
   "pageProps": {
     "postData": {
       "slug": "SUBJECT-PRONOUNS",
-      "tags": ["西班牙语语法", "代词", "主语"],
-      "keywords": [],
+      "tags": ["西班牙语语法"],
+      "keywords": ["代词", "主语"],
       "isDraft": false,
       "isArchived": false,
       "title": "主语代词",
       "date": "2018-11-25 21:30:28",
-      "isLegacy": true,
+      "isLegacy": false,
       "lang": "zh",
-      "tocHtml": "<ol>\n<li><a href=\"/SUBJECT-PRONOUNS/index.html#%E5%8D%95%E6%95%B0\" target=\"SUBJECT-PRONOUNS\">单数</a></li>\n<li><a href=\"/SUBJECT-PRONOUNS/index.html#%E5%A4%8D%E6%95%B0\" target=\"SUBJECT-PRONOUNS\">复数</a></li>\n</ol>",
-      "path": "/SUBJECT-PRONOUNS/index.html"
+      "tocHtml": "<ol>\n<li><a href=\"#%E5%8D%95%E6%95%B0\">单数</a></li>\n<li><a href=\"#%E5%A4%8D%E6%95%B0\">复数</a></li>\n</ol>",
+      "articleHtml": "<p>动词代表一个动作, 而动作需要一个实施者, 在句子中我们通过使用主语带代表动作的实施者. 例如, 你, 我, 他, 她, 我们, 你们, 他们.</p>\n<p><strong>yo</strong>\n我</p>\n<p><strong>tú</strong>\n你</p>\n<p><strong>usted</strong>\n您</p>\n<p><strong>él</strong>\n他</p>\n<p><strong>ella</strong>\n她</p>\n<p><strong>nosotros/nosotras</strong>\n我们</p>\n<p><strong>vosotros/vosotras</strong>\n你们</p>\n<p><strong>ustedes</strong>\n您们</p>\n<p><strong>ellos/ellas</strong>\n他们/她们</p>\n<p>usted是一种更正式礼貌的形式来表达你, tú更适用于朋友亲人之间.</p>\n<p>跟老板说话的时候用<strong>usted</strong>\n跟女儿说话的时候用<strong>tú</strong>\n跟老师说话的时候用<strong>usted</strong>\n跟朋友说话的时候用<strong>tú</strong></p>\n<p>vosotros和ustedes的区别也是同根同源</p>\n<p>他们之间的主要差别就是不同程度的正式性和礼貌性.</p>\n<p>usted可以用<strong>Ud.<strong>或</strong>Vd.</strong>, ustedes可以用<strong>Uds.<strong>或</strong>Vds.</strong></p>\n<p>在西班牙语中同时还区别主语的性别例如:\n<strong>nosotros</strong>\n我们(男性团体, 或者男女混合)\n<strong>nosotras</strong>\n当我们全部人都是由女性组成的</p>\n<p>当我们对一个人或团体说话的时候用你\nustedes\nvosotros\nvosotras</p>\n<p>当我们谈论起一个团体的时候用\nellos/ellas</p>\n<p>#总结</p>\n<h2 id=\"单数\">单数<a aria-hidden=\"true\" tabindex=\"-1\" href=\"#单数\"><i class=\"fa-solid fa-link\"></i></a></h2>\n<p><strong>yo</strong>-我\n<strong>tú</strong>-你\n<strong>él</strong>-他\n<strong>ella</strong>-她\n<strong>usted</strong>-您</p>\n<h2 id=\"复数\">复数<a aria-hidden=\"true\" tabindex=\"-1\" href=\"#复数\"><i class=\"fa-solid fa-link\"></i></a></h2>\n<p><strong>nosotros</strong>\n我们(男性群体或者男女混合团体)</p>\n<p><strong>nosotras</strong>\n我们(女性群体)</p>\n<p><strong>vosotros</strong>\n你们(男性群体)</p>\n<p><strong>vosotras</strong>\n你们(女性群体)</p>\n<p><strong>ellos</strong>\n他们</p>\n<p><strong>ellas</strong>\n她们</p>\n<p><strong>ustedes</strong>\n您们</p>"
     },
     "lang": "zh",
     "_nextI18Next": {

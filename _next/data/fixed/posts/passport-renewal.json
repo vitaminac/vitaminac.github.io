@@ -2,16 +2,16 @@
   "pageProps": {
     "postData": {
       "slug": "passport-renewal",
-      "tags": ["护照", "西班牙生活"],
-      "keywords": [],
+      "tags": ["西班牙生活"],
+      "keywords": ["护照"],
       "isDraft": false,
       "isArchived": false,
       "title": "驻西大使馆在线护照更换",
       "date": "2024-10-10 23:54:23",
-      "isLegacy": true,
+      "isLegacy": false,
       "lang": "zh",
-      "tocHtml": "<ol>\n<li><a href=\"/passport-renewal/index.html#%E6%AD%A5%E9%AA%A4%E6%B5%81%E7%A8%8B\" target=\"passport-renewal\">步骤流程</a></li>\n<li><a href=\"/passport-renewal/index.html#%E5%8A%9E%E8%AF%81%E9%A1%BB%E7%9F%A5\" target=\"passport-renewal\">办证须知</a></li>\n<li><a href=\"/passport-renewal/index.html#%E5%9B%9E%E9%82%AE%E5%9C%B0%E5%9D%80%E5%8D%95\" target=\"passport-renewal\">回邮地址单</a></li>\n</ol>",
-      "path": "/passport-renewal/index.html"
+      "tocHtml": "<ol>\n<li><a href=\"#%E6%AD%A5%E9%AA%A4%E6%B5%81%E7%A8%8B\">步骤流程</a></li>\n<li><a href=\"#%E5%8A%9E%E8%AF%81%E9%A1%BB%E7%9F%A5\">办证须知</a></li>\n<li><a href=\"#%E5%9B%9E%E9%82%AE%E5%9C%B0%E5%9D%80%E5%8D%95\">回邮地址单</a></li>\n</ol>",
+      "articleHtml": "<p>现在中国护照是可以在手机app中国领事上更新的。</p>\n<ol>\n<li>下载中国领事</li>\n<li>注册登录实名验证</li>\n<li>主页选择证件办理</li>\n<li>填写资料<!-- -->\n<ul>\n<li>需要准备好白底照片，可以自己用手机拍然后修图把背景变成白色</li>\n<li>需要准备好一个当天的报纸，然后合照上传</li>\n<li>所有的信息都要填全，不要跳过，要不然之后补很麻烦</li>\n</ul>\n</li>\n<li>人脸认证<!-- -->\n<ul>\n<li>可以跳过这一步骤 但是之后会需要你远程视频来验证</li>\n</ul>\n</li>\n<li>付款</li>\n<li>把护照原件，填好的回邮地址单和付款证明邮寄给中国领事馆</li>\n<li>等领事馆制作证件，可以在app上查看进度</li>\n<li>领事馆把新护照和旧护照一起回邮给你</li>\n<li>收到新护照和旧护照，旧护照会被剪个小口不让继续使用</li>\n</ol>\n<h3 id=\"步骤流程\">步骤流程<a aria-hidden=\"true\" tabindex=\"-1\" href=\"#步骤流程\"><i class=\"fa-solid fa-link\"></i></a></h3>\n<p><img alt=\"步骤流程\" loading=\"lazy\" width=\"1170\" height=\"988\" decoding=\"async\" data-nimg=\"1\" style=\"color:transparent\" src=\"/_next/static/media/实体材料邮寄地址.0f69d213.jpg\"/></p>\n<h3 id=\"办证须知\">办证须知<a aria-hidden=\"true\" tabindex=\"-1\" href=\"#办证须知\"><i class=\"fa-solid fa-link\"></i></a></h3>\n<p><img alt=\"办证须知\" loading=\"lazy\" width=\"1170\" height=\"1612\" decoding=\"async\" data-nimg=\"1\" style=\"color:transparent\" src=\"/_next/static/media/办证须知.7d3f8fdc.png\"/></p>\n<h3 id=\"回邮地址单\">回邮地址单<a aria-hidden=\"true\" tabindex=\"-1\" href=\"#回邮地址单\"><i class=\"fa-solid fa-link\"></i></a></h3>\n<p><img alt=\"回邮地址单\" loading=\"lazy\" width=\"1754\" height=\"1241\" decoding=\"async\" data-nimg=\"1\" style=\"color:transparent\" src=\"/_next/static/media/回邮地址单.1e8d821f.jpg\"/></p>"
     },
     "lang": "zh",
     "_nextI18Next": {
