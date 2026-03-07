@@ -8,6 +8,12 @@
         "title": "Perplexity",
         "date": "2024-10-14 23:41:47",
         "content": "Introduction  The perplexity is a widely used evaluation metric in natural language processing (NLP) that measures how well a auto-regressive/causal..."
+      },
+      {
+        "slug": "vector-database",
+        "title": "Vector Database",
+        "date": "2024-09-29 19:19:40",
+        "content": "A vector database indexes and stores vector embeddings for fast retrieval and similarity search, with capabilities like CRUD operations. Vector..."
       }
     ],
     "_nextI18Next": {
