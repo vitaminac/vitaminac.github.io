@@ -1,0 +1,61 @@
+{
+  "pageProps": {
+    "postData": {
+      "slug": "Docker",
+      "tags": ["Docker", "Contenedor", "Container", "Virtualización", "DevOps"],
+      "keywords": [],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "Docker",
+      "date": "2019-02-26 22:31:02",
+      "isLegacy": true,
+      "lang": "es",
+      "tocHtml": "<ol>\n<li><a href=\"/Docker/index.html#Introducci%C3%B3n\" target=\"Docker\">Introducción</a>\n<ol>\n<li><a href=\"/Docker/index.html#Imagen-Docker\" target=\"Docker\">Imagen Docker</a></li>\n<li><a href=\"/Docker/index.html#Docker-Hub\" target=\"Docker\">Docker Hub</a></li>\n<li><a href=\"/Docker/index.html#Contenedor-Docker\" target=\"Docker\">Contenedor Docker</a></li>\n<li><a href=\"/Docker/index.html#Docker-Engine\" target=\"Docker\">Docker Engine</a></li>\n</ol>\n</li>\n<li><a href=\"/Docker/index.html#Ejemplo\" target=\"Docker\">Ejemplo</a>\n<ol>\n<li><a href=\"/Docker/index.html#DockerFile\" target=\"Docker\">DockerFile</a>\n<ol>\n<li><a href=\"/Docker/index.html#Crear-Imagen\" target=\"Docker\">Crear Imagen</a></li>\n<li><a href=\"/Docker/index.html#Macro\" target=\"Docker\">Macro</a></li>\n</ol>\n</li>\n<li><a href=\"/Docker/index.html#publicar-nuestro-imagen\" target=\"Docker\">publicar nuestro imagen</a></li>\n<li><a href=\"/Docker/index.html#Vol%C3%BAmenes-de-datos\" target=\"Docker\">Volúmenes de datos</a></li>\n<li><a href=\"/Docker/index.html#Aplicaciones-multicontenedor\" target=\"Docker\">Aplicaciones multicontenedor</a></li>\n<li><a href=\"/Docker/index.html#Docker-Swarm\" target=\"Docker\">Docker Swarm</a></li>\n</ol>\n</li>\n</ol>",
+      "path": "/Docker/index.html"
+    },
+    "lang": "es",
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "es": {
+          "navbar": {
+            "Home": "Inicio",
+            "Language": "Lenguaje",
+            "Tags": "Tags",
+            "en": "Inglés",
+            "es": "Español",
+            "zh": "Chino"
+          },
+          "post-layout": {
+            "Author": "Autor: {{author}}",
+            "Tags": "Etiquetas",
+            "Keywords": "Palabras Clave"
+          }
+        },
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          },
+          "post-layout": {
+            "Author": "Author: {{author}}",
+            "Tags": "Tags",
+            "Keywords": "Keywords"
+          }
+        }
+      },
+      "initialLocale": "es",
+      "ns": ["navbar", "post-layout"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

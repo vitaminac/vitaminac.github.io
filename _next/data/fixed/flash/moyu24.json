@@ -1,0 +1,41 @@
+{
+  "pageProps": {
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "zh": {
+          "navbar": {
+            "Home": "主页",
+            "Language": "语言",
+            "Tags": "标签",
+            "en": "英语",
+            "es": "西语",
+            "zh": "中文"
+          }
+        },
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          }
+        }
+      },
+      "initialLocale": "zh",
+      "ns": ["navbar"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    },
+    "lang": "zh",
+    "title": "魔域2.4",
+    "id": "moyu24",
+    "swf": "moyu2_4.swf"
+  },
+  "__N_SSG": true
+}

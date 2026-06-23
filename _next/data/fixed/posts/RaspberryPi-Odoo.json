@@ -1,0 +1,46 @@
+{
+  "pageProps": {
+    "postData": {
+      "slug": "RaspberryPi-Odoo",
+      "tags": ["Linux", "Raspberry", "Prestashop", "Odoo", "Docker"],
+      "keywords": [],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "RaspberryPi Odoo",
+      "date": "2024-01-02 21:12:35",
+      "isLegacy": true,
+      "lang": "en",
+      "tocHtml": "<ol>\n<li><a href=\"/RaspberryPi-Odoo/index.html#Configure-Prestashop\" target=\"RaspberryPi-Odoo\">Configure Prestashop</a>\n<ol>\n<li><a href=\"/RaspberryPi-Odoo/index.html#Install-Docker-Engine\" target=\"RaspberryPi-Odoo\">Install Docker Engine</a></li>\n<li><a href=\"/RaspberryPi-Odoo/index.html#Install-Docker-Compose\" target=\"RaspberryPi-Odoo\">Install Docker Compose</a></li>\n<li><a href=\"/RaspberryPi-Odoo/index.html#Run-Prestashop-from-Docker\" target=\"RaspberryPi-Odoo\">Run Prestashop from Docker</a></li>\n<li><a href=\"/RaspberryPi-Odoo/index.html#Complete-Installation\" target=\"RaspberryPi-Odoo\">Complete Installation</a></li>\n</ol>\n</li>\n<li><a href=\"/RaspberryPi-Odoo/index.html#Configure-Odoo\" target=\"RaspberryPi-Odoo\">Configure Odoo</a></li>\n<li><a href=\"/RaspberryPi-Odoo/index.html#Reference\" target=\"RaspberryPi-Odoo\">Reference</a></li>\n</ol>",
+      "path": "/RaspberryPi-Odoo/index.html"
+    },
+    "lang": "en",
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          },
+          "post-layout": {
+            "Author": "Author: {{author}}",
+            "Tags": "Tags",
+            "Keywords": "Keywords"
+          }
+        }
+      },
+      "initialLocale": "en",
+      "ns": ["navbar", "post-layout"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

@@ -1,0 +1,37 @@
+{
+  "pageProps": {
+    "lang": "en",
+    "tag": "Scaling Matrix",
+    "previews": [
+      {
+        "slug": "Matrices-in-Computer-Graphics",
+        "title": "Matrices in Computer Graphics",
+        "date": "2020-05-31 13:34:44",
+        "content": "Matrix Transformations  The matrices are used frequently in computer graphics and the matrix transformations are one of the core mechanics of any 3D..."
+      }
+    ],
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          }
+        }
+      },
+      "initialLocale": "en",
+      "ns": ["navbar"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

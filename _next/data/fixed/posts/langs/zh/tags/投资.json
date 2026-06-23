@@ -1,0 +1,65 @@
+{
+  "pageProps": {
+    "lang": "zh",
+    "tag": "投资",
+    "previews": [
+      {
+        "slug": "bond",
+        "title": "债券的运行原理",
+        "date": "2026-04-05 22:33:16",
+        "content": "定义  债券（英语：Bond，西语: Bono）是发行方为筹集资金而发行、在约定时间支付一定比例的利息，并在到期时偿还本金的一种借条。一个债券的四个核心信息是：  面值 (Face Value)： 借条上写的金额，即到期后你会拿回多少钱。 票面利率 (Coupon Rate)：..."
+      },
+      {
+        "slug": "bond-fund",
+        "title": "债基的运行原理",
+        "date": "2026-03-01 13:59:16",
+        "content": "开放式债基是什么？  债基简单来说就是用专业方式买入并管理一篮子债券。债基的日常收益主要来自利息，表现平稳，他的收益曲线表现平稳，一般是“涨得慢、但偶尔会跌“。绝大多数债券基金以开放式基金形态发行， 这里说的主要也是开放式基金的模式。  运作方式 募集资金:..."
+      },
+      {
+        "slug": "etf",
+        "title": "股指ETF的运行逻辑",
+        "date": "2024-12-26 15:48:16",
+        "content": "股票指数是什么? ..."
+      },
+      {
+        "slug": "vivienda-segunda-mano",
+        "title": "马德里二手房买卖流程",
+        "date": "2024-12-01 22:08:24",
+        "content": "选房  前期可以先在西班牙最大的几个房产网站上或者中介公司挂出的房源那考察了解市场行情。  在确定预算和需求（位置、房型、面积等）之后可以预约中介或者房东安排看房，确保对物业及周边环境满意。  无论新房还是二手房，房屋的价格大概率都与以下几个因素有关联  房间数量 厕所数量..."
+      }
+    ],
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "zh": {
+          "navbar": {
+            "Home": "主页",
+            "Language": "语言",
+            "Tags": "标签",
+            "en": "英语",
+            "es": "西语",
+            "zh": "中文"
+          }
+        },
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          }
+        }
+      },
+      "initialLocale": "zh",
+      "ns": ["navbar"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

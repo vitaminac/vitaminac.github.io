@@ -1,0 +1,96 @@
+{
+  "pageProps": {
+    "lang": "en",
+    "previews": [
+      {
+        "slug": "cap",
+        "title": "CAP Theorem",
+        "date": "2021-06-07 13:57:06",
+        "content": "The CAP theorem, also named as Brewer's theorem states that it is impossible for a distributed data store to simultaneously provide more than two out..."
+      },
+      {
+        "slug": "eventual-consistency",
+        "title": "Eventual Consistency",
+        "date": "2021-06-01 10:32:46",
+        "content": "Eventual consistency is a weak consistency model that ensures all replicas of a distributed system converge to identical states in the absence of..."
+      },
+      {
+        "slug": "base",
+        "title": "BASE",
+        "date": "2021-06-01 10:32:46",
+        "content": "BASE is an acronym describing the design principles behind many NoSQL and eventually consistent databases. BASE often contrasted with ACID and its..."
+      },
+      {
+        "slug": "acid",
+        "title": "ACID",
+        "date": "2021-06-01 10:32:46",
+        "content": "ACID is an acronym used in database systems to describe 4 properties that the relational database must conform with:  Atomic: Each transaction is..."
+      },
+      {
+        "slug": "STP",
+        "title": "STP",
+        "date": "2021-05-15 19:05:00",
+        "content": "Motivation  The Spanning Tree Protocol (STP) is a layer 2 protocol that runs on bridges and switches. The main purpose of STP is to ensure that you..."
+      },
+      {
+        "slug": "Testing",
+        "title": "Testing",
+        "date": "2021-04-24 11:27:04",
+        "content": "Unit Test  The purpose of unit test is to validate that each unit of the software code performs as expected. A unit may be an individual function,..."
+      },
+      {
+        "slug": "Authenticated-Encryption",
+        "title": "Authenticated Encryption",
+        "date": "2021-03-28 11:21:16",
+        "content": "Glossary Cryptographic Hash Function  It is a one-way function that maps data of arbitrary size (often called the message) to a bit array of a fixed..."
+      },
+      {
+        "slug": "Information-Security",
+        "title": "Information Security",
+        "date": "2021-03-28 11:11:17",
+        "content": "Information Security  Information security(infosec), is the practice of protecting information by mitigating information risks like ..."
+      },
+      {
+        "slug": "Testable-Design",
+        "title": "Testable Design",
+        "date": "2021-01-24 20:30:40",
+        "content": "Guidelines for Testable Design Testability issues  A programmer struggling to write a test is facing off against one of a few common show-stoppers...."
+      },
+      {
+        "slug": "SOLID",
+        "title": "SOLID Design Principles",
+        "date": "2021-01-10 17:14:33",
+        "content": "In object-oriented computer programming, SOLID is acronym and stands for a set of five design principles documented by Robert C. Martin. Keep your..."
+      }
+    ],
+    "prevPageUrl": "/posts/langs/en/pagination/2",
+    "nextPageUrl": "/posts/langs/en/pagination/4",
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          },
+          "paginated-index": {
+            "PrevPage": "← NEWER POSTS",
+            "NextPage": "OLDER POSTS →"
+          }
+        }
+      },
+      "initialLocale": "en",
+      "ns": ["navbar", "paginated-index"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

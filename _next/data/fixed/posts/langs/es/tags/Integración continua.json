@@ -1,0 +1,53 @@
+{
+  "pageProps": {
+    "lang": "es",
+    "tag": "Integración continua",
+    "previews": [
+      {
+        "slug": "Smoke-Test",
+        "title": "Smoke Test",
+        "date": "2019-04-27 23:50:38",
+        "content": "Smoke Testing  En programación informática y pruebas de software, smoke testing (también conocido como \"Build Verification Testing\") son un..."
+      },
+      {
+        "slug": "TDD-BDD-ATDD",
+        "title": "Testing TDD BDD y ATDD",
+        "date": "2019-04-27 12:55:45",
+        "content": "Común problema de desarrollo software Alejamiento entre usuario y desarrollo incumplimiento de requisitos del usuario la funcionalidad del software..."
+      }
+    ],
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "es": {
+          "navbar": {
+            "Home": "Inicio",
+            "Language": "Lenguaje",
+            "Tags": "Tags",
+            "en": "Inglés",
+            "es": "Español",
+            "zh": "Chino"
+          }
+        },
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          }
+        }
+      },
+      "initialLocale": "es",
+      "ns": ["navbar"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

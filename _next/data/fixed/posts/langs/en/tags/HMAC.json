@@ -1,0 +1,37 @@
+{
+  "pageProps": {
+    "lang": "en",
+    "tag": "HMAC",
+    "previews": [
+      {
+        "slug": "Authenticated-Encryption",
+        "title": "Authenticated Encryption",
+        "date": "2021-03-28 11:21:16",
+        "content": "Glossary Cryptographic Hash Function  It is a one-way function that maps data of arbitrary size (often called the message) to a bit array of a fixed..."
+      }
+    ],
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          }
+        }
+      },
+      "initialLocale": "en",
+      "ns": ["navbar"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

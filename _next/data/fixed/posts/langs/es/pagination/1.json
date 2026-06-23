@@ -1,0 +1,109 @@
+{
+  "pageProps": {
+    "lang": "es",
+    "previews": [
+      {
+        "slug": "vppl",
+        "title": "VPPL - Vivienda de Protección Pública de Precio Limitado",
+        "date": "2024-09-01 20:17:51",
+        "content": "Vivienda de Protección Pública de Precio Limitado (VPPL) es una vivienda protegida con una superficie construida máxima de 150 $m^2$ y precio..."
+      },
+      {
+        "slug": "Prestamo",
+        "title": "Como calcular un préstamo",
+        "date": "2021-10-23 12:09:41",
+        "content": "¿En qué consiste un préstamo?  Hay varios factores que influyen el rendimiento final de un préstamo  Capital o importe del préstamo: Es el dinero que..."
+      },
+      {
+        "slug": "Grafico-Por-Computador",
+        "title": "Grafico Por Computador",
+        "date": "2020-05-31 11:18:28",
+        "content": "Gráfico por computador Definición  Las técnicas relacionadas con la generación de imágenes en un computado, su proceso consiste en un conjunto de..."
+      },
+      {
+        "slug": "Hacer-Una-Libreria-C",
+        "title": "Hacer Una Libreria C",
+        "date": "2019-11-05 00:14:26",
+        "content": "Libraría.h  Interfaz de Usuario  Esta práctica consiste en implementar una librería en el lenguaje de programación C. con tres funciones, head, tail..."
+      },
+      {
+        "slug": "Programacion-Lineal-Entera",
+        "title": "Programación Lineal y Entera",
+        "date": "2019-05-30 18:05:04",
+        "content": "Programación Lineal Introducción  La programación lineal es una herramienta matemática que nos proporciona una forma modelar el sistema y selelcionar..."
+      },
+      {
+        "slug": "Gestion-Configuracion",
+        "title": "Gestion de Configuración",
+        "date": "2019-05-12 12:19:53",
+        "content": "Gestión de la configuración del software  Identificar, organizar, revisar y controlar las modificaciones que sufre durante el proceso de software..."
+      },
+      {
+        "slug": "Evolucion-Adaptacion-Software",
+        "title": "Evolución Adaptacion Software",
+        "date": "2019-05-11 13:09:55",
+        "content": "Evolución y Mantenimiento del Software Qué es la evolución del software  Todas las actividades de programación que se orientan a generar una nueva..."
+      },
+      {
+        "slug": "Evaluacion-De-Interfaces",
+        "title": "Evaluación de interfaces",
+        "date": "2019-05-09 16:11:07",
+        "content": "Objetivos Plannificación de una evaluación Procedimientos de evaluacion analítica Procedimientos de evaluación empírica Introducción  Las interfaces..."
+      },
+      {
+        "slug": "Usabilidad",
+        "title": "Usabilidad",
+        "date": "2019-05-09 07:54:04",
+        "content": "¿Qué es la usabilidad?  La extensión de un producto que puede ser usado por usuarios específicos para realizar objetivos específicos con efectividad,..."
+      },
+      {
+        "slug": "Angular-SPA",
+        "title": "Angular SPA",
+        "date": "2019-05-03 13:28:22",
+        "content": "Angular Introducción a Angular  Angular es un framework para desarrollo SPA, permite extender el HTML con etiquetas propias.  Angular-CLI  Proyecto ..."
+      }
+    ],
+    "nextPageUrl": "/posts/langs/es/pagination/2",
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "es": {
+          "navbar": {
+            "Home": "Inicio",
+            "Language": "Lenguaje",
+            "Tags": "Tags",
+            "en": "Inglés",
+            "es": "Español",
+            "zh": "Chino"
+          },
+          "paginated-index": {
+            "PrevPage": "← Adelante",
+            "NextPage": "Siguiente →"
+          }
+        },
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          },
+          "paginated-index": {
+            "PrevPage": "← NEWER POSTS",
+            "NextPage": "OLDER POSTS →"
+          }
+        }
+      },
+      "initialLocale": "es",
+      "ns": ["navbar", "paginated-index"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

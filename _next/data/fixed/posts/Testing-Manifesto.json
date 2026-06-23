@@ -1,0 +1,61 @@
+{
+  "pageProps": {
+    "postData": {
+      "slug": "Testing-Manifesto",
+      "tags": ["Testing Manifesto", "Testing"],
+      "keywords": [],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "Testing Manifesto",
+      "date": "2019-05-01 10:30:55",
+      "isLegacy": true,
+      "lang": "es",
+      "tocHtml": "<ol>\n<li><a href=\"/Testing-Manifesto/index.html#Pruebas-a-lo-largo-de-OVER-pruebas-al-final\" target=\"Testing-Manifesto\">Pruebas a lo largo de OVER pruebas al final</a></li>\n<li><a href=\"/Testing-Manifesto/index.html#Prevenci%C3%B3n-de-errores-OVER-encontrando-errores\" target=\"Testing-Manifesto\">Prevención de errores OVER encontrando errores</a></li>\n<li><a href=\"/Testing-Manifesto/index.html#Prueba-de-comprensi%C3%B3n-sobre-la-funcionalidad-de-verificaci%C3%B3n\" target=\"Testing-Manifesto\">Prueba de comprensión sobre la funcionalidad de verificación</a></li>\n<li><a href=\"/Testing-Manifesto/index.html#Construyendo-el-sistema-OVER-rompiendo-el-sistema\" target=\"Testing-Manifesto\">Construyendo el sistema OVER rompiendo el sistema</a></li>\n<li><a href=\"/Testing-Manifesto/index.html#Responsabilidad-del-equipo-por-la-calidad-OVER-responsabilidad-del-probador\" target=\"Testing-Manifesto\">Responsabilidad del equipo por la calidad OVER responsabilidad del probador</a></li>\n</ol>",
+      "path": "/Testing-Manifesto/index.html"
+    },
+    "lang": "es",
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "es": {
+          "navbar": {
+            "Home": "Inicio",
+            "Language": "Lenguaje",
+            "Tags": "Tags",
+            "en": "Inglés",
+            "es": "Español",
+            "zh": "Chino"
+          },
+          "post-layout": {
+            "Author": "Autor: {{author}}",
+            "Tags": "Etiquetas",
+            "Keywords": "Palabras Clave"
+          }
+        },
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          },
+          "post-layout": {
+            "Author": "Author: {{author}}",
+            "Tags": "Tags",
+            "Keywords": "Keywords"
+          }
+        }
+      },
+      "initialLocale": "es",
+      "ns": ["navbar", "post-layout"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

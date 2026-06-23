@@ -1,0 +1,47 @@
+{
+  "pageProps": {
+    "lang": "es",
+    "tag": "SonarQube",
+    "previews": [
+      {
+        "slug": "SonarQube",
+        "title": "SonarQube",
+        "date": "2019-04-28 23:24:42",
+        "content": "SonarQube es la implementación SQALE, que se trata de \"organizar los requisitos no funcionales relacionados con la calidad del código\".  La..."
+      }
+    ],
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "es": {
+          "navbar": {
+            "Home": "Inicio",
+            "Language": "Lenguaje",
+            "Tags": "Tags",
+            "en": "Inglés",
+            "es": "Español",
+            "zh": "Chino"
+          }
+        },
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          }
+        }
+      },
+      "initialLocale": "es",
+      "ns": ["navbar"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

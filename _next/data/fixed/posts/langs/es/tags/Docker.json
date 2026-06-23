@@ -1,0 +1,53 @@
+{
+  "pageProps": {
+    "lang": "es",
+    "tag": "Docker",
+    "previews": [
+      {
+        "slug": "Virtualization",
+        "title": "Virtualización, Contenedores y Cloud Computing",
+        "date": "2019-02-26 23:19:07",
+        "content": "Introducción  La virtualización es una técnica que permite la emulación de algún recurso tecnológico.  Máquina virtual  Virtualización de un entorno..."
+      },
+      {
+        "slug": "Docker",
+        "title": "Docker",
+        "date": "2019-02-26 22:31:02",
+        "content": "Introducción  La idea detrás de Docker es crear contenedores ligeros y portables para las aplicaciones software que puedan ejecutarse en cualquier..."
+      }
+    ],
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "es": {
+          "navbar": {
+            "Home": "Inicio",
+            "Language": "Lenguaje",
+            "Tags": "Tags",
+            "en": "Inglés",
+            "es": "Español",
+            "zh": "Chino"
+          }
+        },
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          }
+        }
+      },
+      "initialLocale": "es",
+      "ns": ["navbar"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

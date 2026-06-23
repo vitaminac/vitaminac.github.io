@@ -1,0 +1,37 @@
+{
+  "pageProps": {
+    "lang": "en",
+    "tag": "Microeconomics",
+    "previews": [
+      {
+        "slug": "Microeconomics",
+        "title": "Microeconomics",
+        "date": "2019-01-31 22:53:35",
+        "content": "Supply, demand, and market equilibrium Introduction to economics  He being an economic actor, neither intends to promote the public interest, nor..."
+      }
+    ],
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          }
+        }
+      },
+      "initialLocale": "en",
+      "ns": ["navbar"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

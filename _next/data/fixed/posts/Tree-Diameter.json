@@ -1,0 +1,46 @@
+{
+  "pageProps": {
+    "postData": {
+      "slug": "Tree-Diameter",
+      "tags": ["algorithms"],
+      "keywords": [],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "Tree Diameter",
+      "date": "2020-03-07 10:00:44",
+      "isLegacy": true,
+      "lang": "en",
+      "tocHtml": "<ol>\n<li><a href=\"/Tree-Diameter/index.html#Definition\" target=\"Tree-Diameter\">Definition</a></li>\n<li><a href=\"/Tree-Diameter/index.html#Finding-The-Diameter-of-N-Ary-Tree\" target=\"Tree-Diameter\">Finding The Diameter of N-Ary Tree</a>\n<ol>\n<li><a href=\"/Tree-Diameter/index.html#Greedy-Algorithm\" target=\"Tree-Diameter\">Greedy Algorithm</a></li>\n<li><a href=\"/Tree-Diameter/index.html#Implementation\" target=\"Tree-Diameter\">Implementation</a></li>\n</ol>\n</li>\n<li><a href=\"/Tree-Diameter/index.html#Proof\" target=\"Tree-Diameter\">Proof</a>\n<ol>\n<li><a href=\"/Tree-Diameter/index.html#Properties-of-Trees\" target=\"Tree-Diameter\">Properties of Trees</a></li>\n<li><a href=\"/Tree-Diameter/index.html#Proof-by-Contradiction\" target=\"Tree-Diameter\">Proof by Contradiction</a></li>\n</ol>\n</li>\n<li><a href=\"/Tree-Diameter/index.html#Reference\" target=\"Tree-Diameter\">Reference</a></li>\n</ol>",
+      "path": "/Tree-Diameter/index.html"
+    },
+    "lang": "en",
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          },
+          "post-layout": {
+            "Author": "Author: {{author}}",
+            "Tags": "Tags",
+            "Keywords": "Keywords"
+          }
+        }
+      },
+      "initialLocale": "en",
+      "ns": ["navbar", "post-layout"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

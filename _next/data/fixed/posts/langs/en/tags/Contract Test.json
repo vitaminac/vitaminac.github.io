@@ -1,0 +1,37 @@
+{
+  "pageProps": {
+    "lang": "en",
+    "tag": "Contract Test",
+    "previews": [
+      {
+        "slug": "Testing",
+        "title": "Testing",
+        "date": "2021-04-24 11:27:04",
+        "content": "Unit Test  The purpose of unit test is to validate that each unit of the software code performs as expected. A unit may be an individual function,..."
+      }
+    ],
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          }
+        }
+      },
+      "initialLocale": "en",
+      "ns": ["navbar"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

@@ -1,0 +1,47 @@
+{
+  "pageProps": {
+    "lang": "es",
+    "tag": "Process",
+    "previews": [
+      {
+        "slug": "minishell",
+        "title": "La implementación de minishell en Linux",
+        "date": "2018-12-03 18:05:41",
+        "content": "La Implementación de intérprete de mandatos en Linux Introducción  ¿Qué es un intérprete de mandatos? Es un programa que hace la interfaz en modo..."
+      }
+    ],
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "es": {
+          "navbar": {
+            "Home": "Inicio",
+            "Language": "Lenguaje",
+            "Tags": "Tags",
+            "en": "Inglés",
+            "es": "Español",
+            "zh": "Chino"
+          }
+        },
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          }
+        }
+      },
+      "initialLocale": "es",
+      "ns": ["navbar"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

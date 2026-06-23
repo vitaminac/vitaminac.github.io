@@ -1,0 +1,61 @@
+{
+  "pageProps": {
+    "postData": {
+      "slug": "Behat",
+      "tags": ["BDD"],
+      "keywords": [],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "Behat",
+      "date": "2019-04-28 23:08:37",
+      "isLegacy": true,
+      "lang": "es",
+      "tocHtml": "",
+      "path": "/Behat/index.html"
+    },
+    "lang": "es",
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "es": {
+          "navbar": {
+            "Home": "Inicio",
+            "Language": "Lenguaje",
+            "Tags": "Tags",
+            "en": "Inglés",
+            "es": "Español",
+            "zh": "Chino"
+          },
+          "post-layout": {
+            "Author": "Autor: {{author}}",
+            "Tags": "Etiquetas",
+            "Keywords": "Palabras Clave"
+          }
+        },
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          },
+          "post-layout": {
+            "Author": "Author: {{author}}",
+            "Tags": "Tags",
+            "Keywords": "Keywords"
+          }
+        }
+      },
+      "initialLocale": "es",
+      "ns": ["navbar", "post-layout"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

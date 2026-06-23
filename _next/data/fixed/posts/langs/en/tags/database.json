@@ -1,0 +1,79 @@
+{
+  "pageProps": {
+    "lang": "en",
+    "tag": "database",
+    "previews": [
+      {
+        "slug": "vector-database",
+        "title": "Vector Database",
+        "date": "2024-09-29 19:19:40",
+        "content": "A vector database indexes and stores vector embeddings for fast retrieval and similarity search, with capabilities like CRUD operations. Vector..."
+      },
+      {
+        "slug": "Client-Centric-Consistency-Models",
+        "title": "Client-Centric Consistency Models",
+        "date": "2021-07-03 15:06:02",
+        "content": "Eventual consistent data stores work fine as long as clients always access the same replica. However, problems arise when different replicas are..."
+      },
+      {
+        "slug": "cap",
+        "title": "CAP Theorem",
+        "date": "2021-06-07 13:57:06",
+        "content": "The CAP theorem, also named as Brewer's theorem states that it is impossible for a distributed data store to simultaneously provide more than two out..."
+      },
+      {
+        "slug": "eventual-consistency",
+        "title": "Eventual Consistency",
+        "date": "2021-06-01 10:32:46",
+        "content": "Eventual consistency is a weak consistency model that ensures all replicas of a distributed system converge to identical states in the absence of..."
+      },
+      {
+        "slug": "base",
+        "title": "BASE",
+        "date": "2021-06-01 10:32:46",
+        "content": "BASE is an acronym describing the design principles behind many NoSQL and eventually consistent databases. BASE often contrasted with ACID and its..."
+      },
+      {
+        "slug": "acid",
+        "title": "ACID",
+        "date": "2021-06-01 10:32:46",
+        "content": "ACID is an acronym used in database systems to describe 4 properties that the relational database must conform with:  Atomic: Each transaction is..."
+      },
+      {
+        "slug": "MongoDB",
+        "title": "MongoDB",
+        "date": "2020-06-07 13:57:06",
+        "content": "Scalability  NoSQL is intented to offer more scalability. A balance between the scalability and the consistency.  Vertical  Functional decomposition ..."
+      },
+      {
+        "slug": "Neo4j-Graph-Database",
+        "title": "Neo4j Graph Database",
+        "date": "2019-10-11 23:37:29",
+        "content": "Neo4j  Neo4j is an open source, NoSQL, native graph databases. In Neo4j, the data are persisted for long term durability. Neo4j can be used with both..."
+      }
+    ],
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          }
+        }
+      },
+      "initialLocale": "en",
+      "ns": ["navbar"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

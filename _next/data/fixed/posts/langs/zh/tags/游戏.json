@@ -1,0 +1,47 @@
+{
+  "pageProps": {
+    "lang": "zh",
+    "tag": "游戏",
+    "previews": [
+      {
+        "slug": "skyrim",
+        "title": "老滚5天际周年版安装教程",
+        "date": "2024-08-29 20:29:39",
+        "content": "游戏和Mods安装  下载游戏本体和游戏更新到版本v1.6.1170。  解压安装游戏本体。 解压更新压缩包按顺序再游戏目录下一个一个执行更新程序 执行SkyrimSELauncher.exe设置启动参数 下载安装Vortex 在Vortex里面添加Skyrim Special Edition..."
+      }
+    ],
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "zh": {
+          "navbar": {
+            "Home": "主页",
+            "Language": "语言",
+            "Tags": "标签",
+            "en": "英语",
+            "es": "西语",
+            "zh": "中文"
+          }
+        },
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          }
+        }
+      },
+      "initialLocale": "zh",
+      "ns": ["navbar"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

@@ -1,0 +1,61 @@
+{
+  "pageProps": {
+    "postData": {
+      "slug": "python-exe-reverse-engineering",
+      "tags": ["python", "PyInstaller"],
+      "keywords": [],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "Python打包的可执行文件的逆向工程",
+      "date": "2024-03-28 20:39:24",
+      "isLegacy": true,
+      "lang": "zh",
+      "tocHtml": "<ol>\n<li><a href=\"/python-exe-reverse-engineering/index.html#PyInstaller\" target=\"python-exe-reverse-engineering\">PyInstaller</a>\n<ol>\n<li><a href=\"/python-exe-reverse-engineering/index.html#%E5%8A%A0%E5%AF%86\" target=\"python-exe-reverse-engineering\">加密</a></li>\n</ol>\n</li>\n<li><a href=\"/python-exe-reverse-engineering/index.html#%E5%8F%82%E8%80%83\" target=\"python-exe-reverse-engineering\">参考</a></li>\n</ol>",
+      "path": "/python-exe-reverse-engineering/index.html"
+    },
+    "lang": "zh",
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "zh": {
+          "navbar": {
+            "Home": "主页",
+            "Language": "语言",
+            "Tags": "标签",
+            "en": "英语",
+            "es": "西语",
+            "zh": "中文"
+          },
+          "post-layout": {
+            "Author": "作者: {{author}}",
+            "Tags": "标签",
+            "Keywords": "关键词"
+          }
+        },
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          },
+          "post-layout": {
+            "Author": "Author: {{author}}",
+            "Tags": "Tags",
+            "Keywords": "Keywords"
+          }
+        }
+      },
+      "initialLocale": "zh",
+      "ns": ["navbar", "post-layout"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

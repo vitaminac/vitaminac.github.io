@@ -1,0 +1,643 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="content-language" content="en" />
+    <link rel="icon" href="/favicon.ico" />
+    <title>Remote Access Via TightVNC To Windows Machine</title>
+    <meta
+      name="og:title"
+      content="Remote Access Via TightVNC To Windows Machine"
+    />
+    <meta name="author" content="Gao" />
+    <meta name="keywords" content="VNC,TightVNC,Workspace Setup" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="next-head-count" content="10" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.27/dist/katex.min.css"
+      integrity="sha384-Pu5+C18nP5dwykLJOhd2U4Xen7rjScHN/qusop27hdd2drI+lL5KvX7YntvT8yew"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+      integrity="sha512-hasIneQUHlh06VNBe7f6ZcHmeRTLIaQWFd43YriJ0UND19bvYRauxthDg8E4eVNPm9bRUhr5JGeqH7FRFXQu5g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="preload"
+      href="/_next/static/css/a169840b427f8744.css"
+      as="style"
+    />
+    <link
+      rel="stylesheet"
+      href="/_next/static/css/a169840b427f8744.css"
+      data-n-g=""
+    />
+    <link
+      rel="preload"
+      href="/_next/static/css/b6f191fba809344d.css"
+      as="style"
+    />
+    <link
+      rel="stylesheet"
+      href="/_next/static/css/b6f191fba809344d.css"
+      data-n-p=""
+    />
+    <noscript data-n-css=""></noscript>
+    <script
+      defer=""
+      nomodule=""
+      src="/_next/static/chunks/polyfills-42372ed130431b0a.js"
+    ></script>
+    <script src="/_next/static/chunks/webpack.js" defer=""></script>
+    <script src="/_next/static/chunks/framework.js" defer=""></script>
+    <script src="/_next/static/chunks/main.js" defer=""></script>
+    <script src="/_next/static/chunks/pages/_app.js" defer=""></script>
+    <script src="/_next/static/chunks/367.js" defer=""></script>
+    <script src="/_next/static/chunks/503.js" defer=""></script>
+    <script src="/_next/static/chunks/287.js" defer=""></script>
+    <script
+      src="/_next/static/chunks/pages/posts/%5Bslug%5D.js"
+      defer=""
+    ></script>
+    <script src="/_next/static/fixed/_buildManifest.js" defer=""></script>
+    <script src="/_next/static/fixed/_ssgManifest.js" defer=""></script>
+  </head>
+  <body>
+    <div id="__next">
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+        crossorigin="anonymous"
+      />
+      <nav
+        class="navbar navbar-expand-md navbar-light sticky-top NavigationBar_navBar__fSiIq tw-bg-white/95 tw-shadow tw-shadow-black/25"
+      >
+        <div class="container-fluid px-md-5">
+          <div class="navbar-brand animate__animated animate__pulse">
+            <span
+              class="tw-rounded tw-bg-black tw-p-1 tw-text-xl tw-font-medium tw-text-white"
+              >Gao&#x27;s blog</span
+            >
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="navbar-collapse collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="/posts/langs/en/pagination/1/"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="/posts/langs/en/tags/"
+                  >Tags</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  >Language</a
+                >
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li>
+                    <a class="dropdown-item" href="/posts/langs/en/">English</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/posts/langs/es/">Spanish</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/posts/langs/zh/">Chinese</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <main>
+        <header
+          class="tw-relative tw-flex tw-h-96 tw-w-full tw-flex-col tw-content-center tw-justify-center tw-bg-cover tw-bg-center tw-bg-no-repeat tw-text-center tw-text-white"
+          style="
+            background-image: url(/_next/static/media/default-post-preview.c96b099a.jpeg);
+            left: calc(50% - 50vw);
+          "
+        >
+          <h1>Remote Access Via TightVNC To Windows Machine</h1>
+          <p>Author: Gao</p>
+          <span
+            ><i class="fa-regular fa-calendar"></i
+            ><time class="tw-pl-1.5" datetime="2022-08-13 11:35:55"
+              >August 13, 2022</time
+            ></span
+          >
+          <section class="tw-mt-3 tw-text-center">
+            <p>Tags<!-- -->:</p>
+            <ul class="tw-p-0">
+              <li class="tw-inline tw-px-1">
+                <a
+                  class="tw-m-0.5 tw-inline-block tw-rounded tw-border tw-border-solid tw-border-white tw-bg-neutral-300 tw-px-2 tw-text-sm tw-leading-6 tw-text-white tw-no-underline hover:tw-bg-sky-300"
+                  href="/posts/langs/en/tags/VNC/"
+                  >VNC</a
+                >
+              </li>
+              <li class="tw-inline tw-px-1">
+                <a
+                  class="tw-m-0.5 tw-inline-block tw-rounded tw-border tw-border-solid tw-border-white tw-bg-neutral-300 tw-px-2 tw-text-sm tw-leading-6 tw-text-white tw-no-underline hover:tw-bg-sky-300"
+                  href="/posts/langs/en/tags/TightVNC/"
+                  >TightVNC</a
+                >
+              </li>
+              <li class="tw-inline tw-px-1">
+                <a
+                  class="tw-m-0.5 tw-inline-block tw-rounded tw-border tw-border-solid tw-border-white tw-bg-neutral-300 tw-px-2 tw-text-sm tw-leading-6 tw-text-white tw-no-underline hover:tw-bg-sky-300"
+                  href="/posts/langs/en/tags/Workspace%20Setup/"
+                  >Workspace Setup</a
+                >
+              </li>
+            </ul>
+          </section>
+        </header>
+        <div class="container">
+          <div class="row">
+            <nav class="Post_toc__TAzIW col-12 col-lg-3 order-lg-2">
+              <ol>
+                <li>
+                  <a href="#Install-VNC-Server-on-Windows-Machine"
+                    >Install VNC Server on Windows Machine</a
+                  >
+                </li>
+                <li>
+                  <a href="#TightVNC-Configuration-on-Windows-Machine"
+                    >TightVNC Configuration on Windows Machine</a
+                  >
+                </li>
+                <li>
+                  <a href="#Configure-OpenSSH-Server"
+                    >Configure OpenSSH Server</a
+                  >
+                </li>
+                <li>
+                  <a href="#Key-Based-Authentication"
+                    >Key Based Authentication</a
+                  >
+                </li>
+                <li>
+                  <a href="#Port-Forward-for-SSH-Server"
+                    >Port Forward for SSH Server</a
+                  >
+                </li>
+                <li>
+                  <a href="#Connect-from-Remote-Machine"
+                    >Connect from Remote Machine</a
+                  >
+                </li>
+                <li><a href="#Reference">Reference</a></li>
+              </ol>
+            </nav>
+            <article class="Post_content__QBxez col-12 order-lg-1 col-lg-9">
+              <h2 id="Install-VNC-Server-on-Windows-Machine">
+                Install VNC Server on Windows Machine<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Install-VNC-Server-on-Windows-Machine"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <p>
+                Download
+                <a
+                  href="https://www.tightvnc.com/download.php"
+                  rel="nofollow"
+                  target="_blank"
+                  >TightVNC</a
+                >
+                which is free VNC server that support Windows 11 and then
+                install TightVNC on Windows machine.
+              </p>
+              <h2 id="TightVNC-Configuration-on-Windows-Machine">
+                TightVNC Configuration on Windows Machine<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#TightVNC-Configuration-on-Windows-Machine"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <ol>
+                <li>Click on <strong>Register TightVNC Service</strong></li>
+                <li>
+                  Click on
+                  <strong>TightVNC Service - Offline Configuration</strong>
+                  <ul>
+                    <li>
+                      From tab <strong>Server</strong>
+                      <ul>
+                        <li>
+                          Check <strong>Require VNC Authentication</strong> and
+                          set password
+                        </li>
+                        <li>Uncheck <strong>Enable file transfers</strong></li>
+                        <li>Uncheck <strong>Hide desktop wallpaper</strong></li>
+                        <li>
+                          Uncheck
+                          <strong>Serve Java Viewer to Web clients</strong>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      From tab <strong>Access Control</strong>
+                      <ul>
+                        <li>
+                          Check <strong>Allow loopback connections</strong>
+                        </li>
+                        <li>
+                          Check <strong>Allow only loopback connections</strong>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      From tab <strong>Administration</strong>
+                      <ul>
+                        <li>
+                          Check
+                          <strong
+                            >Protect control operations with a password</strong
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li>Save the confguration</li>
+                  </ul>
+                </li>
+                <li>Click on <strong>Start TightVNC Service</strong></li>
+              </ol>
+              <h2 id="Configure-OpenSSH-Server">
+                Configure OpenSSH Server<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Configure-OpenSSH-Server"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <p>
+                Install OpenSSH server following these
+                <a
+                  href="https://github.com/PowerShell/Win32-OpenSSH/wiki/Install-Win32-OpenSSH"
+                  rel="nofollow"
+                  target="_blank"
+                  >instructions</a
+                >
+                and configure sshd with these
+                <a
+                  href="https://github.com/PowerShell/Win32-OpenSSH/wiki/sshd_config"
+                  rel="nofollow"
+                  target="_blank"
+                  >instructions</a
+                >
+                e.g. set port to <strong>2222</strong>.
+              </p>
+              <h2 id="Key-Based-Authentication">
+                <a
+                  href="https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement"
+                  rel="nofollow"
+                  target="_blank"
+                  >Key Based Authentication</a
+                ><a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Key-Based-Authentication"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <p>
+                Execute following command in remote machine and copy the content
+                of <code>id_ed25519.pub</code> to the
+                <code>~/.ssh/authorized_keys</code> of Windows machine. If you
+                face permission issue try this
+                <a
+                  href="https://stackoverflow.com/a/50502015"
+                  rel="nofollow"
+                  target="_blank"
+                  >workaround</a
+                >.
+              </p>
+              <pre><code>ssh-keygen -t ed25519
+</code></pre>
+              <h2 id="Port-Forward-for-SSH-Server">
+                Port Forward for SSH Server<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Port-Forward-for-SSH-Server"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <p>
+                Follow
+                <a
+                  href="/D-LINK-DIR-882-A1-OpenWrt/#Expose-Internal-Service-to-Internet"
+                  >these instructions</a
+                >
+                to expose port <strong>2222</strong> to the Internet.
+              </p>
+              <h2 id="Connect-from-Remote-Machine">
+                Connect from Remote Machine<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Connect-from-Remote-Machine"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <p>
+                Download
+                <a
+                  href="https://www.tightvnc.com/download.php"
+                  rel="nofollow"
+                  target="_blank"
+                  >TightVNC Java Viewer</a
+                >, unzip and open jar. Execute SSH
+                <a
+                  href="https://www.tightvnc.com/faq.php#portfwd"
+                  rel="nofollow"
+                  target="_blank"
+                  >port forwarding to TightVNC</a
+                >
+                <code
+                  >ssh -N -L 5900:localhost:5900 &lt;your Windows user
+                  name&gt;@&lt;your public domain name&gt; -p &lt;SSH port&gt;
+                  -vv</code
+                >. Introduce <code>localhost</code> on
+                <strong>Remote Host</strong> text box, <code>5900</code> on
+                <strong>Port</strong> text box of
+                <strong>TightVNC Java Viewer</strong> and click Connect,
+                introduce access password, got it!
+              </p>
+              <h2 id="Reference">
+                Reference<a aria-hidden="true" tabindex="-1" href="#Reference"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <ul>
+                <li>
+                  <a
+                    href="https://www.tightvnc.com/faq.php#howsecure"
+                    rel="nofollow"
+                    target="_blank"
+                    >How secure is TightVNC?</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.tightvnc.com/faq.php#portfwd"
+                    rel="nofollow"
+                    target="_blank"
+                    >How would I connect from the Internet to a machine in the
+                    internal network which is behind a router?</a
+                  >
+                </li>
+              </ul>
+            </article>
+          </div>
+          <aside></aside>
+        </div>
+      </main>
+      <footer class="tw-text-center tw-text-gray-400">
+        <ul class="list-inline text-center tw-text-stone-700">
+          <li class="list-inline-item">
+            <a
+              class="tw-text-stone-700"
+              target="_blank"
+              href="https://www.linkedin.com/in/shuxig"
+              ><span class="fa-stack fa-lg"
+                ><i class="fa fa-circle fa-stack-2x"></i
+                ><i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i></span
+            ></a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              class="tw-text-stone-700"
+              target="_blank"
+              href="https://github.com/vitaminac"
+              ><span class="fa-stack fa-lg"
+                ><i class="fa fa-circle fa-stack-2x"></i
+                ><i class="fab fa-github fa-stack-1x fa-inverse"></i></span
+            ></a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              class="tw-text-stone-700"
+              target="_blank"
+              href="https://gist.github.com/vitaminac"
+              ><span class="fa-stack fa-lg"
+                ><i class="fa fa-circle fa-stack-2x"></i
+                ><i
+                  class="fab fa-github-square fa-stack-1x fa-inverse"
+                ></i></span
+            ></a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              class="tw-text-stone-700"
+              target="_blank"
+              href="https://gitlab.com/vitaminac"
+              ><span class="fa-stack fa-lg"
+                ><i class="fa fa-circle fa-stack-2x"></i
+                ><i class="fab fa-gitlab fa-stack-1x fa-inverse"></i></span
+            ></a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              class="tw-text-stone-700"
+              target="_blank"
+              href="https://www.xiaohongshu.com/user/profile/622dca68000000001000c9b2"
+              ><span class="fa-stack fa-lg"
+                ><img
+                  alt="小红书"
+                  loading="lazy"
+                  width="256"
+                  height="256"
+                  decoding="async"
+                  data-nimg="1"
+                  class="tw-max-h-full tw-max-w-full"
+                  style="color: transparent"
+                  src="/_next/static/media/redbook.d1759325.svg" /></span
+            ></a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              class="tw-text-stone-700"
+              target="_blank"
+              href="https://www.kaggle.com/dalao1002"
+              ><span class="fa-stack fa-lg"
+                ><i class="fa fa-circle fa-stack-2x"></i
+                ><i class="fab fa-kaggle fa-stack-1x fa-inverse"></i></span
+            ></a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              class="tw-text-stone-700"
+              target="_blank"
+              href="https://leetcode.com/dalao1002"
+              ><span class="fa-stack fa-lg"
+                ><i class="fa fa-circle fa-stack-2x"></i
+                ><i class="fas fa-code fa-stack-1x fa-inverse"></i></span
+            ></a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              class="tw-text-stone-700"
+              target="_blank"
+              href="https://stackexchange.com/users/13825906"
+              ><span class="fa-stack fa-lg"
+                ><i class="fa fa-circle fa-stack-2x"></i
+                ><i
+                  class="fab fa-stack-overflow fa-stack-1x fa-inverse"
+                ></i></span
+            ></a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              class="tw-text-stone-700"
+              target="_blank"
+              href="mailto:dalao1002@gmail.com?subject=From my blog&amp;body=Hi,I found this website very useful"
+              ><span class="fa-stack fa-lg"
+                ><i class="fa fa-circle fa-stack-2x"></i
+                ><i class="fas fa-envelope fa-stack-1x fa-inverse"></i></span
+            ></a>
+          </li>
+        </ul>
+        <img
+          alt="QR"
+          loading="lazy"
+          width="1710"
+          height="624"
+          decoding="async"
+          data-nimg="1"
+          class="tw-mx-auto tw-max-w-full tw-object-contain tw-object-center lg:tw-max-w-xl"
+          style="color: transparent"
+          src="/_next/static/media/QR.b48259ea.png"
+        />
+        <p>Copyright © Gao&#x27;s blog 2026</p>
+      </footer>
+    </div>
+    <script id="__NEXT_DATA__" type="application/json">
+      {
+        "props": {
+          "pageProps": {
+            "postData": {
+              "slug": "Remote-Access-Via-TightVNC-To-Windows-Machine",
+              "tags": ["VNC", "TightVNC", "Workspace Setup"],
+              "keywords": [],
+              "isDraft": false,
+              "isArchived": false,
+              "title": "Remote Access Via TightVNC To Windows Machine",
+              "date": "2022-08-13 11:35:55",
+              "isLegacy": false,
+              "lang": "en",
+              "tocHtml": "\u003col\u003e\n\u003cli\u003e\u003ca href=\"#Install-VNC-Server-on-Windows-Machine\"\u003eInstall VNC Server on Windows Machine\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#TightVNC-Configuration-on-Windows-Machine\"\u003eTightVNC Configuration on Windows Machine\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Configure-OpenSSH-Server\"\u003eConfigure OpenSSH Server\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Key-Based-Authentication\"\u003eKey Based Authentication\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Port-Forward-for-SSH-Server\"\u003ePort Forward for SSH Server\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Connect-from-Remote-Machine\"\u003eConnect from Remote Machine\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Reference\"\u003eReference\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e",
+              "articleHtml": "\u003ch2 id=\"Install-VNC-Server-on-Windows-Machine\"\u003eInstall VNC Server on Windows Machine\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Install-VNC-Server-on-Windows-Machine\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003eDownload \u003ca href=\"https://www.tightvnc.com/download.php\" rel=\"nofollow\" target=\"_blank\"\u003eTightVNC\u003c/a\u003e which is free VNC server that support Windows 11 and then install TightVNC on Windows machine.\u003c/p\u003e\n\u003ch2 id=\"TightVNC-Configuration-on-Windows-Machine\"\u003eTightVNC Configuration on Windows Machine\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#TightVNC-Configuration-on-Windows-Machine\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003col\u003e\n\u003cli\u003eClick on \u003cstrong\u003eRegister TightVNC Service\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003eClick on \u003cstrong\u003eTightVNC Service - Offline Configuration\u003c/strong\u003e\n\u003cul\u003e\n\u003cli\u003eFrom tab \u003cstrong\u003eServer\u003c/strong\u003e\n\u003cul\u003e\n\u003cli\u003eCheck \u003cstrong\u003eRequire VNC Authentication\u003c/strong\u003e and set password\u003c/li\u003e\n\u003cli\u003eUncheck \u003cstrong\u003eEnable file transfers\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003eUncheck \u003cstrong\u003eHide desktop wallpaper\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003eUncheck \u003cstrong\u003eServe Java Viewer to Web clients\u003c/strong\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eFrom tab \u003cstrong\u003eAccess Control\u003c/strong\u003e\n\u003cul\u003e\n\u003cli\u003eCheck \u003cstrong\u003eAllow loopback connections\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003eCheck \u003cstrong\u003eAllow only loopback connections\u003c/strong\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eFrom tab \u003cstrong\u003eAdministration\u003c/strong\u003e\n\u003cul\u003e\n\u003cli\u003eCheck \u003cstrong\u003eProtect control operations with a password\u003c/strong\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eSave the confguration\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eClick on \u003cstrong\u003eStart TightVNC Service\u003c/strong\u003e\u003c/li\u003e\n\u003c/ol\u003e\n\u003ch2 id=\"Configure-OpenSSH-Server\"\u003eConfigure OpenSSH Server\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Configure-OpenSSH-Server\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003eInstall OpenSSH server following these \u003ca href=\"https://github.com/PowerShell/Win32-OpenSSH/wiki/Install-Win32-OpenSSH\" rel=\"nofollow\" target=\"_blank\"\u003einstructions\u003c/a\u003e and configure sshd with these \u003ca href=\"https://github.com/PowerShell/Win32-OpenSSH/wiki/sshd_config\" rel=\"nofollow\" target=\"_blank\"\u003einstructions\u003c/a\u003e e.g. set port to \u003cstrong\u003e2222\u003c/strong\u003e.\u003c/p\u003e\n\u003ch2 id=\"Key-Based-Authentication\"\u003e\u003ca href=\"https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement\" rel=\"nofollow\" target=\"_blank\"\u003eKey Based Authentication\u003c/a\u003e\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Key-Based-Authentication\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003eExecute following command in remote machine and copy the content of \u003ccode\u003eid_ed25519.pub\u003c/code\u003e to the \u003ccode\u003e~/.ssh/authorized_keys\u003c/code\u003e of Windows machine. If you face permission issue try this \u003ca href=\"https://stackoverflow.com/a/50502015\" rel=\"nofollow\" target=\"_blank\"\u003eworkaround\u003c/a\u003e.\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003essh-keygen -t ed25519\n\u003c/code\u003e\u003c/pre\u003e\n\u003ch2 id=\"Port-Forward-for-SSH-Server\"\u003ePort Forward for SSH Server\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Port-Forward-for-SSH-Server\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003eFollow \u003ca href=\"/D-LINK-DIR-882-A1-OpenWrt/#Expose-Internal-Service-to-Internet\"\u003ethese instructions\u003c/a\u003e to expose port \u003cstrong\u003e2222\u003c/strong\u003e to the Internet.\u003c/p\u003e\n\u003ch2 id=\"Connect-from-Remote-Machine\"\u003eConnect from Remote Machine\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Connect-from-Remote-Machine\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003eDownload \u003ca href=\"https://www.tightvnc.com/download.php\" rel=\"nofollow\" target=\"_blank\"\u003eTightVNC Java Viewer\u003c/a\u003e, unzip and open jar. Execute SSH \u003ca href=\"https://www.tightvnc.com/faq.php#portfwd\" rel=\"nofollow\" target=\"_blank\"\u003eport forwarding to TightVNC\u003c/a\u003e \u003ccode\u003essh -N -L 5900:localhost:5900 \u0026lt;your Windows user name\u0026gt;@\u0026lt;your public domain name\u0026gt; -p \u0026lt;SSH port\u0026gt; -vv\u003c/code\u003e. Introduce \u003ccode\u003elocalhost\u003c/code\u003e on \u003cstrong\u003eRemote Host\u003c/strong\u003e text box, \u003ccode\u003e5900\u003c/code\u003e on \u003cstrong\u003ePort\u003c/strong\u003e text box of \u003cstrong\u003eTightVNC Java Viewer\u003c/strong\u003e and click Connect, introduce access password, got it!\u003c/p\u003e\n\u003ch2 id=\"Reference\"\u003eReference\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Reference\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href=\"https://www.tightvnc.com/faq.php#howsecure\" rel=\"nofollow\" target=\"_blank\"\u003eHow secure is TightVNC?\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://www.tightvnc.com/faq.php#portfwd\" rel=\"nofollow\" target=\"_blank\"\u003eHow would I connect from the Internet to a machine in the internal network which is behind a router?\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e"
+            },
+            "lang": "en",
+            "_nextI18Next": {
+              "initialI18nStore": {
+                "en": {
+                  "navbar": {
+                    "Home": "Home",
+                    "Language": "Language",
+                    "Tags": "Tags",
+                    "en": "English",
+                    "es": "Spanish",
+                    "zh": "Chinese"
+                  },
+                  "post-layout": {
+                    "Author": "Author: {{author}}",
+                    "Tags": "Tags",
+                    "Keywords": "Keywords"
+                  }
+                }
+              },
+              "initialLocale": "en",
+              "ns": ["navbar", "post-layout"],
+              "userConfig": {
+                "i18n": {
+                  "defaultLocale": "en",
+                  "locales": ["en", "es", "zh"]
+                },
+                "default": {
+                  "i18n": {
+                    "defaultLocale": "en",
+                    "locales": ["en", "es", "zh"]
+                  }
+                }
+              }
+            }
+          },
+          "__N_SSG": true
+        },
+        "page": "/posts/[slug]",
+        "query": { "slug": "Remote-Access-Via-TightVNC-To-Windows-Machine" },
+        "buildId": "fixed",
+        "runtimeConfig": {
+          "siteConfig": {
+            "siteAuthor": "Gao",
+            "siteTitle": "Gao's blog",
+            "siteDescription": "Gao's blog",
+            "aboutMe": "see more about me on my Github profile.",
+            "email": "dalao1002@gmail.com",
+            "linkedin": "shuxig",
+            "github": "vitaminac",
+            "gitlab": "vitaminac",
+            "redbook": "622dca68000000001000c9b2",
+            "kaggle": "dalao1002",
+            "leetcode": "dalao1002",
+            "stackexchange": "13825906",
+            "disqusUsername": "blog-vnwybnwkiz",
+            "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+          }
+        },
+        "isFallback": false,
+        "gsp": true,
+        "scriptLoader": []
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+{
+  "pageProps": {
+    "lang": "es",
+    "tag": "Teoría de colas",
+    "previews": [
+      {
+        "slug": "Caso-De-Estudio-Redes-De-Colas",
+        "title": "Caso de estudio - Simulación de redes de colas",
+        "date": "2018-12-29 13:28:40",
+        "content": "Introducción  Como responsable de operaciones del aeropuerto, debemos encontrar una solución al problema planteado. Para ello debemos construir un..."
+      }
+    ],
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "es": {
+          "navbar": {
+            "Home": "Inicio",
+            "Language": "Lenguaje",
+            "Tags": "Tags",
+            "en": "Inglés",
+            "es": "Español",
+            "zh": "Chino"
+          }
+        },
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          }
+        }
+      },
+      "initialLocale": "es",
+      "ns": ["navbar"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

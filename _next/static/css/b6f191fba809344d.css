@@ -1,0 +1,122 @@
+.NavigationBar_navBar__fSiIq:before {
+  content: " ";
+  display: block;
+  height: 2px;
+  position: absolute;
+  width: 100%;
+  background: red;
+  top: 0;
+}
+.Post_toc__TAzIW {
+  margin-top: 30px !important;
+  color: #a9a9a9;
+  border-left: 3px solid #eee;
+  padding-left: 12px;
+}
+@media (min-width: 992px) {
+  .Post_toc__TAzIW {
+    position: sticky;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    top: 70px;
+  }
+}
+.Post_toc__TAzIW ol {
+  list-style-type: none;
+  counter-reset: item;
+  padding-left: 5px;
+}
+.Post_toc__TAzIW ol li a {
+  color: #0085a1;
+  text-decoration: none;
+}
+.Post_toc__TAzIW ol li:before {
+  content: counters(item, ".") " ";
+  counter-increment: item;
+}
+.Post_content__QBxez {
+  font-family: Arial;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #404040;
+  padding-top: 1em;
+}
+.Post_content__QBxez h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
+.Post_content__QBxez h3 {
+  font-size: 20px;
+  font-weight: 400;
+}
+.Post_content__QBxez h4 {
+  font-size: 18px;
+  font-weight: 400;
+}
+.Post_content__QBxez h5 {
+  font-size: 16px;
+  font-weight: 400;
+}
+.Post_content__QBxez h6 {
+  font-size: 15px;
+  font-weight: 400;
+}
+.Post_content__QBxez h1,
+.Post_content__QBxez h2,
+.Post_content__QBxez h3,
+.Post_content__QBxez h4,
+.Post_content__QBxez h5,
+.Post_content__QBxez h6 {
+  margin-top: -90px;
+  padding: 100px 0 0;
+}
+.Post_content__QBxez h1 > a > i.fa-link:not(:hover),
+.Post_content__QBxez h2 > a > i.fa-link:not(:hover),
+.Post_content__QBxez h3 > a > i.fa-link:not(:hover),
+.Post_content__QBxez h4 > a > i.fa-link:not(:hover),
+.Post_content__QBxez h5 > a > i.fa-link:not(:hover),
+.Post_content__QBxez h6 > a > i.fa-link:not(:hover) {
+  color: transparent;
+}
+.Post_content__QBxez ul {
+  list-style-type: disc;
+}
+.Post_content__QBxez ol {
+  list-style-type: decimal;
+}
+.Post_content__QBxez blockquote {
+  font-style: italic;
+  padding-left: 0.5em;
+  border-left: 0.25em solid gray;
+}
+.Post_content__QBxez pre {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #333;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.Post_content__QBxez pre code {
+  display: block;
+  width: auto;
+  white-space: pre;
+  word-wrap: normal;
+  padding: 0 !important;
+}
+.Post_content__QBxez table {
+  table-layout: fixed;
+  width: 100%;
+  text-align: left;
+}
+.Post_content__QBxez table td,
+.Post_content__QBxez table th {
+  word-wrap: break-word;
+  padding: 8px;
+  border: 1px solid #000;
+}

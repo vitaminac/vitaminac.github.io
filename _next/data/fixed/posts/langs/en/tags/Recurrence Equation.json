@@ -1,0 +1,37 @@
+{
+  "pageProps": {
+    "lang": "en",
+    "tag": "Recurrence Equation",
+    "previews": [
+      {
+        "slug": "Recurrence-Equation",
+        "title": "Recurrence Equation",
+        "date": "2024-10-27",
+        "content": "Introduction  Sometimes we need to know the complexity of a recursive function, we usually use induction method (or sometimes is called substitution..."
+      }
+    ],
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          }
+        }
+      },
+      "initialLocale": "en",
+      "ns": ["navbar"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

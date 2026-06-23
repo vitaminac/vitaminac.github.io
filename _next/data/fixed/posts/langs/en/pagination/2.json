@@ -1,0 +1,96 @@
+{
+  "pageProps": {
+    "lang": "en",
+    "previews": [
+      {
+        "slug": "dll-hijacking-via-zlib-dll-proxy",
+        "title": "DLL Hijacking via zlib DLL Proxy",
+        "date": "2024-07-21 11:59:24",
+        "content": "DLL hijacking involves manipulating a program to load a DLL that contains the desired code. We will use a simple technique here for ilustration: DLL..."
+      },
+      {
+        "slug": "flash-crDroid-redmi-note-7",
+        "title": "Flash crDroid ROM for Redmi Note 7",
+        "date": "2024-05-25 18:11:53",
+        "content": "You need to have a Xiaomi account that has been given permission for unlocking device. Download MiFlash from https://www.miui.com/unlock/index.html..."
+      },
+      {
+        "slug": "probability",
+        "title": "Probability",
+        "date": "2024-04-14 13:15:47",
+        "content": "Expectations  The average value of some function $f(x)$ under a probability distribution $p(x)$ is called the expectation of $f(x)$.  For a discrete..."
+      },
+      {
+        "slug": "RaspberryPi-Odoo",
+        "title": "RaspberryPi Odoo",
+        "date": "2024-01-02 21:12:35",
+        "content": "Configure Prestashop Install Docker Engine Install Docker Compose  Since Docker Compose stable release doesn't provide binary for armv7, you need to..."
+      },
+      {
+        "slug": "Remote-Access-Via-TightVNC-To-Windows-Machine",
+        "title": "Remote Access Via TightVNC To Windows Machine",
+        "date": "2022-08-13 11:35:55",
+        "content": "Install VNC Server on Windows Machine  Download TightVNC which is free VNC server that support Windows 11 and then install TightVNC on Windows..."
+      },
+      {
+        "slug": "Windows7-Vagrant",
+        "title": "How to Create a Windows7 Vagrant Base Box",
+        "date": "2022-03-26 11:55:38",
+        "content": "How to Create a Windows 7 Vagrant Base Box? Introduction  Since Vagrant 1.6 release, Vagrant add support for Windows VMs. We will go through the..."
+      },
+      {
+        "slug": "Diagonalization",
+        "title": "Diagonalization",
+        "date": "2022-01-09 11:36:05",
+        "content": "What is diagonalization?  For a $n \\times n$ matrix $A$ the diagonalization is the process to find a diagonal matrix $D$ and a invertible $n \\times..."
+      },
+      {
+        "slug": "Compiling-Executing-C",
+        "title": "The Process Behind Compiling and Executing C Code",
+        "date": "2021-12-18 22:28:10",
+        "content": "Introduction  Compiling and executing a C program is a multi-stage process. In this post I’ll walk through each stages of compiling and executing the..."
+      },
+      {
+        "slug": "Java-Concurrent-Programming",
+        "title": "Java Concurrent Programming",
+        "date": "2021-10-06 23:09:55",
+        "content": "Introduction  At the beginning, a program ran from start to finish, it had access to all resources on the system. Nowadays with operating systems we..."
+      },
+      {
+        "slug": "Client-Centric-Consistency-Models",
+        "title": "Client-Centric Consistency Models",
+        "date": "2021-07-03 15:06:02",
+        "content": "Eventual consistent data stores work fine as long as clients always access the same replica. However, problems arise when different replicas are..."
+      }
+    ],
+    "prevPageUrl": "/posts/langs/en/pagination/1",
+    "nextPageUrl": "/posts/langs/en/pagination/3",
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          },
+          "paginated-index": {
+            "PrevPage": "← NEWER POSTS",
+            "NextPage": "OLDER POSTS →"
+          }
+        }
+      },
+      "initialLocale": "en",
+      "ns": ["navbar", "paginated-index"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

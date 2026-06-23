@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+  <!-- Head tag -->
+  <!-- SEO -->
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Tree Diameter｜Gao&#39;s Blog</title>
+    <meta property="og:title" content="Tree Diameter｜Gao&#39;s Blog" />
+
+    <meta name="description" content="Tree Diameter｜Gao&#39;s Blog" />
+    <meta property="og:description" content="Tree Diameter｜Gao&#39;s Blog" />
+    <meta name="author" content="Gao" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      property="og:image"
+      content="https://vitaminac.github.io/images/favicon.jpg"
+    />
+    <link rel="shortcut icon" href="/images/favicon.jpg" />
+
+    <meta name="keywords" content="algorithms" />
+
+    <meta name="theme-color" content="#600090" />
+    <meta name="msapplication-navbutton-color" content="#600090" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#600090" />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="Gao&#39;s Blog"
+      href="/atom.xml"
+    />
+
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      cross-origin="anonymous"
+      referrer-policy="no-referrer"
+    />
+    <link
+      rel="canonical"
+      href="https://vitaminac.github.io/posts/Tree-Diameter/"
+    />
+
+    <!-- jQuery -->
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+    ></script>
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/blog-style.css" />
+    <link rel="stylesheet" href="/css/syntax.css" />
+
+    <!-- Google Tag Manager -->
+
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-WDC9JKC");
+    </script>
+
+    <!-- End Google Tag Manager -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-151409235-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-151409235-1");
+    </script>
+
+    <!-- Google AdSense -->
+    <script
+      data-ad-client="ca-pub-8356359077918854"
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+    <meta name="generator" content="Hexo 6.3.0" />
+  </head>
+  <style>
+    header.intro-header {
+      background-image: url("/images/header.gif");
+    }
+  </style>
+  <!-- hack iOS CSS :active style -->
+
+  <body ontouchstart="" class="animated fadeIn">
+    <!-- Main Content -->
+
+    <!--only post-->
+
+    <img
+      class="wechat-title-img"
+      src="/_next/static/media/default-post-preview.c96b099a.jpeg"
+    />
+
+    <!-- Post Content -->
+    <article class="container" style="width: 100%; max-width: 100%">
+      <!-- Post Container -->
+      <div class="post-container">
+        <h2 id="Definition">
+          <a href="#Definition" class="headerlink" title="Definition"></a
+          >Definition
+        </h2>
+        <p>
+          The diameter of a tree is the distance of the longest path between two
+          end nodes $\arg\max_{(u, v) \in G}d(u, v)$, where $d(u, v)$ is the
+          distance function. It has many applications on tree problems and often
+          a high complexity solution can be changed to a linear solution with
+          the property of the tree diameter.
+        </p>
+        <h2 id="Finding-The-Diameter-of-N-Ary-Tree">
+          <a
+            href="#Finding-The-Diameter-of-N-Ary-Tree"
+            class="headerlink"
+            title="Finding The Diameter of N-Ary Tree"
+          ></a
+          >Finding The Diameter of N-Ary Tree
+        </h2>
+        <h3 id="Greedy-Algorithm">
+          <a
+            href="#Greedy-Algorithm"
+            class="headerlink"
+            title="Greedy Algorithm"
+          ></a
+          >Greedy Algorithm
+        </h3>
+        <ol>
+          <li>
+            Run <strong>BFS</strong> to find the farthest node
+            <strong>u</strong> starting from an arbitrary node said
+            <strong>s</strong>
+          </li>
+          <li>
+            Then run <strong>BFS</strong> from <strong>u</strong> to find the
+            farthest node <strong>v</strong>
+          </li>
+          <li>
+            Distance between node <strong>u</strong> and <strong>v</strong> is
+            the diameter of given tree
+          </li>
+        </ol>
+        <h3 id="Implementation">
+          <a
+            href="#Implementation"
+            class="headerlink"
+            title="Implementation"
+          ></a
+          >Implementation
+        </h3>
+        <p>
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://github.com/vitaminac/code/blob/main/judge/src/main/java/spoj/PT07ZLongestPathInATree.java"
+            >PT07Z</a
+          >
+        </p>
+        <p>
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://github.com/vitaminac/code/blob/main/judge/src/main/java/poj/P1985CowMarathon.java"
+            >P1985CowMarathon</a
+          >
+        </p>
+        <h2 id="Proof">
+          <a href="#Proof" class="headerlink" title="Proof"></a>Proof
+        </h2>
+        <h3 id="Properties-of-Trees">
+          <a
+            href="#Properties-of-Trees"
+            class="headerlink"
+            title="Properties of Trees"
+          ></a
+          >Properties of Trees
+        </h3>
+        <ol>
+          <li>Between any 2 nodes in a tree there is exactly one path</li>
+          <li>Any node can serve as the root of the tree</li>
+        </ol>
+        <h3 id="Proof-by-Contradiction">
+          <a
+            href="#Proof-by-Contradiction"
+            class="headerlink"
+            title="Proof by Contradiction"
+          ></a
+          >Proof by Contradiction
+        </h3>
+        <ol>
+          <li>
+            Assuming one end of the diameter <strong>u</strong> is known, the
+            other end must be the node <strong>v</strong> furthest from this
+            end. We can find it by using <strong>BFS</strong>, the last
+            discovered node is <strong>v</strong>.
+          </li>
+          <li>
+            Why we run <strong>BFS</strong> on an arbitrary node
+            <strong>s</strong> will alway end with <strong>u</strong>?
+            <ol>
+              <li>
+                Let <strong>u</strong> and <strong>v</strong> be any two nodes
+                such that <strong>d(u, v)</strong> is the diameter of the tree.
+                There is a unique path from <strong>u</strong> to
+                <strong>v</strong> because of tree properties.
+              </li>
+              <li>
+                Assuming we start at node <strong>s</strong>.
+                <ol>
+                  <li>
+                    If <strong>s</strong> is <strong>u</strong>, then we will
+                    always end with <strong>v</strong> by the first
+                    <strong>BFS</strong>, and the second <strong>BFS</strong> we
+                    get <strong>u</strong> again.
+                  </li>
+                  <li>
+                    If <strong>s</strong> is not <strong>u</strong> and we end
+                    with a node <strong>x</strong> distinct than
+                    <strong>u</strong> and <strong>v</strong> using
+                    <strong>BFS</strong>.
+                    <ol>
+                      <li>
+                        If the path of <strong>(x, u)</strong> does not
+                        intersect with the path of <strong>(u, v)</strong>, the
+                        <strong>d(x, u) + d(u, v) &gt; d(u, v)</strong>,
+                        contradiction.
+                      </li>
+                      <li>
+                        If the path of <strong>(x, u)</strong> intersect with
+                        <strong>(u, v)</strong> at <strong>y</strong>, then
+                        <strong>d(x, y) &gt; d(u, y)</strong> since we know when
+                        we started the search from <strong>s</strong>,
+                        <strong>x</strong> is deeper than <strong>u</strong>,
+                        then <strong>d(x, y) + d(y, v) &gt; dis(u, v)</strong>.
+                        contradiction.
+                      </li>
+                    </ol>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+        </ol>
+        <h2 id="Reference">
+          <a href="#Reference" class="headerlink" title="Reference"></a
+          >Reference
+        </h2>
+        <ul>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="http://courses.csail.mit.edu/6.046/fall01/handouts/ps9sol.pdf"
+              >MIT - Introduction to Algorithms: Problem Set 9 Solutions</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://cs.stackexchange.com/questions/22855/algorithm-to-find-diameter-of-a-tree-using-bfs-dfs-why-does-it-work"
+              >Algorithm to find diameter of a tree using BFS&#x2F;DFS</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://www.cnblogs.com/Khada-Jhin/p/10195287.html"
+              >树的直径及其性质与证明</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://www.spoj.com/problems/PT07Z/"
+              >SPOJ PT07Z - Longest path in a tree</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="http://poj.org/problem?id=1985"
+              >POJ Cow Marathon</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://www.geeksforgeeks.org/diameter-of-a-binary-tree/"
+              >Diameter of a Binary Tree</a
+            >
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://en.wikipedia.org/wiki/Tree_(graph_theory)"
+              >Tree</a
+            >
+          </li>
+        </ul>
+      </div>
+    </article>
+    <!-- Custom Theme JavaScript -->
+    <script type="text/javascript" src="/js/blog.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        anchors.add("p");
+      });
+    </script>
+
+    <!-- mathjax -->
+    <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          jax: ["input/TeX", "output/SVG"],
+          extensions: ["tex2jax.js"],
+          showMathMenu: false,
+          SVG: { useGlobalCache: false },
+          tex2jax: {
+              inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+              skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+              processEscapes: true
+          },
+          TeX: {
+              equationNumbers: { autoNumber: "AMS" },
+              noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } },
+              Macros: { href: "{}" }
+          }
+      });
+    </script>
+    <script
+      type="text/javascript"
+      async
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"
+    ></script>
+
+    <script type="text/javascript" src="/js/common.js"></script>
+
+    <script type="text/javascript">
+      $("code").addClass("language-java");
+    </script>
+    <script type="text/javascript" src="/js/prism.js"></script>
+    <script type="text/javascript">
+      addCSS("//css/prism.css");
+      Prism.highlightAll();
+    </script>
+
+    <!-- render ipynb file -->
+
+    <!-- render ipynb file -->
+
+    <script type="text/javascript" src="/js/render.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        render_files("java", "java");
+      });
+    </script>
+  </body>
+</html>

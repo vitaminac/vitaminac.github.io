@@ -1,0 +1,110 @@
+{
+  "pageProps": {
+    "lang": "es",
+    "previews": [
+      {
+        "slug": "Testing-Manifesto",
+        "title": "Testing Manifesto",
+        "date": "2019-05-01 10:30:55",
+        "content": "Pruebas a lo largo de OVER pruebas al final  Aumentamos de manera exponencial la cantidad de retrabajo cuando intentamos encontrar y corregir errores..."
+      },
+      {
+        "slug": "Agile-Testing-Quadrants",
+        "title": "Agile Testing Quadrants",
+        "date": "2019-05-01 10:11:15",
+        "content": "Un test enfocado al negocio(technology facing) es aquel que podrías describir a un experto del negocio en términos que le podrían interesar.  También..."
+      },
+      {
+        "slug": "Pair-Review",
+        "title": "Pair Review",
+        "date": "2019-05-01 09:41:55",
+        "content": "El pair programming se basa en que dos programadores trabajan juntos en un solo ordenador.  Los programas resultantes de los pair programming tenían,..."
+      },
+      {
+        "slug": "Complejidad-Ciclomatica",
+        "title": "Complejidad Ciclomatica",
+        "date": "2019-05-01 09:27:05",
+        "content": "La Complejidad Ciclomática es una métrica del software que proporciona una medición cuantitativa de la complejidad lógica de un programa.  Propuesta..."
+      },
+      {
+        "slug": "Test-in-the-Toilet",
+        "title": "Testing in the Toilet",
+        "date": "2019-04-30 00:34:18",
+        "content": "Testing In The Toilet  Una buena prueba unitaria debería exhibir otra serie de propiedades a parte de la de comprobar nuestro código para..."
+      },
+      {
+        "slug": "SonarQube",
+        "title": "SonarQube",
+        "date": "2019-04-28 23:24:42",
+        "content": "SonarQube es la implementación SQALE, que se trata de \"organizar los requisitos no funcionales relacionados con la calidad del código\".  La..."
+      },
+      {
+        "slug": "Behat",
+        "title": "Behat",
+        "date": "2019-04-28 23:08:37",
+        "content": "Behat es una herramienta Story BDD de código abierto creada para aplicaciones PHP. Behat permite crear historias de usuario centradas en el ejemplo...."
+      },
+      {
+        "slug": "Github-Trello",
+        "title": "Github Trello",
+        "date": "2019-04-28 22:19:41",
+        "content": "Una vez incluyes una Pull Request (PR) a una tarjeta de Trello toda la información relevante a cerca de la rama se cargará directamente en la..."
+      },
+      {
+        "slug": "Deuda-Tecnica",
+        "title": "Deuda Técnica",
+        "date": "2019-04-28 20:14:22",
+        "content": "La deuda técnica surge de un desarrollo con mala calidad, obtiene beneficios a corto plazo. Pero puede generar deudas cuyos intereses sean imposibles..."
+      },
+      {
+        "slug": "QA-Agil",
+        "title": "Quality Ágil",
+        "date": "2019-04-28 19:39:23",
+        "content": "En aquellos tiempos en que los equipos no eran multifuncionales y QA era un departamento marginal y la calidad era papel. Para abaratar el proyecto..."
+      }
+    ],
+    "prevPageUrl": "/posts/langs/es/pagination/1",
+    "nextPageUrl": "/posts/langs/es/pagination/3",
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "es": {
+          "navbar": {
+            "Home": "Inicio",
+            "Language": "Lenguaje",
+            "Tags": "Tags",
+            "en": "Inglés",
+            "es": "Español",
+            "zh": "Chino"
+          },
+          "paginated-index": {
+            "PrevPage": "← Adelante",
+            "NextPage": "Siguiente →"
+          }
+        },
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          },
+          "paginated-index": {
+            "PrevPage": "← NEWER POSTS",
+            "NextPage": "OLDER POSTS →"
+          }
+        }
+      },
+      "initialLocale": "es",
+      "ns": ["navbar", "paginated-index"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

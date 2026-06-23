@@ -1,0 +1,47 @@
+{
+  "pageProps": {
+    "lang": "zh",
+    "tag": "Flash",
+    "previews": [
+      {
+        "slug": "flash",
+        "title": "Flash小游戏",
+        "date": "2025-06-29 10:08:36",
+        "content": "Flash小游戏曾经在xp/win7时代是很火的, 更带火了一些小游戏网站例如4399.com，7k7k.com。 但是自从Adobe取消Flash支持现在最新的浏览器已经玩不了。现在想玩Flash小游戏都需要单独下载一些还支持Flash的国内厂商的浏览器，例如搜狗浏览器,..."
+      }
+    ],
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "zh": {
+          "navbar": {
+            "Home": "主页",
+            "Language": "语言",
+            "Tags": "标签",
+            "en": "英语",
+            "es": "西语",
+            "zh": "中文"
+          }
+        },
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          }
+        }
+      },
+      "initialLocale": "zh",
+      "ns": ["navbar"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

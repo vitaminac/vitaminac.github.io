@@ -1,0 +1,47 @@
+{
+  "pageProps": {
+    "lang": "zh",
+    "tag": "QQ堂",
+    "previews": [
+      {
+        "slug": "QQTang",
+        "title": "浅谈QQ堂",
+        "date": "2021-11-24 14:33:25",
+        "content": "QQ堂DLL劫持  在QQ堂目录下面有个zlib1.dll文件, 我们可以利用之前介绍的技巧制作自己的zlib1.dll当作我们的外挂程序.  修复版本过低和验证码闪退补丁  下载QQ游戏客户端, 然后在QQ游戏客户端文件夹里面找SSOCommon.dll, SSOPlatform.dll,..."
+      }
+    ],
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "zh": {
+          "navbar": {
+            "Home": "主页",
+            "Language": "语言",
+            "Tags": "标签",
+            "en": "英语",
+            "es": "西语",
+            "zh": "中文"
+          }
+        },
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          }
+        }
+      },
+      "initialLocale": "zh",
+      "ns": ["navbar"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

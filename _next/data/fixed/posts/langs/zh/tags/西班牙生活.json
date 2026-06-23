@@ -1,0 +1,71 @@
+{
+  "pageProps": {
+    "lang": "zh",
+    "tag": "西班牙生活",
+    "previews": [
+      {
+        "slug": "renta",
+        "title": "西班牙Renta申报",
+        "date": "2026-04-11 15:11:05",
+        "content": "每年四月初到六月底每位超过一定收入条件的税务居民都必须主动进行报税（declaración de Renta）(ref: Manual práctico de Renta 2025 - Delimitación de la obligación de declarar en el IRPF)。 ..."
+      },
+      {
+        "slug": "vivienda-segunda-mano",
+        "title": "马德里二手房买卖流程",
+        "date": "2024-12-01 22:08:24",
+        "content": "选房  前期可以先在西班牙最大的几个房产网站上或者中介公司挂出的房源那考察了解市场行情。  在确定预算和需求（位置、房型、面积等）之后可以预约中介或者房东安排看房，确保对物业及周边环境满意。  无论新房还是二手房，房屋的价格大概率都与以下几个因素有关联  房间数量 厕所数量..."
+      },
+      {
+        "slug": "passport-renewal",
+        "title": "驻西大使馆在线护照更换",
+        "date": "2024-10-10 23:54:23",
+        "content": "现在中国护照是可以在手机app中国领事上更新的。  下载中国领事 注册登录实名验证 主页选择证件办理 填写资料 需要准备好白底照片，可以自己用手机拍然后修图把背景变成白色 需要准备好一个当天的报纸，然后合照上传 所有的信息都要填全，不要跳过，要不然之后补很麻烦 人脸认证 可以跳过这一步骤..."
+      },
+      {
+        "slug": "nie",
+        "title": "更换西班牙居留卡",
+        "date": "2024-08-31 19:20:12",
+        "content": "西班牙的永居卡或者欧盟永居卡需要每五年更新一次，且要在居留过期前60天申请。  更换永居卡或者欧盟永居卡需要满足下面的条件：  没有犯罪记录 单次离境欧盟不超过12个月 单次离境西班牙不超过6年 没有在其他欧盟国家拿到欧盟永居卡 ..."
+      },
+      {
+        "slug": "driving-license",
+        "title": "西班牙驾照换中国驾照流程 - 长乐版",
+        "date": "2024-05-30 22:00:44",
+        "content": "有西班牙驾照的朋友可以直接回国换中国驾照，只需要考个科一就行。科一可以下载驾考宝典学习。换驾照的具体办事流程每个省市都有点不一样，例如在丽水所有的程序都能在一个地方一天办好，但是在福州会复杂一点。换驾照要在户籍所在地才可以，在其他地方换需要有暂住证。例如在长乐换驾照需要下面的一些材料 ..."
+      }
+    ],
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "zh": {
+          "navbar": {
+            "Home": "主页",
+            "Language": "语言",
+            "Tags": "标签",
+            "en": "英语",
+            "es": "西语",
+            "zh": "中文"
+          }
+        },
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          }
+        }
+      },
+      "initialLocale": "zh",
+      "ns": ["navbar"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

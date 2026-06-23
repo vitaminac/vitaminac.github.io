@@ -1,0 +1,47 @@
+{
+  "pageProps": {
+    "lang": "zh",
+    "tag": "计算机图形",
+    "previews": [
+      {
+        "slug": "Polygon-Mesh-Data-Structure",
+        "title": "计算机图形数据结构",
+        "date": "2018-11-11 22:14:47",
+        "content": "向量  定义:具有大小同时也代表方向的量. 他是几何空间概念中形成的一个抽象的概念. 我们可以用它表示一个三维空间的对象, 例如一个点.  坐标  在笛卡尔坐标系下我们使用三个坐标值代表一个向量, \\((x, y, z)\\).  在计算机中我们可以用一个有三个坐标的类表示并储存向量,..."
+      }
+    ],
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "zh": {
+          "navbar": {
+            "Home": "主页",
+            "Language": "语言",
+            "Tags": "标签",
+            "en": "英语",
+            "es": "西语",
+            "zh": "中文"
+          }
+        },
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          }
+        }
+      },
+      "initialLocale": "zh",
+      "ns": ["navbar"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

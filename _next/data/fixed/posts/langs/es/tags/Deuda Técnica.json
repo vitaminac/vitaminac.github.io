@@ -1,0 +1,47 @@
+{
+  "pageProps": {
+    "lang": "es",
+    "tag": "Deuda Técnica",
+    "previews": [
+      {
+        "slug": "Deuda-Tecnica",
+        "title": "Deuda Técnica",
+        "date": "2019-04-28 20:14:22",
+        "content": "La deuda técnica surge de un desarrollo con mala calidad, obtiene beneficios a corto plazo. Pero puede generar deudas cuyos intereses sean imposibles..."
+      }
+    ],
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "es": {
+          "navbar": {
+            "Home": "Inicio",
+            "Language": "Lenguaje",
+            "Tags": "Tags",
+            "en": "Inglés",
+            "es": "Español",
+            "zh": "Chino"
+          }
+        },
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          }
+        }
+      },
+      "initialLocale": "es",
+      "ns": ["navbar"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

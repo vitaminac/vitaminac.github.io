@@ -1,0 +1,46 @@
+{
+  "pageProps": {
+    "postData": {
+      "slug": "test-emoji",
+      "tags": [],
+      "keywords": [],
+      "isDraft": false,
+      "isArchived": true,
+      "title": "Test Emoji",
+      "date": "2020-01-02",
+      "isLegacy": false,
+      "lang": "en",
+      "tocHtml": "",
+      "articleHtml": "<p>Emojis in this text will be replaced: <!-- -->🐶<!-- --> <!-- -->👍</p>"
+    },
+    "lang": "en",
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          },
+          "post-layout": {
+            "Author": "Author: {{author}}",
+            "Tags": "Tags",
+            "Keywords": "Keywords"
+          }
+        }
+      },
+      "initialLocale": "en",
+      "ns": ["navbar", "post-layout"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

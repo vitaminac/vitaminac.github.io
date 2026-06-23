@@ -1,0 +1,95 @@
+{
+  "pageProps": {
+    "lang": "en",
+    "previews": [
+      {
+        "slug": "openwrt",
+        "title": "OpenWrt Configuration",
+        "date": "2025-12-21 21:20:07",
+        "content": "OpenWrt is highly customizable and open-source Linux-based operating system designed for routers. OpenWrt offers much greater control, flexibility,..."
+      },
+      {
+        "slug": "D-LINK-DIR-882-A1-OpenWrt",
+        "title": "OpenWrt Installation on D-LINK DIR-882-A1",
+        "date": "2025-12-14 21:20:37",
+        "content": "Download OpenWrt Firmware  Open https://openwrt.org/toh/d-link/dir-882_a1#installation and select Firmware Install. At this step we need to download..."
+      },
+      {
+        "slug": "mac-mini",
+        "title": "Mac Mini Is All You Need",
+        "date": "2025-11-23 17:40:37",
+        "content": "Because of ultra-low power consumption, easy to use interface, nearly silent working, Mac Mini M4 has become a good candidate for lots of more..."
+      },
+      {
+        "slug": "RaspberryPi4B-Setup",
+        "title": "Raspberry Pi 4B Setup",
+        "date": "2025-07-30 01:07:15",
+        "content": "Buy a Raspberry Pi 4B  You can buy the Raspberry Pi 4B board on Amazon, the recommended version is 4 GB. You may also need to buy a SD card, and..."
+      },
+      {
+        "slug": "Minimalist-Linux-Workspace",
+        "title": "Minimalist Linux Workspace",
+        "date": "2025-07-30 00:51:57",
+        "content": "Download Image  Download Debian image, let we choose the net-install ISO since we don't need any heavy desktop enviroment e.g. KDE, GNOME, etc... . ..."
+      },
+      {
+        "slug": "WSL",
+        "title": "WSL2 Workspace Setup for Windows",
+        "date": "2025-07-29 23:29:05",
+        "content": "Install WSL on Windows  Following this instruction to install WSL2  wsl --install   Install one of the supported Linux distributions  wsl --install..."
+      },
+      {
+        "slug": "Generating-Function",
+        "title": "Generating Function",
+        "date": "2024-10-28",
+        "content": "Definition  We define the generating function as the characteristic function which encodes an infinite sequence  $$ \\langle g_0, g_1, g_2, g_3 \\dots..."
+      },
+      {
+        "slug": "Recurrence-Equation",
+        "title": "Recurrence Equation",
+        "date": "2024-10-27",
+        "content": "Introduction  Sometimes we need to know the complexity of a recursive function, we usually use induction method (or sometimes is called substitution..."
+      },
+      {
+        "slug": "perplexity",
+        "title": "Perplexity",
+        "date": "2024-10-14 23:41:47",
+        "content": "Introduction  The perplexity is a widely used evaluation metric in natural language processing (NLP) that measures how well a auto-regressive/causal..."
+      },
+      {
+        "slug": "vector-database",
+        "title": "Vector Database",
+        "date": "2024-09-29 19:19:40",
+        "content": "A vector database indexes and stores vector embeddings for fast retrieval and similarity search, with capabilities like CRUD operations. Vector..."
+      }
+    ],
+    "nextPageUrl": "/posts/langs/en/pagination/2",
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          },
+          "paginated-index": {
+            "PrevPage": "← NEWER POSTS",
+            "NextPage": "OLDER POSTS →"
+          }
+        }
+      },
+      "initialLocale": "en",
+      "ns": ["navbar", "paginated-index"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

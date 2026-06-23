@@ -1,0 +1,122 @@
+{
+  "pageProps": {
+    "lang": "es",
+    "tags": [
+      "ATDD",
+      "Acceptance Test Driven Development",
+      "Agile Software Development",
+      "Agile Testing Quadrants",
+      "Angular",
+      "Anillo",
+      "Aplicación Web",
+      "BDD",
+      "Bash",
+      "Behauvior Driven Development",
+      "CI",
+      "CSS",
+      "Caesar Cipher",
+      "Cifrado César",
+      "Cifrado de Vigenère",
+      "Cifrado por transposición",
+      "Cloud Computing",
+      "Code Smell",
+      "Computer Graphics",
+      "Container",
+      "Contenedor",
+      "Continuous Integration",
+      "Cuerpo",
+      "Código de César",
+      "Deuda Técnica",
+      "DevOps",
+      "Docker",
+      "Domain-Driven Design",
+      "Economy",
+      "Enterprise Dynamics",
+      "Espacio vectorial",
+      "Estructura Algebraica",
+      "Evaluación heurística",
+      "Fake",
+      "Gestión de Configuración",
+      "Grupo",
+      "Grupo abeliano",
+      "HTMl",
+      "IC",
+      "IPREM",
+      "Inmueble",
+      "Integración continua",
+      "Interación Persona-Ordenador",
+      "Investigación Operativa",
+      "JPA",
+      "JavaScript",
+      "Linear Programming",
+      "Linux",
+      "Linux Kernel",
+      "Linux Process Abstraction",
+      "Mock",
+      "Módulo",
+      "Operation Research",
+      "Process",
+      "Programación",
+      "Programación Lineal",
+      "SPA",
+      "Shell",
+      "Simulación de sistemas",
+      "Smoke Test",
+      "Software Evolution",
+      "Software Quality Metrics",
+      "SonarQube",
+      "Spring",
+      "Systema Operativo",
+      "TAE",
+      "TDD",
+      "TIN",
+      "Teoria de colas",
+      "Teoría de colas",
+      "Test Driven Development",
+      "Testing",
+      "Testing Manifesto",
+      "Tomcat",
+      "Transposition Cipher",
+      "Usabilidad",
+      "VPPL",
+      "Vagrant",
+      "Version Control",
+      "Vigenère cipher",
+      "Virtualización",
+      "prestamo"
+    ],
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "es": {
+          "navbar": {
+            "Home": "Inicio",
+            "Language": "Lenguaje",
+            "Tags": "Tags",
+            "en": "Inglés",
+            "es": "Español",
+            "zh": "Chino"
+          }
+        },
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          }
+        }
+      },
+      "initialLocale": "es",
+      "ns": ["navbar"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

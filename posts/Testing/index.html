@@ -1,0 +1,677 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="content-language" content="en" />
+    <link rel="icon" href="/favicon.ico" />
+    <title>Testing</title>
+    <meta name="og:title" content="Testing" />
+    <meta name="author" content="Gao" />
+    <meta
+      name="keywords"
+      content="Integration Test,Contract Test,End-to-End Test,Unit Test,Load Test,Snapshot Test"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="next-head-count" content="10" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.27/dist/katex.min.css"
+      integrity="sha384-Pu5+C18nP5dwykLJOhd2U4Xen7rjScHN/qusop27hdd2drI+lL5KvX7YntvT8yew"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+      integrity="sha512-hasIneQUHlh06VNBe7f6ZcHmeRTLIaQWFd43YriJ0UND19bvYRauxthDg8E4eVNPm9bRUhr5JGeqH7FRFXQu5g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="preload"
+      href="/_next/static/css/a169840b427f8744.css"
+      as="style"
+    />
+    <link
+      rel="stylesheet"
+      href="/_next/static/css/a169840b427f8744.css"
+      data-n-g=""
+    />
+    <link
+      rel="preload"
+      href="/_next/static/css/b6f191fba809344d.css"
+      as="style"
+    />
+    <link
+      rel="stylesheet"
+      href="/_next/static/css/b6f191fba809344d.css"
+      data-n-p=""
+    />
+    <noscript data-n-css=""></noscript>
+    <script
+      defer=""
+      nomodule=""
+      src="/_next/static/chunks/polyfills-42372ed130431b0a.js"
+    ></script>
+    <script src="/_next/static/chunks/webpack.js" defer=""></script>
+    <script src="/_next/static/chunks/framework.js" defer=""></script>
+    <script src="/_next/static/chunks/main.js" defer=""></script>
+    <script src="/_next/static/chunks/pages/_app.js" defer=""></script>
+    <script src="/_next/static/chunks/367.js" defer=""></script>
+    <script src="/_next/static/chunks/503.js" defer=""></script>
+    <script src="/_next/static/chunks/287.js" defer=""></script>
+    <script
+      src="/_next/static/chunks/pages/posts/%5Bslug%5D.js"
+      defer=""
+    ></script>
+    <script src="/_next/static/fixed/_buildManifest.js" defer=""></script>
+    <script src="/_next/static/fixed/_ssgManifest.js" defer=""></script>
+  </head>
+  <body>
+    <div id="__next">
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+        crossorigin="anonymous"
+      />
+      <nav
+        class="navbar navbar-expand-md navbar-light sticky-top NavigationBar_navBar__fSiIq tw-bg-white/95 tw-shadow tw-shadow-black/25"
+      >
+        <div class="container-fluid px-md-5">
+          <div class="navbar-brand animate__animated animate__pulse">
+            <span
+              class="tw-rounded tw-bg-black tw-p-1 tw-text-xl tw-font-medium tw-text-white"
+              >Gao&#x27;s blog</span
+            >
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="navbar-collapse collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="/posts/langs/en/pagination/1/"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="/posts/langs/en/tags/"
+                  >Tags</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  >Language</a
+                >
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li>
+                    <a class="dropdown-item" href="/posts/langs/en/">English</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/posts/langs/es/">Spanish</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/posts/langs/zh/">Chinese</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <main>
+        <header
+          class="tw-relative tw-flex tw-h-96 tw-w-full tw-flex-col tw-content-center tw-justify-center tw-bg-cover tw-bg-center tw-bg-no-repeat tw-text-center tw-text-white"
+          style="
+            background-image: url(/_next/static/media/default-post-preview.c96b099a.jpeg);
+            left: calc(50% - 50vw);
+          "
+        >
+          <h1>Testing</h1>
+          <p>Author: Gao</p>
+          <span
+            ><i class="fa-regular fa-calendar"></i
+            ><time class="tw-pl-1.5" datetime="2021-04-24 11:27:04"
+              >April 24, 2021</time
+            ></span
+          >
+          <section class="tw-mt-3 tw-text-center">
+            <p>Tags<!-- -->:</p>
+            <ul class="tw-p-0">
+              <li class="tw-inline tw-px-1">
+                <a
+                  class="tw-m-0.5 tw-inline-block tw-rounded tw-border tw-border-solid tw-border-white tw-bg-neutral-300 tw-px-2 tw-text-sm tw-leading-6 tw-text-white tw-no-underline hover:tw-bg-sky-300"
+                  href="/posts/langs/en/tags/Integration%20Test/"
+                  >Integration Test</a
+                >
+              </li>
+              <li class="tw-inline tw-px-1">
+                <a
+                  class="tw-m-0.5 tw-inline-block tw-rounded tw-border tw-border-solid tw-border-white tw-bg-neutral-300 tw-px-2 tw-text-sm tw-leading-6 tw-text-white tw-no-underline hover:tw-bg-sky-300"
+                  href="/posts/langs/en/tags/Contract%20Test/"
+                  >Contract Test</a
+                >
+              </li>
+              <li class="tw-inline tw-px-1">
+                <a
+                  class="tw-m-0.5 tw-inline-block tw-rounded tw-border tw-border-solid tw-border-white tw-bg-neutral-300 tw-px-2 tw-text-sm tw-leading-6 tw-text-white tw-no-underline hover:tw-bg-sky-300"
+                  href="/posts/langs/en/tags/End-to-End%20Test/"
+                  >End-to-End Test</a
+                >
+              </li>
+              <li class="tw-inline tw-px-1">
+                <a
+                  class="tw-m-0.5 tw-inline-block tw-rounded tw-border tw-border-solid tw-border-white tw-bg-neutral-300 tw-px-2 tw-text-sm tw-leading-6 tw-text-white tw-no-underline hover:tw-bg-sky-300"
+                  href="/posts/langs/en/tags/Unit%20Test/"
+                  >Unit Test</a
+                >
+              </li>
+              <li class="tw-inline tw-px-1">
+                <a
+                  class="tw-m-0.5 tw-inline-block tw-rounded tw-border tw-border-solid tw-border-white tw-bg-neutral-300 tw-px-2 tw-text-sm tw-leading-6 tw-text-white tw-no-underline hover:tw-bg-sky-300"
+                  href="/posts/langs/en/tags/Load%20Test/"
+                  >Load Test</a
+                >
+              </li>
+              <li class="tw-inline tw-px-1">
+                <a
+                  class="tw-m-0.5 tw-inline-block tw-rounded tw-border tw-border-solid tw-border-white tw-bg-neutral-300 tw-px-2 tw-text-sm tw-leading-6 tw-text-white tw-no-underline hover:tw-bg-sky-300"
+                  href="/posts/langs/en/tags/Snapshot%20Test/"
+                  >Snapshot Test</a
+                >
+              </li>
+            </ul>
+          </section>
+        </header>
+        <div class="container">
+          <div class="row">
+            <nav class="Post_toc__TAzIW col-12 col-lg-3 order-lg-2">
+              <ol>
+                <li><a href="#Unit-Test">Unit Test</a></li>
+                <li><a href="#Integration-Test">Integration Test</a></li>
+                <li><a href="#Contract-Test">Contract Test</a></li>
+                <li><a href="#End-to-End-Test">End-to-End Test</a></li>
+                <li><a href="#Load-Test">Load Test</a></li>
+                <li><a href="#Snapshot-Test">Snapshot Test</a></li>
+                <li><a href="#Reference">Reference</a></li>
+              </ol>
+            </nav>
+            <article class="Post_content__QBxez col-12 order-lg-1 col-lg-9">
+              <h1 id="Unit-Test">
+                Unit Test<a aria-hidden="true" tabindex="-1" href="#Unit-Test"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h1>
+              <p>
+                The purpose of unit test is to validate that each unit of the
+                software code performs as expected. A unit may be an individual
+                function, method, procedure, module, or object. Unit testing is
+                done during the development of an application by the developers.
+                If proper unit testing is done in early development, then it
+                saves time and money in the maintenance phase.
+              </p>
+              <p>
+                <img
+                  alt="Unit Test"
+                  loading="lazy"
+                  width="553"
+                  height="495"
+                  decoding="async"
+                  data-nimg="1"
+                  style="color: transparent"
+                  src="/_next/static/media/unit-testing.d88f9a59.png"
+                />
+              </p>
+              <h1 id="Integration-Test">
+                Integration Test<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Integration-Test"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h1>
+              <p>
+                Integration tests determine if independently developed units of
+                software work correctly when they are connected to each other.
+                It was performed by activating many modules and running higher
+                level tests against all of them to ensure they operated
+                together.
+              </p>
+              <p>
+                <img
+                  alt="Integration Test"
+                  loading="lazy"
+                  width="1111"
+                  height="555"
+                  decoding="async"
+                  data-nimg="1"
+                  style="color: transparent"
+                  src="/_next/static/media/integration-test.58302089.png"
+                />
+              </p>
+              <h1 id="Contract-Test">
+                Contract Test<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Contract-Test"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h1>
+              <p>
+                One of the most common cases of using a test double is when you
+                are communicating with an external service. Typically, such
+                services are being maintained by a different team, they may be
+                subject to slow, and unreliable networks, and maybe unreliable
+                themselves. The test double is indeed not an accurate
+                representation of the external service, e.g. what happens if the
+                external service changes its contract?
+              </p>
+              <p>
+                <img
+                  alt="Contract Test"
+                  loading="lazy"
+                  width="478"
+                  height="263"
+                  decoding="async"
+                  data-nimg="1"
+                  style="color: transparent"
+                  src="/_next/static/media/contract-test.94e48969.png"
+                />
+              </p>
+              <p>
+                A contract change may break a production application, triggering
+                an emergency fix and an urgent conversation with the supplier
+                team. A good way to deal with this is to continue to run your
+                own tests against the double, but in addition to periodically
+                run a separate set of contract tests. These check that all the
+                calls against your test doubles return the same results as a
+                call to the external service would. A failure in any of these
+                contract tests implies you need to update your test doubles, and
+                probably your code to take into account the service contract
+                change.
+              </p>
+              <h1 id="End-to-End-Test">
+                End-to-End Test<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#End-to-End-Test"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h1>
+              <p>
+                E2E tests are smoke test with a very limited range of paths
+                tested that validates entire software from starting to the end
+                along with its integration with external services.
+              </p>
+              <h1 id="Load-Test">
+                Load Test<a aria-hidden="true" tabindex="-1" href="#Load-Test"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h1>
+              <p>
+                Load Test is a non-functional software test in which the
+                performance of software application is tested under a specific
+                expected load. It determines how the software application
+                behaves while being accessed by multiple users simultaneously.
+                The goal of Load Testing is to improve performance bottlenecks
+                and to ensure stability and smooth functioning of software
+                application before deployment.
+              </p>
+              <h1 id="Snapshot-Test">
+                Snapshot Test<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#Snapshot-Test"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h1>
+              <p>
+                Snapshot tests ensure your serializable output (e.g. React tree)
+                does not change unexpectedly. On test runs, we will compare the
+                output with the previous snapshot, the test will fail if they do
+                not match: either the change is unexpected, or the snapshot
+                needs to be updated because of the new version of the code.
+              </p>
+              <p>
+                Snapshots identify unexpected interface changes within your
+                application – whether that interface is an API response, UI,
+                logs, or error messages.
+              </p>
+              <ul>
+                <li>
+                  False positive/false negative result in CI: The snapshot
+                  should be committed alongside code changes, so CI will run the
+                  test with update to date snapshots, and it should be reviewed
+                  as part of your code review process. It can also provide a lot
+                  of additional context during code review in which reviewers
+                  can study your changes better.
+                </li>
+                <li>
+                  Snapshots take a lot of time to review: We should ensure our
+                  snapshots are readable by keeping them focused, short.
+                </li>
+                <li>
+                  Snapshot tests fail unexpectedly: Tests should be
+                  deterministic, running the same tests multiple times on a
+                  component that has not changed should produce the same results
+                  every time.
+                </li>
+                <li>
+                  Meaning of each snapshot: Give descriptive names for each
+                  snapshot. This makes it easier for reviewers to verify the
+                  snapshots during the code review.
+                </li>
+                <li>
+                  Lot of unit tests: The aim of snapshot testing is not to
+                  replace existing unit tests, but in some scenarios, snapshot
+                  testing can potentially remove the need for unit testing for a
+                  particular set of functionalities (e.g. rendering of React
+                  components).
+                </li>
+              </ul>
+              <h1 id="Reference">
+                Reference<a aria-hidden="true" tabindex="-1" href="#Reference"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h1>
+              <ul>
+                <li>
+                  <a
+                    href="https://martinfowler.com/bliki/IntegrationTest.html"
+                    rel="nofollow"
+                    target="_blank"
+                    >IntegrationTest</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://martinfowler.com/bliki/ContractTest.html"
+                    rel="nofollow"
+                    target="_blank"
+                    >ContractTest</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.guru99.com/unit-testing-guide.html"
+                    rel="nofollow"
+                    target="_blank"
+                    >Unit Testing Tutorial: What is, Types, Tools &amp; Test
+                    EXAMPLE</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.guru99.com/end-to-end-testing.html"
+                    rel="nofollow"
+                    target="_blank"
+                    >END-To-END Testing Tutorial: What is E2E Testing with
+                    Example</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.guru99.com/load-testing-tutorial.html"
+                    rel="nofollow"
+                    target="_blank"
+                    >Load Testing Tutorial: What is? How to? (with Examples)</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://jestjs.io/docs/snapshot-testing"
+                    rel="nofollow"
+                    target="_blank"
+                    >Snapshot Testing</a
+                  >
+                </li>
+              </ul>
+            </article>
+          </div>
+          <aside></aside>
+        </div>
+      </main>
+      <footer class="tw-text-center tw-text-gray-400">
+        <ul class="list-inline text-center tw-text-stone-700">
+          <li class="list-inline-item">
+            <a
+              class="tw-text-stone-700"
+              target="_blank"
+              href="https://www.linkedin.com/in/shuxig"
+              ><span class="fa-stack fa-lg"
+                ><i class="fa fa-circle fa-stack-2x"></i
+                ><i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i></span
+            ></a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              class="tw-text-stone-700"
+              target="_blank"
+              href="https://github.com/vitaminac"
+              ><span class="fa-stack fa-lg"
+                ><i class="fa fa-circle fa-stack-2x"></i
+                ><i class="fab fa-github fa-stack-1x fa-inverse"></i></span
+            ></a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              class="tw-text-stone-700"
+              target="_blank"
+              href="https://gist.github.com/vitaminac"
+              ><span class="fa-stack fa-lg"
+                ><i class="fa fa-circle fa-stack-2x"></i
+                ><i
+                  class="fab fa-github-square fa-stack-1x fa-inverse"
+                ></i></span
+            ></a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              class="tw-text-stone-700"
+              target="_blank"
+              href="https://gitlab.com/vitaminac"
+              ><span class="fa-stack fa-lg"
+                ><i class="fa fa-circle fa-stack-2x"></i
+                ><i class="fab fa-gitlab fa-stack-1x fa-inverse"></i></span
+            ></a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              class="tw-text-stone-700"
+              target="_blank"
+              href="https://www.xiaohongshu.com/user/profile/622dca68000000001000c9b2"
+              ><span class="fa-stack fa-lg"
+                ><img
+                  alt="小红书"
+                  loading="lazy"
+                  width="256"
+                  height="256"
+                  decoding="async"
+                  data-nimg="1"
+                  class="tw-max-h-full tw-max-w-full"
+                  style="color: transparent"
+                  src="/_next/static/media/redbook.d1759325.svg" /></span
+            ></a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              class="tw-text-stone-700"
+              target="_blank"
+              href="https://www.kaggle.com/dalao1002"
+              ><span class="fa-stack fa-lg"
+                ><i class="fa fa-circle fa-stack-2x"></i
+                ><i class="fab fa-kaggle fa-stack-1x fa-inverse"></i></span
+            ></a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              class="tw-text-stone-700"
+              target="_blank"
+              href="https://leetcode.com/dalao1002"
+              ><span class="fa-stack fa-lg"
+                ><i class="fa fa-circle fa-stack-2x"></i
+                ><i class="fas fa-code fa-stack-1x fa-inverse"></i></span
+            ></a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              class="tw-text-stone-700"
+              target="_blank"
+              href="https://stackexchange.com/users/13825906"
+              ><span class="fa-stack fa-lg"
+                ><i class="fa fa-circle fa-stack-2x"></i
+                ><i
+                  class="fab fa-stack-overflow fa-stack-1x fa-inverse"
+                ></i></span
+            ></a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              class="tw-text-stone-700"
+              target="_blank"
+              href="mailto:dalao1002@gmail.com?subject=From my blog&amp;body=Hi,I found this website very useful"
+              ><span class="fa-stack fa-lg"
+                ><i class="fa fa-circle fa-stack-2x"></i
+                ><i class="fas fa-envelope fa-stack-1x fa-inverse"></i></span
+            ></a>
+          </li>
+        </ul>
+        <img
+          alt="QR"
+          loading="lazy"
+          width="1710"
+          height="624"
+          decoding="async"
+          data-nimg="1"
+          class="tw-mx-auto tw-max-w-full tw-object-contain tw-object-center lg:tw-max-w-xl"
+          style="color: transparent"
+          src="/_next/static/media/QR.b48259ea.png"
+        />
+        <p>Copyright © Gao&#x27;s blog 2026</p>
+      </footer>
+    </div>
+    <script id="__NEXT_DATA__" type="application/json">
+      {
+        "props": {
+          "pageProps": {
+            "postData": {
+              "slug": "Testing",
+              "tags": [
+                "Integration Test",
+                "Contract Test",
+                "End-to-End Test",
+                "Unit Test",
+                "Load Test",
+                "Snapshot Test"
+              ],
+              "keywords": [],
+              "isDraft": false,
+              "isArchived": false,
+              "title": "Testing",
+              "date": "2021-04-24 11:27:04",
+              "isLegacy": false,
+              "lang": "en",
+              "tocHtml": "\u003col\u003e\n\u003cli\u003e\u003ca href=\"#Unit-Test\"\u003eUnit Test\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Integration-Test\"\u003eIntegration Test\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Contract-Test\"\u003eContract Test\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#End-to-End-Test\"\u003eEnd-to-End Test\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Load-Test\"\u003eLoad Test\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Snapshot-Test\"\u003eSnapshot Test\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#Reference\"\u003eReference\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e",
+              "articleHtml": "\u003ch1 id=\"Unit-Test\"\u003eUnit Test\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Unit-Test\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h1\u003e\n\u003cp\u003eThe purpose of unit test is to validate that each unit of the software code performs as expected. A unit may be an individual function, method, procedure, module, or object. Unit testing is done during the development of an application by the developers. If proper unit testing is done in early development, then it saves time and money in the maintenance phase.\u003c/p\u003e\n\u003cp\u003e\u003cimg alt=\"Unit Test\" loading=\"lazy\" width=\"553\" height=\"495\" decoding=\"async\" data-nimg=\"1\" style=\"color:transparent\" src=\"/_next/static/media/unit-testing.d88f9a59.png\"/\u003e\u003c/p\u003e\n\u003ch1 id=\"Integration-Test\"\u003eIntegration Test\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Integration-Test\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h1\u003e\n\u003cp\u003eIntegration tests determine if independently developed units of software work correctly when they are connected to each other. It was performed by activating many modules and running higher level tests against all of them to ensure they operated together.\u003c/p\u003e\n\u003cp\u003e\u003cimg alt=\"Integration Test\" loading=\"lazy\" width=\"1111\" height=\"555\" decoding=\"async\" data-nimg=\"1\" style=\"color:transparent\" src=\"/_next/static/media/integration-test.58302089.png\"/\u003e\u003c/p\u003e\n\u003ch1 id=\"Contract-Test\"\u003eContract Test\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Contract-Test\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h1\u003e\n\u003cp\u003eOne of the most common cases of using a test double is when you are communicating with an external service. Typically, such services are being maintained by a different team, they may be subject to slow, and unreliable networks, and maybe unreliable themselves. The test double is indeed not an accurate representation of the external service, e.g. what happens if the external service changes its contract?\u003c/p\u003e\n\u003cp\u003e\u003cimg alt=\"Contract Test\" loading=\"lazy\" width=\"478\" height=\"263\" decoding=\"async\" data-nimg=\"1\" style=\"color:transparent\" src=\"/_next/static/media/contract-test.94e48969.png\"/\u003e\u003c/p\u003e\n\u003cp\u003eA contract change may break a production application, triggering an emergency fix and an urgent conversation with the supplier team. A good way to deal with this is to continue to run your own tests against the double, but in addition to periodically run a separate set of contract tests. These check that all the calls against your test doubles return the same results as a call to the external service would. A failure in any of these contract tests implies you need to update your test doubles, and probably your code to take into account the service contract change.\u003c/p\u003e\n\u003ch1 id=\"End-to-End-Test\"\u003eEnd-to-End Test\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#End-to-End-Test\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h1\u003e\n\u003cp\u003eE2E tests are smoke test with a very limited range of paths tested that validates entire software from starting to the end along with its integration with external services.\u003c/p\u003e\n\u003ch1 id=\"Load-Test\"\u003eLoad Test\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Load-Test\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h1\u003e\n\u003cp\u003eLoad Test is a non-functional software test in which the performance of software application is tested under a specific expected load. It determines how the software application behaves while being accessed by multiple users simultaneously. The goal of Load Testing is to improve performance bottlenecks and to ensure stability and smooth functioning of software application before deployment.\u003c/p\u003e\n\u003ch1 id=\"Snapshot-Test\"\u003eSnapshot Test\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Snapshot-Test\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h1\u003e\n\u003cp\u003eSnapshot tests ensure your serializable output (e.g. React tree) does not change unexpectedly. On test runs, we will compare the output with the previous snapshot, the test will fail if they do not match: either the change is unexpected, or the snapshot needs to be updated because of the new version of the code.\u003c/p\u003e\n\u003cp\u003eSnapshots identify unexpected interface changes within your application – whether that interface is an API response, UI, logs, or error messages.\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eFalse positive/false negative result in CI: The snapshot should be committed alongside code changes, so CI will run the test with update to date snapshots, and it should be reviewed as part of your code review process. It can also provide a lot of additional context during code review in which reviewers can study your changes better.\u003c/li\u003e\n\u003cli\u003eSnapshots take a lot of time to review: We should ensure our snapshots are readable by keeping them focused, short.\u003c/li\u003e\n\u003cli\u003eSnapshot tests fail unexpectedly: Tests should be deterministic, running the same tests multiple times on a component that has not changed should produce the same results every time.\u003c/li\u003e\n\u003cli\u003eMeaning of each snapshot: Give descriptive names for each snapshot. This makes it easier for reviewers to verify the snapshots during the code review.\u003c/li\u003e\n\u003cli\u003eLot of unit tests: The aim of snapshot testing is not to replace existing unit tests, but in some scenarios, snapshot testing can potentially remove the need for unit testing for a particular set of functionalities (e.g. rendering of React components).\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch1 id=\"Reference\"\u003eReference\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#Reference\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h1\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href=\"https://martinfowler.com/bliki/IntegrationTest.html\" rel=\"nofollow\" target=\"_blank\"\u003eIntegrationTest\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://martinfowler.com/bliki/ContractTest.html\" rel=\"nofollow\" target=\"_blank\"\u003eContractTest\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://www.guru99.com/unit-testing-guide.html\" rel=\"nofollow\" target=\"_blank\"\u003eUnit Testing Tutorial: What is, Types, Tools \u0026amp; Test EXAMPLE\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://www.guru99.com/end-to-end-testing.html\" rel=\"nofollow\" target=\"_blank\"\u003eEND-To-END Testing Tutorial: What is E2E Testing with Example\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://www.guru99.com/load-testing-tutorial.html\" rel=\"nofollow\" target=\"_blank\"\u003eLoad Testing Tutorial: What is? How to? (with Examples)\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"https://jestjs.io/docs/snapshot-testing\" rel=\"nofollow\" target=\"_blank\"\u003eSnapshot Testing\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e"
+            },
+            "lang": "en",
+            "_nextI18Next": {
+              "initialI18nStore": {
+                "en": {
+                  "navbar": {
+                    "Home": "Home",
+                    "Language": "Language",
+                    "Tags": "Tags",
+                    "en": "English",
+                    "es": "Spanish",
+                    "zh": "Chinese"
+                  },
+                  "post-layout": {
+                    "Author": "Author: {{author}}",
+                    "Tags": "Tags",
+                    "Keywords": "Keywords"
+                  }
+                }
+              },
+              "initialLocale": "en",
+              "ns": ["navbar", "post-layout"],
+              "userConfig": {
+                "i18n": {
+                  "defaultLocale": "en",
+                  "locales": ["en", "es", "zh"]
+                },
+                "default": {
+                  "i18n": {
+                    "defaultLocale": "en",
+                    "locales": ["en", "es", "zh"]
+                  }
+                }
+              }
+            }
+          },
+          "__N_SSG": true
+        },
+        "page": "/posts/[slug]",
+        "query": { "slug": "Testing" },
+        "buildId": "fixed",
+        "runtimeConfig": {
+          "siteConfig": {
+            "siteAuthor": "Gao",
+            "siteTitle": "Gao's blog",
+            "siteDescription": "Gao's blog",
+            "aboutMe": "see more about me on my Github profile.",
+            "email": "dalao1002@gmail.com",
+            "linkedin": "shuxig",
+            "github": "vitaminac",
+            "gitlab": "vitaminac",
+            "redbook": "622dca68000000001000c9b2",
+            "kaggle": "dalao1002",
+            "leetcode": "dalao1002",
+            "stackexchange": "13825906",
+            "disqusUsername": "blog-vnwybnwkiz",
+            "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+          }
+        },
+        "isFallback": false,
+        "gsp": true,
+        "scriptLoader": []
+      }
+    </script>
+  </body>
+</html>

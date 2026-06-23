@@ -1,0 +1,66 @@
+{
+  "pageProps": {
+    "lang": "zh",
+    "tags": [
+      "Flash",
+      "Game",
+      "PyInstaller",
+      "QQ堂",
+      "hook",
+      "python",
+      "zlib",
+      "一美元问题",
+      "三角网格",
+      "公共知识",
+      "共有知识",
+      "几何",
+      "博弈论",
+      "向量",
+      "图形结构",
+      "外挂",
+      "投资",
+      "最优停止问题",
+      "沉没成本",
+      "游戏",
+      "秘书问题",
+      "纳什均衡",
+      "西班牙生活",
+      "西班牙语语法",
+      "计算机图形",
+      "麦穗原理"
+    ],
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "zh": {
+          "navbar": {
+            "Home": "主页",
+            "Language": "语言",
+            "Tags": "标签",
+            "en": "英语",
+            "es": "西语",
+            "zh": "中文"
+          }
+        },
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          }
+        }
+      },
+      "initialLocale": "zh",
+      "ns": ["navbar"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

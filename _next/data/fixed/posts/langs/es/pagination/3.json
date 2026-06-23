@@ -1,0 +1,110 @@
+{
+  "pageProps": {
+    "lang": "es",
+    "previews": [
+      {
+        "slug": "Mock-Fake-Testing",
+        "title": "Mock Fake Testing",
+        "date": "2019-04-28 18:51:51",
+        "content": "Mock se refiere al término Mock Object, los cuales son objetos que imitan el comportamiento de objetos reales de una forma controlada. Se usan para..."
+      },
+      {
+        "slug": "Code-Smell",
+        "title": "Code Smell",
+        "date": "2019-04-28 10:01:41",
+        "content": "Es cualquier síntoma en el código fuente de un programa que posiblemente indica un problema más profundo.  Código duplicado Método grande Clase..."
+      },
+      {
+        "slug": "Evolucion-De-Calidad",
+        "title": "Evolución de la calidad",
+        "date": "2019-04-28 09:24:43",
+        "content": "La calidad de un software  Un software funcione no significa que esté bien hecho. No gestiona la calidad del producto genera deuda técnica. Gestionar..."
+      },
+      {
+        "slug": "Escuelas-del-Testing",
+        "title": "Escuelas del Testing",
+        "date": "2019-04-28 00:18:12",
+        "content": "Cinco manera de ver el testing Testing formal Testing de los procesos, estándares Muy relacionada con la tabla de estándares Habla de seguir un..."
+      },
+      {
+        "slug": "Smoke-Test",
+        "title": "Smoke Test",
+        "date": "2019-04-27 23:50:38",
+        "content": "Smoke Testing  En programación informática y pruebas de software, smoke testing (también conocido como \"Build Verification Testing\") son un..."
+      },
+      {
+        "slug": "TDD-BDD-ATDD",
+        "title": "Testing TDD BDD y ATDD",
+        "date": "2019-04-27 12:55:45",
+        "content": "Común problema de desarrollo software Alejamiento entre usuario y desarrollo incumplimiento de requisitos del usuario la funcionalidad del software..."
+      },
+      {
+        "slug": "Cracking-Simpler-Cipher",
+        "title": "Cracking Simpler Cipher",
+        "date": "2019-03-25 15:43:58",
+        "content": "Cifrado por sustitución monoalfabética (Cifrado César)  El cifrado César, también conocido como cifrado por desplazamiento es un cifrado por..."
+      },
+      {
+        "slug": "Virtualization",
+        "title": "Virtualización, Contenedores y Cloud Computing",
+        "date": "2019-02-26 23:19:07",
+        "content": "Introducción  La virtualización es una técnica que permite la emulación de algún recurso tecnológico.  Máquina virtual  Virtualización de un entorno..."
+      },
+      {
+        "slug": "Docker",
+        "title": "Docker",
+        "date": "2019-02-26 22:31:02",
+        "content": "Introducción  La idea detrás de Docker es crear contenedores ligeros y portables para las aplicaciones software que puedan ejecutarse en cualquier..."
+      },
+      {
+        "slug": "Desarrollo-de-Aplicaciones-Web",
+        "title": "Desarrollo de aplicaciones Web",
+        "date": "2019-02-25 11:29:55",
+        "content": "Introducción  El navegador hace la petición mediante URL a un servidor, suele ser servidor remoto y ese servidor devuelve la información. Todo esto..."
+      }
+    ],
+    "prevPageUrl": "/posts/langs/es/pagination/2",
+    "nextPageUrl": "/posts/langs/es/pagination/4",
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "es": {
+          "navbar": {
+            "Home": "Inicio",
+            "Language": "Lenguaje",
+            "Tags": "Tags",
+            "en": "Inglés",
+            "es": "Español",
+            "zh": "Chino"
+          },
+          "paginated-index": {
+            "PrevPage": "← Adelante",
+            "NextPage": "Siguiente →"
+          }
+        },
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          },
+          "paginated-index": {
+            "PrevPage": "← NEWER POSTS",
+            "NextPage": "OLDER POSTS →"
+          }
+        }
+      },
+      "initialLocale": "es",
+      "ns": ["navbar", "paginated-index"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

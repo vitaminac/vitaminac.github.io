@@ -1,0 +1,107 @@
+{
+  "pageProps": {
+    "lang": "zh",
+    "previews": [
+      {
+        "slug": "driving-license",
+        "title": "西班牙驾照换中国驾照流程 - 长乐版",
+        "date": "2024-05-30 22:00:44",
+        "content": "有西班牙驾照的朋友可以直接回国换中国驾照，只需要考个科一就行。科一可以下载驾考宝典学习。换驾照的具体办事流程每个省市都有点不一样，例如在丽水所有的程序都能在一个地方一天办好，但是在福州会复杂一点。换驾照要在户籍所在地才可以，在其他地方换需要有暂住证。例如在长乐换驾照需要下面的一些材料 ..."
+      },
+      {
+        "slug": "python-exe-reverse-engineering",
+        "title": "Python打包的可执行文件的逆向工程",
+        "date": "2024-03-28 20:39:24",
+        "content": "PyInstaller  如果exe文件是使用PyInstaller打包的。我们可以用PyInstaller Extractor解包exe文件。  python pyinstxtractor.py <文件名>.exe  ..."
+      },
+      {
+        "slug": "QQTang",
+        "title": "浅谈QQ堂",
+        "date": "2021-11-24 14:33:25",
+        "content": "QQ堂DLL劫持  在QQ堂目录下面有个zlib1.dll文件, 我们可以利用之前介绍的技巧制作自己的zlib1.dll当作我们的外挂程序.  修复版本过低和验证码闪退补丁  下载QQ游戏客户端, 然后在QQ游戏客户端文件夹里面找SSOCommon.dll, SSOPlatform.dll,..."
+      },
+      {
+        "slug": "Game-Theory",
+        "title": "浅谈博弈论",
+        "date": "2019-02-20 21:05:31",
+        "content": "浅谈博弈论  博弈论(Game Theory)主要研究具有斗争或竞争性质现象的数学理论和方法, 考虑了游戏中的个体的预测行为和实际行为，并研究它们的优化策略. 在这类行为中，参加竞争的各方各自具有不同的利益. 为了达到各自的目标, 各方必须考虑对手的各种可能的行动方案,..."
+      },
+      {
+        "slug": "REGULAR-VERBS",
+        "title": "规则动词",
+        "date": "2018-12-25 22:50:48",
+        "content": "第一部分  所有的西班牙语动词分为两类规则动词和不规则动词. 这篇主要介绍规则动词.  注意他们的最后两个字母  hablar 说话  comer 吃  vivir 住在  有三种不同形式的动词  -ar 动词例如 hablar  -er 动词例如 comer  -ir 动词例如 vivir ..."
+      },
+      {
+        "slug": "SUBJECT-PRONOUNS",
+        "title": "主语代词",
+        "date": "2018-11-25 21:30:28",
+        "content": "动词代表一个动作, 而动作需要一个实施者, 在句子中我们通过使用主语带代表动作的实施者. 例如, 你, 我, 他, 她, 我们, 你们, 他们.  yo 我  tú 你  usted 您  él 他  ella 她  nosotros/nosotras 我们  vosotros/vosotras..."
+      },
+      {
+        "slug": "The-Verb-Form-Hay",
+        "title": "动词形式hay",
+        "date": "2018-11-19 19:43:01",
+        "content": "动词Hay的是有,存在的意思, 在英语种对应的是  there is there are  例如 Hay muchos libros en la biblioteca. 图书馆里有很多书.  Hay un libro encima de la mesa. 桌子上有一本书  Hay dos..."
+      },
+      {
+        "slug": "Polygon-Mesh-Data-Structure",
+        "title": "计算机图形数据结构",
+        "date": "2018-11-11 22:14:47",
+        "content": "向量  定义:具有大小同时也代表方向的量. 他是几何空间概念中形成的一个抽象的概念. 我们可以用它表示一个三维空间的对象, 例如一个点.  坐标  在笛卡尔坐标系下我们使用三个坐标值代表一个向量, \\((x, y, z)\\).  在计算机中我们可以用一个有三个坐标的类表示并储存向量,..."
+      },
+      {
+        "slug": "DEFINITE-AND-INDEFINITE-ARTICLES",
+        "title": "定冠词和不定冠词",
+        "date": "2018-11-11 13:26:27",
+        "content": "定冠词和不定冠词 定冠词和不定冠词的区别  注意下面两个英文句子  第一个句子讲的是一个特定(definite)的饼干 Give me the chocolate chip cookie.  第二个句子只得是任意(indefinite)一个饼干 Give me a cookie, please. ..."
+      },
+      {
+        "slug": "PLURAL-FORMS-OF-NOUNS",
+        "title": "名词的复数形式",
+        "date": "2018-11-08 13:17:02",
+        "content": "名词的复数形式 元音结尾的名词, 复数形式结尾于-s  libro : libros (libro + s)  pluma : plumas (pluma + s)  chico : chicos (chico + s)  señora : señoras (señora + s) ..."
+      }
+    ],
+    "prevPageUrl": "/posts/langs/zh/pagination/1",
+    "nextPageUrl": "/posts/langs/zh/pagination/3",
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "zh": {
+          "navbar": {
+            "Home": "主页",
+            "Language": "语言",
+            "Tags": "标签",
+            "en": "英语",
+            "es": "西语",
+            "zh": "中文"
+          },
+          "paginated-index": { "PrevPage": "← 前一页", "NextPage": "下一页 →" }
+        },
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          },
+          "paginated-index": {
+            "PrevPage": "← NEWER POSTS",
+            "NextPage": "OLDER POSTS →"
+          }
+        }
+      },
+      "initialLocale": "zh",
+      "ns": ["navbar", "paginated-index"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

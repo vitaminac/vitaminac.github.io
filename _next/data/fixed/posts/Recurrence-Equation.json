@@ -1,0 +1,51 @@
+{
+  "pageProps": {
+    "postData": {
+      "slug": "Recurrence-Equation",
+      "tags": [
+        "algorithms",
+        "Complexity",
+        "Recurrence Equation",
+        "Generating Function"
+      ],
+      "keywords": [],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "Recurrence Equation",
+      "date": "2024-10-27",
+      "isLegacy": true,
+      "lang": "en",
+      "tocHtml": "<ol>\n<li><a href=\"/Recurrence-Equation/index.html#Introduction\" target=\"Recurrence-Equation\">Introduction</a></li>\n<li><a href=\"/Recurrence-Equation/index.html#Solving-Recurrence-Relations-for-Fibonacci-Numbers\" target=\"Recurrence-Equation\">Solving Recurrence Relations for Fibonacci Numbers</a>\n<ol>\n<li><a href=\"/Recurrence-Equation/index.html#Define-Generating-Functions\" target=\"Recurrence-Equation\">Define Generating Functions</a></li>\n<li><a href=\"/Recurrence-Equation/index.html#Find-The-Relationship\" target=\"Recurrence-Equation\">Find The Relationship</a></li>\n<li><a href=\"/Recurrence-Equation/index.html#Solve-the-equation\" target=\"Recurrence-Equation\">Solve the equation</a></li>\n<li><a href=\"/Recurrence-Equation/index.html#Obtain-closed-form-expression\" target=\"Recurrence-Equation\">Obtain closed-form expression</a></li>\n</ol>\n</li>\n<li><a href=\"/Recurrence-Equation/index.html#Reference\" target=\"Recurrence-Equation\">Reference</a></li>\n</ol>",
+      "path": "/Recurrence-Equation/index.html"
+    },
+    "lang": "en",
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          },
+          "post-layout": {
+            "Author": "Author: {{author}}",
+            "Tags": "Tags",
+            "Keywords": "Keywords"
+          }
+        }
+      },
+      "initialLocale": "en",
+      "ns": ["navbar", "post-layout"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

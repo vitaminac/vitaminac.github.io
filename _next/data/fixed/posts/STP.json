@@ -1,0 +1,46 @@
+{
+  "pageProps": {
+    "postData": {
+      "slug": "STP",
+      "tags": ["Spanning Tree Protocol", "STP"],
+      "keywords": [],
+      "isDraft": false,
+      "isArchived": false,
+      "title": "STP",
+      "date": "2021-05-15 19:05:00",
+      "isLegacy": true,
+      "lang": "en",
+      "tocHtml": "<ol>\n<li><a href=\"/STP/index.html#Motivation\" target=\"STP\">Motivation</a></li>\n<li><a href=\"/STP/index.html#Introduction\" target=\"STP\">Introduction</a></li>\n<li><a href=\"/STP/index.html#Implementation\" target=\"STP\">Implementation</a></li>\n<li><a href=\"/STP/index.html#Reference\" target=\"STP\">Reference</a></li>\n</ol>",
+      "path": "/STP/index.html"
+    },
+    "lang": "en",
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          },
+          "post-layout": {
+            "Author": "Author: {{author}}",
+            "Tags": "Tags",
+            "Keywords": "Keywords"
+          }
+        }
+      },
+      "initialLocale": "en",
+      "ns": ["navbar", "post-layout"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

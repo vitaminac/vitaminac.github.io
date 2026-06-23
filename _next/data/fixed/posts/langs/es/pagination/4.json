@@ -1,0 +1,79 @@
+{
+  "pageProps": {
+    "lang": "es",
+    "previews": [
+      {
+        "slug": "Estructura-Algebraica",
+        "title": "Estructura Algebraica",
+        "date": "2019-01-26 10:45:44",
+        "content": "Intruducción  Una estructura algebraica es una n-tuple $(a_1,a_2,a_3,...,a_n)$ donde $a_1$ es un conjunto no vacío, y $(a_2,...,a_n)$ un conjunto de..."
+      },
+      {
+        "slug": "Caso-De-Estudio-Redes-De-Colas",
+        "title": "Caso de estudio - Simulación de redes de colas",
+        "date": "2018-12-29 13:28:40",
+        "content": "Introducción  Como responsable de operaciones del aeropuerto, debemos encontrar una solución al problema planteado. Para ello debemos construir un..."
+      },
+      {
+        "slug": "Teoria-De-Colas",
+        "title": "Teoria de colas",
+        "date": "2018-12-25 16:20:53",
+        "content": "Teoría de..."
+      },
+      {
+        "slug": "minishell",
+        "title": "La implementación de minishell en Linux",
+        "date": "2018-12-03 18:05:41",
+        "content": "La Implementación de intérprete de mandatos en Linux Introducción  ¿Qué es un intérprete de mandatos? Es un programa que hace la interfaz en modo..."
+      },
+      {
+        "slug": "Gestion-De-Procesos",
+        "title": "Gestión de procesos en Linux",
+        "date": "2018-11-26 18:20:30",
+        "content": "¿Qué es un proceso?  Un proceso es una abstracción de una programa en ejecucion. Y un programa es un conjunto de código maquina y dato almacenado en..."
+      }
+    ],
+    "prevPageUrl": "/posts/langs/es/pagination/3",
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "es": {
+          "navbar": {
+            "Home": "Inicio",
+            "Language": "Lenguaje",
+            "Tags": "Tags",
+            "en": "Inglés",
+            "es": "Español",
+            "zh": "Chino"
+          },
+          "paginated-index": {
+            "PrevPage": "← Adelante",
+            "NextPage": "Siguiente →"
+          }
+        },
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          },
+          "paginated-index": {
+            "PrevPage": "← NEWER POSTS",
+            "NextPage": "OLDER POSTS →"
+          }
+        }
+      },
+      "initialLocale": "es",
+      "ns": ["navbar", "paginated-index"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

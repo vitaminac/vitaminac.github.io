@@ -1,0 +1,37 @@
+{
+  "pageProps": {
+    "lang": "en",
+    "tag": "dll hijacking",
+    "previews": [
+      {
+        "slug": "dll-hijacking-via-zlib-dll-proxy",
+        "title": "DLL Hijacking via zlib DLL Proxy",
+        "date": "2024-07-21 11:59:24",
+        "content": "DLL hijacking involves manipulating a program to load a DLL that contains the desired code. We will use a simple technique here for ilustration: DLL..."
+      }
+    ],
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          }
+        }
+      },
+      "initialLocale": "en",
+      "ns": ["navbar"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

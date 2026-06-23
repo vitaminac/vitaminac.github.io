@@ -1,0 +1,106 @@
+{
+  "pageProps": {
+    "lang": "zh",
+    "previews": [
+      {
+        "slug": "renta",
+        "title": "西班牙Renta申报",
+        "date": "2026-04-11 15:11:05",
+        "content": "每年四月初到六月底每位超过一定收入条件的税务居民都必须主动进行报税（declaración de Renta）(ref: Manual práctico de Renta 2025 - Delimitación de la obligación de declarar en el IRPF)。 ..."
+      },
+      {
+        "slug": "bond",
+        "title": "债券的运行原理",
+        "date": "2026-04-05 22:33:16",
+        "content": "定义  债券（英语：Bond，西语: Bono）是发行方为筹集资金而发行、在约定时间支付一定比例的利息，并在到期时偿还本金的一种借条。一个债券的四个核心信息是：  面值 (Face Value)： 借条上写的金额，即到期后你会拿回多少钱。 票面利率 (Coupon Rate)：..."
+      },
+      {
+        "slug": "bond-fund",
+        "title": "债基的运行原理",
+        "date": "2026-03-01 13:59:16",
+        "content": "开放式债基是什么？  债基简单来说就是用专业方式买入并管理一篮子债券。债基的日常收益主要来自利息，表现平稳，他的收益曲线表现平稳，一般是“涨得慢、但偶尔会跌“。绝大多数债券基金以开放式基金形态发行， 这里说的主要也是开放式基金的模式。  运作方式 募集资金:..."
+      },
+      {
+        "slug": "flash",
+        "title": "Flash小游戏",
+        "date": "2025-06-29 10:08:36",
+        "content": "Flash小游戏曾经在xp/win7时代是很火的, 更带火了一些小游戏网站例如4399.com，7k7k.com。 但是自从Adobe取消Flash支持现在最新的浏览器已经玩不了。现在想玩Flash小游戏都需要单独下载一些还支持Flash的国内厂商的浏览器，例如搜狗浏览器,..."
+      },
+      {
+        "slug": "etf",
+        "title": "股指ETF的运行逻辑",
+        "date": "2024-12-26 15:48:16",
+        "content": "股票指数是什么? ..."
+      },
+      {
+        "slug": "vivienda-segunda-mano",
+        "title": "马德里二手房买卖流程",
+        "date": "2024-12-01 22:08:24",
+        "content": "选房  前期可以先在西班牙最大的几个房产网站上或者中介公司挂出的房源那考察了解市场行情。  在确定预算和需求（位置、房型、面积等）之后可以预约中介或者房东安排看房，确保对物业及周边环境满意。  无论新房还是二手房，房屋的价格大概率都与以下几个因素有关联  房间数量 厕所数量..."
+      },
+      {
+        "slug": "passport-renewal",
+        "title": "驻西大使馆在线护照更换",
+        "date": "2024-10-10 23:54:23",
+        "content": "现在中国护照是可以在手机app中国领事上更新的。  下载中国领事 注册登录实名验证 主页选择证件办理 填写资料 需要准备好白底照片，可以自己用手机拍然后修图把背景变成白色 需要准备好一个当天的报纸，然后合照上传 所有的信息都要填全，不要跳过，要不然之后补很麻烦 人脸认证 可以跳过这一步骤..."
+      },
+      {
+        "slug": "nie",
+        "title": "更换西班牙居留卡",
+        "date": "2024-08-31 19:20:12",
+        "content": "西班牙的永居卡或者欧盟永居卡需要每五年更新一次，且要在居留过期前60天申请。  更换永居卡或者欧盟永居卡需要满足下面的条件：  没有犯罪记录 单次离境欧盟不超过12个月 单次离境西班牙不超过6年 没有在其他欧盟国家拿到欧盟永居卡 ..."
+      },
+      {
+        "slug": "skyrim",
+        "title": "老滚5天际周年版安装教程",
+        "date": "2024-08-29 20:29:39",
+        "content": "游戏和Mods安装  下载游戏本体和游戏更新到版本v1.6.1170。  解压安装游戏本体。 解压更新压缩包按顺序再游戏目录下一个一个执行更新程序 执行SkyrimSELauncher.exe设置启动参数 下载安装Vortex 在Vortex里面添加Skyrim Special Edition..."
+      },
+      {
+        "slug": "cheating",
+        "title": "外挂开发原理",
+        "date": "2024-07-28 10:26:32",
+        "content": "先说一下写一个外挂需要什么条件，想要写外挂至少需要掌握一门编程语言，主要负责写一些上层逻辑例如外挂界面，可以是易语言，但是单单会易语言是远远不够的。目前的外挂和主流PC游戏大部分底层逻辑都是用C/C++写的，拥有熟练的C/C++语言和Win32..."
+      }
+    ],
+    "nextPageUrl": "/posts/langs/zh/pagination/2",
+    "_nextI18Next": {
+      "initialI18nStore": {
+        "zh": {
+          "navbar": {
+            "Home": "主页",
+            "Language": "语言",
+            "Tags": "标签",
+            "en": "英语",
+            "es": "西语",
+            "zh": "中文"
+          },
+          "paginated-index": { "PrevPage": "← 前一页", "NextPage": "下一页 →" }
+        },
+        "en": {
+          "navbar": {
+            "Home": "Home",
+            "Language": "Language",
+            "Tags": "Tags",
+            "en": "English",
+            "es": "Spanish",
+            "zh": "Chinese"
+          },
+          "paginated-index": {
+            "PrevPage": "← NEWER POSTS",
+            "NextPage": "OLDER POSTS →"
+          }
+        }
+      },
+      "initialLocale": "zh",
+      "ns": ["navbar", "paginated-index"],
+      "userConfig": {
+        "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] },
+        "default": {
+          "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+        }
+      }
+    }
+  },
+  "__N_SSG": true
+}

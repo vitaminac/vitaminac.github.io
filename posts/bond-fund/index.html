@@ -1,0 +1,1528 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="content-language" content="zh" />
+    <link rel="icon" href="/favicon.ico" />
+    <title>债基的运行原理</title>
+    <meta name="og:title" content="债基的运行原理" />
+    <meta name="author" content="Gao" />
+    <meta name="keywords" content="投资,债券,基金" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="next-head-count" content="10" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.27/dist/katex.min.css"
+      integrity="sha384-Pu5+C18nP5dwykLJOhd2U4Xen7rjScHN/qusop27hdd2drI+lL5KvX7YntvT8yew"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css"
+      integrity="sha512-hasIneQUHlh06VNBe7f6ZcHmeRTLIaQWFd43YriJ0UND19bvYRauxthDg8E4eVNPm9bRUhr5JGeqH7FRFXQu5g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="preload"
+      href="/_next/static/css/a169840b427f8744.css"
+      as="style"
+    />
+    <link
+      rel="stylesheet"
+      href="/_next/static/css/a169840b427f8744.css"
+      data-n-g=""
+    />
+    <link
+      rel="preload"
+      href="/_next/static/css/b6f191fba809344d.css"
+      as="style"
+    />
+    <link
+      rel="stylesheet"
+      href="/_next/static/css/b6f191fba809344d.css"
+      data-n-p=""
+    />
+    <noscript data-n-css=""></noscript>
+    <script
+      defer=""
+      nomodule=""
+      src="/_next/static/chunks/polyfills-42372ed130431b0a.js"
+    ></script>
+    <script src="/_next/static/chunks/webpack.js" defer=""></script>
+    <script src="/_next/static/chunks/framework.js" defer=""></script>
+    <script src="/_next/static/chunks/main.js" defer=""></script>
+    <script src="/_next/static/chunks/pages/_app.js" defer=""></script>
+    <script src="/_next/static/chunks/367.js" defer=""></script>
+    <script src="/_next/static/chunks/503.js" defer=""></script>
+    <script src="/_next/static/chunks/287.js" defer=""></script>
+    <script
+      src="/_next/static/chunks/pages/posts/%5Bslug%5D.js"
+      defer=""
+    ></script>
+    <script src="/_next/static/fixed/_buildManifest.js" defer=""></script>
+    <script src="/_next/static/fixed/_ssgManifest.js" defer=""></script>
+  </head>
+  <body>
+    <div id="__next">
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+        crossorigin="anonymous"
+      />
+      <nav
+        class="navbar navbar-expand-md navbar-light sticky-top NavigationBar_navBar__fSiIq tw-bg-white/95 tw-shadow tw-shadow-black/25"
+      >
+        <div class="container-fluid px-md-5">
+          <div class="navbar-brand animate__animated animate__pulse">
+            <span
+              class="tw-rounded tw-bg-black tw-p-1 tw-text-xl tw-font-medium tw-text-white"
+              >Gao&#x27;s blog</span
+            >
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="navbar-collapse collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="/posts/langs/zh/pagination/1/"
+                  >主页</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="/posts/langs/zh/tags/"
+                  >标签</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  >语言</a
+                >
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li>
+                    <a class="dropdown-item" href="/posts/langs/en/">英语</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/posts/langs/es/">西语</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/posts/langs/zh/">中文</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <main>
+        <header
+          class="tw-relative tw-flex tw-h-96 tw-w-full tw-flex-col tw-content-center tw-justify-center tw-bg-cover tw-bg-center tw-bg-no-repeat tw-text-center tw-text-white"
+          style="
+            background-image: url(/_next/static/media/default-post-preview.c96b099a.jpeg);
+            left: calc(50% - 50vw);
+          "
+        >
+          <h1>债基的运行原理</h1>
+          <p>作者: Gao</p>
+          <span
+            ><i class="fa-regular fa-calendar"></i
+            ><time class="tw-pl-1.5" datetime="2026-03-01 13:59:16"
+              >March 1, 2026</time
+            ></span
+          >
+          <section class="tw-mt-3 tw-text-center">
+            <p>标签<!-- -->:</p>
+            <ul class="tw-p-0">
+              <li class="tw-inline tw-px-1">
+                <a
+                  class="tw-m-0.5 tw-inline-block tw-rounded tw-border tw-border-solid tw-border-white tw-bg-neutral-300 tw-px-2 tw-text-sm tw-leading-6 tw-text-white tw-no-underline hover:tw-bg-sky-300"
+                  href="/posts/langs/zh/tags/%E6%8A%95%E8%B5%84/"
+                  >投资</a
+                >
+              </li>
+            </ul>
+          </section>
+          <section class="tw-mt-3 tw-text-center">
+            <p>关键词<!-- -->:</p>
+            <ul class="tw-p-0">
+              <li class="tw-inline tw-px-1">
+                <a
+                  class="tw-m-0.5 tw-inline-block tw-rounded tw-border tw-border-solid tw-border-white tw-bg-neutral-300 tw-px-2 tw-text-sm tw-leading-6 tw-text-white tw-no-underline hover:tw-bg-sky-300"
+                  href="/posts/langs/zh/tags/%E5%80%BA%E5%88%B8/"
+                  >债券</a
+                >
+              </li>
+              <li class="tw-inline tw-px-1">
+                <a
+                  class="tw-m-0.5 tw-inline-block tw-rounded tw-border tw-border-solid tw-border-white tw-bg-neutral-300 tw-px-2 tw-text-sm tw-leading-6 tw-text-white tw-no-underline hover:tw-bg-sky-300"
+                  href="/posts/langs/zh/tags/%E5%9F%BA%E9%87%91/"
+                  >基金</a
+                >
+              </li>
+            </ul>
+          </section>
+        </header>
+        <div class="container">
+          <div class="row">
+            <nav class="Post_toc__TAzIW col-12 col-lg-3 order-lg-2">
+              <ol>
+                <li>
+                  <a
+                    href="#%E5%BC%80%E6%94%BE%E5%BC%8F%E5%80%BA%E5%9F%BA%E6%98%AF%E4%BB%80%E4%B9%88"
+                    >开放式债基是什么？</a
+                  >
+                </li>
+                <li>
+                  <a href="#%E8%BF%90%E4%BD%9C%E6%96%B9%E5%BC%8F">运作方式</a>
+                </li>
+                <li>
+                  <a href="#%E8%B5%84%E4%BA%A7%E9%85%8D%E7%BD%AE">资产配置</a>
+                </li>
+                <li>
+                  <a href="#%E8%B5%84%E4%BA%A7%E6%94%B6%E7%9B%8A">资产收益</a>
+                  <ol>
+                    <li>
+                      <a
+                        href="#%E5%88%A9%E6%81%AF%E6%94%B6%E5%85%A5%E5%9F%BA%E7%A1%80%E6%94%B6%E7%9B%8A"
+                        >利息收入（基础收益）</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#%E8%B5%84%E6%9C%AC%E5%88%A9%E5%BE%97%E4%BB%B7%E6%A0%BC%E6%B3%A2%E5%8A%A8%E6%94%B6%E7%9B%8A"
+                        >资本利得（价格波动收益）</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#%E6%9D%A0%E6%9D%86%E4%B8%8E%E4%B9%85%E6%9C%9F%E7%AE%A1%E7%90%86"
+                        >杠杆与久期管理</a
+                      >
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <a
+                    href="#%E6%AF%8F%E6%97%A5%E5%87%80%E5%80%BC%E5%AE%9A%E4%BB%B7%E9%80%BB%E8%BE%91"
+                    >每日净值定价逻辑</a
+                  >
+                </li>
+                <li>
+                  <a href="#%E8%B5%8E%E5%9B%9E%E6%9C%BA%E5%88%B6">赎回机制</a>
+                </li>
+                <li>
+                  <a href="#%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86">风险管理</a>
+                  <ol>
+                    <li>
+                      <a href="#%E4%B9%85%E6%9C%9F%E8%B0%83%E6%95%B4"
+                        >久期调整</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#%E5%9B%BD%E5%80%BA%E6%9C%9F%E8%B4%A7%E5%AF%B9%E5%86%B2Treasury-Bond-Futures-Hedging"
+                        >国债期货对冲（Treasury Bond Futures Hedging）</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="#%E5%88%A9%E7%8E%87%E4%BA%92%E6%8D%A2-Interest-Rate-Swap---IRS"
+                        >利率互换 (Interest Rate Swap - IRS)</a
+                      >
+                    </li>
+                    <li><a href="#%E5%AE%9A%E6%8A%95">定投</a></li>
+                  </ol>
+                </li>
+              </ol>
+            </nav>
+            <article class="Post_content__QBxez col-12 order-lg-1 col-lg-9">
+              <h1 id="开放式债基是什么">
+                开放式债基是什么？<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#开放式债基是什么"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h1>
+              <p>
+                债基简单来说就是用专业方式买入并管理一篮子债券。债基的日常收益主要来自利息，表现平稳，他的收益曲线表现平稳，一般是“涨得慢、但偶尔会跌“。绝大多数债券基金以开放式基金形态发行，
+                这里说的主要也是开放式基金的模式。
+              </p>
+              <h1 id="运作方式">
+                运作方式<a aria-hidden="true" tabindex="-1" href="#运作方式"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h1>
+              <ol>
+                <li>
+                  募集资金: 投资者根据基金净值向基金公司在T日提出申购申请。
+                </li>
+                <li>
+                  创建份额:
+                  <span class="katex"
+                    ><span class="katex-mathml"
+                      ><math xmlns="http://www.w3.org/1998/Math/MathML"
+                        ><semantics
+                          ><mrow><mi>T</mi><mo>+</mo><mn>1</mn></mrow
+                          ><annotation encoding="application/x-tex"
+                            >T+1</annotation
+                          ></semantics
+                        ></math
+                      ></span
+                    ><span class="katex-html" aria-hidden="true"
+                      ><span class="base"
+                        ><span
+                          class="strut"
+                          style="height: 0.7667em; vertical-align: -0.0833em"
+                        ></span
+                        ><span
+                          class="mord mathnormal"
+                          style="margin-right: 0.13889em"
+                          >T</span
+                        ><span
+                          class="mspace"
+                          style="margin-right: 0.2222em"
+                        ></span
+                        ><span class="mbin">+</span
+                        ><span
+                          class="mspace"
+                          style="margin-right: 0.2222em"
+                        ></span></span
+                      ><span class="base"
+                        ><span class="strut" style="height: 0.6444em"></span
+                        ><span class="mord">1</span></span
+                      ></span
+                    ></span
+                  >日基金公司按<span class="katex"
+                    ><span class="katex-mathml"
+                      ><math xmlns="http://www.w3.org/1998/Math/MathML"
+                        ><semantics
+                          ><mrow><mi>T</mi></mrow
+                          ><annotation encoding="application/x-tex"
+                            >T</annotation
+                          ></semantics
+                        ></math
+                      ></span
+                    ><span class="katex-html" aria-hidden="true"
+                      ><span class="base"
+                        ><span class="strut" style="height: 0.6833em"></span
+                        ><span
+                          class="mord mathnormal"
+                          style="margin-right: 0.13889em"
+                          >T</span
+                        ></span
+                      ></span
+                    ></span
+                  >日净值为你资金新建对应的<span class="katex"
+                    ><span class="katex-mathml"
+                      ><math xmlns="http://www.w3.org/1998/Math/MathML"
+                        ><semantics
+                          ><mrow
+                            ><mtext>基金份额</mtext><mo>=</mo
+                            ><mfrac
+                              ><mtext>申购金额</mtext
+                              ><mtext>T日基金净值</mtext></mfrac
+                            ></mrow
+                          ><annotation encoding="application/x-tex"
+                            >基金份额=\frac{\text{申购金额}}{\text{T日基金净值}}</annotation
+                          ></semantics
+                        ></math
+                      ></span
+                    ><span class="katex-html" aria-hidden="true"
+                      ><span class="base"
+                        ><span class="strut" style="height: 0.6833em"></span
+                        ><span class="mord cjk_fallback">基金份额</span
+                        ><span
+                          class="mspace"
+                          style="margin-right: 0.2778em"
+                        ></span
+                        ><span class="mrel">=</span
+                        ><span
+                          class="mspace"
+                          style="margin-right: 0.2778em"
+                        ></span></span
+                      ><span class="base"
+                        ><span
+                          class="strut"
+                          style="height: 1.2173em; vertical-align: -0.345em"
+                        ></span
+                        ><span class="mord"
+                          ><span class="mopen nulldelimiter"></span
+                          ><span class="mfrac"
+                            ><span class="vlist-t vlist-t2"
+                              ><span class="vlist-r"
+                                ><span class="vlist" style="height: 0.8723em"
+                                  ><span style="top: -2.655em"
+                                    ><span
+                                      class="pstrut"
+                                      style="height: 3em"
+                                    ></span
+                                    ><span
+                                      class="sizing reset-size6 size3 mtight"
+                                      ><span class="mord mtight"
+                                        ><span class="mord text mtight"
+                                          ><span class="mord mtight">T</span
+                                          ><span
+                                            class="mord cjk_fallback mtight"
+                                            >日基金净值</span
+                                          ></span
+                                        ></span
+                                      ></span
+                                    ></span
+                                  ><span style="top: -3.23em"
+                                    ><span
+                                      class="pstrut"
+                                      style="height: 3em"
+                                    ></span
+                                    ><span
+                                      class="frac-line"
+                                      style="border-bottom-width: 0.04em"
+                                    ></span></span
+                                  ><span style="top: -3.394em"
+                                    ><span
+                                      class="pstrut"
+                                      style="height: 3em"
+                                    ></span
+                                    ><span
+                                      class="sizing reset-size6 size3 mtight"
+                                      ><span class="mord mtight"
+                                        ><span class="mord text mtight"
+                                          ><span
+                                            class="mord cjk_fallback mtight"
+                                            >申购金额</span
+                                          ></span
+                                        ></span
+                                      ></span
+                                    ></span
+                                  ></span
+                                ><span class="vlist-s">​</span></span
+                              ><span class="vlist-r"
+                                ><span class="vlist" style="height: 0.345em"
+                                  ><span></span></span></span></span></span
+                          ><span
+                            class="mclose nulldelimiter"
+                          ></span></span></span></span></span
+                  >。
+                </li>
+                <li>
+                  形成基金资产:
+                  募集到的资金进入基金托管账户，由托管银行监管，基金公司仅负责投资运作，不能随意挪用。
+                </li>
+                <li>债基用资金按既定的投资策略投资固定收益类资产。</li>
+                <li>基金资产产生收益或亏损.</li>
+                <li>债基净值根据收益变化。</li>
+                <li>
+                  投资者<span class="katex"
+                    ><span class="katex-mathml"
+                      ><math xmlns="http://www.w3.org/1998/Math/MathML"
+                        ><semantics
+                          ><mrow><mi>T</mi></mrow
+                          ><annotation encoding="application/x-tex"
+                            >T</annotation
+                          ></semantics
+                        ></math
+                      ></span
+                    ><span class="katex-html" aria-hidden="true"
+                      ><span class="base"
+                        ><span class="strut" style="height: 0.6833em"></span
+                        ><span
+                          class="mord mathnormal"
+                          style="margin-right: 0.13889em"
+                          >T</span
+                        ></span
+                      ></span
+                    ></span
+                  >日提交赎回申请。
+                </li>
+                <li>
+                  <span class="katex"
+                    ><span class="katex-mathml"
+                      ><math xmlns="http://www.w3.org/1998/Math/MathML"
+                        ><semantics
+                          ><mrow><mi>T</mi><mo>+</mo><mn>1</mn></mrow
+                          ><annotation encoding="application/x-tex"
+                            >T+1</annotation
+                          ></semantics
+                        ></math
+                      ></span
+                    ><span class="katex-html" aria-hidden="true"
+                      ><span class="base"
+                        ><span
+                          class="strut"
+                          style="height: 0.7667em; vertical-align: -0.0833em"
+                        ></span
+                        ><span
+                          class="mord mathnormal"
+                          style="margin-right: 0.13889em"
+                          >T</span
+                        ><span
+                          class="mspace"
+                          style="margin-right: 0.2222em"
+                        ></span
+                        ><span class="mbin">+</span
+                        ><span
+                          class="mspace"
+                          style="margin-right: 0.2222em"
+                        ></span></span
+                      ><span class="base"
+                        ><span class="strut" style="height: 0.6444em"></span
+                        ><span class="mord">1</span></span
+                      ></span
+                    ></span
+                  >日基金公司确认赎回份额同时确认<span class="katex"
+                    ><span class="katex-mathml"
+                      ><math xmlns="http://www.w3.org/1998/Math/MathML"
+                        ><semantics
+                          ><mrow
+                            ><mtext>赎回金额</mtext><mo>=</mo
+                            ><mtext>赎回份额</mtext><mo>×</mo
+                            ><mtext>T日的基金净值</mtext></mrow
+                          ><annotation encoding="application/x-tex"
+                            >\text{赎回金额} = \text{赎回份额} \times
+                            \text{T日的基金净值}</annotation
+                          ></semantics
+                        ></math
+                      ></span
+                    ><span class="katex-html" aria-hidden="true"
+                      ><span class="base"
+                        ><span class="strut" style="height: 0.6833em"></span
+                        ><span class="mord text"
+                          ><span class="mord cjk_fallback">赎回金额</span></span
+                        ><span
+                          class="mspace"
+                          style="margin-right: 0.2778em"
+                        ></span
+                        ><span class="mrel">=</span
+                        ><span
+                          class="mspace"
+                          style="margin-right: 0.2778em"
+                        ></span></span
+                      ><span class="base"
+                        ><span
+                          class="strut"
+                          style="height: 0.7667em; vertical-align: -0.0833em"
+                        ></span
+                        ><span class="mord text"
+                          ><span class="mord cjk_fallback">赎回份额</span></span
+                        ><span
+                          class="mspace"
+                          style="margin-right: 0.2222em"
+                        ></span
+                        ><span class="mbin">×</span
+                        ><span
+                          class="mspace"
+                          style="margin-right: 0.2222em"
+                        ></span></span
+                      ><span class="base"
+                        ><span class="strut" style="height: 0.6833em"></span
+                        ><span class="mord text"
+                          ><span class="mord">T</span
+                          ><span class="mord cjk_fallback"
+                            >日的基金净值</span
+                          ></span
+                        ></span
+                      ></span
+                    ></span
+                  >。基金资产总值与基金总份额相应减少。
+                </li>
+                <li>
+                  清算完成后，大概<span class="katex"
+                    ><span class="katex-mathml"
+                      ><math xmlns="http://www.w3.org/1998/Math/MathML"
+                        ><semantics
+                          ><mrow><mi>T</mi><mo>+</mo><mn>2</mn></mrow
+                          ><annotation encoding="application/x-tex"
+                            >T+2</annotation
+                          ></semantics
+                        ></math
+                      ></span
+                    ><span class="katex-html" aria-hidden="true"
+                      ><span class="base"
+                        ><span
+                          class="strut"
+                          style="height: 0.7667em; vertical-align: -0.0833em"
+                        ></span
+                        ><span
+                          class="mord mathnormal"
+                          style="margin-right: 0.13889em"
+                          >T</span
+                        ><span
+                          class="mspace"
+                          style="margin-right: 0.2222em"
+                        ></span
+                        ><span class="mbin">+</span
+                        ><span
+                          class="mspace"
+                          style="margin-right: 0.2222em"
+                        ></span></span
+                      ><span class="base"
+                        ><span class="strut" style="height: 0.6444em"></span
+                        ><span class="mord">2</span></span
+                      ></span
+                    ></span
+                  >或<span class="katex"
+                    ><span class="katex-mathml"
+                      ><math xmlns="http://www.w3.org/1998/Math/MathML"
+                        ><semantics
+                          ><mrow><mi>T</mi><mo>+</mo><mn>3</mn></mrow
+                          ><annotation encoding="application/x-tex"
+                            >T+3</annotation
+                          ></semantics
+                        ></math
+                      ></span
+                    ><span class="katex-html" aria-hidden="true"
+                      ><span class="base"
+                        ><span
+                          class="strut"
+                          style="height: 0.7667em; vertical-align: -0.0833em"
+                        ></span
+                        ><span
+                          class="mord mathnormal"
+                          style="margin-right: 0.13889em"
+                          >T</span
+                        ><span
+                          class="mspace"
+                          style="margin-right: 0.2222em"
+                        ></span
+                        ><span class="mbin">+</span
+                        ><span
+                          class="mspace"
+                          style="margin-right: 0.2222em"
+                        ></span></span
+                      ><span class="base"
+                        ><span class="strut" style="height: 0.6444em"></span
+                        ><span class="mord">3</span></span
+                      ></span
+                    ></span
+                  >日赎回资金划付至投资者账户。
+                </li>
+                <li>
+                  <span class="katex"
+                    ><span class="katex-mathml"
+                      ><math xmlns="http://www.w3.org/1998/Math/MathML"
+                        ><semantics
+                          ><mrow
+                            ><mtext>投资者的盈亏</mtext><mo>=</mo
+                            ><mo stretchy="false">(</mo
+                            ><mtext>赎回时的净值</mtext><mo>−</mo
+                            ><mtext>申购时的净值</mtext
+                            ><mo stretchy="false">)</mo><mo>×</mo
+                            ><mtext>持有份额</mtext></mrow
+                          ><annotation encoding="application/x-tex"
+                            >\text{投资者的盈亏} = (\text{赎回时的净值} -
+                            \text{申购时的净值}) \times
+                            \text{持有份额}</annotation
+                          ></semantics
+                        ></math
+                      ></span
+                    ><span class="katex-html" aria-hidden="true"
+                      ><span class="base"
+                        ><span class="strut" style="height: 0.6833em"></span
+                        ><span class="mord text"
+                          ><span class="mord cjk_fallback"
+                            >投资者的盈亏</span
+                          ></span
+                        ><span
+                          class="mspace"
+                          style="margin-right: 0.2778em"
+                        ></span
+                        ><span class="mrel">=</span
+                        ><span
+                          class="mspace"
+                          style="margin-right: 0.2778em"
+                        ></span></span
+                      ><span class="base"
+                        ><span
+                          class="strut"
+                          style="height: 1em; vertical-align: -0.25em"
+                        ></span
+                        ><span class="mopen">(</span
+                        ><span class="mord text"
+                          ><span class="mord cjk_fallback"
+                            >赎回时的净值</span
+                          ></span
+                        ><span
+                          class="mspace"
+                          style="margin-right: 0.2222em"
+                        ></span
+                        ><span class="mbin">−</span
+                        ><span
+                          class="mspace"
+                          style="margin-right: 0.2222em"
+                        ></span></span
+                      ><span class="base"
+                        ><span
+                          class="strut"
+                          style="height: 1em; vertical-align: -0.25em"
+                        ></span
+                        ><span class="mord text"
+                          ><span class="mord cjk_fallback"
+                            >申购时的净值</span
+                          ></span
+                        ><span class="mclose">)</span
+                        ><span
+                          class="mspace"
+                          style="margin-right: 0.2222em"
+                        ></span
+                        ><span class="mbin">×</span
+                        ><span
+                          class="mspace"
+                          style="margin-right: 0.2222em"
+                        ></span></span
+                      ><span class="base"
+                        ><span class="strut" style="height: 0.6833em"></span
+                        ><span class="mord text"
+                          ><span class="mord cjk_fallback">持有份额</span></span
+                        ></span
+                      ></span
+                    ></span
+                  >
+                </li>
+              </ol>
+              <p>
+                同一只债基的A类和C类份额由同一位基金经理管理同一个底层资产池，但由于费率扣除方式不同，它们的收益率会表现出微小的差异。C类份额每天都会额外扣除一笔“销售服务费”，
+                长期积累下来，C类的净值通常会略低于A类。如果你这笔钱打算放1年以上，虽然A类买入时有手续费，但后续没有每日扣除的服务费，更划算。
+              </p>
+              <h1 id="资产配置">
+                资产配置<a aria-hidden="true" tabindex="-1" href="#资产配置"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h1>
+              <p>债基主要投资固定收益类资产，典型配置包括：</p>
+              <ul>
+                <li>普通债：国债、地方债、金融债、企业债、公司债</li>
+                <li>可转债</li>
+                <li>同业存单、短期融资券</li>
+                <li>回购、银行存款等流动性资产</li>
+              </ul>
+              <p>根据债基对股票的参与程度不同也可以分为：</p>
+              <ul>
+                <li>纯债基金：不投股票</li>
+                <li>一级债基：可参与新股申购</li>
+                <li>二级债基：可少量买卖股票（通常≤20%）</li>
+              </ul>
+              <p>
+                债基并不能单单从一级市场购买债券然后持有到期，而是需要同时持续在二级市场交易，主要原因包括：
+              </p>
+              <ul>
+                <li>
+                  持续有申购和赎回的需求，必须保持流动性，被动卖债不可避免。
+                </li>
+                <li>一级市场发行频率不稳定，无法持续匹配大型债基建仓需求。</li>
+                <li>企业信用状况恶化时需提前卖出，否则可能违约。</li>
+                <li>
+                  市场利率不是静止的，
+                  久期需要动态调整，完全不交易会被动暴露风险
+                </li>
+                <li>
+                  债基监管要求，
+                  例如180天滚动债需要保持债券组合的平均剩余期限控制在180天，
+                  需要不停调整债券组合。
+                </li>
+              </ul>
+              <h1 id="资产收益">
+                资产收益<a aria-hidden="true" tabindex="-1" href="#资产收益"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h1>
+              <p>
+                因为二级市场的价格波动特性，债基并不承诺保本。债基的收益主要来源于三部分：
+              </p>
+              <h2 id="利息收入基础收益">
+                利息收入（基础收益）<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#利息收入基础收益"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <ul>
+                <li>债券按票面利率付息</li>
+                <li>这是债基最稳定的收益来源</li>
+              </ul>
+              <h2 id="资本利得价格波动收益">
+                资本利得（价格波动收益）<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#资本利得价格波动收益"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <ul>
+                <li>债券价格会随市场利率变化而波动</li>
+                <li>利率下降 -&gt; 债券价格上涨 -&gt; 基金净值上升</li>
+                <li>基金通过买卖债券获取差价收益</li>
+              </ul>
+              <h2 id="杠杆与久期管理">
+                杠杆与久期管理<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#杠杆与久期管理"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <p>
+                基金通过<strong>回购加杠杆</strong>放大收益，把持有的债券抵押出去借入现金再投资。只要再投资收益高于融资成本就能提高收益，但是这个操作受监管严格限制。
+              </p>
+              <p>
+                基金经理还会通过久期管理（Duration
+                Management）押注利率走势获得额外收益或降低利率上调带来的回撤：
+              </p>
+              <ul>
+                <li>
+                  预期利率下降(债市牛市):
+                  基金经理会通过卖出短债、买入长债，来拉长久期。这样当利率下调时，债券价格上涨的幅度会更大。
+                </li>
+                <li>
+                  预期利率上升(债市熊市):
+                  基金经理会通过卖出长债、买入短债，来缩短久期。这样当利率上涨时，债券价格下跌的幅度会更小。
+                </li>
+              </ul>
+              <h1 id="每日净值定价逻辑">
+                每日净值定价逻辑<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#每日净值定价逻辑"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h1>
+              <p>每日基金净值（NAV）的定义是</p>
+              <span class="katex-display"
+                ><span class="katex"
+                  ><span class="katex-mathml"
+                    ><math
+                      xmlns="http://www.w3.org/1998/Math/MathML"
+                      display="block"
+                      ><semantics
+                        ><mrow
+                          ><mtext>基金净值</mtext><mo>=</mo
+                          ><mfrac
+                            ><mrow
+                              ><munderover
+                                ><mo>∑</mo><mi>i</mi><mi>N</mi></munderover
+                              ><msub><mi>P</mi><mi>i</mi></msub
+                              ><mo>×</mo><msub><mi>q</mi><mi>i</mi></msub
+                              ><mo>+</mo><mtext>其他资产</mtext><mo>−</mo
+                              ><mtext>负债</mtext></mrow
+                            ><mtext>基金份额</mtext></mfrac
+                          ></mrow
+                        ><annotation encoding="application/x-tex"
+                          >\text{基金净值} = \frac{\sum_i^N P_i \times q_i +
+                          \text{其他资产} -
+                          \text{负债}}{\text{基金份额}}</annotation
+                        ></semantics
+                      ></math
+                    ></span
+                  ><span class="katex-html" aria-hidden="true"
+                    ><span class="base"
+                      ><span class="strut" style="height: 0.6833em"></span
+                      ><span class="mord text"
+                        ><span class="mord cjk_fallback">基金净值</span></span
+                      ><span
+                        class="mspace"
+                        style="margin-right: 0.2778em"
+                      ></span
+                      ><span class="mrel">=</span
+                      ><span
+                        class="mspace"
+                        style="margin-right: 0.2778em"
+                      ></span></span
+                    ><span class="base"
+                      ><span
+                        class="strut"
+                        style="height: 2.3569em; vertical-align: -0.686em"
+                      ></span
+                      ><span class="mord"
+                        ><span class="mopen nulldelimiter"></span
+                        ><span class="mfrac"
+                          ><span class="vlist-t vlist-t2"
+                            ><span class="vlist-r"
+                              ><span class="vlist" style="height: 1.6709em"
+                                ><span style="top: -2.314em"
+                                  ><span
+                                    class="pstrut"
+                                    style="height: 3em"
+                                  ></span
+                                  ><span class="mord"
+                                    ><span class="mord text"
+                                      ><span class="mord cjk_fallback"
+                                        >基金份额</span
+                                      ></span
+                                    ></span
+                                  ></span
+                                ><span style="top: -3.23em"
+                                  ><span
+                                    class="pstrut"
+                                    style="height: 3em"
+                                  ></span
+                                  ><span
+                                    class="frac-line"
+                                    style="border-bottom-width: 0.04em"
+                                  ></span></span
+                                ><span style="top: -3.6897em"
+                                  ><span
+                                    class="pstrut"
+                                    style="height: 3em"
+                                  ></span
+                                  ><span class="mord"
+                                    ><span class="mop"
+                                      ><span
+                                        class="mop op-symbol small-op"
+                                        style="position: relative; top: 0em"
+                                        >∑</span
+                                      ><span class="msupsub"
+                                        ><span class="vlist-t vlist-t2"
+                                          ><span class="vlist-r"
+                                            ><span
+                                              class="vlist"
+                                              style="height: 0.9812em"
+                                              ><span
+                                                style="
+                                                  top: -2.4003em;
+                                                  margin-left: 0em;
+                                                  margin-right: 0.05em;
+                                                "
+                                                ><span
+                                                  class="pstrut"
+                                                  style="height: 2.7em"
+                                                ></span
+                                                ><span
+                                                  class="sizing reset-size6 size3 mtight"
+                                                  ><span
+                                                    class="mord mathnormal mtight"
+                                                    >i</span
+                                                  ></span
+                                                ></span
+                                              ><span
+                                                style="
+                                                  top: -3.2029em;
+                                                  margin-right: 0.05em;
+                                                "
+                                                ><span
+                                                  class="pstrut"
+                                                  style="height: 2.7em"
+                                                ></span
+                                                ><span
+                                                  class="sizing reset-size6 size3 mtight"
+                                                  ><span
+                                                    class="mord mathnormal mtight"
+                                                    style="
+                                                      margin-right: 0.10903em;
+                                                    "
+                                                    >N</span
+                                                  ></span
+                                                ></span
+                                              ></span
+                                            ><span class="vlist-s"
+                                              >​</span
+                                            ></span
+                                          ><span class="vlist-r"
+                                            ><span
+                                              class="vlist"
+                                              style="height: 0.2997em"
+                                              ><span></span></span></span></span></span></span
+                                    ><span
+                                      class="mspace"
+                                      style="margin-right: 0.1667em"
+                                    ></span
+                                    ><span class="mord"
+                                      ><span
+                                        class="mord mathnormal"
+                                        style="margin-right: 0.13889em"
+                                        >P</span
+                                      ><span class="msupsub"
+                                        ><span class="vlist-t vlist-t2"
+                                          ><span class="vlist-r"
+                                            ><span
+                                              class="vlist"
+                                              style="height: 0.3117em"
+                                              ><span
+                                                style="
+                                                  top: -2.55em;
+                                                  margin-left: -0.1389em;
+                                                  margin-right: 0.05em;
+                                                "
+                                                ><span
+                                                  class="pstrut"
+                                                  style="height: 2.7em"
+                                                ></span
+                                                ><span
+                                                  class="sizing reset-size6 size3 mtight"
+                                                  ><span
+                                                    class="mord mathnormal mtight"
+                                                    >i</span
+                                                  ></span
+                                                ></span
+                                              ></span
+                                            ><span class="vlist-s"
+                                              >​</span
+                                            ></span
+                                          ><span class="vlist-r"
+                                            ><span
+                                              class="vlist"
+                                              style="height: 0.15em"
+                                              ><span></span></span></span></span></span></span
+                                    ><span
+                                      class="mspace"
+                                      style="margin-right: 0.2222em"
+                                    ></span
+                                    ><span class="mbin">×</span
+                                    ><span
+                                      class="mspace"
+                                      style="margin-right: 0.2222em"
+                                    ></span
+                                    ><span class="mord"
+                                      ><span
+                                        class="mord mathnormal"
+                                        style="margin-right: 0.03588em"
+                                        >q</span
+                                      ><span class="msupsub"
+                                        ><span class="vlist-t vlist-t2"
+                                          ><span class="vlist-r"
+                                            ><span
+                                              class="vlist"
+                                              style="height: 0.3117em"
+                                              ><span
+                                                style="
+                                                  top: -2.55em;
+                                                  margin-left: -0.0359em;
+                                                  margin-right: 0.05em;
+                                                "
+                                                ><span
+                                                  class="pstrut"
+                                                  style="height: 2.7em"
+                                                ></span
+                                                ><span
+                                                  class="sizing reset-size6 size3 mtight"
+                                                  ><span
+                                                    class="mord mathnormal mtight"
+                                                    >i</span
+                                                  ></span
+                                                ></span
+                                              ></span
+                                            ><span class="vlist-s"
+                                              >​</span
+                                            ></span
+                                          ><span class="vlist-r"
+                                            ><span
+                                              class="vlist"
+                                              style="height: 0.15em"
+                                              ><span></span></span></span></span></span></span
+                                    ><span
+                                      class="mspace"
+                                      style="margin-right: 0.2222em"
+                                    ></span
+                                    ><span class="mbin">+</span
+                                    ><span
+                                      class="mspace"
+                                      style="margin-right: 0.2222em"
+                                    ></span
+                                    ><span class="mord text"
+                                      ><span class="mord cjk_fallback"
+                                        >其他资产</span
+                                      ></span
+                                    ><span
+                                      class="mspace"
+                                      style="margin-right: 0.2222em"
+                                    ></span
+                                    ><span class="mbin">−</span
+                                    ><span
+                                      class="mspace"
+                                      style="margin-right: 0.2222em"
+                                    ></span
+                                    ><span class="mord text"
+                                      ><span class="mord cjk_fallback"
+                                        >负债</span
+                                      ></span
+                                    ></span
+                                  ></span
+                                ></span
+                              ><span class="vlist-s">​</span></span
+                            ><span class="vlist-r"
+                              ><span class="vlist" style="height: 0.686em"
+                                ><span></span></span></span></span></span
+                        ><span
+                          class="mclose nulldelimiter"
+                        ></span></span></span></span></span
+              ></span>
+              <p>其中:</p>
+              <ul>
+                <li>
+                  <span class="katex"
+                    ><span class="katex-mathml"
+                      ><math xmlns="http://www.w3.org/1998/Math/MathML"
+                        ><semantics
+                          ><mrow
+                            ><msub><mi>P</mi><mi>i</mi></msub></mrow
+                          ><annotation encoding="application/x-tex"
+                            >P_i</annotation
+                          ></semantics
+                        ></math
+                      ></span
+                    ><span class="katex-html" aria-hidden="true"
+                      ><span class="base"
+                        ><span
+                          class="strut"
+                          style="height: 0.8333em; vertical-align: -0.15em"
+                        ></span
+                        ><span class="mord"
+                          ><span
+                            class="mord mathnormal"
+                            style="margin-right: 0.13889em"
+                            >P</span
+                          ><span class="msupsub"
+                            ><span class="vlist-t vlist-t2"
+                              ><span class="vlist-r"
+                                ><span class="vlist" style="height: 0.3117em"
+                                  ><span
+                                    style="
+                                      top: -2.55em;
+                                      margin-left: -0.1389em;
+                                      margin-right: 0.05em;
+                                    "
+                                    ><span
+                                      class="pstrut"
+                                      style="height: 2.7em"
+                                    ></span
+                                    ><span
+                                      class="sizing reset-size6 size3 mtight"
+                                      ><span class="mord mathnormal mtight"
+                                        >i</span
+                                      ></span
+                                    ></span
+                                  ></span
+                                ><span class="vlist-s">​</span></span
+                              ><span class="vlist-r"
+                                ><span class="vlist" style="height: 0.15em"
+                                  ><span></span></span></span></span></span></span></span></span></span
+                  >是第<span class="katex"
+                    ><span class="katex-mathml"
+                      ><math xmlns="http://www.w3.org/1998/Math/MathML"
+                        ><semantics
+                          ><mrow><mi>i</mi></mrow
+                          ><annotation encoding="application/x-tex"
+                            >i</annotation
+                          ></semantics
+                        ></math
+                      ></span
+                    ><span class="katex-html" aria-hidden="true"
+                      ><span class="base"
+                        ><span class="strut" style="height: 0.6595em"></span
+                        ><span class="mord mathnormal">i</span></span
+                      ></span
+                    ></span
+                  >只债券的当日公允价格
+                </li>
+                <li>
+                  <span class="katex"
+                    ><span class="katex-mathml"
+                      ><math xmlns="http://www.w3.org/1998/Math/MathML"
+                        ><semantics
+                          ><mrow
+                            ><msub><mi>q</mi><mi>i</mi></msub></mrow
+                          ><annotation encoding="application/x-tex"
+                            >q_i</annotation
+                          ></semantics
+                        ></math
+                      ></span
+                    ><span class="katex-html" aria-hidden="true"
+                      ><span class="base"
+                        ><span
+                          class="strut"
+                          style="height: 0.625em; vertical-align: -0.1944em"
+                        ></span
+                        ><span class="mord"
+                          ><span
+                            class="mord mathnormal"
+                            style="margin-right: 0.03588em"
+                            >q</span
+                          ><span class="msupsub"
+                            ><span class="vlist-t vlist-t2"
+                              ><span class="vlist-r"
+                                ><span class="vlist" style="height: 0.3117em"
+                                  ><span
+                                    style="
+                                      top: -2.55em;
+                                      margin-left: -0.0359em;
+                                      margin-right: 0.05em;
+                                    "
+                                    ><span
+                                      class="pstrut"
+                                      style="height: 2.7em"
+                                    ></span
+                                    ><span
+                                      class="sizing reset-size6 size3 mtight"
+                                      ><span class="mord mathnormal mtight"
+                                        >i</span
+                                      ></span
+                                    ></span
+                                  ></span
+                                ><span class="vlist-s">​</span></span
+                              ><span class="vlist-r"
+                                ><span class="vlist" style="height: 0.15em"
+                                  ><span></span></span></span></span></span></span></span></span></span
+                  >是持仓数量
+                </li>
+              </ul>
+              <p>
+                债基不是像股票那样由供需决定价格，债基的申购和赎回一般都不会影响基金净值，
+                因为基金资产变动的同时份额也同时变动。基金的净值只与底层债券的价格相关，除非是遇到大规模回购，基金遇到流动性风险。
+              </p>
+              <h1 id="赎回机制">
+                赎回机制<a aria-hidden="true" tabindex="-1" href="#赎回机制"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h1>
+              <p>
+                当投资者赎回的时候，债券基金通常会尽量避免被动卖出债券。在多数情况下，基金并不需要立即按等额卖出债券，而是通过以下路径满足流动性需求来减小不必要的交易成本
+              </p>
+              <ol>
+                <li>
+                  申赎净额对冲（netting）：利用当日申购资金与赎回资金在基金层面进行对冲，仅对“净赎回额”进行处理。
+                </li>
+                <li>
+                  现金：债基一般会留有一定比例的现金以提高流动性可用来直接支付。
+                </li>
+                <li>
+                  自然现金流：债券到期回收的利息及本金可作为补充流动性来源，但该项具有被动性。
+                </li>
+                <li>
+                  高流动性头寸：基金账户中的货币市场工具如存单、货基、逆回购。
+                </li>
+                <li>
+                  短期融资：通过正回购等方式，以债券作为抵押获取短期资金，以避免在不利市场条件下被动卖券。
+                </li>
+                <li>
+                  出售债券：若前述手段不足，则会小额度优先卖出高流动性的债券，以减小价差损失和交易成本。
+                </li>
+              </ol>
+              <p>
+                尽管存在上述缓冲机制，在出现大规模赎回（<strong>赎回冲击</strong>）时，基金仍可能被迫：
+              </p>
+              <ul>
+                <li>在不利的价格环境下出售被市场低估的债券</li>
+                <li>或卖出流动性较差的债券，放大价差与交易成本</li>
+              </ul>
+              <p>
+                由此产生的损失会计入基金损失并体现在基金净值（NAV）中，并由所有剩余的份额持有人按比例承担。在部分司法辖区，基金可以将部分交易成本分摊给申赎投资者，以缓解对存量投资者的影响。
+              </p>
+              <h1 id="风险管理">
+                风险管理<a aria-hidden="true" tabindex="-1" href="#风险管理"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h1>
+              <p>虽然债基相对稳健，但并非“无风险”：</p>
+              <ol>
+                <li>
+                  <strong>利率风险</strong>:
+                  利率上升时，债券价格下跌，净值可能回撤
+                </li>
+                <li>
+                  <strong>信用风险</strong>:
+                  如债券违约或评级下调会导致债券价格大幅下跌
+                </li>
+                <li>
+                  <strong>流动性风险</strong>:
+                  市场流动性紧张时，债券难以及时卖出
+                </li>
+                <li><strong>杠杆风险</strong>: 杠杆放大收益的同时也放大亏损</li>
+              </ol>
+              <p>但是基金经理可以采取以下工具或策略调整</p>
+              <h2 id="久期调整">
+                久期调整<a aria-hidden="true" tabindex="-1" href="#久期调整"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <p>
+                基金经理通过调整久期可以降低利率的影响，
+                但久期押注错误也会放大亏损。
+              </p>
+              <h2 id="国债期货对冲Treasury-Bond-Futures-Hedging">
+                国债期货对冲（Treasury Bond Futures Hedging）<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#国债期货对冲Treasury-Bond-Futures-Hedging"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <p>
+                国债期货价格与现券价格高度相关。如果基金经理担心利率上行（债价下跌），他可以在期货市场做空国债期货。当利率上升导致持有的债券现券亏损时，期货头寸的空单会产生盈利，从而抵消部分或全部净值损失。虽然很反直觉，但是在法律法规和合同约定的范围内，公募债券基金是可以参与国债期货交易的。
+              </p>
+              <h2 id="利率互换-Interest-Rate-Swap---IRS">
+                利率互换 (Interest Rate Swap - IRS)<a
+                  aria-hidden="true"
+                  tabindex="-1"
+                  href="#利率互换-Interest-Rate-Swap---IRS"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <p>
+                基金经理可以用进行利率互换，例如用债券的固定利率的利息和商业银行置换浮动利率的贷款利息。当市场利率上升时，基金从互换协议中收到的浮动利息增加，补偿了因固定利率债券价格下跌造成的损失。银行通过固定利率来锁定利润而债基利用浮动利率来对冲利率上涨导致的债券价格损失。
+              </p>
+              <h2 id="定投">
+                定投<a aria-hidden="true" tabindex="-1" href="#定投"
+                  ><i class="fa-solid fa-link"></i
+                ></a>
+              </h2>
+              <p>
+                个人投资者可以通过短期定投在利率高位（债基价格低）时多买入份额间接持有更高票息的的债券。但是长期定投债基不是一个高性价比的策略，债基底层资产有明确的定价规则，收益很大一部分来自债券的票息，长期定投会错过对应的利息收入。
+              </p>
+            </article>
+          </div>
+          <aside></aside>
+        </div>
+      </main>
+      <footer class="tw-text-center tw-text-gray-400">
+        <ul class="list-inline text-center tw-text-stone-700">
+          <li class="list-inline-item">
+            <a
+              class="tw-text-stone-700"
+              target="_blank"
+              href="https://www.linkedin.com/in/shuxig"
+              ><span class="fa-stack fa-lg"
+                ><i class="fa fa-circle fa-stack-2x"></i
+                ><i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i></span
+            ></a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              class="tw-text-stone-700"
+              target="_blank"
+              href="https://github.com/vitaminac"
+              ><span class="fa-stack fa-lg"
+                ><i class="fa fa-circle fa-stack-2x"></i
+                ><i class="fab fa-github fa-stack-1x fa-inverse"></i></span
+            ></a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              class="tw-text-stone-700"
+              target="_blank"
+              href="https://gist.github.com/vitaminac"
+              ><span class="fa-stack fa-lg"
+                ><i class="fa fa-circle fa-stack-2x"></i
+                ><i
+                  class="fab fa-github-square fa-stack-1x fa-inverse"
+                ></i></span
+            ></a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              class="tw-text-stone-700"
+              target="_blank"
+              href="https://gitlab.com/vitaminac"
+              ><span class="fa-stack fa-lg"
+                ><i class="fa fa-circle fa-stack-2x"></i
+                ><i class="fab fa-gitlab fa-stack-1x fa-inverse"></i></span
+            ></a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              class="tw-text-stone-700"
+              target="_blank"
+              href="https://www.xiaohongshu.com/user/profile/622dca68000000001000c9b2"
+              ><span class="fa-stack fa-lg"
+                ><img
+                  alt="小红书"
+                  loading="lazy"
+                  width="256"
+                  height="256"
+                  decoding="async"
+                  data-nimg="1"
+                  class="tw-max-h-full tw-max-w-full"
+                  style="color: transparent"
+                  src="/_next/static/media/redbook.d1759325.svg" /></span
+            ></a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              class="tw-text-stone-700"
+              target="_blank"
+              href="https://www.kaggle.com/dalao1002"
+              ><span class="fa-stack fa-lg"
+                ><i class="fa fa-circle fa-stack-2x"></i
+                ><i class="fab fa-kaggle fa-stack-1x fa-inverse"></i></span
+            ></a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              class="tw-text-stone-700"
+              target="_blank"
+              href="https://leetcode.com/dalao1002"
+              ><span class="fa-stack fa-lg"
+                ><i class="fa fa-circle fa-stack-2x"></i
+                ><i class="fas fa-code fa-stack-1x fa-inverse"></i></span
+            ></a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              class="tw-text-stone-700"
+              target="_blank"
+              href="https://stackexchange.com/users/13825906"
+              ><span class="fa-stack fa-lg"
+                ><i class="fa fa-circle fa-stack-2x"></i
+                ><i
+                  class="fab fa-stack-overflow fa-stack-1x fa-inverse"
+                ></i></span
+            ></a>
+          </li>
+          <li class="list-inline-item">
+            <a
+              class="tw-text-stone-700"
+              target="_blank"
+              href="mailto:dalao1002@gmail.com?subject=From my blog&amp;body=Hi,I found this website very useful"
+              ><span class="fa-stack fa-lg"
+                ><i class="fa fa-circle fa-stack-2x"></i
+                ><i class="fas fa-envelope fa-stack-1x fa-inverse"></i></span
+            ></a>
+          </li>
+        </ul>
+        <img
+          alt="QR"
+          loading="lazy"
+          width="1710"
+          height="624"
+          decoding="async"
+          data-nimg="1"
+          class="tw-mx-auto tw-max-w-full tw-object-contain tw-object-center lg:tw-max-w-xl"
+          style="color: transparent"
+          src="/_next/static/media/QR.b48259ea.png"
+        />
+        <p>Copyright © Gao&#x27;s blog 2026</p>
+      </footer>
+    </div>
+    <script id="__NEXT_DATA__" type="application/json">
+      {
+        "props": {
+          "pageProps": {
+            "postData": {
+              "slug": "bond-fund",
+              "tags": ["投资"],
+              "keywords": ["债券", "基金"],
+              "isDraft": false,
+              "isArchived": false,
+              "title": "债基的运行原理",
+              "date": "2026-03-01 13:59:16",
+              "isLegacy": false,
+              "lang": "zh",
+              "tocHtml": "\u003col\u003e\n\u003cli\u003e\u003ca href=\"#%E5%BC%80%E6%94%BE%E5%BC%8F%E5%80%BA%E5%9F%BA%E6%98%AF%E4%BB%80%E4%B9%88\"\u003e开放式债基是什么？\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#%E8%BF%90%E4%BD%9C%E6%96%B9%E5%BC%8F\"\u003e运作方式\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#%E8%B5%84%E4%BA%A7%E9%85%8D%E7%BD%AE\"\u003e资产配置\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#%E8%B5%84%E4%BA%A7%E6%94%B6%E7%9B%8A\"\u003e资产收益\u003c/a\u003e\n\u003col\u003e\n\u003cli\u003e\u003ca href=\"#%E5%88%A9%E6%81%AF%E6%94%B6%E5%85%A5%E5%9F%BA%E7%A1%80%E6%94%B6%E7%9B%8A\"\u003e利息收入（基础收益）\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#%E8%B5%84%E6%9C%AC%E5%88%A9%E5%BE%97%E4%BB%B7%E6%A0%BC%E6%B3%A2%E5%8A%A8%E6%94%B6%E7%9B%8A\"\u003e资本利得（价格波动收益）\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#%E6%9D%A0%E6%9D%86%E4%B8%8E%E4%B9%85%E6%9C%9F%E7%AE%A1%E7%90%86\"\u003e杠杆与久期管理\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#%E6%AF%8F%E6%97%A5%E5%87%80%E5%80%BC%E5%AE%9A%E4%BB%B7%E9%80%BB%E8%BE%91\"\u003e每日净值定价逻辑\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#%E8%B5%8E%E5%9B%9E%E6%9C%BA%E5%88%B6\"\u003e赎回机制\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86\"\u003e风险管理\u003c/a\u003e\n\u003col\u003e\n\u003cli\u003e\u003ca href=\"#%E4%B9%85%E6%9C%9F%E8%B0%83%E6%95%B4\"\u003e久期调整\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#%E5%9B%BD%E5%80%BA%E6%9C%9F%E8%B4%A7%E5%AF%B9%E5%86%B2Treasury-Bond-Futures-Hedging\"\u003e国债期货对冲（Treasury Bond Futures Hedging）\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#%E5%88%A9%E7%8E%87%E4%BA%92%E6%8D%A2-Interest-Rate-Swap---IRS\"\u003e利率互换 (Interest Rate Swap - IRS)\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href=\"#%E5%AE%9A%E6%8A%95\"\u003e定投\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003c/ol\u003e",
+              "articleHtml": "\u003ch1 id=\"开放式债基是什么\"\u003e开放式债基是什么？\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#开放式债基是什么\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h1\u003e\n\u003cp\u003e债基简单来说就是用专业方式买入并管理一篮子债券。债基的日常收益主要来自利息，表现平稳，他的收益曲线表现平稳，一般是“涨得慢、但偶尔会跌“。绝大多数债券基金以开放式基金形态发行， 这里说的主要也是开放式基金的模式。\u003c/p\u003e\n\u003ch1 id=\"运作方式\"\u003e运作方式\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#运作方式\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h1\u003e\n\u003col\u003e\n\u003cli\u003e募集资金: 投资者根据基金净值向基金公司在T日提出申购申请。\u003c/li\u003e\n\u003cli\u003e创建份额: \u003cspan class=\"katex\"\u003e\u003cspan class=\"katex-mathml\"\u003e\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\"\u003e\u003csemantics\u003e\u003cmrow\u003e\u003cmi\u003eT\u003c/mi\u003e\u003cmo\u003e+\u003c/mo\u003e\u003cmn\u003e1\u003c/mn\u003e\u003c/mrow\u003e\u003cannotation encoding=\"application/x-tex\"\u003eT+1\u003c/annotation\u003e\u003c/semantics\u003e\u003c/math\u003e\u003c/span\u003e\u003cspan class=\"katex-html\" aria-hidden=\"true\"\u003e\u003cspan class=\"base\"\u003e\u003cspan class=\"strut\" style=\"height:0.7667em;vertical-align:-0.0833em\"\u003e\u003c/span\u003e\u003cspan class=\"mord mathnormal\" style=\"margin-right:0.13889em\"\u003eT\u003c/span\u003e\u003cspan class=\"mspace\" style=\"margin-right:0.2222em\"\u003e\u003c/span\u003e\u003cspan class=\"mbin\"\u003e+\u003c/span\u003e\u003cspan class=\"mspace\" style=\"margin-right:0.2222em\"\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"base\"\u003e\u003cspan class=\"strut\" style=\"height:0.6444em\"\u003e\u003c/span\u003e\u003cspan class=\"mord\"\u003e1\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e日基金公司按\u003cspan class=\"katex\"\u003e\u003cspan class=\"katex-mathml\"\u003e\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\"\u003e\u003csemantics\u003e\u003cmrow\u003e\u003cmi\u003eT\u003c/mi\u003e\u003c/mrow\u003e\u003cannotation encoding=\"application/x-tex\"\u003eT\u003c/annotation\u003e\u003c/semantics\u003e\u003c/math\u003e\u003c/span\u003e\u003cspan class=\"katex-html\" aria-hidden=\"true\"\u003e\u003cspan class=\"base\"\u003e\u003cspan class=\"strut\" style=\"height:0.6833em\"\u003e\u003c/span\u003e\u003cspan class=\"mord mathnormal\" style=\"margin-right:0.13889em\"\u003eT\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e日净值为你资金新建对应的\u003cspan class=\"katex\"\u003e\u003cspan class=\"katex-mathml\"\u003e\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\"\u003e\u003csemantics\u003e\u003cmrow\u003e\u003cmtext\u003e基金份额\u003c/mtext\u003e\u003cmo\u003e=\u003c/mo\u003e\u003cmfrac\u003e\u003cmtext\u003e申购金额\u003c/mtext\u003e\u003cmtext\u003eT日基金净值\u003c/mtext\u003e\u003c/mfrac\u003e\u003c/mrow\u003e\u003cannotation encoding=\"application/x-tex\"\u003e基金份额=\\frac{\\text{申购金额}}{\\text{T日基金净值}}\u003c/annotation\u003e\u003c/semantics\u003e\u003c/math\u003e\u003c/span\u003e\u003cspan class=\"katex-html\" aria-hidden=\"true\"\u003e\u003cspan class=\"base\"\u003e\u003cspan class=\"strut\" style=\"height:0.6833em\"\u003e\u003c/span\u003e\u003cspan class=\"mord cjk_fallback\"\u003e基金份额\u003c/span\u003e\u003cspan class=\"mspace\" style=\"margin-right:0.2778em\"\u003e\u003c/span\u003e\u003cspan class=\"mrel\"\u003e=\u003c/span\u003e\u003cspan class=\"mspace\" style=\"margin-right:0.2778em\"\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"base\"\u003e\u003cspan class=\"strut\" style=\"height:1.2173em;vertical-align:-0.345em\"\u003e\u003c/span\u003e\u003cspan class=\"mord\"\u003e\u003cspan class=\"mopen nulldelimiter\"\u003e\u003c/span\u003e\u003cspan class=\"mfrac\"\u003e\u003cspan class=\"vlist-t vlist-t2\"\u003e\u003cspan class=\"vlist-r\"\u003e\u003cspan class=\"vlist\" style=\"height:0.8723em\"\u003e\u003cspan style=\"top:-2.655em\"\u003e\u003cspan class=\"pstrut\" style=\"height:3em\"\u003e\u003c/span\u003e\u003cspan class=\"sizing reset-size6 size3 mtight\"\u003e\u003cspan class=\"mord mtight\"\u003e\u003cspan class=\"mord text mtight\"\u003e\u003cspan class=\"mord mtight\"\u003eT\u003c/span\u003e\u003cspan class=\"mord cjk_fallback mtight\"\u003e日基金净值\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan style=\"top:-3.23em\"\u003e\u003cspan class=\"pstrut\" style=\"height:3em\"\u003e\u003c/span\u003e\u003cspan class=\"frac-line\" style=\"border-bottom-width:0.04em\"\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan style=\"top:-3.394em\"\u003e\u003cspan class=\"pstrut\" style=\"height:3em\"\u003e\u003c/span\u003e\u003cspan class=\"sizing reset-size6 size3 mtight\"\u003e\u003cspan class=\"mord mtight\"\u003e\u003cspan class=\"mord text mtight\"\u003e\u003cspan class=\"mord cjk_fallback mtight\"\u003e申购金额\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"vlist-s\"\u003e​\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"vlist-r\"\u003e\u003cspan class=\"vlist\" style=\"height:0.345em\"\u003e\u003cspan\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"mclose nulldelimiter\"\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e。\u003c/li\u003e\n\u003cli\u003e形成基金资产: 募集到的资金进入基金托管账户，由托管银行监管，基金公司仅负责投资运作，不能随意挪用。\u003c/li\u003e\n\u003cli\u003e债基用资金按既定的投资策略投资固定收益类资产。\u003c/li\u003e\n\u003cli\u003e基金资产产生收益或亏损.\u003c/li\u003e\n\u003cli\u003e债基净值根据收益变化。\u003c/li\u003e\n\u003cli\u003e投资者\u003cspan class=\"katex\"\u003e\u003cspan class=\"katex-mathml\"\u003e\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\"\u003e\u003csemantics\u003e\u003cmrow\u003e\u003cmi\u003eT\u003c/mi\u003e\u003c/mrow\u003e\u003cannotation encoding=\"application/x-tex\"\u003eT\u003c/annotation\u003e\u003c/semantics\u003e\u003c/math\u003e\u003c/span\u003e\u003cspan class=\"katex-html\" aria-hidden=\"true\"\u003e\u003cspan class=\"base\"\u003e\u003cspan class=\"strut\" style=\"height:0.6833em\"\u003e\u003c/span\u003e\u003cspan class=\"mord mathnormal\" style=\"margin-right:0.13889em\"\u003eT\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e日提交赎回申请。\u003c/li\u003e\n\u003cli\u003e\u003cspan class=\"katex\"\u003e\u003cspan class=\"katex-mathml\"\u003e\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\"\u003e\u003csemantics\u003e\u003cmrow\u003e\u003cmi\u003eT\u003c/mi\u003e\u003cmo\u003e+\u003c/mo\u003e\u003cmn\u003e1\u003c/mn\u003e\u003c/mrow\u003e\u003cannotation encoding=\"application/x-tex\"\u003eT+1\u003c/annotation\u003e\u003c/semantics\u003e\u003c/math\u003e\u003c/span\u003e\u003cspan class=\"katex-html\" aria-hidden=\"true\"\u003e\u003cspan class=\"base\"\u003e\u003cspan class=\"strut\" style=\"height:0.7667em;vertical-align:-0.0833em\"\u003e\u003c/span\u003e\u003cspan class=\"mord mathnormal\" style=\"margin-right:0.13889em\"\u003eT\u003c/span\u003e\u003cspan class=\"mspace\" style=\"margin-right:0.2222em\"\u003e\u003c/span\u003e\u003cspan class=\"mbin\"\u003e+\u003c/span\u003e\u003cspan class=\"mspace\" style=\"margin-right:0.2222em\"\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"base\"\u003e\u003cspan class=\"strut\" style=\"height:0.6444em\"\u003e\u003c/span\u003e\u003cspan class=\"mord\"\u003e1\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e日基金公司确认赎回份额同时确认\u003cspan class=\"katex\"\u003e\u003cspan class=\"katex-mathml\"\u003e\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\"\u003e\u003csemantics\u003e\u003cmrow\u003e\u003cmtext\u003e赎回金额\u003c/mtext\u003e\u003cmo\u003e=\u003c/mo\u003e\u003cmtext\u003e赎回份额\u003c/mtext\u003e\u003cmo\u003e×\u003c/mo\u003e\u003cmtext\u003eT日的基金净值\u003c/mtext\u003e\u003c/mrow\u003e\u003cannotation encoding=\"application/x-tex\"\u003e\\text{赎回金额} = \\text{赎回份额} \\times \\text{T日的基金净值}\u003c/annotation\u003e\u003c/semantics\u003e\u003c/math\u003e\u003c/span\u003e\u003cspan class=\"katex-html\" aria-hidden=\"true\"\u003e\u003cspan class=\"base\"\u003e\u003cspan class=\"strut\" style=\"height:0.6833em\"\u003e\u003c/span\u003e\u003cspan class=\"mord text\"\u003e\u003cspan class=\"mord cjk_fallback\"\u003e赎回金额\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"mspace\" style=\"margin-right:0.2778em\"\u003e\u003c/span\u003e\u003cspan class=\"mrel\"\u003e=\u003c/span\u003e\u003cspan class=\"mspace\" style=\"margin-right:0.2778em\"\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"base\"\u003e\u003cspan class=\"strut\" style=\"height:0.7667em;vertical-align:-0.0833em\"\u003e\u003c/span\u003e\u003cspan class=\"mord text\"\u003e\u003cspan class=\"mord cjk_fallback\"\u003e赎回份额\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"mspace\" style=\"margin-right:0.2222em\"\u003e\u003c/span\u003e\u003cspan class=\"mbin\"\u003e×\u003c/span\u003e\u003cspan class=\"mspace\" style=\"margin-right:0.2222em\"\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"base\"\u003e\u003cspan class=\"strut\" style=\"height:0.6833em\"\u003e\u003c/span\u003e\u003cspan class=\"mord text\"\u003e\u003cspan class=\"mord\"\u003eT\u003c/span\u003e\u003cspan class=\"mord cjk_fallback\"\u003e日的基金净值\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e。基金资产总值与基金总份额相应减少。\u003c/li\u003e\n\u003cli\u003e清算完成后，大概\u003cspan class=\"katex\"\u003e\u003cspan class=\"katex-mathml\"\u003e\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\"\u003e\u003csemantics\u003e\u003cmrow\u003e\u003cmi\u003eT\u003c/mi\u003e\u003cmo\u003e+\u003c/mo\u003e\u003cmn\u003e2\u003c/mn\u003e\u003c/mrow\u003e\u003cannotation encoding=\"application/x-tex\"\u003eT+2\u003c/annotation\u003e\u003c/semantics\u003e\u003c/math\u003e\u003c/span\u003e\u003cspan class=\"katex-html\" aria-hidden=\"true\"\u003e\u003cspan class=\"base\"\u003e\u003cspan class=\"strut\" style=\"height:0.7667em;vertical-align:-0.0833em\"\u003e\u003c/span\u003e\u003cspan class=\"mord mathnormal\" style=\"margin-right:0.13889em\"\u003eT\u003c/span\u003e\u003cspan class=\"mspace\" style=\"margin-right:0.2222em\"\u003e\u003c/span\u003e\u003cspan class=\"mbin\"\u003e+\u003c/span\u003e\u003cspan class=\"mspace\" style=\"margin-right:0.2222em\"\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"base\"\u003e\u003cspan class=\"strut\" style=\"height:0.6444em\"\u003e\u003c/span\u003e\u003cspan class=\"mord\"\u003e2\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e或\u003cspan class=\"katex\"\u003e\u003cspan class=\"katex-mathml\"\u003e\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\"\u003e\u003csemantics\u003e\u003cmrow\u003e\u003cmi\u003eT\u003c/mi\u003e\u003cmo\u003e+\u003c/mo\u003e\u003cmn\u003e3\u003c/mn\u003e\u003c/mrow\u003e\u003cannotation encoding=\"application/x-tex\"\u003eT+3\u003c/annotation\u003e\u003c/semantics\u003e\u003c/math\u003e\u003c/span\u003e\u003cspan class=\"katex-html\" aria-hidden=\"true\"\u003e\u003cspan class=\"base\"\u003e\u003cspan class=\"strut\" style=\"height:0.7667em;vertical-align:-0.0833em\"\u003e\u003c/span\u003e\u003cspan class=\"mord mathnormal\" style=\"margin-right:0.13889em\"\u003eT\u003c/span\u003e\u003cspan class=\"mspace\" style=\"margin-right:0.2222em\"\u003e\u003c/span\u003e\u003cspan class=\"mbin\"\u003e+\u003c/span\u003e\u003cspan class=\"mspace\" style=\"margin-right:0.2222em\"\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"base\"\u003e\u003cspan class=\"strut\" style=\"height:0.6444em\"\u003e\u003c/span\u003e\u003cspan class=\"mord\"\u003e3\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e日赎回资金划付至投资者账户。\u003c/li\u003e\n\u003cli\u003e\u003cspan class=\"katex\"\u003e\u003cspan class=\"katex-mathml\"\u003e\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\"\u003e\u003csemantics\u003e\u003cmrow\u003e\u003cmtext\u003e投资者的盈亏\u003c/mtext\u003e\u003cmo\u003e=\u003c/mo\u003e\u003cmo stretchy=\"false\"\u003e(\u003c/mo\u003e\u003cmtext\u003e赎回时的净值\u003c/mtext\u003e\u003cmo\u003e−\u003c/mo\u003e\u003cmtext\u003e申购时的净值\u003c/mtext\u003e\u003cmo stretchy=\"false\"\u003e)\u003c/mo\u003e\u003cmo\u003e×\u003c/mo\u003e\u003cmtext\u003e持有份额\u003c/mtext\u003e\u003c/mrow\u003e\u003cannotation encoding=\"application/x-tex\"\u003e\\text{投资者的盈亏} = (\\text{赎回时的净值} - \\text{申购时的净值}) \\times \\text{持有份额}\u003c/annotation\u003e\u003c/semantics\u003e\u003c/math\u003e\u003c/span\u003e\u003cspan class=\"katex-html\" aria-hidden=\"true\"\u003e\u003cspan class=\"base\"\u003e\u003cspan class=\"strut\" style=\"height:0.6833em\"\u003e\u003c/span\u003e\u003cspan class=\"mord text\"\u003e\u003cspan class=\"mord cjk_fallback\"\u003e投资者的盈亏\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"mspace\" style=\"margin-right:0.2778em\"\u003e\u003c/span\u003e\u003cspan class=\"mrel\"\u003e=\u003c/span\u003e\u003cspan class=\"mspace\" style=\"margin-right:0.2778em\"\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"base\"\u003e\u003cspan class=\"strut\" style=\"height:1em;vertical-align:-0.25em\"\u003e\u003c/span\u003e\u003cspan class=\"mopen\"\u003e(\u003c/span\u003e\u003cspan class=\"mord text\"\u003e\u003cspan class=\"mord cjk_fallback\"\u003e赎回时的净值\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"mspace\" style=\"margin-right:0.2222em\"\u003e\u003c/span\u003e\u003cspan class=\"mbin\"\u003e−\u003c/span\u003e\u003cspan class=\"mspace\" style=\"margin-right:0.2222em\"\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"base\"\u003e\u003cspan class=\"strut\" style=\"height:1em;vertical-align:-0.25em\"\u003e\u003c/span\u003e\u003cspan class=\"mord text\"\u003e\u003cspan class=\"mord cjk_fallback\"\u003e申购时的净值\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"mclose\"\u003e)\u003c/span\u003e\u003cspan class=\"mspace\" style=\"margin-right:0.2222em\"\u003e\u003c/span\u003e\u003cspan class=\"mbin\"\u003e×\u003c/span\u003e\u003cspan class=\"mspace\" style=\"margin-right:0.2222em\"\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"base\"\u003e\u003cspan class=\"strut\" style=\"height:0.6833em\"\u003e\u003c/span\u003e\u003cspan class=\"mord text\"\u003e\u003cspan class=\"mord cjk_fallback\"\u003e持有份额\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/li\u003e\n\u003c/ol\u003e\n\u003cp\u003e同一只债基的A类和C类份额由同一位基金经理管理同一个底层资产池，但由于费率扣除方式不同，它们的收益率会表现出微小的差异。C类份额每天都会额外扣除一笔“销售服务费”， 长期积累下来，C类的净值通常会略低于A类。如果你这笔钱打算放1年以上，虽然A类买入时有手续费，但后续没有每日扣除的服务费，更划算。\u003c/p\u003e\n\u003ch1 id=\"资产配置\"\u003e资产配置\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#资产配置\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h1\u003e\n\u003cp\u003e债基主要投资固定收益类资产，典型配置包括：\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e普通债：国债、地方债、金融债、企业债、公司债\u003c/li\u003e\n\u003cli\u003e可转债\u003c/li\u003e\n\u003cli\u003e同业存单、短期融资券\u003c/li\u003e\n\u003cli\u003e回购、银行存款等流动性资产\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e根据债基对股票的参与程度不同也可以分为：\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e纯债基金：不投股票\u003c/li\u003e\n\u003cli\u003e一级债基：可参与新股申购\u003c/li\u003e\n\u003cli\u003e二级债基：可少量买卖股票（通常≤20%）\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e债基并不能单单从一级市场购买债券然后持有到期，而是需要同时持续在二级市场交易，主要原因包括：\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e持续有申购和赎回的需求，必须保持流动性，被动卖债不可避免。\u003c/li\u003e\n\u003cli\u003e一级市场发行频率不稳定，无法持续匹配大型债基建仓需求。\u003c/li\u003e\n\u003cli\u003e企业信用状况恶化时需提前卖出，否则可能违约。\u003c/li\u003e\n\u003cli\u003e市场利率不是静止的， 久期需要动态调整，完全不交易会被动暴露风险\u003c/li\u003e\n\u003cli\u003e债基监管要求， 例如180天滚动债需要保持债券组合的平均剩余期限控制在180天， 需要不停调整债券组合。\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch1 id=\"资产收益\"\u003e资产收益\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#资产收益\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h1\u003e\n\u003cp\u003e因为二级市场的价格波动特性，债基并不承诺保本。债基的收益主要来源于三部分：\u003c/p\u003e\n\u003ch2 id=\"利息收入基础收益\"\u003e利息收入（基础收益）\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#利息收入基础收益\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e债券按票面利率付息\u003c/li\u003e\n\u003cli\u003e这是债基最稳定的收益来源\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"资本利得价格波动收益\"\u003e资本利得（价格波动收益）\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#资本利得价格波动收益\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e债券价格会随市场利率变化而波动\u003c/li\u003e\n\u003cli\u003e利率下降 -\u0026gt; 债券价格上涨 -\u0026gt; 基金净值上升\u003c/li\u003e\n\u003cli\u003e基金通过买卖债券获取差价收益\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"杠杆与久期管理\"\u003e杠杆与久期管理\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#杠杆与久期管理\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003e基金通过\u003cstrong\u003e回购加杠杆\u003c/strong\u003e放大收益，把持有的债券抵押出去借入现金再投资。只要再投资收益高于融资成本就能提高收益，但是这个操作受监管严格限制。\u003c/p\u003e\n\u003cp\u003e基金经理还会通过久期管理（Duration Management）押注利率走势获得额外收益或降低利率上调带来的回撤：\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e预期利率下降(债市牛市): 基金经理会通过卖出短债、买入长债，来拉长久期。这样当利率下调时，债券价格上涨的幅度会更大。\u003c/li\u003e\n\u003cli\u003e预期利率上升(债市熊市): 基金经理会通过卖出长债、买入短债，来缩短久期。这样当利率上涨时，债券价格下跌的幅度会更小。\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch1 id=\"每日净值定价逻辑\"\u003e每日净值定价逻辑\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#每日净值定价逻辑\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h1\u003e\n\u003cp\u003e每日基金净值（NAV）的定义是\u003c/p\u003e\n\u003cspan class=\"katex-display\"\u003e\u003cspan class=\"katex\"\u003e\u003cspan class=\"katex-mathml\"\u003e\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"\u003e\u003csemantics\u003e\u003cmrow\u003e\u003cmtext\u003e基金净值\u003c/mtext\u003e\u003cmo\u003e=\u003c/mo\u003e\u003cmfrac\u003e\u003cmrow\u003e\u003cmunderover\u003e\u003cmo\u003e∑\u003c/mo\u003e\u003cmi\u003ei\u003c/mi\u003e\u003cmi\u003eN\u003c/mi\u003e\u003c/munderover\u003e\u003cmsub\u003e\u003cmi\u003eP\u003c/mi\u003e\u003cmi\u003ei\u003c/mi\u003e\u003c/msub\u003e\u003cmo\u003e×\u003c/mo\u003e\u003cmsub\u003e\u003cmi\u003eq\u003c/mi\u003e\u003cmi\u003ei\u003c/mi\u003e\u003c/msub\u003e\u003cmo\u003e+\u003c/mo\u003e\u003cmtext\u003e其他资产\u003c/mtext\u003e\u003cmo\u003e−\u003c/mo\u003e\u003cmtext\u003e负债\u003c/mtext\u003e\u003c/mrow\u003e\u003cmtext\u003e基金份额\u003c/mtext\u003e\u003c/mfrac\u003e\u003c/mrow\u003e\u003cannotation encoding=\"application/x-tex\"\u003e\\text{基金净值} = \\frac{\\sum_i^N P_i \\times q_i + \\text{其他资产} - \\text{负债}}{\\text{基金份额}}\u003c/annotation\u003e\u003c/semantics\u003e\u003c/math\u003e\u003c/span\u003e\u003cspan class=\"katex-html\" aria-hidden=\"true\"\u003e\u003cspan class=\"base\"\u003e\u003cspan class=\"strut\" style=\"height:0.6833em\"\u003e\u003c/span\u003e\u003cspan class=\"mord text\"\u003e\u003cspan class=\"mord cjk_fallback\"\u003e基金净值\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"mspace\" style=\"margin-right:0.2778em\"\u003e\u003c/span\u003e\u003cspan class=\"mrel\"\u003e=\u003c/span\u003e\u003cspan class=\"mspace\" style=\"margin-right:0.2778em\"\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"base\"\u003e\u003cspan class=\"strut\" style=\"height:2.3569em;vertical-align:-0.686em\"\u003e\u003c/span\u003e\u003cspan class=\"mord\"\u003e\u003cspan class=\"mopen nulldelimiter\"\u003e\u003c/span\u003e\u003cspan class=\"mfrac\"\u003e\u003cspan class=\"vlist-t vlist-t2\"\u003e\u003cspan class=\"vlist-r\"\u003e\u003cspan class=\"vlist\" style=\"height:1.6709em\"\u003e\u003cspan style=\"top:-2.314em\"\u003e\u003cspan class=\"pstrut\" style=\"height:3em\"\u003e\u003c/span\u003e\u003cspan class=\"mord\"\u003e\u003cspan class=\"mord text\"\u003e\u003cspan class=\"mord cjk_fallback\"\u003e基金份额\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan style=\"top:-3.23em\"\u003e\u003cspan class=\"pstrut\" style=\"height:3em\"\u003e\u003c/span\u003e\u003cspan class=\"frac-line\" style=\"border-bottom-width:0.04em\"\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan style=\"top:-3.6897em\"\u003e\u003cspan class=\"pstrut\" style=\"height:3em\"\u003e\u003c/span\u003e\u003cspan class=\"mord\"\u003e\u003cspan class=\"mop\"\u003e\u003cspan class=\"mop op-symbol small-op\" style=\"position:relative;top:0em\"\u003e∑\u003c/span\u003e\u003cspan class=\"msupsub\"\u003e\u003cspan class=\"vlist-t vlist-t2\"\u003e\u003cspan class=\"vlist-r\"\u003e\u003cspan class=\"vlist\" style=\"height:0.9812em\"\u003e\u003cspan style=\"top:-2.4003em;margin-left:0em;margin-right:0.05em\"\u003e\u003cspan class=\"pstrut\" style=\"height:2.7em\"\u003e\u003c/span\u003e\u003cspan class=\"sizing reset-size6 size3 mtight\"\u003e\u003cspan class=\"mord mathnormal mtight\"\u003ei\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan style=\"top:-3.2029em;margin-right:0.05em\"\u003e\u003cspan class=\"pstrut\" style=\"height:2.7em\"\u003e\u003c/span\u003e\u003cspan class=\"sizing reset-size6 size3 mtight\"\u003e\u003cspan class=\"mord mathnormal mtight\" style=\"margin-right:0.10903em\"\u003eN\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"vlist-s\"\u003e​\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"vlist-r\"\u003e\u003cspan class=\"vlist\" style=\"height:0.2997em\"\u003e\u003cspan\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"mspace\" style=\"margin-right:0.1667em\"\u003e\u003c/span\u003e\u003cspan class=\"mord\"\u003e\u003cspan class=\"mord mathnormal\" style=\"margin-right:0.13889em\"\u003eP\u003c/span\u003e\u003cspan class=\"msupsub\"\u003e\u003cspan class=\"vlist-t vlist-t2\"\u003e\u003cspan class=\"vlist-r\"\u003e\u003cspan class=\"vlist\" style=\"height:0.3117em\"\u003e\u003cspan style=\"top:-2.55em;margin-left:-0.1389em;margin-right:0.05em\"\u003e\u003cspan class=\"pstrut\" style=\"height:2.7em\"\u003e\u003c/span\u003e\u003cspan class=\"sizing reset-size6 size3 mtight\"\u003e\u003cspan class=\"mord mathnormal mtight\"\u003ei\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"vlist-s\"\u003e​\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"vlist-r\"\u003e\u003cspan class=\"vlist\" style=\"height:0.15em\"\u003e\u003cspan\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"mspace\" style=\"margin-right:0.2222em\"\u003e\u003c/span\u003e\u003cspan class=\"mbin\"\u003e×\u003c/span\u003e\u003cspan class=\"mspace\" style=\"margin-right:0.2222em\"\u003e\u003c/span\u003e\u003cspan class=\"mord\"\u003e\u003cspan class=\"mord mathnormal\" style=\"margin-right:0.03588em\"\u003eq\u003c/span\u003e\u003cspan class=\"msupsub\"\u003e\u003cspan class=\"vlist-t vlist-t2\"\u003e\u003cspan class=\"vlist-r\"\u003e\u003cspan class=\"vlist\" style=\"height:0.3117em\"\u003e\u003cspan style=\"top:-2.55em;margin-left:-0.0359em;margin-right:0.05em\"\u003e\u003cspan class=\"pstrut\" style=\"height:2.7em\"\u003e\u003c/span\u003e\u003cspan class=\"sizing reset-size6 size3 mtight\"\u003e\u003cspan class=\"mord mathnormal mtight\"\u003ei\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"vlist-s\"\u003e​\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"vlist-r\"\u003e\u003cspan class=\"vlist\" style=\"height:0.15em\"\u003e\u003cspan\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"mspace\" style=\"margin-right:0.2222em\"\u003e\u003c/span\u003e\u003cspan class=\"mbin\"\u003e+\u003c/span\u003e\u003cspan class=\"mspace\" style=\"margin-right:0.2222em\"\u003e\u003c/span\u003e\u003cspan class=\"mord text\"\u003e\u003cspan class=\"mord cjk_fallback\"\u003e其他资产\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"mspace\" style=\"margin-right:0.2222em\"\u003e\u003c/span\u003e\u003cspan class=\"mbin\"\u003e−\u003c/span\u003e\u003cspan class=\"mspace\" style=\"margin-right:0.2222em\"\u003e\u003c/span\u003e\u003cspan class=\"mord text\"\u003e\u003cspan class=\"mord cjk_fallback\"\u003e负债\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"vlist-s\"\u003e​\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"vlist-r\"\u003e\u003cspan class=\"vlist\" style=\"height:0.686em\"\u003e\u003cspan\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"mclose nulldelimiter\"\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\n\u003cp\u003e其中:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cspan class=\"katex\"\u003e\u003cspan class=\"katex-mathml\"\u003e\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\"\u003e\u003csemantics\u003e\u003cmrow\u003e\u003cmsub\u003e\u003cmi\u003eP\u003c/mi\u003e\u003cmi\u003ei\u003c/mi\u003e\u003c/msub\u003e\u003c/mrow\u003e\u003cannotation encoding=\"application/x-tex\"\u003eP_i\u003c/annotation\u003e\u003c/semantics\u003e\u003c/math\u003e\u003c/span\u003e\u003cspan class=\"katex-html\" aria-hidden=\"true\"\u003e\u003cspan class=\"base\"\u003e\u003cspan class=\"strut\" style=\"height:0.8333em;vertical-align:-0.15em\"\u003e\u003c/span\u003e\u003cspan class=\"mord\"\u003e\u003cspan class=\"mord mathnormal\" style=\"margin-right:0.13889em\"\u003eP\u003c/span\u003e\u003cspan class=\"msupsub\"\u003e\u003cspan class=\"vlist-t vlist-t2\"\u003e\u003cspan class=\"vlist-r\"\u003e\u003cspan class=\"vlist\" style=\"height:0.3117em\"\u003e\u003cspan style=\"top:-2.55em;margin-left:-0.1389em;margin-right:0.05em\"\u003e\u003cspan class=\"pstrut\" style=\"height:2.7em\"\u003e\u003c/span\u003e\u003cspan class=\"sizing reset-size6 size3 mtight\"\u003e\u003cspan class=\"mord mathnormal mtight\"\u003ei\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"vlist-s\"\u003e​\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"vlist-r\"\u003e\u003cspan class=\"vlist\" style=\"height:0.15em\"\u003e\u003cspan\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e是第\u003cspan class=\"katex\"\u003e\u003cspan class=\"katex-mathml\"\u003e\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\"\u003e\u003csemantics\u003e\u003cmrow\u003e\u003cmi\u003ei\u003c/mi\u003e\u003c/mrow\u003e\u003cannotation encoding=\"application/x-tex\"\u003ei\u003c/annotation\u003e\u003c/semantics\u003e\u003c/math\u003e\u003c/span\u003e\u003cspan class=\"katex-html\" aria-hidden=\"true\"\u003e\u003cspan class=\"base\"\u003e\u003cspan class=\"strut\" style=\"height:0.6595em\"\u003e\u003c/span\u003e\u003cspan class=\"mord mathnormal\"\u003ei\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e只债券的当日公允价格\u003c/li\u003e\n\u003cli\u003e\u003cspan class=\"katex\"\u003e\u003cspan class=\"katex-mathml\"\u003e\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\"\u003e\u003csemantics\u003e\u003cmrow\u003e\u003cmsub\u003e\u003cmi\u003eq\u003c/mi\u003e\u003cmi\u003ei\u003c/mi\u003e\u003c/msub\u003e\u003c/mrow\u003e\u003cannotation encoding=\"application/x-tex\"\u003eq_i\u003c/annotation\u003e\u003c/semantics\u003e\u003c/math\u003e\u003c/span\u003e\u003cspan class=\"katex-html\" aria-hidden=\"true\"\u003e\u003cspan class=\"base\"\u003e\u003cspan class=\"strut\" style=\"height:0.625em;vertical-align:-0.1944em\"\u003e\u003c/span\u003e\u003cspan class=\"mord\"\u003e\u003cspan class=\"mord mathnormal\" style=\"margin-right:0.03588em\"\u003eq\u003c/span\u003e\u003cspan class=\"msupsub\"\u003e\u003cspan class=\"vlist-t vlist-t2\"\u003e\u003cspan class=\"vlist-r\"\u003e\u003cspan class=\"vlist\" style=\"height:0.3117em\"\u003e\u003cspan style=\"top:-2.55em;margin-left:-0.0359em;margin-right:0.05em\"\u003e\u003cspan class=\"pstrut\" style=\"height:2.7em\"\u003e\u003c/span\u003e\u003cspan class=\"sizing reset-size6 size3 mtight\"\u003e\u003cspan class=\"mord mathnormal mtight\"\u003ei\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"vlist-s\"\u003e​\u003c/span\u003e\u003c/span\u003e\u003cspan class=\"vlist-r\"\u003e\u003cspan class=\"vlist\" style=\"height:0.15em\"\u003e\u003cspan\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e\u003c/span\u003e是持仓数量\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e债基不是像股票那样由供需决定价格，债基的申购和赎回一般都不会影响基金净值， 因为基金资产变动的同时份额也同时变动。基金的净值只与底层债券的价格相关，除非是遇到大规模回购，基金遇到流动性风险。\u003c/p\u003e\n\u003ch1 id=\"赎回机制\"\u003e赎回机制\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#赎回机制\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h1\u003e\n\u003cp\u003e当投资者赎回的时候，债券基金通常会尽量避免被动卖出债券。在多数情况下，基金并不需要立即按等额卖出债券，而是通过以下路径满足流动性需求来减小不必要的交易成本\u003c/p\u003e\n\u003col\u003e\n\u003cli\u003e申赎净额对冲（netting）：利用当日申购资金与赎回资金在基金层面进行对冲，仅对“净赎回额”进行处理。\u003c/li\u003e\n\u003cli\u003e现金：债基一般会留有一定比例的现金以提高流动性可用来直接支付。\u003c/li\u003e\n\u003cli\u003e自然现金流：债券到期回收的利息及本金可作为补充流动性来源，但该项具有被动性。\u003c/li\u003e\n\u003cli\u003e高流动性头寸：基金账户中的货币市场工具如存单、货基、逆回购。\u003c/li\u003e\n\u003cli\u003e短期融资：通过正回购等方式，以债券作为抵押获取短期资金，以避免在不利市场条件下被动卖券。\u003c/li\u003e\n\u003cli\u003e出售债券：若前述手段不足，则会小额度优先卖出高流动性的债券，以减小价差损失和交易成本。\u003c/li\u003e\n\u003c/ol\u003e\n\u003cp\u003e尽管存在上述缓冲机制，在出现大规模赎回（\u003cstrong\u003e赎回冲击\u003c/strong\u003e）时，基金仍可能被迫：\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e在不利的价格环境下出售被市场低估的债券\u003c/li\u003e\n\u003cli\u003e或卖出流动性较差的债券，放大价差与交易成本\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e由此产生的损失会计入基金损失并体现在基金净值（NAV）中，并由所有剩余的份额持有人按比例承担。在部分司法辖区，基金可以将部分交易成本分摊给申赎投资者，以缓解对存量投资者的影响。\u003c/p\u003e\n\u003ch1 id=\"风险管理\"\u003e风险管理\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#风险管理\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h1\u003e\n\u003cp\u003e虽然债基相对稳健，但并非“无风险”：\u003c/p\u003e\n\u003col\u003e\n\u003cli\u003e\u003cstrong\u003e利率风险\u003c/strong\u003e: 利率上升时，债券价格下跌，净值可能回撤\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e信用风险\u003c/strong\u003e: 如债券违约或评级下调会导致债券价格大幅下跌\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e流动性风险\u003c/strong\u003e: 市场流动性紧张时，债券难以及时卖出\u003c/li\u003e\n\u003cli\u003e\u003cstrong\u003e杠杆风险\u003c/strong\u003e: 杠杆放大收益的同时也放大亏损\u003c/li\u003e\n\u003c/ol\u003e\n\u003cp\u003e但是基金经理可以采取以下工具或策略调整\u003c/p\u003e\n\u003ch2 id=\"久期调整\"\u003e久期调整\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#久期调整\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003e基金经理通过调整久期可以降低利率的影响， 但久期押注错误也会放大亏损。\u003c/p\u003e\n\u003ch2 id=\"国债期货对冲Treasury-Bond-Futures-Hedging\"\u003e国债期货对冲（Treasury Bond Futures Hedging）\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#国债期货对冲Treasury-Bond-Futures-Hedging\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003e国债期货价格与现券价格高度相关。如果基金经理担心利率上行（债价下跌），他可以在期货市场做空国债期货。当利率上升导致持有的债券现券亏损时，期货头寸的空单会产生盈利，从而抵消部分或全部净值损失。虽然很反直觉，但是在法律法规和合同约定的范围内，公募债券基金是可以参与国债期货交易的。\u003c/p\u003e\n\u003ch2 id=\"利率互换-Interest-Rate-Swap---IRS\"\u003e利率互换 (Interest Rate Swap - IRS)\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#利率互换-Interest-Rate-Swap---IRS\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003e基金经理可以用进行利率互换，例如用债券的固定利率的利息和商业银行置换浮动利率的贷款利息。当市场利率上升时，基金从互换协议中收到的浮动利息增加，补偿了因固定利率债券价格下跌造成的损失。银行通过固定利率来锁定利润而债基利用浮动利率来对冲利率上涨导致的债券价格损失。\u003c/p\u003e\n\u003ch2 id=\"定投\"\u003e定投\u003ca aria-hidden=\"true\" tabindex=\"-1\" href=\"#定投\"\u003e\u003ci class=\"fa-solid fa-link\"\u003e\u003c/i\u003e\u003c/a\u003e\u003c/h2\u003e\n\u003cp\u003e个人投资者可以通过短期定投在利率高位（债基价格低）时多买入份额间接持有更高票息的的债券。但是长期定投债基不是一个高性价比的策略，债基底层资产有明确的定价规则，收益很大一部分来自债券的票息，长期定投会错过对应的利息收入。\u003c/p\u003e"
+            },
+            "lang": "zh",
+            "_nextI18Next": {
+              "initialI18nStore": {
+                "zh": {
+                  "navbar": {
+                    "Home": "主页",
+                    "Language": "语言",
+                    "Tags": "标签",
+                    "en": "英语",
+                    "es": "西语",
+                    "zh": "中文"
+                  },
+                  "post-layout": {
+                    "Author": "作者: {{author}}",
+                    "Tags": "标签",
+                    "Keywords": "关键词"
+                  }
+                },
+                "en": {
+                  "navbar": {
+                    "Home": "Home",
+                    "Language": "Language",
+                    "Tags": "Tags",
+                    "en": "English",
+                    "es": "Spanish",
+                    "zh": "Chinese"
+                  },
+                  "post-layout": {
+                    "Author": "Author: {{author}}",
+                    "Tags": "Tags",
+                    "Keywords": "Keywords"
+                  }
+                }
+              },
+              "initialLocale": "zh",
+              "ns": ["navbar", "post-layout"],
+              "userConfig": {
+                "i18n": {
+                  "defaultLocale": "en",
+                  "locales": ["en", "es", "zh"]
+                },
+                "default": {
+                  "i18n": {
+                    "defaultLocale": "en",
+                    "locales": ["en", "es", "zh"]
+                  }
+                }
+              }
+            }
+          },
+          "__N_SSG": true
+        },
+        "page": "/posts/[slug]",
+        "query": { "slug": "bond-fund" },
+        "buildId": "fixed",
+        "runtimeConfig": {
+          "siteConfig": {
+            "siteAuthor": "Gao",
+            "siteTitle": "Gao's blog",
+            "siteDescription": "Gao's blog",
+            "aboutMe": "see more about me on my Github profile.",
+            "email": "dalao1002@gmail.com",
+            "linkedin": "shuxig",
+            "github": "vitaminac",
+            "gitlab": "vitaminac",
+            "redbook": "622dca68000000001000c9b2",
+            "kaggle": "dalao1002",
+            "leetcode": "dalao1002",
+            "stackexchange": "13825906",
+            "disqusUsername": "blog-vnwybnwkiz",
+            "i18n": { "defaultLocale": "en", "locales": ["en", "es", "zh"] }
+          }
+        },
+        "isFallback": false,
+        "gsp": true,
+        "scriptLoader": []
+      }
+    </script>
+  </body>
+</html>
