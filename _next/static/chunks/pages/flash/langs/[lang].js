@@ -1,42 +1,42 @@
 (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([
   [550],
   {
-    7747: function (a, e, s) {
+    7747: function (a, e, t) {
       (window.__NEXT_P = window.__NEXT_P || []).push([
         "/flash/langs/[lang]",
         function () {
-          return s(8309);
+          return t(8309);
         },
       ]);
     },
-    6050: function (a, e, s) {
+    6050: function (a, e, t) {
       "use strict";
-      s.d(e, {
+      t.d(e, {
         X: function () {
           return b;
         },
       });
-      var t = s(5893),
-        n = s(4298),
-        i = s.n(n);
+      var s = t(5893),
+        n = t(4298),
+        i = t.n(n);
       function c() {
-        return (0, t.jsxs)(t.Fragment, {
+        return (0, s.jsxs)(s.Fragment, {
           children: [
-            (0, t.jsx)("link", {
+            (0, s.jsx)("link", {
               rel: "stylesheet",
               href: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css",
               integrity:
                 "sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT",
               crossOrigin: "anonymous",
             }),
-            (0, t.jsx)(i(), {
+            (0, s.jsx)(i(), {
               id: "bootstrap-popper-js-cdn",
               src: "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js",
               integrity:
                 "sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r",
               crossOrigin: "anonymous",
             }),
-            (0, t.jsx)(i(), {
+            (0, s.jsx)(i(), {
               id: "bootstrap-js-cdn",
               src: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js",
               integrity:
@@ -46,10 +46,10 @@
           ],
         });
       }
-      s(7294);
-      var l = s(1664),
-        r = s.n(l),
-        o = s(261),
+      t(7294);
+      var l = t(1664),
+        r = t.n(l),
+        o = t(261),
         d = {
           src: "/_next/static/media/redbook.d1759325.svg",
           height: 256,
@@ -58,88 +58,88 @@
           blurHeight: 0,
         };
       function x(a) {
-        return (0, t.jsxs)("ul", {
+        return (0, s.jsxs)("ul", {
           className: "list-inline text-center tw-text-stone-700",
           children: [
-            (0, t.jsx)("li", {
+            (0, s.jsx)("li", {
               className: "list-inline-item ",
-              children: (0, t.jsx)(r(), {
+              children: (0, s.jsx)(r(), {
                 className: "tw-text-stone-700",
                 target: "_blank",
                 href: "https://www.linkedin.com/in/".concat(a.linkedin),
-                children: (0, t.jsxs)("span", {
+                children: (0, s.jsxs)("span", {
                   className: "fa-stack fa-lg",
                   children: [
-                    (0, t.jsx)("i", { className: "fa fa-circle fa-stack-2x" }),
-                    (0, t.jsx)("i", {
+                    (0, s.jsx)("i", { className: "fa fa-circle fa-stack-2x" }),
+                    (0, s.jsx)("i", {
                       className: "fab fa-linkedin-in fa-stack-1x fa-inverse",
                     }),
                   ],
                 }),
               }),
             }),
-            (0, t.jsx)("li", {
+            (0, s.jsx)("li", {
               className: "list-inline-item",
-              children: (0, t.jsx)(r(), {
+              children: (0, s.jsx)(r(), {
                 className: "tw-text-stone-700",
                 target: "_blank",
                 href: "https://github.com/".concat(a.github),
-                children: (0, t.jsxs)("span", {
+                children: (0, s.jsxs)("span", {
                   className: "fa-stack fa-lg",
                   children: [
-                    (0, t.jsx)("i", { className: "fa fa-circle fa-stack-2x" }),
-                    (0, t.jsx)("i", {
+                    (0, s.jsx)("i", { className: "fa fa-circle fa-stack-2x" }),
+                    (0, s.jsx)("i", {
                       className: "fab fa-github fa-stack-1x fa-inverse",
                     }),
                   ],
                 }),
               }),
             }),
-            (0, t.jsx)("li", {
+            (0, s.jsx)("li", {
               className: "list-inline-item",
-              children: (0, t.jsx)(r(), {
+              children: (0, s.jsx)(r(), {
                 className: "tw-text-stone-700",
                 target: "_blank",
                 href: "https://gist.github.com/".concat(a.github),
-                children: (0, t.jsxs)("span", {
+                children: (0, s.jsxs)("span", {
                   className: "fa-stack fa-lg",
                   children: [
-                    (0, t.jsx)("i", { className: "fa fa-circle fa-stack-2x" }),
-                    (0, t.jsx)("i", {
+                    (0, s.jsx)("i", { className: "fa fa-circle fa-stack-2x" }),
+                    (0, s.jsx)("i", {
                       className: "fab fa-github-square fa-stack-1x fa-inverse",
                     }),
                   ],
                 }),
               }),
             }),
-            (0, t.jsx)("li", {
+            (0, s.jsx)("li", {
               className: "list-inline-item",
-              children: (0, t.jsx)(r(), {
+              children: (0, s.jsx)(r(), {
                 className: "tw-text-stone-700",
                 target: "_blank",
                 href: "https://gitlab.com/".concat(a.gitlab),
-                children: (0, t.jsxs)("span", {
+                children: (0, s.jsxs)("span", {
                   className: "fa-stack fa-lg",
                   children: [
-                    (0, t.jsx)("i", { className: "fa fa-circle fa-stack-2x" }),
-                    (0, t.jsx)("i", {
+                    (0, s.jsx)("i", { className: "fa fa-circle fa-stack-2x" }),
+                    (0, s.jsx)("i", {
                       className: "fab fa-gitlab fa-stack-1x fa-inverse",
                     }),
                   ],
                 }),
               }),
             }),
-            (0, t.jsx)("li", {
+            (0, s.jsx)("li", {
               className: "list-inline-item",
-              children: (0, t.jsx)(r(), {
+              children: (0, s.jsx)(r(), {
                 className: "tw-text-stone-700",
                 target: "_blank",
                 href: "https://www.xiaohongshu.com/user/profile/".concat(
                   a.redbook,
                 ),
-                children: (0, t.jsx)("span", {
+                children: (0, s.jsx)("span", {
                   className: "fa-stack fa-lg",
-                  children: (0, t.jsx)(o.t, {
+                  children: (0, s.jsx)(o.t, {
                     src: d,
                     alt: "小红书",
                     className: "tw-max-h-full tw-max-w-full",
@@ -147,73 +147,54 @@
                 }),
               }),
             }),
-            (0, t.jsx)("li", {
+            (0, s.jsx)("li", {
               className: "list-inline-item",
-              children: (0, t.jsx)(r(), {
+              children: (0, s.jsx)(r(), {
                 className: "tw-text-stone-700",
                 target: "_blank",
                 href: "https://www.kaggle.com/".concat(a.kaggle),
-                children: (0, t.jsxs)("span", {
+                children: (0, s.jsxs)("span", {
                   className: "fa-stack fa-lg",
                   children: [
-                    (0, t.jsx)("i", { className: "fa fa-circle fa-stack-2x" }),
-                    (0, t.jsx)("i", {
+                    (0, s.jsx)("i", { className: "fa fa-circle fa-stack-2x" }),
+                    (0, s.jsx)("i", {
                       className: "fab fa-kaggle fa-stack-1x fa-inverse",
                     }),
                   ],
                 }),
               }),
             }),
-            (0, t.jsx)("li", {
+            (0, s.jsx)("li", {
               className: "list-inline-item",
-              children: (0, t.jsx)(r(), {
+              children: (0, s.jsx)(r(), {
                 className: "tw-text-stone-700",
                 target: "_blank",
                 href: "https://leetcode.com/".concat(a.leetcode),
-                children: (0, t.jsxs)("span", {
+                children: (0, s.jsxs)("span", {
                   className: "fa-stack fa-lg",
                   children: [
-                    (0, t.jsx)("i", { className: "fa fa-circle fa-stack-2x" }),
-                    (0, t.jsx)("i", {
+                    (0, s.jsx)("i", { className: "fa fa-circle fa-stack-2x" }),
+                    (0, s.jsx)("i", {
                       className: "fas fa-code fa-stack-1x fa-inverse",
                     }),
                   ],
                 }),
               }),
             }),
-            (0, t.jsx)("li", {
+            (0, s.jsx)("li", {
               className: "list-inline-item",
-              children: (0, t.jsx)(r(), {
-                className: "tw-text-stone-700",
-                target: "_blank",
-                href: "https://stackexchange.com/users/".concat(
-                  a.stackexchange,
-                ),
-                children: (0, t.jsxs)("span", {
-                  className: "fa-stack fa-lg",
-                  children: [
-                    (0, t.jsx)("i", { className: "fa fa-circle fa-stack-2x" }),
-                    (0, t.jsx)("i", {
-                      className: "fab fa-stack-overflow fa-stack-1x fa-inverse",
-                    }),
-                  ],
-                }),
-              }),
-            }),
-            (0, t.jsx)("li", {
-              className: "list-inline-item",
-              children: (0, t.jsx)(r(), {
+              children: (0, s.jsx)(r(), {
                 className: "tw-text-stone-700",
                 target: "_blank",
                 href: "mailto:".concat(
                   a.email,
                   "?subject=From my blog&body=Hi,I found this website very useful",
                 ),
-                children: (0, t.jsxs)("span", {
+                children: (0, s.jsxs)("span", {
                   className: "fa-stack fa-lg",
                   children: [
-                    (0, t.jsx)("i", { className: "fa fa-circle fa-stack-2x" }),
-                    (0, t.jsx)("i", {
+                    (0, s.jsx)("i", { className: "fa fa-circle fa-stack-2x" }),
+                    (0, s.jsx)("i", {
                       className: "fas fa-envelope fa-stack-1x fa-inverse",
                     }),
                   ],
@@ -234,17 +215,17 @@
       };
       function h(a) {
         let { siteConfig: e } = a;
-        return (0, t.jsxs)("footer", {
+        return (0, s.jsxs)("footer", {
           className: "tw-text-center tw-text-gray-400",
           children: [
-            (0, t.jsx)(x, { ...e }),
-            (0, t.jsx)(o.t, {
+            (0, s.jsx)(x, { ...e }),
+            (0, s.jsx)(o.t, {
               src: m,
               alt: "QR",
               className:
                 "tw-mx-auto tw-max-w-full tw-object-contain tw-object-center lg:tw-max-w-xl",
             }),
-            (0, t.jsx)("p", {
+            (0, s.jsx)("p", {
               children: "Copyright \xa9 "
                 .concat(e.siteTitle, " ")
                 .concat(new Date().getFullYear()),
@@ -252,15 +233,15 @@
           ],
         });
       }
-      var f = s(3967),
-        j = s.n(f),
-        g = s(1798),
-        u = s(6985),
-        p = s.n(u);
+      var f = t(3967),
+        j = t.n(f),
+        g = t(1798),
+        u = t(6985),
+        p = t.n(u);
       function w(a) {
-        let { lang: e, siteConfig: s } = a,
+        let { lang: e, siteConfig: t } = a,
           { t: n } = (0, g.$G)("navbar");
-        return (0, t.jsx)("nav", {
+        return (0, s.jsx)("nav", {
           className: j()(
             "navbar",
             "navbar-expand-md",
@@ -271,22 +252,22 @@
             "tw-shadow-black/25",
             p().navBar,
           ),
-          children: (0, t.jsxs)("div", {
+          children: (0, s.jsxs)("div", {
             className: "container-fluid px-md-5",
             children: [
-              (0, t.jsx)("div", {
+              (0, s.jsx)("div", {
                 className: j()(
                   "navbar-brand",
                   "animate__animated",
                   "animate__pulse",
                 ),
-                children: (0, t.jsx)("span", {
+                children: (0, s.jsx)("span", {
                   className:
                     "tw-rounded tw-bg-black tw-p-1 tw-text-xl tw-font-medium tw-text-white",
-                  children: s.siteTitle,
+                  children: t.siteTitle,
                 }),
               }),
-              (0, t.jsx)("button", {
+              (0, s.jsx)("button", {
                 className: "navbar-toggler",
                 type: "button",
                 "data-bs-toggle": "collapse",
@@ -294,38 +275,38 @@
                 "aria-controls": "navbarSupportedContent",
                 "aria-expanded": "false",
                 "aria-label": "Toggle navigation",
-                children: (0, t.jsx)("span", {
+                children: (0, s.jsx)("span", {
                   className: "navbar-toggler-icon",
                 }),
               }),
-              (0, t.jsx)("div", {
+              (0, s.jsx)("div", {
                 className: "navbar-collapse collapse",
                 id: "navbarSupportedContent",
-                children: (0, t.jsxs)("ul", {
+                children: (0, s.jsxs)("ul", {
                   className: "navbar-nav mb-2 mb-lg-0 ms-auto",
                   children: [
-                    (0, t.jsx)("li", {
+                    (0, s.jsx)("li", {
                       className: "nav-item",
-                      children: (0, t.jsx)(r(), {
+                      children: (0, s.jsx)(r(), {
                         className: "nav-link active",
                         "aria-current": "page",
                         href: "/posts/langs/".concat(e, "/pagination/1"),
                         children: n("Home"),
                       }),
                     }),
-                    (0, t.jsx)("li", {
+                    (0, s.jsx)("li", {
                       className: "nav-item",
-                      children: (0, t.jsx)(r(), {
+                      children: (0, s.jsx)(r(), {
                         className: "nav-link",
                         "aria-current": "page",
                         href: "/posts/langs/".concat(e, "/tags"),
                         children: n("Tags"),
                       }),
                     }),
-                    (0, t.jsxs)("li", {
+                    (0, s.jsxs)("li", {
                       className: "nav-item dropdown",
                       children: [
-                        (0, t.jsx)("a", {
+                        (0, s.jsx)("a", {
                           className: "nav-link dropdown-toggle",
                           href: "#",
                           role: "button",
@@ -333,13 +314,13 @@
                           "aria-expanded": "false",
                           children: n("Language"),
                         }),
-                        (0, t.jsx)("ul", {
+                        (0, s.jsx)("ul", {
                           className: "dropdown-menu dropdown-menu-end",
-                          children: s.i18n.locales.map((a) =>
-                            (0, t.jsx)(
+                          children: t.i18n.locales.map((a) =>
+                            (0, s.jsx)(
                               "li",
                               {
-                                children: (0, t.jsx)(r(), {
+                                children: (0, s.jsx)(r(), {
                                   className: "dropdown-item",
                                   href: "/posts/langs/".concat(a),
                                   children: n(a),
@@ -359,35 +340,35 @@
         });
       }
       function b(a) {
-        let { children: e, lang: s, siteConfig: n } = a;
-        return (0, t.jsxs)(t.Fragment, {
+        let { children: e, lang: t, siteConfig: n } = a;
+        return (0, s.jsxs)(s.Fragment, {
           children: [
-            (0, t.jsx)(c, {}),
-            (0, t.jsx)(w, { siteConfig: n, lang: s }),
+            (0, s.jsx)(c, {}),
+            (0, s.jsx)(w, { siteConfig: n, lang: t }),
             e,
-            (0, t.jsx)(h, { siteConfig: n }),
+            (0, s.jsx)(h, { siteConfig: n }),
           ],
         });
       }
     },
-    261: function (a, e, s) {
+    261: function (a, e, t) {
       "use strict";
-      s.d(e, {
+      t.d(e, {
         t: function () {
           return l;
         },
       });
-      var t = s(5893),
-        n = s(5675),
-        i = s.n(n);
+      var s = t(5893),
+        n = t(5675),
+        i = t.n(n);
       let c = (a) => {
         let { src: e } = a;
         return e;
       };
       function l(a) {
-        let { alt: e, src: s, width: n, height: l, className: r, ...o } = a;
-        return (0, t.jsx)(i(), {
-          src: s,
+        let { alt: e, src: t, width: n, height: l, className: r, ...o } = a;
+        return (0, s.jsx)(i(), {
+          src: t,
           loader: c,
           alt: e || "image",
           sizes: "responsive",
@@ -399,60 +380,60 @@
         });
       }
     },
-    5853: function (a, e, s) {
+    5853: function (a, e, t) {
       "use strict";
-      s.d(e, {
+      t.d(e, {
         K: function () {
           return c;
         },
       });
-      var t = s(5893),
-        n = s(9008),
-        i = s.n(n);
+      var s = t(5893),
+        n = t(9008),
+        i = t.n(n);
       function c(a) {
-        return (0, t.jsxs)(i(), {
+        return (0, s.jsxs)(i(), {
           children: [
-            (0, t.jsx)("meta", { charSet: "utf-8" }),
-            (0, t.jsx)("meta", {
+            (0, s.jsx)("meta", { charSet: "utf-8" }),
+            (0, s.jsx)("meta", {
               httpEquiv: "X-UA-Compatible",
               content: "IE=edge",
             }),
-            (0, t.jsx)("meta", {
+            (0, s.jsx)("meta", {
               name: "viewport",
               content: "width=device-width, initial-scale=1.0",
             }),
-            (0, t.jsx)("meta", {
+            (0, s.jsx)("meta", {
               httpEquiv: "content-language",
               content: a.lang,
             }),
-            (0, t.jsx)("link", { rel: "icon", href: "/favicon.ico" }),
-            (0, t.jsx)("title", { children: a.title }),
-            (0, t.jsx)("meta", { name: "og:title", content: a.title }),
-            (0, t.jsx)("meta", { name: "author", content: a.author }),
+            (0, s.jsx)("link", { rel: "icon", href: "/favicon.ico" }),
+            (0, s.jsx)("title", { children: a.title }),
+            (0, s.jsx)("meta", { name: "og:title", content: a.title }),
+            (0, s.jsx)("meta", { name: "author", content: a.author }),
             a.description &&
-              (0, t.jsxs)(t.Fragment, {
+              (0, s.jsxs)(s.Fragment, {
                 children: [
-                  (0, t.jsx)("meta", {
+                  (0, s.jsx)("meta", {
                     name: "description",
                     content: a.description,
                   }),
-                  (0, t.jsx)("meta", {
+                  (0, s.jsx)("meta", {
                     name: "og:description",
                     content: a.description,
                   }),
                 ],
               }),
             a.previewImage &&
-              (0, t.jsx)("meta", {
+              (0, s.jsx)("meta", {
                 property: "og:image",
                 content: a.previewImage,
               }),
             a.keywords &&
-              (0, t.jsx)("meta", {
+              (0, s.jsx)("meta", {
                 name: "keywords",
                 content: a.keywords.join(","),
               }),
-            (0, t.jsx)("meta", {
+            (0, s.jsx)("meta", {
               name: "twitter:card",
               content: "summary_large_image",
             }),
@@ -460,10 +441,10 @@
         });
       }
     },
-    8309: function (a, e, s) {
+    8309: function (a, e, t) {
       "use strict";
-      s.r(e),
-        s.d(e, {
+      t.r(e),
+        t.d(e, {
           __N_SSG: function () {
             return c;
           },
@@ -471,45 +452,45 @@
             return l;
           },
         });
-      var t = s(5893),
-        n = s(6050),
-        i = s(5853),
+      var s = t(5893),
+        n = t(6050),
+        i = t(5853),
         c = !0,
         l = function (a) {
-          let { lang: e, siteConfig: s } = a,
-            { siteAuthor: c, siteTitle: l, siteDescription: r } = s;
-          return (0, t.jsxs)(t.Fragment, {
+          let { lang: e, siteConfig: t } = a,
+            { siteAuthor: c, siteTitle: l, siteDescription: r } = t;
+          return (0, s.jsxs)(s.Fragment, {
             children: [
-              (0, t.jsx)(i.K, { title: l, author: c, lang: e, description: r }),
-              (0, t.jsx)(n.X, {
+              (0, s.jsx)(i.K, { title: l, author: c, lang: e, description: r }),
+              (0, s.jsx)(n.X, {
                 lang: e,
-                siteConfig: s,
-                children: (0, t.jsx)("main", {
-                  children: (0, t.jsxs)("table", {
+                siteConfig: t,
+                children: (0, s.jsx)("main", {
+                  children: (0, s.jsxs)("table", {
                     children: [
-                      (0, t.jsx)("thead", {
-                        children: (0, t.jsxs)("tr", {
+                      (0, s.jsx)("thead", {
+                        children: (0, s.jsxs)("tr", {
                           children: [
-                            (0, t.jsx)("th", { children: "1" }),
-                            (0, t.jsx)("th", { children: "2" }),
-                            (0, t.jsx)("th", { children: "3" }),
+                            (0, s.jsx)("th", { children: "1" }),
+                            (0, s.jsx)("th", { children: "2" }),
+                            (0, s.jsx)("th", { children: "3" }),
                           ],
                         }),
                       }),
-                      (0, t.jsxs)("tbody", {
+                      (0, s.jsxs)("tbody", {
                         children: [
-                          (0, t.jsxs)("tr", {
+                          (0, s.jsxs)("tr", {
                             children: [
-                              (0, t.jsx)("td", { children: "4" }),
-                              (0, t.jsx)("td", { children: "5" }),
-                              (0, t.jsx)("td", { children: "6" }),
+                              (0, s.jsx)("td", { children: "4" }),
+                              (0, s.jsx)("td", { children: "5" }),
+                              (0, s.jsx)("td", { children: "6" }),
                             ],
                           }),
-                          (0, t.jsxs)("tr", {
+                          (0, s.jsxs)("tr", {
                             children: [
-                              (0, t.jsx)("td", { children: "7" }),
-                              (0, t.jsx)("td", { children: "8" }),
-                              (0, t.jsx)("td", { children: "9" }),
+                              (0, s.jsx)("td", { children: "7" }),
+                              (0, s.jsx)("td", { children: "8" }),
+                              (0, s.jsx)("td", { children: "9" }),
                             ],
                           }),
                         ],

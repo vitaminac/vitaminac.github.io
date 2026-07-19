@@ -13,14 +13,14 @@
       "use strict";
       a.d(t, {
         E: function () {
-          return i;
+          return l;
         },
       });
       var s = a(5893);
       a(7294);
       var n = a(197),
-        l = a(949);
-      function i(e) {
+        i = a(949);
+      function l(e) {
         let { dateString: t } = e,
           a = (0, n.D)(t);
         return (0, s.jsxs)("span", {
@@ -29,7 +29,7 @@
             (0, s.jsx)("time", {
               className: "tw-pl-1.5",
               dateTime: t,
-              children: (0, l.WU)(a, "LLLL d, yyyy"),
+              children: (0, i.WU)(a, "LLLL d, yyyy"),
             }),
           ],
         });
@@ -44,8 +44,8 @@
       });
       var s = a(5893),
         n = a(4298),
-        l = a.n(n);
-      function i() {
+        i = a.n(n);
+      function l() {
         return (0, s.jsxs)(s.Fragment, {
           children: [
             (0, s.jsx)("link", {
@@ -55,14 +55,14 @@
                 "sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT",
               crossOrigin: "anonymous",
             }),
-            (0, s.jsx)(l(), {
+            (0, s.jsx)(i(), {
               id: "bootstrap-popper-js-cdn",
               src: "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js",
               integrity:
                 "sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r",
               crossOrigin: "anonymous",
             }),
-            (0, s.jsx)(l(), {
+            (0, s.jsx)(i(), {
               id: "bootstrap-js-cdn",
               src: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js",
               integrity:
@@ -73,8 +73,8 @@
         });
       }
       a(7294);
-      var c = a(1664),
-        r = a.n(c),
+      var r = a(1664),
+        c = a.n(r),
         o = a(261),
         d = {
           src: "/_next/static/media/redbook.d1759325.svg",
@@ -89,7 +89,7 @@
           children: [
             (0, s.jsx)("li", {
               className: "list-inline-item ",
-              children: (0, s.jsx)(r(), {
+              children: (0, s.jsx)(c(), {
                 className: "tw-text-stone-700",
                 target: "_blank",
                 href: "https://www.linkedin.com/in/".concat(e.linkedin),
@@ -106,7 +106,7 @@
             }),
             (0, s.jsx)("li", {
               className: "list-inline-item",
-              children: (0, s.jsx)(r(), {
+              children: (0, s.jsx)(c(), {
                 className: "tw-text-stone-700",
                 target: "_blank",
                 href: "https://github.com/".concat(e.github),
@@ -123,7 +123,7 @@
             }),
             (0, s.jsx)("li", {
               className: "list-inline-item",
-              children: (0, s.jsx)(r(), {
+              children: (0, s.jsx)(c(), {
                 className: "tw-text-stone-700",
                 target: "_blank",
                 href: "https://gist.github.com/".concat(e.github),
@@ -140,7 +140,7 @@
             }),
             (0, s.jsx)("li", {
               className: "list-inline-item",
-              children: (0, s.jsx)(r(), {
+              children: (0, s.jsx)(c(), {
                 className: "tw-text-stone-700",
                 target: "_blank",
                 href: "https://gitlab.com/".concat(e.gitlab),
@@ -157,7 +157,7 @@
             }),
             (0, s.jsx)("li", {
               className: "list-inline-item",
-              children: (0, s.jsx)(r(), {
+              children: (0, s.jsx)(c(), {
                 className: "tw-text-stone-700",
                 target: "_blank",
                 href: "https://www.xiaohongshu.com/user/profile/".concat(
@@ -175,7 +175,7 @@
             }),
             (0, s.jsx)("li", {
               className: "list-inline-item",
-              children: (0, s.jsx)(r(), {
+              children: (0, s.jsx)(c(), {
                 className: "tw-text-stone-700",
                 target: "_blank",
                 href: "https://www.kaggle.com/".concat(e.kaggle),
@@ -192,7 +192,7 @@
             }),
             (0, s.jsx)("li", {
               className: "list-inline-item",
-              children: (0, s.jsx)(r(), {
+              children: (0, s.jsx)(c(), {
                 className: "tw-text-stone-700",
                 target: "_blank",
                 href: "https://leetcode.com/".concat(e.leetcode),
@@ -209,26 +209,7 @@
             }),
             (0, s.jsx)("li", {
               className: "list-inline-item",
-              children: (0, s.jsx)(r(), {
-                className: "tw-text-stone-700",
-                target: "_blank",
-                href: "https://stackexchange.com/users/".concat(
-                  e.stackexchange,
-                ),
-                children: (0, s.jsxs)("span", {
-                  className: "fa-stack fa-lg",
-                  children: [
-                    (0, s.jsx)("i", { className: "fa fa-circle fa-stack-2x" }),
-                    (0, s.jsx)("i", {
-                      className: "fab fa-stack-overflow fa-stack-1x fa-inverse",
-                    }),
-                  ],
-                }),
-              }),
-            }),
-            (0, s.jsx)("li", {
-              className: "list-inline-item",
-              children: (0, s.jsx)(r(), {
+              children: (0, s.jsx)(c(), {
                 className: "tw-text-stone-700",
                 target: "_blank",
                 href: "mailto:".concat(
@@ -258,7 +239,7 @@
         blurWidth: 8,
         blurHeight: 3,
       };
-      function h(e) {
+      function u(e) {
         let { siteConfig: t } = e;
         return (0, s.jsxs)("footer", {
           className: "tw-text-center tw-text-gray-400",
@@ -278,16 +259,16 @@
           ],
         });
       }
-      var u = a(3967),
-        f = a.n(u),
-        g = a(1798),
+      var h = a(3967),
+        g = a.n(h),
+        f = a(1798),
         j = a(6985),
         w = a.n(j);
       function p(e) {
         let { lang: t, siteConfig: a } = e,
-          { t: n } = (0, g.$G)("navbar");
+          { t: n } = (0, f.$G)("navbar");
         return (0, s.jsx)("nav", {
-          className: f()(
+          className: g()(
             "navbar",
             "navbar-expand-md",
             "navbar-light",
@@ -301,7 +282,7 @@
             className: "container-fluid px-md-5",
             children: [
               (0, s.jsx)("div", {
-                className: f()(
+                className: g()(
                   "navbar-brand",
                   "animate__animated",
                   "animate__pulse",
@@ -332,7 +313,7 @@
                   children: [
                     (0, s.jsx)("li", {
                       className: "nav-item",
-                      children: (0, s.jsx)(r(), {
+                      children: (0, s.jsx)(c(), {
                         className: "nav-link active",
                         "aria-current": "page",
                         href: "/posts/langs/".concat(t, "/pagination/1"),
@@ -341,7 +322,7 @@
                     }),
                     (0, s.jsx)("li", {
                       className: "nav-item",
-                      children: (0, s.jsx)(r(), {
+                      children: (0, s.jsx)(c(), {
                         className: "nav-link",
                         "aria-current": "page",
                         href: "/posts/langs/".concat(t, "/tags"),
@@ -365,7 +346,7 @@
                             (0, s.jsx)(
                               "li",
                               {
-                                children: (0, s.jsx)(r(), {
+                                children: (0, s.jsx)(c(), {
                                   className: "dropdown-item",
                                   href: "/posts/langs/".concat(e),
                                   children: n(e),
@@ -388,10 +369,10 @@
         let { children: t, lang: a, siteConfig: n } = e;
         return (0, s.jsxs)(s.Fragment, {
           children: [
-            (0, s.jsx)(i, {}),
+            (0, s.jsx)(l, {}),
             (0, s.jsx)(p, { siteConfig: n, lang: a }),
             t,
-            (0, s.jsx)(h, { siteConfig: n }),
+            (0, s.jsx)(u, { siteConfig: n }),
           ],
         });
       }
@@ -400,13 +381,13 @@
       "use strict";
       a.d(t, {
         w: function () {
-          return i;
+          return l;
         },
       });
       var s = a(5893),
         n = a(1664),
-        l = a.n(n);
-      function i(e) {
+        i = a.n(n);
+      function l(e) {
         let { lang: t, tags: a } = e,
           n = a.map((e) =>
             (0, s.jsx)(
@@ -414,7 +395,7 @@
               {
                 className: "tw-inline tw-px-1",
                 children: (0, s.jsx)(
-                  l(),
+                  i(),
                   {
                     className:
                       "tw-m-0.5 tw-inline-block tw-rounded tw-border tw-border-solid tw-border-white tw-bg-neutral-300 tw-px-2 tw-text-sm tw-leading-6 tw-text-white tw-no-underline hover:tw-bg-sky-300",
@@ -434,27 +415,27 @@
       "use strict";
       a.d(t, {
         t: function () {
-          return c;
+          return r;
         },
       });
       var s = a(5893),
         n = a(5675),
-        l = a.n(n);
-      let i = (e) => {
+        i = a.n(n);
+      let l = (e) => {
         let { src: t } = e;
         return t;
       };
-      function c(e) {
-        let { alt: t, src: a, width: n, height: c, className: r, ...o } = e;
-        return (0, s.jsx)(l(), {
+      function r(e) {
+        let { alt: t, src: a, width: n, height: r, className: c, ...o } = e;
+        return (0, s.jsx)(i(), {
           src: a,
-          loader: i,
+          loader: l,
           alt: t || "image",
           sizes: "responsive",
           unoptimized: !0,
           width: n,
-          height: c,
-          className: r,
+          height: r,
+          className: c,
           ...o,
         });
       }
@@ -463,14 +444,14 @@
       "use strict";
       a.d(t, {
         K: function () {
-          return i;
+          return l;
         },
       });
       var s = a(5893),
         n = a(9008),
-        l = a.n(n);
-      function i(e) {
-        return (0, s.jsxs)(l(), {
+        i = a.n(n);
+      function l(e) {
+        return (0, s.jsxs)(i(), {
           children: [
             (0, s.jsx)("meta", { charSet: "utf-8" }),
             (0, s.jsx)("meta", {
@@ -533,13 +514,13 @@
         });
       var s = a(5893),
         n = a(3967),
-        l = a.n(n),
-        i = a(1798),
-        c = a(7294);
-      function r(e) {
-        let t = (0, c.useRef)(null),
-          [a, n] = (0, c.useState)(),
-          l = (0, c.useCallback)(() => {
+        i = a.n(n),
+        l = a(1798),
+        r = a(7294);
+      function c(e) {
+        let t = (0, r.useRef)(null),
+          [a, n] = (0, r.useState)(),
+          i = (0, r.useCallback)(() => {
             var e, a;
             let s =
               null === (a = t.current) || void 0 === a
@@ -549,29 +530,29 @@
                   : e.document.body;
             s && n(s);
           }, [t, n]);
-        (0, c.useEffect)(() => {
+        (0, r.useEffect)(() => {
           if (!a) {
             let e = t.current;
-            null == e || e.addEventListener("load", l);
-            let a = setInterval(l, 1e3);
+            null == e || e.addEventListener("load", i);
+            let a = setInterval(i, 1e3);
             return () => {
-              null == e || e.removeEventListener("load", l), clearInterval(a);
+              null == e || e.removeEventListener("load", i), clearInterval(a);
             };
           }
-        }, [a, t, l]);
-        let [i, r] = (0, c.useState)(0),
-          o = (0, c.useCallback)(() => {
+        }, [a, t, i]);
+        let [l, c] = (0, r.useState)(0),
+          o = (0, r.useCallback)(() => {
             var e;
-            r(
+            c(
               null == a
                 ? void 0
                 : null === (e = a.parentElement) || void 0 === e
                   ? void 0
                   : e.scrollHeight,
             );
-          }, [a, r]);
+          }, [a, c]);
         return (
-          (0, c.useEffect)(() => {
+          (0, r.useEffect)(() => {
             if (a) {
               let e = new ResizeObserver(o);
               return (
@@ -587,9 +568,9 @@
             title: e.title,
             src: e.src,
             width: "100%",
-            height: "".concat(i, "px"),
+            height: "".concat(l, "px"),
             ref: t,
-            onLoad: l,
+            onLoad: i,
           })
         );
       }
@@ -597,7 +578,7 @@
         d = a(5152),
         m = a.n(d),
         x = a(3944);
-      function h(e) {
+      function u(e) {
         return (0, s.jsx)(x.qw, {
           shortname: e.username,
           config: {
@@ -608,17 +589,17 @@
           },
         });
       }
-      let u = m()(() => Promise.resolve(h), { ssr: !1 });
-      var f = a(6050),
-        g = a(1734),
+      let h = m()(() => Promise.resolve(u), { ssr: !1 });
+      var g = a(6050),
+        f = a(1734),
         j = a(5853),
         w = a(3260),
         p = a.n(w),
         v = !0,
         b = function (e) {
           let { postData: t, siteConfig: a } = e,
-            { t: n } = (0, i.$G)("post-layout");
-          return (0, s.jsxs)(f.X, {
+            { t: n } = (0, l.$G)("post-layout");
+          return (0, s.jsxs)(g.X, {
             lang: t.lang,
             siteConfig: a,
             children: [
@@ -653,7 +634,7 @@
                           className: "tw-mt-3 tw-text-center",
                           children: [
                             (0, s.jsxs)("p", { children: [n("Tags"), ":"] }),
-                            (0, s.jsx)(g.w, { lang: t.lang, tags: t.tags }),
+                            (0, s.jsx)(f.w, { lang: t.lang, tags: t.tags }),
                           ],
                         }),
                       t.keywords.length > 0 &&
@@ -663,7 +644,7 @@
                             (0, s.jsxs)("p", {
                               children: [n("Keywords"), ":"],
                             }),
-                            (0, s.jsx)(g.w, { lang: t.lang, tags: t.keywords }),
+                            (0, s.jsx)(f.w, { lang: t.lang, tags: t.keywords }),
                           ],
                         }),
                     ],
@@ -676,7 +657,7 @@
                         children: [
                           t.tocHtml &&
                             (0, s.jsx)("nav", {
-                              className: l()(
+                              className: i()(
                                 p().toc,
                                 "col-12 col-lg-3 order-lg-2",
                               ),
@@ -685,13 +666,13 @@
                           t.isLegacy
                             ? (0, s.jsx)("article", {
                                 className: "col-12 col-lg-9 order-lg-1",
-                                children: (0, s.jsx)(r, {
+                                children: (0, s.jsx)(c, {
                                   title: t.slug,
                                   src: t.path,
                                 }),
                               })
                             : (0, s.jsx)("article", {
-                                className: l()(
+                                className: i()(
                                   p().content,
                                   "col-12 order-lg-1",
                                   { "col-lg-9": t.tocHtml },
@@ -703,7 +684,7 @@
                         ],
                       }),
                       (0, s.jsx)("aside", {
-                        children: (0, s.jsx)(u, {
+                        children: (0, s.jsx)(h, {
                           username: a.disqusUsername,
                           id: t.slug,
                           title: t.title,
