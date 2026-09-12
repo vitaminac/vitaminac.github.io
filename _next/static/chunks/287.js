@@ -3,17 +3,8 @@
   {
     2449: function (e, t, n) {
       "use strict";
-      Object.defineProperty(t, "__esModule", { value: !0 }),
-        (t.CommentCount = void 0);
-      var r = a(n(7294)),
-        o = a(n(5697)),
-        i = n(6674),
-        u = n(7990);
-      function a(e) {
-        return e && e.__esModule ? e : { default: e };
-      }
-      function s(e) {
-        return (s =
+      function r(e) {
+        return (r =
           "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
             ? function (e) {
                 return typeof e;
@@ -26,6 +17,15 @@
                   ? "symbol"
                   : typeof e;
               })(e);
+      }
+      Object.defineProperty(t, "__esModule", { value: !0 }),
+        (t.CommentCount = void 0);
+      var o = s(n(7294)),
+        i = s(n(5697)),
+        u = n(6674),
+        a = n(7990);
+      function s(e) {
+        return e && e.__esModule ? e : { default: e };
       }
       function c() {
         return (c =
@@ -53,212 +53,198 @@
               return e.__proto__ || Object.getPrototypeOf(e);
             })(e);
       }
-      var d = (0, i.debounce)(
-          function () {
-            window.DISQUSWIDGETS &&
-              window.DISQUSWIDGETS.getCount({ reset: !0 });
-          },
-          300,
-          !1,
-        ),
-        p = (function (e) {
-          !(function (e, t) {
-            if ("function" != typeof t && null !== t)
-              throw TypeError(
-                "Super expression must either be null or a function",
-              );
-            (e.prototype = Object.create(t && t.prototype, {
-              constructor: { value: e, writable: !0, configurable: !0 },
-            })),
-              t && l(e, t);
-          })(a, e);
-          var t,
-            n,
-            o =
-              ((t = (function () {
-                if (
-                  "undefined" == typeof Reflect ||
-                  !Reflect.construct ||
-                  Reflect.construct.sham
-                )
-                  return !1;
-                if ("function" == typeof Proxy) return !0;
-                try {
-                  return (
-                    Date.prototype.toString.call(
-                      Reflect.construct(Date, [], function () {}),
-                    ),
-                    !0
-                  );
-                } catch (e) {
-                  return !1;
-                }
-              })()),
-              function () {
-                var e,
-                  n = f(a);
-                return (
-                  (e = t
-                    ? Reflect.construct(n, arguments, f(this).constructor)
-                    : n.apply(this, arguments)),
-                  e && ("object" === s(e) || "function" == typeof e)
-                    ? e
-                    : (function (e) {
-                        if (void 0 === e)
-                          throw ReferenceError(
-                            "this hasn't been initialised - super() hasn't been called",
-                          );
-                        return e;
-                      })(this)
-                );
-              });
-          function a() {
-            return (
-              !(function (e, t) {
-                if (!(e instanceof t))
-                  throw TypeError("Cannot call a class as a function");
-              })(this, a),
-              o.apply(this, arguments)
+      var d = (0, u.debounce)(
+        function () {
+          window.DISQUSWIDGETS && window.DISQUSWIDGETS.getCount({ reset: !0 });
+        },
+        300,
+        !1,
+      );
+      (t.CommentCount = (function (e) {
+        !(function (e, t) {
+          if ("function" != typeof t && null !== t)
+            throw TypeError(
+              "Super expression must either be null or a function",
             );
-          }
-          return (
-            (n = [
-              {
-                key: "componentDidMount",
-                value: function () {
-                  this.loadInstance();
-                },
-              },
-              {
-                key: "shouldComponentUpdate",
-                value: function (e) {
-                  return (
-                    this.props !== e && (0, i.shallowComparison)(this.props, e)
-                  );
-                },
-              },
-              {
-                key: "componentDidUpdate",
-                value: function (e) {
-                  this.props.shortname !== e.shortname && this.cleanInstance(),
-                    this.loadInstance();
-                },
-              },
-              {
-                key: "componentWillUnmount",
-                value: function () {
-                  this.cleanInstance();
-                },
-              },
-              {
-                key: "loadInstance",
-                value: function () {
-                  var e = window.document;
-                  e.getElementById(u.COMMENT_COUNT_SCRIPT_ID)
-                    ? d()
-                    : (0, i.insertScript)(
-                        "https://".concat(
-                          this.props.shortname,
-                          ".disqus.com/count.js",
-                        ),
-                        u.COMMENT_COUNT_SCRIPT_ID,
-                        e.body,
-                      );
-                },
-              },
-              {
-                key: "cleanInstance",
-                value: function () {
-                  var e = window.document;
-                  (0, i.removeScript)(u.COMMENT_COUNT_SCRIPT_ID, e.body),
-                    (window.DISQUSWIDGETS = void 0),
-                    (0, i.removeResources)();
-                },
-              },
-              {
-                key: "render",
-                value: function () {
-                  var e = this.props,
-                    t = (e.shortname, e.config),
-                    n = e.children,
-                    o = e.className,
-                    i = (function (e, t) {
-                      if (null == e) return {};
-                      var n,
-                        r,
-                        o = (function (e, t) {
-                          if (null == e) return {};
-                          var n,
-                            r,
-                            o = {},
-                            i = Object.keys(e);
-                          for (r = 0; r < i.length; r++)
-                            (n = i[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
-                          return o;
-                        })(e, t);
-                      if (Object.getOwnPropertySymbols) {
-                        var i = Object.getOwnPropertySymbols(e);
-                        for (r = 0; r < i.length; r++)
-                          (n = i[r]),
-                            !(t.indexOf(n) >= 0) &&
-                              Object.prototype.propertyIsEnumerable.call(
-                                e,
-                                n,
-                              ) &&
-                              (o[n] = e[n]);
-                      }
-                      return o;
-                    })(e, ["shortname", "config", "children", "className"]);
-                  return r.default.createElement(
-                    "span",
-                    c({}, i, {
-                      className: ""
-                        .concat(u.COMMENT_COUNT_CLASS)
-                        .concat(o ? " ".concat(o) : ""),
-                      "data-disqus-identifier": t.identifier,
-                      "data-disqus-url": t.url,
-                    }),
-                    n,
-                  );
-                },
-              },
-            ]),
-            (function (e, t) {
-              for (var n = 0; n < t.length; n++) {
-                var r = t[n];
-                (r.enumerable = r.enumerable || !1),
-                  (r.configurable = !0),
-                  "value" in r && (r.writable = !0),
-                  Object.defineProperty(e, r.key, r);
+          (e.prototype = Object.create(t && t.prototype, {
+            constructor: { value: e, writable: !0, configurable: !0 },
+          })),
+            t && l(e, t);
+        })(s, e);
+        var t,
+          n,
+          i =
+            ((t = (function () {
+              if (
+                "undefined" == typeof Reflect ||
+                !Reflect.construct ||
+                Reflect.construct.sham
+              )
+                return !1;
+              if ("function" == typeof Proxy) return !0;
+              try {
+                return (
+                  Date.prototype.toString.call(
+                    Reflect.construct(Date, [], function () {}),
+                  ),
+                  !0
+                );
+              } catch (e) {
+                return !1;
               }
-            })(a.prototype, n),
-            a
+            })()),
+            function () {
+              var e,
+                n = f(s);
+              return (
+                (e = t
+                  ? Reflect.construct(n, arguments, f(this).constructor)
+                  : n.apply(this, arguments)),
+                e && ("object" === r(e) || "function" == typeof e)
+                  ? e
+                  : (function (e) {
+                      if (void 0 === e)
+                        throw ReferenceError(
+                          "this hasn't been initialised - super() hasn't been called",
+                        );
+                      return e;
+                    })(this)
+              );
+            });
+        function s() {
+          return (
+            !(function (e, t) {
+              if (!(e instanceof t))
+                throw TypeError("Cannot call a class as a function");
+            })(this, s),
+            i.apply(this, arguments)
           );
-        })(r.default.Component);
-      (t.CommentCount = p),
-        (p.propTypes = {
-          shortname: o.default.string.isRequired,
-          config: o.default.shape({
-            identifier: o.default.string,
-            url: o.default.string,
-            title: o.default.string,
-          }).isRequired,
-          className: o.default.string,
-          children: o.default.node,
-        });
+        }
+        return (
+          (n = [
+            {
+              key: "componentDidMount",
+              value: function () {
+                this.loadInstance();
+              },
+            },
+            {
+              key: "shouldComponentUpdate",
+              value: function (e) {
+                return (
+                  this.props !== e && (0, u.shallowComparison)(this.props, e)
+                );
+              },
+            },
+            {
+              key: "componentDidUpdate",
+              value: function (e) {
+                this.props.shortname !== e.shortname && this.cleanInstance(),
+                  this.loadInstance();
+              },
+            },
+            {
+              key: "componentWillUnmount",
+              value: function () {
+                this.cleanInstance();
+              },
+            },
+            {
+              key: "loadInstance",
+              value: function () {
+                var e = window.document;
+                e.getElementById(a.COMMENT_COUNT_SCRIPT_ID)
+                  ? d()
+                  : (0, u.insertScript)(
+                      "https://".concat(
+                        this.props.shortname,
+                        ".disqus.com/count.js",
+                      ),
+                      a.COMMENT_COUNT_SCRIPT_ID,
+                      e.body,
+                    );
+              },
+            },
+            {
+              key: "cleanInstance",
+              value: function () {
+                var e = window.document;
+                (0, u.removeScript)(a.COMMENT_COUNT_SCRIPT_ID, e.body),
+                  (window.DISQUSWIDGETS = void 0),
+                  (0, u.removeResources)();
+              },
+            },
+            {
+              key: "render",
+              value: function () {
+                var e = this.props,
+                  t = (e.shortname, e.config),
+                  n = e.children,
+                  r = e.className,
+                  i = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                      r,
+                      o = (function (e, t) {
+                        if (null == e) return {};
+                        var n,
+                          r,
+                          o = {},
+                          i = Object.keys(e);
+                        for (r = 0; r < i.length; r++)
+                          (n = i[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
+                        return o;
+                      })(e, t);
+                    if (Object.getOwnPropertySymbols) {
+                      var i = Object.getOwnPropertySymbols(e);
+                      for (r = 0; r < i.length; r++)
+                        (n = i[r]),
+                          !(t.indexOf(n) >= 0) &&
+                            Object.prototype.propertyIsEnumerable.call(e, n) &&
+                            (o[n] = e[n]);
+                    }
+                    return o;
+                  })(e, ["shortname", "config", "children", "className"]);
+                return o.default.createElement(
+                  "span",
+                  c({}, i, {
+                    className: ""
+                      .concat(a.COMMENT_COUNT_CLASS)
+                      .concat(r ? " ".concat(r) : ""),
+                    "data-disqus-identifier": t.identifier,
+                    "data-disqus-url": t.url,
+                  }),
+                  n,
+                );
+              },
+            },
+          ]),
+          (function (e, t) {
+            for (var n = 0; n < t.length; n++) {
+              var r = t[n];
+              (r.enumerable = r.enumerable || !1),
+                (r.configurable = !0),
+                "value" in r && (r.writable = !0),
+                Object.defineProperty(e, r.key, r);
+            }
+          })(s.prototype, n),
+          s
+        );
+      })(o.default.Component)).propTypes = {
+        shortname: i.default.string.isRequired,
+        config: i.default.shape({
+          identifier: i.default.string,
+          url: i.default.string,
+          title: i.default.string,
+        }).isRequired,
+        className: i.default.string,
+        children: i.default.node,
+      };
     },
     5890: function (e, t, n) {
       "use strict";
-      Object.defineProperty(t, "__esModule", { value: !0 }),
-        (t.CommentEmbed = void 0);
-      var r = u(n(7294)),
-        o = u(n(5697)),
-        i = n(7990);
-      function u(e) {
-        return e && e.__esModule ? e : { default: e };
-      }
-      function a(e) {
-        return (a =
+      function r(e) {
+        return (r =
           "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
             ? function (e) {
                 return typeof e;
@@ -271,6 +257,14 @@
                   ? "symbol"
                   : typeof e;
               })(e);
+      }
+      Object.defineProperty(t, "__esModule", { value: !0 }),
+        (t.CommentEmbed = void 0);
+      var o = a(n(7294)),
+        i = a(n(5697)),
+        u = n(7990);
+      function a(e) {
+        return e && e.__esModule ? e : { default: e };
       }
       function s() {
         return (s =
@@ -298,7 +292,7 @@
               return e.__proto__ || Object.getPrototypeOf(e);
             })(e);
       }
-      var f = (function (e) {
+      var f = (t.CommentEmbed = (function (e) {
         !(function (e, t) {
           if ("function" != typeof t && null !== t)
             throw TypeError(
@@ -308,10 +302,10 @@
             constructor: { value: e, writable: !0, configurable: !0 },
           })),
             t && c(e, t);
-        })(i, e);
+        })(u, e);
         var t,
           n,
-          o =
+          i =
             ((t = (function () {
               if (
                 "undefined" == typeof Reflect ||
@@ -333,12 +327,12 @@
             })()),
             function () {
               var e,
-                n = l(i);
+                n = l(u);
               return (
                 (e = t
                   ? Reflect.construct(n, arguments, l(this).constructor)
                   : n.apply(this, arguments)),
-                e && ("object" === a(e) || "function" == typeof e)
+                e && ("object" === r(e) || "function" == typeof e)
                   ? e
                   : (function (e) {
                       if (void 0 === e)
@@ -349,13 +343,13 @@
                     })(this)
               );
             });
-        function i() {
+        function u() {
           return (
             !(function (e, t) {
               if (!(e instanceof t))
                 throw TypeError("Cannot call a class as a function");
-            })(this, i),
-            o.apply(this, arguments)
+            })(this, u),
+            i.apply(this, arguments)
           );
         }
         return (
@@ -378,7 +372,7 @@
                 var e = this.props,
                   t = e.width,
                   n = e.height,
-                  o =
+                  r =
                     (e.commentId,
                     e.showMedia,
                     e.showParentComment,
@@ -415,9 +409,9 @@
                       "showMedia",
                       "showParentComment",
                     ]));
-                return r.default.createElement(
+                return o.default.createElement(
                   "iframe",
-                  s({}, o, {
+                  s({}, r, {
                     src: this.getSrc(),
                     width: t,
                     height: n,
@@ -437,39 +431,29 @@
                 "value" in r && (r.writable = !0),
                 Object.defineProperty(e, r.key, r);
             }
-          })(i.prototype, n),
-          i
+          })(u.prototype, n),
+          u
         );
-      })(r.default.Component);
-      (t.CommentEmbed = f),
-        (f.defaultProps = {
-          showMedia: !0,
-          showParentComment: !0,
-          width: i.COMMENT_EMBED_WIDTH,
-          height: i.COMMENT_EMBED_HEIGHT,
-        }),
+      })(o.default.Component));
+      (f.defaultProps = {
+        showMedia: !0,
+        showParentComment: !0,
+        width: u.COMMENT_EMBED_WIDTH,
+        height: u.COMMENT_EMBED_HEIGHT,
+      }),
         (f.propTypes = {
-          commentId: o.default.string.isRequired,
-          showMedia: o.default.bool,
-          showParentComment: o.default.bool,
-          width: o.default.number,
-          height: o.default.number,
-          className: o.default.string,
+          commentId: i.default.string.isRequired,
+          showMedia: i.default.bool,
+          showParentComment: i.default.bool,
+          width: i.default.number,
+          height: i.default.number,
+          className: i.default.string,
         });
     },
     4811: function (e, t, n) {
       "use strict";
-      Object.defineProperty(t, "__esModule", { value: !0 }),
-        (t.DiscussionEmbed = void 0);
-      var r = a(n(7294)),
-        o = a(n(5697)),
-        i = n(6674),
-        u = n(7990);
-      function a(e) {
-        return e && e.__esModule ? e : { default: e };
-      }
-      function s(e) {
-        return (s =
+      function r(e) {
+        return (r =
           "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
             ? function (e) {
                 return typeof e;
@@ -482,6 +466,15 @@
                   ? "symbol"
                   : typeof e;
               })(e);
+      }
+      Object.defineProperty(t, "__esModule", { value: !0 }),
+        (t.DiscussionEmbed = void 0);
+      var o = s(n(7294)),
+        i = s(n(5697)),
+        u = n(6674),
+        a = n(7990);
+      function s(e) {
+        return e && e.__esModule ? e : { default: e };
       }
       function c() {
         return (c =
@@ -509,7 +502,7 @@
               return e.__proto__ || Object.getPrototypeOf(e);
             })(e);
       }
-      var d = (function (e) {
+      (t.DiscussionEmbed = (function (e) {
         !(function (e, t) {
           if ("function" != typeof t && null !== t)
             throw TypeError(
@@ -519,10 +512,10 @@
             constructor: { value: e, writable: !0, configurable: !0 },
           })),
             t && l(e, t);
-        })(a, e);
+        })(s, e);
         var t,
           n,
-          o =
+          i =
             ((t = (function () {
               if (
                 "undefined" == typeof Reflect ||
@@ -544,12 +537,12 @@
             })()),
             function () {
               var e,
-                n = f(a);
+                n = f(s);
               return (
                 (e = t
                   ? Reflect.construct(n, arguments, f(this).constructor)
                   : n.apply(this, arguments)),
-                e && ("object" === s(e) || "function" == typeof e)
+                e && ("object" === r(e) || "function" == typeof e)
                   ? e
                   : (function (e) {
                       if (void 0 === e)
@@ -560,13 +553,13 @@
                     })(this)
               );
             });
-        function a() {
+        function s() {
           return (
             !(function (e, t) {
               if (!(e instanceof t))
                 throw TypeError("Cannot call a class as a function");
-            })(this, a),
-            o.apply(this, arguments)
+            })(this, s),
+            i.apply(this, arguments)
           );
         }
         return (
@@ -585,7 +578,7 @@
               key: "shouldComponentUpdate",
               value: function (e) {
                 return (
-                  this.props !== e && (0, i.shallowComparison)(this.props, e)
+                  this.props !== e && (0, u.shallowComparison)(this.props, e)
                 );
               },
             },
@@ -606,7 +599,7 @@
               key: "loadInstance",
               value: function () {
                 var e = window.document;
-                window && window.DISQUS && e.getElementById(u.EMBED_SCRIPT_ID)
+                window && window.DISQUS && e.getElementById(a.EMBED_SCRIPT_ID)
                   ? window.DISQUS.reset({
                       reload: !0,
                       config: this.getDisqusConfig(this.props.config),
@@ -615,12 +608,12 @@
                       this.props.config,
                     )),
                     (window.disqus_shortname = this.props.shortname),
-                    (0, i.insertScript)(
+                    (0, u.insertScript)(
                       "https://".concat(
                         this.props.shortname,
                         ".disqus.com/embed.js",
                       ),
-                      u.EMBED_SCRIPT_ID,
+                      a.EMBED_SCRIPT_ID,
                       e.body,
                     ));
               },
@@ -629,16 +622,16 @@
               key: "cleanInstance",
               value: function () {
                 var e = window.document;
-                (0, i.removeScript)(u.EMBED_SCRIPT_ID, e.body),
+                (0, u.removeScript)(a.EMBED_SCRIPT_ID, e.body),
                   window && window.DISQUS && window.DISQUS.reset({});
                 try {
                   delete window.DISQUS;
                 } catch (e) {
                   window.DISQUS = void 0;
                 }
-                var t = e.getElementById(u.THREAD_ID);
+                var t = e.getElementById(a.THREAD_ID);
                 if (t) for (; t.hasChildNodes(); ) t.removeChild(t.firstChild);
-                (0, i.removeResources)();
+                (0, u.removeResources)();
               },
             },
             {
@@ -654,7 +647,7 @@
                     (this.page.api_key = e.apiKey),
                     e.sso && (this.sso = e.sso),
                     e.language && (this.language = e.language),
-                    u.CALLBACKS.forEach(function (n) {
+                    a.CALLBACKS.forEach(function (n) {
                       t.callbacks[n] = [e[n]];
                     });
                 };
@@ -694,9 +687,9 @@
                       }
                       return o;
                     })(e, ["shortname", "config"]));
-                return r.default.createElement(
+                return o.default.createElement(
                   "div",
-                  c({}, t, { id: u.THREAD_ID }),
+                  c({}, t, { id: a.THREAD_ID }),
                 );
               },
             },
@@ -709,57 +702,46 @@
                 "value" in r && (r.writable = !0),
                 Object.defineProperty(e, r.key, r);
             }
-          })(a.prototype, n),
-          a
+          })(s.prototype, n),
+          s
         );
-      })(r.default.Component);
-      (t.DiscussionEmbed = d),
-        (d.propTypes = {
-          shortname: o.default.string.isRequired,
-          config: o.default.shape({
-            identifier: o.default.string,
-            url: o.default.string,
-            title: o.default.string,
-            language: o.default.string,
-            categoryID: o.default.string,
-            remoteAuthS3: o.default.string,
-            apiKey: o.default.string,
-            preData: o.default.func,
-            preInit: o.default.func,
-            onInit: o.default.func,
-            onReady: o.default.func,
-            afterRender: o.default.func,
-            preReset: o.default.func,
-            onIdentify: o.default.func,
-            beforeComment: o.default.func,
-            onNewComment: o.default.func,
-            onPaginate: o.default.func,
-            sso: o.default.shape({
-              name: o.default.string,
-              button: o.default.string,
-              icon: o.default.string,
-              url: o.default.string,
-              logout: o.default.string,
-              profile_url: o.default.string,
-              width: o.default.string,
-              height: o.default.string,
-            }),
-          }).isRequired,
-        });
+      })(o.default.Component)).propTypes = {
+        shortname: i.default.string.isRequired,
+        config: i.default.shape({
+          identifier: i.default.string,
+          url: i.default.string,
+          title: i.default.string,
+          language: i.default.string,
+          categoryID: i.default.string,
+          remoteAuthS3: i.default.string,
+          apiKey: i.default.string,
+          preData: i.default.func,
+          preInit: i.default.func,
+          onInit: i.default.func,
+          onReady: i.default.func,
+          afterRender: i.default.func,
+          preReset: i.default.func,
+          onIdentify: i.default.func,
+          beforeComment: i.default.func,
+          onNewComment: i.default.func,
+          onPaginate: i.default.func,
+          sso: i.default.shape({
+            name: i.default.string,
+            button: i.default.string,
+            icon: i.default.string,
+            url: i.default.string,
+            logout: i.default.string,
+            profile_url: i.default.string,
+            width: i.default.string,
+            height: i.default.string,
+          }),
+        }).isRequired,
+      };
     },
     4573: function (e, t, n) {
       "use strict";
-      Object.defineProperty(t, "__esModule", { value: !0 }),
-        (t.Recommendations = void 0);
-      var r = a(n(7294)),
-        o = a(n(5697)),
-        i = n(6674),
-        u = n(7990);
-      function a(e) {
-        return e && e.__esModule ? e : { default: e };
-      }
-      function s(e) {
-        return (s =
+      function r(e) {
+        return (r =
           "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
             ? function (e) {
                 return typeof e;
@@ -772,6 +754,15 @@
                   ? "symbol"
                   : typeof e;
               })(e);
+      }
+      Object.defineProperty(t, "__esModule", { value: !0 }),
+        (t.Recommendations = void 0);
+      var o = s(n(7294)),
+        i = s(n(5697)),
+        u = n(6674),
+        a = n(7990);
+      function s(e) {
+        return e && e.__esModule ? e : { default: e };
       }
       function c() {
         return (c =
@@ -799,7 +790,7 @@
               return e.__proto__ || Object.getPrototypeOf(e);
             })(e);
       }
-      var d = (function (e) {
+      (t.Recommendations = (function (e) {
         !(function (e, t) {
           if ("function" != typeof t && null !== t)
             throw TypeError(
@@ -809,10 +800,10 @@
             constructor: { value: e, writable: !0, configurable: !0 },
           })),
             t && l(e, t);
-        })(a, e);
+        })(s, e);
         var t,
           n,
-          o =
+          i =
             ((t = (function () {
               if (
                 "undefined" == typeof Reflect ||
@@ -834,12 +825,12 @@
             })()),
             function () {
               var e,
-                n = f(a);
+                n = f(s);
               return (
                 (e = t
                   ? Reflect.construct(n, arguments, f(this).constructor)
                   : n.apply(this, arguments)),
-                e && ("object" === s(e) || "function" == typeof e)
+                e && ("object" === r(e) || "function" == typeof e)
                   ? e
                   : (function (e) {
                       if (void 0 === e)
@@ -850,13 +841,13 @@
                     })(this)
               );
             });
-        function a() {
+        function s() {
           return (
             !(function (e, t) {
               if (!(e instanceof t))
                 throw TypeError("Cannot call a class as a function");
-            })(this, a),
-            o.apply(this, arguments)
+            })(this, s),
+            i.apply(this, arguments)
           );
         }
         return (
@@ -871,7 +862,7 @@
               key: "shouldComponentUpdate",
               value: function (e) {
                 return (
-                  this.props !== e && (0, i.shallowComparison)(this.props, e)
+                  this.props !== e && (0, u.shallowComparison)(this.props, e)
                 );
               },
             },
@@ -906,14 +897,14 @@
                   ((window.disqus_config = this.getDisqusConfig(
                     this.props.config,
                   )),
-                  window.document.getElementById(u.RECOMMENDATIONS_SCRIPT_ID)
+                  window.document.getElementById(a.RECOMMENDATIONS_SCRIPT_ID)
                     ? this.reloadInstance()
-                    : (0, i.insertScript)(
+                    : (0, u.insertScript)(
                         "https://".concat(
                           this.props.shortname,
                           ".disqus.com/recommendations.js",
                         ),
-                        u.RECOMMENDATIONS_SCRIPT_ID,
+                        a.RECOMMENDATIONS_SCRIPT_ID,
                         window.document.body,
                       ));
               },
@@ -929,8 +920,8 @@
             {
               key: "cleanInstance",
               value: function () {
-                (0, i.removeScript)(
-                  u.RECOMMENDATIONS_SCRIPT_ID,
+                (0, u.removeScript)(
+                  a.RECOMMENDATIONS_SCRIPT_ID,
                   window.document.body,
                 );
                 try {
@@ -938,9 +929,9 @@
                 } catch (e) {
                   window.DISQUS_RECOMMENDATIONS = void 0;
                 }
-                var e = window.document.getElementById(u.RECOMMENDATIONS_ID);
+                var e = window.document.getElementById(a.RECOMMENDATIONS_ID);
                 if (e) for (; e.hasChildNodes(); ) e.removeChild(e.firstChild);
-                (0, i.removeResources)();
+                (0, u.removeResources)();
               },
             },
             {
@@ -977,9 +968,9 @@
                       }
                       return o;
                     })(e, ["shortname", "config"]));
-                return r.default.createElement(
+                return o.default.createElement(
                   "div",
-                  c({}, t, { id: u.RECOMMENDATIONS_ID }),
+                  c({}, t, { id: a.RECOMMENDATIONS_ID }),
                 );
               },
             },
@@ -992,33 +983,31 @@
                 "value" in r && (r.writable = !0),
                 Object.defineProperty(e, r.key, r);
             }
-          })(a.prototype, n),
-          a
+          })(s.prototype, n),
+          s
         );
-      })(r.default.Component);
-      (t.Recommendations = d),
-        (d.propTypes = {
-          shortname: o.default.string.isRequired,
-          config: o.default.shape({
-            identifier: o.default.string,
-            url: o.default.string,
-            title: o.default.string,
-            language: o.default.string,
-          }),
-        });
+      })(o.default.Component)).propTypes = {
+        shortname: i.default.string.isRequired,
+        config: i.default.shape({
+          identifier: i.default.string,
+          url: i.default.string,
+          title: i.default.string,
+          language: i.default.string,
+        }),
+      };
     },
     7990: function (e, t) {
       "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 }),
-        (t.CALLBACKS =
+        (t.THREAD_ID =
           t.RECOMMENDATIONS_SCRIPT_ID =
           t.RECOMMENDATIONS_ID =
-          t.COMMENT_EMBED_HEIGHT =
+          t.EMBED_SCRIPT_ID =
           t.COMMENT_EMBED_WIDTH =
+          t.COMMENT_EMBED_HEIGHT =
           t.COMMENT_COUNT_SCRIPT_ID =
           t.COMMENT_COUNT_CLASS =
-          t.EMBED_SCRIPT_ID =
-          t.THREAD_ID =
+          t.CALLBACKS =
             void 0),
         (t.THREAD_ID = "disqus_thread"),
         (t.EMBED_SCRIPT_ID = "dsq-embed-scr"),
@@ -1058,23 +1047,6 @@
     6674: function (e, t, n) {
       "use strict";
       Object.defineProperty(t, "__esModule", { value: !0 }),
-        (t.insertScript = function (e, t, n) {
-          var r = window.document.createElement("script");
-          return (r.async = !0), (r.src = e), (r.id = t), n.appendChild(r), r;
-        }),
-        (t.removeScript = function (e, t) {
-          var n = window.document.getElementById(e);
-          n && t.removeChild(n);
-        }),
-        (t.removeResources = function () {
-          window.document
-            .querySelectorAll(
-              'link[href*="disquscdn.com/next/embed"], link[href*="disquscdn.com/next/recommendations"], link[href*="disqus.com/next/config.js"], script[src*="disquscdn.com/next/embed"], script[src*="disqus.com/count-data.js"], iframe[title="Disqus"]',
-            )
-            .forEach(function (e) {
-              return e.remove();
-            });
-        }),
         (t.debounce = function (e, t, n) {
           var r;
           return function () {
@@ -1088,7 +1060,24 @@
               u && e.apply(o, i);
           };
         }),
+        (t.insertScript = function (e, t, n) {
+          var r = window.document.createElement("script");
+          return (r.async = !0), (r.src = e), (r.id = t), n.appendChild(r), r;
+        }),
         (t.isReactElement = a),
+        (t.removeResources = function () {
+          window.document
+            .querySelectorAll(
+              'link[href*="disquscdn.com/next/embed"], link[href*="disquscdn.com/next/recommendations"], link[href*="disqus.com/next/config.js"], script[src*="disquscdn.com/next/embed"], script[src*="disqus.com/count-data.js"], iframe[title="Disqus"]',
+            )
+            .forEach(function (e) {
+              return e.remove();
+            });
+        }),
+        (t.removeScript = function (e, t) {
+          var n = window.document.getElementById(e);
+          n && t.removeChild(n);
+        }),
         (t.shallowComparison = function e(t, n) {
           var r,
             o = (function (e) {
